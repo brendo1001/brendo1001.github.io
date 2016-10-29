@@ -1,0 +1,77 @@
+.subscription-form {
+  max-width: $content-width - $spacing-unit;
+  background: #fff;
+  border: 5px solid $gray-1;
+  @include box-shadow(0 4px 5px 5px $form-shadow-color);
+  @include border-radius(3px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  z-index: 2;
+  position: fixed;
+  left: 4%;
+  right: 4%;
+  bottom: -50%;
+  display: none;
+
+  textarea, input {
+    display: inline-block;
+    outline: none;
+    @include border-radius(3px);
+    @include linear-gradient(to top, $gradient-color, #fff 25%);
+    border: 1px solid $border-color;
+    font-size: 1rem;
+    width: 25%;
+    cursor: text;
+    padding: .5rem .25rem;
+    font-size: .85rem;
+
+    &:focus {
+      border: 1px solid $border-color;
+    }
+
+  }
+
+  .send-button {
+    cursor: pointer;
+    width: 4rem;
+    margin-left: .25rem;
+  }
+}
+
+
+
+.close-form {
+  float: right;
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  color: $gray-3;
+  padding: .2rem;
+  line-height: 1rem; 
+  cursor: pointer;  
+}
+
+
+.slide-up {
+  bottom: 25%;
+  @include keyframes(slide-up) {
+    0% { bottom: -50%; }
+
+    100% { bottom: 25%; }
+  }
+  @include animation('slide-up 1s ease');
+}
+
+
+.slide-down {
+  @include keyframes(slide-down) {
+    0% { bottom: 25%; }
+
+    100% { bottom: -50%; }
+
+  }
+  @include animation('slide-down 1s ease');
+}

@@ -1,38 +1,19 @@
-<footer class="site-footer">
+{% if page.footer != 'none' %}
+<footer class="site-footer fade-in" id="footer">
+  <div class="read-next"> Read Next: 
+    {% if page.previous.url %}
+    <a class="prev-post" href="{{page.previous.url}}">{{page.previous.title}}</a>
+    {% else if page.next.url %}
+    <a class="next-post" href="{{page.next.url}}">{{page.next.title}}</a>
+    {% else %}
+    {% endif %}
+  </div>
+    
+  <a href="/" class="back-home">Back Home</a></p> 
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
+  <div class="copyright"> 
+    <small> &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ page.date | date: '%Y' }}</time> {{site.author.name}}</small>
   </div>
 
 </footer>
+{% endif %}

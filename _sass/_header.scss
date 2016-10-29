@@ -1,0 +1,62 @@
+
+
+.fixed-banner {
+  max-width: $content-width;
+  @include border-radius(3px);
+  @include linear-gradient(to top, $gradient-color, #fff 5%);
+  border-bottom: 2px solid $gray-1;
+  padding-bottom: .75rem;
+  padding-left: .75rem;
+  @include bp-large { padding-left: 1.75rem; }
+  position: fixed;
+  top: 0;
+  left: 3%;
+  right: 3%;
+  margin-left:  auto;
+  margin-right: auto;
+  z-index: 2;
+  overflow:hidden;
+}
+
+
+.site-title {
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $gray-4; 
+  @include dim-effect(.85, 1);
+
+  a:hover, a:visited {
+    color: inherit;
+  }
+
+  small {
+    font-size: 60%;
+    font-weight: 400;
+    opacity: .5;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+// added to header on scroll 
+.scroll-nav {
+  @include box-shadow(0 3px 5px -4px $gray-2);
+  transition: all 0.5s;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  .site-title {
+    float: left;
+    padding-top: .25rem; 
+    padding-bottom: .25rem;
+    font-size: 1.25rem; 
+    @include dim-effect(.3, 1);
+    small { display: none; }
+  }
+}

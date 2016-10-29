@@ -1,0 +1,70 @@
+
+.home {
+  margin-top: -3rem; // fixed header not include in home page 
+}
+
+.mini-intro {
+  max-width: 100%;
+  padding-bottom: 4rem;
+
+  h1, p {
+    max-width: 75%;
+    float: left;
+    padding-right: .5rem;
+  }
+
+  h1 { 
+    border-bottom: 1px dashed $border-color;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    color: $gray-4; 
+    a:hover, a:visited {
+    color: inherit;
+    }
+  }
+
+  p {
+     a { color: $base-link-color !important; }
+  }
+  
+  .avatar {
+    float: right;
+    max-width: 25%;
+    border: 3px solid $img-border-color;
+    @include box-shadow(1px -1px 6px 1px $img-shadow-color);
+    @include border-radius(15%);
+    margin-bottom: 1rem;
+  }
+}
+
+
+.featured-posts {
+  display: block;
+
+  .post {
+    margin-bottom: -1rem; //undo default post margin 
+    a { 
+      color: $gray-5 !important;
+      &:visited { color: $visited-link-color !important; }
+    }
+  }
+
+  .see-archives  { 
+    color: $gray-2;
+    font-size: 1.25rem; 
+    text-decoration: underline;
+  }
+}
+
+.featured-projects {
+  ul {
+    padding-left: 0;
+  }
+  
+  ul ul {
+    margin-top: -.4rem;
+      padding-left: 1rem;
+  }
+}
+
+

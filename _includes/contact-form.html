@@ -1,0 +1,29 @@
+<!-- formspree contact form --> 
+<h2> Let's Chat. </h2>
+<form class="contact-form" id="contact-form" method="POST">
+    <input type="text" name="name" 
+    placeholder="My name is" required> 
+
+    <input type="email" name="_replyto" 
+    placeholder="and my email is" required>
+
+    <!-- so that you know where email came from --> 
+    <input type="hidden" name="_subject" value="blog contact" /> 
+
+    <textarea name="message" placeholder="Here's what's on my mind,"
+     class="expanding" required></textarea>
+
+     <!-- return to page after sending form -->
+    <input type="hidden" name="_next" value="{{page.url}}" />
+    <!-- honeypot field, to avoid spam --> 
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <input class="send-button" type="submit" value="Send"> 
+</form>
+
+<!-- wrap email attribute in JS for extra security -->
+<script>
+    var contactform =  document.getElementById('contact-form');
+    contactform.setAttribute('action', '//formspree.io/' + '{{site.author.email}}');
+</script>
+

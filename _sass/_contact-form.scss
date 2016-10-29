@@ -1,0 +1,41 @@
+
+.contact-form {
+  margin-bottom: 2rem;
+  max-width: 90%;
+
+
+  textarea, input {
+    display: block;
+    outline: none;
+    @include border-radius(3px);
+    @include linear-gradient(to top, $gradient-color, #fff 25%);
+    border: 1px solid $border-color;
+    font-size: 1rem;
+    min-width: 40%;
+    max-width: 90%;
+    margin-bottom: .5rem;
+    padding: .35rem .5rem;
+    cursor: text;
+
+    &:focus {
+      border: 1px solid $form-shadow-color;
+    }
+
+  }
+
+  textarea {
+    resize: none;
+    width: 90%;
+    min-height: 8rem;
+  }
+
+  .send-button {
+    cursor: pointer;
+  }
+
+
+  .expanding {
+  vertical-align: top;
+  }
+
+}

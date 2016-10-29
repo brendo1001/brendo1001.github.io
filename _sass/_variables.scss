@@ -1,0 +1,53 @@
+$gray-1: #f9f9f9;
+$gray-2: #ccc;
+$gray-3: #767676;
+$gray-4: #515151;
+$gray-5: #313131;
+
+$red: #ac4142;
+$orange: #d28445;
+$yellow: #f4bf75;
+$green: #90a959;
+$cyan: #75b5aa;
+$blue: #268bd2;
+$brown: #8f5536;
+
+
+// fonts 
+$root-font-size: 16px;
+$large-font-size: 18px;
+$root-line-height: 1.5;
+
+$root-font-family: 'PT Serif', serif;
+$body-color: #515151;
+
+$code-font-family: Menlo, Monaco, "Courier New", monospace;
+$code-color: #bf616a;
+
+
+// theme 
+$body-bg:              #fff;
+$border-color:         $gray-2;     
+$gradient-color:       $gray-1; 
+$form-shadow-color:     $gray-2;
+$img-shadow-color:     $gray-3; 
+$img-border-color:     #fff;
+
+$base-link-color:      $blue;
+$visited-link-color:   $gray-4;  // primarily for home page, turned off for post content
+$hover-link-color:     $blue;    // primarily for main page/navigation links  
+$active-link-color:    $gray-2;  // optional - flicker on click 
+
+
+// layout
+$content-width: 38rem; 
+$spacing-unit: 3rem;
+
+
+// breakpoints 
+$bp-small: 30rem;
+$bp-medium: 38rem; 
+$bp-large: 54rem;   
+
+
+

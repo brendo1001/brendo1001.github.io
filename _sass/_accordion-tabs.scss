@@ -1,0 +1,97 @@
+
+.accordion-tabs { 
+  $action-color: #477dca !default;
+  $tab-link-color: $gray-4;
+  $tab-border: 1px dashed $border-color;
+  $tab-active-background: $body-bg;
+  $tab-inactive-color: $body-bg;
+  $tab-inactive-hover-color: $gray-2;
+
+  clear: both;
+  line-height: 1.5;
+  padding: 0;
+  max-width: $content-width - $spacing-unit;
+  position: relative;
+
+  li { 
+    list-style: none; 
+  }
+
+
+  .tab-header-and-content {
+    display: inline;
+
+  }
+
+  .tab-link {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    border-bottom: $tab-border;
+    color: $tab-link-color;
+    width: 16%;
+    font-size: .9rem;
+    @include bp-small { font-size: 1rem; }
+    text-align: center;
+    display: block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-decoration: none;
+    opacity: .5;
+    border-top: 0;
+    border-bottom: 0;
+    display: inline-block;
+
+    &:hover {
+      color: $action-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      border-bottom: $body-bg;
+      opacity: 1;
+      @include border-radius(3px);
+      border: $tab-border;
+      border-bottom-color: $tab-active-background;
+      margin-bottom: -1px;
+    }
+
+  }
+
+  .tab-content {
+    display: none;
+    width: 100%;
+    border-top: $tab-border;
+    float: left;
+    padding-bottom: 3rem;
+    
+    h1 {
+      @extend h2;
+    }
+  }
+
+  .tab-aside-link {
+    position: absolute;
+    top: 15%; 
+    left: 75%; 
+    @include bp-small { left: 79%;  }
+    @include dim-effect(.6, 1);
+    padding: .125rem .5rem;
+    margin-bottom: .125rem;
+    text-decoration: underline;
+    z-index: 2;
+  }
+
+  .tab-aside-content {
+      width: 100%;
+      height: 105%;
+      position: absolute;
+      top: -2%;
+      border-top: $tab-border;
+      border-bottom: $tab-border;
+  }
+
+}
+

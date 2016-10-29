@@ -1,0 +1,110 @@
+//
+// effects 
+//
+
+@mixin clearfix {
+  &:before {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow...) { // $horizontal, $vertical (optional: $blur, $color, $inset)
+   -webkit-box-shadow: $shadow;
+   box-shadow: $shadow;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+// fade in on hover 
+@mixin dim-effect ($opacity-before, $opacity-after) {
+  opacity: $opacity-before;
+  @include transition(opacity 3s linear);
+
+  &:hover {
+    opacity: $opacity-after;
+     @include transition(all 2s ease);
+  }
+}
+
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin link-colors ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited { color: $visit; }
+    &:hover { color: $hover; }
+    &:active { color: $active; }
+  }
+}
+
+
+//
+// animations
+//
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str...) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+
+// media queries
+//
+
+@mixin bp-small {
+  @media (min-width: $bp-small) { @content; }
+}
+
+@mixin bp-medium {
+  @media (min-width: $bp-medium) { @content; }
+}
+
+@mixin bp-large {
+  @media (min-width: $bp-large) { @content; } //larger than outer-container
+}
