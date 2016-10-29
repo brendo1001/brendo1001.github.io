@@ -1,19 +1,25 @@
-{% if page.footer != 'none' %}
-<footer class="site-footer fade-in" id="footer">
-  <div class="read-next"> Read Next: 
-    {% if page.previous.url %}
-    <a class="prev-post" href="{{page.previous.url}}">{{page.previous.title}}</a>
-    {% else if page.next.url %}
-    <a class="next-post" href="{{page.next.url}}">{{page.next.title}}</a>
-    {% else %}
-    {% endif %}
-  </div>
-    
-  <a href="/" class="back-home">Back Home</a></p> 
-
-  <div class="copyright"> 
-    <small> &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ page.date | date: '%Y' }}</time> {{site.author.name}}</small>
-  </div>
-
-</footer>
-{% endif %}
+  <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        {% for network in site.social %}
+                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
