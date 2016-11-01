@@ -1,10 +1,10 @@
 title:            Brendan Malone
 description:      "Dr. Brendan malone is a research fellow at the University of Sydney, studying geospatial soil science and digital soil informatics. "
-disqus_shortname: ngpy
+disqus_shortname: bmal
 reading_time:     true
 words_per_minute: 200
 #url:                    # blank for local preview
-#url: www.smartdigiag.com   # for production
+#url: www.smartdigiag.com   # for production (uncomment maybe when going live)
 header-img: images/homepage.jpg
 excerpt_separator: "<!--more-->"
 
@@ -15,11 +15,12 @@ owner:
   bio:            "Dr. Brendan malone is a research fellow at the University of Sydney, studying geospatial soil science and digital soil informatics."
   email:          malone.brendan1001@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter: lyxfudan
+  twitter: soilmalone
   facebook:
-  github: liuyxpp
+  github: brendo1001
+  bitbucket: brendo1001
   stackexchange:
-  linkedin:
+  linkedin: https://au.linkedin.com/in/brendan-malone-7aa8a462
   instagram:
   flickr:
   tumblr:
@@ -36,7 +37,7 @@ google_verify: vCNYuIbRPqv4coJvcqQglEsd4IBd9p4cP0AdERyG86w  # Webmaster
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Shanghai
+timezone:    Australia/Sydney
 future:      true
 highlighter: pygments
 markdown:    kramdown
