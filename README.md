@@ -7,7 +7,7 @@ It has been deployed to Github Pages at [http://brendo1001.github.io](http://bre
 
 If you wish to use the theme of this website, please follow the guidelines below:
 
-1. Please give credit by starring [this project](https://github.com/liuyxpp/liuyxpp.github.io) and/or display this line on your website: "This website is powered by [LYX Jekyll theme](https://github.com/brendo1001/brendo1001.github.io)".
+1. Please give credit by starring [this project](https://github.com/brendo1001/brendo1001.github.io) and/or display this line on your website: "This website is powered by [LYX Jekyll theme](https://github.com/mmistakes.github.io)".
 2. Remove all personal materials and personal information about me (Brendan Malone).
 3. Remove all the contents in the following directories: `_posts`, `_drafts`, `_data`, `_site`, `CV`, `downloads`, `images`, `publications`, `research`, and `software`.
 4. Modify the configuration file `_config.yml` to add your own personal information.
