@@ -1,6 +1,8 @@
 url: https://brendo1001.github.io
 baseurl: /smartdigiag/
 
+gems: ['jekyll/scholar']
+
 # Site settings
 title: Smart Digital Agriculture
 email: malone.brendan1001@gmail.com
@@ -35,6 +37,37 @@ social:
 address:
   - line: 1 Central Ave
   - line: Eveleigh, NSW 2015, Australia
+
+
+# Publication citations
+scholar:
+  scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  group_by: none
+  group_order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: true
+  bibtex_filters:
+  - superscript
+  - latex
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
 
 # Build settings
 markdown: kramdown
