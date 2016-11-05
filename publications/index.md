@@ -7,6 +7,44 @@ comments: false
 modified: 2015-04-15
 ---
 
+## Book Chapter
+-----
+
+<div class='panel-pub'>
+<ol>
+{% for bookchap in site.data.bookchap %}
+    <li>
+    <div class="title">
+    <span class="title">{{ bookchap.title }}</span>
+    {% if bookchap.fulltext %}
+        <a title="fulltext" href="{{ site.url }}/downloads/bookchap/{{ bookchap.fulltext }}"><i class="fa fa-file-pdf-o"></i></a>
+    {% endif %}
+    </div>
+    <div class='author'>
+    {% for author in bookchap.author %}
+        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}; </span>
+    {% endfor %}
+    </div>
+    <div class="booktitle">
+    <span class="booktitle">{{ bookchap.booktitle }}</span>
+    </div>
+    Book Editors:
+    {% for editor in bookchap.editor %}
+        <span class='editor'>{{ editor.family }}, {{ editor.given_initial }}; </span>
+    {% endfor %}
+    
+    <div class="pubinfo">
+    <span class="publisher">{{ bookchap.publisher }}, </span><span class="city">{{ bookchap.city }}, </span><span class="year">{{ bookchap.year }}, </span> Pages: <span class="page">{{ bookchap.page }}. </span>
+    </div>
+    <div class="url">
+        <a href="{{ bookchap.URL }}">{{ bookchap.URL }}</a>
+    </div>
+    </li>
+{% endfor %}
+</ol>
+</div>
+
+
 ## Journal Articles
 -----
 
@@ -90,3 +128,5 @@ modified: 2015-04-15
 {% endfor %}
 </ol>
 </div>
+
+

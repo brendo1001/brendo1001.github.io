@@ -1,0 +1,28 @@
+# Brendan Malone Publications - Book Chapters
+
+- id: Liu2012x
+  title: 'Microphase Separation of Weakly Charged Polymers and Phase Transition Kinetics of Lamellar Crystal Monolayers'
+  booktitle: "In: This is a book"
+  page: 137
+  year: 2012
+  editor:
+  - given: Hong-Dong
+    given_initial: H. D.
+    family: Zhang
+  - given: Budiman
+    given_initial: B.
+    family: Minansy
+  author:
+  - given: Yi-Xin
+    given_initial: Y. X.
+    family: Liu
+    role: main
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  publisher: Fudan University
+  city: 'Shanghai, China'
+  source: Postdoctoral Research Report
+  URL: "http://www.gfztb.com/oa/darticle.aspx?type=view&id=20150113"
+  fulltext: 'doctor2009.pdf'
+
