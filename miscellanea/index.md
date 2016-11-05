@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Software
+title: Miscellanea
 description: "Polyorder - Gyroid - PyDiagram - NGPy - mpltex."
 header-img: images/software-1.jpg
 comments: false
@@ -31,7 +31,7 @@ Polyorder is a C++ library which aims to ease the development of polymer self-co
 
 * [Introduction to the Polyorder project]({{ site.url }}/downloads/polyorder20120628.pdf)
 
-* [Configuration file format]({% post_url 2015-04-06-polyorder-config %})
+* Something about post URL
 
 ### Useful Links
 
@@ -127,7 +127,7 @@ mpltex is a python package for creating publication-quality plots using matplotl
 
 ### Getting Started
 
-- [Reading the tutorial]({% post_url 2014-09-09-mpltex %})
+- Something about post URL
 
 ### Useful Links
 
