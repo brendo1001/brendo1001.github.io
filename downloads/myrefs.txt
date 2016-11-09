@@ -1,0 +1,85 @@
+### Book Chapters
+
+[1] M.A. Webb, D.B. Kidd, C.J. Grose, R.M. Moreton, B. Malone, A. McBratney, B. Minasny, Integrating climate into the Digital Soil Assessment framework to assess land suitability, in: N.M.J.H.A.R.d.F.A.M. D Arrouays (Ed.) GlobalSoilMap: Basis of the global spatial soil information system, CRC Press, London, 2014, pp. 393-399.
+[2] C. Waring, U. Stockmann, B. Malone, B. Whelan, A. McBratney, Is Percent 'Projected Natural Vegetation Soil Carbon' a Useful Indicator of Soil Condition?, in: K.M. Alfred E. Hartemink (Ed.) Soil Carbon, Springer, New York, 2014, pp. 219-227.
+[3] B. Minasny, A. McBratney, B. Malone, M. Lacoste, C. Walter, Quantitatively Predicting Soil Carbon Across Landscapes, in: K.M. Alfred E. Hartemink (Ed.) Soil Carbon, Springer, New York, 2014, pp. 45-57.
+[4] B. Minasny, B. Malone, U. Stockmann, N. Odgers, A. McBratney, Pedometrics, in: S.A. Elias (Ed.) Reference Module in Earth Systems and Environmental Sciences, Elsevier, Netherlands, 2014, pp. 1-10.
+[5] D.B. Kidd, M.A. Webb, C.J. Grose, R.M. Moreton, B. Malone, A. McBratney, B. Minasny, Operational digital soil assessment for enterprise suitability in Tasmania, Australia, in: N.M.J.H.A.R.d.F.A.M. D Arrouays (Ed.) GlobalSoilMap: Basis of the global spatial soil information system, CRC Press, London, 2014, pp. 113-119.
+[6] K. Adhikari, R. Bou Kheir, M.B. Greve, M.H. Greve, B. Malone, B. Minasny, A. McBratney, Mapping soil pH and bulk density at multiple soil depths in Denmark, in: N.M.J.H.A.R.d.F.A.M. D Arrouays (Ed.) GlobalSoilMap: Basis of the global spatial soil information system, CRC Press, London, 2014, pp. 155-160.
+[7] A. McBratney, B. Minasny, I. Wheeler, B. Malone, D. van der Linden, Frameworks for digital soil assessment, in: B.P.M.A.B.M. Budiman Minasny (Ed.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 9-14.
+[8] B. Malone, A. McBratney, B. Minasny, Some methods regarding manipulations of scale for digital soil mapping, in: B.P.M.A.B.M. Budiman Minasny (Ed.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 135-138.
+[9] D.B. Kidd, M.A. Webb, C.J. Grose, R.M. Moreton, B. Malone, A. McBratney, B. Minasny, R. Viscarra Rossel, W.E. Cotching, L.A. Sparrow, et al., Digital soil assessment: Guiding irrigation expansion in Tasmania, Australia, in: B.P.M.A.B.M. Budiman Minasny (Ed.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 3-8.
+[10] P. Hughes, A. McBratney, B. Malone, B. Minasny, Development of terrons for the Lower Hunter Valley wine-growing region, in: B.P.M.A.B.M. Budiman Minasny (Ed.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 31-36.
+[11] K. Adhikari, R. Bou Kheir, M. Greve, P.K. Bocher, M.H. Greve, B. Malone, B. Minasny, A. McBratney, Progress towards GlobalSoilMap.net soil database of Denmark, in: B.P.M.A.B.M. Budiman Minasny (Ed.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 445-451.
+
+
+###Conference Proceedings
+[1] C. Hedley, P. Roudier, B. Malone, A.B. McBratney, B. Minasny, Coupling high resolution data and national baseline estimates for farm scale soil carbon auditing in:  7th Global Workshop on Digital Soil Mapping, Aarhus University, Denmark, 2016.
+[2] Q. Styc, B. Malone, B. Minasny, A. McBratney, Downscaling a national carbon model for use at the farm scale, in:  Pedometrics 2015 Conference, IUSS Pedometrics Commission, Córdoba, Spain, 2015.
+[3] U. Stockmann, B. Malone, B. Minasny, A. McBratney, Landscape-scale exploratory radiometric mapping using proximal soil sensing, in:  Pedometrics 2015 Conference, IUSS Pedometrics Commission, Córdoba, Spain, 2015.
+[4] J. Padarian, B. Minasny, B. Malone, A. McBratney, Digital soil mapping in the cloud using google earth engine, in:  Pedometrics 2015 Conference, IUSS Pedometrics Commission, Córdoba, Spain, 2015.
+[5] B. Minasny, U. Stockmann, B. Malone, A. McBratney, High resolution soil geochemical mapping, in:  Pedometrics 2015 Conference, IUSS Pedometrics Commission, Córdoba, Spain, 2015.
+[6] U. Stockmann, B. Minasny, A. McBratney, B. Malone, G. Hancock, G. Willgoose, Utilizing on-the-Go Radiometric Mapping for the Investigation of Short-Term Pedogenic Processes in the Lower Hunter Valley, NSW, Australia, in:  2014 International Annual Meeting - American Society of Agronomy, Soil Science Society of America, USA, 2014.
+[7] B. Minasny, A. McBratney, B. Malone, U. Stockmann, Digital mapping of Soil Change, in:  Soil Change Matters International Workshop, State Government Victoria, Australia, Melbourne, 2014, pp. 196.
+[8] A. McBratney, B. Minasny, D. Field, B. Malone, U. Stockmann, J. Padarian, Digital Soil Mapping and Assessment for Global Soil Security, in:  2014 International Annual Meeting - American Society of Agronomy, Soil Science Society of America, USA, 2014, pp. 251.
+[9] B. Malone, B. Minasny, N. Odgers, A. McBratney, Model Averaging for Combining Disaggregated Analogue Soil Maps with Those from Scorpan Kriging: Experience from the Dalrymple Shire, QLD, Australia, in:  20th World Congress of Soil Sciences, International Union of Soil Sciences (IUSS), Jeju, Korea, 2014.
+[10] D. Kidd, B. Malone, A. McBratney, B. Minasny, N. Odgers, M. Webb, R. Searle, A New Digital Soil Resource for Tasmania, Australia, in:  20th World Congress of Soil Sciences, International Union of Soil Sciences (IUSS), Jeju, Korea, 2014.
+[11] B. Minasny, A. McBratney, U. Stockmann, B. Malone, Pedogeomorphometry: An Approach to Model Soil Across Spatial and Temporal Scales, in:  ASA, CSSA and SSSA 2013 International Annual Meeting, Soil Science Society of America, Madison, USA, 2013.
+[12] A. McBratney, B. Minasny, B. Malone, U. Stockmann, J. Morris, Soil Inference For Biophysical Modelling At a Global Extent, in:  ASA, CSSA and SSSA 2013 International Annual Meeting, Soil Science Society of America, Madison, USA, 2013.
+[13] B. Malone, A. McBratney, B. Minasny, Digital mapping of a soil drainage index in the Lower Hunter Valley, NSW, in:  5th Joint Australian and New Zealand Soil Science Conference, Australian Society of Soil Science Incorporated, Warragul, Victoria, 2012, pp. 500-500.
+[14] D. Kidd, B. Malone, A. McBratney, B. Minasny, M.A. Webb, C.J. Grose, R.M. Moreton, R. Viscarra Rossel, W.E. Cotching, L.A. Sparrow, et al., Using digital soil mapping for enterprise suitability assessment in support of Tasmanian irrigation development, in:  5th Joint Australian and New Zealand Soil Science Conference, Australian Society of Soil Science Incorporated, Warragul, Victoria, 2012, pp. 636-639.
+[15] P. Hughes, A. McBratney, B. Malone, B. Minasny, Terrons as a planning and management tool for wine production in the Lower Hunter Valley, in:  5th Joint Australian and New Zealand Soil Science Conference, Australian Society of Soil Science Incorporated, Warragul, Victoria, 2012, pp. 627-627.
+[16] M. Guevara, B. Malone, A. Vazquez, C. Aguilar, J. Equihua, I. Trejo, M. Schmidt, Tree height estimations using remote sensing and data mining techniques, in:  Symposium SELPER 2012, Cayenne, French Guiana, 2012.
+[17] K. Adhikari, R. Kheir, B. Minasny, B. Malone, A. McBratney, M. Greve, Continuous depth function mapping of soil pH variability in Denmark (poster), in:  The 4th International Congress European Confederation of Soil Science Societies (ECSSS)\EUROSOIL 2012, Bari, Italy, 2012.
+[18] A. McBratney, I. Wheeler, B. Malone, B. Minasny, Soil Carbon Mapping and Life Cycle Analysis: Is There Anything To Join Them?, in:  ECOTECH & TOOLS 2011, Montpellier, France, 2011.
+[19] A. McBratney, B. Minasny, B. Malone, L. Wheeler, Regional predictions of soil carbon an soil carbon change, in:  ASA-CSSA-SSSA 2011 International Annual Meetings, Hilton Palacio del Rio Hotel, San Antonio, Texas, United States of America, 2011.
+[20] K. Adhikari, B. Minasny, A. McBratney, B. Malone, R. Kheir, M. Greve, Harmonisation of soil profile data for 3D prediction of soil properties in Denmark, in:  American Geophysical Union Fall Meeting, AGU, USA, 2011.
+[21] S. Wei, A. McBratney, J. Hempel, B. Minasny, B. Malone, T. D'Avello, L. Burras, J. Thompson, Digital Harmonisation of Adjacent Analogue Soil Survey Areas- 4 Iowa Counties, in:  19th World Congress of Soil Science: Soil solutions for a changing world 2010, International Union of Soil Sciences (IUSS), Wien (Vienna), Austria, 2010, pp. 1-7.
+[22] S. Wei, A. McBratney, J. Hempel, B. Minasny, B. Malone, T. D'Avello, L. Burras, B. Thompson, Digital harmonisation of adjacent analogue soil survey areas - 4 Iowa Counties, in:  4th Global Workshop on Digital Soil Mapping, CNR Conference Room, Piazzale Aldo Moro 7, Rome, 2010.
+[23] B. Minasny, A. McBratney, B. Malone, Y. Sulaeman, Digital Mapping of Soil Carbon, in:  19th World Congress of Soil Science: Soil solutions for a changing world 2010, International Union of Soil Sciences (IUSS), Wien (Vienna), Austria, 2010, pp. 5389-5392.
+[24] B. Malone, J.J. de Gruijter, A. McBratney, B. Minasny, J. Brus, An Additional Criterion for assessing the quality of digital soil attribute maps: the areal proportion of the map within the specified prediction interval, in:  19th World Congress of Soil Science: Soil solutions for a changing world 2010, International Union of Soil Sciences (IUSS), Wien (Vienna), Austria, 2010.
+[25] B. Malone, J.J. de Gruijter, A. McBratney, B. Minasny, Field Validation As A Means Of Assessing The Quality Of Digital Soil Property Maps, in:  4th Global Workshop on Digital Soil Mapping, CNR Conference Room, Piazzale Aldo Moro 7, Rome, 2010.
+[26] B. Malone, Spatial Representation of Digital Soil Maps: An Issue of the Spatial Entity, in:  4th Global Workshop on Digital Soil Mapping, CNR Conference Room, Piazzale Aldo Moro 7, Rome, 2010.
+[27] J. Hempel, A. McBratney, B. Minasny, S. Wei, L. Burras, J. Thompson, B. Malone, Digital harmonisation of adjacent analogue soil survey areas - 4 Iowa Counties, in:  ASA-CSSA-SSSA 2010 International Annual Meetings, Long Beach Convention & Entertainment Center, Long Beach, CA USA, 2010.
+[28] B. Minasny, A. McBratney, B. Malone, G. Tranter, Empirical uncertainty analysis for digital soil mapping, in:  Pedometrics 2009 Conference, China Agricultural University, Beijing, China, 2009.
+[29] A. McBratney, B. Minasny, B. Malone, L. Wheeler, S. Gulliver, Aspects of soil carbon mapping and monitoring via Global Soil Map: The spline model, material coordinate systems and auditing soil carbon on farms. Presentation to:"The Digital Soil Map of the World: Its Relevance to UNFCC", in:  COP15: The 15th United Nations Conference on Climate Change, Copenhagen, Denmark, 2009.
+[30] B. Malone, B. Minasny, A. McBratney, Mapping Continuous Soil Depth Functions in the Edgeroi District, NSW, Australia, Using Terrain Attributes and Other Environmental Factors, in:  Geomorphometry 2009, University of Zurich, Switzerland, 2009, pp. 90-97.
+[31] B. Malone, A. McBratney, B. Minasny, Mapping continuous depth function of carbon storage, in:  Pedometrics 2009 Conference, China Agricultural University, Beijing, China, 2009.
+[32] I. Odeh, T. Bishop, B. Malone, Modelling Soil Organic Carbon Dynamics Under Different Crop Production Systems In North -Western NSW Using The Rothc Model, in:  Soils 2008 - The Living Skin of Planet Earth, Soil Science Australia and New Zealand Society for Soil Science, New Zealand, 2008.
+
+###Books
+[1] B. Minasny, B. Malone, A. McBratney, Digital Soil Assessments and Beyond, in:  Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012.
+
+
+###Journals
+[1] A.A. Zolfaghari, R. Taghizadeh-Mehrjardi, A.R. Moshki, B. Malone, A.O. Weldeyohannes, F. Sarmadian, M.R. Yazdani, Using the nonparametric k-nearest neighbor approach for predicting cation exchange capacity, Geoderma, 265 (2016) 111-119.
+[2] R. Taghizadeh-Mehrjardi, S. Ayoubi, Z. Namazi, B.P. Malone, A.A. Zolfaghari, F.R. Sadrabadi, Prediction of soil surface salinity in arid region of central Iran using auxiliary variables and genetic programming, Arid Land Research and Management, 30 (2016) 49-64.
+[3] P.D.S.N. Somarathna, B.P. Malone, B. Minasny, Mapping soil organic carbon content over New South Wales, Australia using local regression kriging, Geoderma Regional, 7 (2016) 38-48.
+[4] B. Malone, S.K. Jha, B. Minasny, A. McBratney, Comparing regression-based digital soil mapping and multiple-point geostatistics for the spatial extrapolation of soil data, Geoderma, 262 (2016) 243-253.
+[5] A. Horta, B. Malone, U. Stockmann, B. Minasny, T.F.A. Bishop, A.B. McBratney, R. Pallasser, L. Pozza, Reply to “Comment on “Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review” by Horta et al”, Geoderma, 271 (2016) 256-257.
+[6] J. De Gruijter, A. McBratney, B. Minasny, I. Wheeler, B. Malone, U. Stockmann, Farm-scale soil carbon auditing, Geoderma, 265 (2016) 120-130.
+[7] U. Stockmann, B. Malone, A. McBratney, B. Minasny, Landscape-scale exploratory radiometric mapping using proximal soil sensing, Geoderma, 239 (2015) 115-129.
+[8] B. Malone, D. Kidd, B. Minasny, A. McBratney, Taking account of uncertainties in digital land suitability assessment, PeerJ, 3 (2015) 1-21.
+[9] D. Kidd, M. Webb, B. Malone, B. Minasny, A. McBratney, Eighty-metre resolution 3D soil-attribute maps for Tasmania, Australia, Soil Research, 53 (2015) 932-955.
+[10] D. Kidd, M. Webb, B. Malone, B. Minasny, A. McBratney, Digital soil assessment of agricultural suitability, versatility and capital in Tasmania, Australia, Geoderma Regional, 6 (2015) 7-21.
+[11] D. Kidd, B. Malone, A. McBratney, B. Minasny, M. Webb, Operational sampling challenges to digital soil mapping in Tasmania, Australia, Geoderma Regional, 4 (2015) 1-10.
+[12] A. Horta, B. Malone, U. Stockmann, B. Minasny, T. Bishop, A. McBratney, R. Pallasser, L. Pozza, Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review, Geoderma, 241-242 (2015) 180-209.
+[13] R. Taghizadeh-Mehrjardi, B. Minasny, F. Sarmadian, B. Malone, Digital mapping of soil salinity in ardakan region, central Iran, Geoderma, 213 (2014) 15-28.
+[14] B. Malone, B. Minasny, N. Odgers, A. McBratney, Using model averaging to combine soil property rasters from legacy soil maps and from point data, Geoderma, 232-234 (2014) 34-44.
+[15] B. Malone, A. McBratney, J. Collins, Soil-landscape endemism: The Glasserton Rigs of the Machars Peninsula, Scotland, Geoderma Regional, 2-3 (2014) 72-81.
+[16] B. Malone, P. Hughes, A. McBratney, B. Minasny, A model for the identification of terrons in the Lower Hunter Valley, Australia, Geoderma Regional, 1 (2014) 31-47.
+[17] D. Kidd, B. Malone, A. McBratney, B. Minasny, M.A. Webb, Digital mapping of a soil drainage index for irrigated enterprise suitability in Tasmania, Australia, Soil Research, 52 (2014) 107-119.
+[18] B. Minasny, A. McBratney, B. Malone, I. Wheeler, Digital Mapping of Soil Carbon, Advances in Agronomy, 118 (2013) 1-47.
+[19] B. Malone, A. McBratney, B. Minasny, Spatial scaling for digital soil mapping, Soil Science Society of America Journal, 77 (2013) 890-902.
+[20] K. Adhikari, R. Bou Kheir, M. Greve, P. Bocher, B. Malone, B. Minasny, A. McBratney, M.H. Greve, High-Resolution 3-D Mapping of Soil texture In Denmark, Soil Science Society of America Journal, 77 (2013) 860-876.
+[21] B. Malone, A. McBratney, B. Minasny, I. Wheeler, A general method for downscaling earth resource information, Computers and Geosciences, 41 (2012) 119-125.
+[22] B. Malone, A. McBratney, B. Minasny, Empirical estimates of uncertainty for mapping continuous depth functions of soil attributes, Geoderma, 160 (2011) 614-626.
+[23] B. Malone, J. de Gruijter, A. McBratney, B. Minasny, D. Brus, Using Additional Criteria for Measuring the Quality of Predictions and Their Uncertainties in a Digital Soil Mapping Framework, Soil Science Society of America Journal, 75 (2011) 1032-1043.
+[24] B. Malone, A. McBratney, B. Minasny, G.M. Laslett, Mapping continuous depth functions of soil carbon storage and available water capacity, Geoderma, 154 (2009) 1780-1152.
+[25] S. Cattle, B. Malone, D. McKenzie, The effect of dust on topsoil variation in the Orange wine region, Australian & New Zealand Grapegrower & Winemaker, 550 (2009) 22-24.
+
+
+
+
+
+

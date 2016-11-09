@@ -7,6 +7,34 @@ comments: false
 modified: 2015-04-15
 ---
 
+
+## Book
+-----
+
+<div class='panel-pub'>
+<ol>
+{% for article in site.data.book %}
+    <li>
+    <div class="title">
+    <span class="title">{{ article.title }}</span>
+    </div>
+    <div class='author'>
+    {% for author in article.author %}
+        <span class='{{ author.role }}'>{{ author.family }}, {{ author.given_initial }}{% if author.role contains 'corr' %}*{% endif %}; </span>
+    {% endfor %}
+    </div>
+    <div class="pubinfo">
+    <span class="publisher">{{ article.publisher }}, </span><span class="city">{{ article.city }}, </span><span class="year">{{ article.year }}, </span> Pages: <span class="page">{{ article.page }}. </span>
+    </div>
+    <div class="url">
+        <a href="{{ article.URL }}">{{ article.URL }}</a>
+    </div>
+    </li>
+{% endfor %}
+</ol>
+</div>
+
+
 ## Book Chapter
 -----
 

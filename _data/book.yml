@@ -1,0 +1,20 @@
+# Brendan Malone Publications - Book Chapters
+
+- id: RDSM
+  title: 'Using R for Digital Soil Mapping'
+  page: 300
+  year: 2017
+  author:
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  publisher: Springer
+  city: 'The Netherlands'
+  URL: "http://www.springer.com/la/book/9783319443256"
+
