@@ -1,4 +1,26 @@
-# Yi-Xin Liu's Publications - Journal articles
+# Brendan Malone Publications - Journal articles
+
+- title: 'The effect of dust on topsoil variation in the Orange wine region'
+  page: '22-24'
+  year: 2009
+  author:
+  - given: Stephen
+    given_initial: S.
+    family: Cattle
+    role: 'main corr'
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: David
+    given_initial: D.
+    family: MacKenzie
+  journal:
+    fullname: Australian & New Zealand Grapegrower & Winemaker
+    abbreviation: Australian & New Zealand Grapegrower & Winemaker
+  URL: "http://winetitles.com.au/gwm/view/?action=view&id=86"
+  type: article
+  fulltext: malone2009_1.pdf
+  language: english
 
 - title: 'On the Teaching of Modern Polymer Physics: I. Ginzburg Criterion'
   volume: '1'
