@@ -1,14 +1,5 @@
 ### Book Chapters
 
-[1] M.A. Webb, D.B. Kidd, C.J. Grose, R.M. Moreton, B. Malone, A. McBratney, B. Minasny, Integrating climate into the Digital Soil Assessment framework to assess land suitability, in: D. Arrouays, N. McKenzie, J. Hempel, A. Richer de Forges, A.B. McBratney (Eds.) GlobalSoilMap: Basis of the global spatial soil information system, CRC Press, London, 2014, pp. 393-399.
-[2] C. Waring, U. Stockmann, B. Malone, B. Whelan, A. McBratney, Is Percent 'Projected Natural Vegetation Soil Carbon' a Useful Indicator of Soil Condition?, in: A.E. Hartemink, K. McSweeney (Eds.) Soil Carbon, Springer, New York, 2014, pp. 219-227.
-[3] B. Minasny, A. McBratney, B. Malone, M. Lacoste, C. Walter, Quantitatively Predicting Soil Carbon Across Landscapes, in: A.E. Hartemink, K. McSweeney (Eds.) Soil Carbon, Springer, New York, 2014, pp. 45-57.
-[4] B. Minasny, B. Malone, U. Stockmann, N. Odgers, A. McBratney, Pedometrics, in: S.A. Elias (Ed.) Reference Module in Earth Systems and Environmental Sciences, Elsevier, Netherlands, 2014, pp. 1-10.
-[5] D.B. Kidd, M.A. Webb, C.J. Grose, R.M. Moreton, B. Malone, A. McBratney, B. Minasny, Operational digital soil assessment for enterprise suitability in Tasmania, Australia, in: D. Arrouays, N. McKenzie, J. Hempel, A. Richer de Forges, A.B. McBratney (Eds.) GlobalSoilMap: Basis of the global spatial soil information system, CRC Press, London, 2014, pp. 113-119.
-[6] K. Adhikari, R. Bou Kheir, M.B. Greve, M.H. Greve, B. Malone, B. Minasny, A. McBratney, Mapping soil pH and bulk density at multiple soil depths in Denmark, in: D. Arrouays, N. McKenzie, J. Hempel, A. Richer de Forges, A.B. McBratney (Eds.) GlobalSoilMap: Basis of the global spatial soil information system, CRC Press, London, 2014, pp. 155-160.
-[7] A. McBratney, B. Minasny, I. Wheeler, B. Malone, D. van der Linden, Frameworks for digital soil assessment, in: B. Minasny, B.P. Malone, A.B. McBratney (Eds.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 9-14.
-[8] B. Malone, A. McBratney, B. Minasny, Some methods regarding manipulations of scale for digital soil mapping, in: B. Minasny, B.P. Malone, A.B. McBratney (Eds.) Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012, pp. 135-138.
-
 
 
 ###Conference Proceedings
@@ -46,7 +37,7 @@
 [32] I. Odeh, T. Bishop, B. Malone, Modelling Soil Organic Carbon Dynamics Under Different Crop Production Systems In North -Western NSW Using The Rothc Model, in:  Soils 2008 - The Living Skin of Planet Earth, Soil Science Australia and New Zealand Society for Soil Science, New Zealand, 2008.
 
 ###Books
-[1] B. Minasny, B. Malone, A. McBratney, Digital Soil Assessments and Beyond, in:  Digital Soil Assessments and Beyond, CRC Press, Leiden, The Netherlands, 2012.
+
 
 
 ###Journals
