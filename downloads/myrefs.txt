@@ -57,16 +57,6 @@
 [14] B. Malone, B. Minasny, N. Odgers, A. McBratney, Using model averaging to combine soil property rasters from legacy soil maps and from point data, Geoderma, 232-234 (2014) 34-44.
 [15] B. Malone, A. McBratney, J. Collins, Soil-landscape endemism: The Glasserton Rigs of the Machars Peninsula, Scotland, Geoderma Regional, 2-3 (2014) 72-81.
 [16] B. Malone, P. Hughes, A. McBratney, B. Minasny, A model for the identification of terrons in the Lower Hunter Valley, Australia, Geoderma Regional, 1 (2014) 31-47.
-[17] D. Kidd, B. Malone, A. McBratney, B. Minasny, M.A. Webb, Digital mapping of a soil drainage index for irrigated enterprise suitability in Tasmania, Australia, Soil Research, 52 (2014) 107-119.
-[18] B. Minasny, A. McBratney, B. Malone, I. Wheeler, Digital Mapping of Soil Carbon, Advances in Agronomy, 118 (2013) 1-47.
-[19] B. Malone, A. McBratney, B. Minasny, Spatial scaling for digital soil mapping, Soil Science Society of America Journal, 77 (2013) 890-902.
-[20] K. Adhikari, R. Bou Kheir, M. Greve, P. Bocher, B. Malone, B. Minasny, A. McBratney, M.H. Greve, High-Resolution 3-D Mapping of Soil texture In Denmark, Soil Science Society of America Journal, 77 (2013) 860-876.
-[21] B. Malone, A. McBratney, B. Minasny, I. Wheeler, A general method for downscaling earth resource information, Computers and Geosciences, 41 (2012) 119-125.
-[22] B. Malone, A. McBratney, B. Minasny, Empirical estimates of uncertainty for mapping continuous depth functions of soil attributes, Geoderma, 160 (2011) 614-626.
-[23] B. Malone, J. de Gruijter, A. McBratney, B. Minasny, D. Brus, Using Additional Criteria for Measuring the Quality of Predictions and Their Uncertainties in a Digital Soil Mapping Framework, Soil Science Society of America Journal, 75 (2011) 1032-1043.
-[24] B. Malone, A. McBratney, B. Minasny, G.M. Laslett, Mapping continuous depth functions of soil carbon storage and available water capacity, Geoderma, 154 (2009) 1780-1152.
-[25] S. Cattle, B. Malone, D. McKenzie, The effect of dust on topsoil variation in the Orange wine region, Australian & New Zealand Grapegrower & Winemaker, 550 (2009) 22-24.
-
 
 
 
