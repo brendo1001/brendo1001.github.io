@@ -41,22 +41,9 @@
 
 
 ###Journals
-[1] A.A. Zolfaghari, R. Taghizadeh-Mehrjardi, A.R. Moshki, B. Malone, A.O. Weldeyohannes, F. Sarmadian, M.R. Yazdani, Using the nonparametric k-nearest neighbor approach for predicting cation exchange capacity, Geoderma, 265 (2016) 111-119.
-[2] R. Taghizadeh-Mehrjardi, S. Ayoubi, Z. Namazi, B.P. Malone, A.A. Zolfaghari, F.R. Sadrabadi, Prediction of soil surface salinity in arid region of central Iran using auxiliary variables and genetic programming, Arid Land Research and Management, 30 (2016) 49-64.
-[3] P.D.S.N. Somarathna, B.P. Malone, B. Minasny, Mapping soil organic carbon content over New South Wales, Australia using local regression kriging, Geoderma Regional, 7 (2016) 38-48.
-[4] B. Malone, S.K. Jha, B. Minasny, A. McBratney, Comparing regression-based digital soil mapping and multiple-point geostatistics for the spatial extrapolation of soil data, Geoderma, 262 (2016) 243-253.
-[5] A. Horta, B. Malone, U. Stockmann, B. Minasny, T.F.A. Bishop, A.B. McBratney, R. Pallasser, L. Pozza, Reply to “Comment on “Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review” by Horta et al”, Geoderma, 271 (2016) 256-257.
-[6] J. De Gruijter, A. McBratney, B. Minasny, I. Wheeler, B. Malone, U. Stockmann, Farm-scale soil carbon auditing, Geoderma, 265 (2016) 120-130.
-[7] U. Stockmann, B. Malone, A. McBratney, B. Minasny, Landscape-scale exploratory radiometric mapping using proximal soil sensing, Geoderma, 239 (2015) 115-129.
-[8] B. Malone, D. Kidd, B. Minasny, A. McBratney, Taking account of uncertainties in digital land suitability assessment, PeerJ, 3 (2015) 1-21.
-[9] D. Kidd, M. Webb, B. Malone, B. Minasny, A. McBratney, Eighty-metre resolution 3D soil-attribute maps for Tasmania, Australia, Soil Research, 53 (2015) 932-955.
-[10] D. Kidd, M. Webb, B. Malone, B. Minasny, A. McBratney, Digital soil assessment of agricultural suitability, versatility and capital in Tasmania, Australia, Geoderma Regional, 6 (2015) 7-21.
-[11] D. Kidd, B. Malone, A. McBratney, B. Minasny, M. Webb, Operational sampling challenges to digital soil mapping in Tasmania, Australia, Geoderma Regional, 4 (2015) 1-10.
-[12] A. Horta, B. Malone, U. Stockmann, B. Minasny, T. Bishop, A. McBratney, R. Pallasser, L. Pozza, Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review, Geoderma, 241-242 (2015) 180-209.
-[13] R. Taghizadeh-Mehrjardi, B. Minasny, F. Sarmadian, B. Malone, Digital mapping of soil salinity in ardakan region, central Iran, Geoderma, 213 (2014) 15-28.
-[14] B. Malone, B. Minasny, N. Odgers, A. McBratney, Using model averaging to combine soil property rasters from legacy soil maps and from point data, Geoderma, 232-234 (2014) 34-44.
-[15] B. Malone, A. McBratney, J. Collins, Soil-landscape endemism: The Glasserton Rigs of the Machars Peninsula, Scotland, Geoderma Regional, 2-3 (2014) 72-81.
-[16] B. Malone, P. Hughes, A. McBratney, B. Minasny, A model for the identification of terrons in the Lower Hunter Valley, Australia, Geoderma Regional, 1 (2014) 31-47.
+
+
+
 
 
 
