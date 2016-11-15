@@ -1,5 +1,40 @@
 # Brendan Malone Publications - Journal articles
 
+- title: 'Using the nonparametric k-nearest neighbor approach for predicting cation exchange capacity'
+  volume: '265'
+  page: '111-119'
+  year: 2016
+  author:
+  - given: A
+    given_initial: A. A.
+    family: Zolfaghari
+  - given: Ruhollah
+    given_initial: R.
+    family: Taghizadeh-Mehrjardi
+    role: 'main corr'
+  - given: A
+    given_initial: A. R.
+    family: Moshki
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: A
+    given_initial: A. O.
+    family: Weldeyohannes
+  - given: F
+    given_initial: F.
+    family: Sarmadian
+  - given: M
+    given_initial: M. R. 
+    family: Yazdani
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706115301282"
+  type: article
+  fulltext: malone2009_1.pdf
+  language: english
+
 - title: 'Prediction of soil surface salinity in arid region of central Iran using auxiliary variables and genetic programming'
   volume: '30'
   page: '49-64'
