@@ -325,7 +325,6 @@
   fulltext: malone2009_1.pdf
   language: english
 
-
 - title: 'Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review'
   volume: '241-242'
   page: '180-209'
@@ -687,8 +686,7 @@
   type: article
   fulltext: malone2009_1.pdf
   language: english
-
-
+  
 - title: 'Mapping continuous depth functions of soil carbon storage and available water capacity'
   volume: '154'
   page: '138-152'
@@ -714,7 +712,6 @@
   type: article
   fulltext: malone2009_1.pdf
   language: english
-
 
 - title: 'The effect of dust on topsoil variation in the Orange wine region'
   page: '22-24'
