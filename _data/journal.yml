@@ -8,7 +8,7 @@
   - given: Ruhollah
     given_initial: R.
     family: Taghizadeh-Mehrjardi
-    role: 'main corr'
+    role: main
   - given: S
     given_initial: S.
     family: Ayoubi
@@ -40,7 +40,7 @@
   - given: Sanjee
     given_initial: P. D. S. N.
     family: Somarathna
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -63,7 +63,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Sanjeev
     given_initial: S. K.
     family: Jha
@@ -81,7 +81,7 @@
   fulltext: malone2009_1.pdf
   language: english
 
-- title: 'Reply to Comment on Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review by Horta et al'
+- title: 'Reply to Comment on Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review by Horta et al'
   volume: '271'
   page: '256-257'
   year: 2016
@@ -89,7 +89,7 @@
   - given: Anna
     given_initial: A.
     family: Horta
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -126,8 +126,8 @@
   author:
   - given: Jaap 
     given_initial: J. J.
-    family: deGruijter
-    role: 'main corr'
+    family: de Gruijter
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -159,7 +159,7 @@
   - given: Uta 
     given_initial: U.
     family: Stockmann
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -185,7 +185,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Darren
     given_initial: D.
     family: Kidd
@@ -211,7 +211,7 @@
   - given: Darren
     given_initial: D.
     family: Kidd
-    role: 'main corr'
+    role: main
   - given: Matthew
     given_initial: M.
     family: Webb
@@ -240,7 +240,7 @@
   - given: Darren
     given_initial: D.
     family: Kidd
-    role: 'main corr'
+    role: main
   - given: Matthew
     given_initial: M.
     family: Webb
@@ -269,7 +269,7 @@
   - given: Darren
     given_initial: D.
     family: Kidd
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -298,7 +298,7 @@
   - given: Anna
     given_initial: A.
     family: Horta
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -336,7 +336,7 @@
   - given: Ruhollah
     given_initial: R.
     family: Taghizadeh-Mehrjardi
-    role: 'main corr'
+    role: main
   - given: Budiman
     given_initial: B.
     family: Minasny
@@ -362,7 +362,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Budiman
     given_initial: B.
     family: Minasny
@@ -388,7 +388,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -411,7 +411,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Philip
     given_initial: P.
     family: Hughes
@@ -437,7 +437,7 @@
   - given: Darren
     given_initial: D. K.
     family: Kidd
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -466,7 +466,7 @@
   - given: Darren
     given_initial: D. K.
     family: Kidd
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
@@ -495,7 +495,7 @@
   - given: Budiman
     given_initial: B.
     family: Minasny
-    role: 'main corr'
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -521,7 +521,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -544,7 +544,7 @@
   - given: Kabindra
     given_initial: K.
     family: Adhikari
-    role: 'main corr'
+    role: main
   - given: R
     given_initial: R.
     family: Bou Kheir
@@ -582,7 +582,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -593,8 +593,8 @@
     given_initial: I.
     family: Wheeler
   journal:
-    fullname: Computers & Geosciences
-    abbreviation: Computers & Geosciences
+    fullname: Computers and Geosciences
+    abbreviation: Computers and Geosciences
   URL: "http://www.sciencedirect.com/science/article/pii/S0098300411002895"
   type: article
   fulltext: malone2009_1.pdf
@@ -608,7 +608,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -631,7 +631,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Jaap
     given_initial: J. J.
     family: de Gruijter
@@ -660,7 +660,7 @@
   - given: Brendan
     given_initial: B. P.
     family: Malone
-    role: 'main corr'
+    role: main
   - given: Alex
     given_initial: A. B.
     family: McBratney
@@ -685,7 +685,7 @@
   - given: Stephen
     given_initial: S.
     family: Cattle
-    role: 'main corr'
+    role: main
   - given: Brendan
     given_initial: B. P.
     family: Malone
