@@ -1,134 +1,120 @@
 ---
 layout: page
 title: CV
-header-img: images/abstract-5.jpg
+header-img: images/NZ2.jpg
 comments: false
-modified: 2015-04-15
+modified: 16/11/2016
 ---
 
-## Yi-Xin Liu
+## Brendan Malone
 
-Department of Macromolecular Science
-Fudan University
-Yuejin Bldg. Room 405, 220 Handan Rd.
-Shanghai, 200433, China
-Mobile: (+86) 13916819745
-Email: lyx@fudan.edu.cn; liuyxpp@gmail.com
-Website: [http://www.ngpy.org](http://www.ngpy.org/)
+Centre for Carbon, Water and Food
+University of Sydney
+Biomedical Building. Room 115, 1 Central Ave.
+Eveleigh, NSW 2015. Australia
+Mobile: (+61) 286271124
+Email: brendan.malone@sydney.edu.au; malone.brendan1001@gmail.com
+Website: [http://www.smartdigiag.com](http://www.smartdigiag.com)
 
 
 ### Research Interests
 -----
 
-- Static and dynamic properties of complex fluids, e.g. biological macromolecules (DNA, protein), polyelectrolytes, block copolymers, and polymer brushes in bulk or under confinements.
+- My research focus is in using quantitative methods to precisely understand how soils function and change- spatially, and through time. 
 
-- Numerical algorithms for polymer self-consistent field theory, molecular dynamics simulation, Monte Carlo simulation, and phase field simulation.
+- I research methods for comprehensive digital soil mapping aiming to characterize soil both in the lateral and vertical dimensions. 
 
-- Thin and ultrathin film polymer crystallization.
+- I contribute methodology for quantifying (and validating) measures of uncertainty for these comprehensive soil information systems. 
+
+- Outputs of this sort of work are intended for feeding into environmental modeling and monitoring programs, where precise land management decision making is required at all manner of spatial scales. 
+
+- The importance of these research fields have been recognized by successful funding grants from both the Australian Research Council and Australian Government Department of Agriculture.
 
 ### Education
 -----
 
-**Peking University**, Beijing, 2004 - 2009
-Ph.D. in Polymer Chemistry and Physics, Jun, 2009
-Disertation: *Phase Selection Pathways and Morphological Evolution in Polymer Crystallization: An Experimental and Theoretical Study on Low Molecular Weight Poly(ethylene oxide) Fractions*
-Advisor: Prof. Er-Qiang Chen
+**University of Sydney**, Australia, 2009 - 2012
+Ph.D. in Digital Soil Mapping, Dec, 2012
+Disertation: *Practicable methodologies for delivering comprehensive spatial soil information*
+Advisor: Prof. Alex McBratney and Prof. Budiman Minasny
 
-**Nanjing University**, Nanjing, 2000 - 2004
-BS in Chemistry, Jun, 2004
-Thesis: *Synthesis and characterization of Amphiphilic Ligands and Its Complexes with Metal Ions*
-Advisor: Prof. Wei-Jiang He
+**University of Sydney**, Australia, 2005 - 2008
+Bachelor of Science in Agriculture (hons), Nov, 2008
+Thesis: *The identification and characterisation of loessic soils and their spatial distribution around Mt Canobolas in the New South Wales Central Tablelands*
+Advisor: Assoc. Prof. Stephen Cattle
 
 ### Research Experience
 -----
 
-**Visiting Researcher**, 2014 - present
-*University of California, Santa Barbara, Materials Research Laboratory*
+**Research Fellow**, 2014 - present
+*University of Sydney, Soil Security Laboratory*
 
-- Field-theoretic simulations of polymeric materials.
+- Farm-scale soil carbon auditing.
 
-**Lecturer**, 2012 - present
-*Fudan University, Department of Macromolecular Science*
+**Postdoctoral Research Fellow**, 2012 - 2014
+*University of Sydney, Soil Security Laboratory*
 
-- Chebyshev based self-consistent field theory (SCFT) studies of polymer brushes and polymers under confinements, focusing on the effect of surface affinity. The Chebyshev based SCFT algorithm is highly efficient on non-periodic boundary condition problems.
+- Digital soil assessments for expansion of irrigated agriculture across Tasmania, Australia
 
-- Development of the polyorder project: a unified computing framework for conducting polymer SCFT calculations.
+**Visiting Research Fellow**, 2013 (3 months)
+*Texas A & M Univerisity, Soil and Crop Department*
 
-**Postdoctoral Research Fellow**, 2009 - 2012
-*Fudan University, Department of Macromolecular Science*
+- Precision Agriculture
+- Multiple point statistics
 
-- Developed high performance SCFT methods for studying the equilibrium phase separation structures of block copolymers and polyelectrolytes.
+**Ph.D. Candidate**, 2009 - 2012
+*University of Sydney, Soil Security Laboratory*
 
-- Developed multigrid algorithms for solving Poisson-Boltzmann equations.
+- Developed methodologies for comprehensive digital soil mapping
 
-- Performed Monte Carlo simulations on the nucleation and growth process in thickening of monolayer PEO crystals in ultrathin films.
+**Undergraduate Student**, 2005 - 2008
+*University of Sydney, Faculty of Agriculture*
 
-**Ph.D. Candidate**, 2004 - 2009
-*Peking University, College of Chemistry and Molecular Engineering*
-
-- Introduced the phase field simulation techniques to study morphological evolution of monolayer poly(ethylene oxide) (PEO) crystals.
-
-- Conducted experimental studies on the nucleation, growth, and thickening of monolayer PEO crystals in ultrathin films using real-time atomic force microsocpy (AFM).
-
-**Undergraduate Student**, 2003 - 2004
-*Nanjing University, School of Chemistry and Chemical Engineering*
-
-- Synthesized three amphiphilic ligands and their complexes with Cu^2+.
-
-- Computed surface properties of supported catalysts using Gaussian 98.
+- Majored in soil science
 
 ### Research Grants
 -----
 
-- The National Basic Research Program of China (2011CB605701, 2013-2015).
+- Optimised field delineation of contaminated soils; McBratney A, Minasny B, Malone B, Bishop T, Horta A, Mulvey P; Australian Research Council (ARC)/Linkage Projects (LP). (2016-2019).
 
-- The Shanghai Postdoctoral Scientific Program (11R21411400, 2011-2011).
+- Securing soils for posterity. An international research and training collaboration to investigate efficient approaches to assessing and improving global soil carbon sequestration.; Malone B, Stockmann U, Chen Z; DVC International/IPDF Grant. (2015).
 
-- The Young Scientists Fund of the National Natural Science Foundation of China (NNSFC) (21004013, 2011-2013).
+- A general soil spatial scaling theory; McBratney A, Minasny B, Malone B; Australian Research Council (ARC)/Discovery Projects (DP). (2014-2017).
+
+- Farm scale assessment of SOC from disaggregated national/regional scale models; McBratney A, Minasny B, Malone B; Department of Agriculture and Water Resources (Federal)/Carbon Farming Futures - Filling the Research Gap Program. (2013-2016).
 
 ### Professional Memberships and Activities
 -----
 
-- Member, American Physical Society (2013 - present)
+- Member, Soil Science Australia (2008 - present)
 
-- Referee, Polymer (2013 - present)
+- Member, Soil Science Society of America (2010 - present)
+
+- Editorial Board, Geoderma (2015 - present)
+
+- Editorial Board, ASA, CSSA, SSSA Books (2016 - present)
+
+- Advisory board member of the Pedometrics Commission of the International Union of Soil Sciences (2013- present) 
+
+- Sydney representative of the NSW Branch of Soil Science Australia (professional soil science society of Australia) (2015 - present)
+
+
 
 ### Honors and Awards
 -----
 
-- Dongkong Scholarship for Graduates (Peking University, 2008)
+- The Australian Society of Soil Science CJ Stephens Award in 2013 for the best soil science PhD Thesis in the calendar year.
 
-- Student Award of Merit (Peking University, 2008)
+- Deans Award for Outstanding Post-Graduate Research in 2011: Faculty of Agriculture and Environment, University of Sydney
 
-- Renming Scholarship (Nanjing University, 2000, 2001, 2002, 2003)
 
 ### Computational Experience
 -----
 
-- Programming: C/C++, Parallel Programming (MPI, CUDA), Python, Matlab, Fortran, HTML/CSS.
+- Programming: R.
 
-- Working experience with armadillo, blitz++, fftw, numpy, scipy, matplotlib, and mayavi.
+- Working experience with C/C++, Python, Matlab, Fortran, HTML/CSS, armadillo, numpy, scipy, matplotlib.
 
-- Open source projects: [polyorder](https://bitbucket.org/liuyxpp/polyorder) - [gyroid](http://packages.python.org/gyroid) - [ngpy](https://bitbucket.org/liuyxpp/ngpy) - [chebpy](https://bitbucket.org/liuyxpp/chebpy)
-
-### Technical Experience
------
-
-**TEM Administrator**, 2009 - 2012
-*Fudan University, Department of Macromolecular Science*
-
-- Assisted the engineer from FEI company to install FEI Technai G2 20 Twin with cryo, low dose, and 3D tomography.
-
-- Wrote the lab mannual for operating TEM.
-
-**AFM Administrator**, 2006 - 2009
-*Peking University, College of Chemistry and Molecular Engineering*
-
-- Developed a user management system for controlling AFM.
-
-- Developed software toolkits to analyze AFM images.
-
-- Trained more than 20 users, including faculties, staffs, and graduate students.
 
 ### Publications
 -----

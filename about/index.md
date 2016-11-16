@@ -1,9 +1,9 @@
 ---
 layout: page
 title: About
-header-img: images/about.jpg
+header-img: images/HunterValley_phot1.jpg
 comments: false
-modified: 11/11/2016
+modified: 16/11/2016
 ---
 
 ## About Me
