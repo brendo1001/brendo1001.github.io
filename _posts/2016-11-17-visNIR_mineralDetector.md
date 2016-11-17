@@ -105,7 +105,7 @@ iron oxides. The depth of a spectral feature is calculated by:
 
 $$
 
-D= 1- \\frac{R\_{b}}{R\_{c}} 
+    D= 1- \\frac{R\_{b}}{R\_{c}} 
 
 $$
 
