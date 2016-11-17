@@ -3,7 +3,7 @@ layout: page
 title: CV
 header-img: images/NZ2.jpg
 comments: false
-modified: 16/11/2016
+modified: 2016-11-16
 ---
 
 ## Brendan Malone

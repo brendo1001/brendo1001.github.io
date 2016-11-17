@@ -4,7 +4,7 @@ title: Software
 description: "Software"
 header-img: images/NZ1.jpg
 comments: false
-modified: 16/11/2016
+modified: 2016-11-16
 ---
 
 Scientific software development plays a very important role in my research. Along with my research, I have developed some computing software to carry out the actual task. The software are coded mostly in R
