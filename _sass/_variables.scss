@@ -1,0 +1,78 @@
+// Typography
+// --------------------------------------------------
+
+$base-font: 'Lora', 'Times New Roman', serif;
+$heading-font: 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, sans-serif;
+$caption-font: 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Calibri, Arial, sans-serif;
+$code-font: "Monaco","Inconsolata","DejaVu Sans Mono","Andale Mono WT","Andale Mono","Courier New",Courier,monospace;
+$alt-font: serif;
+$site-title-font: 'Viga', $heading-font;
+
+$doc-font-size: 16;
+$doc-line-height: 26;
+
+
+// set-up the body font-size / line-height
+body {
+	margin-top: 0px + $doc-line-height;
+	font-size: 0px + $doc-font-size;
+}
+
+
+// Colors
+// --------------------------------------------------
+$turquoise:     #1abc9c;
+$emerald:       #2ecc71;
+$peter-river:   #3498db;
+$amethyst:      #9b59b6;
+$wet-asphalt:   #34495e;
+$sun-flower:    #f1c40f;
+$carrot:        #e67e22;
+$alizarin:      #e74c3c;
+$clouds:        #f4f6f7;
+$concrete:      #95a6a6;
+
+$black:         #000;
+$black-almost:  rgba(#222,0.8);
+$black999:      #999;
+$white:         #fff;
+$white-almost:  #e8e8e8;
+$gray:          lighten($wet-asphalt, 50%);
+$gray-light:    lighten($wet-asphalt, 60%);
+$gray-lighter:  lighten($wet-asphalt, 70%);
+$gray-dark:     lighten($wet-asphalt, 35%);
+$gray-darker:   lighten($wet-asphalt, 20%);
+$inverse:       white;
+
+$base-color:    $black-almost;
+$body-color:    $white-almost;
+$text-color:    $black-almost;
+$comp-color:    complement(#222);
+$border-color:  lighten($base-color,60);
+$feature-title-color:  $white;
+
+$link-color:    $peter-river;
+
+$primary:       $wet-asphalt;
+$secondary:     $turquoise;
+$success:       $emerald;
+$warning:       $sun-flower;
+$danger	:       $alizarin;
+$info:          $peter-river;
+
+$nav-brand-color:       $white;
+$nav-brand-faded:       rgba($nav-brand-color, 0.6);
+$nav-brand-fix-color:   $white;
+$nav-brand-fix-faded:   rgba($nav-brand-fix-color, 0.6);
+$nav-color:             $white;
+$nav-faded:             rgba($nav-color, 0.7);
+$nav-fix-color:         $primary;
+$nav-fix-faded:         rgba($nav-fix-color, 0.7);
+$nav-bgcolor:           rgba($white, 0.8);
+
+// Screen Size
+// --------------------------------------------------
+
+$small               : "only screen and (min-width: 30em)";
+$medium              : "only screen and (min-width: 48em)";
+$large               : "only screen and (min-width: 62.5em)";
