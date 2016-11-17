@@ -103,7 +103,11 @@ area of the soil spectral feature (to the reference). The slope of the
 continuum is also used, particularly for the positive identification of
 iron oxides. The depth of a spectral feature is calculated by:
 
-$$D= 1- \\frac{R\_{b}}{R\_{c}}\\tag{Equation 1}$$
+$$
+
+D= 1- \\frac{R\_{b}}{R\_{c}} \\tag{Equation 1}
+
+$$
 
 *D* is the depth of the spectral feature, and *R*<sub>*b*</sub> is the
 reflectance value of the raw isolated spectra where the minimum
