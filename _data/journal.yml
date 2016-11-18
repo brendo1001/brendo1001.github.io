@@ -32,9 +32,9 @@
     abbreviation: Geoderma
   URL: "http://www.sciencedirect.com/science/article/pii/S0016706115301282"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2016_6.pdf
   language: english
-  comment: Not a bad paper
+  comment:
   
 - title: 'Prediction of soil surface salinity in arid region of central Iran using auxiliary variables and genetic programming'
   volume: '30'
@@ -65,7 +65,7 @@
     abbreviation: Arid Land Research and Management
   URL: "http://www.tandfonline.com/doi/full/10.1080/15324982.2015.1046092"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2016_4.pdf
   language: english
 
 - title: 'Mapping soil organic carbon content over New South Wales, Australia using local regression kriging'
@@ -88,7 +88,7 @@
     abbreviation: Geoderma Regional
   URL: "http://www.sciencedirect.com/science/article/pii/S235200941530016X"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2016_3.pdf
   language: english
 
 - title: 'Comparing regression-based digital soil mapping and multiple-point geostatistics for the spatial extrapolation of soil data'
@@ -114,7 +114,7 @@
     abbreviation: Geoderma
   URL: "http://www.sciencedirect.com/science/article/pii/S0016706115300665"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2016_1.pdf
   language: english
 
 - title: 'Reply to Comment on Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review by Horta et al'
@@ -152,7 +152,7 @@
     abbreviation: Geoderma
   URL: "http://www.sciencedirect.com/science/article/pii/S0016706115002566"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2016_5.pdf
   language: english
 
 - title: 'Farm-scale soil carbon auditing'
@@ -184,7 +184,7 @@
     abbreviation: Geoderma
   URL: "http://www.sciencedirect.com/science/article/pii/S0016706115301269"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2016_2.pdf
   language: english
 
 - title: 'Landscape-scale exploratory radiometric mapping using proximal soil sensing'
@@ -210,7 +210,7 @@
     abbreviation: Geoderma
   URL: "http://www.sciencedirect.com/science/article/pii/S0016706114003723"
   type: article
-  fulltext: malone2009_1.pdf
+  fulltext: malone2015_3.pdf
   language: english
 
 - title: 'Taking account of uncertainties in digital land suitability assessment'
@@ -363,6 +363,7 @@
   type: article
   fulltext: malone2015_5.pdf
   language: english
+  comment: Geoderma best paper award. Best Review of 2015.
 
 - title: 'Digital mapping of soil salinity in ardakan region, central Iran'
   volume: '213'
