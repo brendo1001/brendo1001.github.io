@@ -59,6 +59,9 @@ modified: 2016-11-16
     <div class="url">
         <a href="{{ article.URL }}">{{ article.URL }}</a>
     </div>
+    <div class="comment">
+    <span class="comment">{{ article.comment}}</span>
+    </div>
     </li>
 {% endfor %}
 </ol>

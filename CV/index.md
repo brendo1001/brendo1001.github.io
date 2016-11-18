@@ -3,7 +3,7 @@ layout: page
 title: CV
 header-img: images/NZ2.jpg
 comments: false
-modified: 2016-11-16
+modified: 2018-11-16
 ---
 
 ## Brendan Malone
@@ -24,11 +24,12 @@ Website: [http://www.smartdigiag.com](http://www.smartdigiag.com)
 
 - I research methods for comprehensive digital soil mapping aiming to characterize soil both in the lateral and vertical dimensions. 
 
-- I contribute methodology for quantifying (and validating) measures of uncertainty for these comprehensive soil information systems. 
+- I research methods for quantifying (and validating) measures of uncertainty for these comprehensive soil information systems. 
 
-- Outputs of this sort of work are intended for feeding into environmental modeling and monitoring programs, where precise land management decision making is required at all manner of spatial scales. 
+-  I investigate innovative systems for soil measurement, which includes that associated with remote and proximal and soil sensing instrumentation. I have particular interest in infrared and x-ray spectroscopy. 
 
-- The importance of these research fields have been recognized by successful funding grants from both the Australian Research Council and Australian Government Department of Agriculture.
+- The importance of these research interests have been recognized by successful funding grants from both the Australian Research Council and Australian Government Department of Agriculture.
+
 
 ### Education
 -----
@@ -125,4 +126,42 @@ Please visit [my publication list]({{ site.url }}/publications/).
     <br><br>
     <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-success">Download PDF Version</a>
 </div>
+
+
+### Teaching and Extension
+-----
+
+I have co-developed training materials and conducted training workshops that cover topics related to digital soil mapping and soil spectral inference.  
+
+- 30 August - 3 September 2010, Ispra, Italy: The first DSM workshop at European Union Joint Research Centre in Ispra, Italy attended by 15 staff. We designed the curriculum which used our latest research findings, and the course was designed as an active learning using authentic problems. Funded by JRC-EU.  
+
+- 21-23 February 2011, Sydney. Digital Soil Mapping Training for ACLEP, 19 agency representatives from states and territories and Geosciences Australia and the CSIRO.    
+
+- 2 April 2012, Sydney. Digital soil mapping training, 1-day workshop prior to the 5th Global Workshop on Digital Soil Mapping.   
+
+- 7-15 March 2013, Sydney. Digital soil mapping training for soil scientists from the Indonesian Agency for Agricultural Research and Development (9 participants). Funded by the Ministry of Agriculture, Indonesia.  
+
+- 4-5 April 2013, Sydney. Soil Spectral Inference workshop, 26 participants including researchers and scientists from government agencies and PhD students from Australia and overseas.   
+
+- 18-20 June 2013, Sydney: Digital soil mapping training for soil scientists from Australian State and Federal soil agencies, Australian Collaborative Land Evaluation Program (ACLEP).    
+
+- 22-24 April 2014, Sydney. Digital Soil Mapping Training Workshop. 20 participants, researchers and scientists from government agencies and PhD students.   
+
+- 26-28 May, 2014, Soil Spectral Inference workshop, 5 participants including technical officers from Tasmanian Govt and researchers from University of Tasmania. Funded by ARC Linkage project.   
+
+- 15-19 June, 2015, Intensive Digital Soil Mapping Training Workshop for researchers and post-graduate students of National Taiwan University (NTU). 25 participants (additionally included 5 Taiwan Govt researchers). Funded by International Program Development Fund (IPDF USYD).  
+
+- 23-26 November, 2015, Palmerston North, New Zealand. Digital Soil Mapping for Soil Carbon Auditing Short Course at Landcare Research. 16 Participants from NZ government institutions. Part of the DAFF-NZ research program.  
+
+- 27 November - 2 December 2015, Moscow. Digital soil mapping for Russian postgraduate students and young scientists. 25 participants. Requested and funded by the Dokuchaev Institute.  
+
+- 30 March-1 April 2016, Sydney. Soil Spectral Inference workshop, 22 participants including researchers and scientists from government agencies and PhD students from Australia and overseas, and private consultants.   
+
+- 24-28 August 2016, Moscow. Digital soil mapping for Russian postgraduate students and young scientists. 25 participants. Requested and funded by the Dokuchaev Institute.   
+
+I have provided guest lecturing and technical assistance in the following units of study offered at the University of Sydney:
+
+- SOIL2004 (The Soil Resource)
+- SOIL3009 (Contemporary Field and Lab Soil Science)
+- ENVX3001 (Environmental GIS)   
 
