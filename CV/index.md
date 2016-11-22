@@ -122,10 +122,6 @@ Advisor: Assoc. Prof. Stephen Cattle
 
 Please visit [my publication list]({{ site.url }}/publications/).
 
-<div markdown="0">
-    <br><br>
-    <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-success">Download PDF Version</a>
-</div>
 
 
 ### Teaching and Extension
@@ -165,3 +161,8 @@ I have provided guest lecturing and technical assistance in the following units 
 - SOIL3009 (Contemporary Field and Lab Soil Science)
 - ENVX3001 (Environmental GIS)   
 
+
+<div markdown="0">
+    <br><br>
+    <a href="{{ site.url }}/downloads/CV.pdf" class="btn btn-success">Download PDF Version</a>
+</div>
