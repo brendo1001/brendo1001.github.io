@@ -8,13 +8,13 @@ modified: 2018-11-16
 
 ## Brendan Malone
 
-Centre for Carbon, Water and Food
-University of Sydney
-Biomedical Building. Room 115, 1 Central Ave.
-Eveleigh, NSW 2015. Australia
-Mobile: (+61) 286271124
-Email: brendan.malone@sydney.edu.au; malone.brendan1001@gmail.com
-Website: [http://www.smartdigiag.com](http://www.smartdigiag.com)
+Centre for Carbon, Water and Food.  
+University of Sydney. 
+Biomedical Building. Room 115, 1 Central Ave.  
+Eveleigh, NSW 2015. Australia.  
+Phone: (+61) 286271124  
+Email: brendan.malone@sydney.edu.au; malone.brendan1001@gmail.com  
+Website: [http://www.smartdigiag.com](http://www.smartdigiag.com)  
 
 
 ### Research Interests
