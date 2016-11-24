@@ -40,12 +40,19 @@ ithir is an R package that was initiated with the objective of providing a home 
 DSMART means: Disaggregation and Harmonisation of Soil Map Units Through Resampled Classification Trees. [Odgers et al. (2014)](http://www.sciencedirect.com/science/article/pii/S0016706113003522)  provide a detailed explanation of the DSMART algorithm. The aim of DSMART is to predict the spatial distribution of soil classes by disaggregating the soil map units of a soil polygon map. Here soil map units are soil map are entities consisting of a deﬁned set of soil classes which occur together in a certain spatial pattern and in an assumed set of proportions. The DSMART method of representing the disaggregated soil class distribution is as a set of numerical raster surfaces, with one raster per soil class. The data representation for each soil class is given as the probability of occurrence. In order to generate the probability surfaces, a re-sampling approach is used to generate *n* realizations of the potential soil class distribution within each map unit. Then at each grid cell, the probability of occurrence of each soil class is estimated by the proportion of times the grid cell is predicted as each soil class across the set of realizations. The procedure of the DSMART algorithm can be summarized in 6 main steps:
 
 1. Draw *n* random samples from each soil map polygon. 
+
 2. Assign soil class to each sampling point.
+
     * Weighted random allocation from soil classes in relevant map unit
+    
     * Relative proportions of soil classes within map units are used as the weights
+    
 3. Use sampling points and intersected covariate values to build a decision tree toprediction spatial distribution of soil classes.
+
 4. Apply decision tree across mapping extent using covariate layers.
+
 5. Steps 1–4 repeated *i* times to produce *i* realizations of soil class distribution. 
+
 6. Using *i* realizations generate probability surfaces for each soil class.
 
 The DSMART algorithm has been coded in C++ originally by Sun Wei (China), and then by Nathan Odgers (Australia) in Python who has also done some things with it in R as well. It is now available as a stand alone R package, where the DSMART algorithm is implemented in 2 steps or functions. The first function (dsmart) does the classification tree stuff and associated soil class prediction. The dsmartr function generates the probability rasters by aggregating outputs from the dsmart function. 
