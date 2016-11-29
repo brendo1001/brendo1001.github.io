@@ -7,7 +7,11 @@ comments: false
 modified: 2016-11-16
 ---
 
-Tidbits of culture.
+Scientists are only humans you know.
+
+{% youtube RNC-aj76zI4 %}
+
+
 
 ## Books
 -----
