@@ -22,7 +22,7 @@ Some [books](https://www.amazon.com/gp/registry/wishlist/?ie=UTF8&cid=AK5A3K0LJ4
 ## Music
 -----
 
-I like music for all moods. Checkout some of my radio stations on [Pandora](https://www.pandora.com/)
+I like music for all moods. Checkout some of my curated radio stations on [Pandora](https://www.pandora.com/)
 
 ### Melodious Masterpieces
 
