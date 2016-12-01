@@ -9,7 +9,7 @@ modified: 2016-11-16
 
 Scientists are only humans you know.
 
-{% youtube RNC-aj76zI4 %}
+<!-- {% youtube RNC-aj76zI4 %} -->
 
 
 
@@ -50,7 +50,7 @@ Get your county twang on. [ENJOY](https://www.pandora.com/station/33539780883646
 
 My YouTube growing list of selected classics: Clips, music, whatever.
 
-{% youtube playlist?list=PL1QfJOrmsn2JQX0Y7jlpahL-7r1Rf86YY %}
+<!-- {% youtube playlist?list=PL1QfJOrmsn2JQX0Y7jlpahL-7r1Rf86YY %} -->
 
 
 
