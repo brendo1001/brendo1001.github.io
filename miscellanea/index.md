@@ -7,7 +7,11 @@ comments: false
 modified: 2016-11-16
 ---
 
-Besides a deep interest in things related to soil science, i have a few other passions too.
+Scientists are only humans you know.
+
+<!-- {% youtube RNC-aj76zI4 %} -->
+
+
 
 ## Books
 -----
@@ -18,28 +22,40 @@ Some [books](https://www.amazon.com/gp/registry/wishlist/?ie=UTF8&cid=AK5A3K0LJ4
 ## Music
 -----
 
-Music is bliss.
+I like music for all moods. Checkout some of my curated radio stations on [Pandora](https://www.pandora.com/)
 
-### Favs
+### Melodious Masterpieces
 
-Some links
-
-### More Favs
-
-Some links
+Eclectic easy listening and often times thought provoking tunes. [ENJOY](http://www.pandora.com/station/2965988270605592225).
 
 
-## Art
------
+### Dancing the night away
 
-I kind of like it when i see it.
+I aint't a dancer but i like a good dancing tune. [ENJOY](https://www.pandora.com/station/3331500368431146657).
 
-### Favs
+### The Mars Volta Radio
 
-Some links
+Just gritty hard rockin. [ENJOY](https://www.pandora.com/station/2967508671848507041)
 
-### More Favs
+### Jerry Lee Lewis Radio
 
-Some links
+Country and Rock n Roll of the bygone era. [ENJOY](https://www.pandora.com/station/2968022942642595489)
+
+### Country Bliss
+
+Get your county twang on. [ENJOY](https://www.pandora.com/station/3353978088364697249)
+
+
+### The Hot Playlist
+
+My YouTube growing list of selected classics: Clips, music, whatever.
+
+<!-- {% youtube playlist?list=PL1QfJOrmsn2JQX0Y7jlpahL-7r1Rf86YY %} -->
+
+
+
+
+
+
 
 
