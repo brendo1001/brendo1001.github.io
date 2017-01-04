@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/2016/12/queenstown</loc>
+<lastmod>2016-12-22T00:00:00+11:00</lastmod>
+</url>
+<url>
 <loc>/2016/11/website-launch</loc>
 <lastmod>2016-11-17T00:00:00+11:00</lastmod>
 </url>
@@ -149,6 +153,14 @@
 <lastmod>2016-11-18T20:20:41+11:00</lastmod>
 </url>
 <url>
+<loc>/downloads/journal/malone2017_1.pdf</loc>
+<lastmod>2017-01-04T14:08:15+11:00</lastmod>
+</url>
+<url>
+<loc>/downloads/journal/malone2017_2.pdf</loc>
+<lastmod>2017-01-04T14:08:15+11:00</lastmod>
+</url>
+<url>
 <loc>/downloads/thesis/Canobolas%20manuscript_bmal_thesis.pdf</loc>
 <lastmod>2016-11-22T19:47:25+11:00</lastmod>
 </url>
@@ -159,5 +171,17 @@
 <url>
 <loc>/googledd99b1430269a639.html</loc>
 <lastmod>2016-11-17T11:40:17+11:00</lastmod>
+</url>
+<url>
+<loc>/muddles/asssiConf_queenstown/NZASSS%20Conference%20Handbook%202016_FINAL_7.12.16.pdf</loc>
+<lastmod>2017-01-04T14:08:15+11:00</lastmod>
+</url>
+<url>
+<loc>/muddles/asssiConf_queenstown/NZASSS_Conference_Handbook_2016.pdf</loc>
+<lastmod>2017-01-04T14:08:15+11:00</lastmod>
+</url>
+<url>
+<loc>/muddles/asssiConf_queenstown/oral_abstracts.pdf</loc>
+<lastmod>2017-01-04T14:08:15+11:00</lastmod>
 </url>
 </urlset>
