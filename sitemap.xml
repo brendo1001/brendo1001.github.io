@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/2017/01/rapidassess</loc>
+<lastmod>2017-01-25T00:00:00+11:00</lastmod>
+</url>
+<url>
+<loc>/2017/01/downscale</loc>
+<lastmod>2017-01-24T00:00:00+11:00</lastmod>
+</url>
+<url>
+<loc>/2017/01/4permille</loc>
+<lastmod>2017-01-24T00:00:00+11:00</lastmod>
+</url>
+<url>
 <loc>/2017/01/journalDigest</loc>
 <lastmod>2017-01-16T00:00:00+11:00</lastmod>
 </url>
@@ -167,6 +179,10 @@
 <url>
 <loc>/downloads/journal/malone2017_2.pdf</loc>
 <lastmod>2017-01-04T14:08:15+11:00</lastmod>
+</url>
+<url>
+<loc>/downloads/journal/malone2017_3.pdf</loc>
+<lastmod>2017-01-25T21:33:07+11:00</lastmod>
 </url>
 <url>
 <loc>/downloads/thesis/Canobolas%20manuscript_bmal_thesis.pdf</loc>
