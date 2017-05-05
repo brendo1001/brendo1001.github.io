@@ -4,13 +4,1599 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2017-03-30T21:55:19+11:00</updated>
+<updated>2017-05-05T12:41:26+10:00</updated>
 <id>/</id>
 <author>
   <name>Brendan Malone</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2017/05/journalDigest" />
+  <id>/2017/05/journalDigest</id>
+  <updated>2017-05-04T00:00:00-00:00</updated>
+  <published>2017-05-04T00:00:00+10:00</published>
+  
+  <author>
+    <name>Brendan Malone</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2017-14&quot;&gt;Journal Paper Digests 2017 #14&lt;/h2&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;improving-the-mapping-of-crop-types-in-the-midwestern-us-by-fusing-landsat-and-modis-satellite-data&quot;&gt;Improving the mapping of crop types in the Midwestern US by fusing Landsat and MODIS satellite data&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Zhu, LK; Radeloff, VC; Ives, AR&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;INTERNATIONAL JOURNAL OF APPLIED EARTH OBSERVATION AND GEOINFORMATION&lt;/em&gt;, 58 1-11; JUN 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Mapping crop types is of great importance for assessing agricultural
+production, land-use patterns, and the environmental effects of
+agriculture. Indeed, both radiometric and spatial resolution of
+Landsat’s sensors images are optimized for cropland monitoring. However,
+accurate mapping of crop types requires frequent cloud-free images
+during the growing season, which are often not available, and this
+raises the question of whether Landsat data can be combined with data
+from other satellites. Here, our goal is to evaluate to what degree
+fusing Landsat with MODIS Nadir Bidirectional Reflectance Distribution
+Function (BRDF)-Adjusted Reflectance (NBAR) data can improve crop-type
+classification. Choosing either one or two images from all cloud-free
+Landsat observations available for the Arlington Agricultural Research
+Station area in Wisconsin from 2010 to 2014, we generated 87
+combinations of images, and used each combination as input into the
+Spatial and Temporal Adaptive Reflectance Fusion Model (STARFM)
+algorithm to predict Landsat-like images at the nominal dates of each
+8-day MODIS NBAR product. Both the original Landsat and STARFM-predicted
+images were then classified with a support vector machine (SVM), and we
+compared the classification errors of three scenarios: 1) classifying
+the one or two original Landsat images of each combination only, 2)
+classifying the one or two original Landsat images plus all
+STARFM-predicted images, and 3) classifying the one or two original
+Landsat images together with STARFM-predicted images for key dates. Our
+results indicated that using two Landsat images as the input of STARFM
+did not significantly improve the STARFM predictions compared to using
+only one, and predictions using Landsat images between July and August
+as input were most accurate. Including all STARFM-predicted images
+together with the Landsat images significantly increased average
+classification error by 4% points (from 21% to 25%) compared to using
+only Landsat images. However, incorporating only STARFM-predicted images
+for key dates decreased average classification error by 2% points (from
+21% to 19%) compared to using only Landsat images. In particular, if
+only a single Landsat image was available, adding STARFM predictions for
+key dates significantly decreased the average classification error by 4
+percentage points from 30% to 26% (p &amp;lt; 0.05). We conclude that adding
+STARFM-predicted images can be effective for improving crop-type
+classification when only limited Landsat observations are available, but
+carefully selecting images from a full set of STARFM predictions is
+crucial. We developed an approach to identify the optimal subsets of all
+STARFM predictions, which gives an alternative method of feature
+selection for future research.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-changing-pore-size-distribution-of-swelling-and-shrinking-soil-revealed-by-nuclear-magnetic-resonance-relaxometry&quot;&gt;The changing pore size distribution of swelling and shrinking soil revealed by nuclear magnetic resonance relaxometry&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Shi, FG; Zhang, CZ; Zhang, JB; Zhang, XN; Yao, J&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;JOURNAL OF SOILS AND SEDIMENTS&lt;/em&gt;, 17 (1):61-69; JAN 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Purpose Determining soil pore size distribution is difficult and
+time-consuming using traditional methods. Additionally, for swelling and
+shrinking soil, the specific volume of soil changes with soil moisture
+conditions. Nuclear magnetic resonance (NMR) relaxometry allows
+observation of pore size distribution changes during the process of
+dehydration and soil shrinkage.Materials and methods Naturally
+structured soil cores of a Vertisol with characteristic swelling and
+shrinking behavior were collected from the Huang-Huai-Hai Plain of
+China. The samples were saturated with water and dehydrated gradually at
+room temperature and relaxometry tests conducted at different moisture
+contents as they air-dried. Then, the soil cores were oven-dried at 105
+degrees C and saturated with n-octane, which prevented clay swelling.
+The pore size distribution of soil cores at the end of the shrinking
+process was determined through the description of n-octane-filled pores.
+The shrinkage characteristic curves were determined as naturally
+structured soil cores were air-dried from moisture content at full
+expansion to constant volume, indicating the relationship between the
+volume of bulk soil and moisture content.Results and discussion The
+transverse relaxation time (T-2) distribution deduced from NMR
+relaxometry gives a good description of the size distribution of pores
+filled with protons (contained in water or n-octane). The T-2
+distribution curves of soil cores at saturation were trimodal, due to
+the presence of interlayer, interparticular, and interaggregate pores.
+Combined with the shrinkage characteristic curves, it was deduced that
+the structural pores were evacuated during the structural shrinkage
+period. The normal and residual shrinkage was accompanied by the
+narrowing and closure of the interlayer spaces. During the residual
+shrinkage period, the frame structure of the soil particles prevented
+further shrinkage of the bulk soil. The shrinkage process was
+accompanied by the closure of interlayer spaces and the formation of
+large cracks between aggregates.Conclusions H-1 NMR relaxometry was
+especially suited to studying the changing pore size distribution of
+swelling and shrinking soils. When the soil cores began shrinking,
+almost all remaining water was retained in interlayer spaces. The volume
+change of the interlayer space was the main cause of swelling and
+shrinking. The swelling limit could be estimated from the T-2
+distributions of soils at full expansion.&lt;/p&gt;
+
+&lt;h3 id=&quot;assessing-sampling-designs-for-determining-fertilizer-practice-from-yield-data&quot;&gt;Assessing sampling designs for determining fertilizer practice from yield data&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Muhammed, SE; Marchant, BP; Webster, R; Whitmore, AP; Dailey, G; Milne,
+AE&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;COMPUTERS AND ELECTRONICS IN AGRICULTURE&lt;/em&gt;, 135 163-174; APR 1 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Many farmers sample their soil to measure the concentrations of plant
+nutrients, so as to decide how much fertilizer to apply. Now that
+fertilizer can be applied at variable rates farmers want to know whether
+maps of nutrient concentration made from grid samples or of field
+subdivisions (zones within their fields) are merited: do such maps lead
+to greater profit than would a single measurement on a bulked sample for
+each field when all costs are taken into account? We have examined the
+merits of grid-based and zone-based sampling strategies over single
+field-based averages using continuous spatial data on wheat yields at
+harvest in six fields in southern England and simulated concentrations
+of phosphorus (P) in the soil. We have taken into account current prices
+of wheat, P fertilizer and sampling and laboratory analysis. Variograms
+of yield provide guides for sampling. We show that where variograms have
+large variances and long effective ranges grid-sampling and mapping are
+feasible and have large probabilities of being cost-effective. Where
+effective ranges are short, sampling must be dense to reveal the spatial
+variation and be expensive, and variable-rate application of fertilizer
+is likely to be impracticable and almost certainly not cost-effective.
+We found zone-based sampling was less likely to be cost effective in a
+similar situation when the management zones were poorly correlated to P
+concentrations.&lt;/p&gt;
+
+&lt;h3 id=&quot;modelling-the-passive-microwave-signature-from-land-surfaces-a-review-of-recent-results-and-application-to-the-l-band-smos--smap-soil-moisture-retrieval-algorithms&quot;&gt;Modelling the passive microwave signature from land surfaces: A review of recent results and application to the L-band SMOS &amp;amp; SMAP soil moisture retrieval algorithms&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Wigneron, JP; Jackson, TJ; O’Neill, P; De Lannoy, G; de Rosnay, P;
+Walker, JP; Ferrazzoli, P; Mironov, V; Bircher, S; Grant, JP; Kurum, M;
+Schwank, M; Munoz-Sabater, J; Das, N; Royer, A; Al-Yaari, A; Al Bitar,
+A; Fernandez-Moran, R; Lawrence, H; Mialon, A; Parrens, M; Richaume, P;
+Delwart, S; Kerr, Y&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 192 238-262; APR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Two passive microwave missions are currently operating at L-band to
+monitor surface soil moisture (SM) over continental surfaces. The SMOS
+sensor, based on an innovative interferometric technology enabling
+multi-angular signatures of surfaces to be measured, was launched in
+November 2009. The SMAP sensor, based on a large mesh reflector 6 m in
+diameter providing a conically scanning antenna beam with a surface
+incidence angle of 40, was launched in January of 2015. Over the last
+decade, an intense scientific activity has focused on the development of
+the SM retrieval algorithms for the two missions. This activity has
+relied on many field (mainly tower-based) and airborne experimental
+campaigns, and since 2010-2011, on the SMOS and Aquarius space-borne
+L-band observations. It has relied too on the use of numerical, physical
+and semi-empirical models to simulate the microwave brightness
+temperature of natural scenes for a variety of scenarios in terms of
+system configurations (polarization, incidence angle) and soil,
+vegetation and climate conditions. Key components of the inversion
+models have been evaluated and new parameterizations of the effects of
+the surface temperature, soil roughness, soil permittivity, and
+vegetation extinction and scattering have been developed. Among others,
+global maps of select radiative transfer parameters have been estimated
+very recently. Based on this intense activity, improvements of the SMOS
+and SMAP SM inversion algorithms have been proposed. Some of them have
+already been implemented, whereas others are currently being
+investigated. In this paper, we present a review of the significant
+progress which has been made over the last decade in this field of
+research with a focus on L-band, and a discussion on possible
+applications to the SMOS and SMAP soil moisture retrieval approaches.&lt;/p&gt;
+
+&lt;h3 id=&quot;water-retention-and-preferential-states-of-soil-moisture-in-a-cultivated-vertisol&quot;&gt;Water Retention and Preferential States of Soil Moisture in a Cultivated Vertisol&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Vanderlinden, K; Pachepsky, YA; Pederera-Parrilla, A; Martnez, G;
+Espejo-Perez, AJ; Perea, F; Giraldez, JV&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;SOIL SCIENCE SOCIETY OF AMERICA JOURNAL&lt;/em&gt;, 81 (1):1-9; JAN-FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Vertisols are well suited for rainfed agriculture in water-limited
+environments as a result of their unique water transfer and retention
+characteristics. Despite their importance, the agro-hydrological
+behavior of these soils under seasonally dry climates is not yet fully
+understood. We collected water retention data for a Vertisol, measured
+from saturation to oven dryness on 27 undisturbed topsoil (0-0.05 m)
+samples from an experimental field in southcentral Spain and related
+this information to the occurrence of field-observed preferential soil
+moisture states. A continuous function was fitted to the mean
+gravimetric water retention data, circle minus, consisting of the sum of
+a double exponential model and the Groenevelt and Grant model. An
+inflection point at pressure head |h| = 1.1 X 10(5) cm, circle minus =
+0.12 kg kg(- 1), and an equivalent pore radius, delta = 14 nm, was
+interpreted as the boundary between the clay inter-and intra-aggregate
+pore spaces, corresponding with the transition from the intermediate to
+the dry field soil moisture state. The mode of the textural pore space
+(|h| = 7.3 X 10(3) cm, circle minus = 0.21 kg kg(- 1), and delta = 200
+nm) matched the transition from the wet to the intermediate field soil
+moisture state. We related these characteristics of the soil water
+retention curve with the spatiotemporal soil moisture dynamics and
+patterns observed in the field, characterized by fast transitions
+between preferential soil moisture states. The proposed framework is
+suitable for comparing the effects of different soil management
+strategies on the agro-hydrological performance of Vertisols.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2017/05/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on May 04, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2017/05/journalDigest" />
+  <id>/2017/05/journalDigest</id>
+  <updated>2017-05-03T00:00:00-00:00</updated>
+  <published>2017-05-03T00:00:00+10:00</published>
+  
+  <author>
+    <name>Brendan Malone</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2017-13&quot;&gt;Journal Paper Digests 2017 #13&lt;/h2&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;soil-like-bodies-on-mars&quot;&gt;Soil-like bodies on Mars&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Targulian, VO; Mergelov, NS; Goryachkin, SV&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;EURASIAN SOIL SCIENCE&lt;/em&gt;, 50 (2):185-197; FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soils sensu stricto are absent on Mars; most probably, they have never
+been formed there, because, up to now, we have no evidence of the
+presence of life, either relict or recent, on this planet. Numerous
+references to “Martian soils” in scientific literature concern loose
+substrates rather than Dokuchaev’s soils. In this context, surface
+bodies on Mars can be described using the concept of planetary shells,
+or exons. Exons can be subdivided into sitons formed via in situ
+transformation of parent material, transons formed in the course of
+lateral transportation and deposition of substances, and transsitons
+formed by the combination of both in situ and lateral processes. Among
+Martian exons, transons predominate. They represent loose sediments of
+mainly eolian genesis related to extremely strong winds. Soil-like
+bodies (soloids) on Mars are represented by sitons and transsitons.
+These are abiotic formations having the profiles differentiated by the
+contents of iron oxides, soluble salts, and clay minerals and mainly
+formed in the presence of liquid water during the paleohumid eras of
+Mars evolution more than 2.5/3 billion years ago. True deep sitons
+(Martian weathering mantles) could only be formed under the impact of
+long-term weathering on stable surfaces during humid eras. Then, they
+were either buried by later deposited sediments, or eroded. Up to now,
+such objects have not been discovered on Mars.&lt;/p&gt;
+
+&lt;h3 id=&quot;short-range-variation-in-a-wisconsin-soilscape-usa&quot;&gt;Short-range variation in a Wisconsin soilscape (USA)&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Hartemink, AE; Gennadiyev, AN; Bockheim, JG; Bero, N&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;EURASIAN SOIL SCIENCE&lt;/em&gt;, 50 (2):198-209; FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Here we report on the variation of a soilscape in south central
+Wisconsin, USA. The variation in soil properties and soil features
+results in four soil order (Entisols, Inceptisols, Alfisols and
+Mollisols). Observations were made along a 200 m transect in a field
+that was cultivated since 1870. Slopes ranged from 7.5% on the back
+slope to 0% in the lower part. The soilscape had a total relief
+difference of 7.0 m. The soils were studied by 41 soil pits (60 cm), 6
+soil pits (125 cm), 15 soil augers (100 cm), and ground-penetrating
+radar imagery. The summit and shoulder consist of coarse glacial outwash
+(loamy sands) over limestone whereas the lower part is lacustrine
+sediments over coarse outwash (loams, silty loams). The A-horizon
+thickness ranged from 14 to 52 cm with thick A horizons at the toeslope
+that also had the lowest soil pH. The soil organic carbon (SOC) contents
+of the A horizons ranged from 11.6 to 46.9 g C kg(-1), and the higher
+contents are in the lower part of the soilscape. SOC stocks (0-20 cm
+depth) ranged from 50 to 70 Mg C ha(-1) on the summit and backslope, but
+were 80 to 95 Mg C ha(-1) in the flat part of the soilscape. The lowest
+soybean yields (1.6 Mg ha(-1)) were found at the summit and the highest
+yield (6.3 Mg ha(-1)) at the lower end of the backslope. Soybean yields
+were correlated to the thickness of the A horizon, and every 10 cm
+increase in A horizon thickness yielded an extra 0.6 Mg soybeans ha(-1).
+Analysis of spherical magnetic particles was used to estimate soil
+erosion rates that were highest on the backslope (16.2 Mg ha(-1) yr(-1))
+and rates of soil deposition in the lowest part of the soilscape was
+18.8 Mg ha(P1) yr(-1). It seems that there is no net soil and SOC loss
+within this soilscape. All in all, we found 4 soil taxonomic orders
+within 200 m. The variation in this soilscape was substantial and
+probably enhanced by 140 years of cultivation.&lt;/p&gt;
+
+&lt;h3 id=&quot;dust-outpaces-bedrock-in-nutrient-supply-to-montane-forest-ecosystems&quot;&gt;Dust outpaces bedrock in nutrient supply to montane forest ecosystems&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Aciego, SM; Riebe, CS; Hart, SC; Blakowski, MA; Carey, CJ; Aarons, SM;
+Dove, NC; Botthoff, JK; Sims, KWW; Aronson, EL&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;NATURE COMMUNICATIONS&lt;/em&gt;, 8 14800-14800; MAR 28 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Dust provides ecosystem-sustaining nutrients to landscapes underlain by
+intensively weathered soils. Here we show that dust may also be crucial
+in montane forest ecosystems, dominating nutrient budgets despite
+continuous replacement of depleted soils with fresh bedrock via erosion.
+Strontium and neodymium isotopes in modern dust show that Asian sources
+contribute 18-45% of dust deposition across our Sierra Nevada,
+California study sites. The remaining dust originates regionally from
+the nearby Central Valley. Measured dust fluxes are greater than or
+equal to modern erosional outputs from hillslopes to channels, and
+account for 10-20% of estimated millennial-average inputs of bedrock P.
+Our results demonstrate that exogenic dust can drive the evolution of
+nutrient budgets in montane ecosystems, with implications for predicting
+forest response to changes in climate and land use.&lt;/p&gt;
+
+&lt;h3 id=&quot;potential-of-satellite-derived-ecosystem-functional-attributes-to-anticipate-species-range-shifts&quot;&gt;Potential of satellite-derived ecosystem functional attributes to anticipate species range shifts&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Alcaraz-Segura, D; Lomba, A; Sousa-Silva, R; Nieto-Lugilde, D; Alves, P;
+Georges, D; Vicente, JR; Honrado, JP&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;INTERNATIONAL JOURNAL OF APPLIED EARTH OBSERVATION AND GEOINFORMATION&lt;/em&gt;, 57 86-92; MAY 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+In a world facing rapid environmental changes, anticipating their
+impacts on biodiversity is of utmost relevance. Remotely-sensed
+Ecosystem Functional Attributes (EFAs) are promising predictors for
+Species Distribution Models (SDMs) by offering an early and integrative
+response of vegetation performance to environmental drivers. Species of
+high conservation concern would benefit the most from a better ability
+to anticipate changes in habitat suitability. Here we illustrate how
+yearly projections from SDMs based on EFAs could reveal short-term
+changes in potential habitat suitability, anticipating mid-term shifts
+predicted by climate-change-scenario models. We fitted two sets of SDM5
+for 41 plant species of conservation concern in the Iberian Peninsula:
+one calibrated with climate variables for baseline conditions and
+projected under two climate-change-scenarios (future conditions); and
+the other calibrated with EFAs for 2001 and projected annually from 2001
+to 2013. Range shifts predicted by climate-based models for future
+conditions were compared to the 2001-2013 trends from EFAs-based models.
+Projections of EFAs-based models estimated changes (mostly contractions)
+in habitat suitability that anticipated, for the majority (up to 64%) of
+species, the mid-term shifts projected by traditional climate-change
+scenario forecasting, and showed greater agreement with the
+business-as-usual scenario than with the sustainable-development one.
+This study shows how satellite-derived EFAs can be used as meaningful
+essential biodiversity variables in SDM5 to provide early-warnings of
+range shifts and predictions of short-term fluctuations in suitable
+conditions for multiple species.&lt;/p&gt;
+
+&lt;h3 id=&quot;laws-place-history-and-the-interpretation-of-landforms&quot;&gt;Laws, place, history and the interpretation of landforms&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Phillips, JD&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;EARTH SURFACE PROCESSES AND LANDFORMS&lt;/em&gt;, 42 (2):347-354; FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The state of an Earth surface system (ESS) is determined by three sets
+of factors: laws, place, and history. Laws (L=L-1, L-2, . . . , L-n) are
+the n general principles applicable to any such system at any time.
+Place factors (P=P1,P2,. . . , P-m) are the m relevant characteristics
+of the local or regional environment. History factors (H=H-1, H-2, . . .
+, H-q) include the previous evolutionary pathway of the ESS, its stage
+of development, past disturbance, and initial conditions. Geoscience
+investigation may focus on laws, place, or history, but ultimately all
+three are necessary to understand and explain ESS. The LPH triad is
+useful as a pedagogical device, illustrated here via application to
+explaining the world’s longest cave (Mammoth Cave, KY). Beyond providing
+a useful checklist, the LPH framework provides analytical traction to
+some difficult research problems. For example, studies of the avulsions
+of three southeast Texas rivers showed substantial differences in
+avulsion regimes and resulting alluvial morphology, despite the
+proximity and superficial similarity of the systems. Avulsions are
+governed by the same laws in all cases [L(A)=L(B)=L(C)], and the three
+rivers have undergone the same sea-level, climate, and tectonic
+histories, as well as the same general anthropic impacts
+[H(A)approximate to H(B)approximate to H(C)]. Though regional
+environmental controls are similar, local details such as the location
+of the modern main channel relative to Pleistocene meander channels
+differ, and thus these place factors explain the differences between the
+rivers. The LPH framework, or similar types of reasoning, is implicit in
+many types of geoscience analysis. Explicit attention to the triad can
+help solve or address many specific problems and remind us of the
+importance of all three sets of factors.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-hardware-portable-dual-probe-heat-pulse-sensor-for-measuring-soil-thermal-properties-and-water-content&quot;&gt;Open hardware portable dual-probe heat-pulse sensor for measuring soil thermal properties and water content&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Ravazzani, G&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;COMPUTERS AND ELECTRONICS IN AGRICULTURE&lt;/em&gt;, 133 9-14; FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+A portable probe based on open hardware architecture for the assessment
+of soil thermal properties and water content using the DPHP method is
+presented. The mean percentage errors for assessment of volumetric heat
+capacity and thermal conductivity were 4.6% and 8.9% respectively,
+computed after sensor spacing calibration in agar stabilized water. The
+DPHP probe has been tested for soil thermal properties assessment and
+compared to TDR probe for the water content estimation in four different
+soils.The DPHP probe showed an accuracy comparable to TDR in estimating
+water content, with DPHP showing lower values of error index in 3
+samples out of 4. The DPHP can be used to investigate smaller volume of
+soil than TDR probe can do however, TDR is much faster than DPHP in
+measure acquisition.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-microbes-and-their-response-to-experimental-warming-over-time-a-meta-analysis-of-field-studies&quot;&gt;Soil microbes and their response to experimental warming over time: A meta-analysis of field studies&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Romero-Olivares, AL; Allison, SD; Treseder, KK&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;SOIL BIOLOGY &amp;amp; BIOCHEMISTRY&lt;/em&gt;, 107 32-40; APR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Numerous field studies have found changes in soil respiration and
+microbial abundance under experimental warming. Yet, it is uncertain
+whether the magnitude of these responses remains consistent over the
+long-term. We performed a meta-analysis on 25 field experiments to
+examine how warming effects on soil respiration, microbial biomass, and
+soil microbial C respond to the duration of warming. For each parameter,
+we hypothesized that effect sizes of warming would diminish as the
+duration of warming increased. In support of our hypothesis, warming
+initially increased soil respiration, but the magnitude of this effect
+declined significantly as warming progressed as evidenced by the two
+longest studies in our meta-analysis. In fact, after 10 years of
+warming, soil respiration in warmed treatments was similar to controls.
+In contrast, warming effect sizes for fungal biomass, bacterial biomass,
+and soil microbial C did not respond significantly to the duration of
+warming. Microbial acclimation, community shifts, adaptation, or
+reductions in labile C may have ameliorated warming effects on soil
+respiration in the longterm. Accordingly, long-term soil C losses might
+be smaller than those suggested by short-term warming studies.&lt;/p&gt;
+
+&lt;h3 id=&quot;climate-trends-account-for-stalled-wheat-yields-in-australia-since-1990&quot;&gt;Climate trends account for stalled wheat yields in Australia since 1990&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Hochman, Z; Gobbett, DL; Horan, H&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 23 (5):2071-2081; MAY 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Global food security requires that grain yields continue to increase to
+2050, yet yields have stalled in many developed countries. This
+disturbing trend has so far been only partially explained. Here, we show
+that wheat yields in Australia have stalled since 1990 and investigate
+the extent to which climate trends account for this observation. Based
+on simulation of 50 sites with quality weather data, that are
+representative of the agro-ecological zones and of soil types in the
+grain zone, we show that water-limited yield potential declined by 27%
+over a 26 year period from 1990 to 2015. We attribute this decline to
+reduced rainfall and to rising temperatures while the positive effect of
+elevated atmospheric CO2 concentrations prevented a further 4% loss
+relative to 1990 yields. Closer investigation of three sites revealed
+the nature of the simulated response of water-limited yield to water
+availability, water stress and maximum temperatures. At all three sites,
+maximum temperature hastened time from sowing to flowering and to
+maturity and reduced grain number per m 2 and average weight per grain.
+This 27% climate-driven decline in water-limited yield is not fully
+expressed in actual national yields. This is due to an unprecedented
+rate of technology-driven gains closing the gap between actual and
+water-limited potential yields by 25 kg ha(-1) yr(-1) enabling relative
+yields to increase from 39% in 1990 to 55% in 2015. It remains to be
+seen whether technology can continue to maintain current yields, let
+alone increase them to those required by 2050.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-sensitivity-of-soil-respiration-to-soil-temperature-moisture-and-carbon-supply-at-the-global-scale&quot;&gt;The sensitivity of soil respiration to soil temperature, moisture, and carbon supply at the global scale&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Hursh, A; Ballantyne, A; Cooper, L; Maneta, M; Kimball, J; Watts, J&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 23 (5):2090-2103; MAY 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soil respiration (Rs) is a major pathway by which fixed carbon in the
+biosphere is returned to the atmosphere, yet there are limits to our
+ability to predict respiration rates using environmental drivers at the
+global scale. While temperature, moisture, carbon supply, and other site
+characteristics are known to regulate soil respiration rates at plot
+scales within certain biomes, quantitative frameworks for evaluating the
+relative importance of these factors across different biomes and at the
+global scale require tests of the relationships between field estimates
+and global climatic data. This study evaluates the factors driving Rs at
+the global scale by linking global datasets of soil moisture, soil
+temperature, primary productivity, and soil carbon estimates with
+observations of annual Rs from the Global Soil Respiration Database
+(SRDB). We find that calibrating models with parabolic soil moisture
+functions can improve predictive power over similar models with
+asymptotic functions of mean annual precipitation. Soil temperature is
+comparable with previously reported air temperature observations used in
+predicting Rs and is the dominant driver of Rs in global models;
+however, within certain biomes soil moisture and soil carbon emerge as
+dominant predictors of Rs. We identify regions where typical
+temperature-driven responses are further mediated by soil moisture,
+precipitation, and carbon supply and regions in which environmental
+controls on high Rs values are difficult to ascertain due to limited
+field data. Because soil moisture integrates temperature and
+precipitation dynamics, it can more directly constrain the heterotrophic
+component of Rs, but global-scale models tend to smooth its spatial
+heterogeneity by aggregating factors that increase moisture variability
+within and across biomes. We compare statistical and mechanistic models
+that provide independent estimates of global Rs ranging from 83 to 108
+Pg yr(-1), but also highlight regions of uncertainty where more
+observations are required or environmental controls are hard to
+constrain.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2017/05/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on May 03, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2017/04/journalDigest" />
+  <id>/2017/04/journalDigest</id>
+  <updated>2017-04-21T00:00:00-00:00</updated>
+  <published>2017-04-21T00:00:00+10:00</published>
+  
+  <author>
+    <name>Brendan Malone</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2017-12&quot;&gt;Journal Paper Digests 2017 #12&lt;/h2&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;state-and-transition-models-in-geomorphology&quot;&gt;State-and-transition models in geomorphology&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Phillips, JD; Van Dyke, C&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;CATENA&lt;/em&gt;, 153 168-181; JUN 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+State-and-transition models (STM) are used to describe, model,
+interpret, and predict when landscapes will undergo a qualitative state
+change. Although rangeland ecologists pioneered STMs, geomorphological
+STM-type models were developed prior to and independently of ecological
+STMs. This study categorized 47 geomorphological STMs according to
+whether they were: based on single or multiple study areas; primarily
+for description and interpretation or predictive and prescriptive use;
+explicitly concerned with complex system dynamics; and the role of
+biogeomorphic interactions in the model. Each STM was represented as a
+graph and the structure identified. Spectral radii were calculated to
+measure the complexity of each STM. Although STMs are associated with
+conceptual frameworks that recognize the possibility of nonequilibrium,
+alternative states, and path dependency, results show that an explicit
+concern with complexity does not necessarily lead to the identification
+of more states and transitions, or a more complex transition pattern.
+The purpose for which a STM was created, as well as the number of study
+sites it can be applied to, also had little bearing on the models’
+complexity. This review suggests that geomorphic STMs, rather than being
+used to fit explanations about landscape evolution into predefined
+theoretical categories, are veridical representations of empirical
+observations. Although STMs are particularly useful for grasping the
+biogeomorphological dynamics of landscapes, this review indicates their
+utility is not limited to biogeomorphology or to systems with a strong
+ecological imprint. Time scales involved in geomorphic change can make
+it difficult to observe a large number of states and transitions, which
+may constrain what types of STM structure can be identified, as the
+number of observed states and transitions required to develop particular
+graph structures varies widely.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-reference-library-of-thermal-infrared-mineral-reflectance-spectra-for-the-hylogger-3-drill-core-logging-system&quot;&gt;A reference library of thermal infrared mineral reflectance spectra for the HyLogger-3 drill core logging system&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Schodlok, MC; Green, A; Huntington, J&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;AUSTRALIAN JOURNAL OF EARTH SCIENCES&lt;/em&gt;, 63 (8):941-949; 2016&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+A new reference library of thermal infrared spectral reflectance
+measurements of the major rock-forming and alteration minerals has been
+compiled to support and enhance analysis of data acquired using the
+CSIRO HyLogger-3 drill-core logging system. The HyLogger-3 is a robotic
+system that acquires large volumes of bidirectional reflectance spectra
+from diamond drill core within the wavelength range of visible light,
+the near infrared and shortwave infrared (400-2500 nm) as well as the
+thermal infrared from 6000 to 14 000 nm. The library samples were
+selected as single pure solid mineral crystals or monomineralic hand
+samples judged to have a similar bidirectional spectral response to that
+of typical diamond drill cores. Furthermore, a large number of
+individual mineral samples were chosen to cover the various natural
+spectral variations within single mineral groups such as, for example, a
+range of solid solutions of plagioclase. Owing to the bidirectional
+measurement geometry of the HyLogger-3, spectral variations caused by
+crystal orientation effects are also expected. Accordingly, reflectance
+measurements were made for multiple surfaces/facets of each sample, and
+also for orthogonal orientations of the plane of incidence illumination
+for each facet measured. All measured spectra were compared with
+existing library spectra or with spectra measured from validated samples
+to judge whether the mineral samples could be regarded as pure and,
+where possible, their chemical composition and mineralogy were validated
+by X-ray fluorescence and X-ray diffraction. For quality control, all
+such relevant metadata, including macroscopic descriptions of each
+sample, were collated in an associated database. In total, the spectral
+library contains more than 2000 spectra, from 562 specimens,
+representing 130 mineral groups. This library focuses on the most common
+rock-forming minerals of relevance to metalliferous exploration and
+mining, with a few limitations resulting from availability of suitable
+samples, which will be addressed as new samples become available.
+Comparisons with emission spectra from existing spectral libraries show
+good agreement, indicating that this spectral library will also be
+useful in the remote sensing domain.&lt;/p&gt;
+
+&lt;h3 id=&quot;statistical-distributions-for-monthly-aggregations-of-precipitation-and-streamflow-in-drought-indicator-applications&quot;&gt;Statistical distributions for monthly aggregations of precipitation and streamflow in drought indicator applications&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Svensson, C; Hannaford, J; Prosdocimi, I&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;WATER RESOURCES RESEARCH&lt;/em&gt;, 53 (2):999-1018; FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Drought indicators are used as triggers for action and so are the
+foundation of drought monitoring and early warning. The computation of
+drought indicators like the standardized precipitation index (SPI) and
+standardized streamflow index (SSI) require a statistical probability
+distribution to be fitted to the observed data. Both precipitation and
+streamflow have a lower bound at zero, and their empirical distributions
+tend to have positive skewness. For deriving the SPI, the Gamma
+distribution has therefore often been a natural choice. The concept of
+the SSI is newer and there is no consensus regarding distribution. In
+the present study, twelve different probability distributions are fitted
+to streamflow and catchment average precipitation for four durations (1,
+3, 6, and 12 months), for 121 catchments throughout the UK. The more
+flexible three- and four-parameter distributions generally do not have a
+lower bound at zero, and hence may attach some probability to values
+below zero. As a result, there is a censoring of the possible values of
+the calculated SPIs and SSIs. This can be avoided by using one of the
+bounded distributions, such as the reasonably flexible three-parameter
+Tweedie distribution, which has a lower bound (and potentially mass) at
+zero. The Tweedie distribution has only recently been applied to
+precipitation data, and only for a few sites. We find it fits both
+precipitation and streamflow data nearly as well as the best of the
+traditionally used three-parameter distributions, and should improve the
+accuracy of drought indices used for monitoring and early warning.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-carbon-sequestration-potential-in-semi-arid-grasslands-in-the-conservation-reserve-program&quot;&gt;Soil carbon sequestration potential in semi-arid grasslands in the Conservation Reserve Program&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Li, C; Fultz, LM; Moore-Kucera, J; Acosta-Martinez, V; Horita, J;
+Strauss, R; Zak, J; Calderon, F; Weindorf, D&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GEODERMA&lt;/em&gt;, 294 80-90; MAY 15 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The Conservation Reserve Program (CRP) in the USA plays a major role in
+carbon (C) sequestration to help mitigate rising CO2 levels and climate
+change. The Southern High Plains (SHP) region contains &amp;gt;900.000 ha
+enrolled in CRP, but a regionally specific C sequestration rate has not
+been studied, and identification of the C pools and processes important
+in controlling C sequestration rates remain unresolved. We aimed to
+address these gaps by utilizing a CRP chronosequence with historical
+rangeland as a reference ecosystem. Soil samples (0-10 and 10-30 cm)
+were collected in 2012 and 2014 from a total of 26 fields across seven
+counties within the SHP and included seven croplands (0 y in CRP), 16
+CRP fields that ranged from 6 to 26 y (as of 2012), plus three
+rangelands. Multiple regression analysis was conducted to gauge the rate
+of C sequestration under CRP within C pools: soil organic C (SOC),
+particulate organic matter C (POM-C), and microbial biomass C (MBC),
+with two additional predictors (soil clay + silt content and
+precipitation). Despite attempts to control for soil texture by
+targeting a dominant soil series (Amarillo fine sandy loam), the percent
+of clay + silt (15.2-48.7%) significantly influenced C accrual. The C
+sources (C-3 from previous cropping systems or C-4 from CRP grasses) in
+SOC and POMC were assessed using stable C isotope signatures.
+Additionally, the role of soil microbes in C sequestration was evaluated
+by investigating the relationship between MBC and CO2 flux and C
+sequestration. SOC increased at a rate of 69.82 and 132.87 kg C ha(-1)
+y(-1) and would take approximately 74 and 77 y to reach the rangeland C
+stocks at 0-10 and 0-30 cm, respectively. The C-4-C primarily from the
+introduced grasses was the main source of C sequestration. SOC gains
+were essentially due to increases in POM-C and MBC, accounting for 50.04
+and 15.64% of SOC sequestration at 0-30 cm, respectively. The highest
+semi-partial correlation coefficients between the increasing years under
+CRP restoration and MBC indicated CRP had the strongest effect on MBC
+compared to other C pools. In addition, increasing soil CO2 flux and
+MBC:SOC ratio with years of CRP restoration indicated MBC played a
+critical role in the C sequestration process. Conservation of CRP lands
+and efforts to sustain perennial systems in this highly erodible
+landscape should be a high priority of conservation programs. In doing
+so, significant offsets to increasing atmospheric CO2 levels may be
+achieved in addition to erosion control and improved wildlife habitat.&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluation-of-two-methods-to-eliminate-the-effect-of-water-from-soil-vis-nir-spectra-for-predictions-of-organic-carbon&quot;&gt;Evaluation of two methods to eliminate the effect of water from soil vis-NIR spectra for predictions of organic carbon&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Roudier, P; Hedley, CB; Lobsey, CR; Rossel, RAV; Leroux, C&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GEODERMA&lt;/em&gt;, 296 98-107; JUN 15 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Visible near infrared reflectance spectroscopy (vis-NIR) is an
+increasingly popular measurement method that can provide cheaper and
+faster predictions of soil properties, including soil organic carbon
+content (SOC). The spectroscopic prediction method relies significantly
+on the development of regressions of data in spectral databases or
+libraries. While the vis-NIR estimation of SOC was developed in
+controlled laboratory conditions, its natural development in recent
+years has been to perform the vis-NIR measurements in situ, where soil
+spectra are recorded under field conditions. However, environmental
+factors, such as soil moisture content, have been shown to affect soil
+spectra, making the use of regressions derived using soil spectral
+libraries difficult. Direct standardization (DS) and external parameter
+orthogonalisation (EPO) are two methods that were proposed for the
+correction of variable moisture conditions and other environmental
+factors. In this study, we compared DS and EPO on a set of 150 soil
+samples (3 depths from each of 50 soil cores) from a farm in New
+Zealand. The samples were re-wetted under controlled conditions, and
+spectra were recorded at nine different moisture levels. Our results
+show that DS and EPO are two effective strategies to mitigate the
+effects of soil water content on vis-NIR spectra. While DS and EPO
+results were similar when a large number of soil cores were reserved for
+calibrating the moisture correction methods, SOC predictions using the
+EPO correction significantly outperformed those using the DS correction
+for a lower number of cores (5 cores, 15 samples).&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-color-sensor-data-collection-using-a-gps-enabled-smartphone-application&quot;&gt;Soil color sensor data collection using a GPS-enabled smartphone application&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Stiglitz, R; Mikhailova, E; Post, C; Schlautman, M; Sharp, J; Pargas, R;
+Glover, B; Mooney, J&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GEODERMA&lt;/em&gt;, 296 108-114; JUN 15 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Application of accurate and low-cost sensor technology to collect soil
+color data provides an opportunity to increase the density, quality and
+quantity of soil data to monitor our changing soil resources. The
+objective of this study was to develop a mobile application that would
+enable users to create their own soils database consisting of GPS
+location and soil color data gathered using the application and a mobile
+sensor. A mobile application was created utilizing the Nix(Tm) Pro color
+sensor that produces multiple color results, including Munsell color
+notation. The application also allows users to toggle between “in-field”
+sampling as well as dry or moist soil samples. Users can choose to
+record GPS location and a photo of the soil sample to upload into an
+online database for storage. The application was tested for
+functionality in the field and for its ability to match Munsell notation
+values determined using a Munsell Soil Color Chart (MSCC). Field data
+were synchronized to a cloud database and subsequently retrieved and
+used to produce a Geographic Information Systems (GIS) layout showing
+sample point locations and soil color attributes. The Soil Scanner
+application allows for rapid analysis and collection of soils data that
+can be stored for further study and reference using various color
+systems and location data.&lt;/p&gt;
+
+&lt;h3 id=&quot;relationship-between-soil-clay-mineralogy-and-carbon-protection-capacity-as-influenced-by-temperature-and-moisture&quot;&gt;Relationship between soil clay mineralogy and carbon protection capacity as influenced by temperature and moisture&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Singh, M; Sarkar, B; Biswas, B; Bolan, NS; Churchman, GJ&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;SOIL BIOLOGY &amp;amp; BIOCHEMISTRY&lt;/em&gt;, 109 95-106; JUN 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Environmental conditions like temperature and moisture could affect the
+carbon protection capacity of various clay types in soils. Using
+dominantly kaolinitic-illitic, smectitic and allophanic soils, we
+conducted systematic incubation experiments over 42 days at different
+temperatures (4, 22 and 37 degrees C) and moisture contents (30, 60 and
+90% of water holding capacity (available water)). The basal respiration
+was monitored to study the relative effect of moisture contents and
+temperature on the carbon protection capacities and mechanisms of the
+three clay types. The results indicated that carbon decomposition
+increased with increasing moisture and temperature. A two-component
+quadratic equation could explain the carbon mineralisation process. The
+highest C respiration was observed at 37 degrees C with a 60% moisture
+level in each of the soil types. Under these conditions, the smectitic
+soil recorded the highest carbon decomposition followed by the
+kaolinitic-illitic and allophanic soils. The study of the priming effect
+using C-14 lab-died malic acid confirmed the trend of the bulk
+respiration results. The allophanic soil showed the lowest amount of
+carbon mineralisation under all experimental conditions. A strong
+inverse correlation (R-2 = 0.90 at p &amp;lt; 0.05) was observed between CO2
+emission rate and total sesquioxides (Fe and Al oxides) content. As
+evidenced by the pore size distribution, micromorphologies and
+thermogravimetric analyses, the microporous structure and micrbaggregate
+formation in the allophanic soil enhanced carbon sequestration. This
+study indicated that soil carbon stabilisation was related more to the
+sesquioxides content than to the clay types or their relative specific
+surface areas.&lt;/p&gt;
+
+&lt;h3 id=&quot;measuring-functional-pedodiversity-using-spectroscopic-information&quot;&gt;Measuring functional pedodiversity using spectroscopic information&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0341816217300127&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Fajardo, MP; McBratney, AB; Minasny, B&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;CATENA&lt;/em&gt;, 152 103-114; MAY 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Pedodiversity studies greatly depend on the discretization of the soil
+continuum via various soil classification standards. Soil taxonomic
+systems are constructed considering soil properties and their
+organization in the soil profile. Therefore, it seems logical that the
+pedodiversity of an area could be calculated by considering the
+simultaneous variation of multiple soil properties within that area.
+With the aim of creating a bridge between these two lines of thinking,
+this study presents the development of two new indices of pedodiversity
+(HULLdiv and EIGENdiv) which consider continuous variables as input. The
+soil input information tested was a) Visible and Near Infrared (Vis-NIR)
+reflectance values and b) values of five soil properties predicted from
+Vis-NIR spectra. Both indices were employed to measure the pedodiversity
+at different extents in two perpendicular transects containing 27 (North
+to South) and 22 (East to West) locations respectively in New South
+Wales (NSW), Australia. Each location considered natural and intervened
+land Use. The indices successfully represented the pedodiversity of the
+area of study, however they were different depending on the input soil
+information i.e., raw Vis-NIR and predicted properties. HULLdiv was
+affected by extreme soil observations and as a result its discrimination
+power between areas with different soil diversity was inferior. On the
+other hand, EIGENdiv represented well the pedodiversity of an area,
+despite the extreme observations. The results showed good agreement with
+conventional methods for assessing pedodiversity i.e., Shannon’s and
+Simpson’s indices. However, the new indices were more discriminating by
+being able to better represent the landuse effect. This study represents
+the first attempt to measure pedodiversity in a continuous way using
+Vis-NIR information.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-comparison-of-soil-quality-evaluation-methods-for-fluvisol-along-the-lower-yellow-river&quot;&gt;A comparison of soil quality evaluation methods for Fluvisol along the lower Yellow River&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Guo, LL; Sun, ZG; Ouyang, Z; Han, DR; Li, FD&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;CATENA&lt;/em&gt;, 152 135-143; MAY 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soil quality evaluation as a decision-making tool to improve
+understanding of soil quality is essential for grading croplands and
+adopting proper agricultural practices. Various methods of soil quality
+evaluation have been developed, which have Occasionally generated
+inconsistent evaluation results between differing soil types. The
+applicability of these techniques is seldom tested before implementing
+an evaluation method on a specific soil region. Fluvisol is an important
+soil resource for agriculture in China, especially for irrigation
+districts along the lower Yellow River. In the present study, the soil
+quality of two typical agricultural counties (Yucheng and Kenli) along
+the lower Yellow River was evaluated using four commonly utilized
+methods. In the two counties, the overall spatial patterns of soil
+quality derived from the four methods were similar, with differences in
+details existing among these methods. The soil quality in Yucheng,
+ranging from moderate to high, is superior to that observed in Kenli,
+where salinity is the primary limiting factor. In addition, the
+applicability of soil quality evaluation methods on the Fluvisol was
+investigated. It was found that the integrated quality indexing-linear
+scoring (IQI-LS) and the Nemoro indexing-Linear scoring (NQI-LS) methods
+were the most accurate and practical of the four methods studied. These
+methods, which are based on the total data set of indicators, show
+better performance for soil quality evaluation on a Fluvisol. Further,
+different evaluation methods based on the Minimum data set of indicators
+were compared, considering both the accuracy of the evaluation and the
+economic cost of obtaining the soil data. The results from the present
+study indicate that the IQI-LS method based on the minimum data set of
+indictors is recommended for large-scale soil quality evaluations.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-microbes-and-their-response-to-experimental-warming-over-time-a-meta-analysis-of-field-studies&quot;&gt;Soil microbes and their response to experimental warming over time: A meta-analysis of field studies&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Romero-Olivares, AL; Allison, SD; Treseder, KK&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;SOIL BIOLOGY &amp;amp; BIOCHEMISTRY&lt;/em&gt;, 107 32-40; APR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Numerous field studies have found changes in soil respiration and
+microbial abundance under experimental warming. Yet, it is uncertain
+whether the magnitude of these responses remains consistent over the
+long-term. We performed a meta-analysis on 25 field experiments to
+examine how warming effects on soil respiration, microbial biomass, and
+soil microbial C respond to the duration of warming. For each parameter,
+we hypothesized that effect sizes of warming would diminish as the
+duration of warming increased. In support of our hypothesis, warming
+initially increased soil respiration, but the magnitude of this effect
+declined significantly as warming progressed as evidenced by the two
+longest studies in our meta-analysis. In fact, after 10 years of
+warming, soil respiration in warmed treatments was similar to controls.
+In contrast, warming effect sizes for fungal biomass, bacterial biomass,
+and soil microbial C did not respond significantly to the duration of
+warming. Microbial acclimation, community shifts, adaptation, or
+reductions in labile C may have ameliorated warming effects on soil
+respiration in the longterm. Accordingly, long-term soil C losses might
+be smaller than those suggested by short-term warming studies&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2017/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on April 21, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2017/04/journalDigest" />
+  <id>/2017/04/journalDigest</id>
+  <updated>2017-04-03T00:00:00-00:00</updated>
+  <published>2017-04-19T00:00:00+10:00</published>
+  
+  <author>
+    <name>Brendan Malone</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2017-11&quot;&gt;Journal Paper Digests 2017 #11&lt;/h2&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;automated-detection-of-geological-landforms-on-mars-using-convolutional-neural-networks&quot;&gt;Automated detection of geological landforms on Mars using Convolutional Neural Networks&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0098300416305532&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Palafox, LF; Hamilton, CW; Scheidt, SP; Alvarez, AM&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 101 48-56; APR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The large volume of high-resolution images acquired by the Mars
+Reconnaissance Orbiter has opened a new frontier for developing
+automated approaches to detecting landforms on the surface of Mars.
+However, most landform classifiers focus on crater detection, which
+represents only one of many geological landforms of scientific interest.
+In this work, we use Convolutional Neural Networks (ConvNets) to detect
+both volcanic rootless cones and transverse aeolian ridges. Our system,
+named MarsNet, consists of five networks, each of which is trained to
+detect landforms of different sizes. We compare our detection algorithm
+with a widely used method for image recognition, Support Vector Machines
+(SVMs) using Histogram of Oriented Gradients (HOG) features. We show
+that ConvNets can detect a wide range of landforms and has better
+accuracy and recall in testing data than traditional classifiers based
+on SVMs.&lt;/p&gt;
+
+&lt;h3 id=&quot;modeling-soil-processes-review-key-challenges-and-new-perspectives&quot;&gt;Modeling Soil Processes: Review, Key Challenges, and New Perspectives&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://vzj.geoscienceworld.org/content/15/5/vzj2015.09.0131&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Vereecken, H; Schnepf, A; Hopmans, JW; Javaux, M; Or, D; Roose, DOT;
+Vanderborght, J; Young, MH; Amelung, W; Aitkenhead, M; Allison, SD;
+Assouline, S; Baveye, P; Berli, M; Bruggemann, N; Finke, P; Flury, M;
+Gaiser, T; Govers, G; Ghezzehei, T; Hallett, P; Franssen, HJH; Heppell,
+J; Horn, R; Huisman, JA; Jacques, D; Jonard, F; Kollet, S; Lafolie, F;
+Lamorski, K; Leitner, D; McBratney, A; Minasny, B; Montzka, C; Nowak, W;
+Pachepsky, Y; Padarian, J; Romano, N; Roth, K; Rothfuss, Y; Rowe, EC;
+Schwen, A; Simunek, J; Tiktak, A; Van Dam, J; van der Zee, SEATM; Vogel,
+HJ; Vrugt, JA; Wohling, T; Young, IM&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 15 (5):NIL_32-NIL_88; MAY 2016&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The remarkable complexity of soil and its importance to a wide range of
+ecosystem services presents major challenges to the modeling of soil
+processes. Although major progress in soil models has occurred in the
+last decades, models of soil processes remain disjointed between
+disciplines or ecosystem services, with considerable uncertainty
+remaining in the quality of predictions and several challenges that
+remain yet to be addressed. First, there is a need to improve exchange
+of knowledge and experience among the different disciplines in soil
+science and to reach out to other Earth science communities. Second, the
+community needs to develop a new generation of soil models based on a
+systemic approach comprising relevant physical, chemical, and biological
+processes to address critical knowledge gaps in our understanding of
+soil processes and their interactions. Overcoming these challenges will
+facilitate exchanges between soil modeling and climate, plant, and
+social science modeling communities. It will allow us to contribute to
+preserve and improve our assessment of ecosystem services and advance
+our understanding of climate-change feedback mechanisms, among others,
+thereby facilitating and strengthening communication among scientific
+disciplines and society. We review the role of modeling soil processes
+in quantifying key soil processes that shape ecosystem services, with a
+focus on provisioning and regulating services. We then identify key
+challenges in modeling soil processes, including the systematic
+incorporation of heterogeneity and uncertainty, the integration of data
+and models, and strategies for effective integration of knowledge on
+physical, chemical, and biological soil processes. We discuss how the
+soil modeling community could best interface with modern modeling
+activities in other disciplines, such as climate, ecology, and plant
+research, and how to weave novel observation and measurement techniques
+into soil models. We propose the establishment of an international soil
+modeling consortium to coherently advance soil modeling activities and
+foster communication with other Earth science disciplines. Such a
+consortium should promote soil modeling platforms and data repository
+for model development, calibration and intercomparison essential for
+addressing contemporary challenges.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-consistent-ecosystem-services-valuation-method-based-on-total-economic-value-and-equivalent-value-factors-a-case-study-in-the-sanjiang-plain-northeast-china&quot;&gt;A consistent ecosystem services valuation method based on Total Economic Value and Equivalent Value Factors: A case study in the Sanjiang Plain, Northeast China&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S1476945X16301131&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Zhang, L; Yu, X; Jiang, M; Xue, Z; Lu, X; Zou, Y&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;ECOLOGICAL COMPLEXITY&lt;/em&gt;, 29 40-48; MAR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+In this study, a regional revision coefficient is proposed for the
+Equivalent Value Factors to better valuate the Sanjiang Plain (in China)
+ecosystem services. An index system suitable for the valuation of the
+ecosystem services in the Sanjiang Plain is established. The proposed
+method can realize the rapid valuation of nine ecosystem service types
+of six different terrestrial ecosystems. Through the preliminary
+application of the method, the calculated total value of ecosystem
+services of the Sanjiang Plain in 2010 was 510.89 billion yuan, of which
+the forest ecosystem contributed to 37.85%, followed by water bodies and
+wetland ecosystems. The variations among the contributions of the
+different ecosystem services are considerable. The contribution
+attributed to regulation function was the highest, especially the value
+from the hydrological regulation (36.17%) and climate regulation
+(16.04%). The Total Economic Value (TEV) method and the Equivalent Value
+Factors (EVF) method are compared in this study. Results show that
+Equivalent Value Factors derived value of the Sanjiang Plain ecosystem
+services is slightly lower than the value obtained by the Total Economic
+Value method, i.e., 537.84 billion yuan, of which the total value of the
+Feature Services has reached as high as 38.35 billion yuan.&lt;/p&gt;
+
+&lt;h3 id=&quot;changing-views-of-nitrous-oxide-emissions-from-agricultural-soil-key-controlling-processes-and-assessment-at-different-spatial-scales&quot;&gt;Changing views of nitrous oxide emissions from agricultural soil: key controlling processes and assessment at different spatial scales&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1111/ejss.12409/abstract&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Smith, KA&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;EUROPEAN JOURNAL OF SOIL SCIENCE&lt;/em&gt;, 68 (2):137-155; MAR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Nitrous oxide, N2O, is the third most important of the long-lived
+greenhouse gases, in terms of its contribution to global warming, and is
+expected to be the dominant cause of stratospheric ozone depletion this
+century. The concentration of N2O in the atmosphere was fairly constant
+until the beginning of the industrial age, but has gone up by 20% since.
+This is because of increased anthropogenic emissions, of which about 60%
+come from agricultural soil. The cause is the increased use of synthetic
+fertilizer nitrogen globally to meet the demands for increased
+production of food and biofuels. This review examines the isotopic
+evidence for this role of fertilizer N, the main mechanisms for
+microbial production of N2O in soil, the key soil physical and other
+variables that greatly affect the magnitude of emissions, and the
+spatial and temporal variation in emissions and the associated problems
+of measurement. The review also considers the methodology devised by the
+Intergovernmental Panel on Climate Change (IPCC) to enable countries to
+compile national inventories of their emissions, direct and indirect,
+that arise from anthropogenic activity related to agriculture and land
+use. This methodology also enables modellers to make bottom-up’ global
+estimates of N2O emissions. These estimates agree quite well at the
+global scale with top-down’ estimates based on the relation between
+reactive nitrogen newly introduced into agricultural ecosystems and
+increases in the global atmospheric concentration of N2O, but not with
+some recent regional-scale emission measurements. The discrepancy may be
+related to problems of estimating indirect emissions. Top-down estimates
+indicate that N2O emissions from crop-based biofuels are too great to
+comply with national and international environmental regulations.
+Finally, possible future trends in emissions and possible mitigation
+measures are discussed.&lt;/p&gt;
+
+&lt;h3 id=&quot;are-data-collected-to-support-farm-management-suitable-for-monitoring-soil-indicators-at-the-national-scale&quot;&gt;Are data collected to support farm management suitable for monitoring soil indicators at the national scale?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1111/ejss.12417/full&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Rawlins, BG; Marchant, B; Stevenson, S; Wilmer, W&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;EUROPEAN JOURNAL OF SOIL SCIENCE&lt;/em&gt;, 68 (2):235-248; MAR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Monitoring of topsoil properties (referred to as indicators) at the
+national scale has been limited in general to government-funded
+representative surveys. We consider a cost-effective complementary
+source of soil information for monitoring agricultural soil across
+England and Wales (E&amp;amp;W): soil measurements paid for by farmers that we
+refer to as farmers’ data (FD). A potential problem in using FD for soil
+monitoring is any unattributable sources of bias, such as the sample
+design. Farmers may choose to focus their measurements (purposively)
+where they perceive a particular problem. Such a source of bias is
+avoided in the random sampling adopted by statistically designed
+surveys, such as the Countryside Survey (CS2007) and LUCAS (Land
+Use/Cover Area frame statistical Survey). We used measurements from 143
+000 FD soil samples from a single laboratory to estimate national mean
+values and confidence intervals of five topsoil indicators (pH,
+available P (Olsen), K, Mg and organic matter (OM)) across three
+combinations of nation (England or Wales) and land use (arable and
+horticulture (A&amp;amp;H) or improved grassland (IG)). We computed mean
+estimates for FD over two time periods (2004-9 and 2010-2105) and
+assessed the significance of any change. We compared these estimates
+with those from representative national surveys to establish whether
+there was evidence for bias and whether it could be explained. Mean
+estimates of topsoil pH for the FD and the LUCAS survey (same analytical
+method) were consistent for both A&amp;amp;H and IG. Although FD estimates of
+mean Olsen P (OP) concentrations were similar to previous surveys, we
+show it is likely that the larger mean OP concentrations observed in the
+LUCAS survey compared with FD for arable topsoil in England are partly
+due to an attributable source of analytical bias. For such quantifiable
+sources of bias, it might be possible to adjust estimated mean values
+from FD. However, FD might also include sources of unattributable bias,
+such as the effect of purposive sampling. It is important that
+contemporaneous data from surveys with statistically unbiased designs
+are available so that we can assess whether unattributable sources exert
+a significant effect over estimates of mean values computed from FD.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2017/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on April 19, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2017/04/journalDigest" />
+  <id>/2017/04/journalDigest</id>
+  <updated>2017-04-03T00:00:00-00:00</updated>
+  <published>2017-04-03T00:00:00+10:00</published>
+  
+  <author>
+    <name>Brendan Malone</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2017-10&quot;&gt;Journal Paper Digests 2017 #10&lt;/h2&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;an-interactive-image-segmentation-method-for-lithological-boundary-detection-a-rapid-mapping-tool-for-geologists&quot;&gt;An interactive image segmentation method for lithological boundary detection: A rapid mapping tool for geologists&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0098300416307579&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Vasuki, Y; Holden, EJ; Kovesi, P; Micklethwaite, S&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 100 27-40; MAR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Large volumes of images are collected by geoscientists using remote
+sensing platforms. Manual analysis of these images is a time consuming
+task and there is a need for fast and robust image interpretation tools.
+In particular the reliable mapping of lithological boundaries is a
+critical step for geological interpretation. In this contribution we
+developed an interactive image segmentation algorithm that harnesses the
+geologist’s input and exploits automated image analysis to provide a
+practical tool for Ethology boundary detection, using photographic
+images of rock surfaces.In the proposed method, the user is expected to
+draw rough markings to indicate the locations of different geological
+units in the image. Image segmentation is performed by segmenting
+regions based on their homogeneity in colour. This results in a high
+density of segmented regions which are then iteratively merged based on
+the colour of different geological units and the user input. Finally, a
+post-processing step allows the user to edit the boundaries.An
+experiment was conducted using photographic rock surface images
+collected by a UAV and a handheld digital camera. The proposed technique
+was applied to detect lithology boundaries. It was found that the
+proposed method reduced the interpretation time by a factor of four
+relative to manual segmentation, while achieving more than 96%
+similarity in boundary detection. As a result the proposed method has
+the potential to provide practical support for interpreting large volume
+of complex geological images.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-porosity-in-physically-separated-fractions-and-its-role-in-soc-protection&quot;&gt;Soil porosity in physically separated fractions and its role in SOC protection&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s11368-016-1508-0&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Simonetti, G; Francioso, O; Dal Ferro, N; Nardi, S; Berti, A; Morari, F&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;JOURNAL OF SOILS AND SEDIMENTS&lt;/em&gt;, 17 (1):70-84; JAN 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Purpose Processes that lead to soil organic carbon (SOC) protection
+depend on both soil porosity and structure organization, as well as
+chemical and biological properties. In particular, the soil micro-nano
+porosity (&amp;lt;30 mu m) regulates microorganism accessibility to the soil
+pore system and offers surfaces for organic carbon adsorption and
+intercalation into soil minerals. The aim of this work was to
+investigate how pore size distribution can selectively protect specific
+carbon pools in different aggregate size fractions, by considering the
+effects of long-term application of farmyard manure (FYM) and mineral
+(Min) fertilization.Materials and methods Macroaggregates (250-2000 mu
+m), microaggregates (53-250 mu m), and silt-clay (&amp;lt;53 mu m) fractions of
+three different soils (clayey, peaty, and sandy) were separated by wet
+sieving technique and then subjected to chemical and physical analysis.
+Sample porosity and pore size distribution were analyzed using mercury
+intrusion porosimetry (MIP), while SOC chemical structure was
+characterized by means of nuclear magnetic resonance (C-13
+cross-polarization-magic angle spinning nuclear magnetic reso-nance (CP
+MAS C-13 NMR)) and diffuse reflectance infrared Fourier transform
+(DRIFT) spectroscopies.Results and discussion Results showed that FYM
+increased organic (OC) and humic carbon (HC) content compared to the Min
+fertilization and unfertilized soils. However, it caused a gradual
+decrease in O,N-alkyl C, and alkyl C of humic C from macroaggregate to
+silt-clay fractions, suggesting an advanced state of humic component
+degradation as revealed by CP MAS C-13 NMR, DRIFT analyses. MIP analysis
+showed a clear increase of micropores (5-30 mu m) and cryptopores
+(0.0035-0.1 mu m) from macroaggregate to silt-clay fractions, while
+minor differences were observed among the treatments. The application of
+principal component analysis to mineral soil fractions identified the
+formation of three main clusters, where (i) macroaggregates of clayey
+soil were mainly associated to cryptopores and OC and (ii)
+microaggregates and silt-clay fraction were mainly isolated by carbonyl
+C, ultramicropores, and total porosity. The third cluster was associated
+with medium and fine sand of the sand soil fraction as coupled with O,
+N-alkyl C, anomeric C, mesopores, and HC/OC ratio.Conclusions Overall,
+this study indicates that pore size distribution may be a valuable
+indicator of soil capacity to sequester carbon, due to its direct
+influence on SOC linkages with soil aggregates and the positive effects
+against SOC decomposition phenomena. In this context, micropore- to
+nanopore-dominated structures (e.g., clayey soil) were able to protect
+OC compounds by interacting with mineral surfaces and intercalation with
+phyllosilicates, while meso/macropore-dominated structures (i.e., sandy
+soil) exhibited their low ability to protect the organic components.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-moisture-remote-sensing-state-of-the-science&quot;&gt;Soil Moisture Remote Sensing: State-of-the-Science&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.sciencesocieties.org/publications/vzj/pdfs/16/1/vzj2016.10.0105&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Mohanty, BP; Cosh, MH; Lakshmi, V; Montzka, C&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 16 (1):NIL_36-NIL_44; JAN 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+This is an update to the special section “Remote Sensing for Vadose Zone
+Hydrology-A Synthesis from the Vantage Point” [Vadose Zone Journal
+12(3)]. Satellites (e.g., Soil Moisture Active Passive [SMAP] and Soil
+Moisture and Ocean Salinity [SMOS]) using passive microwave techniques,
+in particular at L-band frequency, have shown good promise for global
+mapping of near-surface (0-5-cm) soil moisture at a spatial resolution
+of 25 to 40 km and temporal resolution of 2 to 3 d. C- and X-band soil
+moisture records date back to 1978, making available an invaluable data
+set for long-term climate research. Near-surface soil moisture is
+further extended to the root zone (top 1 m) using process-based models
+and data assimilation schemes. Validation of remotely sensed soil
+moisture products has been ongoing using core monitoring sites, sparse
+monitoring networks, intensive field campaigns, as well as
+multi-satellite comparison studies. To transfer empirical observations
+across space and time scales and to develop improved retrieval
+algorithms at various resolutions, several efforts are underway to
+associate soil moisture variability dynamics with land surface
+attributes in various energy-and water-rich environments. We describe
+the most recent scientific and technological advances in soil moisture
+remote sensing. We anticipate that remotely sensed soil moisture will
+find many applications in vadose zone hydrology in the coming decades.&lt;/p&gt;
+
+&lt;h3 id=&quot;senose-an-under-u50-electronic-nose-for-the-monitoring-of-soil-gas-emissions&quot;&gt;SENose: An under U$50 electronic nose for the monitoring of soil gas emissions&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0168169916304070&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Pineda, DM; Perez, JC&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;COMPUTERS AND ELECTRONICS IN AGRICULTURE&lt;/em&gt;, 133 15-21; FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Tropical soils are major players on CO2 emissions and C cycling on
+earth. However, it is in tropical countries where scientists can have
+the most limited access to analytical tools needed for research on these
+processes. This paper describes the construction and test of a less than
+US 50 chamber for monitoring of multiple soil gas emissions. The system
+consisted on an array of three MQ series gas sensors placed into an
+airtight container, a PIC microcontroller and a custom-built software
+developed for data capture and visualization running on a laptop. A
+modified multiplexing of sensors was also incorporated in order to allow
+the parallel analysis in up to eight samples. The chamber, hereafter
+called SENose (short for Soil Electric Nose), was tested in two separate
+experiments. The first study used the three sensor array system in soil
+samples from Colombia and Ecuador, which were separated into two groups
+in order to study their gas emission patterns in D(+) glucose induced
+respiration tests. For a second experiment using a multiplexed sensor
+array in a different set of Colombian soil samples, gas emission
+patterns were obtained from autoclaved soil with reduced microbial
+activity, which were further contaminated with diesel oil as C
+source.During the first study, in replicated 22 h continuous runs SENose
+clearly showed differences in soil respiration patterns of these soil
+samples, and a prominent timing differential increase in gas production
+after spiking D(+) glucose, a proxy for organic C, as a substrate.
+Results of the second study showed a clearly different pattern of gas
+emissions in diesel oil contaminated samples, when microbial activity
+was reduced by soil autoclaving. Moreover, two groups of non-autoclaved
+soil subsamples differing only in diesel oil addition could also be
+differentiated with basis on their respiration patterns after some hours
+of gas tracking. Based on these results we foresee a great potential
+from the use of this low cost system in fields such as soil
+microbiology, fertility, biotechnology and environmental sciences, where
+processes such as microbial activity, plant nutrient availability or
+soil pollutant turnover are tracked by monitoring their gas emission
+patterns.&lt;/p&gt;
+
+&lt;h3 id=&quot;studying-drought-phenomena-in-the-continental-united-states-in-2011-and-2012-using-various-drought-indices&quot;&gt;Studying drought phenomena in the Continental United States in 2011 and 2012 using various drought indices&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0034425716304813&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Zhang, LF; Jiao, WZ; Zhang, HM; Huang, CP; Tong, QX&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 190 96-106; MAR 1 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Numerous drought indices have been developed to monitor drought
+conditions. However, different drought indices have differing
+characteristics, and are suitable for specific environments. The aim of
+this study was to compare the occurrence of drought, as detected by
+remote sensing across the Continental United States (CONUS). We used
+drought events during 2011 and 2012 to compare various indices developed
+for the study of drought phenomena. Three in situ drought indices, the
+Palmer drought severity index (PDSI), Z-index and standardized
+precipitation indices (SPI) with different time scales were used to
+evaluate drought conditions in different climate divisions. The drought
+indices compared in this study include the vegetation condition index
+(VCI), the temperature condition index (TCI), the perpendicular drought
+index (PDI) and modified PDI (MPDI) derived from moderate-resolution
+imaging spectroradiometer (MODIS) data, the precipitation condition
+index (PCI) derived from tropical rainfall measuring mission (TRMM)
+data, and the soil moisture condition index (SMCI) derived from advanced
+microwave scanning radiometer - earth observing system (AMSR-E). Other
+synthesized drought indices, which combine indices such as VCI, TCI,
+SMCI and PCI, were also compared in this study. These included the
+vegetation health index (VHI), temperature vegetation dryness index
+(TVDI), scaled drought condition index (SDCI), the microwave integrated
+drought index (MIDI), the synthesized drought index (SDI), the optimized
+meteorological drought index (OMDI), and the optimized vegetation
+drought index (OVDI). The results include a wide variety of drought
+conditions based on different drought indices. Meteorological drought
+indices indicated that more regions were under severe drought than
+agricultural drought indices did. Drought indices appear to be more
+similar to standard drought indices than PDI, MPDI and TVDI. The results
+also indicate that different indices have strengths and weaknesses in
+different climates across CONUS. SMCI has a good correlation with
+short-term SPI, and the sensitivity of SMCI is strongly dependent on
+terrain, as it performs worse in regions with heavy tree cover than in
+regions with a low density of vegetation. TCI, VCI, PDI and MPDI are
+more similar to 3-month SPI data, but correlate weakly with
+station-based indices located in areas of high precipitation, higher
+soil permeability, large-scale agriculture and forests. PCI is more
+strongly correlated with short-term drought conditions in almost all
+climate divisions than other single indices. VCI would be more reliable
+if there were only red and NIR surface reflectance bands available,
+while VHI would be a better choice if only NDVI and LST data were
+available. Condition index-based drought indices (PCI, TCI, VCI, SMCI,
+VHI, SDCI, SDCI, MIDI, OVDI, OMDI) performed better than other
+categories of drought indices, and the use of time series analysis may
+be a contributing factor to this difference in performance.&lt;/p&gt;
+
+&lt;h3 id=&quot;bayesian-updating-of-land-cover-estimates-in-a-data-rich-environment&quot;&gt;Bayesian updating of land-cover estimates in a data-rich environment&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0034425716303248&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Cardille, JA; Fortin, JA&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 186 234-249; DEC 1 2016&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Since the opening of the Landsat archive, the availability of remote
+sensing data has increased dramatically, and algorithms that can
+interpret large time series of satellite imagery are in rapid
+development as additions to the decades of interpretation of
+remotely-sensed images. To date, processing of these massive data
+repositories has focused mostly on tracing forest growth and loss across
+very large areas within pre-defined study periods. Despite these very
+considerable advances, there is a need for methodology that could allow
+analysts to use their own specific land-cover categories of interest,
+and update existing land-cover classifications either forward or
+backward to a desired point in time. Here we demonstrate an algorithm
+(Bayesian Updating of Land-Cover, or BULC) developed for the continuous
+updating of land-cover classifications through time in large data sets.
+The BULC algorithm is designed to permit users to build new
+classifications or update existing classifications based on long streams
+of imagery, but with minimal storage and memory requirements. The
+algorithm ingests a sequence of classified land-cover data for a
+user-specified set of detectable classes, and maintains a continually
+updated estimate of land-cover probabilities and the most probable class
+at all time points along the sequence. We tested this algorithm in
+central Quebec with Landsat 8 imagery for summer 2013, when a series of
+large fires erupted and burned through forests. In this very dynamic
+setting, many of the summer’s images were contaminated by ordinary
+standards, yet parts of the region could be seen through the clouds,
+smoke, and haze of each image. Across 11 dates of widely varying
+quality, BULC tracked the fires, ignored contaminated image information,
+and mapped fire borders consistently throughout the summer, autumn, and
+subsequent winter and spring. Building on images having a median
+accuracy of 78% and 8% NoData, the BULC algorithm created 11 sequenced
+land-cover maps each having more than 90% overall accuracy and covering
+the entire study area. BULC’s classifications mapped each of the
+land-cover categories with user’s and producer’s accuracies that
+compared well to the best individual images used as input, while
+accurately tracking land-cover change that occurred between those
+infrequent clear images. As we leave remote sensing’s data-poor era and
+enter a period with many images of Earth’s surface supplied by multiple
+sensors over a short period of time, the BULC algorithm may help to sift
+through images of varying quality to extract the most useful information
+for mapping time series of land-cover classifications.&lt;/p&gt;
+
+&lt;h3 id=&quot;comparison-of-remotely-sensed-and-modelled-soil-moisture-data-sets-across-australia&quot;&gt;Comparison of remotely sensed and modelled soil moisture data sets across Australia&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sciencedirect.com/science/article/pii/S0034425716303583&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Holgate, CM; De Jeu, RAM; van Dijk, AIJM; Liu, YY; Renzullo, LJ;
+Vinodkumar; Dharssi, I; Parinussa, RM; Van der Schalie, R; Gevaert, A;
+Walker, J; McJannet, D; Cleverly, J; Haverd, V; Trudinger, CM; Briggs,
+PR&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 186 479-500; DEC 1 2016&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+This study compared surface soil moisture from 11 separate remote
+sensing and modelled products across Australia in a common framework.
+The comparison was based on a correlation analysis between soil moisture
+products and in situ data collated from three separate ground-based
+networks: OzFlux, OzNet and CosmOz. The correlation analysis was
+performed using both original data sets and temporal anomalies, and was
+supported by examination of the time series plots. The
+interrelationships between the products were also explored using cluster
+analyses. The products considered in this study include: Soil Moisture
+Ocean Salinity (SMOS; both Land Parameter Retrieval Model (LPRM) and
+L-band Microwave Emission of the Biosphere (LMEB) algorithms), Advanced
+Microwave Scanning Radiometer 2 (AMSR2; both LPRM and Japan Aerospace
+Exploration Agency (JAXA) algorithms) and Advanced Scatterometer (ASCAT)
+satellite-based products, and WaterDyn, Australian Water Resource
+Assessment Landscape (AWRA-L), Antecedent Precipitation Index (API),
+Keetch-Byram Drought Index (KBDI), Mount’s Soil Dryness Index (MSDI) and
+CABLE/BIOS2 model based products. The comparison of the satellite and
+model data sets showed variation in their ability to reflect in situ
+soil moisture conditions across Australia owing to individual product
+characteristics. The comparison showed the satellite products yielded
+similar ranges of correlation coefficients, with the possible exception
+of AMSR2 JAXA. SMOS (both algorithms) achieved slightly better agreement
+with in situ measurements than the alternative satellite products
+overall. Among the models, WaterDyn yielded the highest correlation most
+consistently across the different locations and climate zones
+considered. All products displayed, a weaker performance in estimating
+soil moisture anomalies than the original data sets (i.e. the absolute
+values), showing all products to be more effective in detecting
+interannual and seasonal soil moisture dynamics rather than individual
+events. Using cluster analysis we found satellite products generally
+grouped together, whereas models were more similar to other models. SMOS
+(based on LMEB algorithm and ascending overpass) and ASCAT (descending
+overpass) were found to be very similar to each other in terms of their
+temporal soil moisture dynamics, whereas AMSR2 (based on LPRM algorithm
+and descending overpass) and AMSR2 (based on JAXA algorithm and
+ascending overpass) were dissimilar. Of the model products, WaterDyn and
+CABLE were similar to each other, as were the API/AWRA-L and KBDI/MSDI
+pairs. The clustering suggests systematic commonalities in error
+structure and duplication of information may exist between products.
+This evaluation has highlighted relative strengths, weaknesses, and
+complementarities between products, so the drawbacks of each may be
+minimised through a more informed assessment of fitness for purpose by
+end users.&lt;/p&gt;
+
+&lt;h3 id=&quot;litter-decay-controlled-by-temperature-not-soil-properties-affecting-future-soil-carbon&quot;&gt;Litter decay controlled by temperature, not soil properties, affecting future soil carbon&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1111/gcb.13502/full&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Gregorich, EG; Janzen, H; Ellert, BH; Helgason, BL; Qian, BD; Zebarth,
+BJ; Angers, DA; Beyaert, RP; Drury, CF; Duguid, SD; May, WE; McConkey,
+BG; Dyck, MF&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 23 (4):1725-1734; APR 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Widespread global changes, including rising atmospheric CO2
+concentrations, climate warming and loss of biodiversity, are predicted
+for this century; all of these will affect terrestrial ecosystem
+processes like plant litter decomposition. Conversely, increased plant
+litter decomposition can have potential carbon-cycle feedbacks on
+atmospheric CO2 levels, climate warming and biodiversity. But predicting
+litter decomposition is difficult because of many interacting factors
+related to the chemical, physical and biological properties of soil, as
+well as to climate and agricultural management practices. We applied
+C-13-labelled plant litter to soil at ten sites spanning a 3500-km
+transect across the agricultural regions of Canada and measured its
+decomposition over five years. Despite large differences in soil type
+and climatic conditions, we found that the kinetics of litter
+decomposition were similar once the effect of temperature had been
+removed, indicating no measurable effect of soil properties. A two-pool
+exponential decay model expressing undecomposed carbon simply as a
+function of thermal time accurately described kinetics of decomposition.
+(R-2 = 0.94; RMSE = 0.0508). Soil properties such as texture, cation
+exchange capacity, pH and moisture, although very different among sites,
+had minimal discernible influence on decomposition kinetics. Using this
+kinetic model under different climate change scenarios, we projected
+that the time required to decompose 50% of the litter (i.e. the labile
+fractions) would be reduced by 1-4 months, whereas time required to
+decompose 90% of the litter (including recalcitrant fractions) would be
+reduced by 1 year in cooler sites to as much as 2 years in warmer sites.
+These findings confirm quantitatively the sensitivity of litter
+decomposition to temperature increases and demonstrate how climate
+change may constrain future soil carbon storage, an effect apparently
+not influenced by soil properties.&lt;/p&gt;
+
+&lt;h3 id=&quot;exploratory-assessment-of-aerial-gamma-radiometrics-across-the-conterminous-united-states&quot;&gt;Exploratory Assessment of Aerial Gamma Radiometrics across the Conterminous United States&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.sciencesocieties.org/publications/sssaj/pdfs/81/1/94&quot;&gt;Online Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Authors:
+Rouze, GS; Morgan, CLS; McBratney, AB; Neely, HL&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;SOIL SCIENCE SOCIETY OF AMERICA JOURNAL&lt;/em&gt;, 81 (1):94-108; JAN-FEB 2017&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Gamma radiometrics have recently been connected with soil properties at
+field scales (10 m) and thus may have potential to characterize soil
+across regional scales using data from preexisting aerial surveys.
+However, the relationship between gamma radiometrics and soil properties
+across these larger spatial extents (100-1000 km) has been largely
+unexplored, particularly within the United States. Thus, the overall
+purpose of this work was to test the effectiveness of aerial gamma
+radiometrics in modeling soil properties across the conterminous United
+States. After discovering that up to 19% of aerial gamma radiometric
+variability could be explained by variations in physiography and parent
+material type, linear regression models were created between soil
+properties (clay and sand contents, cation exchange capacity, CaCO3
+equivalent, and pH) and aerial gamma dose rate based on physiography and
+parent material type. Overall, aerial gamma radiometrics was most
+frequently suitable for mapping clay content within flat landscapes of
+unconsolidated and sedimentary parent materials. Suitability maps for
+all investigated soil properties are presented. The importance of aerial
+gamma radiometrics relative to other covariates was then assessed. The
+predictive power of aerial g radiometrics, relative to other covariates,
+was mixed due to a non-optimized sampling scheme. Results suggest that
+aerial gamma radiometrics can be useful in predicting soil properties
+across large spatial extents after considering both physiography and
+parent material type. However, a true assessment of the utility of
+aerial gamma radiometrics across the United States requires a soil
+sampling strategy that represents its feature space.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2017/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on April 03, 2017.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -2710,209 +4296,6 @@ commensal microbiota.&lt;/p&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;/2016/12/queenstown&quot;&gt;Soil Science Conference, Queenstown, New Zealand&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on December 22, 2016.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Website Launch]]></title>
- <link rel="alternate" type="text/html" href="/2016/11/website-launch" />
-  <id>/2016/11/website-launch</id>
-  <updated>2016-11-17T00:00:00-00:00</updated>
-  <published>2016-11-17T00:00:00+11:00</published>
-  
-  <author>
-    <name>Brendan Malone</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;I have always had some interest or wonder into what and how websites are powered. Like where is all this content stored? And how is it all organised? Only recently these questions were more-or-less answered for me.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;This was when i undertook a short course on &lt;a href=&quot;https://www.codecademy.com/learn&quot;&gt;codecademy&lt;/a&gt;. It was definitely worth my while.&lt;/p&gt;
-
-&lt;p&gt;So these are just some pointers that i found entirely useful for helping me develop and deploy a website on to the internet. As you can see, this website you are using is the outcome of my learning about this to date. It is by no means a finished product either.&lt;/p&gt;
-
-&lt;p&gt;There are 3 main steps to achieve these ends.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Generate a static site&lt;/li&gt;
-  &lt;li&gt;Deploy the site to the Internet&lt;/li&gt;
-  &lt;li&gt;Give the website a custom domain name (optional step).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I will just give a rather brief outline of these main steps but be aware that there are many little bumps and bungles to be encountered along the way as developing your own website will introduce you to problems specific to your use case. I have found though that a little intuition and iteration are the best means of finding the way through the issues that crop up. I have found that making a website is actually very fiddly and demands a lot of your time. I would not really describe myself as a computer literate either. More of a hack, but cobbling a few bits and pieces together of other peoples contributions has actually been the way i have floundered through to a result (a working website) that is mine and has my name all over it. It has my own personal brand, and that is what i wanted to achieve. I learned a lot in this process, so lets just get down to business.&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-website&quot;&gt;1. Creating a Website&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;Jekyll i have found is a really cool tool to quickly generate a website. Jekyll is a simple static site generator. Using Jekyll is a very common way of generating a “ready-to-publish static website” within seconds. You can learn more about &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; here.&lt;/p&gt;
-
-&lt;p&gt;This post just demonstrates the process of using Jekyll to generate a static website quickly then focus on deploying it. You could use any sort of content you wish however and still follow the steps of deployment covered later on. Just make sure that your HTML is inside of a file called index.html. You can go ahead and create your own static site from scratch, but that is not for me. I am just going to do something simple, but bear in mind there is a vast array of &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt; to tickle anyone’s fancy. The use of Github here is necessary though, as you can just select the theme of your choice, clone it onto your computer, then begin filling it with your own content.&lt;/p&gt;
-
-&lt;p&gt;One catch is that Windows is not an officially supported platform for Jekyll. Consequently everything i do from here using Jekyll was development on Ubuntu 16.04. Before you install Jekyll, what you are going to need first is to install Ruby. More info on how to do this can be found at &lt;a href=&quot;https://www.brightbox.com/docs/ruby/ubuntu/&quot;&gt;brightbox&lt;/a&gt;. There maybe a few other software to install as well, so after you install Ruby you can then check out the &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll install instructions&lt;/a&gt;. Then in your terminal you can do:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ sudo gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With Jekyll now installed we use Jekyll’s new command and specify a directory name. The directory will contain all of your site’s default content that can be customized later. For example, to generate a website in a directory called my-own-site, we can type:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ jekyll new my-own-site
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can use Jekyll to view your site locally. On the web, a server hosts your site’s files and makes your website available for everyone to see. However, viewing a website locally means that you’re viewing the site on your own computer (hence the term “locally” or “local”). The site is not, however, available on the public Internet. Instead, your computer is acting as the server that hosts your site. You can view your site locally by using Jekyll’s serve command, like so:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This command starts a local server that will server the files to your computer. The serve command will also come in handy when you want to preview changes you make to your site.&lt;/p&gt;
-
-&lt;p&gt;The website that Jekyll generates offers a standard directory structure, as well as components that help speed up development. It’s important to understand Jekyll’s default directory structure and contents of your site. &lt;a href=&quot;https://jekyllrb.com/docs/structure/&quot;&gt;See here&lt;/a&gt; for more details.&lt;/p&gt;
-
-&lt;h2 id=&quot;deploy-website&quot;&gt;2. Deploy Website&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;There are many different ways to deploy a website to the public Internet. One of them uses GitHub Pages to deploy your website. GitHub Pages is a service offered by &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;. Specifically, GitHub Pages are public webpages that are hosted and published through GitHub. GitHub Pages offers extensive integration and support for Jekyll. By using both, we can benefit from:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Easy setup&lt;/li&gt;
-  &lt;li&gt;Troubleshooting your site&lt;/li&gt;
-  &lt;li&gt;Updating and maintaining your site&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Obviously one caveat to successfully deploy your site, is that you will need a GitHub account.&lt;/p&gt;
-
-&lt;p&gt;In order to publish your site using GitHub Pages, you’ll need to create a repository (repo) on GitHub. A GitHub repository is an online, central storage place where you can store files and all the versions of those files. We’ll use the repo create just before to store the contents of the basic website. A repo’s name must also follow GitHub Pages’ naming convention, otherwise the site will not publish at all. Specifically, the repo’s name must be in the following format:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;your-user-name.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the example above, you would replace your-user-name with your actual GitHub user name. Now we can upload the site that that was created (&lt;code&gt;new my-own-site&lt;/code&gt;) to GitHub. We’ll use Git to push (upload) the contents of your site’s directory to your new repo. To do so, we’ll first initialize a Git repository in the site’s directory. First, use the &lt;code&gt;cd&lt;/code&gt; command to navigate to the site’s directory. Once inside the &lt;code&gt;new my-own-site&lt;/code&gt; directory, initialize a Git repository with the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ git init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next, Git needs to know what repo will store your site’s content. In this case, the repo will be the one you created on GitHub earlier. To specify the repo using Git, we’ll have to add the remote and label it as the origin.&lt;/p&gt;
-
-&lt;p&gt;The remote is the URL of the repo that will store your site’s contents. The origin is an alias for the remote. You can think of an alias as an abbreviation or a substitute name. This means that instead of having to always type the lengthy remote URL over and over again, you can simply refer to it as origin later on. In the terminal, you can add the remote with the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ git remote add origin https://github.com/your-user-name/your-user-name.github.io.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Git also needs to know exactly which files should be pushed to your repo. In this case, we want to push all of your site’s content to the repo. This means we will do the following two things (in order):&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Add all of your site’s content to the Git staging area&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ git add .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Save your changes using Git’s commit command and the following commit message:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ git commit -m &quot;Save my work&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We now use Git to help deploy the site. This time, we’ll use Git’s push command and push the contents of your site up to the repo using the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;$ git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The site will now be published on the public Internet. You can now navigate to your newly published website in your preferred browser. The URL for your GitHub Pages site is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;your-user-name.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;where your-user-name is your actual GitHub username.&lt;/p&gt;
-
-&lt;h2 id=&quot;give-the-website-a-custom-domain-name&quot;&gt;2. Give the website a custom domain name&lt;/h2&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;By now we have deployed the site and GitHub Pages has assigned it a default URL, or domain name. The next step is to purchase your own custom domain name and assign it to your GitHub Pages website. This will result in you being able to access your site using both your new domain name and your default GitHub Pages domain name.&lt;/p&gt;
-
-&lt;p&gt;Before you choose a custom domain name, it’s important to first understand what domain names actually are. Domain names are human-friendly names that identify servers on the Internet. A global system known as the Domain Name System (DNS) is used for storing which domain names correspond to which servers. For example, Github’s’s domain name is &lt;code&gt;https://github.com&lt;/code&gt;. When you type the domain name into your browser, your computer asks the DNS to identify which servers should receive the request in order to load the website.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This part of website deployment is optional. Nevertheless, you can follow through the steps required to purchase a custom domain name and assign it to your GitHub Pages site. From my own experience a custom domain name costs about $15 AUS.&lt;/p&gt;
-
-&lt;p&gt;Often, the most time consuming part of buying a domain name is actually deciding what you’d like it to be. Be aware that not all domain names are available; many have already been claimed by others. Here we are going to use Amazon Web Services (AWS) to purchase your custom domain. &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;AWS&lt;/a&gt; is an industry standard suite of web infrastructure services used frequently by developers. The specific service we’re going to use to purchase your domain name is called &lt;code&gt;Route 53&lt;/code&gt;. To begin the process you will need to establish an account with AWS if you do not have one already. Creating an AWS account is free - there are no required purchases. The only purchase that you’ll (optionally) make will be the purchase of your custom domain name.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important Instructions&lt;/strong&gt;
-After logging into your account, you’ll land on the AWS console. The console displays the many different services. Here we are going to focus on a service called “Route 53,” under the “Networking” category. Route 53 can be used to purchase domain names and create DNS records. Once in here, click on the “Get Started Now” button under the “Domain Registration” section. On the next page, locate the two buttons at the top of the page. Click on the button titled “Register Domain”.&lt;/p&gt;
-
-&lt;p&gt;Now it’s time to select a domain name and make sure it’s available. Route 53 allows you to search the availability of a domain name you have in mind. It also offers many suffixes, like &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.io&lt;/code&gt;, &lt;code&gt;.me&lt;/code&gt;, and &lt;code&gt;.soil&lt;/code&gt;. If the domain name you want is unavailable as a &lt;code&gt;.com&lt;/code&gt; for example, you can try using a different suffix. The suffixes of domain names are known as top-level domains (TLDs). Different TLDs cost different annual prices.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code&gt;.com&lt;/code&gt; domains are the most popular and are therefore generally unavailable (or expensive).&lt;/p&gt;
-
-&lt;p&gt;With your new domain name established,you might notice that it doesn’t work yet - you can’t visit it in your web browser. We have to connect it to your GitHub Pages website first. There are two steps required:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Inform GitHub of the new domain name we’ll be using (the one you purchased)&lt;/li&gt;
-  &lt;li&gt;Set up DNS records in Route 53 that direct to GitHub&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;To perform these steps, open GitHub and access the repo you created earlier titled &lt;code&gt;your-user-name.github.io&lt;/code&gt;. Click the “New file” button. Name the new file &lt;code&gt;CNAME&lt;/code&gt;. Do not add a file name extension. In the file, on line 1, type the custom domain name you just purchased in the following format: &lt;code&gt;yourcustomdomain.com&lt;/code&gt;. You may have purchased a domain name with a TLD other than .com. In that case, make sure to use that TLD when creating the &lt;code&gt;CNAME&lt;/code&gt; file. Commit the new file. Under the title of the repo, click on “Settings.” Scroll down to the section titled “GitHub Pages” and confirm that there is a message similar to the following: Your site is published at &lt;code&gt;http://yourcustomdomain.com&lt;/code&gt;. Try navigating to your website in your browser using your new domain name. It still doesn’t work! Time to move onto the next step.&lt;/p&gt;
-
-&lt;p&gt;The new &lt;code&gt;CNAME&lt;/code&gt; file in your repo informs GitHub that you’re assigning a new custom domain name to your GitHub Pages site. What we do now is let the rest of the Internet know that we want to associate the custom domain name with your GitHub Pages site. We can do this by creating DNS records, which are globally accessible records that map domain names to servers. The DNS records are created inside of a Hosted Zone in Route 53. A Hosted Zone is essentially a group of DNS records for a single domain.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important Instructions&lt;/strong&gt;
-In your AWS account Access Route 53 again. On the left side of the page, click on the title that says “Hosted Zones.” Notice that you have a Hosted Zone for your new domain name. Click on it to open it.&lt;/p&gt;
-
-&lt;p&gt;Domain names are associated with the correct DNS records by setting the domain name’s name servers. After a domain name is typed into a browser, the computer first retrieves the name servers that correspond to that domain name. The name servers are important because they’re responsible with providing the computer with other important information (in the form of DNS records) associated with the domain name. Setting your domain’s name servers is important. The DNS is a global system, which means that anyone can create DNS records. We must verify that the DNS records we create were actually created by the owner of the domain name (in this case, you). By doing this, the owner of a domain name ensures that only they have exclusive control over their domain’s DNS records.&lt;/p&gt;
-
-&lt;p&gt;Notice that the Hosted Zone for your domain name already has an &lt;code&gt;NS (Name server)&lt;/code&gt; record. This record contains four values. These are the Hosted Zone’s unique name servers. Take note of these values and copy them down somewhere. On the left hand side, under “Domains,” click on “Registered domains.” Then, click on your domain name. On the right hand side of the page, locate the section titled “Name Servers.” Notice that these are the same name servers that your Hosted Zone’s &lt;code&gt;NS&lt;/code&gt; record contained. Route 53 did this for you automatically.&lt;/p&gt;
-
-&lt;p&gt;Now that your domain name is associated with the correct name servers, it’s time to create some additional DNS records within the Hosted Zone. The records that we’ll create will be used by the name servers to help locate your site when a computer wants to load it. Specifically, the name servers will be responsible for providing that computer with important information stored in the records.&lt;/p&gt;
-
-&lt;p&gt;There are several different types of DNS records. We’re going to start by creating an &lt;code&gt;A&lt;/code&gt; record, which stands for Address record. An &lt;code&gt;A&lt;/code&gt; record directs a domain name to an IP address. This record will associate our new custom domain name with Github’s servers.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important Instructions&lt;/strong&gt;
-Inside of your Hosted Zone, click on the button at the top labeled “Create Record Set.” A form will appear to the right. Leave the “Name:” field blank. Set the “Type:” field to A - IPv4 address.
-Leave the “TTL (Seconds)” value at the default of 300. In the “Value” text box, enter the following IP addresses (keep them on separate lines):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;192.30.252.153
-192.30.252.154
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;These IP addresses belong to GitHub. We are specifying that when your custom domain name is requested, the DNS should direct the request to GitHub. Read more information about this &lt;a href=&quot;https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider&quot;&gt;here&lt;/a&gt;. Click the “Save Record Set” button at the bottom of the form.&lt;/p&gt;
-
-&lt;p&gt;When setting up a website, it’s also conventional to also set up a &lt;code&gt;www&lt;/code&gt; subdomain. &lt;code&gt;www&lt;/code&gt; stands for &lt;code&gt;world wide web&lt;/code&gt;. Subdomains are part of a main (or root) domain. For example, &lt;code&gt;www.yourcustomdomain.com&lt;/code&gt; is a subdomain of the &lt;code&gt;yourcustomdomain.com&lt;/code&gt; root domain. We can set up a subdomain using a &lt;code&gt;CNAME&lt;/code&gt; record, which stands for Canonical Name. A &lt;code&gt;CNAME&lt;/code&gt; record specifies that a domain name will be used as an alias, or substitute, for the true (canonical) domain name.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important Instructions&lt;/strong&gt;
-Inside of your Hosted Zone, click on the button at the top labeled “Create Record Set”. A form will appear to the right. In the “Name:” field, enter only &lt;code&gt;www&lt;/code&gt;. Set the “Type: “ field to &lt;code&gt;CNAME - Canonical name&lt;/code&gt;. This step sets up the subdomain. In the &lt;code&gt;Value&lt;/code&gt; text box, enter the domain name that GitHub assigned to you earlier (the canonical domain name:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;your-user-name.github.io
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Click the “Save Record Set” button at the bottom of the form.&lt;/p&gt;
-
-&lt;p&gt;W have now created two DNS records: an &lt;code&gt;A&lt;/code&gt; record for &lt;code&gt;yourcustomdomain.com&lt;/code&gt; and a &lt;code&gt;CNAME&lt;/code&gt; record for &lt;code&gt;www.yourcustomdomain.com&lt;/code&gt;. Let’s make sure they both work.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important Instructions&lt;/strong&gt;
-Try opening your website using your root domain in the web browser. You should see your new GitHub Pages site. Try opening your website using your &lt;code&gt;www&lt;/code&gt; subdomain in the web browser. You should see your new GitHub Pages site.&lt;/p&gt;
-
-&lt;p&gt;Success! The website should now display in the browser when you navigate to your custom domain name.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-points&quot;&gt;Final Points&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;We have used Jekyll to create a static website, then used Github pages to host it on the internet. We then set up a custom domain so that the website can be widely seen on the Internet.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There is much to learn in terms of building content for your website. You should also look into the many Jekyll content templates that are available.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I find building Jekyll website content to be relatively easy as you only have to learn Markdown. Jekyll does the amazing job of converting it all in html. I have found though that even with this efficiency, building content can take an age.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The &lt;code&gt;jekyll serve&lt;/code&gt; command is super useful. You can make changes and quickly check the result by deploying the site locally.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2016/11/website-launch&quot;&gt;Website Launch&lt;/a&gt; was originally published by Brendan Malone at &lt;a href=&quot;&quot;&gt;Brendan Malone&lt;/a&gt; on November 17, 2016.&lt;/p&gt;
   </content>
 </entry>
 
