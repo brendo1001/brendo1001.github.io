@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/2017/05/IndonFinger</loc>
+<lastmod>2017-05-16T00:00:00+10:00</lastmod>
+</url>
+<url>
+<loc>/2017/05/journalDigest</loc>
+<lastmod>2017-05-11T00:00:00+10:00</lastmod>
+</url>
+<url>
 <loc>/2017/05/journalDigest</loc>
 <lastmod>2017-05-04T00:00:00+10:00</lastmod>
 </url>
@@ -109,7 +117,7 @@
 <loc>/publications/</loc>
 </url>
 <url>
-<loc>/miscellanea/</loc>
+<loc>/miscellany/</loc>
 </url>
 <url>
 <loc>/CV/</loc>
@@ -243,6 +251,10 @@
 <url>
 <loc>/downloads/journal/malone2017_4.pdf</loc>
 <lastmod>2017-05-05T12:38:27+10:00</lastmod>
+</url>
+<url>
+<loc>/downloads/journal/malone2017_5.pdf</loc>
+<lastmod>2017-05-26T21:42:30+10:00</lastmod>
 </url>
 <url>
 <loc>/downloads/thesis/Canobolas%20manuscript_bmal_thesis.pdf</loc>
