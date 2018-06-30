@@ -1,17 +1,2 @@
-# Brendan Malone's Personal Academic Website
-
-This website is based on the HPSTR Jekyll Theme by [Michael Rose](https://github.com/mmistakes) and the Clean Blog Theme by [David Miller](https://github.com/davidtmiller/).A really nice adapatation of this theme is by [http://liuyxpp.github.io](http://liuyxpp.github.io) of which this site is based upon. 
-It has been deployed to Github Pages at [https://github.com/brendo1001/brendo1001.github.io]https://github.com/brendo1001/brendo1001.github.io) with custom domain at [http://smartdigiag.com](http://smartdigiag.com).
-
-## Important Notice
-
-If you wish to use the theme of this website, please follow the guidelines below:
-
-1. Please give credit by starring [this project](https://github.com/brendo1001/brendo1001.github.io) and/or display this line on your website: "This website is powered by [LYX Jekyll theme](https://github.com/brendo1001/brendo1001.github.io)".
-2. Remove all personal materials and personal information about me (Brendan Malone).
-3. Remove all the contents in the following directories: `_posts`, `_drafts`, `_data`, `_site`, `CV`, `downloads`, `images`, `publications`, `research`, `miscellanea` and `software`.
-4. Modify the configuration file `_config.yml` to add your own personal information.
-5. Add your contents.
-6. Publish your website.
-
-**PLEASE DO NOT PUBLISH YOUR WEBSITE BEFORE YOU REMOVE ALL COPYRIGHT MATERIAL!**
+# Smart digital agriculture
+Site is under massive overhaul. Stay tuned for updates
