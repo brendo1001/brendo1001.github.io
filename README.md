@@ -1,2 +1,4 @@
 # Smart digital agriculture
-Site is under massive overhaul. Stay tuned for updates
+A simple holding website of stuff about agriculture, soil science, and science in general. 
+
+site URL: www.smartdigiag.com
