@@ -4,13 +4,1277 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2018-10-11T16:34:16+11:00</updated>
+<updated>2019-01-06T10:27:47+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2019/01/journalDigest" />
+  <id>/2019/01/journalDigest</id>
+  <updated>2019-01-04T00:00:00-00:00</updated>
+  <published>2019-01-04T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2019-1&quot;&gt;Journal Paper Digests 2019 #1&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Estimating Field Capacity from Volumetric Soil Water Content Time Series Using Automated Processing Algorithms&lt;/li&gt;
+  &lt;li&gt;Effect of Air- and Water-Filled Voids on Neutron Moisture Meter Measurements of Clay Soil&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;estimating-field-capacity-from-volumetric-soil-water-content-time-series-using-automated-processing-algorithms&quot;&gt;Estimating Field Capacity from Volumetric Soil Water Content Time Series Using Automated Processing Algorithms&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Bean, EZ; Huffaker, RG; Migliaccio, KW&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 17 (1):80073-80073; DEC 13 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Vadose zone measurements of volumetric soil water content (theta) using soil moisture sensors (SMSs) have become more common due to advances in technology and reduction of costs. Soil moisture sensor data exhibit a characteristic cyclical pattern reflecting water flux dynamics into and out of the observed soil volume. Expert review of SMS datasets to distinguish valid from corrupt or incomplete soil water cycles is arguably the most precise method for determining field capacity (theta(FC)) but is impractically cumbersome and time consuming for increasingly large SMS datasets. We evaluated competing approaches for automated soil water cycles analysis that use widely available R packages based on pattern recognition and machine learning (findpeaks [R-FP], symbolic aggregate approximation [R-SAX], and density histogram [R-DH]), and a MATLAB code based on soil water dynamic principles (SWDP). These approaches were applied to three SMS datasets. Our empirical results showed superi
+ ority of R-SAX for identifying valid soil water cycles, probably due to benefiting from training sets to calibrate to correct cycles. Two other approaches (SWDP and R-FP) provided similar results without need of training sets or preprocessing data. Three approaches for estimating field capacity were applied to valid cycles, R-FP, regression of exponential decay (SWDP-R), and estimated “knee” of curve (SWDP-K). Each performed similarly to the expert defined values, with R-FP and SWDP-R generally performing best across analyses. Results of this study also show temporal dynamics of theta(FC) within datasets used here. There is potential for optimizing theta(FC) and a need for automated, objective analysis to leverage dynamics in irrigation management and modeling.&lt;/p&gt;
+
+&lt;h3 id=&quot;effect-of-air--and-water-filled-voids-on-neutron-moisture-meter-measurements-of-clay-soil&quot;&gt;Effect of Air- and Water-Filled Voids on Neutron Moisture Meter Measurements of Clay Soil&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Bagnall, DK; Gutierrez, PMC; Yimam, YT; Morgan, CLS; Neely, HL;
+Ackerson, JP&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 17 (1):80137-80137; DEC 13 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Air- and water-filled voids around neutron moisture meter (NMM) access tubes have been cited as sources of volumetric water content (theta(v)) measurement error in cracking clay soils. The objectives of this study were to experimentally quantify this potential error stemming from (i) uncertainty in bulk density (rho(b)) sampling and (ii) the impact of air- and water-filled voids. Air- and water-filled voids were simulated using similar to 0.6-cm (small) and similar to 1.9-cm (large) annuli around access tubes. After NMM measurements were taken in a tightly installed access tube, either a small or large annulus was installed in the same borehole. Additional NMM measurements were taken with the annulus filled with air, and then water and rho(b) and theta(v) were measured. The RMSE of the NMM calibration using all 11 installations was 0.02 m(3) m(-3). However, if two cores were used for calibration, the ratio of NMM-measured theta(v) to in situ theta(v) was significantly differe
+ nt (p &amp;lt; 0.05) from measured theta(v) half the time (RMSE, 0.012-0.05 m(3) m(-3)). Small air-filled voids created drier estimates of theta(v) (bias, -0.039 m(3) m(-3); p &amp;lt; 0.001), wherease small water-filled voids were not significantly different from the calibration. Air- and water-filled voids from larger annuli were significantly lower and higher (p &amp;lt; 0.001) than core-measured theta(v), with biases of -0.068 and 0.080 m(3) m(-3), respectively. Although this work does not correct NMM-predicted theta(v) to matrix theta(v), it does bound NMM error under field conditions in a cracking clay soil.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2019/01/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on January 04, 2019.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2018/12/journalDigest" />
+  <id>/2018/12/journalDigest</id>
+  <updated>2018-12-18T00:00:00-00:00</updated>
+  <published>2018-12-18T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2018-23&quot;&gt;Journal Paper Digests 2018 #23&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comparing optimal and empirical stomatal conductance models for application in Earth system models&lt;/li&gt;
+  &lt;li&gt;SMAP soil moisture improves global evapotranspiration&lt;/li&gt;
+  &lt;li&gt;Prediction of drought-induced reduction of agricultural productivity in Chile from MODIS, rainfall estimates, and climate oscillation indices&lt;/li&gt;
+  &lt;li&gt;Susquehanna Shale Hills Critical Zone Observatory: Shale Hills in the Context of Shaver’s Creek Watershed&lt;/li&gt;
+  &lt;li&gt;Cosmic Ray Neutron Sensing for Simultaneous Soil Water Content and Business Quantification in Drought conditions&lt;/li&gt;
+  &lt;li&gt;Precise Temporal Disaggregation Preserving Marginals and Correlations (DiPMaC) for Stationary and Nonstationary Processes&lt;/li&gt;
+  &lt;li&gt;Management of the major chemical soil constraints affecting yields in the grain growing region of Queensland and New South Wales, Australia - a review&lt;/li&gt;
+  &lt;li&gt;Spatial variation in soil organic carbon and nitrogen at two field sites under crop and pasture rotations in southern New South Wales, Australia&lt;/li&gt;
+  &lt;li&gt;AgrHyS: An Observatory of Response Times in Agro-Hydro Systems&lt;/li&gt;
+  &lt;li&gt;OZCAR: The French Network of Critical Zone Observatories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;comparing-optimal-and-empirical-stomatal-conductance-models-for-application-in-earth-system-models&quot;&gt;Comparing optimal and empirical stomatal conductance models for application in Earth system models&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Franks, PJ; Bonan, GB; Berry, JA; Lombardozzi, DL; Holbrook, NM; Herold,
+N; Oleson, KW&lt;/p&gt;
+
+&lt;p&gt;Source:
+GLOBAL CHANGE BIOLOGY, 24 (12):5708-5723; DEC 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Earth system models (ESMs) rely on the calculation of canopy conductance
+in land surface models (LSMs) to quantify the partitioning of land
+surface energy, water, and CO2 fluxes. This is achieved by scaling
+stomatal conductance, g(w), determined from physiological models
+developed for leaves. Traditionally, models for g(w) have been
+semi-empirical, combining physiological functions with empirically
+determined calibration constants. More recently, optimization theory has
+been applied to model g(w) in LSMs under the premise that it has a
+stronger grounding in physiological theory and might ultimately lead to
+improved predictive accuracy. However, this premise has not been
+thoroughly tested. Using original field data from contrasting forest
+systems, we compare a widely used empirical type and a more recently
+developed optimization-type g(w) model, termed BB and MED, respectively.
+Overall, we find no difference between the two models when used to
+simulate g(w) from photosynthesis data, or leaf gas exchange from a
+coupled photosynthesis-conductance model, or gross primary productivity
+and evapotranspiration for a FLUXNET tower site with the CLM5 community
+LSM. Field measurements reveal that the key fitted parameters for BB and
+MED, g(1B) and g(1M,) exhibit strong species specificity in magnitude
+and sensitivity to CO2, and CLM5 simulations reveal that failure to
+include this sensitivity can result in significant overestimates of
+evapotranspiration for high-CO2 scenarios. Further, we show that g(1B)
+and g(1M) can be determined from mean c(i)/c(a) (ratio of leaf
+intercellular to ambient CO2 concentration). Applying this relationship
+with c(i)/c(a) values derived from a leaf delta C-13 database, we obtain
+a global distribution of g(1B) and g(1M), and these values correlate
+significantly with mean annual precipitation. This provides a new
+methodology for global parameterization of the BB and MED models in
+LSMs, tied directly to leaf physiology but unconstrained by spatial
+boundaries separating designated biomes or plant functional types.&lt;/p&gt;
+
+&lt;h3 id=&quot;smap-soil-moisture-improves-global-evapotranspiration&quot;&gt;SMAP soil moisture improves global evapotranspiration&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Purdy, AJ; Fisher, JB; Goulden, ML; Colliander, A; Halverson, G; Tu, K;
+Farniglietti, JS&lt;/p&gt;
+
+&lt;p&gt;Source:
+REMOTE SENSING OF ENVIRONMENT, 219 1-14; DEC 15 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Accurate estimation of global evapotranspiration (ET) is essential to
+understand water cycle and land-atmosphere feedbacks in the Earth
+system. Satellite-driven ET models provide global estimates, but many of
+the ET algorithms have been designed independently of soil moisture
+observations. As water for ET is sourced from the soil, incorporating
+soil moisture into global remote sensing algorithms of ET should, in
+theory, improve performance, especially in water-limited regions. This
+paper presents an update to the widely-used Priestley Taylor-Jet
+Propulsion Laboratory (PT-JPL) ET algorithm to incorporate spatially
+explicit daily surface soil moisture control on soil evaporation and
+canopy transpiration. The updated algorithm is evaluated using 14
+AmeriFlux eddy covariance towers co-located with COsmic-ray Soil
+Moisture Observing System (COSMOS) soil moisture observations. The new
+PT-JPL(SM) model shows reduced errors and increased explanation of
+variance, with the greatest improvements in water-limited regions. Soil
+moisture incorporation into soil evaporation improves ET estimates by
+reducing bias and RMSE by 29.9% and 22.7% respectively, while soil
+moisture incorporation into transpiration improves ET estimates by
+reducing bias by 30.2%, RMSE by 16.9%. We apply the algorithm globally
+using soil moisture observations from the Soil Moisture Active Passive
+Mission (SMAP). These new global estimates of ET show reduced error at
+finer spatial resolutions and provide a rich dataset to evaluate land
+surface and climate models, vegetation response to changes in water
+availability and environmental conditions, and anthropogenic
+perturbations to the water cycle.&lt;/p&gt;
+
+&lt;h3 id=&quot;prediction-of-drought-induced-reduction-of-agricultural-productivity-in-chile-from-modis-rainfall-estimates-and-climate-oscillation-indices&quot;&gt;Prediction of drought-induced reduction of agricultural productivity in Chile from MODIS, rainfall estimates, and climate oscillation indices&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Zambrano, F; Vrieling, A; Nelson, A; Meroni, M; Tadesse, T&lt;/p&gt;
+
+&lt;p&gt;Source:
+REMOTE SENSING OF ENVIRONMENT, 219 15-30; DEC 15 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Global food security is negatively affected by drought. Climate
+projections show that drought frequency and intensity may increase in
+different parts of the globe. These increases are particularly hazardous
+for developing countries. Early season forecasts on drought occurrence
+and severity could help to better mitigate the negative consequences of
+drought. The objective of this study was to assess if interannual
+variability in agricultural productivity in Chile can be accurately
+predicted from freely-available, near real-time data sources. As the
+response variable, we used the standard score of seasonal cumulative
+NDVI (zcNDVI), based on 2000-2017 data from Moderate Resolution Imaging
+Spectroradiometer (MODIS), as a proxy for anomalies of seasonal primary
+productivity. The predictions were performed with forecast lead times
+from one- to six-month before the end of the growing season, which
+varied between census units in Chile. Predictor variables included the
+zcNDVI obtained by cumulating NDVI from season start up to prediction
+time; standardised precipitation indices derived from satellite rainfall
+estimates, for time-scales of 1, 3, 6, 12 and 24 months; the Pacific
+Decadal Oscillation and the Multivariate ENSO oscillation indices; the
+length of the growing season, and latitude and longitude. For each of
+the 758 census units considered, the time series of the response and the
+predictor variables were averaged for agricultural areas resulting in a
+17-season time series per unit for each variable. We used two prediction
+approaches: (i) optimal linear regression (OLR) whereby for each census
+unit the single predictor was selected that best explained the
+interannual zcNDVI variability, and (ii) a multi-layer feedforward
+neural network architecture, often called deep learning (DL), where all
+predictors for all units were combined in a single spatio-temporal
+model. Both approaches were evaluated with a leave-one-year-out
+cross-validation procedure. Both methods showed good prediction
+accuracies for small lead times and similar values for all lead times.
+The mean R-cv(2) values for OLR were 0.95, 0.83, 0.68, 0.56, 0.46 and
+0.37, against 0.96, 0.84, 0.65, 0.54, 0.46 and 0.38 for DL, for one,
+two, three, four, five, and six months lead time, respectively. Given
+the wide range of climates and vegetation types covered within the study
+area, we expect that the presented models can contribute to an improved
+early warning system for agricultural drought in different geographical
+settings around the globe.&lt;/p&gt;
+
+&lt;h3 id=&quot;susquehanna-shale-hills-critical-zone-observatory-shale-hills-in-the-context-of-shavers-creek-watershed&quot;&gt;Susquehanna Shale Hills Critical Zone Observatory: Shale Hills in the Context of Shaver’s Creek Watershed&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Brantley, SL; White, T; West, N; Williams, JZ; Forsythe, B; Shapich, D;
+Kaye, J; Lin, H; Shi, YN; Kaye, M; Herndon, E; Davis, KJ; He, Y;
+Eissenstat, D; Weitzman, J; DiBiase, R; Li, L; Reed, W; Brubaker, K; Gu,
+X&lt;/p&gt;
+
+&lt;p&gt;Source:
+VADOSE ZONE JOURNAL, 17 (1):80092-80092; NOV 15 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The Susquehanna Shale Hills Critical Zone Observatory (SSHCZO) was
+established to investigate the form, function, and dynamics of the
+critical zone developed on sedimentary rocks in the Appalachian
+Mountains in central Pennsylvania. When first established, the SSHCZO
+encompassed only the Shale Hills catchment, a 0.08-km(2) subcatchment
+within Shaver’s Creek watershed. The SSHCZO has now grown to include 120
+km(2) of the Shaver’s Creek watershed. With that growth, the science
+team designed a strategy to measure a parsimonious set of data to
+characterize the critical zone in such a large watershed. This
+parsimonious design includes three targeted subcatchments (including the
+original Shale Hills), observations along the main stem of Shaver’s
+Creek, and broad topographic and geophysical observations. Here we
+describe the goals, the implementation of measurements, and the major
+findings of the SSHCZO by emphasizing measurements of the main stem of
+Shaver’s Creek as well as the original Shale Hills subcatchment.&lt;/p&gt;
+
+&lt;h3 id=&quot;cosmic-ray-neutron-sensing-for-simultaneous-soil-water-content-and-business-quantification-in-drought-conditions&quot;&gt;Cosmic Ray Neutron Sensing for Simultaneous Soil Water Content and Business Quantification in Drought conditions&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Jakobi, J; Huisman, JA; Vereecken, H; Diekkruger, B; Bogena, HR&lt;/p&gt;
+
+&lt;p&gt;Source:
+WATER RESOURCES RESEARCH, 54 (10):7383-7402; OCT 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Understanding the feedback mechanisms between soil water content (SWC)
+and biomass production is important for sustainable resources
+management. Here we present a new method enabling simultaneous
+noninvasive measurements of SWC and biomass dynamics based on cosmic ray
+neutron sensing (CRNS). Recently, it was suggested that the neutron
+ratio (N-r) between thermal neutron (TN) and fast neutron (FN) intensity
+contains information on other hydrogen pools like vegetation, canopy
+interception, and snow. The aim of this study is to evaluate the
+accuracy of simultaneous measurements of SWC and biomass dynamics during
+agricultural drought conditions using CRNS probes. To this end, we
+instrumented an arable field cropped with sugar beet with CRNS probes
+and a wireless in situ SWC sensor network. Belowground and aboveground
+biomass were sampled in monthly intervals. We found a linear
+relationship between N-r and the aboveground biomass that allowed to
+continuously quantify the dry aboveground biomass development throughout
+the growing season with a root-mean-square error from 0.14 to 0.22
+kg/m(2). This information was used together with measured belowground
+biomass to correct for the effect of biomass on SWC determination with
+CRNS probes, which increased the accuracy of the SWC estimates
+considerably as indicated by the decrease of the root-mean-square error
+from 0.046 to 0.013 cm(3)/cm(3). We anticipate that future research on
+the N-r can further improve the accuracy of SWC and biomass estimates
+and extend the application of CRNS to include canopy interception,
+ponding water, and snow water equivalent estimation for both stationary
+and roving CRNS systems.&lt;/p&gt;
+
+&lt;h3 id=&quot;precise-temporal-disaggregation-preserving-marginals-and-correlations-dipmac-for-stationary-and-nonstationary-processes&quot;&gt;Precise Temporal Disaggregation Preserving Marginals and Correlations (DiPMaC) for Stationary and Nonstationary Processes&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Papalexiou, SM; Markonis, Y; Lombardo, F; AghaKouchak, A;
+Foufoula-Georgiou, E&lt;/p&gt;
+
+&lt;p&gt;Source:
+WATER RESOURCES RESEARCH, 54 (10):7435-7458; OCT 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Hydroclimatic variables such as precipitation and temperature are often
+measured or simulated by climate models at coarser spatiotemporal scales
+than those needed for operational purposes. This has motivated more than
+half a century of research in developing disaggregation methods that
+break down coarse-scale time series into finer scales, with two primary
+objectives: (a) reproducing the statistical properties of the fine-scale
+process and (b) preserving the original coarse-scale data. Existing
+methods either preserve a limited number of statistical moments at the
+fine scale, which is often insufficient and can lead to an
+unrepresentative approximation of the actual marginal distribution, or
+are based on a limited number of a priori distributional assumptions,
+for example, lognormal. Additionally, they are not able to account for
+potential nonstationarity in the underlying fine-scale process. Here we
+introduce a novel disaggregation method, named Disaggregation Preserving
+Marginals and Correlations (DiPMaC), that is able to disaggregate a
+coarse-scale time series to any finer scale, while reproducing the
+probability distribution and the linear correlation structure of the
+fine-scale process. DiPMaC is also generalized for arbitrary
+nonstationary scenarios to reproduce time varying marginals.
+Additionally, we introduce a computationally efficient algorithm, based
+on Bernoulli trials, to optimize the disaggregation procedure and
+guarantee preservation of the coarse-scale values. We focus on temporal
+disaggregation and demonstrate the method by disaggregating monthly
+precipitation to hourly, and time series with trends (e.g., climate
+model projections), while we show its potential to disaggregate based on
+general nonstationary scenarios. The example applications demonstrate
+the performance and robustness of DiPMaC.&lt;/p&gt;
+
+&lt;h3 id=&quot;management-of-the-major-chemical-soil-constraints-affecting-yields-in-the-grain-growing-region-of-queensland-and-new-south-wales-australia---a-review&quot;&gt;Management of the major chemical soil constraints affecting yields in the grain growing region of Queensland and New South Wales, Australia - a review&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Page, KL; Dalal, RC; Wehr, JB; Dang, YP; Kopittke, PM; Kirchhof, G;
+Fujinuma, R; Menzies, NW&lt;/p&gt;
+
+&lt;p&gt;Source:
+SOIL RESEARCH, 56 (8):765-779; 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+In the grain growing region of Queensland and New South Wales,
+Australia, crop production occurs predominantly under semiarid, rainfed
+conditions. Vertosols dominate the soils used and many are prone to
+structural problems. In this region, providing that crop nutrition is
+adequate, optimising yield is largely dependent on maximising the
+infiltration, storage and plant use of soil water. Soil constraints such
+as sodicity, salinity, acidity, subsoil compaction and surface sealing
+can limit these processes, leading to high yield losses. This review
+examines management options to treat these constraints, focusing on
+management where multiple constraints exist, and where these occur in
+the subsoil. The main strategies reviewed include (a) use of gypsum to
+treat sodicity and lime to treat acidity, which can lead to yield
+increases of &amp;gt;100% in some circumstances, (b) cultivation or deep
+ripping to break up compacted sodic layers and surface seals, (c)
+incorporating soil organic matter to improve conditions for plant growth
+and (d) selecting species, cultivars and management practices most
+appropriate for constrained sites. Future research must be directed to
+improving the profitability of ameliorant use for sodicity by increasing
+our understanding of how to identify soils responsive to ameliorants,
+and which combination of ameliorants will be cost effective when
+sodicity occurs in combination with other constraints. In addition,
+research needs to target ways to economically apply ameliorants in
+subsoil environments, and better identify which crop species or
+cultivars are productive on constrained sites, particularly those with
+multiple constraints.&lt;/p&gt;
+
+&lt;h3 id=&quot;spatial-variation-in-soil-organic-carbon-and-nitrogen-at-two-field-sites-under-crop-and-pasture-rotations-in-southern-new-south-wales-australia&quot;&gt;Spatial variation in soil organic carbon and nitrogen at two field sites under crop and pasture rotations in southern New South Wales, Australia&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Conyers, M; Orchard, B; Orgill, S; Oates, A; Poile, G; Hayes, R;
+Hawkins, P; Xu, BB; Jia, Y; van der Rijt, V; Li, GD&lt;/p&gt;
+
+&lt;p&gt;Source:
+SOIL RESEARCH, 56 (8):780-792; 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Estimating the likely variance in soil organic carbon (OC) at the scale
+of farm fields or smaller monitoring areas is necessary for developing
+sampling protocols that allow temporal change to be detected. Given the
+relatively low anticipated soil OC sequestration rates (&amp;lt;0.5 Mg/ha.0.30
+m/year) for dryland agriculture it is important that sampling strategies
+are designed to reduce any cumulative errors associated with measuring
+soil OC. The first purpose of this study was to evaluate the spatial
+variation in soil OC and nitrogen (N), in soil layers to 1.50 m depth at
+two monitoring sites (Wagga Wagga and Yerong Creek, 0.5 ha each) in
+southern New South Wales, Australia, where crop and pasture rotations
+are practiced. Four variogram models were tested (linear, spherical,
+Gaussian and exponential); however, no single model dominated across
+sites or depths for OC or N. At both sites, the range was smallest in
+surface soil, and on a scale suggesting that sowing rows (stubble) may
+dominate the pattern of spatial dependence, whereas the longer ranges
+appeared to be associated with horizon boundaries. The second purpose of
+the study was to obtain an estimate of the population mean with 1%, 5%
+and 10% levels of precision using the calculated variance. The number of
+soil cores required for a 1% precision in estimation of the mean soil OC
+or N was impractical at most depths (&amp;gt;500 per ha). About 30 soil cores
+per composite sample to 1.50 m depth, each core being at least 10 m
+apart, would ensure at least an average of 10% precision in the
+estimation of the mean soil OC at these two sites, which represent the
+agriculture of the region.&lt;/p&gt;
+
+&lt;h3 id=&quot;agrhys-an-observatory-of-response-times-in-agro-hydro-systems&quot;&gt;AgrHyS: An Observatory of Response Times in Agro-Hydro Systems&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Fovet, O; Ruiz, L; Gruau, G; Akkal, N; Aquilina, L; Busnot, S; Dupas, R;
+Durand, P; Faucheux, M; Fauvel, Y; Flechard, C; Gilliet, N; Grimaldi, C;
+Hamon, Y; Jaffrezic, A; Jeanneau, L; Labasque, T; Le Henaff, G; Merot,
+P; Molenat, J; Petitjean, P; Pierson-Wickmann, AC; Squividant, H; Viaud,
+V; Walter, C; Gascuel-Odoux, C&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 17 (1):80066-80066; NOV 29 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The AgrHyS is a long-term agro-hydrological observatory dedicated to studying the processes controlling hydro-chemical fluxes in headwater catchments in response to the effects of agricultural. AgrHyS is composed of instrumented catchments located in western France in a temperate oceanic climate that are characterized by shallow groundwater (&amp;lt;8 m deep) over crystalline bedrocks (granite or schist) and is dominated by intensive agriculture with farming. AgrHyS provides long-term observations starting in 1990 and supports highly interdisciplinary studies that provide novel contributions to environmental sciences, including hydrology, geochemistry, agricultural and soil sciences, hydrogeology, bioclimatology, and ecology. Here we describe the observatory sites, observation strategy, data management policy, and data access. The objective is to show how AgrHyS has contributed to research in hydrological and environmental sciences through a review of major insights of the research.
+  This analysis highlights the role of AgrHyS in linking, validating, and enriching successive and complementary projects conducted over the last 25 yr. The second objective is to invite new collaborations with a large scientific community for future research.&lt;/p&gt;
+
+&lt;h3 id=&quot;ozcar-the-french-network-of-critical-zone-observatories&quot;&gt;OZCAR: The French Network of Critical Zone Observatories&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Gaillardet, J; Braud, I; Hankard, F; Anquetin, S; Bour, O; Dorfliger, N;
+de Dreuzy, JR; Galle, S; Galy, C; Gogo, S; Gourcy, L; Habets, F;
+Laggoun, F; Longuevergne, L; Le Borgne, T; Naaim-Bouvet, F; Nord, G;
+Simonneaux, V; Six, D; Tallec, T; Valentin, C; Abril, G; Allemand, P;
+Arenes, A; Arfib, B; Arnaud, L; Arnaud, N; Arnaud, P; Audry, S; Comte,
+VB; Batiot, C; Battais, A; Bellot, H; Bernard, E; Bertrand, C; Bessiere,
+H; Binet, S; Bodin, J; Bodin, X; Boithias, L; Bouchez, J; Boudevillain,
+B; Moussa, IB; Branger, F; Braun, JJ; Brunet, P; Caceres, B; Calmels, D;
+Cappelaere, B; Celle-Jeanton, H; Chabaux, F; Chalikakis, K; Champollion,
+C; Copard, Y; Cotel, C; Davy, P; Deline, P; Delrieu, G; Demarty, J;
+Dessert, C; Dumont, M; Emblanch, C; Ezzahar, J; Esteves, M; Favier, V;
+Faucheux, M; Filizola, N; Flammarion, P; Floury, P; Fovet, O; Fournier,
+M; Francez, AJ; Gandois, L; Gascuel, C; Gayer, E; Genthon, C; Gerard,
+MF; Gilbert, D; Gouttevin, I; Grippa, M; Gruau, G; Jardani, A; Jeanneau,
+L; Join, JL; Jourde, H; Karbou, F; Labat, D; Lagadeuc, Y; Lajeunesse, E;
+Lastennet, R; Lavado, W; Lawin, E; Lebel, T; Le Bouteiller, C; Legout,
+C; Lejeune, Y; Le Meur, E; Le Moigne, N; Lions, J; Lucas, A; Malet, JP;
+Marais-Sicre, C; Marechal, JC; Marlin, C; Martin, P; Martins, J;
+Martinez, JM; Massei, N; Mauclerc, A; Mazzilli, N; Molenat, J;
+Moreira-Turcq, P; Mougin, E; Morin, S; Ngoupayou, JN; Panthou, G;
+Peugeot, C; Picard, G; Pierret, MC; Porel, G; Probst, A; Probst, JL;
+Rabatel, A; Raclot, D; Ravanel, L; Rejiba, F; Rene, P; Ribolzi, O;
+Riotte, J; Riviere, A; Robain, H; Ruiz, L; Sanchez-Perez, JM; Santini,
+W; Sauvage, S; Schoeneich, P; Seidel, JL; Sekhar, M; Sengtaheuanghoung,
+O; Silvera, N; Steinmann, M; Soruco, A; Tallec, G; Thibert, E; Lao, DV;
+Vincent, C; Viville, D; Wagnon, P; Zitouna, R&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 17 (1):80067-80067; NOV 29 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The French critical zone initiative, called OZCAR (Observatoires de la Zone Critique-Application et Recherche or Critical Zone Observatories-Application and Research) is a National Research Infrastructure (RI). OZCAR-RI is a network of instrumented sites, bringing together 21 pre-existing research observatories monitoring different compartments of the zone situated between “the rock and the sky,” the Earth’s skin or critical zone (CZ), over the long term. These observatories are regionally based and have specific initial scientific questions, monitoring strategies, databases, and modeling activities. The diversity of OZCAR-RI observatories and sites is well representative of the heterogeneity of the CZ and of the scientific communities studying it. Despite this diversity, all OZCAR-RI sites share a main overarching mandate, which is to monitor, understand, and predict (“earthcast”) the fluxes of water and matter of the Earth’s near surface and how they will change in response
+  to the “new climatic regime.” The vision for OZCAR strategic development aims at designing an open infrastructure, building a national CZ community able to share a systemic representation of the CZ, and educating a new generation of scientists more apt to tackle the wicked problem of the Anthropocene. OZCAR articulates around: (i) a set of common scientific questions and cross-cutting scientific activities using the wealth of OZCAR-RI observatories, (ii) an ambitious instrumental development program, and (iii) a better interaction between data and models to integrate the different time and spatial scales. Internationally, OZCAR-RI aims at strengthening the CZ community by providing a model of organization for pre-existing observatories and by offering CZ instrumented sites. OZCAR is one of two French mirrors of the European Strategy Forum on Research Infrastructure (eLTER-ESFRI) project.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2018/12/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on December 18, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2018/11/journalDigest" />
+  <id>/2018/11/journalDigest</id>
+  <updated>2018-11-25T00:00:00-00:00</updated>
+  <published>2018-11-25T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2018-22&quot;&gt;Journal Paper Digests 2018 #22&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Multi-temporal RADARSAT-2 polarimetric SAR for maize mapping supported by segmentations from high-resolution optical image&lt;/li&gt;
+  &lt;li&gt;Full year crop monitoring and separability assessment with fully-polarimetric L-band UAVSAR: A case study in the Sacramento Valley, California&lt;/li&gt;
+  &lt;li&gt;Soil sampling with drones and augmented reality in precision agriculture&lt;/li&gt;
+  &lt;li&gt;Informing transport infrastructure investments using TraNSIT: A case study for Australian agriculture and forestry&lt;/li&gt;
+  &lt;li&gt;START: A data preparation tool for crop simulation models using web-based soil databases&lt;/li&gt;
+  &lt;li&gt;An open-source spatial analysis system for embedded systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;multi-temporal-radarsat-2-polarimetric-sar-for-maize-mapping-supported-by-segmentations-from-high-resolution-optical-image&quot;&gt;Multi-temporal RADARSAT-2 polarimetric SAR for maize mapping supported by segmentations from high-resolution optical image&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Shuai, GY; Zhang, JS; Basso, B; Pan, YZ; Zhu, XF; Zhu, S; Liu, HL&lt;/p&gt;
+
+&lt;p&gt;Source:
+INTERNATIONAL JOURNAL OF APPLIED EARTH OBSERVATION AND GEOINFORMATION, 74 1-15; FEB 2019&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Due to its ability to penetrate the cloud, Synthetic Aperture Radar
+(SAR) has been a great resource for crop mapping. Previous research has
+verified the applicability of SAR imagery in object-oriented crop
+classification, however, speckle noise limits the generation of optimal
+segmentation. This paper proposed an innovative SARbased maize mapping
+method supported by optical image, Gaofen-1 PMS, based segmentation,
+named as parcel based SAR classification assisted by optical
+imagery-based segmentation (os-PSC). Polarimetric decomposition was
+applied to extract polarimetric parameters from multi-temporal
+RADARSAT-2 data. One Gaofen-1 image was then used for parcel extraction,
+which was the basic unit for SAR image analysis. The final step was a
+multistep classification for final maize mapping including: the
+potential maize mask extraction, pure/mixed maize parcel division and an
+integrated maize map production. Results showed that the overall
+accuracy of the os-PSC method was 89.1%, higher than those of
+pixel-level classification and SAR-based segmentation methods. The
+comparison between optical- and SAR-based segmentation demonstrated that
+optical-based segmentation would be better at representing maize field
+boundaries than the SAR-based segmentation. Moreover, the parcel- and
+pixel-level integrated classification will be suitable for many
+agricultural systems with small landownership where inter-cropping is
+common. Through integrating advantages of the SAR and optical data,
+os-PSC shows promising potentials for crop mapping.&lt;/p&gt;
+
+&lt;h3 id=&quot;full-year-crop-monitoring-and-separability-assessment-with-fully-polarimetric-l-band-uavsar-a-case-study-in-the-sacramento-valley-california&quot;&gt;Full year crop monitoring and separability assessment with fully-polarimetric L-band UAVSAR: A case study in the Sacramento Valley, California&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Li, HP; Zhang, C; Zhang, SQ; Atkinson, PM&lt;/p&gt;
+
+&lt;p&gt;Source:
+INTERNATIONAL JOURNAL OF APPLIED EARTH OBSERVATION AND GEOINFORMATION, 74 45-56; FEB 2019&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Spatial and temporal information on plant and soil conditions is needed
+urgently for monitoring of crop productivity. Remote sensing has been
+considered as an effective means for crop growth monitoring due to its
+timely updating and complete coverage. In this paper, we explored the
+potential of L-band fully-polarimetric Uninhabited Aerial Vehicle
+Synthetic Aperture Radar (UAVSAR) data for crop monitoring and
+classification. The study site was located in the Sacramento Valley, in
+California where the cropping system is relatively diverse. Full season
+polarimetric signatures, as well as scattering mechanisms, for several
+crops, including almond, walnut, alfalfa, winter wheat, corn, sunflower,
+and tomato, were analyzed with linear polarizations (HH, HV, and VV) and
+polarimetric decomposition (Cloude-Pottier and Freeman-Durden)
+parameters, respectively. The separability amongst crop types was
+assessed across a full calendar year based on both linear polarizations
+and decomposition parameters. The unique structure-related polarimetric
+signature of each crop was provided by multitemporal UAVSAR data with a
+fine temporal resolution. Permanent tree crops (almond and walnut) and
+alfalfa demonstrated stable radar backscattering values across the
+growing season, whereas winter wheat and summer crops (corn, sunflower,
+and tomato) presented drastically different patterns, with rapid
+increase from the emergence stage to the peak biomass stage, followed by
+a significant decrease during the senescence stage. In general, the
+polarimetric signature was heterogeneous during June and October, while
+homogeneous during March-to-May and July-to-August. The scattering
+mechanisms depend heavily upon crop type and phenological stage. The
+primary scattering mechanism for tree crops was volume scattering (&amp;gt;
+40%), while surface scattering (&amp;gt; 40%) dominated for alfalfa and winter
+wheat, although double-bounce scattering (&amp;gt; 30%) was notable for alfalfa
+during March-to-September. Surface scattering was also dominant (&amp;gt; 40%)
+for summer crops across the growing season except for sunflower and
+tomato during June and corn during July-to-October when volume
+scattering (&amp;gt; 40%) was the primary scattering mechanism. Crops were
+better discriminated with decomposition parameters than with linear
+polarizations, and the greatest separability occurred during the peak
+biomass stage (July-August). All crop types were completely separable
+from the others when simultaneously using UAVSAR data spanning the whole
+growing season. The results demonstrate the feasibility of L-band SAR
+for crop monitoring and classification, without the need for optical
+data, and should serve as a guideline for future research.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-sampling-with-drones-and-augmented-reality-in-precision-agriculture&quot;&gt;Soil sampling with drones and augmented reality in precision agriculture&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Huuskonen, J; Oksanen, T&lt;/p&gt;
+
+&lt;p&gt;Source:
+COMPUTERS AND ELECTRONICS IN AGRICULTURE, 154 25-35; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soil sampling is an important tool to gather information for making
+proper decisions regarding the fertilization of fields. Depending on the
+national regulations, the minimum frequency may be once per five years
+and spatially every ten hectares. For precision farming purposes, this
+is not sufficient. In precision farming, the challenge is to collect the
+samples from such regions that are internally consistent while limiting
+the number of samples required. For this purpose, management zones are
+used to divide the field into smaller regions. This article presents a
+novel approach to automatically determine the locations for soil samples
+based on a soil map created from drone imaging after ploughing, and a
+wearable augmented reality technology to guide the user to the generated
+sample points. Finally, the article presents the results of a
+demonstration carried out in southern Finland.&lt;/p&gt;
+
+&lt;h3 id=&quot;informing-transport-infrastructure-investments-using-transit-a-case-study-for-australian-agriculture-and-forestry&quot;&gt;Informing transport infrastructure investments using TraNSIT: A case study for Australian agriculture and forestry&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Higgins, A; McFallan, S; Marinoni, O; McKeown, A; Bruce, C; Chilcott, C;
+Pinkard, L&lt;/p&gt;
+
+&lt;p&gt;Source:
+COMPUTERS AND ELECTRONICS IN AGRICULTURE, 154 187-203; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Transport infrastructure is essential to moving over 85 million tonnes
+of agricultural products and 30 million cubic metres of timber from
+farms and production areas to domestic and international markets each
+year in Australia. Agriculture supply chains in Australia are
+characterised by long distances with transport costs accounting for up
+to 40 percent of the market price. Targeted infrastructure investment
+and/or regulatory changes can substantially reduce transport-related
+logistics costs. To provide a comprehensive view of transport logistics
+costs and benefits due to infrastructure investments and regulatory
+changes in agriculture and forestry supply chains, CSIRO developed a
+computer-based tool - the Transport Network Strategic Investment Tool
+(TraNSIT). TraNSIT optimises transport routes for upto hundreds of
+thousands of enterprises and millions of vehicle trips between farms and
+their markets, providing information on routing to maximise cost
+efficiencies. Through an Australian Government initiative, TraNSIT was
+applied to over 30 commodities representing 98% of Australian
+agricultural and plantation forestry volume transported by road and
+rail. TraNSIT is now a comprehensive logistics tool that has been
+applied to the largest agricultural supply chain dataset ever assembled
+in Australia. This paper provides an overview of TraNSIT, its adaptation
+to agriculture and forestry logistics as part of the project, and its
+application to several case studies in Australia including new road
+links, rail versus road and flooding.&lt;/p&gt;
+
+&lt;h3 id=&quot;start-a-data-preparation-tool-for-crop-simulation-models-using-web-based-soil-databases&quot;&gt;START: A data preparation tool for crop simulation models using web-based soil databases&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Kim, KS; Yoo, BH; Shelia, V; Porter, CH; Hoogenboom, G&lt;/p&gt;
+
+&lt;p&gt;Source:
+COMPUTERS AND ELECTRONICS IN AGRICULTURE, 154 256-264; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soil profile data that characterize the physical and chemical properties
+of a soil are among the required set of inputs for ecological, crop and
+other dynamic simulation models. A web-based soil information system
+often provides the site-specific soil data of which formats are not
+readily compatible to crop models. The Soil daTA Retrieval Tool (START)
+was developed to automate a series of procedures for preparation of soil
+input data that includes the retrieval of soil profile data from the
+information system, reorganization of data, estimation of soil
+parameters, and creation of input files foi simulation models. In a case
+study, the START was implemented to support the SoilGrids database
+operated by the International Soil Reference and Information Center. It
+took about 0.33% of time for the START to create soil input files
+compared with manual preparation. These results suggest that the START
+could provide an efficient approach for preparation of soil input files
+especially for sites where little soil information is available.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-open-source-spatial-analysis-system-for-embedded-systems&quot;&gt;An open-source spatial analysis system for embedded systems&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Coelho, ALD; de Queiroz, DM; Valente, DSM; Pinto, FDD&lt;/p&gt;
+
+&lt;p&gt;Source:
+COMPUTERS AND ELECTRONICS IN AGRICULTURE, 154 289-295; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soil and plant monitoring systems are important tools for applying
+precision agriculture techniques. To acquire soil-plant system data, the
+user establishes a sampling strategy, goes to the field, collects data
+and finally goes to the office for data analysis. Sometimes, when the
+analysis is performed, the user realizes that the sampling strategy was
+not adequate and needs to return to the field in order to collect more
+data. To avoid problems with the sampling strategy, the solution is to
+have a system that performs the data analysis immediately after its
+collection, while the user is still in the field. To do that, we can use
+single board computers; these types of platforms have ports to
+communicate to sensors and good processing capabilities. Therefore, the
+objective of this work was to develop an embedded system to perform
+spatial variability data analysis in the field, right after data
+acquisition. The software was developed using Python 3.6; the PyQt
+Integrated Development Environment (Riverbank Computer Limited,
+Dorchester, United Kingdom) was used to design a graphical user
+interface. The BeagleBone Black board, running Debian version 8.6, was
+used to implement the software. The analysis was divided into three
+steps: in the first one, an outlier and inlier analysis was performed to
+remove unwanted data; in the second one, the semivariogram was
+generated, and the variable and standard deviation map was produced by
+performing ordinary kriging; and in the last one, a cluster analysis was
+performed to create management classes using a fuzzy k-means algorithm.
+The graphical user interface showed the variable map and the variable
+classes map. To test the developed software, soybean yield data that was
+collected in a 31.6-ha field were used. The developed software was shown
+to be efficient at performing the spatial variability of soybean yields.
+The comparison of the generated maps shows the importance of filtering
+the data before performing the analysis. The developed software is
+available at the GitHub website.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2018/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 25, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2018/11/journalDigest" />
+  <id>/2018/11/journalDigest</id>
+  <updated>2018-11-18T00:00:00-00:00</updated>
+  <published>2018-11-18T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2018-21&quot;&gt;Journal Paper Digests 2018 #21&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OMERE: A Long-Term Observatory of Soil and Water Resources, in Interaction with Agricultural and Land Management in Mediterranean Hilly Catchments&lt;/li&gt;
+  &lt;li&gt;Land-use change affects stocks and stoichiometric ratios of soil carbon, nitrogen, and phosphorus in a typical agro-pastoral region of northwest China&lt;/li&gt;
+  &lt;li&gt;The Efficiency of Data Assimilation&lt;/li&gt;
+  &lt;li&gt;Cosmic-ray Neutron Rover Surveys of Field Soil Moisture and the Influence of Roads&lt;/li&gt;
+  &lt;li&gt;A Method for Objectively Integrating Soil Moisture Satellite Observations and Model Simulations Toward a Blended Drought Index&lt;/li&gt;
+  &lt;li&gt;Alternative Model for Predicting Soil Hydraulic Conductivity Over the Complete Moisture Range&lt;/li&gt;
+  &lt;li&gt;An automatic variogram modeling method with high reliability fitness and estimates&lt;/li&gt;
+  &lt;li&gt;MARMIT: A multilayer radiative transfer model of soil reflectance to estimate surface soil moisture content in the solar domain (400-2500 nm)&lt;/li&gt;
+  &lt;li&gt;A simple method to improve the quality of NDVI time-series data by integrating spatiotemporal information with the Savitzky-Golay filter&lt;/li&gt;
+  &lt;li&gt;The Chlorophyll Fluorescence Imaging Spectrometer (CFIS), mapping far red fluorescence from aircraft&lt;/li&gt;
+  &lt;li&gt;Quantifying the uncertainty of soil colour measurements with Munsell charts using a modified attribute agreement analysis&lt;/li&gt;
+  &lt;li&gt;Multi-decade, multi-sensor time-series modelling-based on geostatistical concepts-to predict broad groups of crops&lt;/li&gt;
+  &lt;li&gt;Pedotransfer functions for predicting available water capacity in French soils, their applicability domain and associated uncertainty.&lt;/li&gt;
+  &lt;li&gt;Soil organic carbon storage as a key function of soils - A review of drivers and indicators at various scales&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;omere-a-long-term-observatory-of-soil-and-water-resources-in-interaction-with-agricultural-and-land-management-in-mediterranean-hilly-catchments&quot;&gt;OMERE: A Long-Term Observatory of Soil and Water Resources, in Interaction with Agricultural and Land Management in Mediterranean Hilly Catchments&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Molenat, J; Raclot, D; Zitouna, R; Andrieux, P; Coulouma, G; Feurer, D;
+Grunberger, O; Lamachere, JM; Bailly, JS; Belotti, JL; Ben Azzez, K; Ben
+Mechlia, N; Louati, MB; Biarnes, A; Blanca, Y; Carriere, D; Chaabane, H;
+Dages, C; Debabria, A; Dubreuil, A; Fabre, JC; Fages, D; Floure, C;
+Garnier, F; Geniez, C; Gomez, C; Hamdi, R; Huttel, O; Jacob, F;
+Jenhaoui, Z; Lagacherie, P; Le Bissonnais, Y; Louati, R; Louchart, X;
+Mekki, I; Moussa, R; Negro, S; Pepin, Y; Prevot, L; Samouelian, A;
+Seidel, JL; Trotoux, G; Troiano, S; Vinatier, F; Zante, P; Zrelli, J;
+Albergel, J; Voltz, M&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 17 (1):80086-80086; NOV 1 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+To account for the diversity of agricultural and ecosystem situations in
+hilly Mediterranean areas, the agro-hydrological observatory OMERE
+(Observatoire Mediterraneen de l’Environnement Rural et de l’Eau)
+monitors two farmed catchments-one in northern Tunisia and the other in
+southern France. Mediterranean regions are typified by a highly variable
+climate, with an alternation of long droughts and intense storms, and by
+a strong heterogeneity of soil properties, due to a combination of
+climate, relief, parent materials, sparse vegetation, intense land use,
+man-made infrastructure (ditches, terraces, etc.), and agricultural
+activities. In this context, OMERE aims to document the impacts of
+agricultural and land management on mass fluxes in Mediterranean farmed
+headwater catchments. The observation strategy is motivated by
+monitoring water, sediment, and contaminant fluxes and hydrologic and
+climatic variables at different spatial scales from cultivated plots and
+landscape elements to the catchment scale. These measurements have been
+performed at a fine time resolution over a long-term scale and by
+surveying land use, agricultural practices, and soil surface
+characteristics. The long-term observation strategy intends to support
+integrative multidisciplinary research for elucidating the conditions
+that improve soil and water management and delivery of ecosystem
+services in a Mediterranean rainfed cultivated context. The observatory
+has led to scientific insights regarding three scientific objectives:
+(i) to better understand the fluxes of water, erosion, and contaminants,
+especially pesticides, and of their natural and anthropogenic drivers on
+short- and long-term scales; (ii) to analyze the aggregate effects of
+farming and land management on mass fluxes across scales, from plot to
+catchment or landscape scales; and (iii) to derive new scenarios for
+sustainable agricultural management and improved delivery of ecosystem
+services.&lt;/p&gt;
+
+&lt;h3 id=&quot;land-use-change-affects-stocks-and-stoichiometric-ratios-of-soil-carbon-nitrogen-and-phosphorus-in-a-typical-agro-pastoral-region-of-northwest-china&quot;&gt;Land-use change affects stocks and stoichiometric ratios of soil carbon, nitrogen, and phosphorus in a typical agro-pastoral region of northwest China&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Liu, X; Li, LH; Wang, Q; Mu, SY&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;JOURNAL OF SOILS AND SEDIMENTS&lt;/em&gt;, 18 (11):3167-3176; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+PurposeThe impacts of land-use change on dynamics of soil organic carbon
+(SOC), total nitrogen (TN), and total phosphorus (TP) in the subsoil
+(&amp;gt;30cm) are poorly understood. This study aims to investigate whether
+the effects of land-use change on stocks and stoichiometric ratios
+(R-CN, R-CP, and R-NP) of SOC, TN, and TP can be different between
+topsoil (0-30cm) and subsoil (30-60cm) in the Ili River Valley,
+northwest China.Materials and methodsSoil samples (0-10, 10-20, 20-30,
+30-40, 40-50, and 50-60cm) were collected from a pasture (PT), a
+27-year-old cropland (CL) converted from PT, and a 13-year-old poplar
+(Populus tomentosa Carr.) plantation (PP) converted from CL. SOC, TN,
+and TP concentrations and soil bulk density were determined to calculate
+stocks and stoichiometric ratios (molar ratios) of SOC, TN, and
+TP.Results and discussionConversion from PT to CL led to substantial
+losses in SOC, TN, and TP pools in both topsoil and subsoil, and the
+reduction rates in subsoil (13.8-24.7%) were higher than those in
+topsoil (8.5-17.3%), indicating that C, N, and P pools in subsoil could
+also be depleted by cultivation. Similar to topsoil, significant
+increases in SOC, TN, and TP stocks were detected after afforestation on
+CL in subsoil, although the increase rates (31.2-56.2%) were lower than
+those in topsoil (47.8-69.1%). Soil pH and electrical conductivity (EC),
+which generally increased after conversion from PT to CL while decreased
+after CL afforestation, showed significant negative correlations with
+SOC, TN, and TP, suggesting that cultivation might lead to soil
+degradation, whereas afforestation contributed to soil restoration in
+this area. Significant changes in C:N:Pratios in topsoil were only
+detected for R-NP after conversion from CL to PP. By contrast, land-use
+change significantly altered both R-CN and R-NP in the subsoil,
+demonstrating that the impacts of land-use change on R-CN and R-NP were
+different between topsoil and subsoil. The significant relationship
+between soil EC and R-NP suggested that R-NP might be a useful indicator
+of soil salinization.ConclusionsStocks of SOC, TN, and TP as well as
+R-CN and R-NP in subsoil showed different responses to land-use change
+compared to those in topsoil in this typical agro-pastoral region.
+Therefore, it is suggested that the effects of land-use change on
+dynamics of SOC, TN, and TP in subsoil should also be evaluated to
+better understand the role of land-use change in global biogeochemical
+cycles.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-efficiency-of-data-assimilation&quot;&gt;The Efficiency of Data Assimilation&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Nearing, G; Yatheendradas, S; Crow, W; Zhan, XW; Liu, JC; Chen, F&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;WATER RESOURCES RESEARCH&lt;/em&gt;, 54 (9):6374-6392; SEP 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Data assimilation is the application of Bayes’ theorem to condition the
+states of a dynamical systems model on observations. Any real-world
+application of Bayes’ theorem is approximate, and therefore, we cannot
+expect that data assimilation will preserve all of the information
+available from models and observations. We outline a framework for
+measuring information in models, observations, and evaluation data in a
+way that allows us to quantify information loss during (necessarily
+imperfect) data assimilation. This facilitates quantitative analysis of
+trade-offs between improving (usually expensive) remote sensing
+observing systems versus improving data assimilation design and
+implementation. We demonstrate this methodology on a previously
+published application of the ensemble Kalman filter used to assimilate
+remote sensing soil moisture retrievals from Advanced Microwave
+Scattering Radiometer for Earth (AMSR-E) into the Noah land surface
+model.&lt;/p&gt;
+
+&lt;h3 id=&quot;cosmic-ray-neutron-rover-surveys-of-field-soil-moisture-and-the-influence-of-roads&quot;&gt;Cosmic-ray Neutron Rover Surveys of Field Soil Moisture and the Influence of Roads&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Schron, M; Rosolem, R; Kohli, M; Piussi, L; Schroter, I; Iwema, J;
+Kogler, S; Oswald, SE; Wollschlager, U; Samaniego, L; Dietrich, P;
+Zacharias, S&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;WATER RESOURCES RESEARCH&lt;/em&gt;, 54 (9):6441-6459; SEP 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Measurements of root-zone soil moisture across spatial scales of tens to
+thousands of meters have been a challenge for many decades. The mobile
+application of Cosmic Ray Neutron Sensing (CRNS) is a promising approach
+to measure field soil moisture noninvasively by surveying large regions
+with a ground-based vehicle. Recently, concerns have been raised about a
+potentially biasing influence of local structures and roads. We employed
+neutron transport simulations and dedicated experiments to quantify the
+influence of different road types on the CRNS measurement. We found that
+roads introduce a substantial bias in the CRNS estimation of field soil
+moisture compared to off-road scenarios. However, this effect becomes
+insignificant at distances beyond a few meters from the road. Neutron
+measurements on the road could overestimate the field value by up to 40
+% depending on road material, width, and the surrounding field water
+content. The bias could be largely removed with an analytical correction
+function that accounts for these parameters. Additionally, an empirical
+approach is proposed that can be used without prior knowledge of field
+soil moisture. Tests at different study sites demonstrated good
+agreement between road-effect corrected measurements and field soil
+moisture observations. However, if knowledge about the road
+characteristics is missing, measurements on the road could substantially
+reduce the accuracy of this method. Our results constitute a practical
+advancement of the mobile CRNS methodology, which is important for
+providing unbiased estimates of field-scale soil moisture to support
+applications in hydrology, remote sensing, and agriculture.Plain
+Language Summary Measurements of root-zone soil moisture across spatial
+scales of tens to thousands of meters have been a challenge for many
+decades. The mobile application of Cosmic Ray Neutron Sensing (CRNS) is
+a promising approach to measure field soil moisture noninvasively by
+surveying large regions with a ground-based vehicle. Recently, concerns
+have been raised about a potentially biasing influence of roads. We
+employed physics simulations and dedicated experiments to quantify the
+influence of different road types on the CRNS measurement. We found that
+the presence of roads biased the CRNS estimation of field soil moisture
+compared to nonroad scenarios. Neutron measurements could overestimate
+the field value by up to 40 % depending on road material, width,
+surrounding field water content, and distance from the road. We proposed
+a correction function that successfully removed this bias and works even
+without prior knowledge of field soil moisture. Tests at different study
+sites demonstrated good agreement between corrected measurements and
+other field soil moisture observations. Our results constitute a
+practical advancement of the mobile CRNS methodology, which is important
+for providing unbiased estimates of field-scale soil moisture to support
+applications in hydrology, remote sensing, and agriculture.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-method-for-objectively-integrating-soil-moisture-satellite-observations-and-model-simulations-toward-a-blended-drought-index&quot;&gt;A Method for Objectively Integrating Soil Moisture Satellite Observations and Model Simulations Toward a Blended Drought Index&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Yin, JF; Zhan, XW; Hain, CR; Liu, JC; Anderson, MC&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;WATER RESOURCES RESEARCH&lt;/em&gt;, 54 (9):6772-6791; SEP 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+With satellite soil moisture (SM) retrievals becoming widely and
+continuously available, we aim to develop a method to objectively
+integrate the drought indices into one that is more accurate and
+consistently reliable. The data sets used in this paper include the Noah
+land surface model-based SM estimations,
+Atmosphere-Land-Exchange-Inverse model-based Evaporative Stress Index,
+and the satellite SM products from the Advanced Scatterometer, WindSat,
+Soil Moisture and Ocean Salinity, and Soil Moisture Operational Product
+System. Using the Triple Collocation Error Model (TCEM) to quantify the
+uncertainties of these data, we developed an optically blended drought
+index (BDI_b) that objectively integrates drought estimations with the
+lowest TCEM-derived root-mean-square-errors in this paper. With respect
+to the reported drought records and the drought monitoring benchmarks
+including the U.S. Drought Monitor, the Palmer Drought Severity Index
+and the standardized precipitation evapotranspiration index products,
+the BDI_b was compared with the sample average blending drought index
+(BDI_s) and the RMSE-weighted average blending drought indices (BDI_w).
+Relative to the BDI_s and the BDI_w, the BDI_b performs more
+consistently with the drought monitoring benchmarks. With respect to the
+official drought records, the developed BDI_b shows the best performance
+on tracking drought development in terms of time evolution and spatial
+patterns of 2010-Russia, 2011-USA, 2013-New Zealand droughts and other
+reported agricultural drought occurrences over the 2009-2014 period.
+These results suggest that model simulations and remotely sensed
+observations of SM can be objectively translated into useful information
+for drought monitoring and early warning, in turn can reduce drought
+risk and impacts.&lt;/p&gt;
+
+&lt;h3 id=&quot;alternative-model-for-predicting-soil-hydraulic-conductivity-over-the-complete-moisture-range&quot;&gt;Alternative Model for Predicting Soil Hydraulic Conductivity Over the Complete Moisture Range&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Wang, YQ; Jin, MG; Deng, ZJ&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;WATER RESOURCES RESEARCH&lt;/em&gt;, 54 (9):6860-6876; SEP 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Considering film flow in the development of a soil hydraulic model has
+become a key method for improving model performance under dry
+conditions. With the considerable improvement in model performance, the
+trade-off is often to increase the model complexity, thus limiting a
+model’s application. In this paper, an alternative model is presented to
+predict soil hydraulic conductivities over the entire moisture range. In
+contrast to existing models that treat conductivity as a summation of
+the capillary and film components, the proposed model applies a single
+equation to capture the variation of the two conductivity components.
+The new model, therefore, presents a simple form, with no extra
+parameters added to the basic capillary models. Model testing with 24
+soil data sets revealed that it was successful in predicting
+conductivities over the complete moisture range. A comparison with
+existing models demonstrated that the proposed model was generally in
+higher agreement with observations, achieving a much lower mean value of
+the root mean square errors for the predicted conductivities.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-automatic-variogram-modeling-method-with-high-reliability-fitness-and-estimates&quot;&gt;An automatic variogram modeling method with high reliability fitness and estimates&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Li, ZL; Zhang, XL; Clarke, KC; Liu, G; Zhu, R&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 120 48-59; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Modeling of the variogram is a critical step for most geostatistical
+methods. However, most of the prevalent variogram-based solutions are
+designed without sufficient consideration of the effect of the
+interpolation process on their application. This paper proposes an
+automated variogram modeling framework, which simultaneously considers
+the fit of the experimental variogram and interpolation accuracy in the
+modeling variogram interpolation result. The variogram modeling
+framework can be treated as a nonlinear optimization problem with two
+sub-goals. The first is to optimize the goodness of fit between the
+experimental and theoretical variogram values under the conditions of
+their designated parameters. Second, we seek to optimize the difference
+between measured values and the associated kriging estimates with the
+candidate variogram model. A typical case study was chosen using a
+public dataset to test the proposed method, which was implemented using
+a genetic algorithm, and its performance was compared with the ones of
+other commonly applied variogram modeling approaches. As expected, the
+traditional variogram modeling method that only considers fitting
+standard experimental variograms showed severe sensitivity to errors in
+data and parameters; classical cross-validation modeling results tended
+to overlook the experimental variograms. By contrast, the proposed
+method succeeded in producing variogram models with robust, high-quality
+kriging estimates and favorable fitness of experimental variograms in a
+more powerful and flexible way.&lt;/p&gt;
+
+&lt;h3 id=&quot;marmit-a-multilayer-radiative-transfer-model-of-soil-reflectance-to-estimate-surface-soil-moisture-content-in-the-solar-domain-400-2500-nm&quot;&gt;MARMIT: A multilayer radiative transfer model of soil reflectance to estimate surface soil moisture content in the solar domain (400-2500 nm)&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Bablet, A; Vu, PVH; Jacquemoud, S; Viallefont-Robinet, F; Fabre, S;
+Briottet, X; Sadeghi, M; Whiting, ML; Baret, F; Tian, J&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 217 1-17; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Surface soil moisture content (SMC) is known to impact soil reflectance
+at all wavelengths of the solar spectrum. As a consequence, many
+semi-empirical methods aim at inferring SMC from soil reflectance, but
+very few rely on physically-based models. This article presents a
+multilayer radiative transfer model of soil reflectance called MARMIT
+(multilayer radiative transfer model of soil reflectance) as a function
+of SMC given on a mass basis and a method called MARMITforSMC to
+estimate it from soil reflectance spectra. This model depicts a wet soil
+as a dry soil covered with a thin film of water. It is used to assess
+SMC over seven independent laboratory datasets gathered from the
+literature. A learning phase is required to link the thickness of the
+water film with the SMC. For that purpose, a sigmoid function, the
+parameters of which are related to soil physical and chemical properties
+such as porosity, grain size and mineralogy composition, is fitted. SMC
+can be inferred with good accuracy (RMSE approximate to 3%) if the
+learning step is applied soil by soil. The link between SMC and water
+thickness actually depends on soil texture and chemical composition. If
+the soils are divided into classes and if the learning phase is applied
+to a class, the RMSE slightly increases up to 5%. Finally, MARMITforSMC
+provides lower RMSE than any other existing semi-empirical or
+physically-based method.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-simple-method-to-improve-the-quality-of-ndvi-time-series-data-by-integrating-spatiotemporal-information-with-the-savitzky-golay-filter&quot;&gt;A simple method to improve the quality of NDVI time-series data by integrating spatiotemporal information with the Savitzky-Golay filter&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Cao, RY; Chen, Y; Shen, MG; Chen, J; Zhou, J; Wang, C; Yang, W&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 217 244-257; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+High-quality Normalized Difference Vegetation Index (NDVI) time-series
+data are important for many regional and global ecological and
+environmental applications. Unfortunately, residual noise in current
+NDVI time-series products greatly hinders their further applications.
+Several noise-reduction methods have been proposed during the past two
+decades, but two important issues remain to be resolved. First, the
+methods usually perform poorly for cases of continuous missing data in
+the NDVI time series. Second, they generally assume negatively biased
+noise in the NDVI time series and thus erroneously raise some local low
+NDVI values in certain cases (e.g., the harvest period for multi-season
+crops).We therefore developed a new noise-reduction algorithm called the
+Spatial-Temporal Savitzky-Golay (STSG) method. The new method assumes
+discontinuous clouds in space and employs neighboring pixels to assist
+in the noise reduction of the target pixel in a particular year. The
+relationship between the NDVI of neighboring pixels and that of the
+target pixel was obtained from multi-year NDVI time series thanks to the
+accumulation of NDVI data over many years, which would have been
+impossible a decade ago. We tested STSG on 16-day composite MODIS NDVI
+time-series data from 2001 to 2016 in regions of mainland China and 11
+phenology camera sites in North American. The results showed that STSG
+performed significantly better compared with four previous widely used
+methods (i.e., the Asymmetric Gaussian, Double Logistic, Fourier-based,
+and Savitzky-Golay filter methods). One obvious advantage was that STSG
+was able to address the problem of temporally continuous NDVI gaps. STSG
+effectively increased local low NDVI values and simultaneously avoided
+overcorrecting low NDVI values during the crop harvest period. In
+addition, implementing STSG required only raw MODIS NDVI time-series
+products without any additional burden of data requirements. All of
+these advantages make STSG a promising noise-reduction method for
+generating high quality NDVI time-series data.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-chlorophyll-fluorescence-imaging-spectrometer-cfis-mapping-far-red-fluorescence-from-aircraft&quot;&gt;The Chlorophyll Fluorescence Imaging Spectrometer (CFIS), mapping far red fluorescence from aircraft&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Frankenberg, C; Kohler, P; Magney, TS; Geier, S; Lawson, P; Schwochert,
+M; McDuffie, J; Drewry, DT; Pavlick, R; Kuhnert, A&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 217 523-536; NOV 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The Chlorophyll Fluorescence Imaging Spectrometer (CFIS) is an airborne
+high resolution imaging spectrometer built at NASA’s Jet Propulsion
+Laboratory (JPL) for evaluating solar-induced fluorescence (SIF) from
+the Orbiting Carbon Observatory-2 (OCO-2). OCO-2 is a NASA mission
+designed to measure atmospheric CO2 but one of the novel data products
+is SIF, retrieved using reductions in the optical depth of Fraunhofer
+lines in OCO-2’s O-2 Aband, covering 757-775 nm at 0.042 nm spectral
+resolution. CFIS was specifically designed to retrieve SIF within the
+wavelength range of OCO-2, but extends further down to 737 nm, nearly
+maintaining the high spectral resolution of the OCO-2 instrument (0.07
+vs. 0.042 nm). Here, we provide an overview of the instrument
+calibration and performance as well as the retrieval strategy based on
+non-linear weighted least-squares. To illustrate the retrieval
+performance using actual flight data, we focus on data acquired over
+agricultural fields in Mead, Nebraska from an unpressurized Twin Otter
+(DHC-6) aircraft at a flight altitude of 3000 m above ground level
+(AGL). Spectral residuals are consistent with expected detector noise,
+which enables us to compute realistic 1-alpha precision errors of
+0.5-0.7 W/m(2)/sr/mu m for typical SIF retrievals, which can be reduced
+to &amp;lt; 0.2 W/m(2)/sr/mu m when individual data is gridded at 30 m spatial
+resolution. The 30 m resolution also enabled direct comparison with the
+Crop Data Layer from the National Agricultural Statistics Service as
+well as Landsat imagery (NDVI, EVI, T-sk(in)), taken just a day prior to
+the CFIS overflights. Results show consistently higher vegetation
+indices and SIF values over soy fields compared to corn, likely due to
+the respective phenological stage, which might already have affected
+chlorophyll content and canopy structure (August 15, 2016). While this
+work is intended to highlight the technical capabilities and performance
+of CFIS, the comparisons against Landsat and crop types provide insights
+into how CFIS can be used to study mechanisms related to photosynthesis
+at fine spatial scales, with the fidelity needed to obtain un-biased SIF
+retrievals void of atmospheric correction.&lt;/p&gt;
+
+&lt;h3 id=&quot;quantifying-the-uncertainty-of-soil-colour-measurements-with-munsell-charts-using-a-modified-attribute-agreement-analysis&quot;&gt;Quantifying the uncertainty of soil colour measurements with Munsell charts using a modified attribute agreement analysis&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Marques-Mateu, A; Moreno-Ramon, H; Balasch, S; Ibanez-Asensio, S&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;CATENA&lt;/em&gt;, 171 44-53; DEC 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The use of Munsell colour charts is the classical way of determining
+colour information in soil science. The procedure is well-known and
+consists of visually comparing soil samples with colour chips contained
+in the charts. This visual approach has several drawbacks and although
+the chart-based procedure is routinely used, it is not easy to find
+systematic studies on the accuracy of this methodology. In this paper,
+we seek to gain insight into the strengths and weaknesses of using soil
+colour charts as a colour measurement device. The tool used to conduct
+our study is a modification to the attribute agreement analysis (AAA)
+method which consists of finding matches between colour standards and
+colour designations obtained by several appraisers. In the experiment,
+standards were obtained using a trichromatic colorimeter coupled to a
+computer program that implements the k nearest neighbour (k-NN)
+classification algorithm. In order to do the experiment, 276 soil
+samples were observed twice by four trained appraisers (2208 data
+records). The naive count of matches across all the records in the
+dataset gave &amp;lt; 5% of agreement for all three colour components Hue,
+Value and Chroma. The modified AAA criterion implemented in the study
+gave a clear increase in all indicators with values ranging from 82.2%
+to 100% in the agreement within appraisers, 39.5% in the agreement
+between appraisers, and 42.8% in the agreement of appraisers vs.
+standards. Results also show that users of the Munsell charts tend to
+mostly report correct Hues but higher Values and Chromas than true soil
+colours.&lt;/p&gt;
+
+&lt;h3 id=&quot;multi-decade-multi-sensor-time-series-modelling-based-on-geostatistical-concepts-to-predict-broad-groups-of-crops&quot;&gt;Multi-decade, multi-sensor time-series modelling-based on geostatistical concepts-to predict broad groups of crops&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Pringle, MJ; Schmidt, M; Tindall, DR&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 216 183-200; OCT 2018&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+We have mapped the broad groups of crops grown each summer and winter,
+from 1987 to 2017, for a 300,000km 2 region of Queensland, Australia.
+These maps are part of a legislated decision-making process for the
+protection of prime agricultural land. For summer, the two groups of
+crops are ‘Coarse-grain &amp;amp; Pulse’ and ‘Cotton’. For winter, the two
+groups of crops are ‘Cereal’ and ‘Pulse’. Non-crop groups, present in
+both summer and winter, are ‘Bare soil’ and ‘Other’ (comprising
+pastures, woody vegetation, and crop residues). The foundation of the
+maps is time-series modelling-specifically, applying the concepts of
+geostatistics in the temporal domain-to model the variation in
+land-surface phonology within a growing season. The time-series model is
+flexible, robust, parsimonious, parallelisable, and able to deal with
+irregular observations. We combined satellite imagery from the Landsat
+sensors, as well as, when available, Sentinel-2A and MODIS (with the
+last two reprojected to the 30m grid of Landsat). We applied the
+time-series model pixel-wise across the study region, to three variables
+derived from satellite imagery gathered for an individual growing
+season: enhanced vegetation index, and the sub-pixel proportions of
+bare-ground and non-photosynthetic vegetation. Weekly-averaged predicted
+phenological metrics then served as explanatory variables in a tiered,
+tree-based classification model, for the prediction of the groups. The
+classification model comprised two expert rules and two random forests.
+Prior to fitting the classification model, geospatial object-based image
+analysis was used to change the scale of analysis from individual pixels
+to (approximately) field-based segments. From the perspective of a
+map-user, in any given growing season we predicted ‘Coarse-grain &amp;amp;
+Pulse’ correctly in 79% of cases; the values for ‘Cotton’, ‘Cereal’, and
+‘Pulse’ were 90%, 84%, and 73%, respectively; ‘Bare soil’ was 72% in
+summer, and 88% in winter. ‘Other’ was the most accurately mapped group
+(98% correct in summer, and 99% correct in winter).&lt;/p&gt;
+
+&lt;h3 id=&quot;pedotransfer-functions-for-predicting-available-water-capacity-in-french-soils-their-applicability-domain-and-associated-uncertainty&quot;&gt;Pedotransfer functions for predicting available water capacity in French soils, their applicability domain and associated uncertainty&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Dobarco, MR; Cousin, I; Le Bas, C; Martin, MP&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GEODERMA&lt;/em&gt;, 336 81-95; FEB 15 2019&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+Soil available water capacity is an important soil property for land use
+planning, drought risk assessment, and modelling crop production or
+carbon cycling. Measurements of soil moisture at several soil water
+potentials are expensive and time-consuming, hence it is common to
+estimate available water capacity with pedotransfer functions (PTFs).
+Available PTFs for France rarely provide uncertainty estimates for the
+model coefficients and predictions, which are often required for error
+propagation analysis and modelling ecological processes. The objectives
+of this study were: 1) to develop class-PTFs and 2) continuous-PTFs with
+associated uncertainties, and 3) to assess the domain of applicability
+of the PTFs across metropolitan France. We used the SOLHYDRO database
+for calibrating continuous and class PTFs. For continuous PTFs we used
+linear regression models using sand, clay, organic carbon (SOC), and
+bulk density (BD) as predictor variables, whereas class-PTFs were
+defined by texture class, bulk density, and horizon type (all horizons,
+topsoils, subsoils). The models were validated with an independent
+validation dataset. The domain of applicability of the PTFs was
+evaluated calculating the Mahalanobis distance between the calibration
+dataset and horizon data from the French soil monitoring network (RMQS).
+At independent validation, texture class-PTFs had a RMSE between 0.047
+cm(3) cm(-3) and 0.058 cm(3) cm(-3) and continuous-PTFs had a RMSE
+between 0.040 cm(3) cm(-3) and 0.053 cm(3) cm(-3). Texture class-PTFs
+had similar or better predictive performance than texture-structural
+class-PTFs. The prediction performance of continuous-PTFs improved
+slightly when including SOC and BD in the models. The variance of the
+predictions of continuous-PTFs associated to error in the model
+coefficients was rather small, and increased as the values of the
+predictor variables were more distant to the centroid of the calibration
+data. We provide the PTF users with tools for classifying new samples as
+within or outside the applicability domain of the PTFs. When applied to
+the RMQS dataset, &amp;gt; 50% of the horizons outside the domain of
+applicability were located in forests and natural areas or managed
+pastures. The spatial distribution of RMQS horizons outside the domain
+of applicability of the PTF can inform future sampling locations for
+increasing the diversity of the soil properties and site conditions
+represented by the SOLHYDRO dataset.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-organic-carbon-storage-as-a-key-function-of-soils---a-review-of-drivers-and-indicators-at-various-scales&quot;&gt;Soil organic carbon storage as a key function of soils - A review of drivers and indicators at various scales&lt;/h3&gt;
+
+&lt;p&gt;Authors:
+Wiesmeier, M; Urbanski, L; Hobley, E; Lang, B; von Lutzow, M;
+Marin-Spiotta, E; van Wesemael, B; Rabot, E; Liess, M; Garcia-Franco, N;
+Wollschlager, U; Vogel, HJ; Kogel-Knabner, I&lt;/p&gt;
+
+&lt;p&gt;Source:
+&lt;em&gt;GEODERMA&lt;/em&gt;, 333 149-162; JAN 1 2019&lt;/p&gt;
+
+&lt;p&gt;Abstract:
+The capacity of soils to store organic carbon represents a key function
+of soils that is not only decisive for climate regulation but also
+affects other soil functions. Recent efforts to assess the impact of
+land management on soil functionality proposed that an indicator- or
+proxy-based approach is a promising alternative to quantify soil
+functions compared to time- and cost-intensive measurements,
+particularly when larger regions are targeted. The objective of this
+review is to identify measurable biotic or abiotic properties that
+control soil organic carbon (SOC) storage at different spatial scales
+and could serve as indicators for an efficient quantification of SOC.
+These indicators should enable both an estimation of actual SOC storage
+as well as a prediction of the SOC storage potential, which is an
+important aspect in land use and management planning. There are many
+environmental conditions that affect SOC storage at different spatial
+scales. We provide a thorough overview of factors from micro-scales
+(particles to pedons) to the global scale and discuss their suitability
+as indicators for SOC storage: clay mineralogy, specific surface area,
+metal oxides, Ca and Mg cations, microorganisms, soil fauna,
+aggregation, texture, soil type, natural vegetation, land use and
+management, topography, parent material and climate. As a result, we
+propose a set of indicators that allow for time- and cost-efficient
+estimates of actual and potential SOC storage from the local to the
+regional and subcontinental scale. As a key element, the fine mineral
+fraction was identified to determine SOC stabilization in most soils.
+The quantification of SOC can be further refined by including climatic
+proxies, particularly elevation, as well as information on land use,
+soil management and vegetation characteristics. To enhance its
+indicative power towards land management effects, further “functional
+soil characteristics”, particularly soil structural properties and
+changes in the soil microbial biomass pool should be included in this
+indicator system. The proposed system offers the potential to
+efficiently estimate the SOC storage capacity by means of simplified
+measures, such as soil fractionation procedures or infrared
+spectroscopic approaches.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2018/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 18, 2018.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -8622,1250 +9886,6 @@ function asArray(value) {
 
 
     &lt;p&gt;&lt;a href=&quot;/2018/05/AgriAnalytics&quot;&gt;Agri-Analytics Conference&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on May 08, 2018.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2018/04/journalDigest" />
-  <id>/2018/04/journalDigest</id>
-  <updated>2018-04-09T00:00:00-00:00</updated>
-  <published>2018-04-24T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2018-9&quot;&gt;Journal Paper Digests 2018 #9&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Spatial distribution and source apportionment of the heavy metals in the agricultural soil in a regional scale&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;spatial-distribution-and-source-apportionment-of-the-heavy-metals-in-the-agricultural-soil-in-a-regional-scale&quot;&gt;Spatial distribution and source apportionment of the heavy metals in the agricultural soil in a regional scale&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Song, HY; Hu, KL; An, Y; Chen, C; Li, GD&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;JOURNAL OF SOILS AND SEDIMENTS&lt;/em&gt;, 18 (3):852-862; MAR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Understanding the spatial distribution and sources of soil heavy metals
-(HMs) in a large city helps prevent and control soil pollution. This
-study aimed to investigate the spatial patterns of soil HMs and identify
-their main sources in a regional scale.A total of 110 topsoil samples
-were collected from Tai’an City, China. Cd, Cr, Cu, Hg, Ni, Pb, and Zn
-concentrations in each soil sample were determined. Geostatistics,
-geographic information system (GIS), and positive matrix factorization
-(PMF) were used to explore the spatial distribution of seven soil HMs
-and to reveal the main sources of soil HMs in Tai’an City,
-respectively.Soil Cd, Cr, Pb, and Zn generally showed slight pollution
-levels in the study area. However, soil Hg and Cu contents reached
-moderate to heavy pollution levels in some areas. Soil Hg content
-increased from north to south across the city, and the highest Hg
-concentration was detected in Ningyang County. Soil Cd, Cu, and Zn
-distributions exhibited a similar pattern, and their contents increased
-from west to east; the highest Cd, Cu, and Zn concentrations were found
-in Xintai County. The highest soil Ni concentration was obtained in the
-northeast of Feicheng and Xintai counties. PMF analysis revealed the
-following four potential sources of agricultural soil HMs in Tai’an
-City: industrial and mining activities, agricultural activities,
-residential living activities, and business activities. Soil Hg mainly
-originated from residential living activities, which accounted for 75.3%
-of the total source. The main sources of soil Ni were residential living
-activities, agricultural activities, and industrial and mining
-activities, which account for 38.2, 27.50, and 25.1% of the total
-source, respectively. Soil Cu was mainly produced by agricultural
-activities (36.6%), followed by residential living activities (29.8%)
-and industrial and mining activities (25.8%).PMF combined with GIS could
-be effectively applied to determine the main sources of HMs in
-agricultural soils in a regional scale.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2018/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 24, 2018.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2018/04/journalDigest" />
-  <id>/2018/04/journalDigest</id>
-  <updated>2018-04-09T00:00:00-00:00</updated>
-  <published>2018-04-09T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2018-8&quot;&gt;Journal Paper Digests 2018 #8&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Nitrogen-rich organic soils under warm well-drained conditions are global nitrous oxide emission hotspots.&lt;/li&gt;
-  &lt;li&gt;Review and outlook for agromineral research in agriculture and climate mitigation&lt;/li&gt;
-  &lt;li&gt;Open geospatial infrastructure for data management and analytics in interdisciplinary research&lt;/li&gt;
-  &lt;li&gt;Abnormal shapes of production function: Model interpretations&lt;/li&gt;
-  &lt;li&gt;Deep learning models for plant disease detection and diagnosis.&lt;/li&gt;
-  &lt;li&gt;Exchange of greenhouse gases between soil and atmosphere: interactions of soil physical factors and biological processes&lt;/li&gt;
-  &lt;li&gt;Building an exposed soil composite processor (SCMaP) for mapping spatial and temporal characteristics of soils with Landsat imagery (1984-2014).&lt;/li&gt;
-  &lt;li&gt;An assessment of the differences between spatial resolution and grid size for the SMAP enhanced soil moisture product over homogeneous sites&lt;/li&gt;
-  &lt;li&gt;Remote sensing of biodiversity: Soil correction and data dimension reduction methods improve assessment of alpha-diversity (species richness) in prairie ecosystems.&lt;/li&gt;
-  &lt;li&gt;Using Landsat and nighttime lights for supervised pixel-based image classification of urban land cover&lt;/li&gt;
-  &lt;li&gt;Supervised methods of image segmentation accuracy assessment in land cover mapping&lt;/li&gt;
-  &lt;li&gt;Quantifying the uncertainty of a model-reconstructed soilscape for archaeological land evaluation&lt;/li&gt;
-  &lt;li&gt;Proximal spectral sensing in pedological assessments: vis-NIR spectra for soil classification based on weathering and pedogenesis&lt;/li&gt;
-  &lt;li&gt;Soil carbon cycling proxies: Understanding their critical role in predicting climate change feedbacks&lt;/li&gt;
-  &lt;li&gt;Contribution of crop model structure, parameters and climate projections to uncertainty in climate change impact assessments&lt;/li&gt;
-  &lt;li&gt;Digital mapping of soil erodibility for water erosion in New South Wales, Australia&lt;/li&gt;
-  &lt;li&gt;Linking Land Use Capability classes and APSIM to estimate pasture growth for regional land use planning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;nitrogen-rich-organic-soils-under-warm-well-drained-conditions-are-global-nitrous-oxide-emission-hotspots&quot;&gt;Nitrogen-rich organic soils under warm well-drained conditions are global nitrous oxide emission hotspots&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Parn, J; Verhoeven, JTA; Butterbach-Bahl, K; Dise, NB; Ullah, S; Aasa,
-A; Egorov, S; Espenberg, M; Jarveoja, J; Jauhiainen, J; Kasak, K;
-Klemedtsson, L; Kull, A; Laggoun-Defarge, F; Lapshina, ED; Lohila, A;
-Lohmus, K; Maddison, M; Mitsch, WJ; Muller, C; Niinemets, U; Osborne, B;
-Pae, T; Salm, JO; Sgouridis, F; Sohar, K; Soosaar, K; Storey, K;
-Teemusk, A; Tenywa, MM; Tournebize, J; Truu, J; Veber, G; Villa, JA;
-Zaw, SS; Mander, U&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;NATURE COMMUNICATIONS&lt;/em&gt;, 9 1135-1135; MAR 19 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Nitrous oxide (N2O) is a powerful greenhouse gas and the main driver of
-stratospheric ozone depletion. Since soils are the largest source of
-N2O, predicting soil response to changes in climate or land use is
-central to understanding and managing N2O. Here we find that N2O flux
-can be predicted by models incorporating soil nitrate concentration
-(NO3-), water content and temperature using a global field survey of N2O
-emissions and potential driving factors across a wide range of organic
-soils. N2O emissions increase with NO3- and follow a bell-shaped
-distribution with water content. Combining the two functions explains
-72% of N2O emission from all organic soils. Above 5 mg NO3–N kg(-1),
-either draining wet soils or irrigating well-drained soils increases N2O
-emission by orders of magnitude. As soil temperature together with NO3-
-explains 69% of N2O emission, tropical wetlands should be a priority for
-N2O management.&lt;/p&gt;
-
-&lt;h3 id=&quot;review-and-outlook-for-agromineral-research-in-agriculture-and-climate-mitigation&quot;&gt;Review and outlook for agromineral research in agriculture and climate mitigation&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Zhang, GR; Kang, JT; Wang, TX; Zhu, C&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;SOIL RESEARCH&lt;/em&gt;, 56 (2):113-122; 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Agrominerals are finely ground rocks and minerals used as low-cost
-fertilisers, and they have received more attention in recent years as
-sustainable development and climate change mitigation have come to the
-forefront of societal concerns. Here, we summarise progress in
-agromineral research over the last 20 years, and discuss the challenges
-and opportunities of this discipline. The idea of agrominerals has been
-around since the early 19th century. However, widespread application is
-subject to economic practicality. In recent years, two big trends have
-dominated agromineral research. First, some global warming mitigation
-strategies, such as ‘enhanced chemical weathering’ and bio-energy carbon
-capture and storage call for the application of rock powders in arable
-land on a massive scale. This gives agromineral research an urgency and
-significance. Second, advances in knowledge of mineral weathering
-kinetics are poised to transform predictions of agronomic effectiveness
-from mere empirical studies to more quantitative evaluation. We now have
-a much better understanding of the factors that influence weathering and
-nutrient release rates. We forecast that rapid advances in some areas of
-biogeochemistry will enable advances in the study of agrominerals. In
-particular, we will be able to measure weathering and nutrient release
-rates at the field scale, and ultimately to predict kinetic processes of
-mineral dissolution or precipitation in soil-water-plant systems and the
-cycling of nutrients and toxic elements in agricultural land.&lt;/p&gt;
-
-&lt;h3 id=&quot;open-geospatial-infrastructure-for-data-management-and-analytics-in-interdisciplinary-research&quot;&gt;Open geospatial infrastructure for data management and analytics in interdisciplinary research&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Jeppesen, JH; Ebeid, E; Jacobsen, RH; Toftegaard, TS&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS AND ELECTRONICS IN AGRICULTURE&lt;/em&gt;, 145 130-141; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-The terms Internet of Things and Big Data are currently subject to much
-attention, though the specific impact of these terms in our practical
-lives are difficult to apprehend. Data-driven approaches do lead to new
-possibilities, and significant improvements within a broad range of
-domains can be achieved through a cloud-based infrastructure. In the
-agricultural sector, data-driven precision agriculture shows great
-potential in facilitating the increase in food production demanded by
-the increasing world population. However, the adoption rate of precision
-agriculture technology has been slow, and information and communications
-technology needed to promote the implementation of precision agriculture
-is limited by proprietary integrations and non-standardized data formats
-and connections. In this paper, an open geospatial data infrastructure
-is presented, based on standards defined by the Open Geospatial
-Consortium (OGC). The emphasis in the design was on improved
-interoperability, with the capability of using sensors, performing cloud
-processing, carrying out regional statistics, and provide seamless
-connectivity to machine terminals. The infrastructure was implemented
-through open source software, and was complemented by open data from
-governmental offices along with ESA satellite imagery. Four use cases
-are presented, covering analysis of nearly 50 000 crop fields and
-providing seamless interaction with an emulated machine terminal. They
-act to showcase both for how the infrastructure enables modularity and
-interoperability, and for the new possibilities which arise from this
-new approach to data within the agricultural domain.&lt;/p&gt;
-
-&lt;h3 id=&quot;abnormal-shapes-of-production-function-model-interpretations&quot;&gt;Abnormal shapes of production function: Model interpretations&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Topaj, A; Mirschel, W&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS AND ELECTRONICS IN AGRICULTURE&lt;/em&gt;, 145 199-207; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-An abnormal non-monotonic shape of production function(response of
-obtained yield to increasing rates of mineral nitrogen fertilizers) has
-been observed in experimental field trials. Often, the observed
-effect(an inflection point, or intermediate plateau or even local
-undershoot of the “yield-fertilization” curve) is treated as a test
-distortion and will be ignored or sorted out. This article presents the
-authors’ efforts to interpret and to explain similar phenomenon by means
-of investigating two mechanistic crop simulation models AGROSIM and
-AGROTOOL. It is demonstrated that an imitation model can be used as a
-valuable tool of scientific research, allowing for the hypothesising of
-alternative understandings of non-trivial natural phenomena.&lt;/p&gt;
-
-&lt;h3 id=&quot;deep-learning-models-for-plant-disease-detection-and-diagnosis&quot;&gt;Deep learning models for plant disease detection and diagnosis&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Ferentinos, KP&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS AND ELECTRONICS IN AGRICULTURE&lt;/em&gt;, 145 311-318; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-In this paper, convolutional neural network models were developed to
-perform plant disease detection and diagnosis using simple leaves images
-of healthy and diseased plants, through deep learning methodologies.
-Training of the models was performed with the use of an open database of
-87,848 images, containing 25 different plants in a set of 58 distinct
-classes of [plant, disease] combinations, including healthy plants.
-Several model architectures were trained, with the best performance
-reaching a 99.53% success rate in identifying the corresponding [plant,
-disease] combination (or healthy plant). The significantly high success
-rate makes the model a very useful advisory or early warning tool, and
-an approach that could be further expanded to support an integrated
-plant disease identification system to operate in real cultivation
-conditions.&lt;/p&gt;
-
-&lt;h3 id=&quot;exchange-of-greenhouse-gases-between-soil-and-atmosphere-interactions-of-soil-physical-factors-and-biological-processes&quot;&gt;Exchange of greenhouse gases between soil and atmosphere: interactions of soil physical factors and biological processes&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Smith, KA; Ball, T; Conen, F; Dobbie, KE; Massheder, J; Rey, A&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EUROPEAN JOURNAL OF SOIL SCIENCE&lt;/em&gt;, 69 (1):10-20; JAN 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-This review examines the interactions between soil physical factors and
-the biological processes responsible for the production and consumption
-in soils of greenhouse gases. The release of CO2 by aerobic respiration
-is a non-linear function of temperature over a wide range of soil water
-contents, but becomes a function of water content as a soil dries out.
-Some of the reported variation in the temperature response may be
-attributable simply to measurement procedures. Lowering the water table
-in organic soils by drainage increases the release of soil carbon as CO2
-in some but not all environments, and reduces the quantity of CH4
-emitted to the atmosphere. Ebullition and diffusion through the
-aerenchyma of rice and plants in natural wetlands both contribute
-substantially to the emission of CH4; the proportion of the emissions
-taking place by each pathway varies seasonally. Aerated soils are a sink
-for atmospheric CH4, through microbial oxidation. The main control on
-oxidation rate is gas diffusivity, and the temperature response is
-small. Nitrous oxide is the third greenhouse gas produced in soils,
-together with NO, a precursor of tropospheric ozone (a short-lived
-greenhouse gas). Emission of N2O increases markedly with increasing
-temperature, and this is attributed to increases in the anaerobic volume
-fraction, brought about by an increased respiratory sink for O-2.
-Increases in water-filled pore space also result in increased anaerobic
-volume; again, the outcome is an exponential increase in N2O emission.
-The review draws substantially on sources from beyond the normal range
-of soil science literature, and is intended to promote integration of
-ideas, not only between soil biology and soil physics, but also over a
-wider range of interacting disciplines.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-effect-of-soil-on-human-health-an-overview&quot;&gt;The effect of soil on human health: an overview&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Steffan, JJ; Brevik, EC; Burgess, LC; Cerda, A&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EUROPEAN JOURNAL OF SOIL SCIENCE&lt;/em&gt;, 69 (1):159-171; JAN 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil has a considerable effect on human health, whether those effects
-are positive or negative, direct or indirect. Soil is an important
-source of nutrients in our food supply and medicines such as
-antibiotics. However, nutrient imbalances and the presence of human
-pathogens in the soil biological community can cause negative effects on
-health. There are also many locations where various elements or chemical
-compounds are found in soil at toxic levels because of either natural
-conditions or anthropogenic activities. The soils of urban environments
-have received increased attention in the last few years, and they too
-pose a number of human health questions and challenges. Concepts such as
-soil security may provide a framework within which issues on soil and
-human health can be investigated using interdisciplinary and
-transdisciplinary approaches. It will take the contributions of experts
-in several different scientific, medical and social science fields to
-address fully soil and human health issues. Although much progress was
-made in understanding links between soil and human health over the last
-century, there is still much that we do not know about the complex
-interactions between them. Therefore, there is still a considerable need
-for research in this important area.HighlightsSoil is important to human
-health.Effects can be positive or negative, direct or indirect.Advances
-have been made in recent years.Inter-and trans-disciplinary research is
-needed.&lt;/p&gt;
-
-&lt;h3 id=&quot;building-an-exposed-soil-composite-processor-scmap-for-mapping-spatial-and-temporal-characteristics-of-soils-with-landsat-imagery-1984-2014&quot;&gt;Building an exposed soil composite processor (SCMaP) for mapping spatial and temporal characteristics of soils with Landsat imagery (1984-2014)&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Rogge, D; Bauer, A; Zeidler, J; Mueller, A; Esch, T; Heiden, U&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 205 1-17; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil information with high spatial and temporal resolution is crucial to
-assess potential soil degradation and to achieve sustainable
-productivity and ultimately food security. The spatial resolution of
-existing soil maps can commonly be too coarse to account for local soil
-variations and owing to the cost and resource needs required to update
-information these maps lack temporal information. With improved
-computational processing capabilities, increased data storage and most
-recently, the increasing amount of freely available data (e.g. Landsat,
-Sentinel-2A/B), remote sensing imagery can be integrated into existing
-soil mapping approaches to increase temporal and spatial resolution of
-soil information. Satellite multi-temporal data allows for generating
-cloud free, radiometrically and phenologically consistent pixel based
-image composites of regional scale. Such data sets are of particular use
-for extracting soil information in areas of intermediate climate where
-soils are rarely exposed. The Soil Composite Mapping Processor (SCMaP)
-is a new approach designed to make use of per-pixel compositing to
-overcome the issue of limited soil exposure. The objective of this paper
-is to demonstrate the automated processors ability to handle large image
-databases to build multispectral reflectance composite base data layers
-that can support large scale top soil analyses. The functionality of the
-SCMaP is demonstrated using Landsat imagery over Germany from 1984 to
-2014 applied over 5 year periods. Three primary product levels are
-generated that will allow for a long term assessment and distribution of
-soils that include the distribution of exposed soils, a statistical
-information related to soil use and intensity and the generation of
-exposed soil reflectance image composites. The resulting composite maps
-provide useful value-added information on soils with the exposed soil
-reflectance composites showing high spatial coverage that correlate well
-with existing soil maps and the underlying geological structural
-regions.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-assessment-of-the-differences-between-spatial-resolution-and-grid-size-for-the-smap-enhanced-soil-moisture-product-over-homogeneous-sites&quot;&gt;An assessment of the differences between spatial resolution and grid size for the SMAP enhanced soil moisture product over homogeneous sites&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Colliander, A; Jackson, TJ; Chan, SK; O’Neill, P; Bindlish, R; Cosh, MH;
-Caldwell, T; Walker, JP; Berg, A; McNairn, H; Thibeault, M;
-Martinez-Fernandez, J; Jensen, KH; Asanuma, J; Seyfried, MS; Bosch, DD;
-Starks, PJ; Collins, CH; Prueger, JH; Su, Z; Lopez-Baeza, E; Yueh, SH&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 207 65-70; MAR 15 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Satellite-based passive microwave remote sensing typically involves a
-scanning antenna that makes measurements at irregularly spaced
-locations. These locations can change on a day to day basis. Soil
-moisture products derived from satellite-based passive microwave remote
-sensing are usually resampled to a fixed Earth grid that facilitates
-their use in applications. In many cases the grid size is finer than the
-actual spatial resolution of the observation, and often this difference
-is not well understood by the user. Here, this issue was examined for
-the Soil Moisture Active Passive (SMAP) enhanced version of the
-passive-based soil moisture product, which has a grid size of 9-km and a
-nominal spatial resolution of 33-km. In situ observations from core
-validation sites were used to compute comparison metrics. For sites that
-satisfied the established reliability and scaling criteria, the impact
-of validating the 9-km grid product with in situ data collected over a
-9-km versus a 33-km domain was very small for the sites studied (0.039
-m(3)/m(3) unbiased root mean square difference for the 9-km case versus
-0.037 m(3)/m(3) for the 33-km case). This result does not mean that the
-resolution of the product is 9-km but that for the conditions studied
-here the soil moisture estimated from in situ observations over 9-km is
-a close approximation of the soil moisture estimated from in situ
-observations over the 33-km resolution. The implication is that using
-the enhanced SMAP product at its grid resolution of 9-km should not
-introduce large errors in most applications.&lt;/p&gt;
-
-&lt;h3 id=&quot;remote-sensing-of-biodiversity-soil-correction-and-data-dimension-reduction-methods-improve-assessment-of-alpha-diversity-species-richness-in-prairie-ecosystems&quot;&gt;Remote sensing of biodiversity: Soil correction and data dimension reduction methods improve assessment of alpha-diversity (species richness) in prairie ecosystems&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Gholizadeh, H; Gamon, JA; Zygielbaum, AI; Wang, R; Schweiger, AK;
-Cavender-Bares, J&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 206 240-253; MAR 1 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Hyperspectral data, with their detailed spectral information at
-different wavelengths, offer multiple ways to assess biodiversity. One
-approach, known as the “spectral variation hypothesis” (SVH), proposes
-that biodiversity is linked to spectral diversity. However, SVH-based
-approaches, which we refer to as “spectral diversity metrics”, can be
-confounded by soil exposure and are sensitive to the spatial resolution
-of the data. To address these issues, we 1) investigated the impact of
-soil exposure on spectral diversity, 2) identified optimal bands for
-mapping biodiversity using a spectral diversity metric based on
-dimension reduction, and 3) assessed the impact of spatial resolution on
-spectral diversity metrics. In this study; alpha-diversity (species
-richness) was used as a measure of plant biodiversity. The study was
-based on two imaging spectrometry data sets from the Cedar Creek
-Ecosystem Science Reserve in Central Minnesota, USA, at two levels:
-proximal and airborne. The data sets included varying degrees of soil
-background sampled at two different spatial resolutions (1 mm and 0.75
-m). We explored five spectral diversity metrics, including the
-coefficient of variation, convex hull volume, spectral angle mapper,
-spectral information divergence, and a newly proposed dimension
-reduction-based metric called “convex hull area.” For the proximal data
-set (pixel size of 1 mm), filtering soil pixels by applying a normalized
-difference vegetation index (NDVI) threshold improved the performance of
-all spectral diversity metrics significantly, with the coefficient of
-variation showing the highest correlation with species richness. In the
-airborne data set (pixel size of 0.75 m), the convex hull area
-outperformed other metrics. These findings demonstrate promising
-approaches for remote sensing of biodiversity, illustrate a confounding
-effect of soil background on remote diversity measurement, and indicate
-that the most informative regions of the electromagnetic spectrum for
-estimating species richness can vary with spatial scale.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-landsat-and-nighttime-lights-for-supervised-pixel-based-image-classification-of-urban-land-cover&quot;&gt;Using Landsat and nighttime lights for supervised pixel-based image classification of urban land cover&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Goldblatt, R; Stuhlmacher, MF; Tellman, B; Clinton, N; Hanson, G;
-Georgescu, M; Wang, CY; Serrano-Candela, F; Khandelwal, AK; Cheng, WH;
-Balling, RC&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 205 253-275; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Reliable representations of global urban extent remain limited,
-hindering scientific progress across a range of disciplines that study
-functionality of sustainable cities. We present an efficient and
-low-cost machine-learning approach for pixel-based image classification
-of built-up areas at a large geographic scale using Landsat data. Our
-methodology combines nighttime-lights data and Landsat 8 and overcomes
-the lack of extensive ground reference data. We demonstrate the
-effectiveness of our methodology, which is implemented in Google Earth
-Engine, through the development of accurate 30 m resolution maps that
-characterize built-up land cover in three geographically diverse
-countries: India, Mexico, and the US. Our approach highlights the
-usefulness of data fusion techniques for studying the built environment
-and is a first step towards the creation of an accurate global-scale map
-of urban land cover over time.&lt;/p&gt;
-
-&lt;h3 id=&quot;supervised-methods-of-image-segmentation-accuracy-assessment-in-land-cover-mapping&quot;&gt;Supervised methods of image segmentation accuracy assessment in land cover mapping&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Costa, H; Foody, GM; Boyd, DS&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;REMOTE SENSING OF ENVIRONMENT&lt;/em&gt;, 205 338-351; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Land cover mapping via image classification is sometimes realized
-through object-based image analysis. Objects are typically constructed
-by partitioning imagery into spatially contiguous groups of pixels
-through image segmentation and used as the basic spatial unit of
-analysis. As it is typically desirable to know the accuracy with which
-the objects have been delimited prior to undertaking the classification,
-numerous methods have been used for accuracy assessment. This paper
-reviews the state-of-the-art of image segmentation accuracy assessment
-in land cover mapping applications. First the literature published in
-three major remote sensing journals during 2014-2015 is reviewed to
-provide an overview of the field. This revealed that qualitative
-assessment based on visual interpretation was a widely-used method, but
-a range of quantitative approaches is available. In particular, the
-empirical discrepancy or supervised methods that use reference data for
-assessment are thoroughly reviewed as they were the most frequently used
-approach in the literature surveyed. Supervised methods are grouped into
-two main categories, geometric and non-geometric, and are translated
-here to a common notation which enables them to be coherently and
-unambiguously described. Some key considerations on method selection for
-land cover mapping applications are provided, and some research needs
-are discussed.&lt;/p&gt;
-
-&lt;h3 id=&quot;quantifying-the-uncertainty-of-a-model-reconstructed-soilscape-for-archaeological-land-evaluation&quot;&gt;Quantifying the uncertainty of a model-reconstructed soilscape for archaeological land evaluation&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Finke, PA; Jafari, A; Zwertvaegher, A; Thas, O&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 320 74-81; JUN 15 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Models can serve as temporal interpolators for landscape reconstruction,
-and geostatistical interpolation can assist in obtaining full-cover
-maps. Both activities are associated with uncertainty. We applied a
-hydrological model (MODFLOW), a soil development model (SoilGen) and
-regression kriging to reconstruct a Middle Bronze Age landscape. This
-reconstruction comprises maps of a set of land characteristics and is
-input for a land evaluation meant to explain low occupancy during this
-period. The land evaluation showed marginal suitability in 81% of the
-area for Bronze Age land utilization types, which explains the low
-occupancy. We evaluated the effects of model accuracy and interpolation
-accuracy on the uncertainty of the land evaluation, assuming no
-uncertainty about the land evaluation protocol. The effect of model
-(in)accuracy was assessed by generating 100 perturbations using a
-variance-covariance error matrix filled using independent measurements
-from 1953 CE. The effect of spatial interpolation errors was assessed by
-generating 100 realizations of the land characteristics by Sequential
-Gaussian Simulation. Results show that uncertainty contributions of the
-model errors and interpolation errors are similar in terms of entropy H’
-between land evaluation maps (fairly low H’ of 0.47 and 0.38 for model
-and interpolation error respectively). Model-reconstructed land
-characteristics led to fairly reliable land evaluations. Priority
-improvements for the model were identified and ranked. Most improvements
-come at high computational cost.&lt;/p&gt;
-
-&lt;h3 id=&quot;proximal-spectral-sensing-in-pedological-assessments-vis-nir-spectra-for-soil-classification-based-on-weathering-and-pedogenesis&quot;&gt;Proximal spectral sensing in pedological assessments: vis-NIR spectra for soil classification based on weathering and pedogenesis&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Terra, FS; Dematte, JAM; Rossel, RAV&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 318 123-136; MAY 15 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Assessments of soils by reflectance spectroscopy have potential to
-facilitate and optimize soil survey, classification, and mapping of
-large areas. Visible and near-infrared (vis-NIR) spectra have been
-moderately used in pedological studies regarding characterization of
-soil samples and profiles, weathering and pedogenetic alterations along
-toposequences and landscapes, and soil classification. Therefore, there
-still is a lack of information about vis-NIR spectral pedology. For soil
-samples, our aims were to characterize the effects of physical,
-chemical, and mineralogical properties on vis-NIR soil spectral
-behavior, and to evaluate its potentiality in clustering 1259 soil
-samples according to weathering levels. For soil profiles, our aims were
-to evaluate the influence of pedogenesis in spectral behavior of some
-typical Brazilian soil classes, and to discriminate them by integrating
-proximal sensing and distance metrics. Continuum removed spectral data
-were transformed by Principal Component Analysis (PCA), and Fuzzy
-K-means algorithm and taxonomic distance were applied to cluster soil
-samples and profiles, respectively. Differences in reflectance intensity
-and absorption features caused by weathering intensification enabled to
-distinguish soil samples regarding similarity of particle size
-distribution, mineralogy, and some chemical properties. Soil formation
-processes, in particular, lessivage, dessilication, and ferralization
-similarly affected the spectral behavior soil profiles considering
-changes in depth caused by redistribution of soil properties by
-horizons. A coherent discrimination of soil profiles was possible by
-combining spectral data and pedological distance metrics where 30% of
-the soil classes could be individually clustered as follow: Ferralsol,
-Nitisol, Acrisol, Lixisol, Arenosol, Gleysol, Cambisol, and Leptsol.
-vis-NIR spectral data enabled a coherent grouping of Ferralsol profiles
-with different contents of clay and iron oxides. vis-NIR reflectance
-spectroscopy is presented here as a useful and reliable tool for direct
-applications in pedological assessments, in particular, soil survey and
-classification.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-carbon-cycling-proxies-understanding-their-critical-role-in-predicting-climate-change-feedbacks&quot;&gt;Soil carbon cycling proxies: Understanding their critical role in predicting climate change feedbacks&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Bailey, VL; Bond-Lamberty, B; DeAngelis, K; Grandy, AS; Hawkes, CV;
-Heckman, K; Lajtha, K; Phillips, RP; Sulman, BN; Todd-Brown, KEO;
-Wallenstein, MD&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (3):895-905; MAR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-The complexity of processes and interactions that drive soil C dynamics
-necessitate the use of proxy variables to represent soil characteristics
-that cannot be directly measured (correlative proxies), or that
-aggregate information about multiple soil characteristics into one
-variable (integrative proxies). These proxies have proven useful for
-understanding the soil C cycle, which is highly variable in both space
-and time, and are now being used to make predictions of the fate and
-persistence of C under future climate scenarios. However, the C pools
-and processes that proxies represent must be thoughtfully considered in
-order to minimize uncertainties in empirical understanding. This is
-necessary to capture the full value of a proxy in model parameters and
-in model outcomes. Here, we provide specific examples of proxy variables
-that could improve decision-making, and modeling skill, while also
-encouraging continued work on their mechanistic underpinnings. We
-explore the use of three common soil proxies used to study soil C
-cycling: metabolic quotient, clay content, and physical fractionation.
-We also consider how emerging data types, such as genome-sequence data,
-can serve as proxies for microbial community activities. By examining
-some broad assumptions in soil C cycling with the proxies already in
-use, we can develop new hypotheses and specify criteria for new and
-needed proxies.&lt;/p&gt;
-
-&lt;h3 id=&quot;contribution-of-crop-model-structure-parameters-and-climate-projections-to-uncertainty-in-climate-change-impact-assessments&quot;&gt;Contribution of crop model structure, parameters and climate projections to uncertainty in climate change impact assessments&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Tao, FL; Rotter, RP; Palosuo, T; Diaz-Ambrona, CGH; Minguez, MI;
-Semenov, MA; Kersebaum, KC; Nendel, C; Specka, X; Hoffmann, H; Ewert, F;
-Dambreville, A; Martre, P; Rodriguez, L; Ruiz-Ramos, M; Gaiser, T; Hohn,
-JG; Salo, T; Ferrise, R; Bindi, M; Cammarano, D; Schulman, AH&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (3):1291-1307; MAR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Climate change impact assessments are plagued with uncertainties from
-many sources, such as climate projections or the inadequacies in
-structure and parameters of the impact model. Previous studies tried to
-account for the uncertainty from one or two of these. Here, we developed
-a triple-ensemble probabilistic assessment using seven crop models,
-multiple sets of model parameters and eight contrasting climate
-projections together to comprehensively account for uncertainties from
-these three important sources. We demonstrated the approach in assessing
-climate change impact on barley growth and yield at Jokioinen, Finland
-in the Boreal climatic zone and Lleida, Spain in the Mediterranean
-climatic zone, for the 2050s. We further quantified and compared the
-contribution of crop model structure, crop model parameters and climate
-projections to the total variance of ensemble output using Analysis of
-Variance (ANOVA). Based on the triple-ensemble probabilistic assessment,
-the median of simulated yield change was -4% and +16%, and the
-probability of decreasing yield was 63% and 31% in the 2050s, at
-Jokioinen and Lleida, respectively, relative to 1981-2010. The
-contribution of crop model structure to the total variance of ensemble
-output was larger than that from downscaled climate projections and
-model parameters. The relative contribution of crop model parameters and
-downscaled climate projections to the total variance of ensemble output
-varied greatly among the seven crop models and between the two sites.
-The contribution of downscaled climate projections was on average larger
-than that of crop model parameters. This information on the uncertainty
-from different sources can be quite useful for model users to decide
-where to put the most effort when preparing or choosing models or
-parameters for impact analyses. We concluded that the triple-ensemble
-probabilistic approach that accounts for the uncertainties from multiple
-important sources provide more comprehensive information for quantifying
-uncertainties in climate change impact assessments as compared to the
-conventional approaches that are deterministic or only account for the
-uncertainties from one or two of the uncertainty sources.&lt;/p&gt;
-
-&lt;h3 id=&quot;digital-mapping-of-soil-erodibility-for-water-erosion-in-new-south-wales-australia&quot;&gt;Digital mapping of soil erodibility for water erosion in New South Wales, Australia&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Yang, XH; Gray, J; Chapman, G; Zhu, QGZ; Tulau, M; McInnes-Clarke, S&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;SOIL RESEARCH&lt;/em&gt;, 56 (2):158-170; 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil erodibility represents the soil’s response to rainfall and run-off
-erosivity and is related to soil properties such as organic matter
-content, texture, structure, permeability and aggregate stability. Soil
-erodibility is an important factor in soil erosion modelling, such as
-the Revised Universal Soil Loss Equation (RUSLE), in which it is
-represented by the soil erodibility factor (K-factor). However,
-determination of soil erodibility at larger spatial scales is often
-problematic because of the lack of spatial data on soil properties and
-field measurements for model validation. Recently, a major national
-project has resulted in the release of digital soil maps (DSMs) for a
-wide range of key soil properties over the entire Australian continent
-at approximately 90-m spatial resolution. In the present study we used
-the DSMs and New South Wales (NSW) Soil and Land Information System to
-map and validate soil erodibility for soil depths up to 100 cm. We
-assessed eight empirical methods or existing maps on erodibility
-estimation and produced a harmonised high-resolution soil erodibility
-map for the entire state of NSW with improvements based on studies in
-NSW. The modelled erodibility values were compared with those from field
-measurements at soil plots for NSW soils and revealed good agreement.
-The erodibility map shows similar patterns as that of the parent
-material lithology classes, but no obvious trend with any single soil
-property. Most of the modelled erodibility values range from 0.02 to
-0.07 t ha h ha(-1) MJ(-1) mm(-1) with a mean (+/- s.d.) of 0.035 +/-
-0.007 t ha h ha(-1) MJ(-1) mm(-1). The validated K-factor map was
-further used along with other RUSLE factors to assess soil loss across
-NSW for preventing and managing soil erosion.&lt;/p&gt;
-
-&lt;h3 id=&quot;linking-land-use-capability-classes-and-apsim-to-estimate-pasture-growth-for-regional-land-use-planning&quot;&gt;Linking Land Use Capability classes and APSIM to estimate pasture growth for regional land use planning&lt;/h3&gt;
-
-&lt;p&gt;Abstract
-Investigation of land-use and management changes at regional scales require the linkage of farm-system models with land-resource information, which for pastoral systems includes forage supply. The New Zealand Land Resource Inventory (NZLRI) and associated Land Use Capability (LUC) database include estimates of the potential stock-carrying capacity across the country, which can be used to derive estimates of average annual pasture yields. Farm system models and decision support tools, however, require information on the seasonal patterns of pasture growth. To generate such pasture growth curves (PGCs), the Agricultural Production Systems Simulator (APSIM) was used, with generic soil profiles based on descriptions of LUC classes, to generate PGCs for three regions of New Zealand. Simulated annual pasture yields were similar to the estimates of annual potential pasture yield in the NZLRI spatial database, and they provided information on inter-annual variability. Simulated PGCs generally agreed well with measured long-term patterns of seasonal pasture growth. The approach can be used to obtain spatially discrete estimates of seasonal pasture growth patterns across New Zealand for use in farm system models and for assessing the impact of management practices and climate change on the regional sustainability.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2018/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 09, 2018.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2018/04/journalDigest" />
-  <id>/2018/04/journalDigest</id>
-  <updated>2018-04-04T00:00:00-00:00</updated>
-  <published>2018-04-04T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2018-7&quot;&gt;Journal Paper Digests 2018 #7&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Modelling soil-water dynamics in the rootzone of structured and water-repellent soils&lt;/li&gt;
-  &lt;li&gt;A parallel competitive Particle Swarm Optimization for non-linear first arrival traveltime tomography and uncertainty quantification&lt;/li&gt;
-  &lt;li&gt;Fusion of pixel and object-based features for weed mapping using unmanned aerial vehicle imagery&lt;/li&gt;
-  &lt;li&gt;How does no-till deliver carbon stabilization and saturation in highly weathered soils?&lt;/li&gt;
-  &lt;li&gt;Study of applying naturally occurring mineral sorbents of Poland (dolomite halloysite, chalcedonite) for aided phytostabilization of soil polluted with heavy metals&lt;/li&gt;
-  &lt;li&gt;Obtaining soil hydraulic parameters from soil water content data assimilation under different climatic/soil conditions&lt;/li&gt;
-  &lt;li&gt;The Nitrogen Balancing Act: Tracking the Environmental Performance of Food Production&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;modelling-soil-water-dynamics-in-the-rootzone-of-structured-and-water-repellent-soils&quot;&gt;Modelling soil-water dynamics in the rootzone of structured and water-repellent soils&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Brown, H; Carrick, S; Muller, K; Thomas, S; Sharp, J; Cichota, R;
-Holzworth, D; Clothier, B&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 113 33-42; APR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-In modelling the hydrology of Earth’s critical zone, there are two major
-challenges. The first is to understand and model the processes of
-infiltration, runoff, redistribution and root-water uptake in structured
-soils that exhibit preferential flows through macropore networks. The
-other challenge is to parametrise and model the impact of ephemeral
-hydrophobicity of water-repellent soils. Here we have developed a
-soil-water model, which is based on physical principles, yet possesses
-simple functionality to enable easier parameterisation, so as to predict
-soil-water dynamics in structured soils displaying time-varying degrees
-of hydrophobicity. Our model, WEIRDO (Water Evapotranspiration
-Infiltration Redistribution Drainage runoff), has been developed in the
-APSIM Next Generation platform (Agricultural Production Systems
-sIMulation). The model operates on an hourly time-step. The repository
-for this open-source code is https://protect-au.mimecast.com/s/ZvqKCK1qJZtZgQj4uMrMzq?domain=github.com.
-We have carried out sensitivity tests to show how WEIRDO predicts
-infiltration, drainage, redistribution, transpiration and soil-water
-evaporation for three distinctly different soil textures displaying
-differing hydraulic properties. These three soils were drawn from the
-UNSODA (Unsaturated SOil hydraulic Database) soils database of the
-United States Department of Agriculture (USDA). We show how preferential
-flow process and hydrophobicity determine the spatio-temporal pattern of
-soil-water dynamics. Finally, we have validated WEIRDO by comparing its
-predictions against three years of soil-water content measurements made
-under an irrigated alfalfa (Medicago saliva L.) trial. The results
-provide validation of the model’s ability to simulate soil-water
-dynamics in structured soils.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-parallel-competitive-particle-swarm-optimization-for-non-linear-first-arrival-traveltime-tomography-and-uncertainty-quantification&quot;&gt;A parallel competitive Particle Swarm Optimization for non-linear first arrival traveltime tomography and uncertainty quantification&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Luu, K; Noble, M; Gesret, A; Belayouni, N; Roux, PF&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 113 81-93; APR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Seismic traveltime tomography is an optimization problem that requires
-large computational efforts. Therefore, linearized techniques are
-commonly used for their low computational cost. These local optimization
-methods are likely to get trapped in a local minimum as they critically
-depend on the initial model. On the other hand, global optimization
-methods based on MCMC are insensitive to the initial model but turn out
-to be computationally expensive. Particle Swarm Optimization (PSO) is a
-rather new global optimization approach with few tuning parameters that
-has shown excellent convergence rates and is straightforwardly
-parallelizable, allowing a good distribution of the workload. However,
-while it can traverse several local minima of the evaluated misfit
-function, classical implementation of PSO can get trapped in local
-minima at later iterations as particles inertia dim. We propose a
-Competitive PSO (CPSO) to help particles to escape from local minima
-with a simple implementation that improves swarm’s diversity. The model
-space can be sampled by running the optimizer multiple times and by
-keeping all the models explored by the swarms in the different runs. A
-traveltime tomography algorithm based on CPSO is successfully applied on
-a real 3D data set in the context of induced seismicity.&lt;/p&gt;
-
-&lt;h3 id=&quot;fusion-of-pixel-and-object-based-features-for-weed-mapping-using-unmanned-aerial-vehicle-imagery&quot;&gt;Fusion of pixel and object-based features for weed mapping using unmanned aerial vehicle imagery&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Gao, JF; Liao, WZ; Nuyttens, D; Lootens, P; Vangeyte, J; Pizurica, A;
-He, Y; Pieters, JG&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;INTERNATIONAL JOURNAL OF APPLIED EARTH OBSERVATION AND GEOINFORMATION&lt;/em&gt;, 67 43-53; MAY 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-The developments in the use of unmanned aerial vehicles (UAVs) and
-advanced imaging sensors provide new opportunities for ultra-high
-resolution (e.g., less than a 10 cm ground sampling distance (GSD)) crop
-field monitoring and mapping in precision agriculture applications. In
-this study, we developed a strategy for inter and intra-row weed
-detection in early season maize fields from aerial visual imagery. More
-specifically, the Hough transform algorithm (HT) was applied to the
-orthomosaicked images for inter-row weed detection. A semi-automatic
-Object-Based Image Analysis (OBIA) procedure was developed with Random
-Forests (RF) combined with feature selection techniques to classify
-soil, weeds and maize. Furthermore, the two binary weed masks generated
-from HT and OBIA were fused for accurate binary weed image. The
-developed RF classifier was evaluated by 5-fold cross validation, and it
-obtained an overall accuracy of 0.945, and Kappa value of 0.912.
-Finally, the relationship of detected weeds and their ground truth
-densities was quantified by a fitted linear model with a coefficient of
-determination of 0.895 and a root mean square error of 0.026. Besides,
-the importance of input features was evaluated, and it was found that
-the ratio of vegetation length and width was the most significant
-feature for the classification model. Overall, our approach can yield a
-satisfactory weed map, and we expect that the obtained accurate and
-timely weed map from UAV imagery will be applicable to realize
-site-specific weed management (SSWM) in early season crop fields for
-reducing spraying non-selective herbicides and costs.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-does-no-till-deliver-carbon-stabilization-and-saturation-in-highly-weathered-soils&quot;&gt;How does no-till deliver carbon stabilization and saturation in highly weathered soils?&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Briedis, C; Sa, JCD; Lal, R; Tivet, F; Franchini, JC; Ferreira, AD;
-Hartman, DD; Schimiguel, R; Bressan, PT; Inagaki, TM; Romaniw, J;
-Goncalves, DRP&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;CATENA&lt;/em&gt;, 163 13-23; APR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Research data on the mechanisms of C stabilization and saturation
-affected by soil management systems in highly weathered soils remain
-scarce. Past studies have revealed the fundamental role of aggregation
-promoted by soil conservation practices in the physical protection of C
-fractions. This study is based on the hypothesis that the increased
-physical C protection provides sufficient time to strengthen the
-interaction between C fractions and soil minerals, as being the pathway
-for C stabilization and accumulation in highly weathered soils. Thus,
-the objectives of this study were to: i) evaluate the C stocks including
-labile and mineral-associated C fractions in soil under conventional
-(CT), no-till (NT) and native vegetation (NV), and, ii) assess the C
-saturation level in different C fractions through the use of contrasting
-mathematical models of C accumulation. Soil samples were collected
-(0-100 cm depth) from agroecosystems established in tropical (Lucas do
-Rio Verde) and subtropical (Ponta Grossa and Londrina) regions of
-Brazil. The data show that all C fractions were affected by soil
-management systems. However, the impact was more pronounced with the
-labile C fractions than with the mineral associated C fractions. The
-depletion of C stock of labile fractions in the 0-5 cm layer upon
-conversion of NV to CT accounted for 86, 89 and 72% of total C in soil
-of Ponta Grossa, Londrina and Lucas do Rio Verde, respectively. On the
-other hand, compared to CT, restoration of 89, 15 and 12% of these
-labile fractions was observed at these respective sites with adoption of
-NT. The mineral-associated C fraction was the best fit to a C saturation
-model at all sites. The estimated C saturation level for this fraction
-was 98.1, 60.2 and 39.1 g C kg(-1) silt + clay at the Ponta Grossa,
-Londrina and Lucas do Rio Verde sites, respectively, which is still far
-from the current C content. Thus, the long-term use of NT might be the
-pathway for physical protection of the labile C fractions as well as
-strong organo-mineral associations. Together, these processes contribute
-to C stabilization and accumulation in highly weathered soils.&lt;/p&gt;
-
-&lt;h3 id=&quot;study-of-applying-naturally-occurring-mineral-sorbents-of-poland-dolomite-halloysite-chalcedonite-for-aided-phytostabilization-of-soil-polluted-with-heavy-metals&quot;&gt;Study of applying naturally occurring mineral sorbents of Poland (dolomite halloysite, chalcedonite) for aided phytostabilization of soil polluted with heavy metals&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Radziemska, M&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;CATENA&lt;/em&gt;, 163 123-129; APR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-A greenhouse experiment was carried out for evaluating the effects of
-mineral sorbents, i.e.: dolomite, halloysite, and chalcedonite on the
-chemical characteristics of soil contaminated with heavy metals and the
-uptake of metals by plants. The contents of trace elements in the plants
-and soil were determined using the method of spectrophotometry. All of
-the investigated element contents in the tested parts of F. rubra
-differed significantly in the case of applying mineral sorbents to the
-soil, as well as increasing concentrations of Pb, Cd and Zn. The
-greatest average above-ground biomass was observed when chalcedonite and
-halloysite were amended into the soil. Halloysite and chalcedonite also
-caused significant increases in Pb, Cd and Zn concentrations in the
-roots. The addition of dolomite significantly increased soil pH.
-Halloysite and chalcedonite were shown to be the most effective and
-decreased the average Pb, Cd and Zn contents in soil.&lt;/p&gt;
-
-&lt;h3 id=&quot;obtaining-soil-hydraulic-parameters-from-soil-water-content-data-assimilation-under-different-climaticsoil-conditions&quot;&gt;Obtaining soil hydraulic parameters from soil water content data assimilation under different climatic/soil conditions&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Valdes-Abellan, J; Pachepsky, Y; Martinez, G&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;CATENA&lt;/em&gt;, 163 311-320; APR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Obtaining reliable soil hydraulic properties is essential for correct
-simulations of soil water content (SWC), which is a key variable in
-countless applications such as agricultural management, soil
-remediation, aquifer protection, etc. Soil hydraulic properties can be
-measured in the laboratory; however, the procedures are laborious and
-costly, and may provide estimates different from those observed in the
-field. An alternative approach is to obtain soil hydraulic properties
-using a soil water flow model in conjunction with SWC monitoring data.
-The goal of the present study was to analyze the efficiency of obtaining
-hydraulic properties utilizing data assimilation (DA) based on the
-Ensemble Kalman Filter method. Two soil textures in homogeneous soil
-profiles, and four climatic conditions were considered; observations of
-soil moisture data were synthetically generated using HYDRUS-1D and
-subsequently perturbed by the application of the conditional
-multivariate normal distribution. When observed SWC varied in relatively
-narrow range as a consequence of the forcing imposed by dry climate
-atmospheric boundary conditions, data assimilation provided sets of
-properties that led to good Richards model performance, with the RMSE
-below 0.02 and/or R-2 above 0.8 after a period of just 100 days and
-above 0.98 after a period of three years in all climate/soil conditions.
-However, the closeness of parameters from DA to the parameters used to
-generate the synthetic data depended on weather conditions and soil
-properties. One year was adequate to obtain reliable soil hydraulic
-properties with data assimilation.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-nitrogen-balancing-act-tracking-the-environmental-performance-of-food-production&quot;&gt;The Nitrogen Balancing Act: Tracking the Environmental Performance of Food Production&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-McLellan, EL; Cassman, KG; Eagle, AJ; Woodbury, PB; Sela, S; Tonitto, C;
-Marjerison, RD; van Es, HM&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;BIOSCIENCE&lt;/em&gt;, 68 (3):194-203; MAR 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Farmers, food supply-chain entities, and policymakers need a simple but
-robust indicator to demonstrate progress toward reducing nitrogen
-pollution associated with food production. We show that nitrogen
-balance-the difference between nitrogen inputs and nitrogen outputs in
-an agricultural production system-is a robust measure of nitrogen losses
-that is simple to calculate, easily understood, and based on readily
-available farm data. Nitrogen balance provides farmers with a means of
-demonstrating to an increasingly concerned public that they are
-succeeding in reducing nitrogen losses while also improving the overall
-sustainability of their farming operation. Likewise, supply-chain
-companies and policymakers can use nitrogen balance to track progress
-toward sustainability goals. We describe the value of nitrogen balance
-in translating environmental targets into actionable goals for farmers
-and illustrate the potential roles of science, policy, and agricultural
-support networks in helping farmers achieve them.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2018/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 04, 2018.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2018/03/journalDigest" />
-  <id>/2018/03/journalDigest</id>
-  <updated>2018-03-23T00:00:00-00:00</updated>
-  <published>2018-03-23T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2018-6&quot;&gt;Journal Paper Digests 2018 #6&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Temperature sensitivity of soil organic carbon decomposition increased with mean carbon residence time: Field incubation and data assimilation&lt;/li&gt;
-  &lt;li&gt;Networking our science to characterize the state, vulnerabilities, and management opportunities of soil organic matter.&lt;/li&gt;
-  &lt;li&gt;Soil pH as the chief modifier for regional nitrous oxide emissions: New evidence and implications for global estimates and mitigation.&lt;/li&gt;
-  &lt;li&gt;Assessment of ecosystem resilience to hydroclimatic disturbances in India&lt;/li&gt;
-  &lt;li&gt;Assessing uncertainties in crop and pasture ensemble model simulations of productivity and N2O emissions&lt;/li&gt;
-  &lt;li&gt;Is Rock-Eval 6 thermal analysis a good indicator of soil organic carbon lability? - A method-comparison study in forest soils.
-Use of the USDA National Cooperative Soil Survey Soil Characterization Data to Detect Soil Change: A Cautionary Tale.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;temperature-sensitivity-of-soil-organic-carbon-decomposition-increased-with-mean-carbon-residence-time-field-incubation-and-data-assimilation&quot;&gt;Temperature sensitivity of soil organic carbon decomposition increased with mean carbon residence time: Field incubation and data assimilation&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Zhou, XH; Xu, X; Zhou, GY; Luo, YQ&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (2):810-822; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Temperature sensitivity of soil organic carbon (SOC) decomposition is
-one of the major uncertainties in predicting climate-carbon (C) cycle
-feedback. Results from previous studies are highly contradictory with
-old soil C decomposition being more, similarly, or less sensitive to
-temperature than decomposition of young fractions. The contradictory
-results are partly from difficulties in distinguishing old from young
-SOC and their changes over time in the experiments with or without
-isotopic techniques. In this study, we have conducted a long-term field
-incubation experiment with deep soil collars (0-70 cm in depth, 10 cm in
-diameter of PVC tubes) for excluding root C input to examine apparent
-temperature sensitivity of SOC decomposition under ambient and warming
-treatments from 2002 to 2008. The data from the experiment were infused
-into a multi-pool soil C model to estimate intrinsic temperature
-sensitivity of SOC decomposition and C residence times of three SOC
-fractions (i.e., active, slow, and passive) using a data assimilation
-(DA) technique. As active SOC with the short C residence time was
-progressively depleted in the deep soil collars under both ambient and
-warming treatments, the residences times of the whole SOC became longer
-over time. Concomitantly, the estimated apparent and intrinsic
-temperature sensitivity of SOC decomposition also became gradually
-higher over time as more than 50% of active SOC was depleted. Thus, the
-temperature sensitivity of soil C decomposition in deep soil collars was
-positively correlated with the mean C residence times. However, the
-regression slope of the temperature sensitivity against the residence
-time was lower under the warming treatment than under ambient
-temperature, indicating that other processes also regulated temperature
-sensitivity of SOC decomposition. These results indicate that old SOC
-decomposition is more sensitive to temperature than young components,
-making the old C more vulnerable to future warmer climate.&lt;/p&gt;
-
-&lt;h3 id=&quot;networking-our-science-to-characterize-the-state-vulnerabilities-and-management-opportunities-of-soil-organic-matter&quot;&gt;Networking our science to characterize the state, vulnerabilities, and management opportunities of soil organic matter&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Harden, JW; Hugelius, G; Ahlstrom, A; Blankinship, JC; Bond-Lamberty, B;
-Lawrence, CR; Loisel, J; Malhotra, A; Jackson, RB; Ogle, S; Phillips, C;
-Ryals, R; Todd-Brown, K; Vargas, R; Vergara, SE; Cotrufo, MF; Keiluweit,
-M; Heckman, KA; Crow, SE; Silver, WL; DeLonge, M; Nave, LE&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (2):e705-e718; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil organic matter (SOM) supports the Earth’s ability to sustain
-terrestrial ecosystems, provide food and fiber, and retains the largest
-pool of actively cycling carbon. Over 75% of the soil organic carbon
-(SOC) in the top meter of soil is directly affected by human land use.
-Large land areas have lost SOC as a result of land use practices, yet
-there are compensatory opportunities to enhance productivity and SOC
-storage in degraded lands through improved management practices. Large
-areas with and without intentional management are also being subjected
-to rapid changes in climate, making many SOC stocks vulnerable to losses
-by decomposition or disturbance. In order to quantify potential SOC
-losses or sequestration at field, regional, and global scales,
-measurements for detecting changes in SOC are needed. Such measurements
-and soil-management best practices should be based on well established
-and emerging scientific understanding of processes of C stabilization
-and destabilization over various timescales, soil types, and spatial
-scales. As newly engaged members of the International Soil Carbon
-Network, we have identified gaps in data, modeling, and communication
-that underscore the need for an open, shared network to frame and guide
-the study of SOM and SOC and their management for sustained production
-and climate regulation.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-ph-as-the-chief-modifier-for-regional-nitrous-oxide-emissions-new-evidence-and-implications-for-global-estimates-and-mitigation&quot;&gt;Soil pH as the chief modifier for regional nitrous oxide emissions: New evidence and implications for global estimates and mitigation&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Wang, YJ; Guo, JH; Vogt, RD; Mulder, J; Wang, JG; Zhang, XS&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (2):E617-E626; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Nitrous oxide (N2O) is a greenhouse gas that also plays the primary role
-in stratospheric ozone depletion. The use of nitrogen fertilizers is
-known as the major reason for atmospheric N2O increase. Empirical
-bottom-up models therefore estimate agricultural N2O inventories using N
-loading as the sole predictor, disregarding the regional heterogeneities
-in soil inherent response to external N loading. Several environmental
-factors have been found to influence the response in soil N2O emission
-to N fertilization, but their interdependence and relative importance
-have not been addressed properly. Here, we show that soil pH is the
-chief factor explaining regional disparities in N2O emission, using a
-global meta-analysis of 1,104 field measurements. The emission factor
-(EF) of N2O increases significantly (p &amp;lt; .001) with soil pH decrease.
-The default EF value of 1.0%, according to IPCC (Intergovernmental
-Panelon Climate Change) for agricultural soils, occurs at soil pH 6.76.
-Moreover, changes in EF with N fertilization (i.e. EF) is also
-negatively correlated (p &amp;lt; .001) with soil pH. This indicates that N2O
-emission in acidic soils is more sensitive to changing N fertilization
-than that in alkaline soils. Incorporating our findings into bottom-up
-models has significant consequences for regional and global N2O emission
-inventories and reconciling them with those from top-down models.
-Moreover, our results allow region-specific development of tailor-made
-N2O mitigation measures in agriculture.&lt;/p&gt;
-
-&lt;h3 id=&quot;assessment-of-ecosystem-resilience-to-hydroclimatic-disturbances-in-india&quot;&gt;Assessment of ecosystem resilience to hydroclimatic disturbances in India&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Sharma, A; Goyal, MK&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (2):E432-E441; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Recent studies have shown an increasing trend in hydroclimatic
-disturbances like droughts, which are anticipated to become more
-frequent and intense under global warming and climate change. Droughts
-adversely affect the vegetation growth and crop yield, which enhances
-the risks to food security for a country like India with over 1.2
-billion people to feed. Here, we compared the response of terrestrial
-net primary productivity (NPP) to hydroclimatic disturbances in India at
-different scales (i.e., at river basins, land covers, and climate types)
-to examine the ecosystems’ resilience to such adverse conditions. The
-ecosystem water use efficiency (WUEe: NPP/Evapotranspiration) is an
-effective indicator of ecosystem productivity, linking carbon (C) and
-water cycles. We found a significant difference (p&amp;lt;.05) in WUEe across
-India at different scales. The ecosystem resilience analysis indicated
-that most of the river basins were not resilient enough to hydroclimatic
-disturbances. Drastic reduction in WUEe under dry conditions was
-observed for some basins, which highlighted the cross-biome incapability
-to withstand such conditions. The ecosystem resilience at land cover and
-climate type scale did not completely relate to the basin-scale
-ecosystem resilience, which indicated that ecosystem resilience at basin
-scale is controlled by some other ecohydrological processes. Our results
-facilitate the identification of the most sensitive regions in the
-country for ecosystem management and climate policy making, and
-highlight the need for taking sufficient adaptation measures to ensure
-sustainability of ecosystems.&lt;/p&gt;
-
-&lt;h3 id=&quot;assessing-uncertainties-in-crop-and-pasture-ensemble-model-simulations-of-productivity-and-n2o-emissions&quot;&gt;Assessing uncertainties in crop and pasture ensemble model simulations of productivity and N2O emissions&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Ehrhardt, F; Soussana, JF; Bellocchi, G; Grace, P; McAuliffe, R; Recous,
-S; Sandor, R; Smith, P; Snow, V; Migliorati, MD; Basso, B; Bhatia, A;
-Brilli, L; Doltra, J; Dorich, CD; Doro, L; Fitton, N; Giacomini, SJ;
-Grant, B; Harrison, MT; Jones, SK; Kirschbaum, MUF; Klumpp, K; Laville,
-P; Leonard, J; Liebig, M; Lieffering, M; Martin, R; Massad, RS; Meier,
-E; Merbold, L; Moore, AD; Myrgiotis, V; Newton, P; Pattey, E; Rolinski,
-S; Sharp, J; Smith, WN; Wu, LH; Zhang, Q&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 24 (2):E603-E616; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Simulation models are extensively used to predict agricultural
-productivity and greenhouse gas emissions. However, the uncertainties of
-(reduced) model ensemble simulations have not been assessed
-systematically for variables affecting food security and climate change
-mitigation, within multi-species agricultural contexts. We report an
-international model comparison and benchmarking exercise, showing the
-potential of multi-model ensembles to predict productivity and nitrous
-oxide (N2O) emissions for wheat, maize, rice and temperate grasslands.
-Using a multi-stage modelling protocol, from blind simulations (stage 1)
-to partial (stages 2-4) and full calibration (stage 5), 24 process-based
-biogeochemical models were assessed individually or as an ensemble
-against long-term experimental data from four temperate grassland and
-five arable crop rotation sites spanning four continents. Comparisons
-were performed by reference to the experimental uncertainties of
-observed yields and N2O emissions. Results showed that across sites and
-crop/grassland types, 23%-40% of the uncalibrated individual models were
-within two standard deviations (SD) of observed yields, while 42 (rice)
-to 96% (grasslands) of the models were within 1 SD of observed N2O
-emissions. At stage 1, ensembles formed by the three lowest prediction
-model errors predicted both yields and N2O emissions within experimental
-uncertainties for 44% and 33% of the crop and grassland growth cycles,
-respectively. Partial model calibration (stages 2-4) markedly reduced
-prediction errors of the full model ensemble E-median for crop grain
-yields (from 36% at stage 1 down to 4% on average) and grassland
-productivity (from 44% to 27%) and to a lesser and more variable extent
-for N2O emissions. Yield-scaled N2O emissions (N2O emissions divided by
-crop yields) were ranked accurately by three-model ensembles across crop
-species and field sites. The potential of using process-based model
-ensembles to predict jointly productivity and N2O emissions at field
-scale is discussed.&lt;/p&gt;
-
-&lt;h3 id=&quot;is-rock-eval-6-thermal-analysis-a-good-indicator-of-soil-organic-carbon-lability---a-method-comparison-study-in-forest-soils&quot;&gt;Is Rock-Eval 6 thermal analysis a good indicator of soil organic carbon lability? - A method-comparison study in forest soils&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Soucemarianadin, L; Cecillon, L; Chenu, C; Baudin, F; Nicolas, M;
-Girardin, C; Barre, P&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;SOIL BIOLOGY &amp;amp; BIOCHEMISTRY&lt;/em&gt;, 117 108-116; FEB 2018&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil respiration tests and abundance of particulate organic matter (POM)
-are considered as classical indicators of the labile soil organic carbon
-(SOC) pool. However, there is still no widely accepted standard method
-to assess SOC lability and the pertinence of these two time-consuming
-methods to characterize SOC turnover can be questioned. Alternate ways
-of determining the labile SOC fraction are thus much needed. Thermal
-analyses, in particular Rock-Eval 6 (RE6) analysis has shown promising
-results in the determination of SOC biogeochemical stability.Using a
-large set of samples (n = 99) of French forest soils representing
-contrasted pedoclimatic conditions, including deep samples (up to 0.8 m
-depth), we compared three different methods used for SOC lability
-assessment. We explored whether respired-C isolated by a 10-week
-laboratory soil respiration test, POM-C isolated by a physical SOC
-fractionation scheme (particle-size &amp;gt; 50 pm and d &amp;lt; 1.6 g cm(-3)) and
-several RE6 parameters were comparable and how they correlated.As
-expected, respired-C (mg CO2-C.g(-1) SOC) and POM-C (% of total SOC)
-fractions strongly decreased with depth. RE6 parameters showed that SOC
-from deeper soil layers was also thermally less labile, more oxidized
-and H-depleted. Indeed, SOC from deeper soil layers had lower proportion
-of thermally labile SOC, higher T50-Hc-pyR (temperature at which 50% of
-the pyrolysable hydrocarbons were effectively pyrolyzed) and T50-CO2-OX
-(temperature at which 50% of the CO2 gas had evolved during the
-oxidation phase), larger oxygen index, and smaller hydrogen index.
-Surprisingly, the two classical indicators of the labile SOC pool
-(respired-C and POM-C) were only marginally correlated (p = 0.051) and
-showed layer-specific correlations. Similarly, respired-C was poorly
-correlated to RE6 parameters. Conversely, the POM-C fraction showed a
-strong negative correlation with T50-HC-PYR (rho = -0.73) and good
-correlations with other RE6 parameters.Our study showed that RE6
-parameters were good estimates of the POM-C fraction, which represents a
-labile SOC pool with a residence time of ca. a couple decades that is
-meaningful regarding SOC stock changes upon modifications in land
-management. RE6 thermal analysis could therefore be a fast and
-cost-effective alternative to more time-consuming methods used in SOC
-pool determination, and may be integrated into soil monitoring networks
-to provide high-throughput information on SOC dynamics.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-of-the-usda-national-cooperative-soil-survey-soil-characterization-data-to-detect-soil-change-a-cautionary-tale&quot;&gt;Use of the USDA National Cooperative Soil Survey Soil Characterization Data to Detect Soil Change: A Cautionary Tale&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Tomer, MD; James, DE; Schipper, LA; Wills, SA&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;SOIL SCIENCE SOCIETY OF AMERICA JOURNAL&lt;/em&gt;, 81 (6):1463-1474; NOV-DEC 2017&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Recently, the USDA-NRCS National Cooperative Soil Survey Soil
-Characterization Database (NSCD) was reported to provide evidence that
-total nitrogen (TN) stocks of agricultural soils have increased across
-the Mississippi basin since 1985. Unfortunately, historical changes in
-methods used to measure TN were not fully accounted for in that report.
-We used NSCD archives to calibrate between wet (pre-1995) and dry
-(post-1995) digestion methods used in measuring TN and soil organic
-carbon (SOC), then evaluated temporal trends in SOC and TN stocks with
-data from 423 Alfisol and 900 Mollisol profiles representing the US Corn
-Belt. Data were grouped by moisture regime, farming history (presence of
-Ap horizon), and depth (0-20, 20-60, and 60-100 cm). Regressions showed
-geographic and textural influences on SOC, and that SOC increased with
-time among farmed soils, particularly at 20 to 60 cm. Soil TN was
-dependent on SOC, especially at the surface (R-2 &amp;gt; 0.71), and decreasing
-TN trends with time were found among farmed soils above 60-cm depth.
-Increases in C to N ratios further suggested TN has been slowly
-stabilizing within soils of the US Corn Belt. However, C to N ratios
-&amp;lt;9.0 were prevalent at 60-100 cm depth (&amp;gt;60% frequency), indicating
-large TN stores remain in these soils. An increasing trend in SOC, TN,
-and C to N ratios among non-farmed, aquic Mollisols suggested SOC and TN
-accumulations in wet soils typically located below croplands. Results
-suggest slow improvement in agricultural soils. However, resampling has
-not been broadly undertaken for NSCD soil profiles, hence use of this
-database to detect soil change should be approached cautiously.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2018/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 23, 2018.&lt;/p&gt;
   </content>
 </entry>
 
