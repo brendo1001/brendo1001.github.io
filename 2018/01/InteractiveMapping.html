@@ -147,7 +147,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~16 minutes
+          Reading time ~17 minutes
         </p><!-- /.entry-reading-time -->
         
       </div><!-- /.header-title-wrap -->
@@ -172,17 +172,17 @@ package is <a href="https://rstudio.github.io/leaflet/">here</a>.</p>
 
 <p>There is a common workflow for creating Leaflet maps in R. First is the
 creation of a map widget (calling ); followed by the adding of layers or
-features to the map by using layer functions (e.g. <code>addTiles</code>,
-<code>addMarkers</code>, <code>addPolygons</code>) to modify the map widget. The map can then
+features to the map by using layer functions (e.g. <code class="highlighter-rouge">addTiles</code>,
+<code class="highlighter-rouge">addMarkers</code>, <code class="highlighter-rouge">addPolygons</code>) to modify the map widget. The map can then
 be printed and visualized in the R image window or saved to HTML file
 for visualization within a web browser or even embed it into a website
 like the one you are reading. The following R script is a quick taste of
-creating an interactive Leaflet map. It is assumed that the <code>leaflet</code>
-and <code>magrittr</code> packages are installed.</p>
+creating an interactive Leaflet map. It is assumed that the <code class="highlighter-rouge">leaflet</code>
+and <code class="highlighter-rouge">magrittr</code> packages are installed.</p>
 
 <p>First lets get our workflow initialised by loading up our R packages.</p>
 
-<pre><code># Required R Packages
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Required R Packages
 library(leaflet)
 library(magrittr)
 library(ithir)
@@ -190,7 +190,7 @@ library(sp)
 library(raster)
 library(RColorBrewer)
 library(rgdal)
-</code></pre>
+</code></pre></div></div>
 
 <h3 id="point-data">Point Data</h3>
 
@@ -198,7 +198,7 @@ library(rgdal)
 collected from the Hunter Valley, NSW in 2010 called . This data set is
 contained in the package. So first load it in:</p>
 
-<pre><code>data(HV100)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data(HV100)
 str(HV100)
 
 ## 'data.frame':    100 obs. of  6 variables:
@@ -208,13 +208,13 @@ str(HV100)
 ##  $ OC  : num  2.03 2.6 3.42 4.1 3.04 4.07 2.95 3.1 4.59 1.77 ...
 ##  $ EC  : num  0.129 0.085 0.036 0.081 0.104 0.138 0.07 0.097 0.114 0.031 ...
 ##  $ pH  : num  6.9 5.1 5.9 6.3 6.1 6.4 5.9 5.5 5.7 6 ...
-</code></pre>
+</code></pre></div></div>
 
-<p>Using the <code>coordinates</code> function from the <code>sp</code> package we can define
+<p>Using the <code class="highlighter-rouge">coordinates</code> function from the <code class="highlighter-rouge">sp</code> package we can define
 which columns in the data frame refer to actual spatial coordinates—
-here the coordinates are listed in columns <code>x</code> and <code>y</code>.</p>
+here the coordinates are listed in columns <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.</p>
 
-<pre><code>coordinates(HV100) &lt;- ~x + y
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coordinates(HV100) &lt;- ~x + y
 str(HV100)
 
 ## Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots
@@ -234,95 +234,95 @@ str(HV100)
 ##   .. .. ..$ : chr [1:2] "min" "max"
 ##   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot
 ##   .. .. ..@ projargs: chr NA
-</code></pre>
+</code></pre></div></div>
 
-<p>Note now that by using the <code>str</code> function, the class of <code>HV100</code> has now
-changed from a <code>dataframe</code> to a <code>SpatialPointsDataFrame</code>. The
-<code>SpatialPointsDataFrame</code> structure is essentially the same data frame,
-except that additional spatial elements have been added or partitioned into slots. Some important ones being the bounding box (sort of like the spatial extent of the data), and the coordinate reference system (<code>proj4string</code>), which we need to define for our data set. To define the CRS, we have to know some things about where our data are from, and what was the corresponding CRS used when recording the spatial information in the field. For this data set the CRS used was WGS1984 UTM Zone 56. To explicitly tell R this information we define the CRS as a character string which describes a reference system in a way understood by the <a href="http://trac.osgeo.org/proj/">PROJ.4 projection library</a>. An interface to the PROJ.4 library is available in the<code>rgdal</code>package. Alternative to using Proj4 character strings, we can use the corresponding yet simpler EPSG code (European Petroleum Survey Group).<code>rgdal</code>
+<p>Note now that by using the <code class="highlighter-rouge">str</code> function, the class of <code class="highlighter-rouge">HV100</code> has now
+changed from a <code class="highlighter-rouge">dataframe</code> to a <code class="highlighter-rouge">SpatialPointsDataFrame</code>. The
+<code class="highlighter-rouge">SpatialPointsDataFrame</code> structure is essentially the same data frame,
+except that additional spatial elements have been added or partitioned into slots. Some important ones being the bounding box (sort of like the spatial extent of the data), and the coordinate reference system (<code class="highlighter-rouge">proj4string</code>), which we need to define for our data set. To define the CRS, we have to know some things about where our data are from, and what was the corresponding CRS used when recording the spatial information in the field. For this data set the CRS used was WGS1984 UTM Zone 56. To explicitly tell R this information we define the CRS as a character string which describes a reference system in a way understood by the <a href="http://trac.osgeo.org/proj/">PROJ.4 projection library</a>. An interface to the PROJ.4 library is available in the<code class="highlighter-rouge">rgdal</code>package. Alternative to using Proj4 character strings, we can use the corresponding yet simpler EPSG code (European Petroleum Survey Group).<code class="highlighter-rouge">rgdal</code>
 also recognizes these codes. If you are unsure of the Proj4 or EPSG code
 for the spatial data that you have, but know the CRS, you should consult
 <a href="http://spatialreference.org/">Spatial Reference</a> for assistance. The
 EPSG code for WGS1984 UTM Zone 56 is: 32556. So lets define to CRS for
 this data.</p>
 
-<pre><code>proj4string(HV100) &lt;- CRS("+init=epsg:32756")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proj4string(HV100) &lt;- CRS("+init=epsg:32756")
 HV100@proj4string
 
 ## CRS arguments:
 ##  +init=epsg:32756 +proj=utm +zone=56 +south +datum=WGS84 +units=m
 ## +no_defs +ellps=WGS84 +towgs84=0,0,0
-</code></pre>
+</code></pre></div></div>
 
 <p>To look at the locations of the data in Google Earth, we first need to
 make sure the data is in the WGS84 geographic CRS. If the data is not in
 this CRS (which is not the case for this data), then we need to perform
 a coordinate transformation. This is facilitated by using the
-<code>spTransform</code> function in <code>sp</code>. The EPSG code for WGS84 geographic is:</p>
+<code class="highlighter-rouge">spTransform</code> function in <code class="highlighter-rouge">sp</code>. The EPSG code for WGS84 geographic is:</p>
 <ol>
   <li>We can then export out our transformed HV100 data set to a KML
 file and visualize it in Google Earth. We will use it later for our
 interactive web mapping.</li>
 </ol>
 
-<pre><code>HV100.ll &lt;- spTransform(HV100, CRS("+init=epsg:4326"))
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HV100.ll &lt;- spTransform(HV100, CRS("+init=epsg:4326"))
 #Export KML
 #writeOGR(HV100.ll, "HV100.kml", "ID", "KML")
-</code></pre>
+</code></pre></div></div>
 
 <h3 id="rasters">Rasters</h3>
 
 <p>Most of the functions needed for handling raster data are contained in
-the <code>raster</code> package. There are functions for reading and writing raster
+the <code class="highlighter-rouge">raster</code> package. There are functions for reading and writing raster
 files from and to different raster formats. In DSM we work quite a deal
 with data in table format and then rasterise this data so that we can
-make a map. To do this in R, lets bring in a <code>data frame</code>. This could be
+make a map. To do this in R, lets bring in a <code class="highlighter-rouge">data frame</code>. This could be
 either from a text-file, but as for the previous occasions the data is
-imported from the <code>ithir</code> package. This data is a digital elevation
+imported from the <code class="highlighter-rouge">ithir</code> package. This data is a digital elevation
 model with 100m grid resolution, from the Hunter Valley, NSW, Australia.</p>
 
-<pre><code>data(HV_dem)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data(HV_dem)
 str(HV_dem)
 
 ## 'data.frame':    21518 obs. of  3 variables:
 ##  $ X        : num  340210 340310 340110 340210 340310 ...
 ##  $ Y        : num  6362641 6362641 6362741 6362741 6362741 ...
 ##  $ elevation: num  177 175 178 172 173 ...
-</code></pre>
+</code></pre></div></div>
 
 <p>As the data is already a raster (such that the row observation indicate
 locations on a regular spaced grid), but in a table format, we can just
-use the <code>rasterFromXYZ</code> function from <code>raster</code>. Also we can define the
-CRS just like we did with the <code>HV100</code> point data we worked with before.</p>
+use the <code class="highlighter-rouge">rasterFromXYZ</code> function from <code class="highlighter-rouge">raster</code>. Also we can define the
+CRS just like we did with the <code class="highlighter-rouge">HV100</code> point data we worked with before.</p>
 
-<pre><code>r.DEM &lt;- rasterFromXYZ(HV_dem)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>r.DEM &lt;- rasterFromXYZ(HV_dem)
 proj4string(r.DEM) &lt;- CRS("+init=epsg:32756")
-</code></pre>
+</code></pre></div></div>
 
 <p>For web mapping and associated Google Earth mapping, remember that we
 need to reproject our data because it is in the UTM system, and need to
 get it to WGS84 geographic. The raster re-projection is performed using
-the <code>projectRaster</code> function. Look at the help file for this function.
-Probably the most important parameters are <code>crs</code>, which takes the CRS
+the <code class="highlighter-rouge">projectRaster</code> function. Look at the help file for this function.
+Probably the most important parameters are <code class="highlighter-rouge">crs</code>, which takes the CRS
 string of the projection you want to convert the existing raster to,
-assuming it already has a defined CRS. The other is <code>method</code> which
+assuming it already has a defined CRS. The other is <code class="highlighter-rouge">method</code> which
 controls the interpolation method. For continuous data,
-<code>bilinear</code> would be suitable, but for categorical,<code>ngb</code>, (which is
+<code class="highlighter-rouge">bilinear</code> would be suitable, but for categorical,<code class="highlighter-rouge">ngb</code>, (which is
 nearest neighbor interpolation) is probably better suited.</p>
 
-<pre><code>p.r.DEM &lt;- projectRaster(r.DEM, crs = "+init=epsg:4326", method = "bilinear")
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p.r.DEM &lt;- projectRaster(r.DEM, crs = "+init=epsg:4326", method = "bilinear")
+</code></pre></div></div>
 
 <h3 id="interactive-mapping">Interactive Mapping</h3>
 
 <p>Now we have our data. Lets first provide an example of what is meant by
 an interactive map. Explaination is to follow.</p>
 
-<pre><code>leaflet() %&gt;% 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>leaflet() %&gt;% 
   addMarkers(lng = 151.210558, lat = -33.852543, 
     popup = "The view from here is amazing!") %&gt;% 
   addProviderTiles("Esri.WorldImagery") 
-</code></pre>
+</code></pre></div></div>
 
 <html>
 <head>
@@ -350,13 +350,13 @@ an interactive map. Explaination is to follow.</p>
 <p>Interactive features of this map include markers with text, plus ability
 to zoom and map panning. More will be discussed about the layer
 functions of the leaflet map further on. What has not been encountered
-yet is the forward pipe operator <code>%&gt;%</code>. This operator will forward a
+yet is the forward pipe operator <code class="highlighter-rouge">%&gt;%</code>. This operator will forward a
 value, or the result of an expression, into the next function call or
-expression. To use this operator the <code>magrittr</code> package is required. The
+expression. To use this operator the <code class="highlighter-rouge">magrittr</code> package is required. The
 example script below shows the same example using and not using the
 forward pipe operator.</p>
 
-<pre><code>#Draw 100 random uniformly distributed numbers between 0 and 1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Draw 100 random uniformly distributed numbers between 0 and 1
 x &lt;- runif(100)
 
 sqrt(sum(range(x)))
@@ -367,17 +367,17 @@ sqrt(sum(range(x)))
 x %&gt;% range %&gt;% sum %&gt;% sqrt
 
 ## [1] 1.005229
-</code></pre>
+</code></pre></div></div>
 
 <p>Sometimes what we want to do in R can get lost within a jumble of
 brackets, whereas using the forward pipe operator the process of
 operations is a lot clearer. So lets begin to construct some Leaflet
 mapping using our prepared data from a little earlier regarding the
-point (<code>HV100.ll</code>) and raster data (<code>p.r.DEM</code>). Firstly, lets create a
+point (<code class="highlighter-rouge">HV100.ll</code>) and raster data (<code class="highlighter-rouge">p.r.DEM</code>). Firstly, lets create a
 basic map — example of not using and then using the forward pipe
 operator.</p>
 
-<pre><code># Basic map
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Basic map
 #without piping operator
 addMarkers(addTiles(leaflet()), data = HV100.ll)
 
@@ -385,7 +385,7 @@ addMarkers(addTiles(leaflet()), data = HV100.ll)
 leaflet() %&gt;%  
   addTiles() %&gt;% 
   addMarkers(data = HV100.ll)
-</code></pre>
+</code></pre></div></div>
 
 <html>
 <head>
@@ -409,26 +409,26 @@ leaflet() %&gt;%
 </html>
 
 <p>With the above, we are calling upon a pre-existing base map via the
-<code>addTiles()</code> function. Leaflet supports base maps using map tiles,
+<code class="highlighter-rouge">addTiles()</code> function. Leaflet supports base maps using map tiles,
 popularized by Google Maps and now used by nearly all interactive web
 maps. By default,
 <a href="https://www.openstreetmap.org/#map=13/-33.7760/150.6528&amp;layers=C">OpenStreetMap</a>
 tiles are used. Alternatively, many popular free third-party base maps
-can be added using the <code>addProviderTiles()</code> function, which is
+can be added using the <code class="highlighter-rouge">addProviderTiles()</code> function, which is
 implemented using the leaflet-providers plugin. For example, previously
-we used the <code>Esri.WorldImagery</code> base mapping. The full set of possible
+we used the <code class="highlighter-rouge">Esri.WorldImagery</code> base mapping. The full set of possible
 base maps can be found
 <a href="http://leaflet-extras.github.io/leaflet-providers/preview/index.html">here</a>.
 Note that an internet connection is required for access to the base maps
-and map tiling. The last function used above the the <code>addMarkers</code>
+and map tiling. The last function used above the the <code class="highlighter-rouge">addMarkers</code>
 function, we we simply call up the point data we used previously, which
 are those soil point observations and measurements from the Hunter
 Valley, NSW. A basic map will have been created with your plot window.
 For the next step, lets populate the markers we have created with some
-of the data that was measured, then add the <code>Esri.WorldImagery</code> base
+of the data that was measured, then add the <code class="highlighter-rouge">Esri.WorldImagery</code> base
 mapping.</p>
 
-<pre><code># Populate pop-ups
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Populate pop-ups
 my_pops &lt;- paste0(
   "&lt;strong&gt;Site: &lt;/strong&gt;", 
   HV100.ll$site,
@@ -444,14 +444,14 @@ my_pops &lt;- paste0(
 leaflet() %&gt;% 
   addProviderTiles("Esri.WorldImagery") %&gt;% 
   addMarkers(data = HV100.ll, popup = my_pops)
-</code></pre>
+</code></pre></div></div>
 
 <p>Further, we can colour the markers and add a map legend. Here we will
 get the quantiles of the measured SOC percentage and color the markers
 accordingly. Note that you will need the colour ramp package
-<code>RColorBrewer</code> installed.</p>
+<code class="highlighter-rouge">RColorBrewer</code> installed.</p>
 
-<pre><code># Colour ramp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Colour ramp
 pal1 &lt;- colorQuantile("YlOrBr", domain = HV100.ll$OC)
 
 # Create interactive map
@@ -462,9 +462,9 @@ leaflet() %&gt;%
             title = "Soil Organic Carbon (%) quantiles",
             opacity = 0.8
   )
-</code></pre>
+</code></pre></div></div>
 
-<p>It is very worth consulting the help files associated with the <code>leaflet</code>
+<p>It is very worth consulting the help files associated with the <code class="highlighter-rouge">leaflet</code>
 R package for further tips on creating further customized maps. The
 website dedicated to that package, which was mentioned above is also a
 very helpful resource too.</p>
@@ -472,7 +472,7 @@ very helpful resource too.</p>
 <p>Raster maps can also be featured in our interactive mapping too, as
 illustrated in the following script.</p>
 
-<pre><code>#Colour ramp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Colour ramp
 pal2 &lt;- colorNumeric(
   brewer.pal(n = 9, name = "YlOrBr"), 
   domain = values(p.r.DEM), 
@@ -486,7 +486,7 @@ leaflet() %&gt;%
   addLegend("topright", opacity=0.8, pal = pal2, values = values(p.r.DEM), 
             title = "Elevation")
   )
-</code></pre>
+</code></pre></div></div>
 
 <html>
 <head>
@@ -514,7 +514,7 @@ leaflet() %&gt;%
 <p>Lastly, we can create an interactive map that allows us to switch
 between the different mapping that we have created.</p>
 
-<pre><code>#layer switching
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#layer switching
 leaflet() %&gt;% 
   addTiles(group = "OSM (default)") %&gt;%
   addProviderTiles("Esri.WorldImagery") %&gt;% 
@@ -526,7 +526,7 @@ leaflet() %&gt;%
   addLayersControl(
     baseGroups = c("OSM (default)", "Imagery"),
     overlayGroups = c("points", "raster"))
-</code></pre>
+</code></pre></div></div>
 
 <html>
 <head>
@@ -553,11 +553,11 @@ leaflet() %&gt;%
 
 <p>With the created interactive mapping, we can then export these as a web
 page in HTML format. This can be done via the export menu within the
-R-Studio plot window, where you want to select the option for <code>Save
+R-Studio plot window, where you want to select the option for <code class="highlighter-rouge">Save
 as Web page</code>. This file can then be easily shared and viewed by your
 colleagues.</p>
 
-<p>These examples above are just scraping the top of what can be done with interactive maps. Later on i might follow up with examples using new R packages such as <code>mapview</code> and <code>sf</code> which from what i have read about seem to make things much easier.</p>
+<p>These examples above are just scraping the top of what can be done with interactive maps. Later on i might follow up with examples using new R packages such as <code class="highlighter-rouge">mapview</code> and <code class="highlighter-rouge">sf</code> which from what i have read about seem to make things much easier.</p>
 
 
       <footer class="entry-meta">
@@ -581,19 +581,19 @@ colleagues.</p>
     </div><!-- /.read-more-header -->
     <div class="read-more-content">
       <h3><a href="/2019/02/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h3>
-      <p>## Journal Paper Digests 2019 #2* Land-use and species tipping points in a coupled ecological-economic model* Biodiversity and robustness...&hellip; <a href="/2019/02/journalDigest">Continue reading</a></p>
+      <p>## Journal Paper Digests 2019 #3* The minimum level for soil allocation using topsoil reflectance spectra: Genus or species?* Deconstruct...&hellip; <a href="/2019/02/journalDigest">Continue reading</a></p>
     </div><!-- /.read-more-content -->
   
   <div class="read-more-list">
     
       <div class="list-item">
-        <h4><a href="/2019/01/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
-        <span>Published on January 04, 2019</span>
+        <h4><a href="/2019/02/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
+        <span>Published on February 01, 2019</span>
       </div><!-- /.list-item -->
     
       <div class="list-item">
-        <h4><a href="/2018/12/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
-        <span>Published on December 18, 2018</span>
+        <h4><a href="/2019/01/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
+        <span>Published on January 04, 2019</span>
       </div><!-- /.list-item -->
     
   </div><!-- /.read-more-list -->
