@@ -153,9 +153,7 @@
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <p>I have always had some interest or wonder into what and how websites are powered. Like where is all this content stored? And how is it all organised? Only recently these questions were more-or-less answered for me.</p>
-
-<p><strong><em>Update: (20190102)</em></strong> Some addtional links provided to help install Jekyll</p>
+      <p>I have always had some interest or wonder into what and how websites are powered. Like where is all this content stored? And how is it all organised? Only recently these questions were more-or-less answered for me. This blog provides a pipeline of work to create, set up and deploy a functional website.</p>
 
 <!--more-->
 
@@ -176,13 +174,11 @@
 <h2 id="1-creating-a-website">1. Creating a Website</h2>
 <hr />
 
-<p><strong>UPDATE: 2019.01.02 Addtional website links</strong></p>
-
 <p>Jekyll i have found is a really cool tool to quickly generate a website. Jekyll is a simple static site generator. Using Jekyll is a very common way of generating a “ready-to-publish static website” within seconds. You can learn more about <a href="https://jekyllrb.com/">Jekyll</a> here.</p>
 
 <p>This post just demonstrates the process of using Jekyll to generate a static website quickly then focus on deploying it. You could use any sort of content you wish however and still follow the steps of deployment covered later on. Just make sure that your HTML is inside of a file called index.html. You can go ahead and create your own static site from scratch, but that is not for me. I am just going to do something simple, but bear in mind there is a vast array of <a href="http://jekyllthemes.org/">Jekyll Themes</a> to tickle anyone’s fancy. The use of Github here is necessary though, as you can just select the theme of your choice, clone it onto your computer, then begin filling it with your own content.</p>
 
-<p>One catch is that Windows is not an officially supported platform for Jekyll. Consequently everything i do from here using Jekyll was development on Ubuntu 16.04. Before you install Jekyll, what you are going to need first is to install Ruby. More info on how to do this can be found at <a href="https://www.brightbox.com/docs/ruby/ubuntu/">brightbox</a>. There maybe a few other software to install as well, so after you install Ruby you can then check out the <a href="https://jekyllrb.com/docs/installation/">Jekyll install instructions</a>. Further helpful links for installing other possible denpendencies can be found <a href="https://stackoverflow.com/questions/32459990/unable-to-install-json-1-8-3-in-ruby-2-2-1?lq=1">here</a>. Then in your terminal you can do:</p>
+<p>One catch is that Windows is not an officially supported platform for Jekyll. Consequently everything i do from here using Jekyll was development on Ubuntu 16.04. Before you install Jekyll, what you are going to need first is to install Ruby. More info on how to do this can be found at <a href="https://www.brightbox.com/docs/ruby/ubuntu/">brightbox</a>. There maybe a few other software to install as well, so after you install Ruby you can then check out the <a href="https://jekyllrb.com/docs/installation/">Jekyll install instructions</a>. Further helpful links for installing other possible denpendencies can be found <a href="https://stackoverflow.com/questions/32459990/unable-to-install-json-1-8-3-in-ruby-2-2-1?lq=1">here</a>. You will note from all these addtional resources and help that getting Ruby and Jekyll installed can be tedious and varies on a use by use basis. Then in your terminal you can do:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">gem</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">jekyll</span><span class="w">
 </span></code></pre></div></div>
@@ -300,10 +296,12 @@ In your AWS account Access Route 53 again. On the left side of the page, click o
 
 <p><strong>Important Instructions</strong>
 Inside of your Hosted Zone, click on the button at the top labeled “Create Record Set.” A form will appear to the right. Leave the “Name:” field blank. Set the “Type:” field to A - IPv4 address.
-Leave the “TTL (Seconds)” value at the default of 300. In the “Value” text box, enter the following IP addresses (keep them on separate lines): (UPDATE: THESE IP ADDRESSES NEED TO CHANGE)</p>
+Leave the “TTL (Seconds)” value at the default of 300. In the “Value” text box, enter the following IP addresses (keep them on separate lines and note that these IP addresses were only from the orginals ones listed from about 2018):</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">192.30.252.153</span><span class="w">
-</span><span class="m">192.30.252.154</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">185.199.108.153</span><span class="w">
+</span><span class="m">185.199.109.153</span><span class="w">
+</span><span class="m">185.199.110.153</span><span class="w">
+</span><span class="m">185.199.111.153</span><span class="w">
 </span></code></pre></div></div>
 <p>These IP addresses belong to GitHub. We are specifying that when your custom domain name is requested, the DNS should direct the request to GitHub. Read more information about this <a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider">here</a>. Click the “Save Record Set” button at the bottom of the form.</p>
 
@@ -344,7 +342,7 @@ Try opening your website using your root domain in the web browser. You should s
 
       <footer class="entry-meta">
         <span class="entry-tags"><a href="/tags/#Website" title="Pages tagged Website" class="tag"><span class="term">Website</span></a><a href="/tags/#Markdown" title="Pages tagged Markdown" class="tag"><span class="term">Markdown</span></a><a href="/tags/#Hackathon" title="Pages tagged Hackathon" class="tag"><span class="term">Hackathon</span></a><a href="/tags/#Open Source" title="Pages tagged Open Source" class="tag"><span class="term">Open Source</span></a></span>
-        <span>Updated on <span class="entry-date date updated"><time datetime="2016-11-17">November 17, 2016</time></span></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2019-03-22">March 22, 2019</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
@@ -362,20 +360,20 @@ Try opening your website using your root domain in the web browser. You should s
       <a href="" class="read-more-btn">Read More</a>
     </div><!-- /.read-more-header -->
     <div class="read-more-content">
-      <h3><a href="/2019/03/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h3>
-      <p>## Journal Paper Digests 2019 #5* Evaluation of Parametric and Nonparametric Machine-Learning Techniques for Prediction of Saturated and ...&hellip; <a href="/2019/03/journalDigest">Continue reading</a></p>
+      <h3><a href="/2019/03/CLHS_addition" title="Taking existing samples into consideration when planning an addtional sampling campaign">Taking existing samples into consideration when planning an addtional sampling campaign</a></h3>
+      <p>You have an exisitng collection of sample data from a given spatial domain. You want to collect some new samples from this spatial domain...&hellip; <a href="/2019/03/CLHS_addition">Continue reading</a></p>
     </div><!-- /.read-more-content -->
   
   <div class="read-more-list">
     
       <div class="list-item">
-        <h4><a href="/2019/02/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
-        <span>Published on February 19, 2019</span>
+        <h4><a href="/2019/03/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
+        <span>Published on March 14, 2019</span>
       </div><!-- /.list-item -->
     
       <div class="list-item">
         <h4><a href="/2019/02/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h4>
-        <span>Published on February 18, 2019</span>
+        <span>Published on February 19, 2019</span>
       </div><!-- /.list-item -->
     
   </div><!-- /.read-more-list -->
