@@ -1,0 +1,1009 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>R Literacy &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Part 5">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="R Literacy">
+<meta name="twitter:description" content="Part 5">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R Literacy">
+<meta property="og:description" content="Part 5">
+<meta property="og:url" content="/DSM_book/pages/r_literacy/part5/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_literacy/part5/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>R Literacy</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Part 5</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">R Literacy</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~28 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part5.R">here</a> and harcopy documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part5.pdf">here</a></p>
+
+<h2 id="manipulating-data">Manipulating data</h2>
+
+<h3 id="modes-classes-attributes-length-and-coercion">Modes, classes, attributes, length, and coercion</h3>
+
+<p>As described before, the mode of an object describes the type of data
+that it contains. In <code class="highlighter-rouge">R</code>, mode is an object attribute. All objects have
+at least two attributes: mode and length, but may objects have more.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="w">
+    </span><span class="n">mode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] "numeric"</span><span class="w">
+
+    </span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is often necessary to change the mode of a data structure, e.g., to
+have your data displayed differently, or to apply a function that only
+works with a particular type of data structure. In <code class="highlighter-rouge">R</code> this is called
+coercion. There are many functions in <code class="highlighter-rouge">R</code> that have the structure
+<code class="highlighter-rouge">as.something</code> that change the mode of a submitted object to
+‘something’. For example, say you want to treat numeric data as
+character data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="w">
+    </span><span class="nf">as.character</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##  [1] "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Or, you may want to turn a matrix into a data frame.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+    </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##   V1 V2 V3 V4 V5 V6 V7 V8 V9 V10</span><span class="w">
+    </span><span class="c1">## 1  1  4  7 10 13 16 19 22 25  28</span><span class="w">
+    </span><span class="c1">## 2  2  5  8 11 14 17 20 23 26  29</span><span class="w">
+    </span><span class="c1">## 3  3  6  9 12 15 18 21 24 27  30</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you are unsure of whether or not a coercion function exists, give it
+a try—two other common examples are <code class="highlighter-rouge">as.numeric</code> and <code class="highlighter-rouge">as.vector</code>.</p>
+
+<p>Attributes are important internally for determining how objects should
+be handled by various functions. In particular, the <code class="highlighter-rouge">class</code> attribute
+determines how a particular object will be handled by a given function.
+For example, output from a linear regression has the class <code class="highlighter-rouge">lm</code> and will
+be handled differently by the <code class="highlighter-rouge">print</code> function than will a data frame,
+which has the class <code class="highlighter-rouge">data.frame</code>. The utility of this object-orientated
+approach will become more apparent later on.</p>
+
+<p>It is often necessary to know the length of an object. Of course, length
+can mean different things. Three useful functions for this are <code class="highlighter-rouge">nrow</code>,
+<code class="highlighter-rouge">NROW</code>, and <code class="highlighter-rouge">length</code>.</p>
+
+<p>The function <code class="highlighter-rouge">nrow</code> will return the number of rows in a two-dimensional
+data structure.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+    </span><span class="n">X</span><span class="w">
+
+    </span><span class="c1">##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]</span><span class="w">
+    </span><span class="c1">## [1,]    1    4    7   10   13   16   19   22   25    28</span><span class="w">
+    </span><span class="c1">## [2,]    2    5    8   11   14   17   20   23   26    29</span><span class="w">
+    </span><span class="c1">## [3,]    3    6    9   12   15   18   21   24   27    30</span><span class="w">
+
+    </span><span class="n">nrow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The vertical analog is <code class="highlighter-rouge">ncol</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">ncol</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can get both of these at once with the <code class="highlighter-rouge">dim</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">dim</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1]  3 10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For a vector, use the function <code class="highlighter-rouge">NROW</code> or <code class="highlighter-rouge">length</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="w">
+    </span><span class="n">NROW</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The value returned from the function <code class="highlighter-rouge">length</code> depends on the type of
+data structure you submit, but for most data structures, it is the total
+number of elements.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">length</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 30</span><span class="w">
+
+    </span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 10</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="indexing-sub-setting-sorting-and-locating-data">Indexing, sub-setting, sorting, and locating data</h3>
+
+<p>Sub-setting and indexing are ways to select specific parts of the data
+structure (such as specific rows within a data frame) within <code class="highlighter-rouge">R</code>.
+Indexing (also know as sub-scripting) is done using the square braces in
+<code class="highlighter-rouge">R</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w">
+    </span><span class="n">v</span><span class="m">1</span><span class="w">
+
+    </span><span class="c1">## [1] 5 1 3 8</span><span class="w">
+
+    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">R</code> is very flexible in terms of what can be selected or excluded. For
+example, the following returns the 1<sup><em>s**t</em></sup> through
+3<sup><em>r**d</em></sup> observation:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 5 1 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>While this returns all but the 4<sup><em>t**h</em></sup> observation:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">-4</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 5 1 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This bracket notation can also be used with relational constraints. For
+example, if we want only those observations that are less than 5:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 1 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This may seem confusing, but if we evaluate each piece separately, it
+becomes more clear:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5</span><span class="w">
+
+    </span><span class="c1">## [1] FALSE  TRUE  TRUE FALSE</span><span class="w">
+
+    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)]</span><span class="w">
+
+    </span><span class="c1">## [1] 1 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>While we are on the topic of subscripts, we should note that, unlike
+some other programming languages, the size of a vector in <code class="highlighter-rouge">R</code> is not
+limited by its initial assignment. This is true for other data
+structures as well. To increase the size of a vector, just assign a
+value to a position that does not currently exist:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">length</span><span class="p">(</span><span class="n">v</span><span class="m">1</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 4</span><span class="w">
+
+    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w">
+    </span><span class="nf">length</span><span class="p">(</span><span class="n">v</span><span class="m">1</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 8</span><span class="w">
+
+    </span><span class="n">v</span><span class="m">1</span><span class="w">
+
+    </span><span class="c1">## [1]  5  1  3  8 NA NA NA 10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Indexing can be applied to other data structures in a similar manner as
+shown above. For data frames and matrices, however, we are now working
+with two dimensions. In specifying indices, row numbers are given first.
+We will use our <code class="highlighter-rouge">soil.data</code> set to illustrate the following few
+examples:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+    </span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">USYD_soil1</span><span class="w">
+    </span><span class="nf">dim</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 166  16</span><span class="w">
+
+    </span><span class="n">str</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## 'data.frame':    166 obs. of  16 variables:</span><span class="w">
+    </span><span class="c1">##  $ PROFILE     : int  1 1 1 1 1 1 2 2 2 2 ...</span><span class="w">
+    </span><span class="c1">##  $ Landclass   : Factor w/ 4 levels "Cropping","Forest",..: 4 4 4 4 4 4 3 3 3 3 ...</span><span class="w">
+    </span><span class="c1">##  $ Upper.Depth : num  0 0.02 0.05 0.1 0.2 0.7 0 0.02 0.05 0.1 ...</span><span class="w">
+    </span><span class="c1">##  $ Lower.Depth : num  0.02 0.05 0.1 0.2 0.3 0.8 0.02 0.05 0.1 0.2 ...</span><span class="w">
+    </span><span class="c1">##  $ clay        : int  8 8 8 8 NA 57 9 9 9 NA ...</span><span class="w">
+    </span><span class="c1">##  $ silt        : int  9 9 10 10 10 8 10 10 10 10 ...</span><span class="w">
+    </span><span class="c1">##  $ sand        : int  83 83 82 83 79 36 81 80 80 81 ...</span><span class="w">
+    </span><span class="c1">##  $ pH_CaCl2    : num  6.35 6.34 4.76 4.51 4.64 6.49 5.91 5.94 5.63 4.22 ...</span><span class="w">
+    </span><span class="c1">##  $ Total_Carbon: num  1.07 0.98 0.73 0.39 0.23 0.35 1.14 1.14 1.01 0.48 ...</span><span class="w">
+    </span><span class="c1">##  $ EC          : num  0.168 0.137 0.072 0.034 NA 0.059 0.123 0.101 0.026 0.042 ...</span><span class="w">
+    </span><span class="c1">##  $ ESP         : num  0.3 0.5 0.9 0.2 0.9 0.3 0.3 0.6 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchNa      : num  0.01 0.02 0.02 0 0.02 0.04 0.01 0.02 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchK       : num  0.71 0.47 0.52 0.38 0.43 0.46 0.7 0.56 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchCa      : num  3.17 3.5 1.34 1.03 1.5 9.13 2.92 3.2 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchMg      : num  0.59 0.6 0.22 0.22 0.5 5.02 0.51 0.5 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ CEC         : num  5.29 3.7 2.86 2.92 2.6 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If we want to subset out only the first 5 rows, and the first 2 columns:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">##   PROFILE      Landclass</span><span class="w">
+    </span><span class="c1">## 1       1 native pasture</span><span class="w">
+    </span><span class="c1">## 2       1 native pasture</span><span class="w">
+    </span><span class="c1">## 3       1 native pasture</span><span class="w">
+    </span><span class="c1">## 4       1 native pasture</span><span class="w">
+    </span><span class="c1">## 5       1 native pasture</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If an index is left out, <code class="highlighter-rouge">R</code> returns all values in that dimension (you
+need to include the comma).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">##   PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 1       1 native pasture        0.00        0.02    8    9   83     6.35</span><span class="w">
+    </span><span class="c1">## 2       1 native pasture        0.02        0.05    8    9   83     6.34</span><span class="w">
+    </span><span class="c1">##   Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg  CEC</span><span class="w">
+    </span><span class="c1">## 1         1.07 0.168 0.3   0.01  0.71   3.17   0.59 5.29</span><span class="w">
+    </span><span class="c1">## 2         0.98 0.137 0.5   0.02  0.47   3.50   0.60 3.70</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can also specify row or column names directly within the brackets.
+This can be very handy when column order may change in future versions
+of your code.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="s2">"Total_Carbon"</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 1.07 0.98 0.73 0.39 0.23</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can also specify multiple column names using the <code class="highlighter-rouge">c</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Total_Carbon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CEC"</span><span class="p">)]</span><span class="w">
+
+    </span><span class="c1">##   Total_Carbon  CEC</span><span class="w">
+    </span><span class="c1">## 1         1.07 5.29</span><span class="w">
+    </span><span class="c1">## 2         0.98 3.70</span><span class="w">
+    </span><span class="c1">## 3         0.73 2.86</span><span class="w">
+    </span><span class="c1">## 4         0.39 2.92</span><span class="w">
+    </span><span class="c1">## 5         0.23 2.60</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Relational constraints can also be used in indexes. Lets subset out the
+soil observations that are extremely sodic i.e an ESP greater than 10%.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="p">[</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+
+    </span><span class="c1">##     PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 68       12         Forest        0.02        0.05   22   13   64     4.65</span><span class="w">
+    </span><span class="c1">## 111      19 native pasture        0.16        0.26   32   13   56     6.10</span><span class="w">
+    </span><span class="c1">## 113      20       Cropping        0.00        0.02    9    9   81     4.64</span><span class="w">
+    </span><span class="c1">## 117      20       Cropping        0.30        0.40   37    7   56     6.30</span><span class="w">
+    </span><span class="c1">## 118      20       Cropping        0.70        0.80   20   14   67     7.17</span><span class="w">
+    </span><span class="c1">## 123      21       Cropping        0.25        0.35   25   16   59     5.05</span><span class="w">
+    </span><span class="c1">## 147      26       Cropping        0.15        0.24   51    8   42     6.27</span><span class="w">
+    </span><span class="c1">## 148      26       Cropping        0.70        0.80   50    9   40     7.81</span><span class="w">
+    </span><span class="c1">##     Total_Carbon    EC  ESP ExchNa ExchK ExchCa ExchMg   CEC</span><span class="w">
+    </span><span class="c1">## 68          1.49 0.499 13.0   1.00  0.74   2.17   3.76  6.85</span><span class="w">
+    </span><span class="c1">## 111         0.50 0.223 17.4   2.62  0.30   3.74   8.37 11.97</span><span class="w">
+    </span><span class="c1">## 113         1.08 0.301 11.1   0.31  0.87   1.01   0.63  3.02</span><span class="w">
+    </span><span class="c1">## 117         0.32 0.214 12.1   1.66  0.27   4.19   7.61 12.44</span><span class="w">
+    </span><span class="c1">## 118         0.09 0.292 21.2   2.88  0.33   2.86   7.50 10.23</span><span class="w">
+    </span><span class="c1">## 123         0.25 0.073 13.2   0.95  0.30   2.00   3.92  5.29</span><span class="w">
+    </span><span class="c1">## 147         0.63 0.134 10.4   2.09  0.74   5.09  12.23 14.29</span><span class="w">
+    </span><span class="c1">## 148         0.84 0.820 16.4   4.93  0.91   7.52  16.72 23.34</span><span class="w">
+</span></code></pre></div></div>
+
+<p>While indexing can clearly be used to create a subset of data that meet
+certain criteria, the <code class="highlighter-rouge">subset</code> function is often easier and shorter to
+use for data frames. Sub-setting is used to select a subset of a vector,
+data frame, or matrix that meets a certain criterion (or criteria). To
+return what was given in the last example.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">subset</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##     PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 68       12         Forest        0.02        0.05   22   13   64     4.65</span><span class="w">
+    </span><span class="c1">## 111      19 native pasture        0.16        0.26   32   13   56     6.10</span><span class="w">
+    </span><span class="c1">## 113      20       Cropping        0.00        0.02    9    9   81     4.64</span><span class="w">
+    </span><span class="c1">## 117      20       Cropping        0.30        0.40   37    7   56     6.30</span><span class="w">
+    </span><span class="c1">## 118      20       Cropping        0.70        0.80   20   14   67     7.17</span><span class="w">
+    </span><span class="c1">## 123      21       Cropping        0.25        0.35   25   16   59     5.05</span><span class="w">
+    </span><span class="c1">## 147      26       Cropping        0.15        0.24   51    8   42     6.27</span><span class="w">
+    </span><span class="c1">## 148      26       Cropping        0.70        0.80   50    9   40     7.81</span><span class="w">
+    </span><span class="c1">##     Total_Carbon    EC  ESP ExchNa ExchK ExchCa ExchMg   CEC</span><span class="w">
+    </span><span class="c1">## 68          1.49 0.499 13.0   1.00  0.74   2.17   3.76  6.85</span><span class="w">
+    </span><span class="c1">## 111         0.50 0.223 17.4   2.62  0.30   3.74   8.37 11.97</span><span class="w">
+    </span><span class="c1">## 113         1.08 0.301 11.1   0.31  0.87   1.01   0.63  3.02</span><span class="w">
+    </span><span class="c1">## 117         0.32 0.214 12.1   1.66  0.27   4.19   7.61 12.44</span><span class="w">
+    </span><span class="c1">## 118         0.09 0.292 21.2   2.88  0.33   2.86   7.50 10.23</span><span class="w">
+    </span><span class="c1">## 123         0.25 0.073 13.2   0.95  0.30   2.00   3.92  5.29</span><span class="w">
+    </span><span class="c1">## 147         0.63 0.134 10.4   2.09  0.74   5.09  12.23 14.29</span><span class="w">
+    </span><span class="c1">## 148         0.84 0.820 16.4   4.93  0.91   7.52  16.72 23.34</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that the <code class="highlighter-rouge">$</code> notation does not need to be used in the <code class="highlighter-rouge">subset</code>
+function, As with indexing multiple constraints can also be used:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">subset</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Lower.Depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##     PROFILE Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 117      20  Cropping        0.30        0.40   37    7   56     6.30</span><span class="w">
+    </span><span class="c1">## 118      20  Cropping        0.70        0.80   20   14   67     7.17</span><span class="w">
+    </span><span class="c1">## 123      21  Cropping        0.25        0.35   25   16   59     5.05</span><span class="w">
+    </span><span class="c1">## 148      26  Cropping        0.70        0.80   50    9   40     7.81</span><span class="w">
+    </span><span class="c1">##     Total_Carbon    EC  ESP ExchNa ExchK ExchCa ExchMg   CEC</span><span class="w">
+    </span><span class="c1">## 117         0.32 0.214 12.1   1.66  0.27   4.19   7.61 12.44</span><span class="w">
+    </span><span class="c1">## 118         0.09 0.292 21.2   2.88  0.33   2.86   7.50 10.23</span><span class="w">
+    </span><span class="c1">## 123         0.25 0.073 13.2   0.95  0.30   2.00   3.92  5.29</span><span class="w">
+    </span><span class="c1">## 148         0.84 0.820 16.4   4.93  0.91   7.52  16.72 23.34</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In some cases you may want to select observations that include any one
+value out of a set of possibilities. Say we only want those observations
+where <em>Landclass</em> is <em>native pasture</em> or <em>forest</em>. We could use:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">subset</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">Landclass</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Forest"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Landclass</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"native pasture"</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##     PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 1         1 native pasture        0.00        0.02    8    9   83     6.35</span><span class="w">
+    </span><span class="c1">## 2         1 native pasture        0.02        0.05    8    9   83     6.34</span><span class="w">
+    </span><span class="c1">## 3         1 native pasture        0.05        0.10    8   10   82     4.76</span><span class="w">
+    </span><span class="c1">## 4         1 native pasture        0.10        0.20    8   10   83     4.51</span><span class="w">
+    </span><span class="c1">## 5         1 native pasture        0.20        0.30   NA   10   79     4.64</span><span class="w">
+    </span><span class="c1">## 6         1 native pasture        0.70        0.80   57    8   36     6.49</span><span class="w">
+    </span><span class="c1">## 13        3         Forest        0.00        0.02   15   11   74     6.86</span><span class="w">
+    </span><span class="c1">## 14        3         Forest        0.02        0.05   10   11   79     6.34</span><span class="w">
+    </span><span class="c1">## 15        3         Forest        0.05        0.10   NA   11   81     5.74</span><span class="w">
+    </span><span class="c1">## 16        3         Forest        0.10        0.18    9   11   80     5.16</span><span class="w">
+    </span><span class="c1">## 17        3         Forest        0.35        0.50   20    8   73     5.11</span><span class="w">
+    </span><span class="c1">## 18        3         Forest        0.70        0.80   37    9   54     6.05</span><span class="w">
+    </span><span class="c1">## 25        ......</span><span class="w">
+    </span><span class="c1">## 26        ......</span><span class="w">
+    </span><span class="c1">## You Get the Gist</span><span class="w">
+</span></code></pre></div></div>
+
+<p>But, this is an easier way (we are using the <code class="highlighter-rouge">head</code> function just to
+limit the number of outputted rows. So try it without the <code class="highlighter-rouge">head</code>
+function).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">subset</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">Landclass</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Forest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"native pasture"</span><span class="p">)))</span><span class="w">
+
+    </span><span class="c1">##   PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 1       1 native pasture        0.00        0.02    8    9   83     6.35</span><span class="w">
+    </span><span class="c1">## 2       1 native pasture        0.02        0.05    8    9   83     6.34</span><span class="w">
+    </span><span class="c1">## 3       1 native pasture        0.05        0.10    8   10   82     4.76</span><span class="w">
+    </span><span class="c1">## 4       1 native pasture        0.10        0.20    8   10   83     4.51</span><span class="w">
+    </span><span class="c1">## 5       1 native pasture        0.20        0.30   NA   10   79     4.64</span><span class="w">
+    </span><span class="c1">## 6       1 native pasture        0.70        0.80   57    8   36     6.49</span><span class="w">
+    </span><span class="c1">##   Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg   CEC</span><span class="w">
+    </span><span class="c1">## 1         1.07 0.168 0.3   0.01  0.71   3.17   0.59  5.29</span><span class="w">
+    </span><span class="c1">## 2         0.98 0.137 0.5   0.02  0.47   3.50   0.60  3.70</span><span class="w">
+    </span><span class="c1">## 3         0.73 0.072 0.9   0.02  0.52   1.34   0.22  2.86</span><span class="w">
+    </span><span class="c1">## 4         0.39 0.034 0.2   0.00  0.38   1.03   0.22  2.92</span><span class="w">
+    </span><span class="c1">## 5         0.23    NA 0.9   0.02  0.43   1.50   0.50  2.60</span><span class="w">
+    </span><span class="c1">## 6         0.35 0.059 0.3   0.04  0.46   9.13   5.02 14.96</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Both of the above methods produce the same result, so it just comes down
+to a matter of efficiency.</p>
+
+<p>Indexing matrices and arrays follows what we have just covered. For
+example:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+    </span><span class="n">X</span><span class="w">
+
+    </span><span class="c1">##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]</span><span class="w">
+    </span><span class="c1">## [1,]    1    4    7   10   13   16   19   22   25    28</span><span class="w">
+    </span><span class="c1">## [2,]    2    5    8   11   14   17   20   23   26    29</span><span class="w">
+    </span><span class="c1">## [3,]    3    6    9   12   15   18   21   24   27    30</span><span class="w">
+
+    </span><span class="n">X</span><span class="p">[</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 24</span><span class="w">
+
+    </span><span class="n">X</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 7 8 9</span><span class="w">
+
+    </span><span class="n">Y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="w">
+    </span><span class="n">Y</span><span class="p">[</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Indexing is a little trickier for lists. You need to use double square
+braces, <code class="highlighter-rouge">[[i]]</code>, to specify an element within a list. Of course, if the
+element within the list has multiple elements, you could use indexing to
+select specific elements within it.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">list.1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Y</span><span class="p">)</span><span class="w">
+    </span><span class="n">list.1</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+
+    </span><span class="c1">##  [1]  1  2  3  4  5  6  7  8  9 10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is also possible to use double, triple, etc. indexing with all types
+of data structures. <code class="highlighter-rouge">R</code> evaluates the expression from left to right. As
+a simple example, lets extract the element on the third row of the
+second column of the second element of <code class="highlighter-rouge">list.1</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">list.1</span><span class="p">[[</span><span class="m">2</span><span class="p">]][</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 6</span><span class="w">
+</span></code></pre></div></div>
+
+<p>An easy way to divide data into groups is to use the <code class="highlighter-rouge">split</code> function.
+This function will divide a data structure (typically a vector or a data
+frame) into one subset for each level of the variable you would like to
+split by. The subsets are stored together in a list. Here we split our
+<code class="highlighter-rouge">soil.data</code> set into the separate or individual soil profile (splitting
+by the <code class="highlighter-rouge">PROFILE</code> column. Note output is not shown here for sake of
+brevity).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data.split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">PROFILE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you apply <code class="highlighter-rouge">split</code> to individual vectors, the resulting list can be
+used directly in some plotting or summarizing functions to give you
+results for each separate group. (There are usually other ways to arrive
+at this type of result). The <code class="highlighter-rouge">split</code> function can also be handy for
+manipulating and analyzing data by some grouping variable, as we will
+see later.</p>
+
+<p>It is often necessary to sort data. For a single vector, this is done
+with the function <code class="highlighter-rouge">sort</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="w">
+    </span><span class="n">x</span><span class="w">
+
+    </span><span class="c1">## [1] -0.59970517  0.05710768  0.27240011 -0.13522426  1.26447721</span><span class="w">
+
+    </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sort</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+    </span><span class="n">y</span><span class="w">
+
+    </span><span class="c1">## [1] -0.59970517 -0.13522426  0.05710768  0.27240011  1.26447721</span><span class="w">
+</span></code></pre></div></div>
+
+<p>But what if you want to sort an entire data frame by one column? In this
+case it is necessary to use the function <code class="highlighter-rouge">order</code>, in combination with
+indexing.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">soil.data</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">),</span><span class="w"> </span><span class="p">])</span><span class="w">
+
+    </span><span class="c1">##     PROFILE        Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 116      20         Cropping        0.10        0.30    5   11   85     5.33</span><span class="w">
+    </span><span class="c1">## 1         1   native pasture        0.00        0.02    8    9   83     6.35</span><span class="w">
+    </span><span class="c1">## 2         1   native pasture        0.02        0.05    8    9   83     6.34</span><span class="w">
+    </span><span class="c1">## 3         1   native pasture        0.05        0.10    8   10   82     4.76</span><span class="w">
+    </span><span class="c1">## 4         1   native pasture        0.10        0.20    8   10   83     4.51</span><span class="w">
+    </span><span class="c1">## 7         2 improved pasture        0.00        0.02    9   10   81     5.91</span><span class="w">
+    </span><span class="c1">##     Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg  CEC</span><span class="w">
+    </span><span class="c1">## 116         0.24 0.033 4.0   0.10  0.18   1.40   0.70 1.90</span><span class="w">
+    </span><span class="c1">## 1           1.07 0.168 0.3   0.01  0.71   3.17   0.59 5.29</span><span class="w">
+    </span><span class="c1">## 2           0.98 0.137 0.5   0.02  0.47   3.50   0.60 3.70</span><span class="w">
+    </span><span class="c1">## 3           0.73 0.072 0.9   0.02  0.52   1.34   0.22 2.86</span><span class="w">
+    </span><span class="c1">## 4           0.39 0.034 0.2   0.00  0.38   1.03   0.22 2.92</span><span class="w">
+    </span><span class="c1">## 7           1.14 0.123 0.3   0.01  0.70   2.92   0.51 3.59</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The function <code class="highlighter-rouge">order</code> returns a vector that contains the row positions of
+the ranked data:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">order</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##   [1] 116   1   2   3   4   7   8   9  16 113 114 115  14  31  32  61  62  64</span><span class="w">
+    </span><span class="c1">##  [19]  45 126 149 150  37  38  39 101 102 103 107 108 151  34  42  44  77  13</span><span class="w">
+    </span><span class="c1">##  [37]  43  46  50 109 125  78 144  35  51  79  96 110 119 120 121 127 134  67</span><span class="w">
+    </span><span class="c1">##  [55]  97 130 135 145 161  36  98 136 140 146 160 162  17  52  83 104 118 131</span><span class="w">
+    </span><span class="c1">##  [73] 139 141  65  84  85  68  69  89  99  53 156  72 123 137  54  56  80  95</span><span class="w">
+    </span><span class="c1">##  [91] 105  57  90  74 132  58  81  91 128  20  55 111 142  86 163 106 154  11</span><span class="w">
+    </span><span class="c1">## [109] 129  18  87 112 117  25  75  21 155  66  92  22  26 152 164 133 138  47</span><span class="w">
+    </span><span class="c1">## [127]  71  41  59  93  60 148  24 147  12 158 165   6  82 166  48  88 159  28</span><span class="w">
+    </span><span class="c1">## [145]  29  94  76 100  40   5  10  15  19  23  27  30  33  49  63  70  73 122</span><span class="w">
+    </span><span class="c1">## [163] 124 143 153 157</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The previous discussion in this section showed how to isolate data that
+meet certain criteria from a data structure. But sometimes it is
+important to know where data resides in its original data structure. But
+sometimes it is important to know where data resides in its original
+data structure. To functions that are handy for locating data within an
+<code class="highlighter-rouge">R</code> data structure are <code class="highlighter-rouge">match</code> and <code class="highlighter-rouge">which</code>. The <code class="highlighter-rouge">match</code> function will
+tell you where specific values reside in a data structure. The <code class="highlighter-rouge">which</code>
+function will return the locations of values that meet certain criteria.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">match</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">25.85</span><span class="p">,</span><span class="w"> </span><span class="m">11.45</span><span class="p">,</span><span class="w"> </span><span class="m">9.23</span><span class="p">),</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 41 59 18</span><span class="w">
+</span></code></pre></div></div>
+
+<p>and to check the result…</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">41</span><span class="p">,</span><span class="w"> </span><span class="m">59</span><span class="p">,</span><span class="w"> </span><span class="m">18</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">##    PROFILE        Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 41       7         Cropping         0.7         0.8   47   11   42     6.70</span><span class="w">
+    </span><span class="c1">## 59      10 improved pasture         0.1         0.2   47   12   42     5.94</span><span class="w">
+    </span><span class="c1">## 18       3           Forest         0.7         0.8   37    9   54     6.05</span><span class="w">
+    </span><span class="c1">##    Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg   CEC</span><span class="w">
+    </span><span class="c1">## 41         0.23 0.063 2.2   0.61  0.53  14.22  12.95 25.85</span><span class="w">
+    </span><span class="c1">## 59         0.70 0.039 0.1   0.01  0.74   6.76   2.61 11.45</span><span class="w">
+    </span><span class="c1">## 18         0.17 0.088 0.7   0.06  0.33   6.15   2.35  9.23</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that the <code class="highlighter-rouge">match</code> function matches the first observation only (this
+makes it difficult to use when there are multiple observations of the
+same value). This function is vectorised. The <code class="highlighter-rouge">match</code> function is useful
+for finding the location of the unique values, such as the maximum.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">match</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 95</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note the call to the <code class="highlighter-rouge">na.rm</code> argument in the <code class="highlighter-rouge">max</code> function as a means
+to overlook the presence of <code class="highlighter-rouge">NA</code> values. So what is the maximum CEC
+value in our <code class="highlighter-rouge">soil.data</code> set.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">[</span><span class="m">95</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">## [1] 28.21</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">which</code> function, on the other hand, will return all locations that
+meet the criteria.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##  [1]  68 101 102 103 104 107 108 109 111 113 114 117 118 123 146 147 148 159</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Of course, you can specify multiple constraints.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 111 117 147 148 159</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">which</code> function can also be useful for locating missing values.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##  [1]   9  10  15  21  24  45  49  58  61  63  80  81  89 110 112 115 121 129 138</span><span class="w">
+    </span><span class="c1">## [20] 150</span><span class="w">
+
+    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">)))]</span><span class="w">
+
+    </span><span class="c1">##  [1] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="factors">Factors</h3>
+
+<p>For many analyses, it is important to distinguish between quantitative
+(i.e. continuous) and categorical (i.e. discrete) variables. Categorical
+data are called factors in <code class="highlighter-rouge">R</code>. Internally, factors are stored as
+numeric data (as a check with <code class="highlighter-rouge">mode</code> will tell you), but they are
+handled as categorical data in statistical analyses. Factors are a class
+of data in <code class="highlighter-rouge">R</code>. <code class="highlighter-rouge">R</code> automatically recognizes non-numerical data as
+factors when the data are read in, but if numerical data are to be used
+as a factor (or if character data are generated within <code class="highlighter-rouge">R</code> and not read
+in, conversion to a factor must be specified explicitly. In <code class="highlighter-rouge">R</code>, the
+function <code class="highlighter-rouge">factor</code> does this.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))</span><span class="w">
+    </span><span class="n">a</span><span class="w">
+
+    </span><span class="c1">## [1] 0 0 0 0 1 1 1 1</span><span class="w">
+
+    </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w">
+    </span><span class="n">a</span><span class="w">
+
+    </span><span class="c1">## [1] 0 0 0 0 1 1 1 1</span><span class="w">
+    </span><span class="c1">## Levels: 0 1</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The levels that <code class="highlighter-rouge">R</code> assigns to your factor are by default the unique
+values given in your original vector. This is often fine, but you may
+want to assign more meaningful levels. For example, say you have a
+vector that contains soil drainage class categories.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.drainage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"well drained"</span><span class="p">,</span><span class="w"> </span><span class="s2">"imperfectly drained"</span><span class="p">,</span><span class="w"> </span><span class="s2">"poorly drained"</span><span class="p">,</span><span class="w"> </span><span class="s2">"poorly drained"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"well drained"</span><span class="p">,</span><span class="w"> </span><span class="s2">"poorly drained"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you designate this as a factor, the default levels will be sorted
+alphabetically.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.drainage1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">soil.drainage</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.drainage1</span><span class="w">
+
+    </span><span class="c1">## [1] well drained        imperfectly drained poorly drained     </span><span class="w">
+    </span><span class="c1">## [4] poorly drained      well drained        poorly drained     </span><span class="w">
+    </span><span class="c1">## Levels: imperfectly drained poorly drained well drained</span><span class="w">
+
+    </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">soil.drainage1</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 3 1 2 2 3 2</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you specify <code class="highlighter-rouge">levels</code> as an argument of the <code class="highlighter-rouge">factor</code> function, you can
+control the order of the levels.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.drainage2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">soil.drainage</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"well drained"</span><span class="p">,</span><span class="w"> </span><span class="s2">"imperfectly drained"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"poorly drained"</span><span class="p">))</span><span class="w">
+    </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">soil.drainage2</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 1 2 3 3 1 3</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This can be useful for obtaining a logical order in statistical output
+or summaries.</p>
+
+<h3 id="combining-data">Combining data</h3>
+
+<p>Data frames (or vectors or matrices) often need to be combined for
+analysis or plotting. Three <code class="highlighter-rouge">R</code> functions that are very useful for
+combining data are <code class="highlighter-rouge">rbind</code> and <code class="highlighter-rouge">cbind</code>. The function <code class="highlighter-rouge">rbind</code> simply
+<em>stacks</em> objects on top of each other to make a new object. The function
+carries out an analogous operation with columns of data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.info1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">soil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Vertosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Hydrosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Sodosol"</span><span class="p">),</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.info1</span><span class="w">
+
+    </span><span class="c1">##       soil response</span><span class="w">
+    </span><span class="c1">## 1 Vertosol        1</span><span class="w">
+    </span><span class="c1">## 2 Hydrosol        2</span><span class="w">
+    </span><span class="c1">## 3  Sodosol        3</span><span class="w">
+
+    </span><span class="n">soil.info2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">soil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Chromosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Dermosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tenosol"</span><span class="p">),</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="o">:</span><span class="m">6</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.info2</span><span class="w">
+
+    </span><span class="c1">##        soil response</span><span class="w">
+    </span><span class="c1">## 1 Chromosol        4</span><span class="w">
+    </span><span class="c1">## 2  Dermosol        5</span><span class="w">
+    </span><span class="c1">## 3   Tenosol        6</span><span class="w">
+
+    </span><span class="n">soil.info</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rbind</span><span class="p">(</span><span class="n">soil.info1</span><span class="p">,</span><span class="w"> </span><span class="n">soil.info2</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.info</span><span class="w">
+
+    </span><span class="c1">##        soil response</span><span class="w">
+    </span><span class="c1">## 1  Vertosol        1</span><span class="w">
+    </span><span class="c1">## 2  Hydrosol        2</span><span class="w">
+    </span><span class="c1">## 3   Sodosol        3</span><span class="w">
+    </span><span class="c1">## 4 Chromosol        4</span><span class="w">
+    </span><span class="c1">## 5  Dermosol        5</span><span class="w">
+    </span><span class="c1">## 6   Tenosol        6</span><span class="w">
+
+    </span><span class="n">a.column</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2.5</span><span class="p">,</span><span class="w"> </span><span class="m">3.2</span><span class="p">,</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span><span class="w"> </span><span class="m">2.1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.info3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">soil.info</span><span class="p">,</span><span class="w"> </span><span class="n">SOC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a.column</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.info3</span><span class="w">
+
+    </span><span class="c1">##        soil response SOC</span><span class="w">
+    </span><span class="c1">## 1  Vertosol        1 2.5</span><span class="w">
+    </span><span class="c1">## 2  Hydrosol        2 3.2</span><span class="w">
+    </span><span class="c1">## 3   Sodosol        3 1.2</span><span class="w">
+    </span><span class="c1">## 4 Chromosol        4 2.1</span><span class="w">
+    </span><span class="c1">## 5  Dermosol        5 2.0</span><span class="w">
+    </span><span class="c1">## 6   Tenosol        6 0.5</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="exercises">Exercises</h3>
+
+<ol>
+  <li>Using the <code class="highlighter-rouge">soil.data</code> set, return the following:</li>
+</ol>
+
+<ul>
+  <li>The first 10 rows of the columns <code class="highlighter-rouge">clay</code>, <code class="highlighter-rouge">Total_Carbon</code>, and <code class="highlighter-rouge">ExchK</code></li>
+  <li>The column <code class="highlighter-rouge">CEC</code> for the <code class="highlighter-rouge">Forest</code> land class</li>
+  <li>Use the <code class="highlighter-rouge">subset</code> function to create a new data frame that has only
+data for the cropping land class</li>
+  <li>How many soil profiles are there? Actually write some script to
+determine this rather than look at the data frame</li>
+</ul>
+
+<ol>
+  <li>
+    <p>Using the same data set, find the location and value of the maximum,
+minimum and median soil carbon (<code class="highlighter-rouge">Total_Carbon</code>)</p>
+  </li>
+  <li>
+    <p>Make a new data frame which is sorted by the upper soil depth
+(<code class="highlighter-rouge">Upper.Depth</code>). Can you sort it in decreasing order (Hint: Check
+the help file).</p>
+  </li>
+  <li>
+    <p>Make a new data frame which contains the columns <code class="highlighter-rouge">PROFILE</code>,
+<code class="highlighter-rouge">Landclass</code>, <code class="highlighter-rouge">Upper.Depth</code>, and <code class="highlighter-rouge">Lower.Depth</code>. Make another data
+frame which contains just the information regarding the exchangeable
+cations e.g. <code class="highlighter-rouge">ExchNa</code>, <code class="highlighter-rouge">ExchK</code>, <code class="highlighter-rouge">ExchCa</code>, and <code class="highlighter-rouge">ExchMg</code>. Make a new
+data frame which combines these two separate data frames together.</p>
+  </li>
+  <li>
+    <p>Make separate data frame for each of the land classes. Now make a
+new data frame which combines the four separate data frames
+together.</p>
+  </li>
+</ol>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-04-26">April 26, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_literacy/part5/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_literacy/part5/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_literacy/part5/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

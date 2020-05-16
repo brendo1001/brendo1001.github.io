@@ -1,0 +1,797 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>R Literacy &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Part 3">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="R Literacy">
+<meta name="twitter:description" content="Part 3">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R Literacy">
+<meta property="og:description" content="Part 3">
+<meta property="og:url" content="/DSM_book/pages/r_literacy/part3/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_literacy/part3/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>R Literacy</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Part 3</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">R Literacy</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~25 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part3.R">here</a> and harcopy documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part3.pdf">here</a></p>
+
+<h2 id="data-frames-data-import-and-data-export">Data frames, data import, and data export</h2>
+
+<p>As described above, a data frame is a type of data structure in <code class="highlighter-rouge">R</code> with
+rows and columns, where different columns contain data with different
+modes. A data frame is probably the most common data structure that you
+will use for storing soil information data sets. Recall from before the
+data frame that we created.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">dat</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">profile_id</span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Chromosol"</span><span class="p">,</span><span class="s2">"Vertosol"</span><span class="p">,</span><span class="s2">"Sodosol"</span><span class="p">),</span><span class="w">
+          </span><span class="n">FID</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"a1"</span><span class="p">,</span><span class="s2">"a10"</span><span class="p">,</span><span class="s2">"a11"</span><span class="p">),</span><span class="w"> </span><span class="n">easting</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">337859</span><span class="p">,</span><span class="w"> </span><span class="m">344059</span><span class="p">,</span><span class="m">347034</span><span class="p">),</span><span class="w"> 
+          </span><span class="n">northing</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">6372415</span><span class="p">,</span><span class="m">6376715</span><span class="p">,</span><span class="m">6372740</span><span class="p">),</span><span class="w"> </span><span class="n">visted</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span><span class="w">
+    </span><span class="n">dat</span><span class="w">
+
+    </span><span class="c1">##   profile_id FID easting northing visted</span><span class="w">
+    </span><span class="c1">## 1  Chromosol  a1  337859  6372415   TRUE</span><span class="w">
+    </span><span class="c1">## 2   Vertosol a10  344059  6376715  FALSE</span><span class="w">
+    </span><span class="c1">## 3    Sodosol a11  347034  6372740   TRUE</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can quickly assess the different modes of a data frame (or any other
+object for that matter) by using the <code class="highlighter-rouge">str</code> (structure) function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">str</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## 'data.frame':    3 obs. of  5 variables:</span><span class="w">
+    </span><span class="c1">##  $ profile_id: Factor w/ 3 levels "Chromosol","Sodosol",..: 1 3 2</span><span class="w">
+    </span><span class="c1">##  $ FID       : Factor w/ 3 levels "a1","a10","a11": 1 2 3</span><span class="w">
+    </span><span class="c1">##  $ easting   : num  337859 344059 347034</span><span class="w">
+    </span><span class="c1">##  $ northing  : num  6372415 6376715 6372740</span><span class="w">
+    </span><span class="c1">##  $ visted    : logi  TRUE FALSE TRUE</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">str</code> is probably one of the most used <code class="highlighter-rouge">R</code> functions. It is great
+for exploring the format and contents of any object created or imported.</p>
+
+<h3 id="reading-data-from-files">reading data from files</h3>
+
+<p>The easiest way to create a data frame is to read in data from a file.
+This is done using the function , which works with ASCII text files. The
+function <code class="highlighter-rouge">read.csv</code> is also a utility function for reading in data files
+with the stipulation that the data columns have a comma separation. Data
+can be read in from other files as well, using different functions, but
+<code class="highlighter-rouge">read.table</code> is the most commonly used approach. <code class="highlighter-rouge">R</code> is very flexible in
+how it reads in data from text files.</p>
+
+<p>Note that the column labels in the header have to be compatible with
+<code class="highlighter-rouge">R</code>’s variable naming convention, or else <code class="highlighter-rouge">R</code> will make some changes as
+they are read in (or will not read in the data correctly). So lets
+import some real soil data. These soil data are some chemical and
+physical properties from a collection of soil profiles sampled at
+various locations in New South Wales, Australia.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1">## This will throw an error</span><span class="w">
+    </span><span class="n">soil.data</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="s2">"USYD_soil1.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span><span class="w">
+    </span><span class="n">str</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+    </span><span class="n">head</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>However, you may find that an error occurs, saying something like that
+the file does not exist. This is true as it has not been provided to
+you. Rather, to use this data you will need to load up the previously
+installed <code class="highlighter-rouge">ithir</code> package.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+    </span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.data</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">USYD_soil1</span><span class="w">
+    </span><span class="n">str</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## 'data.frame':    166 obs. of  16 variables:</span><span class="w">
+    </span><span class="c1">##  $ PROFILE     : int  1 1 1 1 1 1 2 2 2 2 ...</span><span class="w">
+    </span><span class="c1">##  $ Landclass   : Factor w/ 4 levels "Cropping","Forest",..: 4 4 4 4 4 4 3 3 3 3 ...</span><span class="w">
+    </span><span class="c1">##  $ Upper.Depth : num  0 0.02 0.05 0.1 0.2 0.7 0 0.02 0.05 0.1 ...</span><span class="w">
+    </span><span class="c1">##  $ Lower.Depth : num  0.02 0.05 0.1 0.2 0.3 0.8 0.02 0.05 0.1 0.2 ...</span><span class="w">
+    </span><span class="c1">##  $ clay        : int  8 8 8 8 NA 57 9 9 9 NA ...</span><span class="w">
+    </span><span class="c1">##  $ silt        : int  9 9 10 10 10 8 10 10 10 10 ...</span><span class="w">
+    </span><span class="c1">##  $ sand        : int  83 83 82 83 79 36 81 80 80 81 ...</span><span class="w">
+    </span><span class="c1">##  $ pH_CaCl2    : num  6.35 6.34 4.76 4.51 4.64 6.49 5.91 5.94 5.63 4.22 ...</span><span class="w">
+    </span><span class="c1">##  $ Total_Carbon: num  1.07 0.98 0.73 0.39 0.23 0.35 1.14 1.14 1.01 0.48 ...</span><span class="w">
+    </span><span class="c1">##  $ EC          : num  0.168 0.137 0.072 0.034 NA 0.059 0.123 0.101 0.026 0.042 ...</span><span class="w">
+    </span><span class="c1">##  $ ESP         : num  0.3 0.5 0.9 0.2 0.9 0.3 0.3 0.6 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchNa      : num  0.01 0.02 0.02 0 0.02 0.04 0.01 0.02 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchK       : num  0.71 0.47 0.52 0.38 0.43 0.46 0.7 0.56 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchCa      : num  3.17 3.5 1.34 1.03 1.5 9.13 2.92 3.2 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ ExchMg      : num  0.59 0.6 0.22 0.22 0.5 5.02 0.51 0.5 NA NA ...</span><span class="w">
+    </span><span class="c1">##  $ CEC         : num  5.29 3.7 2.86 2.92 2.6 ...</span><span class="w">
+
+    </span><span class="n">head</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##   PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 1       1 native pasture        0.00        0.02    8    9   83     6.35</span><span class="w">
+    </span><span class="c1">## 2       1 native pasture        0.02        0.05    8    9   83     6.34</span><span class="w">
+    </span><span class="c1">## 3       1 native pasture        0.05        0.10    8   10   82     4.76</span><span class="w">
+    </span><span class="c1">## 4       1 native pasture        0.10        0.20    8   10   83     4.51</span><span class="w">
+    </span><span class="c1">## 5       1 native pasture        0.20        0.30   NA   10   79     4.64</span><span class="w">
+    </span><span class="c1">## 6       1 native pasture        0.70        0.80   57    8   36     6.49</span><span class="w">
+    </span><span class="c1">##   Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg   CEC</span><span class="w">
+    </span><span class="c1">## 1         1.07 0.168 0.3   0.01  0.71   3.17   0.59  5.29</span><span class="w">
+    </span><span class="c1">## 2         0.98 0.137 0.5   0.02  0.47   3.50   0.60  3.70</span><span class="w">
+    </span><span class="c1">## 3         0.73 0.072 0.9   0.02  0.52   1.34   0.22  2.86</span><span class="w">
+    </span><span class="c1">## 4         0.39 0.034 0.2   0.00  0.38   1.03   0.22  2.92</span><span class="w">
+    </span><span class="c1">## 5         0.23    NA 0.9   0.02  0.43   1.50   0.50  2.60</span><span class="w">
+    </span><span class="c1">## 6         0.35 0.059 0.3   0.04  0.46   9.13   5.02 14.96</span><span class="w">
+</span></code></pre></div></div>
+
+<p>When we import a file into <code class="highlighter-rouge">R</code>, it is good habit to look at its
+structure (<code class="highlighter-rouge">str</code>) to ensure the data is as it should be. As can be seen,
+this data set (frame) has 166 observations, and 15 columns. The <code class="highlighter-rouge">head</code>
+function is also a useful exploratory function, which simply allows us
+to print out the data frame, but only the first 6 rows of it (good for
+checking data frame integrity). Note that you must specify
+<code class="highlighter-rouge">header=TRUE</code>, or else <code class="highlighter-rouge">R</code> will interpret the row of labels as data. If
+the file you are loading is not in the directory that <code class="highlighter-rouge">R</code> is working in
+(the working directory, which can be checked with <code class="highlighter-rouge">getwd()</code> and changed
+with <code class="highlighter-rouge">setwd(file = ``filename'')</code>). When setting the working
+directory (<code class="highlighter-rouge">setwd()</code>), you can include the file path, but note that the
+path should have forward, not backward slashes (or double backward
+slashes, if you prefer).</p>
+
+<p>The column separator function <code class="highlighter-rouge">sep</code> (an argument of <code class="highlighter-rouge">read.table</code>) lets
+you tell <code class="highlighter-rouge">R</code>, where the column breaks or delimiters occur. In the
+<code class="highlighter-rouge">soil.data</code> object, we specify that the data is comma separated. If you
+do not specify a field separator, <code class="highlighter-rouge">R</code> assumes that any spaces or tabs
+separate the data in your text file. However, any character data that
+contain spaces must be surrounded by quotes (otherwise, <code class="highlighter-rouge">R</code> interprets
+the data on either side of the white spaces as different elements).</p>
+
+<p>Besides comma separators, tab separators are also common <code class="highlighter-rouge">sep= "\"</code>}, so
+is <code class="highlighter-rouge">sep="."</code>} (full stop separator). Two consecutive separators will be
+interpreted as a missing value. Conversely, with the default options,
+you need to explicitly identify missing values in your data file with
+<code class="highlighter-rouge">NA</code> (or any other character, as long as you tell <code class="highlighter-rouge">R</code> what it is with
+the <code class="highlighter-rouge">na.strings</code> argument).</p>
+
+<p>For some field separators, there are alternate functions that can be
+used with the default arguments, e.g. <code class="highlighter-rouge">read.csv</code>, which is identical to
+<code class="highlighter-rouge">read.table</code>, except default arguments differ. Also, <code class="highlighter-rouge">R</code> does not care
+what the name of your file is, or what its extension is, as long as it
+is an ASCII text file. A few other handy bits of information for using
+<code class="highlighter-rouge">read.table</code> follow. You can include comments at the end of rows in your
+data file—just precede them with a <code class="highlighter-rouge">#</code>. Also <code class="highlighter-rouge">R</code> will recognize <code class="highlighter-rouge">NaN</code>,
+and <code class="highlighter-rouge">Inf</code>, and <code class="highlighter-rouge">-Inf</code> in input files.</p>
+
+<p>Probably the easiest approach to handling missing values is to indicate
+their presence with <code class="highlighter-rouge">NA</code> in the text file. <code class="highlighter-rouge">R</code> will automatically
+recognize these as missing values. Alternatively, just leave the missing
+values as they are (blank spaces), and let <code class="highlighter-rouge">R</code> do the rest.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">## [1]   9  10  45  63 115</span><span class="w">
+
+    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">8</span><span class="o">:</span><span class="m">11</span><span class="p">,]</span><span class="w">
+
+    </span><span class="c1">##    PROFILE        Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 8        2 improved pasture        0.02        0.05    9   10   80     5.94</span><span class="w">
+    </span><span class="c1">## 9        2 improved pasture        0.05        0.10    9   10   80     5.63</span><span class="w">
+    </span><span class="c1">## 10       2 improved pasture        0.10        0.20   NA   10   81     4.22</span><span class="w">
+    </span><span class="c1">## 11       2 improved pasture        0.38        0.50   36    8   56     6.48</span><span class="w">
+    </span><span class="c1">##    Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg CEC</span><span class="w">
+    </span><span class="c1">## 8          1.14 0.101 0.6   0.02  0.56    3.2    0.5 4.0</span><span class="w">
+    </span><span class="c1">## 9          1.01 0.026  NA     NA    NA     NA     NA  NA</span><span class="w">
+    </span><span class="c1">## 10         0.48 0.042  NA     NA    NA     NA     NA  NA</span><span class="w">
+    </span><span class="c1">## 11         0.18 0.053 0.4   0.04  0.49    6.0    2.3 8.6</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In most cases, it makes sense to put your data into a text file for
+reading into <code class="highlighter-rouge">R</code>. This can be done in various ways. Data download from
+the internet are often in text files to begin with. Data can be entered
+directly into a text file using a text editor. For data that are in
+spreadsheet program such as Excel or JMP, there are facilities available
+for saving these tabular frames to text files for reading into <code class="highlighter-rouge">R</code>.</p>
+
+<p>This all may seem confusing, but it is really not that bad. Your best
+bet is to play around with the different options, find one that you
+like, and stick with it. Lastly, data frames can also be edited
+interactively in <code class="highlighter-rouge">R</code> using the <code class="highlighter-rouge">edit</code> function. This is really only
+useful for small data sets, and the function is not supported by RStudio
+(you could try with using Tinn-R instead if you want to explore using
+this function).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">edit</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="creating-data-frames-manually">Creating data frames manually</h3>
+
+<p>Data frames can be made manually using the <code class="highlighter-rouge">data.frame</code> function:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Chromosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Vertosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Organosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Anthroposol"</span><span class="p">)</span><span class="w">
+    </span><span class="n">carbon</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2.1</span><span class="p">,</span><span class="w"> </span><span class="m">2.9</span><span class="p">,</span><span class="w"> </span><span class="m">5.5</span><span class="p">,</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w">
+    </span><span class="n">dat</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">soil.type</span><span class="o">=</span><span class="n">soil</span><span class="p">,</span><span class="w"> </span><span class="n">soil.OC</span><span class="o">=</span><span class="n">carbon</span><span class="p">)</span><span class="w">
+    </span><span class="n">dat</span><span class="w">
+
+    </span><span class="c1">##     soil.type soil.OC</span><span class="w">
+    </span><span class="c1">## 1   Chromosol     2.1</span><span class="w">
+    </span><span class="c1">## 2    Vertosol     2.9</span><span class="w">
+    </span><span class="c1">## 3   Organosol     5.5</span><span class="w">
+    </span><span class="c1">## 4 Anthroposol     0.2</span><span class="w">
+</span></code></pre></div></div>
+
+<p>While this approach is not an efficient way to enter data that could be
+read in directly, it can be very handy for some applications, such as
+the creation of customized summary tables. Note that column names are
+specified using an equal sign. It is also possible to specify (or
+change, or check) column names for an existing data frame using the
+function <code class="highlighter-rouge">names</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"soil"</span><span class="p">,</span><span class="s2">"SOC"</span><span class="p">)</span><span class="w">
+    </span><span class="n">dat</span><span class="w">
+
+    </span><span class="c1">##          soil SOC</span><span class="w">
+    </span><span class="c1">## 1   Chromosol 2.1</span><span class="w">
+    </span><span class="c1">## 2    Vertosol 2.9</span><span class="w">
+    </span><span class="c1">## 3   Organosol 5.5</span><span class="w">
+    </span><span class="c1">## 4 Anthroposol 0.2</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Row names can be specified in the <code class="highlighter-rouge">data.frame</code> function with the
+<code class="highlighter-rouge">row.names</code> argument.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">dat</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">soil.type</span><span class="o">=</span><span class="n">soil</span><span class="p">,</span><span class="w"> </span><span class="n">soil.OC</span><span class="o">=</span><span class="n">carbon</span><span class="p">,</span><span class="w"> 
+          </span><span class="n">row.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"Ch"</span><span class="p">,</span><span class="s2">"Ve"</span><span class="p">,</span><span class="s2">"Or"</span><span class="p">,</span><span class="s2">"An"</span><span class="p">))</span><span class="w">
+    </span><span class="n">dat</span><span class="w">
+
+    </span><span class="c1">##      soil.type soil.OC</span><span class="w">
+    </span><span class="c1">## Ch   Chromosol     2.1</span><span class="w">
+    </span><span class="c1">## Ve    Vertosol     2.9</span><span class="w">
+    </span><span class="c1">## Or   Organosol     5.5</span><span class="w">
+    </span><span class="c1">## An Anthroposol     0.2</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Specifying row names can be useful if you want to index data, which will
+be covered later. Row names can also be specified for an existing data
+frame with the <code class="highlighter-rouge">rownames</code> function (not to be confused with the
+<code class="highlighter-rouge">row.names</code> argument).</p>
+
+<h3 id="working-with-data-frames">Working with data frames</h3>
+
+<p>So what do you do with data in <code class="highlighter-rouge">R</code> once it is in a data frame? Commonly,
+the data in a data frame will be used in some type of analysis or
+plotting procedure. It is usually necessary to be able to select and
+identify specific columns (i.e. vectors) within data frames. There are
+two ways to specify a given column of data within a data frame. The
+first is to use the <code class="highlighter-rouge">$</code> notation. To see what the column names are, we
+can use the <code class="highlighter-rouge">names</code> function. Using our <code class="highlighter-rouge">soil.data</code> set:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##  [1] "PROFILE"      "Landclass"    "Upper.Depth"  "Lower.Depth"  "clay"        </span><span class="w">
+    </span><span class="c1">##  [6] "silt"         "sand"         "pH_CaCl2"     "Total_Carbon" "EC"          </span><span class="w">
+    </span><span class="c1">## [11] "ESP"          "ExchNa"       "ExchK"        "ExchCa"       "ExchMg"      </span><span class="w">
+    </span><span class="c1">## [16] "CEC"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">$</code> just uses a <code class="highlighter-rouge">$</code> between the data frame name and column name to
+specify a particular column. Say we want to look at the <code class="highlighter-rouge">ESP</code> column,
+which is the acronym for exchangeable sodium percentage.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w">
+
+    </span><span class="c1">##   [1]  0.3  0.5  0.9  0.2  0.9  0.3  0.3  0.6   NA   NA  0.4  0.9  0.2  0.1   NA</span><span class="w">
+    </span><span class="c1">##  [16]  0.4  0.5  0.7  0.2  0.1   NA  0.2  0.3   NA  0.8  0.6  0.8  0.9  0.9  1.1</span><span class="w">
+    </span><span class="c1">##  [31]  0.5  0.6  1.1  0.2  0.6  1.1  0.4  0.3  0.5  1.0  2.2  0.1  0.1  0.1   NA</span><span class="w">
+    </span><span class="c1">##  [46]  0.1  0.1  0.4   NA  0.2  0.1  0.3  0.4  0.1  0.4  0.1  0.1   NA  0.1  0.3</span><span class="w">
+    </span><span class="c1">##  [61]   NA  0.1   NA  0.2  1.8  2.6  0.2 13.0  0.0  0.1  0.3  0.1  0.1  0.3  0.0</span><span class="w">
+    </span><span class="c1">##  [76]  0.3  0.6  0.9  0.4   NA   NA  2.4  0.2  0.3  0.2  0.0  0.1  0.4   NA  0.3</span><span class="w">
+    </span><span class="c1">##  [91]  0.3  0.2  0.3  0.6  0.3  0.2  0.7  0.3  0.4  1.0  7.9  6.1  5.7  5.2  4.7</span><span class="w">
+    </span><span class="c1">## [106]  2.9  5.8  7.2  9.6   NA 17.4   NA 11.1  6.4   NA  4.0 12.1 21.2  2.2  1.9</span><span class="w">
+    </span><span class="c1">## [121]   NA  4.0 13.2  0.9  0.8  0.5  0.2  0.4   NA  1.2  0.6  0.2  1.0  0.4  0.6</span><span class="w">
+    </span><span class="c1">## [136]  0.1  0.4   NA  0.7  0.5  0.7  0.9  4.8  3.8  4.9  6.2 10.4 16.4  2.7   NA</span><span class="w">
+    </span><span class="c1">## [151]  1.2  0.5  1.9  2.0  2.1  1.9  1.8  3.5  7.7  2.7  1.8  0.8  0.5  0.5  0.3</span><span class="w">
+    </span><span class="c1">## [166]  0.9</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Although it is handy to think of data frame columns to have a vertical
+orientation, this orientation is not present when they are printed
+individually—instead, elements are printed from left to right, and then
+top to bottom. The expression <code class="highlighter-rouge">soil.data$ESP</code> could be used just as you
+would for any other vector. For example:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mean</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] NA</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">R</code> can not calculate the mean because of the <code class="highlighter-rouge">NA</code> values in the vector.
+Lets remove them first using the <code class="highlighter-rouge">na.omit</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mean</span><span class="p">(</span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">## [1] 1.99863</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The second option for working with individual columns within a data
+frame is to use the commands <code class="highlighter-rouge">attach</code> and <code class="highlighter-rouge">detach</code>. Both of these
+functions take a data frame as an argument. <code class="highlighter-rouge">attach</code>ing a data frame
+puts all the columns within the that data frame into <code class="highlighter-rouge">R</code>’s search path,
+and they can be called by using their names alone without the <code class="highlighter-rouge">$</code>
+notation.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">attach</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+    </span><span class="n">ESP</span><span class="w">
+
+    </span><span class="c1">##   [1]  0.3  0.5  0.9  0.2  0.9  0.3  0.3  0.6   NA   NA  0.4  0.9  0.2  0.1   NA</span><span class="w">
+    </span><span class="c1">##  [16]  0.4  0.5  0.7  0.2  0.1   NA  0.2  0.3   NA  0.8  0.6  0.8  0.9  0.9  1.1</span><span class="w">
+    </span><span class="c1">##  [31]  0.5  0.6  1.1  0.2  0.6  1.1  0.4  0.3  0.5  1.0  2.2  0.1  0.1  0.1   NA</span><span class="w">
+    </span><span class="c1">##  [46]  0.1  0.1  0.4   NA  0.2  0.1  0.3  0.4  0.1  0.4  0.1  0.1   NA  0.1  0.3</span><span class="w">
+    </span><span class="c1">##  [61]   NA  0.1   NA  0.2  1.8  2.6  0.2 13.0  0.0  0.1  0.3  0.1  0.1  0.3  0.0</span><span class="w">
+    </span><span class="c1">##  [76]  0.3  0.6  0.9  0.4   NA   NA  2.4  0.2  0.3  0.2  0.0  0.1  0.4   NA  0.3</span><span class="w">
+    </span><span class="c1">##  [91]  0.3  0.2  0.3  0.6  0.3  0.2  0.7  0.3  0.4  1.0  7.9  6.1  5.7  5.2  4.7</span><span class="w">
+    </span><span class="c1">## [106]  2.9  5.8  7.2  9.6   NA 17.4   NA 11.1  6.4   NA  4.0 12.1 21.2  2.2  1.9</span><span class="w">
+    </span><span class="c1">## [121]   NA  4.0 13.2  0.9  0.8  0.5  0.2  0.4   NA  1.2  0.6  0.2  1.0  0.4  0.6</span><span class="w">
+    </span><span class="c1">## [136]  0.1  0.4   NA  0.7  0.5  0.7  0.9  4.8  3.8  4.9  6.2 10.4 16.4  2.7   NA</span><span class="w">
+    </span><span class="c1">## [151]  1.2  0.5  1.9  2.0  2.1  1.9  1.8  3.5  7.7  2.7  1.8  0.8  0.5  0.5  0.3</span><span class="w">
+    </span><span class="c1">## [166]  0.9</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that when you are done using the individual columns, it is good
+practice to <code class="highlighter-rouge">detach</code> your data frame. Once the data frame is <code class="highlighter-rouge">detach</code>ed,
+<code class="highlighter-rouge">R</code> will no longer know what you mean when you specify the name of the
+column alone:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1">## This will throw an error</span><span class="w">
+    </span><span class="n">detach</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+    </span><span class="n">ESP</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you modify a variable that is part of an attached data frame, the
+data within the data frame remain unchanged; you are actually working
+with a copy of the data frame.</p>
+
+<p>Another option (for selecting particular columns) is to use the square
+braces <code class="highlighter-rouge">[]</code> to specify the column you want. Using the square braces to
+select the <code class="highlighter-rouge">ESP</code> column from our data set you would use:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[,</span><span class="m">10</span><span class="p">]</span><span class="w">
+
+    </span><span class="c1">##   [1] 0.168 0.137 0.072 0.034    NA 0.059 0.123 0.101 0.026 0.042 0.053 0.072</span><span class="w">
+    </span><span class="c1">##  [13] 0.293 0.092 0.082 0.055 0.048 0.088 0.162 0.166 0.088 0.093 0.075 0.175</span><span class="w">
+    </span><span class="c1">##  [25] 0.269 0.083 0.085 0.048 0.044 0.295 0.039 0.036 0.049 0.040 0.021 0.025</span><span class="w">
+    </span><span class="c1">##  [37] 0.118 0.061 0.059 0.043 0.063 0.159 0.161 0.126 0.049 0.037 0.031 0.033</span><span class="w">
+    </span><span class="c1">##  [49] 0.152 0.126 0.106 0.068 0.047 0.029 0.041 0.122 0.098 0.076 0.039 0.033</span><span class="w">
+    </span><span class="c1">##  [61] 0.583 0.183    NA 0.089 0.031 0.042 0.718 0.499 0.081 0.063 0.042 0.265</span><span class="w">
+    </span><span class="c1">##  [73] 0.194 0.094 0.051 0.079 0.304 0.511 0.118 0.031 0.042 0.028 0.152 0.116</span><span class="w">
+    </span><span class="c1">##  [85] 0.076 0.035 0.036 0.048 0.950 0.511 0.209 0.068 0.048 0.044 0.946 0.510</span><span class="w">
+    </span><span class="c1">##  [97] 0.175 0.175 0.115 0.207 0.167 0.156 0.125 0.960 0.910 0.121 0.087 0.175</span><span class="w">
+    </span><span class="c1">## [109] 0.117 0.069 0.223 1.271 0.301 0.180 0.090 0.033 0.214 0.292 0.105 0.109</span><span class="w">
+    </span><span class="c1">## [121] 0.077 0.034 0.073 0.493 0.246 0.119 0.057 0.056 0.191 0.243 0.165 0.052</span><span class="w">
+    </span><span class="c1">## [133] 0.064 0.228 0.125 0.056 0.039 0.175 0.417 0.434 0.352 0.115 0.125 0.235</span><span class="w">
+    </span><span class="c1">## [145] 0.170 0.105 0.134 0.820 0.245 0.163 0.116 0.050 0.142 0.618 0.347 0.146</span><span class="w">
+    </span><span class="c1">## [157] 0.079 0.052 0.139 0.268 0.146 0.061 0.035 0.038 0.044 0.060</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Here you are specifying the column in the tenth position, which as you
+should check is the <code class="highlighter-rouge">ESP</code> column. To use the square braces the row
+position precedes to comma, and the column position proceeds to comma.
+By leaving a blank space in front of the comma, we are essentially
+instruction <code class="highlighter-rouge">R</code> to print out the whole column. You may be able to
+surmise that it is also possible to subset a selection of columns quite
+efficiently with this square brace method. We will use the square braces
+more a little later on.</p>
+
+<p>The <code class="highlighter-rouge">$</code> notation can also be used to add columns to a data frame. For
+example, if we want to express our <code class="highlighter-rouge">Upper.Depth</code> and <code class="highlighter-rouge">Lower.Depth</code>
+columns in <code class="highlighter-rouge">cm</code> rather than <code class="highlighter-rouge">m</code> we could do the following.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Upper</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Upper.Depth</span><span class="o">*</span><span class="m">100</span><span class="w">
+    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Lower</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Lower.Depth</span><span class="o">*</span><span class="m">100</span><span class="w">
+    </span><span class="n">head</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##   PROFILE      Landclass Upper.Depth Lower.Depth clay silt sand pH_CaCl2</span><span class="w">
+    </span><span class="c1">## 1       1 native pasture        0.00        0.02    8    9   83     6.35</span><span class="w">
+    </span><span class="c1">## 2       1 native pasture        0.02        0.05    8    9   83     6.34</span><span class="w">
+    </span><span class="c1">## 3       1 native pasture        0.05        0.10    8   10   82     4.76</span><span class="w">
+    </span><span class="c1">## 4       1 native pasture        0.10        0.20    8   10   83     4.51</span><span class="w">
+    </span><span class="c1">## 5       1 native pasture        0.20        0.30   NA   10   79     4.64</span><span class="w">
+    </span><span class="c1">## 6       1 native pasture        0.70        0.80   57    8   36     6.49</span><span class="w">
+    </span><span class="c1">##   Total_Carbon    EC ESP ExchNa ExchK ExchCa ExchMg   CEC Upper Lower</span><span class="w">
+    </span><span class="c1">## 1         1.07 0.168 0.3   0.01  0.71   3.17   0.59  5.29     0     2</span><span class="w">
+    </span><span class="c1">## 2         0.98 0.137 0.5   0.02  0.47   3.50   0.60  3.70     2     5</span><span class="w">
+    </span><span class="c1">## 3         0.73 0.072 0.9   0.02  0.52   1.34   0.22  2.86     5    10</span><span class="w">
+    </span><span class="c1">## 4         0.39 0.034 0.2   0.00  0.38   1.03   0.22  2.92    10    20</span><span class="w">
+    </span><span class="c1">## 5         0.23    NA 0.9   0.02  0.43   1.50   0.50  2.60    20    30</span><span class="w">
+    </span><span class="c1">## 6         0.35 0.059 0.3   0.04  0.46   9.13   5.02 14.96    70    80</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Many data frames that contain real data will have some missing
+observations. <code class="highlighter-rouge">R</code> has several tools for working with these observations.
+For starters, the <code class="highlighter-rouge">na.omit</code> function can be used for removing <code class="highlighter-rouge">NA</code>s from
+a vector. Working again with the <code class="highlighter-rouge">ESP</code> column of our <code class="highlighter-rouge">soil.data</code> set:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w">
+
+    </span><span class="c1">##   [1]  0.3  0.5  0.9  0.2  0.9  0.3  0.3  0.6   NA   NA  0.4  0.9  0.2  0.1   NA</span><span class="w">
+    </span><span class="c1">##  [16]  0.4  0.5  0.7  0.2  0.1   NA  0.2  0.3   NA  0.8  0.6  0.8  0.9  0.9  1.1</span><span class="w">
+    </span><span class="c1">##  [31]  0.5  0.6  1.1  0.2  0.6  1.1  0.4  0.3  0.5  1.0  2.2  0.1  0.1  0.1   NA</span><span class="w">
+    </span><span class="c1">##  [46]  0.1  0.1  0.4   NA  0.2  0.1  0.3  0.4  0.1  0.4  0.1  0.1   NA  0.1  0.3</span><span class="w">
+    </span><span class="c1">##  [61]   NA  0.1   NA  0.2  1.8  2.6  0.2 13.0  0.0  0.1  0.3  0.1  0.1  0.3  0.0</span><span class="w">
+    </span><span class="c1">##  [76]  0.3  0.6  0.9  0.4   NA   NA  2.4  0.2  0.3  0.2  0.0  0.1  0.4   NA  0.3</span><span class="w">
+    </span><span class="c1">##  [91]  0.3  0.2  0.3  0.6  0.3  0.2  0.7  0.3  0.4  1.0  7.9  6.1  5.7  5.2  4.7</span><span class="w">
+    </span><span class="c1">## [106]  2.9  5.8  7.2  9.6   NA 17.4   NA 11.1  6.4   NA  4.0 12.1 21.2  2.2  1.9</span><span class="w">
+    </span><span class="c1">## [121]   NA  4.0 13.2  0.9  0.8  0.5  0.2  0.4   NA  1.2  0.6  0.2  1.0  0.4  0.6</span><span class="w">
+    </span><span class="c1">## [136]  0.1  0.4   NA  0.7  0.5  0.7  0.9  4.8  3.8  4.9  6.2 10.4 16.4  2.7   NA</span><span class="w">
+    </span><span class="c1">## [151]  1.2  0.5  1.9  2.0  2.1  1.9  1.8  3.5  7.7  2.7  1.8  0.8  0.5  0.5  0.3</span><span class="w">
+    </span><span class="c1">## [166]  0.9</span><span class="w">
+
+    </span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##   [1]  0.3  0.5  0.9  0.2  0.9  0.3  0.3  0.6  0.4  0.9  0.2  0.1  0.4  0.5  0.7</span><span class="w">
+    </span><span class="c1">##  [16]  0.2  0.1  0.2  0.3  0.8  0.6  0.8  0.9  0.9  1.1  0.5  0.6  1.1  0.2  0.6</span><span class="w">
+    </span><span class="c1">##  [31]  1.1  0.4  0.3  0.5  1.0  2.2  0.1  0.1  0.1  0.1  0.1  0.4  0.2  0.1  0.3</span><span class="w">
+    </span><span class="c1">##  [46]  0.4  0.1  0.4  0.1  0.1  0.1  0.3  0.1  0.2  1.8  2.6  0.2 13.0  0.0  0.1</span><span class="w">
+    </span><span class="c1">##  [61]  0.3  0.1  0.1  0.3  0.0  0.3  0.6  0.9  0.4  2.4  0.2  0.3  0.2  0.0  0.1</span><span class="w">
+    </span><span class="c1">##  [76]  0.4  0.3  0.3  0.2  0.3  0.6  0.3  0.2  0.7  0.3  0.4  1.0  7.9  6.1  5.7</span><span class="w">
+    </span><span class="c1">##  [91]  5.2  4.7  2.9  5.8  7.2  9.6 17.4 11.1  6.4  4.0 12.1 21.2  2.2  1.9  4.0</span><span class="w">
+    </span><span class="c1">## [106] 13.2  0.9  0.8  0.5  0.2  0.4  1.2  0.6  0.2  1.0  0.4  0.6  0.1  0.4  0.7</span><span class="w">
+    </span><span class="c1">## [121]  0.5  0.7  0.9  4.8  3.8  4.9  6.2 10.4 16.4  2.7  1.2  0.5  1.9  2.0  2.1</span><span class="w">
+    </span><span class="c1">## [136]  1.9  1.8  3.5  7.7  2.7  1.8  0.8  0.5  0.5  0.3  0.9</span><span class="w">
+    </span><span class="c1">## attr(,"na.action")</span><span class="w">
+    </span><span class="c1">##  [1]   9  10  15  21  24  45  49  58  61  63  80  81  89 110 112 115 121 129 138</span><span class="w">
+    </span><span class="c1">## [20] 150</span><span class="w">
+    </span><span class="c1">## attr(,"class")</span><span class="w">
+    </span><span class="c1">## [1] "omit"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Although the result does contain more than just the non-<code class="highlighter-rouge">NA</code> values,
+only the non-<code class="highlighter-rouge">NA</code> values will be used in subsequent operations. Note
+that the result of <code class="highlighter-rouge">na.omit</code> contains more information than just the
+non-<code class="highlighter-rouge">NA</code> values. This function can also be applied to complete data
+frames. In this case, any row with an <code class="highlighter-rouge">NA</code> is removed (so be careful
+with its usage).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data.cleaned</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is often necessary to identify <code class="highlighter-rouge">NA</code>s present in a data structure. The
+<code class="highlighter-rouge">is.na</code> function can be used for this. It can also be negated using the
+``!’’ character.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##   [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [13] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE</span><span class="w">
+    </span><span class="c1">##  [25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [37] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [49]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [61]  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [73] FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [85] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">##  [97] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">## [109] FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">## [121]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">## [133] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">## [145] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+    </span><span class="c1">## [157] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="writing-data-to-files">Writing data to files</h3>
+
+<p>With <code class="highlighter-rouge">R</code>, it is easy to write data to files. The function <code class="highlighter-rouge">write.table</code>
+is usually the best function for this purpose. Given only a data frame
+and a file name, this function will write the data contained in the data
+frame to a text file. There are a number of arguments that can be
+controlled with this function as shown below (also look at the help
+file).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">`write.table(x, file = "", append = FALSE, quote = TRUE, sep = " ", eol = "\", na = "NA", dec = ".", row.names = TRUE, col.names = TRUE, qmethod = c("escape", "double"), fileEncoding = "")`</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The important ones (or most frequently used) are the column separator
+<code class="highlighter-rouge">sep</code> argument, and whether of not you want to keep the column and row
+names (<code class="highlighter-rouge">col.names</code> and <code class="highlighter-rouge">row.names</code> respectively). For example, if we
+want to write <code class="highlighter-rouge">soil.data</code> to text file (``file name.txt’’), retaining
+the column names, not retaining row names, and having a tab delimited
+column separator, we would use:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">write.table</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="o">=</span><span class="w"> </span><span class="s2">"file name.txt"</span><span class="p">,</span><span class="w"> 
+                </span><span class="n">col.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s2">"\t"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Setting the <code class="highlighter-rouge">append</code> argument to <code class="highlighter-rouge">TRUE</code> lets you add data to a file that
+already exists.</p>
+
+<p>The <code class="highlighter-rouge">write.table</code> function can not be used with all data structures in
+<code class="highlighter-rouge">R</code> (like lists for example). However, it can be used for such things as
+vectors and matrices.</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<ol>
+  <li>
+    <p>Using the <code class="highlighter-rouge">soil.data</code> object, determine the minimum and maximum soil
+pH (<code class="highlighter-rouge">PH_CaCl2</code>) in the data frame. Next add a new column to the data
+frame that contains the <em>l<strong>o</strong>g</em><sub>10</sub> of soil carbon
+<code class="highlighter-rouge">Total_Carbon</code>.</p>
+  </li>
+  <li>
+    <p>Create a new data frame that contains the mean SOC, pH, and clay of
+the data set. Write out the summary to a new file using the default
+options. Finally, try changing the separator to a tab and write to a
+new file.</p>
+  </li>
+  <li>
+    <p>There are a number of <code class="highlighter-rouge">NA</code> values in the data set. We want to remove
+them. Could this be done in one step i.e. delete every row that
+contains an <code class="highlighter-rouge">NA</code>? Is this appropriate? How would you go about
+ensuring that no data is lost? Can you do this? or perhaps—do this!</p>
+  </li>
+</ol>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-04-24">April 24, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_literacy/part3/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_literacy/part3/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_literacy/part3/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

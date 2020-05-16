@@ -109,13 +109,10 @@ x<- NULL
 
 
 ##########################################################################################################################
-## Missing, inde???nite, and in???nite values
-
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=TRUE, background='white'------
+## Missing, indefinite, and infinnite values
 x<- NA
 x-2
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=TRUE, background='white'------
 is.na(x)
 !is.na(x)
 ##########################################################################################################################
@@ -123,40 +120,30 @@ is.na(x)
 
 ##########################################################################################################################
 ## Functions, arguments, and packages
-
-## ----echo=TRUE, tidy=TRUE,cache=FALSE, background='white'----------------
 sum(1,12.5,3.33,5,88)
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
 a<- 1:10
 b<- a
 plot(x=a, y=b)
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
 plot(a, b)
-
-## ----echo=TRUE, tidy=TRUE,cache=FALSE, background='white'----------------
 args(plot)
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE, background='white'----------------
 args(rnorm)
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
 plot(rnorm(10,sqrt(mean(c(1:5, 7,1,8,sum(8.4,1.2,7))))),1:10)
 
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
+#Install packages
 install.packages("Cubist")
-
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=TRUE, background='white'------
 library(Cubist)
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
+## Installation of the ithir packages
 library(devtools)
 install_bitbucket("brendo1001/ithir/pkg")
 library(ithir)
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=TRUE, background='white'------
+## detaching packages
 detach("package:Cubist")
 ##########################################################################################################################
 
@@ -164,15 +151,14 @@ detach("package:Cubist")
 ##########################################################################################################################
 ## Getting Help
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
 ?cubist
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
+## global search of installed and not installed functions
 ??polygon
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
+##
 RSiteSearch("A Keyword")
 
-## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=TRUE, background='white'------
+##
 apropos("mean")
 

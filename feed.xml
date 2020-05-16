@@ -4,13 +4,234 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2020-03-02T21:43:05+11:00</updated>
+<updated>2020-05-16T11:18:55+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/04/journalDigest" />
+  <id>/2020/04/journalDigest</id>
+  <updated>2020-04-14T00:00:00-00:00</updated>
+  <published>2020-04-14T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-8&quot;&gt;Journal Paper Digests 2020 #8&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;VisNIR integrated multi-sensing penetrometer for in situ high-resolution vertical soil sensing&lt;/li&gt;
+  &lt;li&gt;Classification of soil aggregates: A novel approach based on deep learning&lt;/li&gt;
+  &lt;li&gt;Applications of SAR Interferometric Coherence Time Series: Spatiotemporal Dynamics of Geomorphic Transitions in the South-Central Andes.&lt;/li&gt;
+  &lt;li&gt;Clay content and mineralogy, organic carbon and cation exchange capacity affect water vapour sorption hysteresis of soil&lt;/li&gt;
+  &lt;li&gt;Simultaneous measurement of net nitrogen mineralization and denitrification rates in soil using nitrification inhibitor 3,5-dimethylpyrazole&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;visnir-integrated-multi-sensing-penetrometer-for-in-situ-high-resolution-vertical-soil-sensing&quot;&gt;VisNIR integrated multi-sensing penetrometer for in situ high-resolution vertical soil sensing&lt;/h3&gt;
+&lt;p&gt;By: Wijewardane, Nuwan K.; Hetrick, Sarah; Ackerson, Jason; et al.
+SOIL &amp;amp; TILLAGE RESEARCH  Volume: 199   Pages: 4604-4604   Published: MAY 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+An in situ penetrometer system that can measure profile soil properties rapidly, cost-effectively, and at high vertical resolution would benefit the soil science and agriculture communities. A visible and near infrared (VisNIR) integrated multi-sensing penetrometer system was developed to automatically measure in situ soil VisNIR reflectance spectra, penetration resistance, and insertion depth along a soil profile. The system was tested in 11 agricultural fields in Nebraska, Illinois, Iowa, and South Dakota of the U.S. An independent soil VisNIR spectral library was used to build calibration models for soil property prediction. External Parameter Orthogonalization (EPO) was used to correct for the field intactness of in situ VisNIR spectra. The results showed that EPO was effective in correcting for the spectral disparity between in situ and dry-ground VisNIR spectra. The EPO correction showed an improvement of prediction accuracy of soil total carbon (R-2 and RMSE improved from 0.29 and 3.06 % to 0.5 and 0.79%, respectively) and total nitrogen (R-2 and RMSE improved from 0.51 and 0.36 % to 0.62 and 0.06 %, respectively). The system also predicted soil bulk density with an RMSE of 0.12 g cm(-3) and R-2 of 0.80. It is concluded that the VisNIR multi-sensing penetrometer, along with the use of external soil spectral libraries and the spectral correction algorithm EPO, can lead to a rapid, robust and cost-effective system for in situ high resolution vertical soil sensing.&lt;/p&gt;
+
+&lt;h3 id=&quot;classification-of-soil-aggregates-a-novel-approach-based-on-deep-learning&quot;&gt;Classification of soil aggregates: A novel approach based on deep learning&lt;/h3&gt;
+&lt;p&gt;By: Azizi, Afshin; Gilandeh, Yousef Abbaspour; Mesri-Gundoshmian, Tarahom; et al.
+SOIL &amp;amp; TILLAGE RESEARCH  Volume: 199   Pages: 4586-4586   Published: MAY 2020
+Context Sensitive Links  Close Abstract
+Having a powerful tool and the knowledge to classify soil aggregates, one of the most important factors in evaluating the performance of tillage implements, will result in quick and accurate classification of soil aggregates. By considering them as virtual sieve, a large part of the energy and workforce used in this sector can be reduced. In this regard, computational intelligence tools can play an important and optimal role in the evaluation of tillage quality and its real-time employment. The objective of the present study was to introduce a method known as deep learning to classify aggregates of any size in specific classes. Accordingly, stereo-pair images were used to provide multiple images simultaneously and the proper nutrition of the network. Since stereo-pair images are not dependent on changes in ambient light, imaging was done under conditions of the field with no lighting system. To train the deep models, the images of each lens were separated from each other and entered into the network. Without the extraction of the required features that is done manually in most image and vision-processing algorithms, the presented deep model began to learn to observe and could extract the required features from the lowest level to highly complex features automatically. Among the variety of neural network algorithms in deep learning, a convolutional neural network (CNN) was used in this study for its unique properties in working on images. To train the CNN, VggNet16, ResNet50, and Inception-v4 architects were used. Classification accuracy of these networks was above 95 %, but the highest accuracy achieved with ResNet50 (98.72 %). This accuracy, which was significantly different from previous studies, indicated the good performance of the deep learning method in the classification of aggregates. The results of the current study showed that the estimation of mean weight diameter (MWD) of aggregates without limitations in size and with great precision is completely practical and achievable.&lt;/p&gt;
+
+&lt;h3 id=&quot;applications-of-sar-interferometric-coherence-time-series-spatiotemporal-dynamics-of-geomorphic-transitions-in-the-south-central-andes&quot;&gt;Applications of SAR Interferometric Coherence Time Series: Spatiotemporal Dynamics of Geomorphic Transitions in the South-Central Andes&lt;/h3&gt;
+&lt;p&gt;By: Olen, Stephanie; Bookhagen, Bodo
+JOURNAL OF GEOPHYSICAL RESEARCH-EARTH SURFACE  Volume: 125   Issue: 3   Pages: 5141-5141   Published: MAR 2020
+Context Sensitive Links  Close Abstract
+Sediment transport domains in mountain landscapes are characterized by fundamentally different processes and rates depending on several factors, including geology, climate, and biota. Accurately identifying where transitions between transport domains occur is an important step to quantify the past, present, and future contribution of varying erosion and sedimentation processes and enhance our predictive capabilities. We propose a new methodology based on time series of synthetic aperture radar (SAR) interferometric coherence images to map sediment transport regimes across arid and semiarid landscapes. Using 4 years of Sentinel-1 data, we analyze sediment transport regimes for the south-central Andes in northwestern Argentina characterized by steep topographic and climatic gradients. We observe seasonally low coherence during the regional wet season, particularly on hillslopes and in alluvial channels. The spatial distribution of coherence is compared to drainage areas extracted from digital topography to identify two distinct transitions within watersheds: (a) a hillslope-to-fluvial and (b) a fluvial-to-alluvial transition. While transitions within a given basin can be well-constrained, the relative role of each sediment transport domain varies widely over the climatic and topographic gradients. In semiarid regions, we observe larger relative contributions from hillslopes compared to arid regions. Across regional gradients, the range of coherence within basins positively correlates to previously published millennial catchment-wide erosion rates and to topographic metrics used to indicate long-term uplift. Our study suggests that a dense time series of interferometric coherence can be used as a proxy for surface sediment movement and landscape stability in vegetation-free settings at event to decadal timescales.&lt;/p&gt;
+
+&lt;h3 id=&quot;clay-content-and-mineralogy-organic-carbon-and-cation-exchange-capacity-affect-water-vapour-sorption-hysteresis-of-soil&quot;&gt;Clay content and mineralogy, organic carbon and cation exchange capacity affect water vapour sorption hysteresis of soil&lt;/h3&gt;
+&lt;p&gt;By: Arthur, Emmanuel; Tuller, Markus; Moldrup, Per; et al.
+EUROPEAN JOURNAL OF SOIL SCIENCE  Volume: 71   Issue: 2   Pages: 204-214   Published: MAR 2020
+Context Sensitive Links Full Text from Publisher  Close Abstract
+The hysteretic behaviour of the dry region (&amp;lt;-1.5 MPa) of the soil water characteristic, which is of the essence for accurate characterization and modelling of bio-physicochemical soil processes under dry conditions, is well documented. However, knowledge about how to best quantify water vapour sorption hysteresis and about the effects of soil properties on dry-region hysteretic behaviour is limited. To overcome this knowledge gap, we proposed a new method for quantifying sorption hysteresis and evaluated its applicability based on measured sorption isotherms of four source clay minerals and 147 soil samples. Furthermore, the effects of clay mineralogy, clay content, soil organic carbon (SOC) and cation exchange capacity (CEC) on the magnitude of sorption hysteresis were investigated. For the clay minerals, kaolinite did not exhibit hysteretic behaviour, illite showed some hysteresis, whereas Na- and Ca-smectite exhibited strong hysteretic behaviour. The average hysteresis, corrected for clay and SOC contents, was strongly reflective of the dominant clay mineralogy of the soil samples. For the soil samples with low SOC content, the average hysteresis significantly increased with increasing clay content (R-2 = 0.92), except for the kaolinite-rich samples (R-2 = 0.35). The SOC-rich samples that exhibited illitic clay mineralogy and similar soil texture showed a significant increase in average hysteresis with increasing organic carbon content (R-2 = 0.93). For all soil samples combined, the CEC was the strongest indicator for the magnitude of water vapour sorption hysteresis.
+Highlights
+A new index for quantification of soil vapour sorption hysteresis was proposed
+Large SOC and clay content increased sorption hysteresis
+For soil samples, dominant clay mineralogy controlled the magnitude of hysteresis
+Cation exchange capacity was the best predictor of hysteresis for all soil types&lt;/p&gt;
+
+&lt;h3 id=&quot;simultaneous-measurement-of-net-nitrogen-mineralization-and-denitrification-rates-in-soil-using-nitrification-inhibitor-35-dimethylpyrazole&quot;&gt;Simultaneous measurement of net nitrogen mineralization and denitrification rates in soil using nitrification inhibitor 3,5-dimethylpyrazole&lt;/h3&gt;
+
+&lt;p&gt;By: Zebarth, B. J.; Burton, D. L.; Spence, J.; et al.
+CANADIAN JOURNAL OF SOIL SCIENCE  Volume: 100   Issue: 1   Pages: 1-10   Published: MAR 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+A practical means to quantify the response of the rates of net N mineralization and denitrification over a wide range of soil water contents is generally lacking. This study examined the potential to use a nitrification inhibitor (NI) assay system to simultaneously estimate the rates of net N mineralization and denitrification, and applied the NI assay to assess the effect of water content on net N mineralization and denitrification rates in two soils with contrasting soil texture. The compound 3,5-dimethylpyrazole (DMP) applied at a rate of 200 mg kg(-1) was found to provide essentially complete inhibition of nitrification over the duration of the soil incubation for two soils with contrasting soil texture (clay loam vs. sandy loam) and over a range of soil water contents (35%, 55%, and 85% water-filled pore space). This allowed net N mineralization to be estimated as the accumulation of soil ammonium (NHthorn 4) and of denitrification as the disappearance of added nitrate (NO3-). Addition of DMP resulted in a small increase in soil respiration rate but did not appear to influence the rate of net soil N mineralization. The NI assay provides a practical means to quantify the rates of net N mineralization and denitrification simultaneously over a wide range of soil water contents. The assay can be readily scaled up to routinely test multiple soils in an efficient manner, has limited material costs, and is also relatively simple to perform.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 14, 2020.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/04/journalDigest" />
+  <id>/2020/04/journalDigest</id>
+  <updated>2020-04-07T00:00:00-00:00</updated>
+  <published>2020-04-07T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-7&quot;&gt;Journal Paper Digests 2020 #7&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mapping nature’s contribution to SDG 6 and implications for other SDGs at policy relevant scales&lt;/li&gt;
+  &lt;li&gt;Comprehensive analysis of alternative downscaled soil moisture products&lt;/li&gt;
+  &lt;li&gt;The impact of sensitivity and uncertainty of soil physical parameters on the terms of the water balance: Some case studies with default R packages. Part I: Theory, methods and case descriptions&lt;/li&gt;
+  &lt;li&gt;The impact of sensitivity and uncertainty of soil physical parameters on the terms of the water balance: Some case studies with default R packages. Part II: Results and discussion&lt;/li&gt;
+  &lt;li&gt;Improving the Predictive Skill of a Distributed Hydrological Model by Calibration on Spatial Patterns With Multiple Satellite Data Sets&lt;/li&gt;
+  &lt;li&gt;The role of climate variability in Australian drought&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;mapping-natures-contribution-to-sdg-6-and-implications-for-other-sdgs-at-policy-relevant-scales&quot;&gt;Mapping nature’s contribution to SDG 6 and implications for other SDGs at policy relevant scales&lt;/h3&gt;
+
+&lt;p&gt;By: Mulligan, Mark; van Soesbergen, Arnout; Hole, David G.; et al.
+REMOTE SENSING OF ENVIRONMENT  Volume: 239   Pages: 11671-11671   Published: MAR 15 2020
+Context Sensitive Links  Close Abstract
+The natural world has multiple, sometimes conflicting, sometimes synergistic, values to society when viewed through the lens of the Sustainable Development Goals (SDGs), Spatial mapping of nature’s contributions to the SDGs has the potential to support the implementation of SDG strategies through sustainable land management and conservation of ecosystem services. Such mapping requires a range of spatial data. This paper examines the use of remote sensing and spatial ecosystem service modelling to examine nature’s contribution to targets under SDG 6, also highlighting synergies with other key SDGs and trade-offs with agriculture.
+We use a wide range of remotely sensed and globally available datasets (for land cover, climate, soil, population, agriculture) alongside the existing and widely used spatial ecosystem services assessment tool, Co$tingNature. With these we identify priority areas for sustainable management to realise targets under SDG 6 (water) at the country scale for Madagascar and at the basin scale for the Volta basin, though the application developed can be applied to any country or major basin in the world. Within this SDG 6 priority areas footprint, we assess the synergies and trade-offs provided by this land for SDG 15 (biodiversity) and SDG 13 (climate action) as well as SDG 2 (zero hunger).
+Results highlight the co-benefits of sustainably managing nature’s contribution to SDG 6, such as the protection of forest cover (for SDG target 15.2), carbon storage as a contribution to the Paris climate agreement and nationally determined contributions (SDG 13) and biodiversity (for SDG target 15.5) but also trade-offs with the zero hunger goal (for SDG 2). Such analyses allow for better understanding of land management requirements for realising multiple SDGs through protection and restoration of green infrastructure. We provide a freely available tool, within the Co$tingNature platform, based on a variety of remotely sensed products, that can be used by SDG practitioners to carry out similar analyses and inform decision-making at national or sub-national levels globally.&lt;/p&gt;
+
+&lt;h3 id=&quot;comprehensive-analysis-of-alternative-downscaled-soil-moisture-products&quot;&gt;Comprehensive analysis of alternative downscaled soil moisture products&lt;/h3&gt;
+
+&lt;p&gt;By: Sabaghy, Sabah; Walker, Jeffrey P.; Renzullo, Luigi J.; et al.
+REMOTE SENSING OF ENVIRONMENT  Volume: 239   Pages: 11586-11586   Published: MAR 15 2020
+Context Sensitive Links  Close Abstract
+Recent advances in L-band passive microwave remote sensing provide an unprecedented opportunity to monitor soil moisture at similar to 40 km spatial resolution around the globe. Nevertheless, retrieval of the accurate high spatial resolution soil moisture maps that are required to satisfy hydro-meteorological and agricultural applications remains a challenge. Currently, a variety of downscaling, otherwise known as disaggregation techniques have been proposed as the solution to disaggregate the coarse passive microwave soil moisture into high-to-medium resolutions. These techniques take advantage of the strengths of both the passive microwave observations of soil moisture having low spatial resolution and the spatially detailed information on land surface features that either influence or represent soil moisture variability. However, such techniques have typically been developed and tested individually under differing weather and climate conditions, meaning that there is no clear guidance on which technique performs the best. Consequently, this paper presents a quantitative assessment of the existing radar-, optical-, radiometer-, and oversampling-based downscaling techniques using a singular extensive data set collected specifically for that purpose, being the Soil Moisture Active Passive Experiment (SMAPEx)-4 and -5 airborne field campaigns, and the OzNet in situ stations, to determine the relative strengths and weaknesses of their performances. The oversampling-based soil moisture product best captured the temporal and spatial variability of the reference soil moisture overall, though the radar-based products had a better temporal agreement with airborne soil moisture during the short SMAPEx-4 period. Moreover, the difference between temporal analysis of products against in situ and airborne soil moisture reference data sets pointed to the fact that relying on in situ measurements alone is not appropriate for validation of spatially enhanced soil moisture maps.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-impact-of-sensitivity-and-uncertainty-of-soil-physical-parameters-on-the-terms-of-the-water-balance-some-case-studies-with-default-r-packages-part-i-theory-methods-and-case-descriptions&quot;&gt;The impact of sensitivity and uncertainty of soil physical parameters on the terms of the water balance: Some case studies with default R packages. Part I: Theory, methods and case descriptions&lt;/h3&gt;
+
+&lt;p&gt;By: Wesseling, Jan; Kroes, Joop; Oliveira, Thalita Campos; et al.
+COMPUTERS AND ELECTRONICS IN AGRICULTURE  Volume: 170   Pages: 5054-5054   Published: MAR 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+These papers (part I and part II) emphasize the need for sensitivity and uncertainty analyses. A number of techniques are applied, e.g. latin hypercube sampling, impact response surfaces and Sobol-analyses. Five examples are presented, four of them concerning the numerical model SWAP. The data generation and analysis is performed with standard R packages. Although the computations can be made on any computer, the most time-consuming examples in this paper have been run on a High Performance Computer Cluster. With the relatively simple Impact Response Surface technique it is shown that variation of the saturated hydraulic conductivity has far less impact than changing the moisture content at saturation. Analyses according to the Sobol-Jansen method show that when the soil physical relationships are described according to Damiano, then the parameter b has a very large influence on the results. If the well-known Mualem - Van Genuchten equations are applied, most variation can be explained by the parameter n.&lt;/p&gt;
+
+&lt;h3 id=&quot;improving-the-predictive-skill-of-a-distributed-hydrological-model-by-calibration-on-spatial-patterns-with-multiple-satellite-data-sets&quot;&gt;Improving the Predictive Skill of a Distributed Hydrological Model by Calibration on Spatial Patterns With Multiple Satellite Data Sets&lt;/h3&gt;
+
+&lt;p&gt;By: Dembele, Moctar; Hrachowitz, Markus; Savenije, Hubert H. G.; et al.
+WATER RESOURCES RESEARCH  Volume: 56   Issue: 1   Pages: 26085-26085   Published: JAN 2020
+Context Sensitive Links  Close Abstract
+Hydrological model calibration combining Earth observations and in situ measurements is a promising solution to overcome the limitations of the traditional streamflow-only calibration. However, combining multiple data sources in model calibration requires a meaningful integration of the data sets, which should harness their most reliable contents to avoid accumulation of their uncertainties and mislead the parameter estimation procedure. This study analyzes the improvement of model parameter selection by using only the spatial patterns of satellite remote sensing data, thereby ignoring their absolute values. Although satellite products are characterized by uncertainties, their most reliable key feature is the representation of spatial patterns, which is a unique and relevant source of information for distributed hydrological models. We propose a novel multivariate calibration framework exploiting spatial patterns and simultaneously incorporating streamflow and three satellite products (i.e., Global Land Evaporation Amsterdam Model [GLEAM] evaporation, European Space Agency Climate Change Initiative [ESA CCI] soil moisture, and Gravity Recovery and Climate Experiment [GRACE] terrestrial water storage). The Moderate Resolution Imaging Spectroradiometer (MODIS) land surface temperature data set is used for model evaluation. A bias-insensitive and multicomponent spatial pattern matching metric is developed to formulate a multiobjective function. The proposed multivariate calibration framework is tested with the mesoscale Hydrologic Model (mHM) and applied to the poorly gauged Volta River basin located in a predominantly semiarid climate in West Africa. Results of the multivariate calibration show that the decrease in performance for streamflow (-7%) and terrestrial water storage (-6%) is counterbalanced with an increase in performance for soil moisture (+105%) and evaporation (+26%). These results demonstrate that there are benefits in using satellite data sets, when suitably integrated in a robust model parametrization scheme.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-role-of-climate-variability-in-australian-drought&quot;&gt;The role of climate variability in Australian drought&lt;/h3&gt;
+&lt;p&gt;By: King, Andrew D.; Pitman, Andy J.; Henley, Benjamin J.; et al.
+NATURE CLIMATE CHANGE  Volume: 10   Issue: 3   Pages: 177-179   Published: MAR 2020
+Context Sensitive Links  Close Abstract
+Much of Australia has been in severe drought since at least 2017. Here we link Australian droughts to the absence of Pacific and Indian Ocean mode states that act as key drivers of drought-breaking rains. Predicting the impact of climate change on drought requires accurate modelling of these modes of variability.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 07, 2020.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/03/journalDigest" />
+  <id>/2020/03/journalDigest</id>
+  <updated>2020-03-29T00:00:00-00:00</updated>
+  <published>2020-03-29T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-6&quot;&gt;Journal Paper Digests 2020 #6&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Which practices co-deliver food security, climate change mitigation and adaptation, and combat land degradation and desertification?&lt;/li&gt;
+  &lt;li&gt;Global patterns of terrestrial nitrogen and phosphorus limitation&lt;/li&gt;
+  &lt;li&gt;Mapping soil organic carbon and clay using remote sensing to predict soil workability for enhanced climate change adaptation&lt;/li&gt;
+  &lt;li&gt;Modelling the spatial extent and severity of extreme European windstorms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;which-practices-co-deliver-food-security-climate-change-mitigation-and-adaptation-and-combat-land-degradation-and-desertification&quot;&gt;Which practices co-deliver food security, climate change mitigation and adaptation, and combat land degradation and desertification?&lt;/h3&gt;
+
+&lt;p&gt;By:Smith, P (Smith, Pete)[ 1 ] ; Calvin, K (Calvin, Katherine)[ 2 ] ; Nkem, J (Nkem, Johnson)[ 3 ] ; Campbell, D (Campbell, Donovan)[ 4 ] ; Cherubini, F (Cherubini, Francesco)[ 5 ] ; Grassi, G (Grassi, Giacomo)[ 6 ] ; Korotkov, V (Korotkov, Vladimir)[ 7 ] ; Hoang, AL (Anh Le Hoang)[ 8 ] ; Lwasa, S (Lwasa, Shuaib)[ 9 ] ; McElwee, P (McElwee, Pamela)[ 10 ] …More&lt;/p&gt;
+
+&lt;p&gt;View Web of Science ResearcherID and ORCID
+GLOBAL CHANGE BIOLOGY&lt;/p&gt;
+
+&lt;p&gt;Pages: NIL_1-NIL_44
+Published: DEC 14 2019&lt;/p&gt;
+
+&lt;p&gt;Document Type: Article&lt;/p&gt;
+
+&lt;p&gt;Abstract
+There is a clear need for transformative change in the land management and food production sectors to address the global land challenges of climate change mitigation, climate change adaptation, combatting land degradation and desertification, and delivering food security (referred to hereafter as “land challenges”). We assess the potential for 40 practices to address these land challenges and find that: Nine options deliver medium to large benefits for all four land challenges. A further two options have no global estimates for adaptation, but have medium to large benefits for all other land challenges. Five options have large mitigation potential (&amp;gt;3 Gt CO(2)eq/year) without adverse impacts on the other land challenges. Five options have moderate mitigation potential, with no adverse impacts on the other land challenges. Sixteen practices have large adaptation potential (&amp;gt;25 million people benefit), without adverse side effects on other land challenges. Most practices can be applied without competing for available land. However, seven options could result in competition for land. A large number of practices do not require dedicated land, including several land management options, all value chain options, and all risk management options. Four options could greatly increase competition for land if applied at a large scale, though the impact is scale and context specific, highlighting the need for safeguards to ensure that expansion of land for mitigation does not impact natural systems and food security. A number of practices, such as increased food productivity, dietary change and reduced food loss and waste, can reduce demand for land conversion, thereby potentially freeing-up land and creating opportunities for enhanced implementation of other practices, making them important components of portfolios of practices to address the combined land challenges.&lt;/p&gt;
+
+&lt;h3 id=&quot;global-patterns-of-terrestrial-nitrogen-and-phosphorus-limitation&quot;&gt;Global patterns of terrestrial nitrogen and phosphorus limitation&lt;/h3&gt;
+&lt;p&gt;By:Du, EZ (Du, Enzai)[ 1,2,3 ] ; Terrer, C (Terrer, Cesar)[ 3,4 ] ; Pellegrini, AFA (Pellegrini, Adam F. A.)[ 3 ] ; Ahlstrom, A (Ahlstrom, Anders)[ 3,5,6 ] ; van Lissa, CJ (van Lissa, Caspar J.)[ 7 ] ; Zhao, X (Zhao, Xia)[ 8 ] ; Xia, N (Xia, Nan)[ 2 ] ; Wu, XH (Wu, Xinhui)[ 2 ] ; Jackson, RB (Jackson, Robert B.)[ 3,9,10 ]&lt;/p&gt;
+
+&lt;p&gt;View Web of Science ResearcherID and ORCID
+NATURE GEOSCIENCE&lt;/p&gt;
+
+&lt;p&gt;Volume: 13 Issue: 3 Pages: 221-+
+Published: MAR 2020&lt;/p&gt;
+
+&lt;p&gt;Document Type: Article&lt;/p&gt;
+
+&lt;p&gt;Abstract
+Spatial patterns in the phosphorus and nitrogen limitation in natural terrestrial ecosystems are reported from analysis of a global database of the resorption efficiency of nutrients by leaves.&lt;/p&gt;
+
+&lt;p&gt;Nitrogen (N) and phosphorus (P) limitation constrains the magnitude of terrestrial carbon uptake in response to elevated carbon dioxide and climate change. However, global maps of nutrient limitation are still lacking. Here we examined global N and P limitation using the ratio of site-averaged leaf N and P resorption efficiencies of the dominant species across 171 sites. We evaluated our predictions using a global database of N- and P-limitation experiments based on nutrient additions at 106 and 53 sites, respectively. Globally, we found a shift from relative P to N limitation for both higher latitudes and precipitation seasonality and lower mean annual temperature, temperature seasonality, mean annual precipitation and soil clay fraction. Excluding cropland, urban and glacial areas, we estimate that 18% of the natural terrestrial land area is significantly limited by N, whereas 43% is relatively P limited. The remaining 39% of the natural terrestrial land area could be co-limited by N and P or weakly limited by either nutrient alone. This work provides both a new framework for testing nutrient limitation and a benchmark of N and P limitation for models to constrain predictions of the terrestrial carbon sink.&lt;/p&gt;
+
+&lt;h3 id=&quot;mapping-soil-organic-carbon-and-clay-using-remote-sensing-to-predict-soil-workability-for-enhanced-climate-change-adaptation&quot;&gt;Mapping soil organic carbon and clay using remote sensing to predict soil workability for enhanced climate change adaptation&lt;/h3&gt;
+
+&lt;p&gt;By:Paul, SS (Paul, S. S.)[ 1 ] ; Coops, NC (Coops, N. C.)[ 2 ] ; Johnson, MS (Johnson, M. S.)[ 3 ] ; Krzic, M (Krzic, M.)[ 1,4 ] ; Chandna, A (Chandna, A.)[ 1 ] ; Smukler, SM (Smukler, S. M.)[ 1 ]&lt;/p&gt;
+
+&lt;p&gt;GEODERMA&lt;/p&gt;
+
+&lt;p&gt;Volume: 363 Pages: 14177-14177
+Published: APR 1 2020&lt;/p&gt;
+
+&lt;p&gt;Document Type: Article&lt;/p&gt;
+
+&lt;p&gt;Abstract
+Climate change is presenting sizeable challenges for agricultural production around the world. In some regions, shifting precipitation patterns in the spring and fall are negatively impacting farm operation by reducing the number of “workable days” or the days fields can be worked with heavy equipment without damaging soil structure. This can be particularly problematic for farms on clay soils and/or poor drainage. Approximating a water content threshold at which a soil is not workable due to soil structure destruction can be helpful for planning effective farm operations. In this study, we applied advanced remote sensing and machine learning tools to produce digital maps of soil organic carbon (SOC) and clay (CL) content and used them in existing pedotransfer functions (PTFs) to predict a workability threshold (WT) across a study area in Delta, British Columbia, Canada. We combined field data, soil and vegetation indices derived from multiple Landsat satellite images, topographic indices, and soil survey information to digitally map SOC and CL of the agricultural lands in Delta using random forest (RF) and generalized boosted regression model (GBM). When validated against an independent field dataset, the RF model outperformed GBM for all accuracy measures (coefficient of determination - R-2, concordance correlation coefficient - CCC, and normalized root mean square error - nRMSE). We then spatially applied several PTFs using our digital maps to estimate the plasticity limits of the soil and produce WT map. The WT map was then tested against independent field samples of the soil water content at - 10 kPa and we achieved R-2 of 0.59, CCC of 0.70, and nRMSE of 0.15. Our analysis showed that 40% of the fields in the study area had WT &amp;lt; 30%, a threshold that is already being impacted by reduced workable days. This WT map could be used to improve spatial prioritizations of investments for climate change adaptation at farm to regional scales.&lt;/p&gt;
+
+&lt;h3 id=&quot;modelling-the-spatial-extent-and-severity-of-extreme-european-windstorms&quot;&gt;Modelling the spatial extent and severity of extreme European windstorms&lt;/h3&gt;
+
+&lt;p&gt;By:Sharkey, P (Sharkey, Paul)[ 1 ] ; Tawn, JA (Tawn, Jonathan A.)[ 2 ] ; Brown, SJ (Brown, Simon J.)[ 3 ]&lt;/p&gt;
+
+&lt;p&gt;JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS&lt;/p&gt;
+
+&lt;p&gt;Volume: 69 Issue: 2 Pages: 223-250
+Published: APR 2020&lt;/p&gt;
+
+&lt;p&gt;Document Type: Article&lt;/p&gt;
+
+&lt;p&gt;Abstract
+Windstorms are a primary natural hazard affecting Europe that are commonly linked to substantial property and infrastructural damage and are responsible for the largest spatially aggregated financial losses. Such extreme winds are typically generated by extratropical cyclone systems originating in the North Atlantic and passing over Europe. Previous statistical studies tend to model extreme winds at a given set of sites, corresponding to inference in an Eulerian framework. Such inference cannot incorporate knowledge of the life cycle and progression of extratropical cyclones across the region and is forced to make restrictive assumptions about the extremal dependence structure. We take an entirely different approach which overcomes these limitations by working in a Lagrangian framework. Specifically, we model the development of windstorms over time, preserving the physical characteristics linking the windstorm and the cyclone track, the path of local vorticity maxima, and make a key finding that the spatial extent of extratropical windstorms becomes more localized as its magnitude increases irrespective of the location of the storm track. Our model allows simulation of synthetic windstorm events to derive the joint distributional features over any set of sites giving physically consistent extrapolations to rarer events. From such simulations improved estimates of this hazard can be achieved in terms of both intensity and area affected.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 29, 2020.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -307,187 +528,6 @@ Laser-induced breakdown spectroscopy (LIBS) is well known for its feature of rem
 Sustainable soil management, degraded soil restoration abridging agronomic yield gap and improving the environment are important to achieve world peace. Sustainable eco-intensification of agro-ecosystems reduces inputs and enhances use efficiency by restoring soil health. Harnessing soil carbon sink capacity includes reducing accelerated soil erosion for adaptation and mitigation of climate change. System-based conservation agriculture sustains agronomic productivity and minimizes soil degradation and environmental pollution.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2020/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 06, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Customising public digital soil mapping products with mass preserving splines]]></title>
- <link rel="alternate" type="text/html" href="/2020/02/gridsplines" />
-  <id>/2020/02/gridsplines</id>
-  <updated>2020-02-04T00:00:00-00:00</updated>
-  <published>2020-02-04T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;p&gt;&lt;em&gt;There are now plenty of soil maps which digitally represent the soil variation across landscapes in both the lateral and vertical dimensions. Some might say this is akin to digital twinning for natural resources. These representations are usually provided as depth slices or layers for specified depth intervals. What is probably not as widely known or practiced is that one can use these data to generate custom soil maps (in terms of vertical support representation) according to the wishes of the end-user or map maker. In this post, the mass-preserving spline is re-introduced not for harmonising soil profile data, but for creating user-defined soil maps that exploit 3D digital soil mapping information that are becoming widely available publicly and for free.&lt;/em&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;a-background-story-of-sorts&quot;&gt;A background story of sorts&lt;/h3&gt;
-
-&lt;p&gt;There do not appear to be new official global activities associated with the &lt;a href=&quot;https://www.isric.org/projects/globalsoilmapnet&quot;&gt;GlobalSoilMap.net&lt;/a&gt; project (Sanchez et al. 2009) any longer. This initiative was very active between 2009 and 2013 and created a flurry of efforts to map the world’s soils and their characteristics. The initial philosophy of GlobalSoilMap.net was for nodes to coordinate activities across a selected number of regions and individual countries would work within the nodes to develop digital soil mapping products for within country, and provide assistance to other countries in the region where the necessary digital soil mapping skill base was still in development.&lt;/p&gt;
-
-&lt;p&gt;Probably the greatest success and lasting legacy of the GlobalSoilMap.net project was the creation of a document that specified the expected outputs to be developed i.e. the GlobalSoilMap.net specifications (Arrouays et al. 2014). These specifications have guided digital soil mapping practices throughout the world since they were published. Global soil mapping efforts now are coordinated a little differently and mainly through the auspices of the &lt;a href=&quot;http://www.fao.org/global-soil-partnership/en/&quot;&gt;Global Soil Parntership&lt;/a&gt;. One of the main GlobalSoilMap.net specifications was the requirement to produce maps for the following soil properties: SOC, clay, silt, sand and coarse fragment contents, pH, ECEC, soil depth and available depth to rooting, bulk density (whole soil and fine earth fraction), and available water capacity at standard depths to 2m. Specifically for the depth intervals of: 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, 100-200cm.&lt;/p&gt;
-
-&lt;p&gt;Early research was dedicated to figuring out approaches for generating digital maps for the specified standard depths given legacy soil profile data and the existing digital soil mapping techniques. The mass preserving spline (Bishop, McBratney, and Laslett 1999) became a critical methodological advancement in this regard as it enabled soil profile data all with disparate depth information to be harmonised. The spline was fitted to the soil profile data and this depth function is then integrated to get the target soil property values for the standard depths or any specified depth intervals or set of depth intervals according to the user. The mass preserving spline is super useful and its mass preserving properties mean that the original soil profile information is never lost after the function is fitted. In a digital soil mapping context, first soil profile data is gathered, the splines are fitted individually to each profile from which the soil target variables at each standard depth is retrieved. Then spatial models are fitted for each depth using a collected suite of environmental covariate layers as predictor variables. This is the general approach undertaken in Malone et al. (2009) which has also been done too throughout the world. While this approach remains popular, different 3D spatial modelling approaches have evolved (see for example Hengl (2017), Orton, Pringle, and Bishop (2016), Viscarra Rossel et al. (2015), and Poggio and Gimona (2014)). But ultimately, the end result from whatever approach is used are digital soil maps of specific variables at each standard depth. The depth support of these maps is supposedly representing an average of the specified target variable for the given standard depth. This is the case for the Malone et al., Orton et al., Viscarra Rossel et al. and Poggio and Gimona approaches, but likely not for the Hengl et al. approach where the values are indicative of the mid-point between the upper and lower depths standard intervals. Technical differences aside, most maps are generated at a point support for a specified grid cell or pixel resolution which for the global soil mapping specifications was ~90m on the basis of the 3-sec STRM DEM which became readily available around the same time as the launching of GlobalSoilMap.&lt;/p&gt;
-
-&lt;p&gt;So there is now seemingly a proliferation of digital soil maps covering all parts of the world, all produced in a way that meet or closely adhere to the specifications set out in Arrouays et al. (2014). Australia is one of these places, and the efforts are described in Grundy et al. (2015). The great thing about this effort (The Soil and Landscape Grid of Australia; SLGA) is now these data are available for everyone to retrieve and importantly use for any number of purposes that requires spatial soil information. &lt;a href=&quot;https://www.clw.csiro.au/aclep/soilandlandscapegrid/GetData-DAP.html#&quot;&gt;This data is easy to access and download&lt;/a&gt;. If one is an &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; user there is now even a package, &lt;a href=&quot;https://cran.r-project.org/web/packages/slga/index.html&quot;&gt;slga&lt;/a&gt; that facilitates easy access and download of specified soil and environment data. We will get onto more of this package later.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-opportunity&quot;&gt;An opportunity&lt;/h3&gt;
-
-&lt;p&gt;How to make use of the available digital soil maps poses some follow up questions. It is great to be able to have a 3-D digital representation of soils, in some ways akin to a digital twin. But without necessary tools with which to analyse the representations of these data i.e. interrogating and integrating the 0-5cm,5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm layers, one will be limited in realising the utility of this information. One tool to be described in this post is the mass-preserving spline which we were just introduced to earlier in regards to harmonising soil profile data. Essentially the soil target variable data together with information about corresponding depths intervals are parameters of the spline. Therefore where there is layered and gridded digital soil maps we basically can fit a spline at each grid cell and then interrogate the fitted spline to generate new outputs at a different vertical support. This allows one to customise their soil mapping information to a form that is conducive for their own particular analysis. Furthermore a step forwards on this is that one can facilitate inferences as was exemplified in Malone et al. (2009) where variables such as depth to which carbon stocks breached a given threshold value, or estimated the water holding capacity to a given depth etc. One can even get more sophisticated around inference for such things as detecting depth to a texture contrast layer or to some given soil constraint. The important key point here is that the layered 3D representation of soil information as specified for GlobalSoilMap or for any other similar product, is that there is added utility of this information beyond the base maps.&lt;/p&gt;
-
-&lt;p&gt;This post intends to exemplify the splines approach for 3D soil mapping products using the the SLGA data and associated R package as the vehicle for doing this. At the moment the code for doing this comes from a bespoke R function called &lt;code class=&quot;highlighter-rouge&quot;&gt;ea_ras_func&lt;/code&gt; and can be download from &lt;a href=&quot;https://www.dropbox.com/s/0rmrsfl6pk7p9gj/ea_ras_func.R?dl=0&quot;&gt;here&lt;/a&gt;. For all intents and purposes the function is the same as would be used to fit to soil profile data but is streamlined for grid data. Another key point is that as there are no gaps between sol values as the layers are adjacent to one another, there is no interpolation, meaning that the mass-preserving properties of the spline are much easier to adhere to.&lt;/p&gt;
-
-&lt;h3 id=&quot;lets-get-on-with-it&quot;&gt;Let’s get on with it&lt;/h3&gt;
-
-&lt;p&gt;To get a bit more background about the &lt;a href=&quot;https://cran.r-project.org/web/packages/slga/index.html&quot;&gt;slga&lt;/a&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; package it is worth checking out the vignette that comes with the package that you can open once it is installed. This package is available from &lt;a href=&quot;https://cran.r-project.org/&quot;&gt;CRAN&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;slga&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Load the &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; packages required and the function for spline fitting.&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# The grid spline function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ea_ras_func.R&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# R libraries&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raster&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next bits of code are for download of the SLGA maps. This is pretty much verbatim what is done in the slga &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; package vignette.&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Get surface clay content for King Island&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Area of interest (aka bounding box)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aoi&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;149.00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-35.50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;149.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-35.40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Get the data&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_soils_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;product&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'NAT'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attribute&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'CLY'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'VAL'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;depth&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aoi&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aoi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_out&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# raster stack of all rasters (each layer is a depth)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## class      : RasterStack &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## dimensions : 121, 121, 14641, 6  (nrow, ncol, ncell, nlayers)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## resolution : 0.0008333333, 0.0008333333  (x, y)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## extent     : 148.9996, 149.1004, -35.50042, -35.39958  (xmin, xmax, ymin, ymax)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## crs        : +init=epsg:4283 +proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## names      : NAT_CLY_VAL_000_005, NAT_CLY_VAL_005_015, NAT_CLY_VAL_015_030, NAT_CLY_VAL_030_060, NAT_CLY_VAL_060_100, NAT_CLY_VAL_100_200 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## min values :            7.735192,            8.906991,           12.726418,           18.109673,           21.137390,           22.203936 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## max values :            32.54842,            33.97256,            38.32691,            44.41605,            45.26889,            44.36512&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# plot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;/images/20200204gridsplines/unnamed-chunk-3-1.png&quot; alt=&quot;SLGA1&quot; /&gt;
-    &lt;figcaption&gt;Figure 1. Digital soil maps of clay content for King Island. Depth support corresponds to GlobalSoilMap standard depths.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The workhorse function in the code above is the &lt;code class=&quot;highlighter-rouge&quot;&gt;get_soils_data&lt;/code&gt;. Here we are downloading from the national data repository space (as opposed to getting state-based estimates which may or may not be of improved prediction certainty) for each of the GSM standard depths. We are just downloading the values, but keep in mind that one can also get the associated prediction uncertainties too. Check out the help file for this function for other goodies one can do with it. Basically we are downloading each layer of data within the defined area of interest which in this case is King Island.&lt;/p&gt;
-
-&lt;p&gt;Using the &lt;code class=&quot;highlighter-rouge&quot;&gt;ea_rasSp&lt;/code&gt; function is relatively straightforward. Basically it will only ingests a raster stack. The function automatically assumes each raster layer represents a 3D soil representation, which could be GSM standard depths or some other representation. We specify this with the &lt;code class=&quot;highlighter-rouge&quot;&gt;dIn&lt;/code&gt; parameter where &lt;code class=&quot;highlighter-rouge&quot;&gt;dIn = c(0,5,15,30,60,100,200)&lt;/code&gt; corresponds to the GSM depths i.e. 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm and 100-200cm. &lt;code class=&quot;highlighter-rouge&quot;&gt;dOut&lt;/code&gt; is the parameter for the new depth intervals we want. Below we a signalling (just to be unusual) to get the 0-11cm, 11-25cm, 25-31cm, 21-50cm, and 50-180cm depth intervals. The &lt;code class=&quot;highlighter-rouge&quot;&gt;vlow&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;vhigh&lt;/code&gt; parameters are for constraining the spline fit to be within normal ranges which for soil texture is between 0% and 100%. The other important parameter is &lt;code class=&quot;highlighter-rouge&quot;&gt;lam&lt;/code&gt; which determines the amount of flex in the fitted spline. The value 0.1 is usually a acceptable choice, but one can select their own choice based on there own criteria. High values result in stiff splines while low values result in flexible splines.&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# use raster spline function &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ea_rasSp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# raster stack object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lam&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# lambda&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dIn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# These are SLGA standard depths (but could be any depths though)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dOut&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;180&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# User specified depths&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vlow&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vhigh&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show.progress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.new&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## class      : RasterStack &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## dimensions : 121, 121, 14641, 5  (nrow, ncol, ncell, nlayers)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## resolution : 0.0008333333, 0.0008333333  (x, y)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## extent     : 148.9996, 149.1004, -35.50042, -35.39958  (xmin, xmax, ymin, ymax)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## crs        : NA &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## names      :   X0.11cm,  X11.25cm,  X25.31cm,  X31.50cm, X50.180cm &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## min values :  8.282192, 11.591473, 14.621008, 17.420295, 21.637719 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## max values :  33.22039,  36.88600,  40.41217,  43.74120,  44.77895&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# make a plot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;/images/20200204gridsplines/unnamed-chunk-4-1.png&quot; alt=&quot;SLGA2&quot; /&gt;
-    &lt;figcaption&gt;Figure 1. Digital soil maps of clay content for King Island. Depth support corresponds to the depths as requested; 0-11cm, 11-25cm,
-25-31cm, 21-50cm, and 50-180cm depth intervals.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Probably a more usual thing to do might be to get to top 10cm, then 10-30cm, and finally 30-100cm.&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# use raster spline function &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.newer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ea_rasSp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# raster stack object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lam&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# lambda&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dIn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# These are SLGA standard depths (but could be any depths though)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dOut&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# User specified depths&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vlow&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vhigh&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show.progress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.newer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## class      : RasterStack &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## dimensions : 121, 121, 14641, 3  (nrow, ncol, ncell, nlayers)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## resolution : 0.0008333333, 0.0008333333  (x, y)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## extent     : 148.9996, 149.1004, -35.50042, -35.39958  (xmin, xmax, ymin, ymax)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## crs        : NA &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## names      :   X0.10cm,  X10.30cm, X30.100cm &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## min values :  8.190432, 12.196100, 19.818838 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;## max values :  33.11356,  37.59536,  44.84079&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# make a plot&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.newer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;/images/20200204gridsplines/unnamed-chunk-5-1.png&quot; alt=&quot;SLGA3&quot; /&gt;
-    &lt;figcaption&gt;Figure 1. Digital soil maps of clay content for King Island. Depth support corresponds to the depths as requested; 0-10cm, 10-30cm, cm, and 30-100cm depth intervals.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;a-final-word&quot;&gt;A final word&lt;/h3&gt;
-
-&lt;p&gt;There is not too much more to this piece of work. The intention here was to illustrate that the outputs commonly generated in digital soil mapping that adhere the GSM specifications have much greater utility than just the standard depth intervals. The &lt;code class=&quot;highlighter-rouge&quot;&gt;ea_rasSp&lt;/code&gt; is very much a beta version at this stage and could do with vectorisation and optimisation of compute. For now the workflow is a pixel-to-pixel routine. The actual spline fitting is super fast even without optimisation, but the sequential nature of pixel-to-pixel quickly ramps up the compute time for highly populated grids. Currently it would be useful for farm to regional extent soil mapping work as it is, but could indeed be parallelised for much larger extents without too much tinkering.&lt;/p&gt;
-
-&lt;p&gt;The spline is a very useful tool for utilising such maps and enabling one to develop their own customised maps with relatively little effort. An example application of this would be the creation of digital soil maps where the new depth intervals correspond to measurement depths of a network of soil moisture sensors across a field or farm. Or estimating carbon stocks to 1m (a simple average may suffice in this case), or to some customised depths etc. I could be argued that the spline model be used on the soil profile data to generate information to custom depths, and them model. And this maybe the suggested route, but here we are working under the assumption that we don’t have this point data and only have the raster data, of course which is publicly available. In any case, the take home message is just don’t settle for what digital soil information is available to you. Instead, derive the information to suit your needs and your specifications!&lt;/p&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-
-&lt;p&gt;Arrouays, Dominique, Alex Mcbratney, Budiman Minasny, Jonathan Hempel, Gerard Heuvelink, R.A. Macmillan, Alfred Hartemink, P. Lagacherie, and Neil McKenzie. 2014. “The Globalsoilmap Project Specifications.” &lt;em&gt;GlobalSoilMap: Basis of the Global Spatial Soil Information System - Proceedings of the 1st GlobalSoilMap Conference&lt;/em&gt;, January, 9–12. &lt;a href=&quot;https://doi.org/10.1201/b16500-4&quot;&gt;https://doi.org/10.1201/b16500-4&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bishop, T.F.A., A.B. McBratney, and G.M. Laslett. 1999. “Modelling Soil Attribute Depth Functions with Equal-Area Quadratic Smoothing Splines.” &lt;em&gt;Geoderma&lt;/em&gt; 91 (1): 27–45. &lt;a href=&quot;https://doi.org/https://doi.org/10.1016/S0016-7061(99)00003-8&quot;&gt;https://doi.org/https://doi.org/10.1016/S0016-7061(99)00003-8&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Grundy, M. J., R. A. Viscarra Rossel, R. D. Searle, P. L. Wilson, C. Chen, and L. J. Gregory. 2015. “Soil and Landscape Grid of Australia.” &lt;em&gt;Soil Res.&lt;/em&gt; 53 (8): 835–44. &lt;a href=&quot;https://doi.org/10.1071/SR15191&quot;&gt;https://doi.org/10.1071/SR15191&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Hengl, Jorge AND Heuvelink, Tomislav AND Mendes de Jesus. 2017. “SoilGrids250m: Global Gridded Soil Information Based on Machine Learning.” &lt;em&gt;PLOS ONE&lt;/em&gt; 12 (2). Public Library of Science: 1–40. &lt;a href=&quot;https://doi.org/10.1371/journal.pone.0169748&quot;&gt;https://doi.org/10.1371/journal.pone.0169748&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Malone, B.P., A.B. McBratney, B. Minasny, and G.M. Laslett. 2009. “Mapping Continuous Depth Functions of Soil Carbon Storage and Available Water Capacity.” &lt;em&gt;Geoderma&lt;/em&gt; 154 (1): 138–52. &lt;a href=&quot;https://doi.org/https://doi.org/10.1016/j.geoderma.2009.10.007&quot;&gt;https://doi.org/https://doi.org/10.1016/j.geoderma.2009.10.007&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Orton, T.G., M.J. Pringle, and T.F.A. Bishop. 2016. “A One-Step Approach for Modelling and Mapping Soil Properties Based on Profile Data Sampled over Varying Depth Intervals.” &lt;em&gt;Geoderma&lt;/em&gt; 262: 174–86. &lt;a href=&quot;https://doi.org/https://doi.org/10.1016/j.geoderma.2015.08.013&quot;&gt;https://doi.org/https://doi.org/10.1016/j.geoderma.2015.08.013&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Poggio, Laura, and Alessandro Gimona. 2014. “National Scale 3D Modelling of Soil Organic Carbon Stocks with Uncertainty Propagation — an Example from Scotland.” &lt;em&gt;Geoderma&lt;/em&gt; 232-234: 284–99. &lt;a href=&quot;https://doi.org/https://doi.org/10.1016/j.geoderma.2014.05.004&quot;&gt;https://doi.org/https://doi.org/10.1016/j.geoderma.2014.05.004&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sanchez, Pedro A., Sonya Ahamed, Florence Carré, Alfred E. Hartemink, Jonathan Hempel, Jeroen Huising, Philippe Lagacherie, et al. 2009. “Digital Soil Map of the World.” &lt;em&gt;Science&lt;/em&gt; 325 (5941). American Association for the Advancement of Science: 680–81. &lt;a href=&quot;https://doi.org/10.1126/science.1175084&quot;&gt;https://doi.org/10.1126/science.1175084&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Viscarra Rossel, R. A., C. Chen, M. J. Grundy, R. Searle, D. Clifford, and P. H. Campbell. 2015. “The Australian Three-Dimensional Soil Grid: Australia’s Contribution to the &amp;lt;i&amp;gt;GlobalSoilMap&amp;lt;/I&amp;gt; Project.” &lt;em&gt;Soil Res.&lt;/em&gt; 53 (8): 845–64. &lt;a href=&quot;https://doi.org/10.1071/SR14366&quot;&gt;https://doi.org/10.1071/SR14366&lt;/a&gt;.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/02/gridsplines&quot;&gt;Customising public digital soil mapping products with mass preserving splines&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 04, 2020.&lt;/p&gt;
   </content>
 </entry>
 
@@ -1763,137 +1803,6 @@ Drought, widely studied as an important driver of ecosystem dynamics, is predict
 
 
     &lt;p&gt;&lt;a href=&quot;/2019/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 16, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/08/journalDigest" />
-  <id>/2019/08/journalDigest</id>
-  <updated>2019-08-07T00:00:00-00:00</updated>
-  <published>2019-08-07T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-13&quot;&gt;Journal Paper Digests 2019 #13&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Microbial spatial footprint as a driver of soil carbon stabilization&lt;/li&gt;
-  &lt;li&gt;New statistical methods for the comparison and characterization of particle shape&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;microbial-spatial-footprint-as-a-driver-of-soil-carbon-stabilization&quot;&gt;Microbial spatial footprint as a driver of soil carbon stabilization&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Kraychenko, AN; Guber, AK; Razavi, BS; Koestel, J; Quigley, MY;
-Robertson, GP; Kuzyakov, Y&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;NATURE COMMUNICATIONS&lt;/em&gt;, 10 3121-3121; JUL 16 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Increasing the potential of soil to store carbon (C) is an acknowledged and emphasized strategy for capturing atmospheric CO2. Well-recognized approaches for soil C accretion include reducing soil disturbance, increasing plant biomass inputs, and enhancing plant diversity. Yet experimental evidence often fails to support anticipated C gains, suggesting that our integrated understanding of soil C accretion remains insufficient. Here we use a unique combination of X-ray micro-tomography and micro-scale enzyme mapping to demonstrate for the first time that plant-stimulated soil pore formation appears to be a major, hitherto unrecognized, determinant of whether new C inputs are stored or lost to the atmosphere. Unlike monocultures, diverse plant communities favor the development of 30-150 mu m pores. Such pores are the micro-environments associated with higher enzyme activities, and greater abundance of such pores translates into a greater spatial footprint that microorganisms ma
- ke on the soil and consequently soil C storage capacity.&lt;/p&gt;
-
-&lt;h3 id=&quot;new-statistical-methods-for-the-comparison-and-characterization-of-particle-shape&quot;&gt;New statistical methods for the comparison and characterization of particle shape&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Graham, DJ; Gadsden, RJ&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EARTH SURFACE PROCESSES AND LANDFORMS&lt;/em&gt;, NIL_1-NIL_12; JUL 16 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-This paper presents novel methods for robust statistical testing of particle shape data. Shape (the relative lengths of three orthogonal axes) is a key property of sedimentary particles, providing information on provenance, transport history and depositional environment. However, the usefulness of shape data, including the ability to make robust comparisons between samples, has been constrained by the absence of a satisfactory definition of the mean shape for a sample of particles. Such a definition is proposed and used to develop confidence regions for the population mean shape using both parametric (theoretical) and computational (bootstrap) methods. These techniques are based on a transform that permits multivariate statistical methods for the analysis of compositional data to be extended to shape. These techniques are validated with reference to a dataset of 169 clast samples and found to perform well. A statistical test on the mean - using the multivariate extension of S
- tudent’s t-test, Hotelling’s T-2 - is presented. The benefits of the methods presented are demonstrated with reference to a case study.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2019/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 07, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/07/journalDigest" />
-  <id>/2019/07/journalDigest</id>
-  <updated>2019-07-30T00:00:00-00:00</updated>
-  <published>2019-07-30T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-12&quot;&gt;Journal Paper Digests 2019 #12&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Physically Based Model for Extracting Dual-Permeability Parameters Using Non-Newtonian Fluids&lt;/li&gt;
-  &lt;li&gt;Scale Issues in Soil Hydrology&lt;/li&gt;
-  &lt;li&gt;Strength matters: Resisting erosion across upland landscapes&lt;/li&gt;
-  &lt;li&gt;Using deep learning for multivariate mapping of soil with quantified uncertainty&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;physically-based-model-for-extracting-dual-permeability-parameters-using-non-newtonian-fluids&quot;&gt;Physically Based Model for Extracting Dual-Permeability Parameters Using Non-Newtonian Fluids&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Basset, CN; Abou Najm, MR; Ammar, A; Stewart, RD; Hauswirth, SC; Saad, G&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 18 (1):80172-80172; JUL 11 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Dual-permeability models simulate flow and transport within soils characterized by preferential (macro) and matrix (micro) pore domains, with each exhibiting distinct hydraulic properties. The lack of suitable methods for determining appropriate and physically based model parameters remains a major challenge to applying these models. Here, we present a method that characterizes dual-permeability model parameters using experimental results of saturated flows from water and a non-Newtonian fluid. We present two submodels that solve for the effective pore sizes of micropores and macropores, with macropores represented either with cylindrical (for biological pores) or planar (for shrinkage cracks and fissures) pore geometries. The model also determines the percentage contribution (wi) of the representative macro-and micropores to water flow. We applied the model to experimental soil samples complemented with capillary tubes simulating the macropores and showed its ability to deri
- ve the bimodal pore size distributions in dual-domain soils using only two fluids. As such, we present this method of characterization of dual structures for improved modeling of nonuniform preferential flow and transport in macroporous soils.&lt;/p&gt;
-
-&lt;h3 id=&quot;scale-issues-in-soil-hydrology&quot;&gt;Scale Issues in Soil Hydrology&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Vogel, HJ&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 18 (1):90001-90001; JUL 11 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil hydrology is a key control for the functioning of the terrestrial environment. Many environmental issues that we need to tackle today are directly linked to soil water dynamics. This includes agricultural production and food security, nutrient cycling and carbon storage, prevention of soil degradation and erosion, and last but not least, clean water resources and flood protection. However, these problems need to be addressed at the scales of fields, regions, and landscapes, while soil water dynamics and soil hydraulic properties are well understood and typically measured at much smaller scales-the comfort zone of soil physics. An obvious problem is how to link these vastly different scales and how to profit from small-scale understanding to improve our capability to predict what is going on at the large scale. In this update, this problem is discussed based on insights gained during the last decades. As a synthesis, a two-step scaling approach is proposed for modeling so
- il water dynamics from local to landscape scales where the scale of the soil profile is the stepping stone.&lt;/p&gt;
-
-&lt;h3 id=&quot;strength-matters-resisting-erosion-across-upland-landscapes&quot;&gt;Strength matters: Resisting erosion across upland landscapes&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Heimsath, AM; Whipple, KX&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EARTH SURFACE PROCESSES AND LANDFORMS&lt;/em&gt;, 44 (9):1748-1754; JUL 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil-covered upland landscapes comprise a critical part of the habitable world and our understanding of their evolution as a function of different climatic, tectonic, and geologic regimes is important across a wide range of disciplines. Soil production and transport play essential roles in controlling the spatial variation of soil depth and therefore hillslope hydrological processes, distribution of vegetation, and soil biological activity. Field-based confirmation of the hypothesized relationship between soil thickness and soil production is relatively recent, however, and here we quantify a direct, material strength-based influence on variable soil production across landscapes. We report clear empirical linkages between the shear strength of the parent material (its erodibility) and the overlying soil thickness. Specifically, we use a cone penetrometer and a shear vane to determine saprolite resistance to shear. We find that saprolite shear strength increases systematically
-  with overlying soil thickness across three very different field sites where we previously quantified soil production rates. At these sites, soil production rates, determined from in situ produced beryllium-10 (Be-10) and aluminum-26 (Al-26), decrease with overlying soil thickness and we therefore infer that the efficiency of soil production must decrease with increasing parent material shear strength. We use our field-based data to help explain the linkages between biogenic processes, chemical weathering, hillslope hydrology, and the evolution of the Earth’s surface.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-deep-learning-for-multivariate-mapping-of-soil-with-quantified-uncertainty&quot;&gt;Using deep learning for multivariate mapping of soil with quantified uncertainty&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Wadoux, AMJC&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 351 59-70; OCT 1 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Digital soil mapping (DSM) techniques are widely employed to generate soil maps. Soil properties are typically predicted individually, while ignoring the interrelation between them. Models for predicting multiple properties exist, but they are computationally demanding and often fail to provide accurate description of the associated uncertainty. In this paper a convolutional neural network (CNN) model is described to predict several soil properties with quantified uncertainty. CNN has the advantage that it incorporates spatial contextual information of environmental covariates surrounding an observation. A single CNN model can be trained to predict multiple soil properties simultaneously. I further propose a two-step approach to estimate the uncertainty of the prediction for mapping using a neural network model. The methodology is tested mapping six soil properties on the French metropolitan territory using measurements from the LUCAS dataset and a large set of environmental 
- covariates portraying the factors of soil formation. Results indicate that the multivariate CNN model produces accurate maps as shown by the coefficient of determination and concordance correlation coefficient, compared to a conventional machine learning technique. For this country extent mapping, the maps predicted by CNN have a detailed pattern with significant spatial variation. Evaluation of the uncertainty maps using the median of the standardized squared prediction error and accuracy plots suggests that the uncertainty was accurately quantified, albeit slightly underestimated. The tests conducted using different window size of input covariates to predict the soil properties indicate that CNN benefits from using local contextual information in a radius of 4.5 km. I conclude that CNN is an effective model to predict several soil properties and that the associated uncertainty can be accurately quantified with the proposed approach.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2019/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 30, 2019.&lt;/p&gt;
   </content>
 </entry>
 

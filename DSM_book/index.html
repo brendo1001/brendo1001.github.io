@@ -112,7 +112,10 @@
                     <li><a href="/software/" >Software</a></li>
                 
                     
-                    <li><a href="/blog/" >Blog</a></li>
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
                 
                     
                     <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
@@ -155,26 +158,40 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~8 minutes
+          Reading time ~7 minutes
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <h3 id="using-r-for-digital-soil-mapping-book-materials-data-and-r-scripts">Using R for Digital Soil Mapping: Book materials, data and R scripts.</h3>
+      <p><strong>THIS PAGE IS UNDER RE-CONSTRUCTION IN ORDER TO IMPROVE MATERIALS AND USER EXPERIENCE. ALL CODE AND MATERIALS WILL STILL BE ACCESSIBLE BUT THIS PAGE WILL LOOK A BIT UGLY AT TIMES WHILE I TINKER ABOUT</strong></p>
 
 <figure>
     <img src="/images/useR_DSM.jpg" alt="DSM R" />
-    <figcaption>Book URL is http://www.springer.com/gp/book/9783319443256.</figcaption>
 </figure>
 
 <p>This book describes and provides many detailed examples of implementing Digital Soil Mapping (DSM) using R. The work adheres to Digital Soil Mapping theory, and presents a strong focus on how to apply it. DSM exercises are also included and cover procedures for handling and manipulating soil and spatial data in R. The book also introduces the basic concepts and practices for building spatial soil prediction functions, and then ultimately producing digital soil maps.</p>
 
+<p>The book URL is <a href="http://www.springer.com/gp/book/9783319443256">http://www.springer.com/gp/book/9783319443256</a> where you may either purchase the hardcopy or the electronic version, in entirety or selected chapters. Of course most public and university libraries will also have a copy of the book for loan.</p>
+
 <p>For a hands on experience of covering the materials of the book, the following sections contain documents and R code of topics covered in the book. Topics covered include:</p>
 
+<h2 id="new-stuff">NEW STUFF</h2>
 <ul>
-  <li><a href="#s-1">R Literacy for digital soil mapping</a></li>
+  <li><a href="/DSM_book/pages/r_literacy/">R Literacy for digital soil mapping</a> <em>UPDATED MATERIAL</em></li>
+  <li>[Getting spatial in R]</li>
+  <li>[Preparatory and exploratory analysis for digital soil mapping]</li>
+  <li>[Continuous soil attribute modelling and mapping]</li>
+  <li>[Categorical soil attribute modelling and mapping]</li>
+  <li>[Some methods for uncertainty quantification relevant for digital soil mapping]</li>
+  <li>[Soil map disaggregation]</li>
+  <li>[Combining continuous and categorical soil attribute modelling and mapping]</li>
+  <li>[Digital soil assessments]</li>
+</ul>
+
+<h2 id="to-be-updated">TO BE UPDATED</h2>
+<ul>
   <li><a href="#s-2">Getting spatial in R</a></li>
   <li><a href="#s-3">Preparatory and exploratory analysis for digital soil mapping</a></li>
   <li><a href="#s-4">Continuous soil attribute modelling and mapping</a></li>
@@ -196,80 +213,6 @@
 </span><span class="o">&gt;</span><span class="w"> </span><span class="n">install_bitbucket</span><span class="p">(</span><span class="s2">"brendo1001/ithir/pkg"</span><span class="p">)</span><span class="w"> </span><span class="c1">#ithir package</span><span class="w">
 </span></code></pre></div></div>
 <p>An example script can also be downloaded from <a href="/DSM_book/rcode/rPackageInstallation_ithir.R">here</a></p>
-
-<p><a href="#top">Back to top</a></p>
-
-<h2 id="r-literacy-for-digital-soil-mapping-">R Literacy for digital soil mapping <a id="s-1"></a></h2>
-
-<p>There are many places on the internet to get a crash course in R. You can also try what is located here. The R examples are illustrated using soil data which is helpful if you want the contextual learning. The course is broken in to 8 sections.</p>
-
-<h4 id="part-1">Part 1</h4>
-<ul>
-  <li>R basics: commands, expressions, assignments, operators, objects</li>
-  <li>R Data Types</li>
-  <li>R data structures</li>
-  <li>Functions, arguments, and packages</li>
-  <li>Getting help.</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part1.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part1.pdf">here</a></p>
-
-<h4 id="part-2">Part 2</h4>
-<ul>
-  <li>Vectors, matrices, and arrays</li>
-  <li>Vector arithmetic, some common functions and vectorised formats</li>
-  <li>Matrices and arrays.</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part2.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part2.pdf">here</a></p>
-
-<h4 id="part-3">Part 3</h4>
-<ul>
-  <li>Data frames, data import, and data export</li>
-  <li>Creating data frames manually</li>
-  <li>Working with data frames</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part3.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part3.pdf">here</a></p>
-
-<h4 id="part-4">Part 4</h4>
-<ul>
-  <li>Graphics: the basics</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part4.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part4.pdf">here</a></p>
-
-<h4 id="part-5">Part 5</h4>
-<ul>
-  <li>Manipulating data. Modes, classes, attributes, length, and coercion</li>
-  <li>Indexing, sub-setting, sorting and locating data</li>
-  <li>Factors</li>
-  <li>Combining data</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part5.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part5.pdf">here</a></p>
-
-<h4 id="part-6">Part 6</h4>
-<ul>
-  <li>Exploratory data analysis</li>
-  <li>Summary statistics</li>
-  <li>Histograms and boxplots</li>
-  <li>Normal quantile and cumulative probability plots</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part6.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part6.pdf">here</a></p>
-
-<h4 id="part-7">Part 7</h4>
-<ul>
-  <li>The basics of linear models</li>
-</ul>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part7.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part7.pdf">here</a></p>
-
-<h4 id="part-8">Part 8</h4>
-<p>The section introduces how to construct a function. A function is at the heart of R and is akin to a set of instructions to run a particular task. Functions are incredibly powerful and the fact that one can create their own functions leaves open the door for some very creative thinking about how to solve a particular problem or to conduct a nuanced task. The example here is about how one would go about designing a soil sample down along a toposequence. The starting point could be the top of a hill, at the bottom of a hill or anywhere between. This seems pretty intuitive to do in your mind, but to code this in R or any language requires a bit of logical thought and creativity. These are important for learning R and for doing digital soil mapping things.</p>
-
-<p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part8.R">here</a> and documentation is <a href="/DSM_book/pdfs/intro2R/P3_Intro_R_2017_Part8.pdf">here</a></p>
 
 <p><a href="#top">Back to top</a></p>
 

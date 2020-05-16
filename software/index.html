@@ -112,7 +112,10 @@
                     <li><a href="/software/" >Software</a></li>
                 
                     
-                    <li><a href="/blog/" >Blog</a></li>
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
                 
                     
                     <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
@@ -155,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~9 minutes
+          Reading time ~10 minutes
         </p>
         
       </div>
@@ -167,7 +170,19 @@
 <h3 id="disclaimer">Disclaimer</h3>
 <p>In the development of the software described below, care has been taken to ensure each is operationally sound. However, they are available and supplied ‘as is’ and no warranty is provided or implied.</p>
 
-<h2 id="ithir">ithir</h2>
+<h3 id="whats-available">What’s available..</h3>
+
+<ul>
+  <li><a href="#s-1">ithir</a></li>
+  <li><a href="#s-2">DSMART</a></li>
+  <li><a href="#s-3">OSPATS</a></li>
+  <li><a href="#s-4">Fuzme</a></li>
+  <li><a href="#s-5">Dissever</a></li>
+  <li><a href="#s-6">Tools for optimal sampling</a></li>
+  <li><a href="#s-7">Tangles</a></li>
+</ul>
+
+<h2 id="ithir-">ithir <a id="s-1"></a></h2>
 <hr />
 
 <p>ithir is an R package that was initiated with the objective of providing a home to a suite of functions that would be of use to soil scientists and pedometricians. In its current version, it contains a few useful functions, but is more  a home to a variety of soil and related soil information data sets that are used in the <a href="http://www.springer.com/gp/book/9783319443256">Using R for Digital Soil Mapping</a> book. Consequently, the package is now more-or-less a companion to that book if you want to complete the many examples that are contained therein.</p>
@@ -198,7 +213,9 @@
   <li><a href="https://bitbucket.org/brendo1001/ithir/">ithir source code</a>. This repository will also give instructions on how to install this package into your R environment.</li>
 </ul>
 
-<h2 id="dsmart">DSMART</h2>
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="dsmart-">DSMART <a id="s-2"></a></h2>
 <hr />
 
 <p>DSMART means: Disaggregation and Harmonisation of Soil Map Units Through Resampled Classification Trees. <a href="http://www.sciencedirect.com/science/article/pii/S0016706113003522">Odgers et al. (2014)</a>  provide a detailed explanation of the DSMART algorithm. The aim of DSMART is to predict the spatial distribution of soil classes by disaggregating the soil map units of a soil polygon map. Here soil map units are soil map are entities consisting of a defined set of soil classes which occur together in a certain spatial pattern and in an assumed set of proportions. The DSMART method of representing the disaggregated soil class distribution is as a set of numerical raster surfaces, with one raster per soil class. The data representation for each soil class is given as the probability of occurrence. In order to generate the probability surfaces, a re-sampling approach is used to generate <em>n</em> realizations of the potential soil class distribution within each map unit. Then at each grid cell, the probability of occurrence of each soil class is estimated by the proportion of times the grid cell is predicted as each soil class across the set of realizations. The procedure of the DSMART algorithm can be summarized in 6 main steps:</p>
@@ -241,12 +258,14 @@
   <li><a href="https://bitbucket.org/brendo1001/dsmart/">dsmart source code</a>. This repository will also give instructions on how to install this package into your R environment. Once installed the documentation and provided examples will help you get the algorithm running and understanding of the required inputs.</li>
 </ul>
 
-<h2 id="ospats">Ospats</h2>
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="ospats-">OSPATS <a id="s-3"></a></h2>
 <hr />
 
-<p><em>Ospats</em> means optimized stratification and allocation for design-based estimation of spatial means using predictions with error. It was introduced by <a href="https://jssam.oxfordjournals.org/content/3/1/19.abstract">de Gruijter et al. 2015</a> to solve the problem of deriving spatial strata in consideration of underlying uncertainty. The context here is that if we want to estimate the spatial means of some target variable, lets say soil carbon because we want to perform an on farm audit. Design-based sampling and inference is usually recommended here because the sampling locations are selected by probability sampling, resulting in the inference or estimation being based on the sampling design used to select the sampling locations. The benefit of this is that the subsequent inference is unbiased and free of any model-based assumptions. Stratified simple random sampling is generally the most useful because we can increase the sampling efficiency. However, by what variables do we stratify. We could used compact geographical stratification for example, or we may cluster together a suite of environmental covariates, or we may have a map of our target variable and derive stratifications from that. We could consider these three examples as existing along a gradient of what we know about the target variable from lowest to highest.</p>
+<p><em>OSPATS</em> means optimized stratification and allocation for design-based estimation of spatial means using predictions with error. It was introduced by <a href="https://jssam.oxfordjournals.org/content/3/1/19.abstract">de Gruijter et al. 2015</a> to solve the problem of deriving spatial strata in consideration of underlying uncertainty. The context here is that if we want to estimate the spatial means of some target variable, lets say soil carbon because we want to perform an on farm audit. Design-based sampling and inference is usually recommended here because the sampling locations are selected by probability sampling, resulting in the inference or estimation being based on the sampling design used to select the sampling locations. The benefit of this is that the subsequent inference is unbiased and free of any model-based assumptions. Stratified simple random sampling is generally the most useful because we can increase the sampling efficiency. However, by what variables do we stratify. We could used compact geographical stratification for example, or we may cluster together a suite of environmental covariates, or we may have a map of our target variable and derive stratifications from that. We could consider these three examples as existing along a gradient of what we know about the target variable from lowest to highest.</p>
 
-<p><em>Ospats</em>, by taking into account the prediction variations is able to produce stratifications that represent transitions between knowing nothing about soil carbon variation (high mapping uncertainty) and knowing a lot about soil carbon variation(low mapping uncertainty) situations. Given an initial stratification solution - such as that derived from stratification of a map assuming values are error-free, through an iterative reallocation, grid points are assigned/re-assigned to strata of which there are a specified number. An objective function <em>O</em> is then estimated from this stratification. <em>O</em> can more-or-less be interpreted as sampling variance for that stratification which takes into account the prediction variances of the values that in turn needs to be minimized (via iteration). Pending further rounds of re-allocation and estimation of <em>O</em>, iteration stops until it is minimized, the result being an optimal stratification of the target area.</p>
+<p><em>OSPATS</em>, by taking into account the prediction variations is able to produce stratifications that represent transitions between knowing nothing about soil carbon variation (high mapping uncertainty) and knowing a lot about soil carbon variation(low mapping uncertainty) situations. Given an initial stratification solution - such as that derived from stratification of a map assuming values are error-free, through an iterative reallocation, grid points are assigned/re-assigned to strata of which there are a specified number. An objective function <em>O</em> is then estimated from this stratification. <em>O</em> can more-or-less be interpreted as sampling variance for that stratification which takes into account the prediction variances of the values that in turn needs to be minimized (via iteration). Pending further rounds of re-allocation and estimation of <em>O</em>, iteration stops until it is minimized, the result being an optimal stratification of the target area.</p>
 
 <p>A useful feature of using <em>Ospats</em> is that we can derived both optimally, the recommended number of strata and sample for a target area. This takes a lot of the guess work out of the process. Furthermore if we were to enter into a monitoring system we could also theoretically re-run <em>Ospats</em> at each assessment period. This would result in new strata and samples for each campaign, which would circumvent an possibility of the system being gamed if monitoring sites remained fixed in space. The optimizing features, plus the circumvention of gaming make <em>Ospats</em> a robust mechanism for auditing phenomena across space and through time. Of particular note here is in soil carbon auditing and monitoring programs.</p>
 
@@ -264,7 +283,9 @@
   </li>
 </ul>
 
-<h2 id="fuzme">Fuzme</h2>
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="fuzme-">Fuzme <a id="s-4"></a></h2>
 <hr />
 
 <p>Fuzme is an R package for calculation of Fuzzy k-means with/without extragrades. I wanted to integrate fuzzy-k means into my R workflow so i translated some of Budiman Minansy’s matlab code into R. The R version of Fuzzy k-means with extragrades is a little buggy. The <a href="http://sydney.edu.au/agriculture/pal/software/fuzme.shtml">FuzME</a> software is more stable and efficient. I would recommend using that for most things. If you are trying to embed the classification into your R workflow though, the R packages is OK, but not as computationally efficient. I am working on it when i can.</p>
@@ -280,7 +301,9 @@
   </li>
 </ul>
 
-<h2 id="dissever">Dissever</h2>
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="dissever-">Dissever <a id="s-5"></a></h2>
 <hr />
 
 <p>Dissever is a algorithm that was designed to facilitate a generalized method for downscaling coarsely resolved earth resource information using available finely gridded covariate data. Under the assumption that the relationship between the target variable being downscaled and the available covariates can be nonlinear, the original implementation of dissever used weighted generalized additive models (GAMs) to drive the empirical function. An iterative algorithm of GAM fitting and adjustment attempts to optimize the downscaling to ensure that the target variable value given for each coarse grid cell equals the average of all target variable values at the fine scale in each coarse grid cell. Dissever is described with more detail in <a href="/downloads/journal/malone2012_1.pdf">our paper</a> we did in 2011-12.</p>
@@ -291,7 +314,9 @@
 
 <p><a href="https://github.com/pierreroudier/dissever">Source code</a> was developed with the help of Pierre Roudier (Landcare Research New Zealand)</p>
 
-<h2 id="conditioned-latin-hypercube-sampling">Conditioned Latin Hypercube sampling</h2>
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="tools-for-optimal-sampling-">Tools for optimal sampling <a id="s-6"></a></h2>
 <hr />
 
 <p>Conditioned Latin hypercube sampling (cLHS) was proposed by <a href="http://www.sciencedirect.com/science/article/pii/S009830040500292X">Minansy and McBratney (2006)</a>. The aim of cLHS is to geographically locate samples (it was intended for soil sampling but can be applied to other sampling contexts too) such that the empirical distribution functions of the ancillary information associated with the samples are replicated, with a constraint that each k-tuple of ancillary information has to occur in the real world.</p>
@@ -305,6 +330,33 @@
 <p><a href="https://bitbucket.org/brendo1001/clhc_sampling">Source code</a>. Each folder in the repo contain example scripts and data addressing the three questions detailed above.</p>
 
 <p><a href="https://peerj.com/articles/5722/">Published paper</a></p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="tangles-">Tangles <a id="s-7"></a></h2>
+
+<p><em>Tangles</em> is an R package for anonymization of spatial point patterns and raster objects. This package achieves the relatively simple, yet pretty useful task of spatial anonymization. Anonymization is needed in situations where a data owner may not wish to share the actual spatial locations of their data, but allows sharing of the data that does not preclude the data from a spatial analysis procedure. Anonymization is achieved via 3 modes of spatial shifts:</p>
+
+<ul>
+  <li>Vertical shifts</li>
+  <li>Lateral shifts</li>
+  <li>Rotational shifts</li>
+</ul>
+
+<p>The tangles package can entangle both non-gridded spatial point patterns and raster objects. It can also entangle data using an a priory entanglement sequence, and can disentangle data back to their original spatial representations. Each entanglement process is given a unique hash key label to guarantee disentanglement is a success in terms of data being transformed back to their original representation.</p>
+
+<h3 id="useful-links-6">Useful Links</h3>
+<p><a href="https://github.com/brendo1001/tangles">Source code</a>.</p>
+
+<p>Installation of tangles can be achieved via Github using the devtools package:</p>
+
+<p><code class="highlighter-rouge">devtools::install_github("brendo1001/tangles")</code></p>
+
+<p>or via CRAN:</p>
+
+<p><code class="highlighter-rouge">install.packages("tangles")</code></p>
+
+<p><a href="#top">Back to top</a></p>
 
 
       <footer class="entry-meta">
