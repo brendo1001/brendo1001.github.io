@@ -8,8 +8,8 @@ library(raster);library(rgdal);library(sp)
 ## Raster resampling
 
 #Nowley Grids
-list.files("D:/usyd_dsm/data/reprojection",  pattern="tif$", full.names=FALSE)
-files<- list.files("D:/usyd_dsm/data/reprojection",  pattern="tif$",full.names=T)
+list.files("/home/brendo1001/Downloads/reproj/",  pattern="tif$", full.names=FALSE)
+files<- list.files("/home/brendo1001/Downloads/reproj/",  pattern="tif$",full.names=T)
 files
 
 b.grid<- raster(files[3]) #base grid to be resampled too
@@ -57,7 +57,8 @@ pl.grid10
 ##reprojection and rasterisation of polygon data
 
 #get polygon
-poly.dat <- readOGR(dsn = "D:/usyd_dsm/data/reprojection/soilMap/Soils_Curlewis_GDA94.shp", "Soils_Curlewis_GDA94")
+poly.dat <- readOGR(dsn = "/home/brendo1001/Downloads/reproj/soilMap/Soils_Curlewis_GDA94.shp", "Soils_Curlewis_GDA94")
+poly.dat
 
 # Attribute table
 head(poly.dat@data)
@@ -66,7 +67,7 @@ summary(as.factor(as.numeric(poly.dat@data$CODE))) # numeric factor
 
 #Basic plot
 plot(poly.dat) 
-invisible(text(getSpPPolygonsLabptSlots(poly.dat), labels = as.character(poly.dat@data$CODE), cex = 0.75))
+invisible(text(getSpPPolygonsLabptSlots(poly.dat), labels = as.character(poly.dat@data$CODE), cex = 0.4))
 
 # coordinate reference system
 crs(poly.dat)

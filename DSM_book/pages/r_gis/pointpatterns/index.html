@@ -1,0 +1,453 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Getting spatial in R &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="generic GIS stuff for R">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Getting spatial in R">
+<meta name="twitter:description" content="generic GIS stuff for R">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting spatial in R">
+<meta property="og:description" content="generic GIS stuff for R">
+<meta property="og:url" content="/DSM_book/pages/r_gis/pointpatterns/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_gis/pointpatterns/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Getting spatial in R</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">generic GIS stuff for R</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Getting spatial in R</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~7 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h2 id="working-with-point-patterns">Working with point patterns</h2>
+
+<p>Code is <a href="/DSM_book/rcode/P3_1_RGIS.R">here</a></p>
+
+<p>We will be working with a small data set of soil information that was
+collected from the Hunter Valley, NSW in 2010 called <code class="highlighter-rouge">HV100</code>. This data
+set is contained in the <code class="highlighter-rouge">ithir</code> package. So first load it in:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+    </span><span class="n">data</span><span class="p">(</span><span class="n">HV100</span><span class="p">)</span><span class="w">
+    </span><span class="n">str</span><span class="p">(</span><span class="n">HV100</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## 'data.frame':    100 obs. of  6 variables:</span><span class="w">
+    </span><span class="c1">##  $ site: Factor w/ 100 levels "a1","a10","a11",..: 1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
+    </span><span class="c1">##  $ x   : num  337860 344060 347035 338235 341760 ...</span><span class="w">
+    </span><span class="c1">##  $ y   : num  6372416 6376716 6372740 6368766 6366016 ...</span><span class="w">
+    </span><span class="c1">##  $ OC  : num  2.03 2.6 3.42 4.1 3.04 4.07 2.95 3.1 4.59 1.77 ...</span><span class="w">
+    </span><span class="c1">##  $ EC  : num  0.129 0.085 0.036 0.081 0.104 0.138 0.07 0.097 0.114 0.031 ...</span><span class="w">
+    </span><span class="c1">##  $ pH  : num  6.9 5.1 5.9 6.3 6.1 6.4 5.9 5.5 5.7 6 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now load the necessary R packages (you may have to install them onto
+your computer first where you will need the <code class="highlighter-rouge">install.packages()</code>
+function):</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+    </span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+    </span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
+    </span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
+    </span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
+    </span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
+    </span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
+    </span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
+    </span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
+    </span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Using the <code class="highlighter-rouge">coordinates</code> function from the <code class="highlighter-rouge">sp</code> package we can define
+which columns in the data frame refer to actual spatial coordinates.
+Here the coordinates are listed in columns <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">coordinates</span><span class="p">(</span><span class="n">HV100</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+    </span><span class="n">str</span><span class="p">(</span><span class="n">HV100</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots</span><span class="w">
+    </span><span class="c1">##   ..@ data       :'data.frame':  100 obs. of  4 variables:</span><span class="w">
+    </span><span class="c1">##   .. ..$ site: Factor w/ 100 levels "a1","a10","a11",..: 1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
+    </span><span class="c1">##   .. ..$ OC  : num [1:100] 2.03 2.6 3.42 4.1 3.04 4.07 2.95 3.1 4.59 1.77 ...</span><span class="w">
+    </span><span class="c1">##   .. ..$ EC  : num [1:100] 0.129 0.085 0.036 0.081 0.104 0.138 0.07 0.097 0.114 0.031 ...</span><span class="w">
+    </span><span class="c1">##   .. ..$ pH  : num [1:100] 6.9 5.1 5.9 6.3 6.1 6.4 5.9 5.5 5.7 6 ...</span><span class="w">
+    </span><span class="c1">##   ..@ coords.nrs : int [1:2] 2 3</span><span class="w">
+    </span><span class="c1">##   ..@ coords     : num [1:100, 1:2] 337860 344060 347035 338235 341760 ...</span><span class="w">
+    </span><span class="c1">##   .. ..- attr(*, "dimnames")=List of 2</span><span class="w">
+    </span><span class="c1">##   .. .. ..$ : chr [1:100] "1" "2" "3" "4" ...</span><span class="w">
+    </span><span class="c1">##   .. .. ..$ : chr [1:2] "x" "y"</span><span class="w">
+    </span><span class="c1">##   ..@ bbox       : num [1:2, 1:2] 335160 6365090 350960 6382816</span><span class="w">
+    </span><span class="c1">##   .. ..- attr(*, "dimnames")=List of 2</span><span class="w">
+    </span><span class="c1">##   .. .. ..$ : chr [1:2] "x" "y"</span><span class="w">
+    </span><span class="c1">##   .. .. ..$ : chr [1:2] "min" "max"</span><span class="w">
+    </span><span class="c1">##   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot</span><span class="w">
+    </span><span class="c1">##   .. .. ..@ projargs: chr NA</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note now that by using the <code class="highlighter-rouge">str</code> function, the class of <code class="highlighter-rouge">HV100</code> has now
+changed from a <code class="highlighter-rouge">data.frame</code> to a <code class="highlighter-rouge">SpatialPointsDataFrame</code>. We can do a
+spatial plot of these points using the <code class="highlighter-rouge">spplot</code> plotting function in the
+<code class="highlighter-rouge">sp</code> package. There are a number of plotting options available, so it
+will be helpful to consult the help file. Here we are plotting the SOC
+concentration observed at each location.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">spplot</span><span class="p">(</span><span class="n">HV100</span><span class="p">,</span><span class="w"> </span><span class="s2">"OC"</span><span class="p">,</span><span class="w"> </span><span class="n">scales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">),</span><span class="w"> </span><span class="n">cuts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">col.regions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bpy.colors</span><span class="p">(</span><span class="n">cutoff.tails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> 
+        </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/HV100_p.png" alt="rconsole" />
+    <figcaption> A plot of the site locations with reference to SOC concentration for the 100 points in the `HV100` data set.</figcaption>
+</figure>
+
+<p>The <code class="highlighter-rouge">SpatialPointsDataFrame</code> structure is essentially the same data
+frame, except that additional <em>spatial</em> elements have been added or
+partitioned into slots. Some important ones being the bounding box (sort
+of like the spatial extent of the data), and the coordinate reference
+system (<code class="highlighter-rouge">proj4string</code>), which we need to define for our data set. To
+define the CRS, we have to know some things about where our data are
+from, and what was the corresponding CRS used when recording the spatial
+information in the field. For this data set the CRS used is <strong>WGS1984
+UTM Zone 56</strong>. To explicitly tell <code class="highlighter-rouge">R</code> this information we define the CRS
+as a character string which describes a reference system in a way
+understood by the <a href="https://proj.org/">PROJ.4 projection library</a>. An
+interface to the PROJ.4 library is available in the <code class="highlighter-rouge">rgdal</code> package.
+Alternative to using Proj4 character strings, we can use the
+corresponding yet simpler EPSG codes (European Petroleum Survey Group).
+<code class="highlighter-rouge">rgdal</code> also recognizes these codes. If you are unsure of the Proj4 or
+EPSG code for the spatial data that you have, but know the CRS, you
+should consult <a href="https://spatialreference.org/">Spatial Reference site</a>
+for assistance. The EPSG code for WGS1984 UTM Zone 56 is: 32556. So lets
+define to CRS for this data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">proj4string</span><span class="p">(</span><span class="n">HV100</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">CRS</span><span class="p">(</span><span class="s2">"+init=epsg:32756"</span><span class="p">)</span><span class="w">
+    </span><span class="n">HV100</span><span class="o">@</span><span class="n">proj4string</span><span class="w">
+
+    </span><span class="c1">## CRS arguments:</span><span class="w">
+    </span><span class="c1">##  +init=epsg:32756 +proj=utm +zone=56 +south +datum=WGS84 +units=m</span><span class="w">
+    </span><span class="c1">## +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We need to define the CRS so that we can perform any sort of spatial
+analysis. For example, we may wish to use these data in a GIS
+environment such as Google Earth, ArcGIS, SAGA GIS etc. This means we
+need to export the <code class="highlighter-rouge">SpatialPointsDataFrame</code> of <code class="highlighter-rouge">HV100</code> to an appropriate
+spatial data format (for vector data) such as a shapefile or KML.
+<code class="highlighter-rouge">rgdal</code> is again used for this via the <code class="highlighter-rouge">writeOGR</code> function. To export
+the data set as a shapefile:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">writeOGR</span><span class="p">(</span><span class="n">HV100</span><span class="p">,</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w"> </span><span class="s2">"HV_dat_shape"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ESRI Shapefile"</span><span class="p">)</span><span class="w">
+    </span><span class="c1"># Check yor working directory for presence of this file</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that the object we wish to export needs to be a
+<code class="highlighter-rouge">SpatialPointsDataFrame</code>. You should try opening up this exported
+shapefile in a GIS software of your choosing.</p>
+
+<p>To look at the locations of the data in Google Earth, we first need to
+make sure the data is in the WGS84 geographic CRS. If the data is not in
+this CRS (which is not the case for this data), then we need to perform
+a coordinate transformation. This is facilitated by using the
+<code class="highlighter-rouge">spTransform</code> function in <code class="highlighter-rouge">sp</code>. The EPSG code for WGS84 geographic is:</p>
+<ol>
+  <li>We can then export out our transformed HV100 data set to a KML
+file and visualize it in Google Earth.</li>
+</ol>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">HV100.ll</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spTransform</span><span class="p">(</span><span class="n">HV100</span><span class="p">,</span><span class="w"> </span><span class="n">CRS</span><span class="p">(</span><span class="s2">"+init=epsg:4326"</span><span class="p">))</span><span class="w">
+    </span><span class="n">writeOGR</span><span class="p">(</span><span class="n">HV100.ll</span><span class="p">,</span><span class="w"> </span><span class="s2">"HV100.kml"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ID"</span><span class="p">,</span><span class="w"> </span><span class="s2">"KML"</span><span class="p">)</span><span class="w">
+    </span><span class="c1"># Check yor working directory for presence of this file</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Sometimes to conduct further analysis of spatial data, we may just want
+to import it into R directly. For example, read in a shapefile (this
+includes both points and polygons too). So lets read in that shapefile
+that was created just before and saved to the working directory,
+<code class="highlighter-rouge">HV_dat_shape.shp</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">imp.HV.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readOGR</span><span class="p">(</span><span class="s2">"~/HV_dat_shape.shp"</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## OGR data source with driver: ESRI Shapefile </span><span class="w">
+    </span><span class="c1">## Source: "~/HV_dat_shape.shp", layer: "HV_dat_shape"</span><span class="w">
+    </span><span class="c1">## with 100 features</span><span class="w">
+    </span><span class="c1">## It has 4 fields</span><span class="w">
+
+    </span><span class="n">imp.HV.dat</span><span class="o">@</span><span class="n">proj4string</span><span class="w">
+
+    </span><span class="c1">## CRS arguments:</span><span class="w">
+    </span><span class="c1">##  +proj=utm +zone=56 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84</span><span class="w">
+    </span><span class="c1">## +towgs84=0,0,0</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The imported shapefile is now a <code class="highlighter-rouge">SpatialPointsDataFrame</code>, just like
+<code class="highlighter-rouge">HV100</code> data that was worked on before, and is ready for further
+analysis.</p>
+
+<p><a href="/DSM_book/pages/r_gis/rasters/">Follow this link</a> to get a
+basic introduction to working with raster data in <code class="highlighter-rouge">R</code>.</p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-31">May 31, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_gis/pointpatterns/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_gis/pointpatterns/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_gis/pointpatterns/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

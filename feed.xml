@@ -4,13 +4,184 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2020-05-16T11:18:55+10:00</updated>
+<updated>2020-06-01T21:24:53+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
+  <id>/2020/06/journalDigest</id>
+  <updated>2020-06-02T00:00:00-00:00</updated>
+  <published>2020-06-02T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-10&quot;&gt;Journal Paper Digests 2020 #10&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data fusion of vis-NIR and PXRF spectra to predict soil physical and chemical properties&lt;/li&gt;
+  &lt;li&gt;Boundary line models for soil nutrient concentrations and wheat yield in national-scale datasets&lt;/li&gt;
+  &lt;li&gt;Global patterns of soil heterotrophic respiration - A meta-analysis of available dataset&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;data-fusion-of-vis-nir-and-pxrf-spectra-to-predict-soil-physical-and-chemical-properties&quot;&gt;Data fusion of vis-NIR and PXRF spectra to predict soil physical and chemical properties&lt;/h3&gt;
+&lt;p&gt;By: Zhang, Yakun; Hartemink, Alfred E.
+EUROPEAN JOURNAL OF SOIL SCIENCE  Volume: 71   Issue: 3   Pages: 316-333   Published: MAY 2020
+Context Sensitive Links  Close Abstract
+We tested one front-end data fusion method to combine visible near-infrared (vis-NIR) and portable X-ray fluorescence (PXRF) spectra for predicting different soil properties and investigated the contribution of different sensor data. A total of 197 soil samples were collected from 25 Alfisols and Mollisols in south-central Wisconsin, USA. Soils were analysed in the laboratory for clay, sand, silt content, total carbon (TC), total nitrogen (TN) and pH. Air-dried soil samples were scanned with vis-NIR and PXRF spectrometers. A principal component analysis (PCA) was applied to each of the vis-NIR and PXRF spectra to extract the first 10 principal components (PCs), which were used in the Cubist model. Five types of input data were compared for constructing the models using a front-end data fusion approach, including: (a) 10 PCs from vis-NIR spectra, (b) 10 PCs from spectra of PXRF beam 1 (XRF40), (c) 10 PCs from spectra of PXRF beam 2 (XRF10), (d) concatenating 20 PCs from two PXRF spectra (XRF40 + 10), and (e) concatenating 30 PCs from two PXRF spectra and vis-NIR spectra (XRF40 + 10 + NIR). In addition, the performances of the preprocessing methods (four smoothing methods with or without background removal) of PXRF spectra were compared. Multiple linear regression was also used to predict soil properties directly from 11 PXRF-estimated elements. Our results suggest that smoothing should be applied to the PXRF spectra prior to developing predictive models. PXRF spectra and elemental data can predict soil texture with validation R-2 &amp;gt; 0.85, better than using solely vis-NIR spectra, and combining vis-NIR and PXRF spectra improved the prediction. Combining PXRF and vis-NIR can also predict TC and TN moderately well. Soil pH cannot be predicted from vis-NIR or PXRF spectra in this dataset due to its weak correlations with other soil properties and elements. It is concluded that PXRF spectra can be solely used to estimate soil texture, whereas combining vis-NIR and PXRF spectra via PCA should be used to estimate TC and TN. Highlights
+The use of front-end data fusion method to combine vis-NIR and PXRF spectra for predicting soil properties. Different preprocessing algorithms were compared systematically for PXRF spectra. Spectral smoothing should be applied to the PXRF spectra prior to developing predictive models. PXRF spectra can be used solely to estimate soil texture, whereas combining vis-NIR and PXRF spectra via PCA should be used to estimate TC and TN.&lt;/p&gt;
+
+&lt;h3 id=&quot;boundary-line-models-for-soil-nutrient-concentrations-and-wheat-yield-in-national-scale-datasets&quot;&gt;Boundary line models for soil nutrient concentrations and wheat yield in national-scale datasets&lt;/h3&gt;
+
+&lt;p&gt;By: Lark, Richard M.; Gillingham, Vincent; Langton, David; et al.&lt;/p&gt;
+
+&lt;p&gt;EUROPEAN JOURNAL OF SOIL SCIENCE  Volume: 71   Issue: 3   Pages: 334-351   Published: MAY 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links Free Full Text from Publisher Close Abstract&lt;/p&gt;
+
+&lt;p&gt;In boundary line analysis a biological response (e.g., crop yield) is assumed to be a function of a variable (e.g., soil nutrient concentration), which limits the response in only some subset of observations because other limiting factors also apply. The response function is therefore expressed by an upper boundary of the plot of the response against the variable. This model has been used in various branches of soil science. In this paper we apply it to the analysis of some large datasets, originating from commercial farms in England and Wales, on the recorded yield of wheat and measured concentrations of soil nutrients in within-field soil management zones. We considered boundary line models for the effects of potassium (K), phosphorus (P) and magnesium (Mg) on yield, comparing the model with a simple bivariate normal distribution or a bivariate normal censored at a constant maximum yield. We were able to show, using likelihood-based methods, that the boundary line model was preferable in most cases. The boundary line model suggested that the standard RB209 soil nutrient index values (Agriculture and Horticulture Development Board, nutrient management guide (RB209), 2017) are robust and apply at the within-field scale. However, there was evidence that wheat yield could respond to additional Mg at concentrations above index 0, contrary to RB209 guidelines. Furthermore, there was evidence that the boundary line model for yield and P differs between soils at different pH and depth intervals, suggesting that shallow soils with larger pH require a larger target P index than others. Highlights
+Boundary line analysis is one way to examine how soil variables influence crop yield in large datasets. We showed that boundary line models could be applied to large datasets on soil nutrients and crop yield. The resulting models are consistent with current practice for P and K, but not for Mg. Models suggest that more refined recommendations for P requirement could be based on soil pH and depth.&lt;/p&gt;
+
+&lt;h3 id=&quot;global-patterns-of-soil-heterotrophic-respiration---a-meta-analysis-of-available-dataset&quot;&gt;Global patterns of soil heterotrophic respiration - A meta-analysis of available dataset&lt;/h3&gt;
+
+&lt;p&gt;By: Tang, Xiaolu; Du, Jie; Shi, Yuehong; et al.&lt;/p&gt;
+
+&lt;p&gt;CATENA  Volume: 191   Pages: 4574-4574   Published: AUG 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract&lt;/p&gt;
+
+&lt;p&gt;Soil heterotrophic respiration (RH) represents the carbon losses from the decomposition of litter detritus and soil organic matter by microorganisms. Despite conflicting findings on the dominant climatic, soil and vegetation controls on RH from local studies, little is known on the global patterns of RH and the potential drivers behind these patterns. Based on the updated Global Soil Respiration Database, we conducted a meta-analysis to evaluate the direct and indirect effects of climatic, soil and vegetation controls on RH across the globe using structure equation model (SEM). Our results showed that the global weighted mean RH was 457 +/- 139 g C m(-2) a(-1) (mean +/- standard deviation), but RH differed significantly among ecosystem types and positively correlated with gross primary production, highlighting the importance of the vegetation control on RH. Climate was the most important environmental control on RH indicated by SEM. Soil organic carbon (SOC) content had a negative influence on RH at the global scale, challenging the current understanding that SOC leads to a positive effect on RH at site or ecosystem scale, further indicating that SOC quantity may dominate RH at local scales, while SOC quality and availability may dominate RH at regional or global scales. Great differences were found not only between observed and dymanic global vegetation model (DGVM)-based RH, but also among different DGVMs, highlighting a better parameterizing of DGVMs, particularly the model output not validated by field observations, to better understand RH and belowground carbon dynamics.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 02, 2020.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
+  <id>/2020/06/journalDigest</id>
+  <updated>2020-06-01T00:00:00-00:00</updated>
+  <published>2020-06-01T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-9&quot;&gt;Journal Paper Digests 2020 #9&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sub-pixel mapping with point constraints&lt;/li&gt;
+  &lt;li&gt;An integrated methodology using open soil spectral libraries and Earth Observation data for soil organic carbon estimations in support of soil-related SDGs.&lt;/li&gt;
+  &lt;li&gt;Earth observation-based ecosystem services indicators for national and subnational reporting of the sustainable development goals&lt;/li&gt;
+  &lt;li&gt;Validation practices for satellite soil moisture retrievals: What are (the) errors?&lt;/li&gt;
+  &lt;li&gt;Agricultural drought mitigating indices derived from the changes in drought characteristics&lt;/li&gt;
+  &lt;li&gt;An optimal design for hierarchical generalized group testing&lt;/li&gt;
+  &lt;li&gt;“sen2r”: An R toolbox for automatically downloading and preprocessing Sentinel-2 satellite data&lt;/li&gt;
+  &lt;li&gt;atakrig: An R package for multivariate area-to-area and area-to-point kriging predictions&lt;/li&gt;
+  &lt;li&gt;Content search within large environmental datasets using a convolution neural network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;sub-pixel-mapping-with-point-constraints&quot;&gt;Sub-pixel mapping with point constraints&lt;/h3&gt;
+
+&lt;p&gt;By: Wang, Qunming; Zhang, Chengyuan; Atkinson, Peter M.
+REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11817-11817   Published: JUL 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+Remote sensing images contain abundant land cover information. Due to the complex nature of land cover, however, mixed pixels exist widely in remote sensing images. Sub-pixel mapping (SPM) is a technique for predicting the spatial distribution of land cover classes within mixed pixels. As an ill-posed inverse problem, the uncertainty of prediction cannot be eliminated and hinders the production of accurate sub-pixel maps. In contrast to conventional methods that use continuous geospatial information (e.g., images) to enhance SPM, in this paper, a SPM method with point constraints into SPM is proposed. The method of fusing point constraints is implemented based on the pixel swapping algorithm (PSA) and utilizes the auxiliary point information to reduce the uncertainty in the SPM process and increase map accuracy. The point data are incorporated into both the initialization and optimization processes of PSA. Experiments were performed on three images to validate the proposed method. The influences of the performances were also investigated under different numbers of point data, different spatial characters of land cover and different zoom factors. The results show that by using the point data, the proposed SPM method can separate more small-sized targets from aggregated artifacts and the accuracies are increased obviously. The proposed method is also more accurate than the advanced radial basis function interpolation-based method. The advantage of using point data is more evident when the point data size and scale factor are large and the spatial autocorrelation of the land cover is small. As the amount of point data increases, however, the increase in accuracy becomes less noticeable. Furthermore, the SPM accuracy can still be increased even if the point data and coarse proportions contain errors.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-integrated-methodology-using-open-soil-spectral-libraries-and-earth-observation-data-for-soil-organic-carbon-estimations-in-support-of-soil-related-sdgs&quot;&gt;An integrated methodology using open soil spectral libraries and Earth Observation data for soil organic carbon estimations in support of soil-related SDGs&lt;/h3&gt;
+
+&lt;p&gt;By: Tziolas, Nikolaos; Tsakiridis, Nikolaos; Ogen, Yaron; et al.&lt;/p&gt;
+
+&lt;p&gt;REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11793-11793   Published: JUL 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+There is a growing realization amongst policy-makers that reliable and accurate soil monitoring information is required at scales ranging from regional to global to support ecosystem functions and services in a sustainable manner under the amplifying climate change enabling countries in target setting of the Sustainable Development Goals (SDGs). In this line, the need of access to and integration of existing regional in situ Earth Observation (EO) data and different sources such as contemporary and forthcoming satellite imagery is highlighted. The current study puts major emphasis on leveraging existing open soil spectral libraries and EO systems and bridging them with memory-based learning algorithms that create more cost-efficient and targeted large scale mapping of soil properties. Relying mostly on contemporary capacities and open resources it can be readily applied to countries with differing capacities and levels of development. To test our methodology, the GEOCRADLE SSL developed in the Balkans, Middle East, and North Africa region and a hyperspectral airborne image were utilized to provide Soil Organic Carbon (SOC) maps of cropland fields over an agricultural region near the city of Netanya, Israel. Furthermore, simulated data of forthcoming space-borne satellite (EnMAP) and current super-spectral mission (Sentinel 2) were explored. The SOC content of the collected in situ soil samples was predicted using a novel local regression approach that combines spatial proximity and spectral similarities. These predictions were subsequently used to develop models using the airborne and simulated satellite spectra, achieving a fair prediction accuracy of R-2 &amp;gt; 0.8 and RPIQ &amp;gt; 2.&lt;/p&gt;
+
+&lt;h3 id=&quot;earth-observation-based-ecosystem-services-indicators-for-national-and-subnational-reporting-of-the-sustainable-development-goals&quot;&gt;Earth observation-based ecosystem services indicators for national and subnational reporting of the sustainable development goals&lt;/h3&gt;
+
+&lt;p&gt;By: Cochran, Ferdouz; Daniel, Jessica; Jackson, Laura; et al.
+REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11796-11796   Published: JUL 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+Decision-making that impacts sustainability occurs at national and subnational levels, highlighting the need for multi-scale Earth observations (EO) and geospatial data for assessing the United Nations’ Sustainable Development Goals (SDGs). EnviroAtlas, developed by the United States Environmental Protection Agency and partners, provides a collection of web-based, interactive maps of environmental and socio-economic data relevant to the SDGs. EnviroAtlas maps ecosystem services indicators at national, regional, and local extents that can contribute to targets set forth in numerous goals, such as SDG 6 for clean water, SDG 11 for sustainable cities and communities, and SDG 15 for life on land. Examples of EnviroAtlas indicators that provide a way to view spatial inequalities, help fill gaps in environmental indicators, and integrate socio-economic and environmental data for the SDGs are explored herein. Remotely sensed EO data are essential for producing these indicators and informing planning and decision-making for the SDGs at subnational scales. The National Land Cover Dataset is the basis for many EnviroAtlas maps at the national extent, while National Agriculture Imagery Program and Light Detection and Ranging (LiDAR) data are used to classify Meter-scale Urban Land Cover in select US metro areas. These 30 m and 1 m land cover products are combined with demographic and other geospatial data (remotely sensed and otherwise) to produce integrated indicators that can aid in target setting of the SDGs. Though EnviroAtlas was created for the conterminous US, the methods for indicator creation are transferable, and the open-source code for the EnviroAtlas resource may serve as an example for other nations. Achieving the SDGs means assessing targets and decision-making outcomes at local, regional, and national levels using consistent and accurate data. Geospatial resources like EnviroAtlas that provide open access to indicators based on EO data and allow for assessment at multiple extents and resolutions are critical to broadly addressing national to subnational SDG goals and targets.&lt;/p&gt;
+
+&lt;h3 id=&quot;validation-practices-for-satellite-soil-moisture-retrievals-what-are-the-errors&quot;&gt;Validation practices for satellite soil moisture retrievals: What are (the) errors?&lt;/h3&gt;
+
+&lt;p&gt;By: Gruber, A.; De Lannoy, G.; Albergel, C.; et al.&lt;/p&gt;
+
+&lt;p&gt;REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11806-11806   Published: JUL 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links Free Full Text from Publisher Close Abstract
+This paper presents a community effort to develop good practice guidelines for the validation of global coarse-scale satellite soil moisture products. We provide theoretical background, a review of state-of-the-art methodologies for estimating errors in soil moisture data sets, practical recommendations on data pre-processing and presentation of statistical results, and a recommended validation protocol that is supplemented with an example validation exercise focused on microwave-based surface soil moisture products. We conclude by identifying research gaps that should be addressed in the near future.&lt;/p&gt;
+
+&lt;h3 id=&quot;agricultural-drought-mitigating-indices-derived-from-the-changes-in-drought-characteristics&quot;&gt;Agricultural drought mitigating indices derived from the changes in drought characteristics&lt;/h3&gt;
+
+&lt;p&gt;By: Wu, Bingfang; Ma, Zonghan; Yan, Nana&lt;/p&gt;
+
+&lt;p&gt;REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11813-11813   Published: JUL 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+Droughts can cause tremendous losses to agricultural and economic development; humans have explored many anti-drought measures to mitigate the influence of drought and accordingly altering the characteristics of actual agricultural drought. In this study, a method is proposed to detect the spatiotemporal changes in drought characteristics, which show the effects of anti-drought measures on drought mitigation. Two agricultural drought mitigation evaluation indices are proposed, the agricultural drought frequency change (ADFC) and agricultural drought area change (ADAC), which are calculated by combining the Palmer drought severity index (PDSI) and vegetation health index (VHI), two widely used drought monitoring indices. The PDSI and VHI represent the natural and actual agricultural drought severity under natural and actual conditions respectively, and their differences in drought frequency and affected area reflect the level of anti-drought measures in mitigating agricultural drought. The feasibility of using ADFC and ADAC to quantify the effects of anti-drought measures for agriculture is explored using data from six typical agricultural provinces in the North China Plain and Northeast China. The results show that ADFC and ADAC could reflect both the spatiotemporal changes in agricultural drought characteristics and the influence of anti-drought measures on agricultural drought. The trend of the drought mitigation index is consistent with agricultural activity statistics. These two indices could be further used to evaluate the effects of different anti-drought methods and aid in defeating agricultural drought across many countries.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-optimal-design-for-hierarchical-generalized-group-testing&quot;&gt;An optimal design for hierarchical generalized group testing&lt;/h3&gt;
+
+&lt;p&gt;By: Malinovsky, Yaakov; Haber, Gregory; Albert, Paul S.&lt;/p&gt;
+
+&lt;p&gt;JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS  Volume: 69   Issue: 3   Pages: 607-621   Published: JUN 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+Choosing an optimal strategy for hierarchical group testing is an important problem for practitioners who are interested in disease screening with limited resources. For example, when screening for infectious diseases in large populations, it is important to use algorithms that minimize the cost of potentially expensive assays. Black and co-workers described this as an intractable problem unless the number of individuals to screen is small. They proposed an approximation to an optimal strategy that is difficult to implement for large population sizes. We develop an optimal design with respect to the expected total number of tests that can be obtained by using a novel dynamic programming algorithm. We show that this algorithm is substantially more efficient than the approach that was proposed by Black and co-workers. In addition, we compare the two designs for imperfect tests. R code is provided for practitioners.&lt;/p&gt;
+
+&lt;h3 id=&quot;sen2r-an-r-toolbox-for-automatically-downloading-and-preprocessing-sentinel-2-satellite-data&quot;&gt;“sen2r”: An R toolbox for automatically downloading and preprocessing Sentinel-2 satellite data&lt;/h3&gt;
+
+&lt;p&gt;By: Ranghetti, Luigi; Boschetti, Mirco; Nutini, Francesco; et al.&lt;/p&gt;
+
+&lt;p&gt;COMPUTERS &amp;amp; GEOSCIENCES  Volume: 139   Pages: 4473-4473   Published: JUN 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+sen2r is a scalable and flexible R package to enable downloading and preprocessing of Sentinel-2 satellite imagery via an accessible and easy to install interface. It allows the execution of several preprocessing steps which are commonly performed by Sentinel-2 users: searching the Sentinel-2 archive for datasets available over a spatial area of interest and in a defined time window, downloading them, applying the Sen2Cor atmospheric correction algorithm to compute surface reflectances, merging adjacent files, performing geometric transformations, applying a cloud mask, computing spectral indices and colour images. The package is designed to be accessible to a range of users, from beginners to skilled R users. It comes with a Graphical User Interface, which can be used to set the processing parameters and launch processing operations: this feature makes sen2r accessible also for novices with limited programming experience. High-level R functions, which enable customised image processing workflows and control over intermediate steps, can be useful to experienced remote sensing researchers. Thanks to those functions it is possible to easily schedule automatic processing chains, so to manage massive processing operations. This paper describes the main characteristics, functionalities and performance of the package and highlights its usefulness as the operational back-end of service-oriented architectures, as illustrated by the SATURNO project.&lt;/p&gt;
+
+&lt;h3 id=&quot;atakrig-an-r-package-for-multivariate-area-to-area-and-area-to-point-kriging-predictions&quot;&gt;atakrig: An R package for multivariate area-to-area and area-to-point kriging predictions&lt;/h3&gt;
+
+&lt;p&gt;By: Hu, Maogui; Huang, Yanwei&lt;/p&gt;
+
+&lt;p&gt;COMPUTERS &amp;amp; GEOSCIENCES  Volume: 139   Pages: 4471-4471   Published: JUN 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract
+Geostatistical interpolation methods are used in diverse disciplines, such as environmental science, ecology, and hydrology. With the increasing availability of areal spatial data, area-to-area and area-to-point interpolations have great application potential. In this study, based on the variogram deconvolution algorithm proposed by Goovaerts (2008), an open-source area-to-area kriging package atakrig is developed in the R environment. In atakrig, point-scale variogram and cross-variogram can be automatically deconvoluted from spatial areal samples. It provides a general framework for area-to-area and area-to-point ordinary kriging and cokriging. Two applications show that the package works well in river runoff prediction and missing data interpolation for remote sensing aerosol optical depth. The package can be deployed on different operating systems and computer hardware platforms.&lt;/p&gt;
+
+&lt;h3 id=&quot;content-search-within-large-environmental-datasets-using-a-convolution-neural-network&quot;&gt;Content search within large environmental datasets using a convolution neural network&lt;/h3&gt;
+
+&lt;p&gt;By: Freeman, J.&lt;/p&gt;
+
+&lt;p&gt;COMPUTERS &amp;amp; GEOSCIENCES  Volume: 139   Pages: 4479-4479   Published: JUN 2020&lt;/p&gt;
+
+&lt;p&gt;Context Sensitive Links  Close Abstract&lt;/p&gt;
+
+&lt;p&gt;Convolution Neural Networks (CNN) have demonstrated a high level of performance in the areas of image recognition and classification. The training of such networks over large corpora of imagery has facilitated additional applications such as content-based image searching and retrieval. Here we investigate the efficacy of applying a pre-trained deep CNN to the task of content searching within large environmental datasets. It is demonstrated that the learned convolution filters from a pre-trained network provide sufficient fidelity and diversity to accurately perform a content search within a dataset that is unrelated to the CNN training data.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 01, 2020.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1623,186 +1794,6 @@ The U.S. Department of Agriculture National Agricultural Statistics Survey (NASS
  SM surface and root zone SM to the categorical NASS SM conditions. The results show that, year over year, the SMAP cumulative SM distributions are consistent with the NASS SM conditions and, furthermore, that the temporal evolution of the SMAP-derived thresholds is consistent with the seasonal crop growth cycles from year to year. The results signify that the SMAP SM retrievals are relatable to SM estimation conducted in agricultural crop land by land managers and farmers, which underlines the general applicability of the SMAP data.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2019/10/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on October 30, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/10/journalDigest" />
-  <id>/2019/10/journalDigest</id>
-  <updated>2019-10-29T00:00:00-00:00</updated>
-  <published>2019-10-29T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-13&quot;&gt;Journal Paper Digests 2019 #13&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Automatic classification of hydrocarbon “leads” in seismic images through artificial and convolutional neural networks&lt;/li&gt;
-  &lt;li&gt;The BonaRes metadata schema for geospatial soil-agricultural research data - Merging INSPIRE and DataCite metadata schemes&lt;/li&gt;
-  &lt;li&gt;The response of vegetation cover and dune activity to rainfall, drought and fire observed by multitemporal satellite imagery&lt;/li&gt;
-  &lt;li&gt;Forecasting causes of death by using compositional data analysis: the case of cancer deaths&lt;/li&gt;
-  &lt;li&gt;Data fusion of vis-NIR and PXRF spectra to predict soil physical and chemical properties&lt;/li&gt;
-  &lt;li&gt;Can Drip Irrigation be Scheduled with Cosmic-Ray Neutron Sensing?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;automatic-classification-of-hydrocarbon-leads-in-seismic-images-through-artificial-and-convolutional-neural-networks&quot;&gt;Automatic classification of hydrocarbon “leads” in seismic images through artificial and convolutional neural networks&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Souza, JFL; Santos, MD; Magalhaes, RM; Neto, EM; Oliveira, GP; Roque, WL&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 132 23-32; NOV 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-This paper aims to provide alternative approaches for automatic classification of subsurface hydrocarbon-bearing regions from 2D seismic images driven by multi-layer perceptron neural networks (MLPs) (a kind of artificial neural network) and convolutional neural networks (CNNs). The first approach is based on a standard MLP whose features are controlled by Haralick’s textural descriptors; the second one is developed with a multiple-layer CNN. Both techniques are studied to identify geologic “leads”, instead of delineating other structures of the porous medium, such as salt bodies or seismic faults. The outcomes obtained from each approach are evaluated for a dataset of seismic images corresponding to the offshore SEAL Basin in Brazil’s northeastern. Performance indicators (accuracy, recall, precision, F-measure and loss) are computed to verify training and validation of the network learning capabilities. It is shown that for both MLP and CNN configurations, good agreement is 
- achieved in blind testing qualitatively and quantitatively.&lt;/p&gt;
-
-&lt;p&gt;### The BonaRes metadata schema for geospatial soil-agricultural research data - Merging INSPIRE and DataCite metadata schemes&lt;/p&gt;
-
-&lt;p&gt;Authors:
-Specka, X; Gartner, P; Hoffmann, C; Svoboda, N; Stecker, M; Einspanier,
-U; Senkler, K; Zoarder, MAM; Heinrich, U&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;COMPUTERS &amp;amp; GEOSCIENCES&lt;/em&gt;, 132 33-41; NOV 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-A spatial data infrastructure (SDI) for the upload and provision of soil-agricultural research data in Germany was developed and launched in 2017. The precondition for the new SDI were to be compliant with the European initiative for spatial information (INSPIRE), to consider FAIR data principles, to be interoperable with other disciplinary national and international SDIs and to support dataset registrations with digital object identifiers (DOI). To meet these requirements, the new SDI had to support both the INSPIRE and DataCite metadata standards. As there was no metadata standard available that supported both metadata schemes from different disciplines, it became necessary to merge these two existing standards.The objective of this paper is to describe the developmental steps of the newly created BonaRes metadata schema for geospatial soil-agricultural research data. First, we analyzed the INSPIRE and DataCite metadata schemas, identified and compared semantically equivale
- nt metadata elements, including properties and allowed content values, for potential mapping. In the next step, we specified the new metadata model, whose elements were derived from INSPIRE or DataCite under consideration of the previously developed mapping. Third, additional metadata elements were defined to directly describe the underlying data model.The advantages and disadvantages of the method that was applied to define the BonaRes metadata schema elements originating from INSPIRE and DataCite schemas are presented and discussed. By implementing the new metadata model, the SDIs can achieve cross-portal metadata interoperability with other INSPIRE-compliant SDIs. Furthermore, researchers who store their geospatial research data in SDIs to implement the BonaRes metadata schema can increase the visibility and findability of their research, as the data can be assigned a DOI, which is a prerequisite for data citations and data publications. The new metadata elements of the B
- onaRes metadata schema allows targeted dataset queries, e.g.!
- , soil pH values, yields or parameters, which were measured by a specific method, using the underlying data model, and improves the discovery and reusability of research data.&lt;/p&gt;
-
-&lt;p&gt;### The response of vegetation cover and dune activity to rainfall, drought and fire observed by multitemporal satellite imagery&lt;/p&gt;
-
-&lt;p&gt;Authors:
-Fisher, A; Hesse, PP&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EARTH SURFACE PROCESSES AND LANDFORMS&lt;/em&gt;, NIL_1-NIL_11; OCT 14 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-The stable longitudinal dunes in the northern Simpson Desert, Australia, were observed in satellite imagery to become more active after vegetation cover was reduced by fire and drought. Subsequent rainfall events also resulted in significant vegetation regrowth and dune stabilization. These switches between more active and stable conditions have not been previously described in the largely vegetated dune fields of central Australia. The observations, made on 12 dune sites, relied on high spatial resolution satellite imagery to observe dune crest activity, and seasonal Landsat fractional cover imagery to observe vegetation cover changes. The non-photosynthetic vegetation (NPV) component of the fractional vegetation cover images revealed significant changes in hummock grass cover on the dunes between 1988 and 2018, with a positive relationship with the three-year cumulative rainfall, disrupted by two periods of patchy burning. Only those sites that had burnt became active, and 
- only after vegetation cover had remained low (NPV &amp;lt; 16%) during the ‘Millennium Drought’. There is no threshold in vegetation cover, below which dune crests become active, but active dune features require four-years of low NPV cover (&amp;lt; 16%) to develop. The large rainfall event that ended the drought increased NPV cover, stabilizing the dunes. Similar hummock grass covered dunes are present across large areas of the arid zone, and are likely to respond in similar ways, given that fire and drought are common occurrences in Australia.&lt;/p&gt;
-
-&lt;p&gt;### Forecasting causes of death by using compositional data analysis: the case of cancer deaths&lt;/p&gt;
-
-&lt;p&gt;Authors:
-Kj?rgaard, S; Ergemen, YE; Kallestrup-Lamb, M; Oeppen, J;
-Lindahl-Jacobsen, R&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS&lt;/em&gt;, 68 (5):1351-1370; NOV 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Cause-specific mortality forecasting is often based on predicting cause-specific death rates independently. Only a few methods have been suggested that incorporate dependence between causes. An attractive alternative is to model and forecast cause-specific death distributions, rather than mortality rates, as dependence between the causes can be incorporated directly. We follow this idea and propose two new models which extend the current research on mortality forecasting using death distributions. We find that adding age, time and cause-specific weights and decomposing both joint and individual variation between different causes of death increased the forecast accuracy of cancer deaths by using data for French and Dutch populations.&lt;/p&gt;
-
-&lt;h3 id=&quot;data-fusion-of-vis-nir-and-pxrf-spectra-to-predict-soil-physical-and-chemical-properties&quot;&gt;Data fusion of vis-NIR and PXRF spectra to predict soil physical and chemical properties&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Zhang, YK; Hartemink, AE&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EUROPEAN JOURNAL OF SOIL SCIENCE&lt;/em&gt;, NIL_1-NIL_18; OCT 4 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-We tested one front-end data fusion method to combine visible near-infrared (vis-NIR) and portable X-ray fluorescence (PXRF) spectra for predicting different soil properties and investigated the contribution of different sensor data. A total of 197 soil samples were collected from 25 Alfisols and Mollisols in south-central Wisconsin, USA. Soils were analysed in the laboratory for clay, sand, silt content, total carbon (TC), total nitrogen (TN) and pH. Air-dried soil samples were scanned with vis-NIR and PXRF spectrometers. A principal component analysis (PCA) was applied to each of the vis-NIR and PXRF spectra to extract the first 10 principal components (PCs), which were used in the Cubist model. Five types of input data were compared for constructing the models using a front-end data fusion approach, including: (a) 10 PCs from vis-NIR spectra, (b) 10 PCs from spectra of PXRF beam 1 (XRF40), (c) 10 PCs from spectra of PXRF beam 2 (XRF10), (d) concatenating 20 PCs from two PX
- RF spectra (XRF40 + 10), and (e) concatenating 30 PCs from two PXRF spectra and vis-NIR spectra (XRF40 + 10 + NIR). In addition, the performances of the preprocessing methods (four smoothing methods with or without background removal) of PXRF spectra were compared. Multiple linear regression was also used to predict soil properties directly from 11 PXRF-estimated elements. Our results suggest that smoothing should be applied to the PXRF spectra prior to developing predictive models. PXRF spectra and elemental data can predict soil texture with validation R-2 &amp;gt; 0.85, better than using solely vis-NIR spectra, and combining vis-NIR and PXRF spectra improved the prediction. Combining PXRF and vis-NIR can also predict TC and TN moderately well. Soil pH cannot be predicted from vis-NIR or PXRF spectra in this dataset due to its weak correlations with other soil properties and elements. It is concluded that PXRF spectra can be solely used to estimate soil texture, whereas combining
-  vis-NIR and PXRF spectra via PCA should be used to estimate!
-  TC and TN. HighlightsThe use of front-end data fusion method to combine vis-NIR and PXRF spectra for predicting soil properties. Different preprocessing algorithms were compared systematically for PXRF spectra. Spectral smoothing should be applied to the PXRF spectra prior to developing predictive models. PXRF spectra can be used solely to estimate soil texture, whereas combining vis-NIR and PXRF spectra via PCA should be used to estimate TC and TN.&lt;/p&gt;
-
-&lt;h3 id=&quot;can-drip-irrigation-be-scheduled-with-cosmic-ray-neutron-sensing&quot;&gt;Can Drip Irrigation be Scheduled with Cosmic-Ray Neutron Sensing?&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Li, DZ; Schron, M; Kohli, M; Bogena, H; Weimar, J; Bello, MAJ; Han, XJ;
-Gimeno, MAM; Zacharias, S; Vereecken, H; Franssen, HJH&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;VADOSE ZONE JOURNAL&lt;/em&gt;, 18 (1):90053-90053; OCT 3 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Irrigation is essential for maintaining food production in water-scarce regions. The irrigation need depends on the water content of the soil, which we measured with the novel technique of cosmic-ray neutron sensing (CRNS). The potential of the CRNS technique for drip irrigation scheduling was explored in this study for the Picassent site near Valencia, Spain. To support the experimental evidence, the neutron transport simulation URANOS was used to simulate the effect of drip irrigation on the neutron counts. The overall soil water content (SWC) in the CRNS footprint was characterized with a root mean square error &amp;lt;0.03 cm(3)/cm(3), but the experimental dataset indicated methodological limitations to detect drip water input. Both experimental data and simulation results suggest that the large-area neutron response to drip irrigation is insignificant in our specific case using a standard CRNS probe. Because of the small area of irrigated patches and short irrigation time, the 
- limited SWC changes due to drip irrigation were not visible from the measured neutron intensity changes. Our study shows that CRNS modeling can be used to assess the suitability of the CRNS technique for certain applications. While the standard CRNS probe was not able to detect small-scale drip irrigation patterns, the method might be applicable for larger irrigated areas, in drier regions, and for longer and more intense irrigation periods. Since statistical noise is the main limitation of the CRNS measurement, the capability of the instrument could be improved in future studies by larger and more efficient neutron detectors.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2019/10/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on October 29, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/08/journalDigest" />
-  <id>/2019/08/journalDigest</id>
-  <updated>2019-07-30T00:00:00-00:00</updated>
-  <published>2019-08-16T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-12&quot;&gt;Journal Paper Digests 2019 #12&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Reducing Sampling Uncertainty in Aeolian Research to Improve Change Detection&lt;/li&gt;
-  &lt;li&gt;Deep soil flipping increases carbon stocks of New Zealand grasslands&lt;/li&gt;
-  &lt;li&gt;How ecologists define drought, and why we should do better&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;reducing-sampling-uncertainty-in-aeolian-research-to-improve-change-detection&quot;&gt;Reducing Sampling Uncertainty in Aeolian Research to Improve Change Detection&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Webb, NP; Chappell, A; Edwards, BL; McCord, SE; Van Zee, JW; Cooper, BF;
-Courtright, EM; Duniway, MC; Sharratt, B; Tedela, N; Toledo, D&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;JOURNAL OF GEOPHYSICAL RESEARCH-EARTH SURFACE&lt;/em&gt;, 124 (6):1366-1377; JUN 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Measurements of aeolian sediment transport support our understanding of mineral dust impacts on Earth and human systems and assessments of aeolian process sensitivities to global environmental change. However, sample design principles are often overlooked in aeolian research. Here we use high-density field measurements of sediment mass flux across land use and land cover types to examine sample size and power effects on detecting change in aeolian transport. Temporal variances were 1.6 to 10.1 times the magnitude of spatial variances in aeolian transport for six study sites. Differences in transport were detectable for &amp;gt;67% of comparisons among sites using similar to 27 samples. Failure to detect change with smaller sample sizes suggests that aeolian transport measurements and monitoring are much more uncertain than recognized. We show how small and selective sampling, common in aeolian research, gives the false impression that differences in aeolian transport can be detected
- , potentially undermining inferences about process and impacting reproducibility of aeolian research.Plain Language Summary Aeolian sediment transport, including wind erosion and dust emission, impacts agricultural production and food security, nutrient cycling, water resources, and climate. Measuring aeolian sediment transport is therefore important for developing an understanding of its impacts on Earth systems and society. However, little consideration has been given to how many samples are needed to measure aeolian transport and detect its change across space and through time. We investigate how sample size, design, and decisions about the precision of change detection affect aeolian transport monitoring. Using field measurements, we show that traditional approaches in aeolian research with small sample sizes and selective placement of equipment are often unable to detect change and support robust inferences about aeolian processes. Unless large numbers of samples are us
- ed, uncertainty in field measurements can be so large that i!
- t undermines our understanding of how and why aeolian sediment transport rates change across space and through time.&lt;/p&gt;
-
-&lt;h3 id=&quot;deep-soil-flipping-increases-carbon-stocks-of-new-zealand-grasslands&quot;&gt;Deep soil flipping increases carbon stocks of New Zealand grasslands&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Schiedung, M; Tregurtha, CS; Beare, MH; Thomas, SM; Don, A&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, 25 (7):2296-2309; JUL 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Sequestration of soil organic carbon (SOC) has been recognized as an opportunity to off-set global carbon dioxide (CO2) emissions. Flipping (full inversion to 1-3 m) is a practice used on New Zealand’s South Island West Coast to eliminate water-logging in highly podzolized sandy soils. Flipping results in burial of SOC formed in surface soil horizons into the subsoil and the transfer of subsoil material low in SOC to the “new” topsoil. The aims of this study were to quantify changes in the storage and stability of SOC over a 20-year period following flipping of high-productive pasture grassland. Topsoils (0-30 cm) from sites representing a chronosequence of flipping (3-20 years old) were sampled (2005/07) and re-sampled (2017) to assess changes in topsoil carbon stocks. Deeper samples (30-150 cm) were also collected (2017) to evaluate the changes in stocks of SOC previously buried by flipping. Density fractionation was used to determine SOC stability in recent and buried tops
- oils. Total SOC stocks (0-150 cm) increased significantly by 69 +/- 15% (179 +/- 40 Mg SOC ha(-1)) over 20 years following flipping. Topsoil burial caused a one-time sequestration of 160 +/- 14 Mg SOC ha(-1) (30-150 cm). The top 0-30 cm accumulated 3.6 Mg SOC ha(-1) year(-1). The chronosequence and re-sampling revealed SOC accumulation rates of 1.2-1.8 Mg SOC ha(-1) year(-1) in the new surface soil (0-15 cm) and a SOC deficit of 36 +/- 5% after 20 years. Flipped subsoils contained up to 32% labile SOC (compared to &amp;lt; 1% in un-flipped subsoils) thus buried SOC was preserved. This study confirms that burial of SOC and the exposure of SOC depleted subsoil results in an overall increase of SOC stocks of the whole soil profile and long-term SOC preservation.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-ecologists-define-drought-and-why-we-should-do-better&quot;&gt;How ecologists define drought, and why we should do better&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Slette, IJ; Post, AK; Awad, M; Even, T; Punzalan, A; Williams, S; Smith,
-MD; Knapp, AK&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GLOBAL CHANGE BIOLOGY&lt;/em&gt;, NIL_1-NIL_8; JUL 19 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Drought, widely studied as an important driver of ecosystem dynamics, is predicted to increase in frequency and severity globally. To study drought, ecologists must define or at least operationalize what constitutes a drought. How this is accomplished in practice is unclear, particularly given that climatologists have long struggled to agree on definitions of drought, beyond general variants of “an abnormal deficiency of water.” We conducted a literature review of ecological drought studies (564 papers) to assess how ecologists describe and study drought. We found that ecologists characterize drought in a wide variety of ways (reduced precipitation, low soil moisture, reduced streamflow, etc.), but relatively few publications (similar to 32%) explicitly define what are, and are not, drought conditions. More troubling, a surprising number of papers (similar to 30%) simply equated “dry conditions” with “drought” and provided little characterization of the drought conditions stu
- died. For a subset of these, we calculated Standardized Precipitation Evapotranspiration Index values for the reported drought periods. We found that while almost 90% of the studies were conducted under conditions quantifiable as slightly to extremely drier than average, similar to 50% were within the range of normal climatic variability. We conclude that the current state of the ecological drought literature hinders synthesis and our ability to draw broad ecological inferences because drought is often declared but is not explicitly defined or well characterized. We suggest that future drought publications provide at least one of the following: (a) the climatic context of the drought period based on long-term records; (b) standardized climatic index values; (c) published metrics from drought-monitoring organizations; (d) a quantitative definition of what the authors consider to be drought conditions for their system. With more detailed and consistent quantification of drough
- t conditions, comparisons among studies can be more rigorous!
- , increasing our understanding of the ecological effects of drought.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2019/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 16, 2019.&lt;/p&gt;
   </content>
 </entry>
 
