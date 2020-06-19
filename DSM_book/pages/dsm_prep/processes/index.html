@@ -1,0 +1,645 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Preparatory and exploratory analysis for digital soil mapping &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Preparatory and exploratory analysis for digital soil mapping">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Preparatory and exploratory analysis for digital soil mapping">
+<meta property="og:description" content="">
+<meta property="og:url" content="/DSM_book/pages/dsm_prep/processes/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_prep/processes/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Preparatory and exploratory analysis for digital soil mapping</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading"></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Preparatory and exploratory analysis for digital soil mapping</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~15 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h2 id="some-exploratory-data-analysis">Some exploratory data analysis</h2>
+
+<h3 id="page-topics">Page topics</h3>
+
+<ul>
+  <li><a href="#s-1">Summary statistics</a></li>
+  <li><a href="#s-2">Spatial investigations</a></li>
+  <li><a href="#s-3">Inverse distance weighted interpolation</a></li>
+  <li><a href="#s-4">Kriging</a></li>
+  <li><a href="#s-5">Correlative data analysis</a></li>
+</ul>
+
+<h3 id="summary-statistics-">Summary statistics <a id="s-1"></a></h3>
+<p>We will continue using the <code class="highlighter-rouge">DSM_data</code> object that was created in <a href="/DSM_book/pages/dsm_prep/intersection/">Intersecting soil point observations with environmental covariates page</a>. As the data set was saved to file you will also find it in your working directory. Type <code class="highlighter-rouge">getwd()</code> in the console to indicate the specific file location. So lets read the file in using the <code class="highlighter-rouge">read.csv</code> function. First though we need to load up a few packages to use in the following tasks. If you don’t know where the file has gotten to, <a href="/DSM_book/data/hunterValley_SoilCovariates_pH.csv">use this link to download a copy</a>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load in libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">gstat</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">nortest</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">fBasics</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># load data</span><span class="w">
+</span><span class="n">hv.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"hunterValley_SoilCovariates_pH.csv"</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">hv.dat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    506 obs. of  15 variables:</span><span class="w">
+</span><span class="c1">##  $ id                      : int  1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
+</span><span class="c1">##  $ x                       : num  340386 340345 340559 340483 340734 ...</span><span class="w">
+</span><span class="c1">##  $ y                       : num  6368690 6368491 6369168 6368740 6368964 ...</span><span class="w">
+</span><span class="c1">##  $ pH60_100cm              : num  4.47 5.42 6.26 8.03 8.86 7.28 4.95 5.61 5.39 3.44 ...</span><span class="w">
+</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  1.34 1.42 1.64 1.04 1.27 ...</span><span class="w">
+</span><span class="c1">##  $ AACN                    : num  1.619 0.281 2.301 1.74 3.114 ...</span><span class="w">
+</span><span class="c1">##  $ Landsat_Band1           : int  57 47 59 52 62 53 47 52 53 63 ...</span><span class="w">
+</span><span class="c1">##  $ Elevation               : num  103.1 103.7 99.9 101.9 99.8 ...</span><span class="w">
+</span><span class="c1">##  $ Hillshading             : num  1.849 1.428 0.934 1.517 1.652 ...</span><span class="w">
+</span><span class="c1">##  $ Light_insolation        : num  1689 1701 1722 1688 1735 ...</span><span class="w">
+</span><span class="c1">##  $ Mid_Slope_Positon       : num  0.876 0.914 0.844 0.848 0.833 ...</span><span class="w">
+</span><span class="c1">##  $ MRVBF                   : num  3.85 3.31 3.66 3.92 3.89 ...</span><span class="w">
+</span><span class="c1">##  $ NDVI                    : num  -0.143 -0.386 -0.197 -0.14 -0.15 ...</span><span class="w">
+</span><span class="c1">##  $ TWI                     : num  17.5 18.2 18.8 18 17.8 ...</span><span class="w">
+</span><span class="c1">##  $ Slope                   : num  1.79 1.42 1.01 1.49 1.83 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now lets firstly look at some of the summary statistics of soil pH.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">round</span><span class="p">(</span><span class="n">summary</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span><span class="w">
+</span><span class="c1">##     3.0     5.5     6.3     6.5     7.4     9.7</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The observation that the mean and median are nearly equivalent indicates
+the distribution of this data does not deviate to much from normal. To
+assess this more formally, we can perform other analyses such as tests
+of skewness, kurtosis and normality. Here we need to use functions from
+the <code class="highlighter-rouge">fBasics</code> and <code class="highlighter-rouge">nortest</code> packages that were loaded earlier. If you do
+not have these already you should install them using <code class="highlighter-rouge">install.packages()</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># skewness</span><span class="w">
+</span><span class="n">sampleSKEW</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##      SKEW </span><span class="w">
+</span><span class="c1">## 0.1530612</span><span class="w">
+
+</span><span class="c1"># kurtosis</span><span class="w">
+</span><span class="n">sampleKURT</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##     KURT </span><span class="w">
+</span><span class="c1">## 1.202168</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Here we see that the data is slightly positively skewed. A formal test
+for normality of the Anderson-Darling Test statistic. There are others,
+so its worth a look at the help files associated with the <code class="highlighter-rouge">nortest</code>
+package.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ad.test</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##  Anderson-Darling normality test</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## data:  hv.dat$pH60_100cm</span><span class="w">
+</span><span class="c1">## A = 4.0401, p-value = 4.594e-10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For this data to be normally distributed the p value should be &gt; than
+0.05. This is confirmed when we look at the histogram and qq-plot of
+this data in the figure below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="n">hist</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">)</span><span class="w">
+</span><span class="n">qqnorm</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="n">plot.it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">)</span><span class="w">
+</span><span class="n">qqline</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/asTest_hv.png" alt="rconsole" />
+    <figcaption> Histogram and qq-plot of soil pH in the 60-100cm depth interval.</figcaption>
+</figure>
+
+<p>The histogram on Figure above shows something that you would expect from
+a normal distribution, but in practice fails the formal statistical
+test. Generally for fitting most statistical models, we need to assume
+our data is normally distributed. A way to make the data to be more
+normal is to transform it. Common transformations include the square
+root, logarithmic, or power transformations.</p>
+
+<p>We could investigate other data transformations or even investigate the
+possibility of removing outliers or some such extraneous data, but
+generally we can be pretty satisfied with working with this data from a
+statistical viewpoint.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="spatial-investigations-of-data-">Spatial investigations of data <a id="s-2"></a></h3>
+
+<p>Another useful exploratory test is to visualize the data in its spatial
+context. Mapping the point locations with respect to the target variable
+by either altering the size or color of the marker gives a quick way to
+examine the target soil attribute spatial variability. Using the
+<code class="highlighter-rouge">ggplot2</code> package, we could create the plot as shown below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">ggplot</span><span class="p">(</span><span class="n">hv.dat</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/hvPoints_2017.png" alt="rconsole" />
+    <figcaption> Spatial distribution of points in the Hunter Valley for the soil pH data at the 60-100cm depth interval. Size of the markings is relative to the pH measurement reading.</figcaption>
+</figure>
+
+<p>On the above figure, there is a subtle north to south trend of low to
+high values, but generally it is difficult to make specific observations
+without consideration of the terrain and landscape these data are
+situated in.</p>
+
+<p>Ultimately we are interested in making maps. So, as a first exercise and
+to get a clearer sense of the spatial structure of the data it is good
+to use some interpolation method to estimate soil pH values onto a
+regular grid of the study area extent. A couple of ways of doing this is
+the inverse distance weighted (IDW) interpolation and kriging.</p>
+
+<p>For IDW predictions, the values at unvisited locations are calculated as
+a weighted average of the values available at the known points, where
+the weights are based only by distance from the interpolation location.
+Kriging is a similar distance weighted interpolation method based on
+values at observed locations, except it has an underlying model of the
+spatial variation of the data. This model is a variogram which describes
+the auto-correlation structure of the data as a function of distances.
+Kriging is usually superior to other means of interpolation because it
+provides an optimal interpolation estimate for a given coordinate
+location, as well as a prediction variance estimate. Kriging is very
+popular in soil science, and there are many variants of it. For further
+information and theoretical underpinnings of kriging or other associated
+geostatistical methods, with special emphasis for the soil sciences it
+is worth consulting Webster and Oliver (2001).</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="inverse-distance-weighted-interpolation-">Inverse distance weighted interpolation <a id="s-3"></a></h3>
+
+<p>Functions for IDW interpolation and kriging are found in the <code class="highlighter-rouge">gstat</code>
+package. To initiate these interpolation methods, we first need to
+prepare a grid of points upon which the interpolation will be made. This
+can be done by extracting the coordinates from either of the 25m
+resolution rasters we have for the Hunter Valley. As will be seen later,
+this step can be made redundant because we can actually interpolate
+directly to raster. Nevertheless, to extract the pixel point coordinates
+from a raster we do the following using the <code class="highlighter-rouge">hunterCovariates_sub</code>
+raster stack. (Make sure both <code class="highlighter-rouge">raster</code> and <code class="highlighter-rouge">ithir</code> packages are loaded).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
+
+</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cellNos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="n">ncell</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)))</span><span class="w">
+</span><span class="n">tempD</span><span class="o">$</span><span class="n">vals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getValues</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
+</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tempD</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">tempD</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">cellNos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">tempD</span><span class="o">$</span><span class="n">cellNos</span><span class="p">)</span><span class="w">
+</span><span class="n">gXY</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">xyFromCell</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">cellNos</span><span class="p">,</span><span class="w"> </span><span class="n">spatial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The script above essentially gets the pixels which have values
+associated with them (discards all <code class="highlighter-rouge">NA</code> occurrences), and then uses the
+cell numbers to extract the associated spatial coordinate locations
+using the <code class="highlighter-rouge">xyFromCell</code> function. The result is saved in the <code class="highlighter-rouge">gXY</code>
+object.</p>
+
+<p>Using the <code class="highlighter-rouge">idw</code> function from <code class="highlighter-rouge">gstat</code> we fit the formula as below. We
+need to specify the observed data, their spatial locations, and the
+spatial locations of the points we want to interpolate onto. The <code class="highlighter-rouge">idp</code>
+parameter allows you to specify the inverse distance weighting power.
+The default is 2, yet can be adjusted if you want to give more weighting
+to points closer to the interpolation point. As we can not evaluate the
+uncertainty of prediction with IDW, we can not really optimize this
+parameter.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IDW.pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">idw</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.dat</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gXY</span><span class="p">,</span><span class="w"> </span><span class="n">idp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [inverse distance weighted interpolation]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Plotting the resulting map below can be done using the following script.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IDW.raster.p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">IDW.pred</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]))</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">IDW.raster.p</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/IDW1_hv.png" alt="rconsole" />
+    <figcaption> Map of soil ph (60-100cm) predicted using IDW.</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="kriging-">Kriging <a id="s-4"></a></h3>
+
+<p>For soil science it is more common to use kriging for the reasons that
+we are able to formally define the spatial relationships in our data and
+get an estimate of the prediction uncertainty. As mentioned before this
+is done using a variogram. Variograms measure the spatial
+auto-correlation of phenomena such as soil properties (Pringle and
+McBratney 1999). The average variance between any pair of sampling
+points (calculated as the semi-variance) for a soil property <em>S</em> at any
+point of distance <em>h</em> apart can be estimated by the formula:</p>
+
+<p>$\gamma(h)=\frac{1}{2m(h)}\sum_{i=1}^{m(h)}\{s(x_{i})-s(x_{i}+h)\}^2$</p>
+
+<p>where <em>γ</em>(<em>h</em>) is the average semi-variance, <em>m</em> is the number of pairs
+of sampling points, <em>s</em> is the value of the attribute under
+investigation, <em>x</em> are the coordinates of the point, and <em>h</em> is the lag
+(separation distance of point pairs). Therefore, in accordance with the
+<em>law of geography</em>, points closer together will show smaller
+semi-variance (higher correlation), whereas pairs of points farther away
+from each other will display larger semi-variance. A variogram is
+generated by plotting the average semi-variance against the lag
+distance. Various models can be fitted to this empirical variogram where
+four of the more common ones are the linear model, the spherical model,
+the exponential model, and the Gaussian model. Once an appropriate
+variogram has been modeled it is then used for distance weighted
+interpolation (kriging) at unvisited locations.</p>
+
+<p>First, we calculate the empirical variogram i.e calculate the
+semi-variances of all point pairs in our data set. Then we fit a
+variogram model (in this case we will use a spherical model). To do this
+we need to make some initial estimates of this models parameters;
+namely, the nugget, sill, and range. The nugget is the very short-range
+error (effectively zero distance) which is often attributed to
+measurement errors. The sill is the limit of the variogram (effectively
+the total variance of the data). The range is the distance at which the
+data are no longer auto-correlated. Once we have made the first
+estimates of these parameters, we use the <code class="highlighter-rouge">fit.variogram</code> function for
+their optimization. The <code class="highlighter-rouge">width</code> parameter of the variogram function is
+the width of distance intervals into which data point pairs are grouped
+or binned for semi variance estimates as a function of distance. An
+automated way of estimating the variogram parameters is to use the
+<code class="highlighter-rouge">autofitVariogram</code> function from the <code class="highlighter-rouge">automap</code> package. For now we will
+stick with the <code class="highlighter-rouge">gstat</code> implementation.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vgm1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">variogram</span><span class="p">(</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">hv.dat</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3000</span><span class="p">)</span><span class="w">
+</span><span class="n">mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">vgm</span><span class="p">(</span><span class="n">psill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">),</span><span class="w"> </span><span class="s2">"Exp"</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3000</span><span class="p">,</span><span class="w"> </span><span class="n">nugget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">
+</span><span class="n">model_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fit.variogram</span><span class="p">(</span><span class="n">vgm1</span><span class="p">,</span><span class="w"> </span><span class="n">mod</span><span class="p">)</span><span class="w">
+</span><span class="n">model_1</span><span class="w">
+
+</span><span class="c1">##   model     psill    range</span><span class="w">
+</span><span class="c1">## 1   Nug 0.3779266   0.0000</span><span class="w">
+</span><span class="c1">## 2   Exp 1.5337573 353.9732</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The plot in Figure below shows both the empirical variogram together
+with the fitted variogram model line.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plot(vgm1, model = model_1)
+</code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/vario1_hv.png" alt="rconsole" />
+    <figcaption> Empirical variogram and exponential variogram model of soil pH for the 60-100cm depth interval.</figcaption>
+</figure>
+
+<p>The variogram is indicating there shows there is some spatial structure
+in the data up to around 500m. Using this fitted variogram model lets
+perform the kriging to make a map, but more importantly look at the
+variances associated with the predictions too. Here we use the <code class="highlighter-rouge">krige</code>
+function, which is not unlike using <code class="highlighter-rouge">idw</code> function, except that we have
+the variogram model parameters as additional information.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">krig.pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">krige</span><span class="p">(</span><span class="n">hv.dat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.dat</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gXY</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can make the maps as we did before, but now we can also look at the
+variances of the predictions too.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+</span><span class="n">krig.raster.p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">krig.pred</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]))</span><span class="w">
+</span><span class="n">krig.raster.var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">krig.pred</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)]))</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">krig.raster.p</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ordinary kriging predictions"</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">krig.raster.var</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ordinary kriging variance"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<figure>
+    <img src="/images/dsm_book/krig1_hv.png" alt="rconsole" />
+    <figcaption> Kriging predictions and variances of soil pH for the 60-100cm depth interval.</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="correlative-data-analysis-">Correlative data analysis <a id="s-5"></a></h3>
+
+<p>Understanding the geostatistical properties of the target soil variable
+of interest is useful in its own right. However, it is also important to
+determine whether there is further spatial relationships in the data
+that can be modeled with environmental covariate information. Better
+still is to combine both spatial model approaches together (more of
+which will be discussed later on about this).</p>
+
+<p>Ideally when we want to predict soil variables using covariate
+information is that there is a reasonable correlation between them. We
+can quickly assess these using the base <code class="highlighter-rouge">cor</code> function, for which we
+have used previously.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cor</span><span class="p">(</span><span class="n">hv.dat</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Terrain_Ruggedness_Index"</span><span class="p">,</span><span class="w"> </span><span class="s2">"AACN"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Landsat_Band1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Elevation"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Hillshading"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Light_insolation"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mid_Slope_Positon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"MRVBF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"NDVI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TWI"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Slope"</span><span class="p">)],</span><span class="w"> </span><span class="n">hv.dat</span><span class="p">[,</span><span class="w"> </span><span class="s2">"pH60_100cm"</span><span class="p">])</span><span class="w">
+
+</span><span class="c1">##                                  [,1]</span><span class="w">
+</span><span class="c1">## Terrain_Ruggedness_Index  0.146208599</span><span class="w">
+</span><span class="c1">## AACN                      0.194606533</span><span class="w">
+</span><span class="c1">## Landsat_Band1            -0.002769968</span><span class="w">
+</span><span class="c1">## Elevation                 0.148618926</span><span class="w">
+</span><span class="c1">## Hillshading               0.096981698</span><span class="w">
+</span><span class="c1">## Light_insolation         -0.046166532</span><span class="w">
+</span><span class="c1">## Mid_Slope_Positon         0.258329094</span><span class="w">
+</span><span class="c1">## MRVBF                     0.119674688</span><span class="w">
+</span><span class="c1">## NDVI                      0.162873990</span><span class="w">
+</span><span class="c1">## TWI                      -0.005330312</span><span class="w">
+</span><span class="c1">## Slope                     0.059593615</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Progessing forwards later on in <a href="/DSM_book/pages/dsm_cont/">Continuous soil attribute modelling and
+mapping</a> and
+<a href="/DSM_book/pages/dsm_cat/">Categorical soil attribute modelling and
+mapping</a>, we will
+explore a range of models that will leverage what correlation there is
+between the target variable and the available covariates to create
+digital soil maps.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="references">References</h3>
+
+<p>Pringle, M. J, and A. B McBratney. 1999. “Estimating Average and
+Proportional Variograms of Soil Properties and Their Potential Use in
+Precision Agriculture.” <em>Precision Agriculture</em> 1: 125–52.</p>
+
+<p>Webster, R, and M. A Oliver. 2001. <em>Geostatistics for Environmental
+Scientists</em>. John Wiley; Sons Ltd, West Sussex, England.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-06-18">June 18, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_prep/processes/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_prep/processes/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_prep/processes/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

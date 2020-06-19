@@ -188,90 +188,90 @@ we have a couple of different rasters, and a polygon.</p>
 
 <p>Initialise the libraries that are needed</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## Loading required package: sp</span><span class="w">
+</span><span class="c1">## Loading required package: sp</span><span class="w">
 
-    </span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
-    </span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
-    </span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
-    </span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
-    </span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
-    </span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
-    </span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
-    </span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
+</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
+</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
+</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
+</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
+</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
+</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
+</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
+</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
 
-    </span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>There are three rasters here, but for this exercise we will just use
 two:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="s2">"/~/"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tif$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-    </span><span class="n">files</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="s2">"/~/"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tif$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">files</span><span class="w">
 
-    </span><span class="c1">## [1] "/~/20140509.B3.tif"</span><span class="w">
-    </span><span class="c1">## [2] "/~/elevation.tif"  </span><span class="w">
-    </span><span class="c1">## [3] "/~/GR_Th.tif"</span><span class="w">
+</span><span class="c1">## [1] "/~/20140509.B3.tif"</span><span class="w">
+</span><span class="c1">## [2] "/~/elevation.tif"  </span><span class="w">
+</span><span class="c1">## [3] "/~/GR_Th.tif"</span><span class="w">
 
-    </span><span class="c1"># RASTER 1: remote sensing data</span><span class="w">
-    </span><span class="n">rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
-    </span><span class="n">rs.raster</span><span class="w">
+</span><span class="c1"># RASTER 1: remote sensing data</span><span class="w">
+</span><span class="n">rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
+</span><span class="n">rs.raster</span><span class="w">
 
-    </span><span class="c1">## class      : RasterLayer </span><span class="w">
-    </span><span class="c1">## dimensions : 3026, 4037, 12215962  (nrow, ncol, ncell)</span><span class="w">
-    </span><span class="c1">## resolution : 0.0002245788, 0.0002245788  (x, y)</span><span class="w">
-    </span><span class="c1">## extent     : 149.863, 150.7696, -31.64765, -30.96807  (xmin, xmax, ymin, ymax)</span><span class="w">
-    </span><span class="c1">## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
-    </span><span class="c1">## source     : /~/20140509.B3.tif </span><span class="w">
-    </span><span class="c1">## names      : X20140509.B3</span><span class="w">
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 3026, 4037, 12215962  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 0.0002245788, 0.0002245788  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 149.863, 150.7696, -31.64765, -30.96807  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
+</span><span class="c1">## source     : /~/20140509.B3.tif </span><span class="w">
+</span><span class="c1">## names      : X20140509.B3</span><span class="w">
 
-    </span><span class="c1"># RASTER 2: digital elevation model</span><span class="w">
-    </span><span class="n">elev.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w">
-    </span><span class="n">elev.raster</span><span class="w">
+</span><span class="c1"># RASTER 2: digital elevation model</span><span class="w">
+</span><span class="n">elev.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w">
+</span><span class="n">elev.raster</span><span class="w">
 
-    </span><span class="c1">## class      : RasterLayer </span><span class="w">
-    </span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
-    </span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
-    </span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
-    </span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
-    </span><span class="c1">## source     : /~/elevation.tif </span><span class="w">
-    </span><span class="c1">## names      : elevation </span><span class="w">
-    </span><span class="c1">## values     : 312.4171, 590.6609  (min, max)</span><span class="w">
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : /~/elevation.tif </span><span class="w">
+</span><span class="c1">## names      : elevation </span><span class="w">
+</span><span class="c1">## values     : 312.4171, 590.6609  (min, max)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Next we load the polygon data which is called <code class="highlighter-rouge">clipper_polygon.shp</code>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">poly.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readOGR</span><span class="p">(</span><span class="s2">"/~/clipper_polygon.shp"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readOGR</span><span class="p">(</span><span class="s2">"/~/clipper_polygon.shp"</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## OGR data source with driver: ESRI Shapefile </span><span class="w">
-    </span><span class="c1">## Source: "/~/clipper_polygon.shp", layer: "clipper_polygon"</span><span class="w">
-    </span><span class="c1">## with 3 features</span><span class="w">
-    </span><span class="c1">## It has 1 fields</span><span class="w">
-    </span><span class="c1">## Integer64 fields read as strings:  id</span><span class="w">
+</span><span class="c1">## OGR data source with driver: ESRI Shapefile </span><span class="w">
+</span><span class="c1">## Source: "/~/clipper_polygon.shp", layer: "clipper_polygon"</span><span class="w">
+</span><span class="c1">## with 3 features</span><span class="w">
+</span><span class="c1">## It has 1 fields</span><span class="w">
+</span><span class="c1">## Integer64 fields read as strings:  id</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Checking the CRS of each the the data sources, two have the same
 parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="highlighter-rouge">poly.clip</code>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># CRS of data</span><span class="w">
-    </span><span class="n">crs</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># CRS of data</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## CRS arguments:</span><span class="w">
-    </span><span class="c1">##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
+</span><span class="c1">## CRS arguments:</span><span class="w">
+</span><span class="c1">##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
 
-    </span><span class="n">crs</span><span class="p">(</span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## CRS arguments:</span><span class="w">
-    </span><span class="c1">##  +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0</span><span class="w">
-    </span><span class="c1">## +ellps=GRS80 +units=m +no_defs</span><span class="w">
+</span><span class="c1">## CRS arguments:</span><span class="w">
+</span><span class="c1">##  +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0</span><span class="w">
+</span><span class="c1">## +ellps=GRS80 +units=m +no_defs</span><span class="w">
 
-    </span><span class="n">crs</span><span class="p">(</span><span class="n">poly.clip</span><span class="p">)</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">poly.clip</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## CRS arguments:</span><span class="w">
-    </span><span class="c1">##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
+</span><span class="c1">## CRS arguments:</span><span class="w">
+</span><span class="c1">##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Below, two workflows are demonstrated.</p>
@@ -294,14 +294,14 @@ clip both rasters simultaneously with the reprojected polygon.</p>
 extent of polygon, 2) rasterise polygon to use as a mask, 3) finalise
 clipping by applying the mask to the cropped raster.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># crop the rs.raster to extent of polygon</span><span class="w">
-    </span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crop</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extent</span><span class="p">(</span><span class="n">poly.clip</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"out"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># crop the rs.raster to extent of polygon</span><span class="w">
+</span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crop</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extent</span><span class="p">(</span><span class="n">poly.clip</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"out"</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1"># rasterise the polygon</span><span class="w">
-    </span><span class="n">fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">)</span><span class="w">
+</span><span class="c1"># rasterise the polygon</span><span class="w">
+</span><span class="n">fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1"># clip using mask</span><span class="w">
-    </span><span class="n">cr.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr</span><span class="p">)</span><span class="w">  </span><span class="c1">#use the mask </span><span class="w">
+</span><span class="c1"># clip using mask</span><span class="w">
+</span><span class="n">cr.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr</span><span class="p">)</span><span class="w">  </span><span class="c1">#use the mask </span><span class="w">
 </span></code></pre></div></div>
 
 <p>We can visualise each of the steps in the below figure.</p>
@@ -316,43 +316,43 @@ clipping by applying the mask to the cropped raster.</p>
 <p>First we use <code class="highlighter-rouge">projectRaster</code> to make <code class="highlighter-rouge">cr.clip</code> from above to have the
 same CRS, resolution and extent as <code class="highlighter-rouge">elev.raster</code>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1">## reproject clipped rs.raster to same as elev.raster</span><span class="w">
-    </span><span class="n">reproj.rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr.clip</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
-    </span><span class="n">reproj.rs.raster</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## reproject clipped rs.raster to same as elev.raster</span><span class="w">
+</span><span class="n">reproj.rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr.clip</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
+</span><span class="n">reproj.rs.raster</span><span class="w">
 
-    </span><span class="c1">## class      : RasterLayer </span><span class="w">
-    </span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
-    </span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
-    </span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
-    </span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
-    </span><span class="c1">## source     : memory</span><span class="w">
-    </span><span class="c1">## names      : X20140509.B3 </span><span class="w">
-    </span><span class="c1">## values     : 0.06522314, 0.1324395  (min, max)</span><span class="w">
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : memory</span><span class="w">
+</span><span class="c1">## names      : X20140509.B3 </span><span class="w">
+</span><span class="c1">## values     : 0.06522314, 0.1324395  (min, max)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Stack the rasters to prepare both for clipping</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># stack rasters</span><span class="w">
-    </span><span class="n">stack.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">reproj.rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># stack rasters</span><span class="w">
+</span><span class="n">stack.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">reproj.rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Now reproject <code class="highlighter-rouge">poly.clip</code> to the same CRS as the <code class="highlighter-rouge">stack.raster</code> object
 created above. Here we are using <code class="highlighter-rouge">spTransform</code> from the <code class="highlighter-rouge">sp</code> package.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">rp.poly.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spTransform</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">CRSobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">stack.raster</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rp.poly.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spTransform</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">CRSobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">stack.raster</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Now clipping proceeds as we did above but this time the target are the
 two raster in <code class="highlighter-rouge">stack.raster</code>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># crop the rs.raster to extent of polygon</span><span class="w">
-    </span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crop</span><span class="p">(</span><span class="n">stack.raster</span><span class="p">,</span><span class="w"> </span><span class="n">extent</span><span class="p">(</span><span class="n">rp.poly.clip</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"out"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># crop the rs.raster to extent of polygon</span><span class="w">
+</span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crop</span><span class="p">(</span><span class="n">stack.raster</span><span class="p">,</span><span class="w"> </span><span class="n">extent</span><span class="p">(</span><span class="n">rp.poly.clip</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"out"</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1"># rasterise the polygon</span><span class="w">
-    </span><span class="n">fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rp.poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">)</span><span class="w">
+</span><span class="c1"># rasterise the polygon</span><span class="w">
+</span><span class="n">fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rp.poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1"># clip using mask</span><span class="w">
-    </span><span class="n">cr.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr</span><span class="p">)</span><span class="w">
+</span><span class="c1"># clip using mask</span><span class="w">
+</span><span class="n">cr.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>We can visualise both clipped rasters in the below figure.</p>

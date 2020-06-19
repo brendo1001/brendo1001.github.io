@@ -181,14 +181,14 @@ The same area where the data point pattern used in the <a href="%7B%7B%20site.ur
 page</a>
 originated from.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-    </span><span class="n">data</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">)</span><span class="w">
-    </span><span class="n">str</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## 'data.frame':    21518 obs. of  3 variables:</span><span class="w">
-    </span><span class="c1">##  $ X        : num  340210 340310 340110 340210 340310 ...</span><span class="w">
-    </span><span class="c1">##  $ Y        : num  6362640 6362640 6362740 6362740 6362740 ...</span><span class="w">
-    </span><span class="c1">##  $ elevation: num  177 175 178 172 173 ...</span><span class="w">
+</span><span class="c1">## 'data.frame':    21518 obs. of  3 variables:</span><span class="w">
+</span><span class="c1">##  $ X        : num  340210 340310 340110 340210 340310 ...</span><span class="w">
+</span><span class="c1">##  $ Y        : num  6362640 6362640 6362740 6362740 6362740 ...</span><span class="w">
+</span><span class="c1">##  $ elevation: num  177 175 178 172 173 ...</span><span class="w">
 </span></code></pre></div></div>
 
 <p>As the data is already a <em>raster</em> (such that the row observation
@@ -197,26 +197,26 @@ can just use the <code class="highlighter-rouge">rasterFromXYZ</code> function f
 define the CRS just like we did with the <code class="highlighter-rouge">HV100</code> point data we worked
 with <a href="/DSM_book/pages/r_gis/pointpatterns/">before</a>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">r.DEM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">])</span><span class="w">
-    </span><span class="n">crs</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"+init=epsg:32756"</span><span class="w">
-    </span><span class="n">r.DEM</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r.DEM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">])</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"+init=epsg:32756"</span><span class="w">
+</span><span class="n">r.DEM</span><span class="w">
 
-    </span><span class="c1">## class      : RasterLayer </span><span class="w">
-    </span><span class="c1">## dimensions : 215, 169, 36335  (nrow, ncol, ncell)</span><span class="w">
-    </span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
-    </span><span class="c1">## extent     : 334459.8, 351359.8, 6362590, 6384090  (xmin, xmax, ymin, ymax)</span><span class="w">
-    </span><span class="c1">## crs        : +init=epsg:32756 +proj=utm +zone=56 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
-    </span><span class="c1">## source     : memory</span><span class="w">
-    </span><span class="c1">## names      : elevation </span><span class="w">
-    </span><span class="c1">## values     : 29.61407, 315.6837  (min, max)</span><span class="w">
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 215, 169, 36335  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 334459.8, 351359.8, 6362590, 6384090  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +init=epsg:32756 +proj=utm +zone=56 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
+</span><span class="c1">## source     : memory</span><span class="w">
+</span><span class="c1">## names      : elevation </span><span class="w">
+</span><span class="c1">## values     : 29.61407, 315.6837  (min, max)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>So lets do a quick plot of this raster and overlay the <code class="highlighter-rouge">HV100</code> point
 locations. (Note you will have needed to process the <code class="highlighter-rouge">HV100</code> data
 accordingly as per the <a href="/DSM_book/pages/r_gis/pointpatterns/">point patterns page</a> to show this figure).</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">plot</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">)</span><span class="w">
-    </span><span class="n">points</span><span class="p">(</span><span class="n">HV100</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">)</span><span class="w">
+</span><span class="n">points</span><span class="p">(</span><span class="n">HV100</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <figure>
@@ -230,8 +230,7 @@ to get information regarding the supported grid types that data can be
 exported. For demonstration, we will export our data to ESRI Ascii
 ascii, as it is a common and universal raster format.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">writeRaster</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/HV_dem100.asc"</span><span class="p">,</span><span class="w"> 
-        </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ascii"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">writeRaster</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/HV_dem100.asc"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ascii"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>What about exporting raster data to KML file? Here you could use the KML
@@ -250,9 +249,9 @@ reprojections</a>
 page. <code class="highlighter-rouge">KML</code> is a handy function from <code class="highlighter-rouge">raster</code> for exporting grids to kml
 format.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">p.r.DEM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">,</span><span class="w"> </span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"+init=epsg:4326"</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
-    </span><span class="n">KML</span><span class="p">(</span><span class="n">p.r.DEM</span><span class="p">,</span><span class="w"> </span><span class="s2">"HV_DEM.kml"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rev</span><span class="p">(</span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">255</span><span class="p">)),</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-    </span><span class="c1"># Check yor working directory for presence of the kml file</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p.r.DEM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">,</span><span class="w"> </span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"+init=epsg:4326"</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
+</span><span class="n">KML</span><span class="p">(</span><span class="n">p.r.DEM</span><span class="p">,</span><span class="w"> </span><span class="s2">"HV_DEM.kml"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rev</span><span class="p">(</span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">255</span><span class="p">)),</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Check yor working directory for presence of the kml file</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Now visualize this in Google Earth and overlay this map with the points
@@ -264,10 +263,10 @@ GDAL library, which means that there are <a href="https://gdal.org/drivers/raste
 that can be read into <code class="highlighter-rouge">R</code></a>.
 Here we will load in <code class="highlighter-rouge">HV_dem100.asc</code> raster that was made just before.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">read.grid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readGDAL</span><span class="p">(</span><span class="s2">"~/HV_dem100.asc"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">read.grid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readGDAL</span><span class="p">(</span><span class="s2">"~/HV_dem100.asc"</span><span class="p">)</span><span class="w">
 
-    </span><span class="c1">## ~/HV_dem100.asc has GDAL driver AAIGrid </span><span class="w">
-    </span><span class="c1">## and has 215 rows and 169 columns</span><span class="w">
+</span><span class="c1">## ~/HV_dem100.asc has GDAL driver AAIGrid </span><span class="w">
+</span><span class="c1">## and has 215 rows and 169 columns</span><span class="w">
 </span></code></pre></div></div>
 
 <p>The imported raster <code class="highlighter-rouge">read.grid</code> is a <code class="highlighter-rouge">SpatialGridDataFrame</code>, which is a
@@ -278,16 +277,16 @@ read in the <code class="highlighter-rouge">read.grid</code> file. Although, the
 conversion from <code class="highlighter-rouge">SpatialGridDataFrame</code> to <code class="highlighter-rouge">RasterLayer</code> with this
 function too.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">grid.dem</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="s2">"~/HV_dem100.asc"</span><span class="p">)</span><span class="w">
-    </span><span class="n">grid.dem</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grid.dem</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="s2">"~/HV_dem100.asc"</span><span class="p">)</span><span class="w">
+</span><span class="n">grid.dem</span><span class="w">
 
-    </span><span class="c1">## class      : RasterLayer </span><span class="w">
-    </span><span class="c1">## dimensions : 215, 169, 36335  (nrow, ncol, ncell)</span><span class="w">
-    </span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
-    </span><span class="c1">## extent     : 334459.8, 351359.8, 6362590, 6384090  (xmin, xmax, ymin, ymax)</span><span class="w">
-    </span><span class="c1">## crs        : NA </span><span class="w">
-    </span><span class="c1">## source     : In Memory </span><span class="w">
-    </span><span class="c1">## names      : HV_dem100</span><span class="w">
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 215, 169, 36335  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 334459.8, 351359.8, 6362590, 6384090  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : NA </span><span class="w">
+</span><span class="c1">## source     : In Memory </span><span class="w">
+</span><span class="c1">## names      : HV_dem100</span><span class="w">
 </span></code></pre></div></div>
 
 <p>You will notice from the <code class="highlighter-rouge">R</code> generated output indicating the data

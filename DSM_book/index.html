@@ -6,21 +6,21 @@
 <head>
 <meta charset="utf-8">
 <title>Using R for Digital Soil Mapping &#8211; Smart Digital Agriculture</title>
-<meta name="description" content="Book materials and R code">
+<meta name="description" content="A course of exercises">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
 <meta name="twitter:title" content="Using R for Digital Soil Mapping">
-<meta name="twitter:description" content="Book materials and R code">
+<meta name="twitter:description" content="A course of exercises">
 <meta name="twitter:creator" content="@soilmalone">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Using R for Digital Soil Mapping">
-<meta property="og:description" content="Book materials and R code">
+<meta property="og:description" content="A course of exercises">
 <meta property="og:url" content="/DSM_book/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
@@ -136,7 +136,7 @@
                     <h1>Using R for Digital Soil Mapping</h1>
                     
                         <hr class="small">
-                        <span class="subheading">Book materials and R code</span>
+                        <span class="subheading">A course of exercises</span>
                     
                 </div>
             </div>
@@ -158,31 +158,32 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~7 minutes
+          Reading time ~6 minutes
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <p><strong>THIS PAGE IS UNDER RE-CONSTRUCTION IN ORDER TO IMPROVE MATERIALS AND USER EXPERIENCE. ALL CODE AND MATERIALS WILL STILL BE ACCESSIBLE BUT THIS PAGE WILL LOOK A BIT UGLY AT TIMES WHILE I TINKER ABOUT</strong></p>
+      <p><strong>THIS PAGE IS UNDER RE-CONSTRUCTION IN ORDER TO IMPROVE AND UPDATE MATERIALS AND ENHANCE THE USER EXPERIENCE. ALL CODE AND MATERIALS WILL STILL BE ACCESSIBLE BUT THIS PAGE WILL LOOK A BIT UGLY AT TIMES WHILE I TINKER ABOUT</strong></p>
 
-<figure>
-    <img src="/images/useR_DSM.jpg" alt="DSM R" />
-</figure>
+<h2 id="introduction">Introduction</h2>
 
-<p>This book describes and provides many detailed examples of implementing Digital Soil Mapping (DSM) using R. The work adheres to Digital Soil Mapping theory, and presents a strong focus on how to apply it. DSM exercises are also included and cover procedures for handling and manipulating soil and spatial data in R. The book also introduces the basic concepts and practices for building spatial soil prediction functions, and then ultimately producing digital soil maps.</p>
+<p>This course describes and provides many detailed examples of implementing Digital Soil Mapping (DSM) using <code class="highlighter-rouge">R</code>. The work adheres to Digital Soil Mapping theory, and presents a strong focus on how to apply it. DSM exercises are also included and cover procedures for handling and manipulating soil and spatial data in <code class="highlighter-rouge">R</code>. The course also introduces the basic concepts and practices for building spatial soil prediction functions, and then ultimately producing digital soil maps.</p>
 
-<p>The book URL is <a href="http://www.springer.com/gp/book/9783319443256">http://www.springer.com/gp/book/9783319443256</a> where you may either purchase the hardcopy or the electronic version, in entirety or selected chapters. Of course most public and university libraries will also have a copy of the book for loan.</p>
+<p>The materials for this course follow closely with the materials found in the <a href="http://www.springer.com/gp/book/9783319443256">Using R for Digital Soil Mapping</a> book. Depending on what resources you have avaiable, you may either purchase the hardcopy or the electronic version, in entirety or selected chapters. Of course most public and university libraries will also have a copy of the book for loan.</p>
 
-<p>For a hands on experience of covering the materials of the book, the following sections contain documents and R code of topics covered in the book. Topics covered include:</p>
+<p>In addition to what is covered in that book, this course provides addtional examples and easier navigation around the different content too. Importantly these pages will be updated with new materials when the opportunity allows, such as when new methods become available or exisitng examples need modification.</p>
+
+<p>Topics covered in this course include:</p>
 
 <h2 id="new-stuff">NEW STUFF</h2>
 <ul>
+  <li><a href="/DSM_book/pages/introduction/">Digital soil mapping: The fundamentals</a></li>
   <li><a href="/DSM_book/pages/r_literacy/">R Literacy for digital soil mapping</a></li>
   <li><a href="/DSM_book/pages/packages/">An incomplete list of <code class="highlighter-rouge">R</code> packages useful to doing digital soil mapping</a></li>
   <li><a href="/DSM_book/pages/r_gis/">Getting spatial in R</a></li>
-  <li>[Preparatory and exploratory analysis for digital soil mapping]</li>
+  <li><a href="/DSM_book/pages/dsm_prep/">Preparatory and exploratory analysis for digital soil mapping</a></li>
   <li>[Continuous soil attribute modelling and mapping]</li>
   <li>[Categorical soil attribute modelling and mapping]</li>
   <li>[Some methods for uncertainty quantification relevant for digital soil mapping]</li>
@@ -195,7 +196,6 @@
 
 <h2 id="to-be-updated">TO BE UPDATED</h2>
 <ul>
-  <li><a href="#s-3">Preparatory and exploratory analysis for digital soil mapping</a></li>
   <li><a href="#s-4">Continuous soil attribute modelling and mapping</a></li>
   <li><a href="#s-5">Categorical soil attribute modelling and mapping</a></li>
   <li><a href="#s-6">Some methods for uncertainty quantification relevant for digital soil mapping</a></li>
@@ -203,40 +203,6 @@
   <li><a href="#s-8">Combining continuous and categorical soil attribute modelling and mapping</a></li>
   <li><a href="#s-9">Digital soil assessments</a></li>
 </ul>
-
-<h2 id="the-ithir-r-package">The ithir R package</h2>
-
-<p>The ithir R package is a necessary installation for being able to use the various R for digital soil mapping examples below. This is because it has all the required data sets and some of the required R functions.</p>
-
-<p>One you have installed a version of R onto your computer (see part 1 of R literacy for digital soil mapping section for instructions on how to do this if needed), you will need to use the following lines of R code:</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w"> 
-</span><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
-</span><span class="o">&gt;</span><span class="w"> </span><span class="n">install_bitbucket</span><span class="p">(</span><span class="s2">"brendo1001/ithir/pkg"</span><span class="p">)</span><span class="w"> </span><span class="c1">#ithir package</span><span class="w">
-</span></code></pre></div></div>
-<p>An example script can also be downloaded from <a href="/DSM_book/rcode/rPackageInstallation_ithir.R">here</a></p>
-
-<p><a href="#top">Back to top</a></p>
-
-<h2 id="getting-spatial-in-r-">Getting spatial in R <a id="s-2"></a></h2>
-
-<p>This section will introduce some basic concepts of using the R software for GIS operations. Nothing over the top but just a simple introduction to converting data to spatial objects, doing some spatial transformations, and data import and export of GIS data.</p>
-
-<p>Code is <a href="/DSM_book/rcode/P3_1_RGIS.R">here</a> and and documentation is <a href="/DSM_book/pdfs/P3_1_RGIS_2017.pdf">here</a>.</p>
-
-<p>Another useful thing to do in R in the GIS context are the procedures around resampling and reprojections. Such tasks are useful in the situation of aligning spatial data to common resolutions and extents.</p>
-
-<p>Code is <a href="/DSM_book/rcode/resamplingRasters.R">here</a>. The specific data with which to do the exercises is found <a href="/DSM_book/data/reproj.zip">here</a>.</p>
-
-<p><a href="#top">Back to top</a></p>
-
-<h2 id="preparatory-and-exploratory-analysis-for-digital-soil-mapping-">Preparatory and exploratory analysis for digital soil mapping <a id="s-3"></a></h2>
-
-<p>In this chapter some common methods for soil data preparation and exploration are covered. Of note there is some work around the fitting of soil profile depth functions to harmonise soil profile data. Then there is some work around statistical summaries of soil data, followed by some basic geostatistical analysis of soil property data.</p>
-
-<p>Code is <a href="/DSM_book/rcode/P4_DSM_prep.R">here</a> and documentation is <a href="/DSM_book/pdfs/P4_DSM_prep_2017.pdf">here</a>.</p>
-
-<p><a href="#top">Back to top</a></p>
 
 <h2 id="continuous-soil-attribute-modelling-and-mapping-">Continuous soil attribute modelling and mapping <a id="s-4"></a></h2>
 
