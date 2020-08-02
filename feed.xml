@@ -4,13 +4,167 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2020-06-19T22:17:35+10:00</updated>
+<updated>2020-08-02T20:32:14+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/07/journalDigest" />
+  <id>/2020/07/journalDigest</id>
+  <updated>2020-07-30T00:00:00-00:00</updated>
+  <published>2020-07-30T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-13&quot;&gt;Journal Paper Digests 2020 #13&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mapping soil profile depth, bulk density and carbon stock in Scotland using remote sensing and spatial covariates&lt;/li&gt;
+  &lt;li&gt;A new approach for studying vertical infiltration&lt;/li&gt;
+  &lt;li&gt;Increasing the organic carbon stocks in mineral soils sequesters large amounts of phosphorus&lt;/li&gt;
+  &lt;li&gt;Global human influence maps reveal clear opportunities in conserving Earth’s remaining intact terrestrial ecosystems&lt;/li&gt;
+  &lt;li&gt;Distinct controls over the temporal dynamics of soil carbon fractions after land use change&lt;/li&gt;
+  &lt;li&gt;Soil as an extended composite phenotype of the microbial metagenome&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;mapping-soil-profile-depth-bulk-density-and-carbon-stock-in-scotland-using-remote-sensing-and-spatial-covariates&quot;&gt;Mapping soil profile depth, bulk density and carbon stock in Scotland using remote sensing and spatial covariates&lt;/h3&gt;
+
+&lt;p&gt;Matt Aitkenhead Malcolm Coull
+EJSS&lt;/p&gt;
+
+&lt;h3 id=&quot;a-new-approach-for-studying-vertical-infiltration&quot;&gt;A new approach for studying vertical infiltration&lt;/h3&gt;
+
+&lt;p&gt;Alexander Poulovassilis 0000-0003-1117-1158 and Ioannis Argyrokastritis 0000-0003-0519-2219
+pp. 509-518&lt;/p&gt;
+
+&lt;p&gt;The absorption of rain and irrigation water by soils, called the infiltration process, is of vital importance for plant growth. This process is controlled by the permeability properties of soils, and this paper presents new methods for determining these properties and new equations describing the infiltration process more precisely than in previous works. These contributions allow a better understanding of the infiltration process and more precise calculation of water infiltration rates under conditions imposed by both nature and irrigation practices.&lt;/p&gt;
+
+&lt;h3 id=&quot;increasing-the-organic-carbon-stocks-in-mineral-soils-sequesters-large-amounts-of-phosphorus&quot;&gt;Increasing the organic carbon stocks in mineral soils sequesters large amounts of phosphorus&lt;/h3&gt;
+
+&lt;p&gt;Marie Spohn
+Global CHange Biology&lt;/p&gt;
+
+&lt;h3 id=&quot;global-human-influence-maps-reveal-clear-opportunities-in-conserving-earths-remaining-intact-terrestrial-ecosystems&quot;&gt;Global human influence maps reveal clear opportunities in conserving Earth’s remaining intact terrestrial ecosystems&lt;/h3&gt;
+
+&lt;p&gt;Jason Riggio Jonathan E. M. Baillie Steven Brumby Erle Ellis Christina M. Kennedy James R. Oakleaf Alex Tait Therese Tepe David M. Theobald Oscar Venter James E. M. Watson Andrew P. Jacobson
+Pages: 4344-4356 First Published: 05 June 2020&lt;/p&gt;
+
+&lt;p&gt;Leading up to the Convention on Biological Diversity Conference of the Parties 15, there is momentum around setting bold conservation targets. Yet it remains unclear how much of Earth’s land area remains without significant human influence. We compare four recent global maps of human influences (Anthromes, Global Human Modification, Human Footprint, and Low Impact Areas) and find that about half of Earth’s terrestrial surface has relatively low human influence. These findings offer opportunities for proactive conservation actions to retain the last intact ecosystems on the planet, although the relative abundance of ecosystem areas with low human influence varies widely by biome.&lt;/p&gt;
+
+&lt;h3 id=&quot;distinct-controls-over-the-temporal-dynamics-of-soil-carbon-fractions-after-land-use-change&quot;&gt;Distinct controls over the temporal dynamics of soil carbon fractions after land use change&lt;/h3&gt;
+
+&lt;p&gt;Zhongkui Luo Raphael A. Viscarra Rossel Zhou Shi
+Pages: 4614-4625 First Published: 13 May 2020&lt;/p&gt;
+
+&lt;p&gt;Our understanding on the controls over soil organic carbon (SOC) composition, particularly its temporal dynamics, is quite limited, inhibiting reliable prediction of SOC dynamics. By assessing a comprehensive dataset including temporal measurements of three SOC fractions (i.e. particulate, mineral-associated and charred organic carbon) after land use change, we found that environmental factors present distinct effects on the dynamics of the three fractions, and these effects were time-dependent. To reduce uncertainties in SOC predictions in response to global change and land management, the distinct controls over the dynamics of SOC fractions should be properly considered in carbon models.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-as-an-extended-composite-phenotype-of-the-microbial-metagenome&quot;&gt;Soil as an extended composite phenotype of the microbial metagenome&lt;/h3&gt;
+&lt;p&gt;Andrew L. Neal, Aur?lie Bacq-Labreuil, Xiaoxian Zhang, Ian M. Clark, Kevin Coleman, Sacha J. Mooney, Karl Ritz &amp;amp; John W. Crawford&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 30, 2020.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
+  <id>/2020/06/journalDigest</id>
+  <updated>2020-06-19T00:00:00-00:00</updated>
+  <published>2020-06-12T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-12&quot;&gt;Journal Paper Digests 2020 #12&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Soil magnetic susceptibility and its relationship with naturally occurring processes and soil attributes in pedosphere, in a tropical environment&lt;/li&gt;
+  &lt;li&gt;The challenge for the soil science community to contribute to the implementation of the UN Sustainable Development Goals&lt;/li&gt;
+  &lt;li&gt;Evaluating a low-cost portable NIR spectrometer for the prediction of soil organic and total carbon using different calibration models&lt;/li&gt;
+  &lt;li&gt;The Dynamics of Soil Microbial Communities on Different Timescales: A Review&lt;/li&gt;
+  &lt;li&gt;Debates: Does Information Theory Provide a New Paradigm for Earth Science? Sharper Predictions Using Occam’s Digital Razor&lt;/li&gt;
+  &lt;li&gt;Can Continental Models Convey Useful Seasonal Hydrologic Information at the Catchment Scale?&lt;/li&gt;
+  &lt;li&gt;Does Information Theory Provide a New Paradigm for Earth Science? Hypothesis Testing&lt;/li&gt;
+  &lt;li&gt;Climate Adaptation as a Control Problem: Review and Perspectives on Dynamic Water Resources Planning Under Uncertainty&lt;/li&gt;
+  &lt;li&gt;Debates-Does Information Theory Provide a New Paradigm for Earth Science? Causality, Interaction, and Feedback&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;soil-magnetic-susceptibility-and-its-relationship-with-naturally-occurring-processes-and-soil-attributes-in-pedosphere-in-a-tropical-environment&quot;&gt;Soil magnetic susceptibility and its relationship with naturally occurring processes and soil attributes in pedosphere, in a tropical environment&lt;/h3&gt;
+&lt;p&gt;By: de Mello, Danilo Cesar; Dematte, Jose A. M.; Silvero, Nelida E. Q.; et al.
+GEODERMA  Volume:  372   Pages:  14364-14364   Published:  AUG 1 2020&lt;/p&gt;
+
+&lt;p&gt;Soil magnetic susceptibility (kappa) has potential to be used as a pedoenvironmental indicator from which mineralogy, pedogeochemical, pedogeomorphological and pedogenic processes can be inferred. It can be used in pedosphere studies, as an auxiliary information for appropriate and sustainable soil use and management. This research aimed to analyze how pedogenesis and geochemical processes affect the kappa and some of its attributes, as well as its potential use in discriminating soil great groups, following the digital soil mapping approach. The study area is located in Sao Paulo State - Brazil. Soil samples were collected for physical-chemical analysis from 79 locations (0-20 cm depth). At these sites, magnetic susceptibility was measured with a portable field instrument and analyzed in terms of geology, relief and soil class. The results showed that geology strongly affects kappa, mainly in diabase derived soils, followed by metamorphosed siltstone and siltstone. In fluvial sediments, the kappa exhibits different behaviors due to different sediments deposited by the Capivari River. In less evolved soils, such as Cambisols, lithology is a more important contributor to kappa than pedogenesis. In more evolved soils, pedogenesis increases kappa, whereas argilluviation/ferralitization reduces it. The kappa values did not decrease significantly or even increase downslope, due to the presence of diabase on the lower parts. Differences in kappa where observed between diabase bedrock located in different parts of the study area, indicating more of an influence by geomorphic processes rather than lithology. With respect to soil attributes, positive correlations between kappa and base saturation, cation exchange capacity, organic matter, and iron and clay content were found, whereas a negative correlation was found between kappa and sand content. The kappa correlates with changes in lithology and soil class demonstrating its application as a potential tool for the discrimination of soil great groups and digital soil mapping.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-challenge-for-the-soil-science-community-to-contribute-to-the-implementation-of-the-un-sustainable-development-goals&quot;&gt;The challenge for the soil science community to contribute to the implementation of the UN Sustainable Development Goals&lt;/h3&gt;
+&lt;p&gt;By: Bouma, Johan; Montanarella, Luca; Evanylo, Gregory
+SOIL USE AND MANAGEMENT  Volume:  35   Issue:  4   Pages:  538-546   Published:  DEC 2019
+Context Sensitive Links Full Text from Publisher  Close Abstract
+Seventeen Sustainable Development Goals (SDGs) were adopted by 193 Governments at the General Assembly of the United Nations in 2015 for achievement by 2030. These SDGs present a roadmap to a sustainable future and a challenge to the science community. To guide activities and check progress, targets and indicators have been and are still being defined. The soil science community has published documents that describe the primary importance of soil for SDGs addressing hunger, water quality, climate mitigation and biodiversity preservation, and secondary relevance of soil for addressing several other SDGs. Soil scientists only marginally participated in the SDG discussions and are currently only peripherally engaged in discussions on targets or indicators. Agreement on several soil-related indicators has still not been achieved. Involvement of soil scientists in SDG–based studies is desirable for both developing solutions and increasing the visibility of the soil profession. Inputs into policy decisions should be improved as SDG committee members are appointed by Governments. Possible contributions of soil science in defining indicators for the SDGs are explored in this paper. We advocate the pragmatic use of soil-water-atmosphere-plant simulation models and available soil surveys and soil databases where “representative” soil profiles for mapping units (genetically defined genoforms) are functionally expressed in terms of several phenoforms reflecting effects of different types of soil use and management that strongly affect functionality.&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluating-a-low-cost-portable-nir-spectrometer-for-the-prediction-of-soil-organic-and-total-carbon-using-different-calibration-models&quot;&gt;Evaluating a low-cost portable NIR spectrometer for the prediction of soil organic and total carbon using different calibration models&lt;/h3&gt;
+&lt;p&gt;By: Sharififar, Amin; Singh, Kanika; Jones, Edward; et al.
+SOIL USE AND MANAGEMENT  Volume:  35   Issue:  4   Pages:  607-616   Published:  DEC 2019
+Context Sensitive Links  Close Abstract
+This study aims to assess the performance of a low-cost, micro-electromechanical system-based, near infrared spectrometer for soil organic carbon (OC) and total carbon (TC) estimation. TC was measured on 151 soil profiles up to the depth of 1 m in NSW, Australia, and from which a subset of 24 soil profiles were measured for OC. Two commercial spectrometers including the AgriSpec(TM) (ASD) and NeoSpectra(TM) (Neospectra) with spectral wavelength ranges of 350-2,500 and 1,300-2,500 nm, respectively, were used to scan the soil samples, according to the standard contact probe protocol. Savitzky-Golay smoothing filter and standard normal variate (SNV) transformation were performed on the spectral data for noise reduction and baseline correction. Three calibration models, including Cubist tree model, partial least squares regression (PLSR) and support vector machine (SVM), were assessed for the prediction of soil OC and TC using spectral data. A 10-fold cross-validation analysis was performed for evaluation of the models and devices accuracies. Results showed that Cubist model predicts OC and TC more accurately than PLSR and SVM. For OC prediction, Cubist showed R-2 = 0.89 (RMSE = 0.12%) and R-2 = 0.78 (RMSE = 0.16%) using ASD and NeoSpectra, respectively. For TC prediction, Cubist produced R-2 = 0.75 (RMSE = 0.45%) and R-2 = 0.70 (RMSE = 0.50%) using ASD and NeoSpectra, respectively. ASD performed better than NeoSpectra. However, the low-cost NeoSpectra predictions were comparable to the ASD. These finding can be helpful for more efficient future spectroscopic prediction of soil OC and TC with less costly devices.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-dynamics-of-soil-microbial-communities-on-different-timescales-a-review&quot;&gt;The Dynamics of Soil Microbial Communities on Different Timescales: A Review&lt;/h3&gt;
+&lt;p&gt;By: Chernov, T. I.; Zhelezova, A. D.
+EURASIAN SOIL SCIENCE  Volume:  53   Issue:  5   Pages:  643-652   Published:  MAY 2020
+Context Sensitive Links  Close Abstract
+Soil microbial communities are subjected to significant changes over time. The most rapid changes caused by temperature and soil moisture alternations or the by the inflow of fresh organic matter occur during the several hours or days. They are mostly related to the soil microbial activity. Seasonal dynamics are caused by annual variations in temperature and precipitation that affect the microbial community directly or indirectly through the regulation of plant life. The microbial biomass and the taxonomic composition of soil microbial communities vary significantly throughout the year, which should be taken into account when sampling for a comparative analysis of different soils. The long-term dynamics of microbial communities during primary or secondary successions lead to an increase in the total microbial biomass and the fungi/bacteria ratio, as well as to changes in the taxonomic composition of microbial communities. The main factors of the long-term dynamics are the accumulation of soil organic matter, plant successions, and changes in pH. The diversity of microbial communities during long-term dynamics can vary in different ways and does not follow a single trend. The longest dynamics of soil microbial communities are associated with changes in bioclimatic conditions. Information about soil microbial communities of the past can be obtained by studying buried and permafrost soils. The study of future changes in soil microbial communities is possible in experiments with artificial changes in climatic parameters. Plants are a significant factor in the dynamics of soil microbial communities on all timescales; in short-term periods, the major role is played by the activity of plants; in the long-term trends, the changes in the vegetation abundance and diversity are the most important factors.&lt;/p&gt;
+
+&lt;h3 id=&quot;debates-does-information-theory-provide-a-new-paradigm-for-earth-science-sharper-predictions-using-occams-digital-razor&quot;&gt;Debates: Does Information Theory Provide a New Paradigm for Earth Science? Sharper Predictions Using Occam’s Digital Razor&lt;/h3&gt;
+&lt;p&gt;By: Weijs, Steven. V.; Ruddell, Benjamin. L.
+WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  26471-26471   Published:  FEB 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+Occam’s Razor is a bedrock principle of science philosophy, stating that the simplest hypothesis (or model) is preferred, at any given level of model predictive performance. A modern restatement often attributed to Einstein explains, “Everything should be made as simple as possible, but not simpler.” Using principles from (algorithmic) information theory, both model descriptive performance and model complexity can be quantified in bits. This quantification yields a Pareto-style trade-off between model complexity (length of the model program in bits) and model performance (information loss in bits, or the missing information, needed to describe the original observations). Model complexity and performance can be collapsed to one single measure of lossless model size, which, when minimized, leads to optimal model complexity versus loss trade-off for generalization and prediction. Our view puts both simple data-driven and complex physical-process-based models on a continuum, in the sense that both describe patterns in observed data in compressed form, with different degrees of generality, model complexity, and descriptive performance. Information theory-based assessment of compression performance with fair and meaningful accounting for model complexity will enable us to best compare and combine the strengths of physics knowledge and data-driven modeling for a given problem, given the availability of data. “Suppose we draw a set of points on paper in a totally random manner” …“I am saying it is possible to find a geometric line whose notation is constant and uniform, following a certain law, that will pass through all points, and in the sameorder they were drawn.” … “But if that law is strongly composed,the thing that conforms to it should be seen as irregular”Gottfried Wilhelm Leibniz, 1686: Discours de metaphysique V, VI (from French)&lt;/p&gt;
+
+&lt;h3 id=&quot;can-continental-models-convey-useful-seasonal-hydrologic-information-at-the-catchment-scale&quot;&gt;Can Continental Models Convey Useful Seasonal Hydrologic Information at the Catchment Scale?&lt;/h3&gt;
+&lt;p&gt;By: Crochemore, L.; Ramos, M. -H.; Pechlivanidis, I. G.
+WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  25700-25700   Published:  FEB 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+The development and availability of climate forecasting systems have allowed the implementation of seasonal hydroclimatic services at the continental scale. User guidance and quality of the forecast information are key components to ensure user engagement and service uptake, yet forecast quality depends on the hydrologic model setup. Here, we address how seasonal forecasts from continental services can be used to address user needs at the catchment scale. We compare a continentally calibrated process-based model (E-HYPE) and a catchment-specific parsimonious model (GR6J) to forecast streamflow in a set of French catchments. Results show that despite expected high performance from the catchment setup against observed streamflow, the continental setup can, in some catchments, match or even outperform the catchment-specific setup for 3-month aggregations and threshold exceedance. Forecast systems can become comparable when looking at statistics relative to model climatology, such as anomalies, and adequate initial conditions are the main source of skill in both systems. We highlight the need for consistency in data used in modeling chains and in tailoring service outputs for use at the catchment scale. Finally, we show that the spread in internal model states varies largely between the two systems, reflecting the differences in their setups and calibration strategies, and highlighting that caution is needed before extracting hydrologic variables other than streamflow. We overall argue that continental hydroclimatic services show potential on addressing needs at the catchment scale, yet guidance is needed to extract, tailor and use the information provided.
+Plain Language Summary Climatic variations can have a significant impact on a number of water-related sectors. Managing such variations through accurate predictions is thus crucial. Continental hydroclimate services have recently received attention to address various user needs. However, predictions for months ahead can be limited at catchment scale, highlighting the need for data tailoring. Here, we compare the predictions from two hydrologic setups at catchment scale. One setup (E-HYPE) is used in a European hydroclimate service, whereas the other (GR6J) is used for local water-related risk assessment. Our results show that predictions from the continental setup can be as accurate as the predictions from the local model when predicting streamflow averaged over several months and when looking at changes in streamflow rather than absolute values. A good estimation of the hydrologic states, such as soil moisture or lake levels, prior to the prediction is the most important factor in obtaining accurate streamflow predictions in both setups. However, the differences in the setups can result in different uncertainties for variables other than streamflow, like in the case of soil water content. We argue that useful information is provided by continental services, yet guidance for information extraction can result into tailored information for regional needs.&lt;/p&gt;
+
+&lt;h3 id=&quot;does-information-theory-provide-a-new-paradigm-for-earth-science-hypothesis-testing&quot;&gt;Does Information Theory Provide a New Paradigm for Earth Science? Hypothesis Testing&lt;/h3&gt;
+&lt;p&gt;By: Nearing, Grey S.; Ruddell, Benjamin L.; Bennett, Andrew R.; et al.
+WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  24918-24918   Published:  FEB 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+Model evaluation and hypothesis testing are fundamental to any field of science. We propose here that by changing slightly the way we think and communicate about inference-from being fundamentally a problem of uncertainty quantification to being a problem of information quantification-allows us to avoid certain problems related to testing models as hypotheses. We propose that scientists are typically interested in assessing the information provided by models, not the truth value or likelihood of a model. Information theory allows us to formalize this perspective.&lt;/p&gt;
+
+&lt;h3 id=&quot;climate-adaptation-as-a-control-problem-review-and-perspectives-on-dynamic-water-resources-planning-under-uncertainty&quot;&gt;Climate Adaptation as a Control Problem: Review and Perspectives on Dynamic Water Resources Planning Under Uncertainty&lt;/h3&gt;
+&lt;p&gt;By: Herman, Jonathan D.; Quinn, Julianne D.; Steinschneider, Scott; et al.
+WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  24389-24389   Published:  FEB 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+Climate change introduces substantial uncertainty to water resources planning and raises the key question: when, or under what conditions, should adaptation occur? A number of recent studies aim to identify policies mapping future observations to actions-in other words, framing climate adaptation as an optimal control problem. This paper uses the control paradigm to review and classify recent dynamic planning studies according to their approaches to uncertainty characterization, policy structure, and solution methods. We propose a set of research gaps and opportunities in this area centered on the challenge of characterizing uncertainty, which prevents the unambiguous application of control methods to this problem. These include exogenous uncertainty in forcing, model structure, and parameters propagated through a chain of climate and hydrologic models; endogenous uncertainty in human-environmental system dynamics across multiple scales; and sampling uncertainty due to the finite length of historical observations and future projections. Recognizing these challenges, several opportunities exist to improve the use of control methods for climate adaptation, namely, how problem context and understanding of climate processes might assist with uncertainty quantification and experimental design, out-of-sample validation and robustness of optimized adaptation policies, and monitoring and data assimilation, including trend detection, Bayesian inference, and indicator variable selection. We conclude with a summary of recommendations for dynamic water resources planning under climate change through the lens of optimal control.&lt;/p&gt;
+
+&lt;h3 id=&quot;debates-does-information-theory-provide-a-new-paradigm-for-earth-science-causality-interaction-and-feedback&quot;&gt;Debates-Does Information Theory Provide a New Paradigm for Earth Science? Causality, Interaction, and Feedback&lt;/h3&gt;
+&lt;p&gt;By: Goodwell, Allison E.; Jiang, Peishi; Ruddell, Benjamin L.; et al.
+WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  24940-24940   Published:  FEB 2020
+Context Sensitive Links Free Full Text from Publisher Close Abstract
+The concept of causal interactions between components is an integral part of hydrology and Earth system sciences. Modelers, decision makers, scientists, and other water resources stakeholders all utilize some notion of cause-and-effect to understand processes, make decisions, and infer how systems react to change. However, there are different perspectives on the meaning of causality in complex systems and, further, different frameworks and methodologies with which to detect causal interactions. We propose here that information theory (IT) provides a compelling framework for the detection of causality and discuss approaches for several levels of analyses that capture interactions that range from pairwise to multivariate in nature. We illustrate these types of analyses with an example based on weather station time series variables, in which variables may interact pairwise or jointly and on short to long time scales. In general, many unsolved or even unanticipated questions in the hydrologic sciences could benefit from this perspective.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 12, 2020.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -37,29 +191,19 @@
 &lt;!--more--&gt;
 
 &lt;h3 id=&quot;bibliometric-analysis-of-research-on-soil-health-from-1999-to-2018&quot;&gt;Bibliometric analysis of research on soil health from 1999 to 2018&lt;/h3&gt;
-
 &lt;p&gt;By: Liu, Yanan; Wu, Kening; Zhao, Rui&lt;/p&gt;
 
-&lt;p&gt;JOURNAL OF SOILS AND SEDIMENTS  Volume:  20   Issue:  3   Pages:  1513-1525   Published:  MAR 2020
-Context Sensitive Links  Close Abstract
-Purpose Soil health has been a major focus of research by international scholars because it is an important factor that supports human survival and development. However, few scholars have performed bibliometric analyses of research on soil health. This study investigated the current research status and development characteristics of soil health. Materials and methods We performed a bibliometric analysis of documents on soil health from 1999 to 2018 in the Web of Science Core Collection. The bibliometric analysis tools, CiteSpace and HistCite software, were applied. Results and discussion A total of 1629 documents on soil health in the Web of Science Core Collection were identified. From the research status of soil health, the number of publications will continue to increase. Most of the research institutions examining soil health are located in the USA, and there is little cooperation and communication among countries, neither do research institutions in this field. Each country has its own research labs while lab cooperation within individual countries is relatively close. Most documents on the research of soil health have been published in the journal Applied Soil Ecology. In addition, research directions are expanding from the basic study of soil production, soil health indicators, and soil pollution to the comprehensive study of soil ecosystem. Conclusions Bibliometric analysis tools, CiteSpace and HistCite software, provide a comprehensive approach for making predictions regarding trends in the field. This method was used in this study to identify the hotspots, frontiers, and future development of soil health to provide guidance for future research.&lt;/p&gt;
+&lt;p&gt;JOURNAL OF SOILS AND SEDIMENTS Volume:  20 Issue:  3 Pages:  1513-1525 Published:  MAR 2020 Context Sensitive Links Close Abstract Purpose Soil health has been a major focus of research by international scholars because it is an important factor that supports human survival and development. However, few scholars have performed bibliometric analyses of research on soil health. This study investigated the current research status and development characteristics of soil health. Materials and methods We performed a bibliometric analysis of documents on soil health from 1999 to 2018 in the Web of Science Core Collection. The bibliometric analysis tools, CiteSpace and HistCite software, were applied. Results and discussion A total of 1629 documents on soil health in the Web of Science Core Collection were identified. From the research status of soil health, the number of publications will continue to increase. Most of the research institutions examining soil health are located in the USA, and there is little cooperation and communication among countries, neither do research institutions in this field. Each country has its own research labs while lab cooperation within individual countries is relatively close. Most documents on the research of soil health have been published in the journal Applied Soil Ecology. In addition, research directions are expanding from the basic study of soil production, soil health indicators, and soil pollution to the comprehensive study of soil ecosystem. Conclusions Bibliometric analysis tools, CiteSpace and HistCite software, provide a comprehensive approach for making predictions regarding trends in the field. This method was used in this study to identify the hotspots, frontiers, and future development of soil health to provide guidance for future research.&lt;/p&gt;
 
 &lt;h3 id=&quot;climate-drives-global-soil-carbon-sequestration-and-crop-yield-changes-under-conservation-agriculture&quot;&gt;Climate drives global soil carbon sequestration and crop yield changes under conservation agriculture&lt;/h3&gt;
-
 &lt;p&gt;By: Sun, Wenjuan; Canadell, Josep G.; Yu, Lijun; et al.&lt;/p&gt;
 
-&lt;p&gt;GLOBAL CHANGE BIOLOGY  Volume:  26   Issue:  6   Pages:  3325-3335   Published:  JUN 2020&lt;/p&gt;
+&lt;p&gt;GLOBAL CHANGE BIOLOGY Volume:  26 Issue:  6 Pages:  3325-3335 Published:  JUN 2020&lt;/p&gt;
 
-&lt;p&gt;Context Sensitive Links  Close Abstract
-Conservation agriculture has been shown to have multiple benefits for soils, crop yield and the environment, and consequently, no-till, the central practice of conservation agriculture, has rapidly expanded. However, studies show that the potential for carbon (C) sequestration in no-till farming sometimes is not realized, let alone the ability to maintain or improve crop yield. Here we present a global analysis of no-till-induced changes of soil C and crop yield based on 260 and 1,970 paired studies; respectively. We show that, relative to local conventional tillage, arid regions can benefit the most from conservation agriculture by achieving a win-win outcome of enhanced C sequestration and increased crop yield. However, more humid regions are more likely to increase SOC only, while some colder regions have yield losses and soil C loss as likely as soil C gains. In addition to site-specific characteristics and management, a careful assessment of the regional climate is needed to determine the potential benefits of adopting conservation agriculture.&lt;/p&gt;
+&lt;p&gt;Context Sensitive Links Close Abstract Conservation agriculture has been shown to have multiple benefits for soils, crop yield and the environment, and consequently, no-till, the central practice of conservation agriculture, has rapidly expanded. However, studies show that the potential for carbon (C) sequestration in no-till farming sometimes is not realized, let alone the ability to maintain or improve crop yield. Here we present a global analysis of no-till-induced changes of soil C and crop yield based on 260 and 1,970 paired studies; respectively. We show that, relative to local conventional tillage, arid regions can benefit the most from conservation agriculture by achieving a win-win outcome of enhanced C sequestration and increased crop yield. However, more humid regions are more likely to increase SOC only, while some colder regions have yield losses and soil C loss as likely as soil C gains. In addition to site-specific characteristics and management, a careful assessment of the regional climate is needed to determine the potential benefits of adopting conservation agriculture.&lt;/p&gt;
 
 &lt;h3 id=&quot;marching-in-step-the-importance-of-matching-model-complexity-to-data-availability-in-terrestrial-biosphere-models&quot;&gt;Marching in step: The importance of matching model complexity to data availability in terrestrial biosphere models&lt;/h3&gt;
-&lt;p&gt;By: Feng, Xue
-GLOBAL CHANGE BIOLOGY  Volume:  26   Issue:  6   Pages:  3190-3192   Published:  JUN 2020
-Context Sensitive Links Free Full Text from Publisher Close Abstract
-This is a Commentary on Paschalis et al.
-Building models to predict ecosystem responses to future rainfall changes requires closely matching model complexity to data availability. A new study by Paschalis et al. (Global Change Biology, 2020) examines opportunities to improve both data availability and model structure in 10 state-of-the-art terrestrial biosphere models.&lt;/p&gt;
-
+&lt;p&gt;By: Feng, Xue GLOBAL CHANGE BIOLOGY Volume:  26 Issue:  6 Pages:  3190-3192 Published:  JUN 2020 Context Sensitive Links Free Full Text from Publisher Close Abstract This is a Commentary on Paschalis et al. Building models to predict ecosystem responses to future rainfall changes requires closely matching model complexity to data availability. A new study by Paschalis et al. (Global Change Biology, 2020) examines opportunities to improve both data availability and model structure in 10 state-of-the-art terrestrial biosphere models.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 08, 2020.&lt;/p&gt;
   </content>
@@ -1591,156 +1735,6 @@ Published: JAN 2018&lt;/p&gt;
 The ever-increasing volume and accessibility of remote sensing data has spawned many alternative approaches for mapping important environmental features and processes. For example, there are several viable but highly varied strategies for using time series of Landsat imagery to detect changes in forest cover. Performance among algorithms varies across complex natural systems, and it is reasonable to ask if aggregating the strengths of an ensemble of classifiers might result in increased overall accuracy. Relatively simple rules have been used in the past to aggregate classifications among remotely sensed maps (e.g. using majority predictions), and in other fields, empirical models have been used to create situationally specific algorithm weights. The latter process, called “stacked generalization” (or “stacking”), typically uses a parametric model for the fusion of algorithm outputs. We tested the performance of several leading forest disturbance detection algorithms against ensembles of the outputs of those same algorithms based upon stacking using both parametric and Random Forests-based fusion rules. Stacking using a Random Forests model cut omission and commission error rates in half in many cases in relation to individual change detection algorithms, and cut error rates by one quarter compared to more conventional parametric stacking. Stacking also offers two auxiliary benefits: alignment of outputs to the precise definitions built into a particular set of empirical calibration data; and, outputs which may be adjusted such that map class totals match independent estimates of change in each year. In general, ensemble predictions improve when new inputs are added that are both informative and uncorrelated with existing ensemble components. As increased use of cloud-based computing makes ensemble mapping methods more accessible, the most useful new algorithms may be those that specialize in providing spectral, temporal, or thematic information not already available through members of existing ensembles.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2019/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 11, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/11/journalDigest" />
-  <id>/2019/11/journalDigest</id>
-  <updated>2019-11-03T00:00:00-00:00</updated>
-  <published>2019-11-03T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-15&quot;&gt;Journal Paper Digests 2019 #15&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Scale-Dependent Patterning of Wetland Depressions in a Low-Relief Karst Landscape&lt;/li&gt;
-  &lt;li&gt;Functional Diversity: An Epistemic Roadmap&lt;/li&gt;
-  &lt;li&gt;Estimation of soil water content at permanent wilting point using hygroscopic water content&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;scale-dependent-patterning-of-wetland-depressions-in-a-low-relief-karst-landscape&quot;&gt;Scale-Dependent Patterning of Wetland Depressions in a Low-Relief Karst Landscape&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Quintero, CJ; Cohen, MJ&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;JOURNAL OF GEOPHYSICAL RESEARCH-EARTH SURFACE&lt;/em&gt;, 124 (8):2101-2117; AUG 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Thousands of small wetland depression features (cypress domes) dot the low-relief karst of Big Cypress National Preserve (BICY) in South Florida, USA. We hypothesized that these wetland depressions are organized in a regular pattern, which is atypical of wetlandscapes elsewhere. Regular patterning implies the existence of coupled feedbacks operating at different spatial scales, with local wetland depression expansion (facilitation via karst dissolution) limited by competition among adjacent depressions for finite water resources (inhibition). We sought to test the hypothesis that wetlands in BICY exhibit regular patterning, and to quantify pattern properties to evaluate competing genesis mechanisms. We tested four predictions about landscape structure and geometry using high-resolution Light Detection and Ranging elevation data from six 2.25-km(2) domains across BICY. Specifically, we predicted (1) feature overdispersion resulting from competition between adjacent basins; (2)
-  truncated wetland area distributions due to growth inhibition feedbacks; (3) periodicity in surface elevation indicating a characteristic pattern wavelength; and (4) elevation bimodality indicating distinct upland and wetland states. All four predictions were strongly supported. Depressions were significantly overdispersed and efficiently fill the landscape, generating hexagonal patterning. Wetland areas followed truncated power law scaling, indicating incremental constraints on basin expansion, in contrast to depression areas elsewhere. Variogram and radial spectrum analyses revealed clear periodicity (similar to 150- to 250-m wavelength) in surface elevations. Finally, surface elevations were consistently bimodal with elevation divergence of 10 to 40 cm. Regular patterning of wetland depressions across BICY is clear, implying long-term biogeomorphic control on landform structure in this karst landscape.&lt;/p&gt;
-
-&lt;h3 id=&quot;functional-diversity-an-epistemic-roadmap&quot;&gt;Functional Diversity: An Epistemic Roadmap&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Malaterre, C; Dussault, AC; Rousseau-Mermans, S; Barker, G; Beisner, BE;
-Bouchard, F; Desjardins, E; Handa, IT; Kembel, SW; Lajoie, G; Maris, V;
-Munson, AD; Odenbaugh, J; Poisot, T; Shapiro, BJ; Suttle, CA&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;BIOSCIENCE&lt;/em&gt;, 69 (10):800-811; OCT 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Functional diversity holds the promise of understanding ecosystems in ways unattainable by taxonomic diversity studies. Underlying this promise is the intuition that investigating the diversity of what organisms actually do (i.e., their functional traits) within ecosystems will generate more reliable insights into the ways these ecosystems behave, compared to considering only species diversity. But this promise also rests on several conceptual and methodological (i.e., epistemic) assumptions that cut across various theories and domains of ecology. These assumptions should be clearly addressed, notably for the sake of an effective comparison and integration across domains, and for assessing whether or not to use functional diversity approaches for developing ecological management strategies. The objective of this contribution is to identify and critically analyze the most salient of these assumptions. To this aim, we provide an epistemic roadmap that pinpoints these assumption
- s along a set of historical, conceptual, empirical, theoretical, and normative dimensions.&lt;/p&gt;
-
-&lt;h3 id=&quot;estimation-of-soil-water-content-at-permanent-wilting-point-using-hygroscopic-water-content&quot;&gt;Estimation of soil water content at permanent wilting point using hygroscopic water content&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Chen, C; Zhou, H; Shang, JY; Hu, KL; Ren, TS&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;EUROPEAN JOURNAL OF SOIL SCIENCE&lt;/em&gt;, NIL_1-NIL_7; OCT 21 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Traditional methods for determining soil water content at permanent wilting point (theta(PWP)) are time consuming. The objectives of this study are to develop a model for predicting theta(PWP) based on easily measured hygroscopic water content and to compare the performance of the proposed model with three previous models: the Aina &amp;amp; Periaswamy model (AP model), the van den Berg et al. model (vdB model) and the Seybold &amp;amp; Harms model (SH model), which estimate theta(PWP) from particle size distribution and/or organic matter (OM) content. By assuming that the dry end of the soil water retention curve could be described with the linear Campbell &amp;amp; Shiozawa model, a simple linear model, theta(PWP) = 3 theta(RH50), was developed to predict theta(PWP) using theta(RH50). The theta(RH50) of the soils ranged from 0.002 to 0.157 g g(-1) and the theta(PWP) ranged from 0.014 to 0.279 g g(-1). The validation results on 48 soils showed that the root mean squared error (RMSE) and mean absolu
- te error (MAE) of the proposed model were 0.007 g g(-1) and 0.005 g g(-1), respectively. Model comparison showed that the prediction accuracy of four models for theta(PWP) was in the order of proposed model &amp;gt; AP model &amp;gt; SH model &amp;gt; vdB model. Thus, theta(RH50) is a viable predictor for theta(PWP), which eliminates the need for soil particle size distribution and OM content. HighlightsWater content at permanent wilting point (theta(PWP)) relates to hygroscopic water content. A model was developed to predict theta(PWP) using water content at relative humidity of 50%. The proposed model performed better than existing models.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2019/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 03, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/10/journalDigest" />
-  <id>/2019/10/journalDigest</id>
-  <updated>2019-10-30T00:00:00-00:00</updated>
-  <published>2019-10-31T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-14&quot;&gt;Journal Paper Digests 2019 #14&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Preparing a soil spectral library using the Internal Soil Standard (ISS) method: Influence of extreme different humidity laboratory conditions&lt;/li&gt;
-  &lt;li&gt;In situ and laboratory soil spectroscopy with portable visible-to-near-infrared and mid-infrared instruments for the assessment of organic carbon in soils&lt;/li&gt;
-  &lt;li&gt;Alternative approach to calculate soil hydraulic-energy-indices and -functions&lt;/li&gt;
-  &lt;li&gt;Mapping LUCAS topsoil chemical properties at European scale using Gaussian process regression&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;preparing-a-soil-spectral-library-using-the-internal-soil-standard-iss-method-influence-of-extreme-different-humidity-laboratory-conditions&quot;&gt;Preparing a soil spectral library using the Internal Soil Standard (ISS) method: Influence of extreme different humidity laboratory conditions&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Chabrillat, S; Gholizadeh, A; Neumann, C; Berger, D; Milewski, R; Ogen,
-Y; Ben-Dor, E&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 355 13855-13855; DEC 1 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Extensive efforts are currently being devoted to the establishment of soil spectral libraries on regional, national, continent-wide and global domains. In particular, a new development goes in the direction of global harmonized soil spectral databases that shall be acquired following common standards and procedures so that they can be merged with other soil spectral libraries. The choice of standards is important, especially with respect to their behaviors when laboratory conditions, such as humidity, change. In this study, we test the application and robustness of the Internal Soil Standard (ISS) spectral re-alignment procedure on an extended number of soil samples acquired at different laboratories. In particular, a focus is placed on the comparison between two standards Lucky Bay (LB) and Wylie Bay (WB), for their performance with different humidity laboratory conditions. LB and WB are almost pure quartz sands from Australia. For this, 71 soil samples from Israel with diff
- erent mineralogical background and variable soil organic matter contents are scanned at two laboratories. The scanning took place with different spectral measurement protocols and extreme diverse conditions in terms of laboratory humidity and moist. All scans are completed by the repeated scans of the two Australian white sands through all scan batches to harmonize the spectral measurements. Our results show that the ISS minimizes the visual spectral variation, aligns the minor and extreme systematic changes of the protocols, and makes them more stable. Furthermore, the LB and WB standards do not exhibit equal performance regarding to relatively dry and humid conditions. The WB standard provides more stable and satisfactory results in humid condition. However, the high performance of the LB sample in spectral correction is still observed, particularly in laboratories with lower moist. Accordingly, these analyses suggest that in the ISS re-alignment procedure, the WB sample i
- s more reliable to be used in humid laboratory condition.&lt;/p&gt;
-
-&lt;h3 id=&quot;in-situ-and-laboratory-soil-spectroscopy-with-portable-visible-to-near-infrared-and-mid-infrared-instruments-for-the-assessment-of-organic-carbon-in-soils&quot;&gt;In situ and laboratory soil spectroscopy with portable visible-to-near-infrared and mid-infrared instruments for the assessment of organic carbon in soils&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Hutengs, C; Seidel, M; Oertel, F; Ludwig, B; Vohland, M&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 355 13900-13900; DEC 1 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Mid-infrared (MIR) spectroscopy has been established as a rapid and cost-efficient laboratory analysis technique for soil organic carbon (SOC) concentrations. Current portable, high-performance handheld MIR instruments have opened the opportunity to take the technique from the laboratory to the field. We tested the potential of handheld MIR spectroscopy for SOC estimation with field spectral data against parallel VIS-NIR measurements and further evaluated the impact of soil state (in situ, dried, ground) on the accuracy of SOC prediction models. MIR and VIS-NIR data were collected for a set of 90 soils from 90 agricultural loess sites in Central Germany in the field, (i) in situ on the soil surface, and in the laboratory, on (ii) dried and sieved (&amp;lt; 2 mm), and (iii) dried, sieved and ground sample material (similar to 10 mu m). Multivariate calibrations for SOC for each pre-treatment were evaluated with a repeated double cross-validation (rdCV) analysis and the Kennard-Stone 
- (KS) calibration sampling approach. MIR calibrations were more accurate than VIS-NIR calibrations for samples measured under the same conditions in each case with lower RMSE values from 27 to 56% in the rdCV and from 15 to 61% in the KS approach. Sample pre-treatment in the laboratory had a pronounced effect on calibrations in the MIR as models developed on finely ground samples (R-rdCV(2) = 0.86, RMSErdCV = 0.11%) were more accurate than those for dried and sieved samples (R-rdCV(2) = 0.79, RMSErdCV = 0.13%), but differences in the VIS-NIR were negligible. SOC estimates with in situ MIR measurements were less accurate due to spectral variation induced by surface heterogeneity and soil moisture but compared favourably against VIS-NIR data (R-rdCV_MIR(2) = 0.63, RMSErdCV_MIR = 0.17% vs R-rdCV_VIS-NIR(2) = 0.39, RMSErdCV_VIS-NIR = 0.23%). Our findings show that portable MIR spectroscopy can achieve superior SOC calibrations to the VIS-NIR range with in situ data demonstrating 
- its applicability for the on-the-go acquisition of spectral !
- soil information in the field. Handheld MIR instruments thus have the potential to facilitate quantitative applications in proximal soil sensing, although with less accuracy than achievable with pre-treated samples in the laboratory.&lt;/p&gt;
-
-&lt;h3 id=&quot;alternative-approach-to-calculate-soil-hydraulic-energy-indices-and--functions&quot;&gt;Alternative approach to calculate soil hydraulic-energy-indices and -functions&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Armindo, RA; Wendroth, O&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 355 13903-13903; DEC 1 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-Soil physical quality (SPQ) is related to soil health and many studies have applied these indices manifesting soil structural behavior. A widely used hydraulic function in this analysis is the soil water retention curve (SWRC) and its integration holds important information, which reflects SPQ diversity. Usually, the SWRC is mathematically describing the relationship between volumetric soil water content (theta) and suction head (h) in the functions theta(h) and h(theta), in which h &amp;gt;= 0 and 0 &amp;lt; theta &amp;lt; 1. Geometrically, a logic way to describe the SWRC is applying the logarithm to the values of h to build the function theta(log(10)h) or log(10)h(theta), however, in this case the graph usually begins at h = 1, since log(10)(1) = 0. In several studies, the concept of the integral integral theta(h)dh [or integral h(theta)d theta] has been presented in the literature since 1978. Unfortunately, the integral integral log(10)h(theta)d theta should be used for h &amp;gt;= 1 in order to avo
- id negative results generated from the domain 0 &amp;lt; h &amp;lt; 1, which would be integrated to the final area under the SWRC. Furthermore, since the fitted values of the parameters of the Van Genuchten-Mualem (VGM) equation are different when functions theta(h) and theta(log(10)h) are used, results of water content at saturation (theta(s)), permanent wilting point (theta(pwp)) and field capacity (theta(fc)) are different as well, questioning the applicability of the integral integral log(10)h(theta)d theta. The objective of this study was to develop a novel approach to calculate hydraulic-energy indices and to improve their capacity to reflect SPQ differences. In this approach, the function theta(h) was parameterized in order to find results for theta(s), theta(pwp) and theta(fc). Then, the function theta(log(10)h) was parameterized to obtain results for theta(s-pF), theta(pwp-pF) and theta(fc-pF), which were tested against theta(s), theta(pwp) and theta(fc). A total of 72 SWRCs were
-  analysed with both functions theta(h) and (log(10)h). Resul!
- ts showed that the limits of integration theta(s-pF), theta(pwp-pF) and theta(fc-F) remained the same by keeping the same ranges of available water and drainable porosity, as in the case when the function theta(h) was used. This new approach turned out more suitable than the original approach for calculating hydraulic-energy indices, because it was more sensitive to reveal SPQ differences.&lt;/p&gt;
-
-&lt;h3 id=&quot;mapping-lucas-topsoil-chemical-properties-at-european-scale-using-gaussian-process-regression&quot;&gt;Mapping LUCAS topsoil chemical properties at European scale using Gaussian process regression&lt;/h3&gt;
-
-&lt;p&gt;Authors:
-Ballabio, C; Lugato, E; Fernandez-Ugalde, O; Orgiazzi, A; Jones, A;
-Borrelli, P; Montanarella, L; Panagos, P&lt;/p&gt;
-
-&lt;p&gt;Source:
-&lt;em&gt;GEODERMA&lt;/em&gt;, 355 13912-13912; DEC 1 2019&lt;/p&gt;
-
-&lt;p&gt;Abstract:
-This paper presents the second part of the mapping of topsoil properties based on the Land Use and Cover Area frame Survey (LUCAS). The first part described the physical properties (Ballabio et al., 2016) while this second part includes the following chemical properties: pH, Cation Exchange Capacity (CEC), calcium carbonates (CaCO3), C:N ratio, nitrogen (N), phosphorus (P) and potassium (K). The LUCAS survey collected harmonised data on changes in land cover and the state of land use for the European Union (EU). Among the 270,000 land use and cover observations selected for field visit, approximately 20,000 soil samples were collected in 24 EU Member States in 2009 together with more than 2000 samples from Bulgaria and Romania in 2012. The chemical properties maps for the European Union were produced using Gaussian process regression (GPR) models. GPR was selected for its capacity to assess model uncertainty and the possibility of adding prior knowledge in the form of covaria
- nce functions to the model.The derived maps will establish baselines that will help monitor soil quality and provide guidance to agroenvironmental research and policy developments in the European Union.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2019/10/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on October 31, 2019.&lt;/p&gt;
   </content>
 </entry>
 

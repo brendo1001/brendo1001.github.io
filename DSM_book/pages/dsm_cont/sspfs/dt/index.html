@@ -1,0 +1,773 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Decision Tree Models &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Continuous Variables">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Decision Tree Models">
+<meta name="twitter:description" content="Continuous Variables">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Decision Tree Models">
+<meta property="og:description" content="Continuous Variables">
+<meta property="og:url" content="/DSM_book/pages/dsm_cont/sspfs/dt/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_cont/sspfs/dt/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Decision Tree Models</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Continuous Variables</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Decision Tree Models</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~20 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <ul>
+  <li><a href="#s-1">Introduction</a></li>
+  <li><a href="#s-2">Data preparation</a></li>
+  <li><a href="#s-3">Perform the covariate intersection</a></li>
+  <li><a href="#s-4">Model fitting</a></li>
+  <li><a href="#s-5">Cross-validation</a></li>
+  <li><a href="#s-6">Applying the model spatially</a></li>
+</ul>
+
+<h3 id="introduction-">Introduction <a id="s-1"></a></h3>
+
+<p><a href="/DSM_book/pages/dsm_cont/sspfs/mlr/">Linear regression</a>
+is a global model, where there is a single predictive formula holding
+over the entire data space. With a linear model we therefore make some
+assumptions about how our target variable relates to the covariates.
+These may often hold. However, it is models that allow one the
+flexibility of modelling non-linearity that are increasingly popular in
+the DSM community. One of these model structures are classification and
+regression trees (CART). These models are a non-parametric decision tree
+learning techniques that produces either classification or regression
+trees. In this page we will concentrate on regression trees because our
+target variable is numeric i.e. a continuous variable. On another page
+we will look at classification trees for categorical variables. Decision
+trees (either regression or classification) are formed by a collection
+of rules based on variables in the modeling data set:</p>
+
+<ul>
+  <li>
+    <p>Rules based on variables’ values are selected to get the best split
+to differentiate observations based on the dependent variable.</p>
+  </li>
+  <li>
+    <p>Once a rule is selected and splits a node into two, the same process
+is applied to each subsequent node (i.e. it is a recursive
+procedure).</p>
+  </li>
+  <li>
+    <p>Splitting stops when CART detects no further gain can be made, or
+some pre-set stopping rules are met. Alternatively, the data are
+split as much as possible and then the tree is later pruned.</p>
+  </li>
+</ul>
+
+<p>Each branch of the tree ends in a terminal node. Each observation falls
+into one and exactly one terminal node, and each terminal node is
+uniquely defined by a set of rules. For a regression tree, the terminal
+node is a single value, or could be a regression model (which is the
+case for Cubist models which we will look at later). Implementation of
+regression trees in <code class="highlighter-rouge">R</code> is provided both through the <code class="highlighter-rouge">rpart</code> and <code class="highlighter-rouge">party</code>
+packages. We will use the <code class="highlighter-rouge">rpart</code> package and its <code class="highlighter-rouge">rpart</code> function.
+However, the <code class="highlighter-rouge">party</code> package through the <code class="highlighter-rouge">ctree</code> function offers more
+functionality, and implements the partitioning in a more statistical
+robust fashion. Both functions however can handle both continuous and
+categorical predictor variables.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="data-preparation-">Data preparation <a id="s-2"></a></h3>
+
+<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/processes/">data preparatory exercises</a>
+that we were working with the soil point data and environmental
+covariates for the Hunter Valley area. These data are stored in the
+<code class="highlighter-rouge">HV_subsoilpH</code> and <code class="highlighter-rouge">hunterCovariates_sub</code> objects from the <code class="highlighter-rouge">ithir</code>
+package. For the succession of models examined in these various pages,
+we will concentrate on modelling and mapping the soil pH for the
+60-100cm depth interval. To refresh, lets load the data in, then
+intersect the data with the available covariates.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Loading required package: sp</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
+</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
+</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
+</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
+</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
+</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
+</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
+</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># point data</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Start afresh round pH data to 2 decimal places</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># remove already intersected data</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># add an id column</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># re-arrange order of columns</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># Change names of coordinate columns</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># grids (covariate raster)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h4 id="perform-the-covariate-intersection-">Perform the covariate intersection <a id="s-3"></a></h4>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">coordinates</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+
+</span><span class="c1"># extract</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    506 obs. of  15 variables:</span><span class="w">
+</span><span class="c1">##  $ id                      : num  1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
+</span><span class="c1">##  $ x                       : num  340386 340345 340559 340483 340734 ...</span><span class="w">
+</span><span class="c1">##  $ y                       : num  6368690 6368491 6369168 6368740 6368964 ...</span><span class="w">
+</span><span class="c1">##  $ pH60_100cm              : num  4.47 5.42 6.26 8.03 8.86 7.28 4.95 5.61 5.39 3.44 ...</span><span class="w">
+</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  1.34 1.42 1.64 1.04 1.27 ...</span><span class="w">
+</span><span class="c1">##  $ AACN                    : num  1.619 0.281 2.301 1.74 3.114 ...</span><span class="w">
+</span><span class="c1">##  $ Landsat_Band1           : num  57 47 59 52 62 53 47 52 53 63 ...</span><span class="w">
+</span><span class="c1">##  $ Elevation               : num  103.1 103.7 99.9 101.9 99.8 ...</span><span class="w">
+</span><span class="c1">##  $ Hillshading             : num  1.849 1.428 0.934 1.517 1.652 ...</span><span class="w">
+</span><span class="c1">##  $ Light_insolation        : num  1689 1701 1722 1688 1735 ...</span><span class="w">
+</span><span class="c1">##  $ Mid_Slope_Positon       : num  0.876 0.914 0.844 0.848 0.833 ...</span><span class="w">
+</span><span class="c1">##  $ MRVBF                   : num  3.85 3.31 3.66 3.92 3.89 ...</span><span class="w">
+</span><span class="c1">##  $ NDVI                    : num  -0.143 -0.386 -0.197 -0.14 -0.15 ...</span><span class="w">
+</span><span class="c1">##  $ TWI                     : num  17.5 18.2 18.8 18 17.8 ...</span><span class="w">
+</span><span class="c1">##  $ Slope                   : num  1.79 1.42 1.01 1.49 1.83 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Often it is handy to check to see whether there are missing values both
+in the target variable and of the covariates. It is possible that a
+point location does not fit within the extent of the available
+covariates. In these cases the data should be excluded. A quick way to
+assess whether there are missing or <code class="highlighter-rouge">NA</code> values in the data is to use
+the <code class="highlighter-rouge">complete.cases</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">## integer(0)</span><span class="w">
+
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There do not appear to be any missing data as indicated by the
+<code class="highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing
+information.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-fitting-">Model fitting <a id="s-4"></a></h3>
+
+<p>Fitting a decision tree in <code class="highlighter-rouge">R</code> is quite similar to that for linear
+models. Note that below we are also performing a random hold-back of
+some data for an external validation.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">rpart</span><span class="p">)</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w">
+</span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+</span><span class="n">hv.RT.Exp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rpart</span><span class="p">(</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Landsat_Band1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+    </span><span class="n">Mid_Slope_Positon</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NDVI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TWI</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rpart.control</span><span class="p">(</span><span class="n">minsplit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is worthwhile to look at the help file for <code class="highlighter-rouge">rpart</code> particularly those
+aspects regarding the <code class="highlighter-rouge">rpart.control</code> parameters which control the
+<code class="highlighter-rouge">rpart</code> fit. Often it is helpful to just play around with the parameters
+to get a sense of what does what. Here for the <code class="highlighter-rouge">minsplit</code> parameter
+within <code class="highlighter-rouge">rpart.control</code> we are specifying that we want at least 50
+observations in a node in order for a split to be attempted.</p>
+
+<p>Detailed results of the model fit can be provided via the <code class="highlighter-rouge">summary</code> and
+<code class="highlighter-rouge">printcp</code> functions.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">summary</span><span class="p">(</span><span class="n">hv.RT.Exp</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Call:</span><span class="w">
+</span><span class="c1">## rpart(formula = pH60_100cm ~ AACN + Landsat_Band1 + Elevation + </span><span class="w">
+</span><span class="c1">##     Hillshading + Mid_Slope_Positon + MRVBF + NDVI + TWI, data = DSM_data[training, </span><span class="w">
+</span><span class="c1">##     ], control = rpart.control(minsplit = 50))</span><span class="w">
+</span><span class="c1">##   n= 354 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##           CP nsplit rel error    xerror       xstd</span><span class="w">
+</span><span class="c1">## 1 0.06794766      0 1.0000000 1.0050406 0.06360731</span><span class="w">
+</span><span class="c1">## 2 0.03317748      2 0.8641047 1.0228037 0.06761617</span><span class="w">
+</span><span class="c1">## 3 0.03220587      3 0.8309272 0.9935433 0.06698589</span><span class="w">
+</span><span class="c1">## 4 0.02195220      6 0.7343096 0.9645777 0.06626158</span><span class="w">
+</span><span class="c1">## 5 0.02155232      7 0.7123574 0.9680294 0.07002215</span><span class="w">
+</span><span class="c1">## 6 0.01287867      8 0.6908051 0.9768363 0.07142329</span><span class="w">
+</span><span class="c1">## 7 0.01234328      9 0.6779264 0.9753883 0.07151362</span><span class="w">
+</span><span class="c1">## 8 0.01000000     10 0.6655831 0.9754643 0.07164849</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Variable importance</span><span class="w">
+</span><span class="c1">##              AACN               TWI         Elevation             MRVBF </span><span class="w">
+</span><span class="c1">##                22                18                14                13 </span><span class="w">
+</span><span class="c1">## Mid_Slope_Positon              NDVI       Hillshading     Landsat_Band1 </span><span class="w">
+</span><span class="c1">##                11                10                 9                 4 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 1: 354 observations,    complexity param=0.06794766</span><span class="w">
+</span><span class="c1">##   mean=6.55096, MSE=1.753635 </span><span class="w">
+</span><span class="c1">##   left son=2 (272 obs) right son=3 (82 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       AACN              &lt; 43.59965   to the left,  improve=0.06379266, (0 missing)</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.783947   to the left,  improve=0.06097348, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 0.0166785  to the right, improve=0.05881503, (0 missing)</span><span class="w">
+</span><span class="c1">##       TWI               &lt; 9.806141   to the right, improve=0.05306808, (0 missing)</span><span class="w">
+</span><span class="c1">##       Elevation         &lt; 182.9988   to the left,  improve=0.03736796, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       Elevation         &lt; 154.1056   to the left,  agree=0.958, adj=0.817, (0 split)</span><span class="w">
+</span><span class="c1">##       TWI               &lt; 9.704844   to the right, agree=0.915, adj=0.634, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 0.025861   to the right, agree=0.879, adj=0.476, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading       &lt; 14.0666    to the left,  agree=0.802, adj=0.146, (0 split)</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.011807   to the right, agree=0.771, adj=0.012, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 2: 272 observations,    complexity param=0.06794766</span><span class="w">
+</span><span class="c1">##   mean=6.367316, MSE=1.691953 </span><span class="w">
+</span><span class="c1">##   left son=4 (179 obs) right son=5 (93 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.7870535  to the left,  improve=0.09726051, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 0.62053    to the left,  improve=0.08383424, (0 missing)</span><span class="w">
+</span><span class="c1">##       TWI               &lt; 17.16774   to the left,  improve=0.07594164, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN              &lt; 3.510582   to the right, improve=0.06521629, (0 missing)</span><span class="w">
+</span><span class="c1">##       Elevation         &lt; 99.58687   to the right, improve=0.05214677, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       TWI         &lt; 16.32056   to the left,  agree=0.897, adj=0.699, (0 split)</span><span class="w">
+</span><span class="c1">##       AACN        &lt; 6.921867   to the right, agree=0.868, adj=0.613, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF       &lt; 1.858052   to the left,  agree=0.860, adj=0.591, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading &lt; 2.116993   to the right, agree=0.794, adj=0.398, (0 split)</span><span class="w">
+</span><span class="c1">##       Elevation   &lt; 101.4914   to the right, agree=0.746, adj=0.258, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 3: 82 observations,    complexity param=0.02155232</span><span class="w">
+</span><span class="c1">##   mean=7.160122, MSE=1.475291 </span><span class="w">
+</span><span class="c1">##   left son=6 (26 obs) right son=7 (56 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       NDVI        &lt; -0.2270705 to the left,  improve=0.11059740, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF       &lt; 0.0181425  to the right, improve=0.10021720, (0 missing)</span><span class="w">
+</span><span class="c1">##       Hillshading &lt; 7.197221   to the left,  improve=0.07748013, (0 missing)</span><span class="w">
+</span><span class="c1">##       Elevation   &lt; 161.3855   to the right, improve=0.06811931, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN        &lt; 75.9357    to the left,  improve=0.06218024, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       Landsat_Band1     &lt; 42.5       to the left,  agree=0.793, adj=0.346, (0 split)</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.1866335  to the left,  agree=0.744, adj=0.192, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading       &lt; 11.70925   to the right, agree=0.720, adj=0.115, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 0.303978   to the right, agree=0.695, adj=0.038, (0 split)</span><span class="w">
+</span><span class="c1">##       TWI               &lt; 10.23516   to the right, agree=0.695, adj=0.038, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 4: 179 observations,    complexity param=0.03317748</span><span class="w">
+</span><span class="c1">##   mean=6.074916, MSE=1.625561 </span><span class="w">
+</span><span class="c1">##   left son=8 (34 obs) right son=9 (145 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       AACN          &lt; 13.55327   to the left,  improve=0.07078306, (0 missing)</span><span class="w">
+</span><span class="c1">##       NDVI          &lt; -0.1660675 to the left,  improve=0.04227382, (0 missing)</span><span class="w">
+</span><span class="c1">##       Hillshading   &lt; 3.38458    to the left,  improve=0.03978021, (0 missing)</span><span class="w">
+</span><span class="c1">##       Landsat_Band1 &lt; 52.5       to the right, improve=0.03485309, (0 missing)</span><span class="w">
+</span><span class="c1">##       TWI           &lt; 15.09922   to the right, improve=0.02528861, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       TWI               &lt; 14.49579   to the right, agree=0.888, adj=0.412, (0 split)</span><span class="w">
+</span><span class="c1">##       Elevation         &lt; 101.5807   to the left,  agree=0.849, adj=0.206, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 2.628778   to the right, agree=0.849, adj=0.206, (0 split)</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.7812145  to the right, agree=0.821, adj=0.059, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading       &lt; 0.9076225  to the left,  agree=0.816, adj=0.029, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 5: 93 observations,    complexity param=0.01234328</span><span class="w">
+</span><span class="c1">##   mean=6.930108, MSE=1.338444 </span><span class="w">
+</span><span class="c1">##   left son=10 (73 obs) right son=11 (20 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       NDVI      &lt; -0.1538785 to the left,  improve=0.06155876, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF     &lt; 2.748072   to the left,  improve=0.04850123, (0 missing)</span><span class="w">
+</span><span class="c1">##       Elevation &lt; 99.90028   to the right, improve=0.03367224, (0 missing)</span><span class="w">
+</span><span class="c1">##       TWI       &lt; 16.79354   to the left,  improve=0.03088351, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN      &lt; 3.648288   to the right, improve=0.02936984, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       Landsat_Band1 &lt; 63.5       to the left,  agree=0.796, adj=0.05, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 6: 26 observations</span><span class="w">
+</span><span class="c1">##   mean=6.567308, MSE=1.515658 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 7: 56 observations,    complexity param=0.01287867</span><span class="w">
+</span><span class="c1">##   mean=7.435357, MSE=1.217632 </span><span class="w">
+</span><span class="c1">##   left son=14 (37 obs) right son=15 (19 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       Elevation     &lt; 165.3835   to the right, improve=0.11724900, (0 missing)</span><span class="w">
+</span><span class="c1">##       TWI           &lt; 9.119365   to the left,  improve=0.06946874, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF         &lt; 0.016642   to the right, improve=0.05460568, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN          &lt; 59.41751   to the right, improve=0.04961327, (0 missing)</span><span class="w">
+</span><span class="c1">##       Landsat_Band1 &lt; 51         to the right, improve=0.03827830, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       AACN        &lt; 59.41751   to the right, agree=0.946, adj=0.842, (0 split)</span><span class="w">
+</span><span class="c1">##       TWI         &lt; 9.690168   to the left,  agree=0.768, adj=0.316, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading &lt; 3.093062   to the right, agree=0.750, adj=0.263, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF       &lt; 0.145624   to the left,  agree=0.732, adj=0.211, (0 split)</span><span class="w">
+</span><span class="c1">##       NDVI        &lt; -0.1460055 to the left,  agree=0.714, adj=0.158, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 8: 34 observations</span><span class="w">
+</span><span class="c1">##   mean=5.374412, MSE=1.01446 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 9: 145 observations,    complexity param=0.03220587</span><span class="w">
+</span><span class="c1">##   mean=6.239172, MSE=1.626812 </span><span class="w">
+</span><span class="c1">##   left son=18 (120 obs) right son=19 (25 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       TWI       &lt; 13.928     to the left,  improve=0.07823863, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF     &lt; 0.62053    to the left,  improve=0.06765783, (0 missing)</span><span class="w">
+</span><span class="c1">##       NDVI      &lt; -0.161967  to the left,  improve=0.04928153, (0 missing)</span><span class="w">
+</span><span class="c1">##       Elevation &lt; 142.9022   to the right, improve=0.03381342, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN      &lt; 21.32139   to the right, improve=0.02651395, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       AACN        &lt; 17.50792   to the right, agree=0.883, adj=0.32, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF       &lt; 1.790583   to the left,  agree=0.876, adj=0.28, (0 split)</span><span class="w">
+</span><span class="c1">##       Elevation   &lt; 107.4445   to the right, agree=0.855, adj=0.16, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading &lt; 2.147379   to the right, agree=0.834, adj=0.04, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 10: 73 observations</span><span class="w">
+</span><span class="c1">##   mean=6.779863, MSE=1.317859 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 11: 20 observations</span><span class="w">
+</span><span class="c1">##   mean=7.4785, MSE=1.030453 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 14: 37 observations</span><span class="w">
+</span><span class="c1">##   mean=7.164595, MSE=1.108441 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 15: 19 observations</span><span class="w">
+</span><span class="c1">##   mean=7.962632, MSE=1.009483 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 18: 120 observations,    complexity param=0.03220587</span><span class="w">
+</span><span class="c1">##   mean=6.076333, MSE=1.468697 </span><span class="w">
+</span><span class="c1">##   left son=36 (47 obs) right son=37 (73 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       Landsat_Band1 &lt; 52.5       to the right, improve=0.09342719, (0 missing)</span><span class="w">
+</span><span class="c1">##       NDVI          &lt; -0.1709515 to the left,  improve=0.06335787, (0 missing)</span><span class="w">
+</span><span class="c1">##       Hillshading   &lt; 3.976624   to the left,  improve=0.05009109, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF         &lt; 0.629809   to the left,  improve=0.04625149, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN          &lt; 29.02258   to the left,  improve=0.04051094, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       NDVI        &lt; -0.2207    to the right, agree=0.675, adj=0.170, (0 split)</span><span class="w">
+</span><span class="c1">##       AACN        &lt; 18.27993   to the left,  agree=0.658, adj=0.128, (0 split)</span><span class="w">
+</span><span class="c1">##       Elevation   &lt; 104.9371   to the left,  agree=0.642, adj=0.085, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF       &lt; 0.0307535  to the left,  agree=0.642, adj=0.085, (0 split)</span><span class="w">
+</span><span class="c1">##       Hillshading &lt; 9.895688   to the right, agree=0.625, adj=0.043, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 19: 25 observations</span><span class="w">
+</span><span class="c1">##   mean=7.0208, MSE=1.647543 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 36: 47 observations</span><span class="w">
+</span><span class="c1">##   mean=5.614681, MSE=0.744344 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 37: 73 observations,    complexity param=0.03220587</span><span class="w">
+</span><span class="c1">##   mean=6.373562, MSE=1.7095 </span><span class="w">
+</span><span class="c1">##   left son=74 (50 obs) right son=75 (23 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       NDVI              &lt; -0.176242  to the left,  improve=0.20079140, (0 missing)</span><span class="w">
+</span><span class="c1">##       Hillshading       &lt; 3.976624   to the left,  improve=0.13627740, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 0.6187865  to the left,  improve=0.03184879, (0 missing)</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.6320945  to the right, improve=0.02794618, (0 missing)</span><span class="w">
+</span><span class="c1">##       Elevation         &lt; 142.8409   to the right, improve=0.01737568, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       Elevation &lt; 117.1724   to the right, agree=0.699, adj=0.043, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 74: 50 observations,    complexity param=0.0219522</span><span class="w">
+</span><span class="c1">##   mean=5.9762, MSE=1.051936 </span><span class="w">
+</span><span class="c1">##   left son=148 (26 obs) right son=149 (24 obs)</span><span class="w">
+</span><span class="c1">##   Primary splits:</span><span class="w">
+</span><span class="c1">##       Hillshading   &lt; 5.843943   to the left,  improve=0.25909640, (0 missing)</span><span class="w">
+</span><span class="c1">##       Landsat_Band1 &lt; 47.5       to the left,  improve=0.11351230, (0 missing)</span><span class="w">
+</span><span class="c1">##       AACN          &lt; 29.47343   to the left,  improve=0.10966650, (0 missing)</span><span class="w">
+</span><span class="c1">##       MRVBF         &lt; 0.478392   to the left,  improve=0.10308040, (0 missing)</span><span class="w">
+</span><span class="c1">##       NDVI          &lt; -0.295995  to the left,  improve=0.08545253, (0 missing)</span><span class="w">
+</span><span class="c1">##   Surrogate splits:</span><span class="w">
+</span><span class="c1">##       Elevation         &lt; 128.4046   to the left,  agree=0.72, adj=0.417, (0 split)</span><span class="w">
+</span><span class="c1">##       TWI               &lt; 9.897047   to the right, agree=0.68, adj=0.333, (0 split)</span><span class="w">
+</span><span class="c1">##       AACN              &lt; 33.61438   to the left,  agree=0.66, adj=0.292, (0 split)</span><span class="w">
+</span><span class="c1">##       MRVBF             &lt; 0.0682475  to the right, agree=0.64, adj=0.250, (0 split)</span><span class="w">
+</span><span class="c1">##       Mid_Slope_Positon &lt; 0.6506405  to the right, agree=0.62, adj=0.208, (0 split)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 75: 23 observations</span><span class="w">
+</span><span class="c1">##   mean=7.237391, MSE=2.049532 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 148: 26 observations</span><span class="w">
+</span><span class="c1">##   mean=5.474615, MSE=0.2419556 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Node number 149: 24 observations</span><span class="w">
+</span><span class="c1">##   mean=6.519583, MSE=1.361596</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">summary</code> output provides detailed information of the data splitting
+as well as information as to the relative importance of the covariates.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printcp</span><span class="p">(</span><span class="n">hv.RT.Exp</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Regression tree:</span><span class="w">
+</span><span class="c1">## rpart(formula = pH60_100cm ~ AACN + Landsat_Band1 + Elevation + </span><span class="w">
+</span><span class="c1">##     Hillshading + Mid_Slope_Positon + MRVBF + NDVI + TWI, data = DSM_data[training, </span><span class="w">
+</span><span class="c1">##     ], control = rpart.control(minsplit = 50))</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Variables actually used in tree construction:</span><span class="w">
+</span><span class="c1">## [1] AACN              Elevation         Hillshading       Landsat_Band1    </span><span class="w">
+</span><span class="c1">## [5] Mid_Slope_Positon NDVI              TWI              </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Root node error: 620.79/354 = 1.7536</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## n= 354 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##         CP nsplit rel error  xerror     xstd</span><span class="w">
+</span><span class="c1">## 1 0.067948      0   1.00000 1.00504 0.063607</span><span class="w">
+</span><span class="c1">## 2 0.033177      2   0.86410 1.02280 0.067616</span><span class="w">
+</span><span class="c1">## 3 0.032206      3   0.83093 0.99354 0.066986</span><span class="w">
+</span><span class="c1">## 4 0.021952      6   0.73431 0.96458 0.066262</span><span class="w">
+</span><span class="c1">## 5 0.021552      7   0.71236 0.96803 0.070022</span><span class="w">
+</span><span class="c1">## 6 0.012879      8   0.69081 0.97684 0.071423</span><span class="w">
+</span><span class="c1">## 7 0.012343      9   0.67793 0.97539 0.071514</span><span class="w">
+</span><span class="c1">## 8 0.010000     10   0.66558 0.97546 0.071648</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">printcp</code> function provides the useful output of indicating which
+covariates were included in the final model. For the visually inclined,
+a plot of the tree assists a lot to interpret the model diagnostics and
+assessing the important covariates too.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">hv.RT.Exp</span><span class="p">)</span><span class="w">
+</span><span class="n">text</span><span class="p">(</span><span class="n">hv.RT.Exp</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/RTtree_hv.png" alt="rconsole" />
+    <figcaption> Fitted decision tree model based on Hunter Valley soil pH (60-100cm) data.</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="cross-validation-">Cross-validation <a id="s-5"></a></h3>
+
+<p>As before, we can use the <code class="highlighter-rouge">goof</code> function to test the performance of the
+model fit both internally and externally.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Internal validation</span><span class="w">
+</span><span class="n">RT.pred.C</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RT.Exp</span><span class="p">,</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RT.pred.C</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##          R2 concordance     MSE     RMSE bias</span><span class="w">
+</span><span class="c1">## 1 0.3344169   0.4998021 1.16719 1.080366    0</span><span class="w">
+
+</span><span class="c1"># External validation</span><span class="w">
+</span><span class="n">RT.pred.V</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RT.Exp</span><span class="p">,</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RT.pred.V</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##          R2 concordance      MSE    RMSE       bias</span><span class="w">
+</span><span class="c1">## 1 0.1104528   0.3426565 1.690599 1.30023 0.04590521</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/RTplot_hv.png" alt="rconsole" />
+    <figcaption> Decision tree xy-plot plot of predicted soil pH (60-100cm) (validation data set).</figcaption>
+</figure>
+
+<p>The decision tree model performance is not too dissimilar to the <a href="/DSM_book/pages/dsm_cont/sspfs/mlr/">MLR model</a>.
+Looking at the xy-plot from the external validation above and the
+decision tree, it becomes clear that a potential issue is apparent. This
+is, there are only a finite number of possible outcomes in terms of the
+predictions.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="spatial-prediction-">Spatial prediction <a id="s-6"></a></h3>
+
+<p>This finite property becomes obviously apparent once we make a map by
+applying the fitted model to the covariates (using the <code class="highlighter-rouge">raster</code> predict
+function and <code class="highlighter-rouge">hunterCovariates_sub</code> object).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map.RT.r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">hv.RT.Exp</span><span class="p">,</span><span class="w"> </span><span class="s2">"soilpH_60_100_RT.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="n">plot</span><span class="p">(</span><span class="n">map.RT.r1</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Decision tree predicted Hunter Valley soil pH (60-100cm"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/RTmap_hv.png" alt="rconsole" />
+    <figcaption> Decision tree predicted Hunter Valley soil pH (60-100cm).</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-28">July 28, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cont/sspfs/dt/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cont/sspfs/dt/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cont/sspfs/dt/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>
