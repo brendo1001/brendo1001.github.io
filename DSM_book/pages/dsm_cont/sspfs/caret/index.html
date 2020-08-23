@@ -1,0 +1,608 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Introduction to caret &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Continuous and Categorical Variables">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Introduction to caret">
+<meta name="twitter:description" content="Continuous and Categorical Variables">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introduction to caret">
+<meta property="og:description" content="Continuous and Categorical Variables">
+<meta property="og:url" content="/DSM_book/pages/dsm_cont/sspfs/caret/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_cont/sspfs/caret/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Introduction to caret</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Continuous and Categorical Variables</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Introduction to caret</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~13 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <ul>
+  <li><a href="#s-1">Introduction</a></li>
+  <li><a href="#s-2">Data preparation</a></li>
+  <li><a href="#s-3">Perform the covariate intersection</a></li>
+  <li><a href="#s-4">Model fitting: Multiple linear regression</a></li>
+  <li><a href="#s-5">Model fitting: Other model interfaces</a></li>
+  <li><a href="#s-6">Spatial prediction</a></li>
+</ul>
+
+<h3 id="introduction-">Introduction <a id="s-1"></a></h3>
+
+<p>It becomes quickly apparent that there are many variants of prediction
+functions that could be used for DSM. As was observed from <a href="/DSM_book/pages/dsm_cont/sspfs/">previous examples</a>,
+each of the models used have their relative advantages and
+disadvantages. Each also has their own specific parameterisations and
+quirks for fitting. Sometimes for the various hyper-parameters that are
+used for model training are chosen without any sort of optimisation,
+even due consideration sometimes. Sometimes we might be confronted with
+many possible model structures to use, it is often difficult to make a
+choice what to use, and just default with a model we know well or have
+used often without considering alternatives.</p>
+
+<p>This is where the <a href="https://topepo.github.io/caret/index.html">caret R package</a> comes into its own
+in terms of efficiency and streamlining the workflow for fitting models
+and optimising some of those parameter variables. As the dedicated
+website indicates, the <code class="highlighter-rouge">caret</code> package (short for Classification And
+REgression Training) is a set of functions that attempt to streamline
+the process for creating predictive models. As we have seen, there are
+many different modeling functions in R. Some have different syntax for
+model training and/or prediction. The <code class="highlighter-rouge">caret</code> package provides a uniform
+interface to the various functions themselves, as well as a way to
+standardize common tasks (such parameter tuning and variable
+importance).</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="data-preparation-">Data preparation <a id="s-2"></a></h3>
+
+<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/processes/">data preparatory exercises</a>
+that we were working with the soil point data and environmental
+covariates for the Hunter Valley area. These data are stored in the
+<code class="highlighter-rouge">HV_subsoilpH</code> and <code class="highlighter-rouge">hunterCovariates_sub</code> objects from the <code class="highlighter-rouge">ithir</code>
+package. For the succession of models examined in these various pages,
+we will concentrate on modelling and mapping the soil pH for the
+60-100cm depth interval. To refresh, lets load the data in, then
+intersect the data with the available covariates.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Loading required package: sp</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
+</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
+</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
+</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
+</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
+</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
+</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
+</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># point data</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Start afresh round pH data to 2 decimal places</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># remove already intersected data</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># add an id column</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># re-arrange order of columns</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># Change names of coordinate columns</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># grids (covariate raster)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h4 id="perform-the-covariate-intersection-">Perform the covariate intersection <a id="s-3"></a></h4>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">coordinates</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+
+</span><span class="c1"># extract</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    506 obs. of  15 variables:</span><span class="w">
+</span><span class="c1">##  $ id                      : num  1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
+</span><span class="c1">##  $ x                       : num  340386 340345 340559 340483 340734 ...</span><span class="w">
+</span><span class="c1">##  $ y                       : num  6368690 6368491 6369168 6368740 6368964 ...</span><span class="w">
+</span><span class="c1">##  $ pH60_100cm              : num  4.47 5.42 6.26 8.03 8.86 7.28 4.95 5.61 5.39 3.44 ...</span><span class="w">
+</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  1.34 1.42 1.64 1.04 1.27 ...</span><span class="w">
+</span><span class="c1">##  $ AACN                    : num  1.619 0.281 2.301 1.74 3.114 ...</span><span class="w">
+</span><span class="c1">##  $ Landsat_Band1           : num  57 47 59 52 62 53 47 52 53 63 ...</span><span class="w">
+</span><span class="c1">##  $ Elevation               : num  103.1 103.7 99.9 101.9 99.8 ...</span><span class="w">
+</span><span class="c1">##  $ Hillshading             : num  1.849 1.428 0.934 1.517 1.652 ...</span><span class="w">
+</span><span class="c1">##  $ Light_insolation        : num  1689 1701 1722 1688 1735 ...</span><span class="w">
+</span><span class="c1">##  $ Mid_Slope_Positon       : num  0.876 0.914 0.844 0.848 0.833 ...</span><span class="w">
+</span><span class="c1">##  $ MRVBF                   : num  3.85 3.31 3.66 3.92 3.89 ...</span><span class="w">
+</span><span class="c1">##  $ NDVI                    : num  -0.143 -0.386 -0.197 -0.14 -0.15 ...</span><span class="w">
+</span><span class="c1">##  $ TWI                     : num  17.5 18.2 18.8 18 17.8 ...</span><span class="w">
+</span><span class="c1">##  $ Slope                   : num  1.79 1.42 1.01 1.49 1.83 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Often it is handy to check to see whether there are missing values both
+in the target variable and of the covariates. It is possible that a
+point location does not fit within the extent of the available
+covariates. In these cases the data should be excluded. A quick way to
+assess whether there are missing or <code class="highlighter-rouge">NA</code> values in the data is to use
+the <code class="highlighter-rouge">complete.cases</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">## integer(0)</span><span class="w">
+
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There do not appear to be any missing data as indicated by the
+<code class="highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing
+information.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-fitting-multiple-linear-regression-">Model fitting: Multiple linear regression <a id="s-4"></a></h3>
+
+<p>To begin, we first need to load the <code class="highlighter-rouge">caret</code> package into R:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">caret</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Loading required package: lattice</span><span class="w">
+
+</span><span class="c1">## Loading required package: ggplot2</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The workhorse of the <code class="highlighter-rouge">caret</code> package is the <code class="highlighter-rouge">train</code> function. We can
+specify the model to be fitted in two ways:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1.</span><span class="w">
+</span><span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Landsat_Band1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+    </span><span class="n">Mid_Slope_Positon</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NDVI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TWI</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lm"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># or 2.</span><span class="w">
+</span><span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">14</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lm"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Using the <code class="highlighter-rouge">summary(fit)</code> command brings up the model parameter
+estimates, while the object <code class="highlighter-rouge">fit</code> also contains a summary of some useful
+model goodness of fit diagnostics such as the RMSE and <em>R</em><sup>2</sup>
+statistics.</p>
+
+<p>You can control how model validation is done where options include
+simple goodness of fit calibration, k-fold cross-validation, and
+leave-one-out cross-validation. As you might recall, these sorts of
+processes were examined during the <a href="/DSM_book/pages/dsm_cont/cv/">cross-validation page</a> This
+option is controlled using the parameter <code class="highlighter-rouge">trControl</code> in the <code class="highlighter-rouge">train</code>
+function. The example below illustrates a 5-fold cross validation of a
+linear regression model with 10 repetitions.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">14</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lm"</span><span class="p">,</span><span class="w"> </span><span class="n">trControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trainControl</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"repeatedcv"</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">repeats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">))</span><span class="w">
+
+</span><span class="n">fit</span><span class="w">
+
+</span><span class="c1">## Linear Regression </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## 506 samples</span><span class="w">
+</span><span class="c1">##   8 predictor</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## No pre-processing</span><span class="w">
+</span><span class="c1">## Resampling: Cross-Validated (5 fold, repeated 10 times) </span><span class="w">
+</span><span class="c1">## Summary of sample sizes: 406, 405, 405, 403, 405, 405, ... </span><span class="w">
+</span><span class="c1">## Resampling results:</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##   RMSE      Rsquared   MAE      </span><span class="w">
+</span><span class="c1">##   1.189996  0.2233692  0.9439133</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Tuning parameter 'intercept' was held constant at a value of TRUE</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-fitting-other-model-interfaces-">Model fitting: Other model interfaces <a id="s-5"></a></h3>
+
+<p>There are a lot of potential models that you could consider too for DSM.
+<a href="https://topepo.github.io/caret/available-models.html">Check out this link</a> or print
+them as below:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_of_models</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">modelLookup</span><span class="p">()</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">list_of_models</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##      model parameter          label forReg forClass probModel</span><span class="w">
+</span><span class="c1">## 1      ada      iter         #Trees  FALSE     TRUE      TRUE</span><span class="w">
+</span><span class="c1">## 2      ada  maxdepth Max Tree Depth  FALSE     TRUE      TRUE</span><span class="w">
+</span><span class="c1">## 3      ada        nu  Learning Rate  FALSE     TRUE      TRUE</span><span class="w">
+</span><span class="c1">## 4   AdaBag    mfinal         #Trees  FALSE     TRUE      TRUE</span><span class="w">
+</span><span class="c1">## 5   AdaBag  maxdepth Max Tree Depth  FALSE     TRUE      TRUE</span><span class="w">
+</span><span class="c1">## 9 adaboost     nIter         #Trees  FALSE     TRUE      TRUE</span><span class="w">
+
+</span><span class="c1"># The number of models caret interfaces with</span><span class="w">
+</span><span class="n">nrow</span><span class="p">(</span><span class="n">list_of_models</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 502</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You can choose which model to use in the <code class="highlighter-rouge">train</code> function with the
+<code class="highlighter-rouge">method</code> option. You will note that the fitting of the Cubist and Random
+Forest models below automatically attempt to optimise some of the
+fitting parameters, for example the <code class="highlighter-rouge">mtry</code> parameter for Random Forest.
+To look at what parameters can optimised for each model in caret we can
+use the <code class="highlighter-rouge">modelLookup</code> function. By default a tuning grid is used to find
+the optimal model hyper-parameters, but this can be controlled manually
+by the creation of user defined tuning grids for customised grid search
+workflows. Below is an example of using the default grid search.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Cubist model</span><span class="w">
+</span><span class="n">modelLookup</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cubist"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##    model  parameter       label forReg forClass probModel</span><span class="w">
+</span><span class="c1">## 1 cubist committees #Committees   TRUE    FALSE     FALSE</span><span class="w">
+</span><span class="c1">## 2 cubist  neighbors  #Instances   TRUE    FALSE     FALSE</span><span class="w">
+
+</span><span class="n">fit_cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">14</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cubist"</span><span class="p">,</span><span class="w"> </span><span class="n">trControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trainControl</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cv"</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># model summary</span><span class="w">
+</span><span class="n">fit_cubist</span><span class="w">
+
+</span><span class="c1">## Cubist </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## 506 samples</span><span class="w">
+</span><span class="c1">##   8 predictor</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## No pre-processing</span><span class="w">
+</span><span class="c1">## Resampling: Cross-Validated (5 fold) </span><span class="w">
+</span><span class="c1">## Summary of sample sizes: 403, 404, 406, 405, 406 </span><span class="w">
+</span><span class="c1">## Resampling results across tuning parameters:</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##   committees  neighbors  RMSE      Rsquared   MAE      </span><span class="w">
+</span><span class="c1">##    1          0          1.196051  0.2210315  0.9396362</span><span class="w">
+</span><span class="c1">##    1          5          1.199069  0.2336880  0.9322461</span><span class="w">
+</span><span class="c1">##    1          9          1.179916  0.2420817  0.9291179</span><span class="w">
+</span><span class="c1">##   10          0          1.184225  0.2345799  0.9314920</span><span class="w">
+</span><span class="c1">##   10          5          1.193676  0.2386040  0.9300559</span><span class="w">
+</span><span class="c1">##   10          9          1.172219  0.2498648  0.9236565</span><span class="w">
+</span><span class="c1">##   20          0          1.185989  0.2324439  0.9321528</span><span class="w">
+</span><span class="c1">##   20          5          1.193865  0.2381857  0.9304084</span><span class="w">
+</span><span class="c1">##   20          9          1.172989  0.2488805  0.9247550</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## RMSE was used to select the optimal model using the smallest value.</span><span class="w">
+</span><span class="c1">## The final values used for the model were committees = 10 and neighbors = 9.</span><span class="w">
+
+</span><span class="c1"># random forest model</span><span class="w">
+</span><span class="n">modelLookup</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"rf"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##   model parameter                         label forReg forClass probModel</span><span class="w">
+</span><span class="c1">## 1    rf      mtry #Randomly Selected Predictors   TRUE     TRUE      TRUE</span><span class="w">
+
+</span><span class="n">fit_rf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">14</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"rf"</span><span class="p">,</span><span class="w"> </span><span class="n">trControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trainControl</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cv"</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># model summary</span><span class="w">
+</span><span class="n">fit_rf</span><span class="w">
+
+</span><span class="c1">## Random Forest </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## 506 samples</span><span class="w">
+</span><span class="c1">##   8 predictor</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## No pre-processing</span><span class="w">
+</span><span class="c1">## Resampling: Cross-Validated (5 fold) </span><span class="w">
+</span><span class="c1">## Summary of sample sizes: 405, 406, 404, 404, 405 </span><span class="w">
+</span><span class="c1">## Resampling results across tuning parameters:</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##   mtry  RMSE      Rsquared   MAE      </span><span class="w">
+</span><span class="c1">##   2     1.217696  0.1905925  0.9606279</span><span class="w">
+</span><span class="c1">##   5     1.212227  0.1992767  0.9517521</span><span class="w">
+</span><span class="c1">##   8     1.211337  0.2013908  0.9501383</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## RMSE was used to select the optimal model using the smallest value.</span><span class="w">
+</span><span class="c1">## The final value used for the model was mtry = 8.</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="spatial-prediction-">Spatial prediction <a id="s-6"></a></h3>
+
+<p>Using the fitted model, predictions can be achieved with the <code class="highlighter-rouge">predict</code>
+function:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Cubist model predict to data points</span><span class="w">
+</span><span class="n">pred_cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># To raster data</span><span class="w">
+</span><span class="n">pred_cubistMap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">fit_cubist</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There is plenty of other added functionality of the <code class="highlighter-rouge">caret</code> package. In
+addition to the detailed resources mentioned above, it always pays to
+look over the help files that are associated with each function. It is a
+matter of personal choice whether you use the functionality of <code class="highlighter-rouge">caret</code>
+or take more control of the underlying processes via working directly
+with the model function directly. This also applies for handling
+cross-validation and external validation where you may wish to take
+greater control over the workflow rather than using the built-in
+functionality provide in <code class="highlighter-rouge">caret</code>.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-28">July 28, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cont/sspfs/caret/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cont/sspfs/caret/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cont/sspfs/caret/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

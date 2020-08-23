@@ -21,14 +21,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Soil Spatial Prediction Functions">
 <meta property="og:description" content="Continuous Variables">
-<meta property="og:url" content="/DSM_book/pages/dsm_cont/sspfs/">
+<meta property="og:url" content="/DSM_book/pages/dsm_cont/sspfs/RK/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
 <meta name="google-site-verification" content="googledd99b1430269a639.html">
 
 
 
-<link rel="canonical" href="/DSM_book/pages/dsm_cont/sspfs/">
+<link rel="canonical" href="/DSM_book/pages/dsm_cont/sspfs/RK/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -165,27 +165,60 @@
     </header>
     -->
     <div class="entry-content">
-      <p>The implementation of some of the most commonly used model functions
-used for digital soil mapping will be covered in these pages. Dive in
-and check some of them out.</p>
+      <h2 id="regression-kriging">Regression kriging</h2>
+
+<p>In the previous pages we looked at a few soil spatial prediction
+functions which at the most fundamental level, target the the
+correlation between the target soil variable and the available covariate
+information. We fitted a number of models which included simple linear
+functions to non-linear functions such as regression trees to other more
+complicated data mining techniques e.g. <a href="/DSM_book/pages/dsm_cont/sspfs/cubist/">Cubist</a> and <a href="/DSM_book/pages/dsm_cont/sspfs/rf/">Random Forest</a>).</p>
+
+<p>In this section we will extend upon this DSM approach from what are
+called deterministic models to also include the spatially correlated
+residuals that result from fitting these models.</p>
+
+<p>The approach we will now concentrate is a hybrid approach to modelling,
+whereby the predictions of the target variable are made via a
+deterministic method (regression model with covariate information) and a
+stochastic method where we determine the spatial auto-correlation of the
+model residuals with a variogram. The deterministic model essentially
+<em>detrends</em> the data, leaving behind the residuals for which we need to
+investigate whether there is additional spatial structure which could be
+added to the regression model predictions. These residuals are the
+random component of the $scorpan + e $ model. This method is described
+as regression kriging and has formally been described in Odeh,
+McBratney, and Chittleborough (1995) and is synonymous with universal
+kriging (Hengl, Heuvelink, and Rossiter 2007), which is the formal
+linear model procedure to this soil spatial modeling approach. The
+purpose of this exercise is to introduce some basic concepts of
+regression kriging. You will have already had some experience in
+regression models. We have also investigated briefly the <a href="/DSM_book/pages/dsm_prep/processes/">fundamental concepts of kriging</a>
+for which the variogram is central to.</p>
 
 <ul>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/mlr/">Multiple linear regression</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/dt/">Decision Tree models</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/cubist/">Cubist models</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/rf/">Random Forest models</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/caret/">Introduction to the Caret package</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/RK/">Regression Kriging</a></li>
+  <li><a href="/DSM_book/pages/dsm_cont/sspfs/RK/UK/">Universal Kriging</a></li>
+  <li><a href="/DSM_book/pages/dsm_cont/sspfs/RK/UKH/">Hybrid regression kriging</a></li>
 </ul>
 
+<h3 id="references">References</h3>
+
+<p>Hengl, T, G. B. M Heuvelink, and D. G Rossiter. 2007. “About Regression
+Kriging: From Equations to Case Studies.” <em>Computers &amp; Geosciences</em> 33:
+1301–15.</p>
+
+<p>Odeh, I. O. A, A. B McBratney, and D. J Chittleborough. 1995. “Further
+Results on Prediction of Soil Properties from Terrain Attributes:
+Heterotopic Co-Kriging and Regression Kriging.” <em>Geoderma</em> 67: 215–26.</p>
+
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-28">July 28, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-08-23">August 23, 2020</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cont/sspfs/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cont/sspfs/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cont/sspfs/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cont/sspfs/RK/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cont/sspfs/RK/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cont/sspfs/RK/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div><!-- /.social-share -->
       </footer>

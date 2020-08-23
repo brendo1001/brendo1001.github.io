@@ -4,13 +4,94 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2020-08-02T20:32:14+10:00</updated>
+<updated>2020-08-23T19:06:39+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/08/journalDigest" />
+  <id>/2020/08/journalDigest</id>
+  <updated>2020-08-16T00:00:00-00:00</updated>
+  <published>2020-08-16T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-15&quot;&gt;Journal Paper Digests 2020 #15&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Characterising the biophysical, economic and social impacts of soil carbon sequestration as a greenhouse gas removal technology&lt;/li&gt;
+  &lt;li&gt;Adapting smartphone app used in water testing, for soil nutrient analysis&lt;/li&gt;
+  &lt;li&gt;From sensor data to Munsell color system: Machine learning algorithm applied to tropical soil color classification via Nix™ Pro sensor&lt;/li&gt;
+  &lt;li&gt;Effects of water, organic matter, and iron forms in mid-IR spectra of soils: Assessments from laboratory to satellite-simulated data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;quantifying-uncertainty-for-remote-spectroscopy-of-surface-composition&quot;&gt;Quantifying uncertainty for remote spectroscopy of surface composition&lt;/h3&gt;
+
+&lt;p&gt;Characterising the biophysical, economic and social impacts of soil carbon sequestration as a greenhouse gas removal technology&lt;/p&gt;
+
+&lt;p&gt;To limit warming to well below 2°C, most scenario projections rely on greenhouse gas removal technologies (GGRTs); one such GGRT uses soil carbon sequestration (SCS) in agricultural land. In addition to their role in mitigating climate change, SCS practices play a role in delivering agroecosystem resilience, climate change adaptability and food security. Environmental heterogeneity and differences in agricultural practices challenge the practical implementation of SCS, and our analysis addresses the associated knowledge gap. Previous assessments have focused on global potentials, but there is a need among policymakers to operationalise SCS. Here, we assess a range of practices already proposed to deliver SCS, and distil these into a subset of specific measures. We provide a multidisciplinary summary of the barriers and potential incentives towards practical implementation of these measures. First, we identify specific practices with potential for both a positive impact on SCS at farm level and an uptake rate compatible with global impact. These focus on: (a) optimising crop primary productivity (e.g. nutrient optimisation, pH management, irrigation); (b) reducing soil disturbance and managing soil physical properties (e.g. improved rotations, minimum till); (c) minimising deliberate removal of C or lateral transport via erosion processes (e.g. support measures, bare fallow reduction); (d) addition of C produced outside the system (e.g. organic manure amendments, biochar addition); (e) provision of additional C inputs within the cropping system (e.g. agroforestry, cover cropping). We then consider economic and non‐cost barriers and incentives for land managers implementing these measures, along with the potential externalised impacts of implementation. This offers a framework and reference point for holistic assessment of the impacts of SCS. Finally, we summarise and discuss the ability of extant scientific approaches to quantify the technical potential and externalities of SCS measures, and the barriers and incentives to their implementation in global agricultural systems.&lt;/p&gt;
+
+&lt;h3 id=&quot;adapting-smartphone-app-used-in-water-testing-for-soil-nutrient-analysis&quot;&gt;Adapting smartphone app used in water testing, for soil nutrient analysis&lt;/h3&gt;
+
+&lt;p&gt;Smartphone technology has now penetrated every aspect of modern life. At such high rates of access and utilization, there is today much potential for the development of smartphones as high-performing tools in a number of industries. Traditionally, smartphones have been used as e.g. point-of-care testing devices in developing countries; now a similar approach can be extended to agriculture. This paper assesses the viability of utilizing smartphones in soil analysis. An Android-based smartphone application, in conjunction with commercially available Quantofix® test strips, was employed to analyze 92 soil samples collected across Indonesia. The soils tested encompassed a wide range of different textures (with 13%, 60% and 25% of samples constituting sandy, loamy and clayey soils, respectively), soil organic matter contents (range: 0.8–19.7%) and nutrient concentrations (range for plant-available N: 0.1–137.4 mg kg−1 and P: 1.2 to 64.2 mg kg−1; on dry soil basis). The app utilizes the smartphone as a portable reflectometer, which relates the color of test strips to the concentration of particular nutrients present in the soil medium. Three mobile devices currently available on the market, representing low, mid- and high-end products, were used to test the application. The results obtained via the smartphone were compared against standard methods for determination of extractable nitrate-N and exchangeable phosphorus (Olsen-P) under laboratory conditions. The smartphone-mediated soil analysis was found to have a high degree of agreement with standard methods for nitrate-N determination (87% of samples with nitrate-N differed by less than 10 mg kg−1 from the standard method for the high-end smartphone) but not for phosphorus determination where chemical interferences to test strip colour development were noted. All three mobile devices were shown to be effective as portable reflectometers. However, color perception was found to differ amongst the devices, resulting in a consistent bias between the high-end phone and the remaining appliances. Whereas, it is essential to consider the inter-smartphone variability in readings and environmental factors such as temperature prior to the smartphone-mediated soil analysis, the smartphone-test strip combination might be employed as acceptable screening tool for soil nutrient concentration assessment to enhance crop outcomes, increasing yield, and preventing over-application of inputs, reducing consequent financial and environmental impact. Further enhancements can test the applicability of smartphone-mediated soil analysis in field conditions.&lt;/p&gt;
+
+&lt;h3 id=&quot;from-sensor-data-to-munsell-color-system-machine-learning-algorithm-applied-to-tropical-soil-color-classification-via-nix-pro-sensor&quot;&gt;From sensor data to Munsell color system: Machine learning algorithm applied to tropical soil color classification via Nix™ Pro sensor&lt;/h3&gt;
+
+&lt;p&gt;Soil color has historically drawn humans’ attention, although its definition is somewhat subjective. It is correlated with several soil attributes and it allows for inferences about several soil aspects. New proximal sensors, such as the Nix™ Pro color sensor, can determine soil color values, but its correlation with the widely used Munsell soil color chart (MSCC) has yet to be investigated. This work aimed to train machine learning models using the Random Forest (RF) algorithm to predict each notation of MSCC chips from data extracted by the Nix™ Pro sensor, test the model’s accuracy by evaluating whether it can identify MSCC chips using a brand-new and a dirty MSCC, and compare model predictions with soil color classifications made by the human eye. Additionally, MSCC data obtained via Nix™ was compared to Munsell renotation data to assess the color detection accuracy of the sensor. Prediction models were calibrated by scanning every MSCC chip (437 in total) in triplicate. All validation samples were excluded from model calibration. Accuracy of the predictions of MSCC notation reached overall accuracy and Kappa index values of 0.93 for the brand-new MSCC and of 0.70 for the dirty MSCC. Soil color classification by human eye had little agreement with the predicted MSCC notation, as expected due to the variable conditions affecting soil color conventional determination in the field. Color difference was calculated by the Euclidian distance (ΔE&lt;em&gt;ab) between three color stimuli in the CIELAB color space. The mean ΔE&lt;/em&gt;ab between Nix™-provided data and renotation data was 2.9, demonstrating high color detection accuracy. The Nix™ Pro color sensor allows for assessment of accurate color data. When applied together with machine learning algorithms, Nix™ Pro provides a reliable determination of soil color classification equivalent to MSCC in an easily reproducible, rapid, inexpensive and non-subjective way.&lt;/p&gt;
+
+&lt;h3 id=&quot;effects-of-water-organic-matter-and-iron-forms-in-mid-ir-spectra-of-soils-assessments-from-laboratory-to-satellite-simulated-data&quot;&gt;Effects of water, organic matter, and iron forms in mid-IR spectra of soils: Assessments from laboratory to satellite-simulated data&lt;/h3&gt;
+
+&lt;p&gt;The soil mineralogical constitution directly influences its chemical, physical and hydraulic characteristics. Although very important, it is still rarely used for decision-making in agriculture, mainly due to the complexity and cost of standard analyzes. In this sense, the middle infrared spectroscopy (mid-IR, 4000 to 400 cm−1) has great potential to obtain soil mineralogical information quickly and accurately. Nevertheless, some soil constituents can severely influence the spectra and produce misinterpretations. In this research, we aim to detect changes in the mid-IR spectra caused by water, iron forms and organic matter (OM), and to relate soil attributes to laboratory spectra and remote sensing simulated spectral bands. The research area is located in São Paulo State, Brazil, where seventeen soil samples were collected. The reflectance intensities, shapes and absorption features of the mid-IR spectra before and after the removal of OM and iron forms and the addition of water were described. Soil attributes, such as kaolinite, gibbsite, 2:1 minerals among others were correlated with the mid-IR spectra and simulated ASTER spectral bands by Pearson’s analysis, to verify its potential on mineralogical evaluation. The description of mid-IR revealed that the removal of the OM from the soil samples decreased the reflectance intensities between 4000 and 2000 cm−1. Iron forms mainly influence the 3250 – 1200 cm−1 spectral range and mask the spectral features of other minerals as well. The addition of water masked several absorption features and decreased the reflectance intensities from 3700 to 2700 cm−1. High correlation coefficients were obtained between soil attributes and ASTER simulated spectral bands, which allowed the selection of potential spectral regions for future satellite sensors: 2760 – 2500 cm−1 (3600 – 4000 nm), 2150 – 1875 cm−1 (4600 – 5300 nm), and 840 – 740 cm−1 (11900 – 3500 nm).&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 16, 2020.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2020/08/journalDigest" />
+  <id>/2020/08/journalDigest</id>
+  <updated>2020-08-06T00:00:00-00:00</updated>
+  <published>2020-08-06T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2020-14&quot;&gt;Journal Paper Digests 2020 #14&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quantifying uncertainty for remote spectroscopy of surface composition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;quantifying-uncertainty-for-remote-spectroscopy-of-surface-composition&quot;&gt;Quantifying uncertainty for remote spectroscopy of surface composition&lt;/h3&gt;
+
+&lt;p&gt;Remote Sensing of Environment
+Volume 247, 15 September 2020, 111898&lt;/p&gt;
+
+&lt;p&gt;Abstract
+Remote surface measurements by imaging spectrometers play an important role in planetary and Earth science. To make these measurements, investigators calibrate instrument data to absolute units, invert physical models to estimate atmospheric effects, and then determine surface properties from the spectral reflectance. This study quantifies the uncertainty in this process. Global missions demand predictive uncertainty models that can estimate future errors for varied environments and observing conditions. Here we validate uncertainty predictions with remote surface composition retrievals and in situ measurements in a field analogue of Earth and planetary exploration. We consider rover transects at Cuprite, Nevada, and remote observations by NASA’s Next-Generation Airborne Visible Infrared Imaging Spectrometer (AVIRIS-NG). We show that accounting for input uncertainties can benefit mineral detection methods such as constrained spectrum fitting. This suggests that operational uncertainty estimates could improve future NASA missions like the Earth Mineral dust source InvesTigation (EMIT) and the Lunar Trailblazer mission, as well as NASA’s Decadal Surface Biology and Geology (SBG) Investigation.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2020/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 06, 2020.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1641,100 +1722,6 @@ Published: NOV 2019&lt;/p&gt;
 The microbial partitioning of organic carbon (C) into either anabolic (i.e. growth) or catabolic (i.e. respiration) metabolic pathways represents a key process regulating the amount of added C that is retained in soil. The factors regulating C use efficiency (CUE) in agricultural soils, however, remain poorly understood. The aim of this study was to investigate substrate CUE from a wide range of soils (n = 970) and geographical area (200,000 km(2)) to determine which soil properties most influenced C retention within the microbial community. Using a C-14-labeling approach, we showed that the average CUE across all soils was 0.65 +/- 0.003, but that the variation in CUE was relatively high within the sample population (CV 14.9%). Of the major properties measured in our soils, we found that pH and exchangeable aluminum (Al) were highly correlated with CUE. We identified a critical pH transition point at which CUE declined (pH 5.5). This coincided exactly with the point at which Al3+ started to become soluble. In contrast, other soil factors [e.g. total C and nitrogen (N), dissolved organic C (DOC), clay content, available calcium, phosphorus (P) and sulfur (S), total base cations] showed little or no relationship with CUE. We also found no evidence to suggest that nutrient stoichiometry (C:N, C:P and C:S ratios) influenced CUE in these soils. Based on current evidence, we postulate that the decline in microbial CUE at low pH and high Al reflects a greater channeling of C into energy intensive metabolic pathways involved in overcoming H+/Al3+ stress (e.g. cell repair and detoxification). The response may also be associated with shifts in microbial community structure, which are known to be tightly associated with soil pH. We conclude that maintaining agricultural soils above pH 5.5 maximizes microbial energy efficiency.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2019/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 26, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/11/journalDigest" />
-  <id>/2019/11/journalDigest</id>
-  <updated>2019-11-19T00:00:00-00:00</updated>
-  <published>2019-11-19T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-17&quot;&gt;Journal Paper Digests 2019 #17&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Understanding ecosystems of the future will require more than realistic climate change experiments - A response to Korell et al.&lt;/li&gt;
-  &lt;li&gt;A method to assess the impact of soil available water capacity uncertainty on crop models with a tipping-bucket approach&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;understanding-ecosystems-of-the-future-will-require-more-than-realistic-climate-change-experiments---a-response-to-korell-et-al&quot;&gt;Understanding ecosystems of the future will require more than realistic climate change experiments - A response to Korell et al.&lt;/h3&gt;
-
-&lt;p&gt;De Boeck, Hans J.; Bloor, Juliette M. G.; Aerts, Rien; Bahn, Michael; Beier, Claus; et al.
-Global Change Biology&lt;/p&gt;
-
-&lt;h3 id=&quot;a-method-to-assess-the-impact-of-soil-available-water-capacity-uncertainty-on-crop-models-with-a-tipping-bucket-approach&quot;&gt;A method to assess the impact of soil available water capacity uncertainty on crop models with a tipping-bucket approach&lt;/h3&gt;
-
-&lt;p&gt;Constantin, Julie; Picheny, Victor; Nassar, Lina H.; Bergez, Jacques-Eric
-European Journal Of Soil Science&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2019/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 19, 2019.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2019/11/journalDigest" />
-  <id>/2019/11/journalDigest</id>
-  <updated>2019-11-03T00:00:00-00:00</updated>
-  <published>2019-11-11T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2019-16&quot;&gt;Journal Paper Digests 2019 #16&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Estimation of Field-Scale Variability in Soil Saturated Hydraulic Conductivity From Rainfall-Runoff experiments&lt;/li&gt;
-  &lt;li&gt;Mapping forest change using stacked generalization: An ensemble approach&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;estimation-of-field-scale-variability-in-soil-saturated-hydraulic-conductivity-from-rainfall-runoff-experiments&quot;&gt;Estimation of Field-Scale Variability in Soil Saturated Hydraulic Conductivity From Rainfall-Runoff experiments&lt;/h3&gt;
-
-&lt;p&gt;By:Goyal, A (Goyal, Abhishek)[ 1 ] ; Morbidelli, R (Morbidelli, Renato)[ 2 ] ; Flammini, A (Flammini, Alessia)[ 2 ] ; Corradini, C (Corradini, Corrado)[ 2 ] ; Govindaraju, RS (Govindaraju, Rao S.)[ 1 ]&lt;/p&gt;
-
-&lt;p&gt;View Web of Science ResearcherID and ORCID
-WATER RESOURCES RESEARCH&lt;/p&gt;
-
-&lt;p&gt;Volume: 55 Issue: 9 Pages: 7902-7915
-Published: SEP 2019&lt;/p&gt;
-
-&lt;p&gt;Document Type: Article&lt;/p&gt;
-
-&lt;p&gt;Abstract
-Saturated hydraulic conductivity (K-s) is among the important soil properties that influence the partitioning of rainfall into surface and subsurface waters. Point estimates of K-s are difficult to determine and exhibit large spatial variability in fields. Often, data from field-scale rainfall-runoff experiments are utilized to assess the properties of the K-s random field that are required in the use of field-scale infiltration models. Standard methods of calibration are confounded by nonuniqueness and identifiability problems associated with experimental data. In this study, a new method that employed a field-averaged infiltration model and Monte Carlo simulations was used to obtain the possible range of distributions of K-s that would describe experimental observations over a field for a rainfall event. A Shannon information-theoretic approach was subsequently adopted to consolidate the ranges of K-s distributions over multiple rainfall events to yield the best range of K-s distributions. The method was applied to data from several rainfall-runoff events observed under natural conditions over an experimental field characterized by a silty loam soil and a small surface slope. Results suggest the existence of numerous parameter combinations that could satisfy the experimental observations over a single rainfall event, and high variability of these combinations among different events, thereby providing insights regarding the identifiable space of K-s distributions from individual rainfall experiments. Validation results showed that the method provides a realistic estimate of our ability to quantify the spatial variability of K-s in natural fields from rainfall-runoff experiments.&lt;/p&gt;
-
-&lt;h3 id=&quot;mapping-forest-change-using-stacked-generalization-an-ensemble-approach&quot;&gt;Mapping forest change using stacked generalization: An ensemble approach&lt;/h3&gt;
-
-&lt;p&gt;By:Healey, SP (Healey, Sean P.)[ 1 ] ; Cohen, WB (Cohen, Warren B.)[ 2 ] ; Yang, ZQ (Yang, Zhiqiang)[ 3 ] ; Brewer, CK (Brewer, C. Kenneth)[ 4 ] ; Brooks, EB (Brooks, Evan B.)[ 5 ] ; Gorelick, N (Gorelick, Noel)[ 6 ] ; Hernandez, AJ (Hernandez, Alexander J.)[ 7 ] ; Huang, CQ (Huang, Chengquan)[ 8 ] ; Hughes, MJ (Hughes, M. Joseph)[ 3 ] ; Kennedy, RE (Kennedy, Robert E.)[ 3 ] …More&lt;/p&gt;
-
-&lt;p&gt;View Web of Science ResearcherID and ORCID
-REMOTE SENSING OF ENVIRONMENT&lt;/p&gt;
-
-&lt;p&gt;Volume: 204 Pages: 717-728
-Published: JAN 2018&lt;/p&gt;
-
-&lt;p&gt;Document Type: Article&lt;/p&gt;
-
-&lt;p&gt;Abstract
-The ever-increasing volume and accessibility of remote sensing data has spawned many alternative approaches for mapping important environmental features and processes. For example, there are several viable but highly varied strategies for using time series of Landsat imagery to detect changes in forest cover. Performance among algorithms varies across complex natural systems, and it is reasonable to ask if aggregating the strengths of an ensemble of classifiers might result in increased overall accuracy. Relatively simple rules have been used in the past to aggregate classifications among remotely sensed maps (e.g. using majority predictions), and in other fields, empirical models have been used to create situationally specific algorithm weights. The latter process, called “stacked generalization” (or “stacking”), typically uses a parametric model for the fusion of algorithm outputs. We tested the performance of several leading forest disturbance detection algorithms against ensembles of the outputs of those same algorithms based upon stacking using both parametric and Random Forests-based fusion rules. Stacking using a Random Forests model cut omission and commission error rates in half in many cases in relation to individual change detection algorithms, and cut error rates by one quarter compared to more conventional parametric stacking. Stacking also offers two auxiliary benefits: alignment of outputs to the precise definitions built into a particular set of empirical calibration data; and, outputs which may be adjusted such that map class totals match independent estimates of change in each year. In general, ensemble predictions improve when new inputs are added that are both informative and uncorrelated with existing ensemble components. As increased use of cloud-based computing makes ensemble mapping methods more accessible, the most useful new algorithms may be those that specialize in providing spectral, temporal, or thematic information not already available through members of existing ensembles.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2019/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 11, 2019.&lt;/p&gt;
   </content>
 </entry>
 
