@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Data modelling with continous type target variables &#8211; Smart Digital Agriculture</title>
+<title>Data modelling with categorical type target variables &#8211; Smart Digital Agriculture</title>
 <meta name="description" content="">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
-<meta name="twitter:title" content="Data modelling with continous type target variables">
+<meta name="twitter:title" content="Data modelling with categorical type target variables">
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@soilmalone">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Data modelling with continous type target variables">
+<meta property="og:title" content="Data modelling with categorical type target variables">
 <meta property="og:description" content="">
-<meta property="og:url" content="/DSM_book/pages/dsm_cont/">
+<meta property="og:url" content="/DSM_book/pages/dsm_cat/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
 <meta name="google-site-verification" content="googledd99b1430269a639.html">
 
 
 
-<link rel="canonical" href="/DSM_book/pages/dsm_cont/">
+<link rel="canonical" href="/DSM_book/pages/dsm_cat/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -133,7 +133,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Data modelling with continous type target variables</h1>
+                    <h1>Data modelling with categorical type target variables</h1>
                     
                         <hr class="small">
                         <span class="subheading"></span>
@@ -153,35 +153,63 @@
     <!--
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title">Data modelling with continous type target variables</h1>
+        <h1 class="entry-title">Data modelling with categorical type target variables</h1>
         
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~1 minute
+          Reading time ~2 minutes
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <p>In the <a href="/DSM_book/pages/introduction/">course fundamentals</a>, some of the history and theoretical underpinnings of DSM was discussed. Now with a solid foundation in <code class="highlighter-rouge">R</code>, it is time to put this all into practice i.e. do DSM with <code class="highlighter-rouge">R</code>. In the <a href="/DSM_book/pages/dsm_prep/">DSM preparation</a> pages you were introduced to common steps need to get data in a format ready for spatial modelling. The implementation of some of the most commonly used model functions used for digital soil mapping will be covered in this section of pages. A few general concepts around assessing model fitness and validation need some covering first, but if you already comfortable about these, then jump straight into the looking at and fitting models.</p>
+      <p>In the <a href="/DSM_book/pages/introduction/">course fundamentals</a>, some of the history and theoretical underpinnings of DSM was discussed. Now with a solid foundation in <code class="highlighter-rouge">R</code>, it is time to put this all into practice i.e. do DSM with <code class="highlighter-rouge">R</code>. In the <a href="/DSM_book/pages/dsm_prep/">DSM preparation</a> pages you were introduced to common steps need to get data in a format ready for spatial modelling. In a related effort you may have already covered sections on <a href="/DSM_book/pages/dsm_cont/">data modelling with continous type target variables</a>.</p>
+
+<p>The other form of soil spatial prediction functions are those dealing with categorical target variables such as soil classes. Naturally the models we will use further on are not specific to soil classes but can be generally applied to any type of categorical data too.</p>
+
+<p>In the examples to follow we will demonstrate the prediction of soil-landscape classes termed: Terrons. Terron relates to a soil and landscape concept that has an associated model. The concept was first described by Carre and McBratney (2005). The embodiment of Terron is a continuous soil-landscape unit or class which combines soil knowledge, landscape information, and their interactions together. Malone et al. (2014) detailed an approach for defining Terrons in the Lower Hunter Valley, NSW, Australia. This area is a prominent wine-growing region of Australia, and the development of Terrons is a first step in the realization of viticultural terroir — an established concept of identity that incorporates much more than just soil and landscape qualities (Vaudour et al. 2015).</p>
+
+<p>In the work by Malone et al. (2014) they defined 12 Terrons for the Hunter Valley, which are distinguished by such soil and landscape characteristics as: geomorphometric attributes (derived from a digital elevation model) and specific attributes pertaining to soil pH, clay percentage, soil mineralogy (clay types and presence of iron oxides), continuous soil classes, and presence or absence of marl. The brief in the following examples is to predict the Terron classes across the prescribed Lower Hunter Valley, given a set of observations (sampled directly from the Terron map produced by Malone et al. (2014)).</p>
+
+<p>By now you will be familiar with the process of <a href="/DSM_book/pages/dsm_cont/sspfs/">fitting models</a> and <a href="/DSM_book/pages/dsm_cont/prediction/">plotting/mapping the outputs</a>. Thus in many ways, categorical datamodeling is similar (in terms of implementation) with prediction models of continuous variables. The example <a href="/DSM_book/pages/dsm_cont/sspfs/caret/">demonstrating the use of the <code class="highlighter-rouge">caret</code> package</a> can also be similarly applied for categorical variables too, where you will find many model functions suited to that type of data with that package.</p>
+
+<p>In this section of pages we will have a look at a few different classification models:</p>
 
 <ul>
-  <li><a href="/DSM_book/pages/dsm_cont/goof/">What is model goodness of fit?</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/cv/">Cross-validation</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/prediction/">Applying a model spatially</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/sspfs/">SOIL SPATIAL PREDICTION FUNCTIONS</a></li>
+  <li><a href="/DSM_book/pages/dsm_cat/mlr/">Multinomial logistic regression</a></li>
+  <li><a href="/DSM_book/pages/dsm_cat/c5/">Data mining with the C5 algorithm</a></li>
+  <li><a href="/DSM_book/pages/dsm_cat/rf/">Random Forest</a></li>
 </ul>
+
+<p>Key differences between modelling of continuous and categorical variables are the nature of validation and the estimation and expression of prediction uncertainty. It is probably worthwhile to spend some time if not already familiar with the common metrics for assessing the goodness of fit for categorical models. In the pages above some ways of expressing uncertainty of categorical models is also investigated.</p>
+
+<ul>
+  <li><a href="/DSM_book/pages/dsm_cat/val/">Model validation of categorical prediction models</a></li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<p>Carre, F, and A B McBratney. 2005. “Digital Terron Mapping.” <em>Geoderma</em>
+128: 340–53.</p>
+
+<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for
+the Identification of Terrons in the Lower Hunter Valley, Australia.”
+<em>Geoderma Regional</em> 1: 31–47.</p>
+
+<p>Vaudour, E, E Costantini, G V Jones, and S Mocali. 2015. “An Overview of
+the Recent Approaches to Terroir Functional Modelling, Footprinting and
+Zoning.” <em>SOIL</em> 1: 287–312.</p>
 
       <footer class="entry-meta">
         <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-26">July 26, 2020</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cont/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cont/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cont/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cat/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cat/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cat/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div><!-- /.social-share -->
       </footer>
