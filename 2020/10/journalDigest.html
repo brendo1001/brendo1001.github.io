@@ -22,14 +22,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Journal Paper Digests">
 <meta property="og:description" content="Lots of stuff about ag, soils, science, and the data and analytics that lets us do these things better and more efficiently">
-<meta property="og:url" content="/2019/07/journalDigest">
+<meta property="og:url" content="/2020/10/journalDigest">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
 <meta name="google-site-verification" content="googledd99b1430269a639.html">
 
 
 
-<link rel="canonical" href="/2019/07/journalDigest">
+<link rel="canonical" href="/2020/10/journalDigest">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -145,86 +145,68 @@
         
           <h1 class="entry-title">Journal Paper Digests</h1>
         
-        <h2><span class="entry-date date published"><time datetime="2019-07-30T00:00:00+10:00">July 30, 2019</time></span></h2>
+        <h2><span class="entry-date date published"><time datetime="2020-10-19T00:00:00+11:00">October 19, 2020</time></span></h2>
         
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~4 minutes
+          Reading time ~6 minutes
         </p><!-- /.entry-reading-time -->
         
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <h2 id="journal-paper-digests-2019-12">Journal Paper Digests 2019 #12</h2>
+      <h2 id="journal-paper-digests-2020-16">Journal Paper Digests 2020 #16</h2>
 
 <ul>
-  <li>Physically Based Model for Extracting Dual-Permeability Parameters Using Non-Newtonian Fluids</li>
-  <li>Scale Issues in Soil Hydrology</li>
-  <li>Strength matters: Resisting erosion across upland landscapes</li>
-  <li>Using deep learning for multivariate mapping of soil with quantified uncertainty</li>
+  <li>Molecular trade-offs in soil organic carbon composition at continental scale</li>
+  <li>Linear mixed effects models for non‐Gaussian continuous repeated measurement data</li>
+  <li>Circular regression trees and forests with an application to probabilistic wind direction forecasting</li>
+  <li>Use of diffuse reflectance spectroscopy and Nix pro color sensor in combination for rapid prediction of soil organic carbon</li>
+  <li>A framework for modelling soil structure dynamics induced by biological activity</li>
 </ul>
 
 <!--more-->
 
-<h3 id="physically-based-model-for-extracting-dual-permeability-parameters-using-non-newtonian-fluids">Physically Based Model for Extracting Dual-Permeability Parameters Using Non-Newtonian Fluids</h3>
+<h3 id="molecular-trade-offs-in-soil-organic-carbon-composition-at-continental-scale">Molecular trade-offs in soil organic carbon composition at continental scale</h3>
 
-<p>Authors:
-Basset, CN; Abou Najm, MR; Ammar, A; Stewart, RD; Hauswirth, SC; Saad, G</p>
+<p>https://www.nature.com/articles/s41561-020-0634-x</p>
 
-<p>Source:
-<em>VADOSE ZONE JOURNAL</em>, 18 (1):80172-80172; JUL 11 2019</p>
+<p>The molecular composition of soil organic carbon remains contentious. Microbial-, plant- and fire-derived compounds may each contribute, but whether they vary predictably among ecosystems remains unclear. Here we present carbon functional groups and molecules from a diverse spectrum of North American surface mineral soils, collected primarily from the National Ecological Observatory Network and quantified by nuclear magnetic resonance spectroscopy and a molecular mixing model. We find that soils vary widely in relative contributions of carbohydrate, lipid, protein, lignin and char-like carbon, but each compound class has similar overall abundance. Ninety percent of the variance in carbon composition can be explained by three principal component axes representing a trade-off between lignin and protein, a trade-off between carbohydrate and char, and lipids. Reactive aluminium, crystalline iron oxides and pH plus overlying organic horizon thickness—predictors that are all related to climate—best explain variation along each respective axis. Together, our data point to continental-scale trade-offs in soil carbon molecular composition that are linked to environmental and geochemical variables known to predict carbon mass concentrations. Controversies regarding the genesis of soil carbon and its potential responses to global change can be partially reconciled by considering diverse ecosystem properties that drive complementary persistence mechanisms.</p>
 
-<p>Abstract:
-Dual-permeability models simulate flow and transport within soils characterized by preferential (macro) and matrix (micro) pore domains, with each exhibiting distinct hydraulic properties. The lack of suitable methods for determining appropriate and physically based model parameters remains a major challenge to applying these models. Here, we present a method that characterizes dual-permeability model parameters using experimental results of saturated flows from water and a non-Newtonian fluid. We present two submodels that solve for the effective pore sizes of micropores and macropores, with macropores represented either with cylindrical (for biological pores) or planar (for shrinkage cracks and fissures) pore geometries. The model also determines the percentage contribution (wi) of the representative macro-and micropores to water flow. We applied the model to experimental soil samples complemented with capillary tubes simulating the macropores and showed its ability to deri
- ve the bimodal pore size distributions in dual-domain soils using only two fluids. As such, we present this method of characterization of dual structures for improved modeling of nonuniform preferential flow and transport in macroporous soils.</p>
+<h3 id="linear-mixed-effects-models-for-nongaussian-continuous-repeated-measurement-data">Linear mixed effects models for non‐Gaussian continuous repeated measurement data</h3>
 
-<h3 id="scale-issues-in-soil-hydrology">Scale Issues in Soil Hydrology</h3>
+<p>Has an R package</p>
 
-<p>Authors:
-Vogel, HJ</p>
+<p>https://rss.onlinelibrary.wiley.com/doi/10.1111/rssc.12405</p>
 
-<p>Source:
-<em>VADOSE ZONE JOURNAL</em>, 18 (1):90001-90001; JUL 11 2019</p>
+<p>We consider the analysis of continuous repeated measurement outcomes that are collected longitudinally. A standard framework for analysing data of this kind is a linear Gaussian mixed effects model within which the outcome variable can be decomposed into fixed effects, time invariant and time‐varying random effects, and measurement noise. We develop methodology that, for the first time, allows any combination of these stochastic components to be non‐Gaussian, using multivariate normal variance–mean mixtures. To meet the computational challenges that are presented by large data sets, i.e. in the current context, data sets with many subjects and/or many repeated measurements per subject, we propose a novel implementation of maximum likelihood estimation using a computationally efficient subsampling‐based stochastic gradient algorithm. We obtain standard error estimates by inverting the observed Fisher information matrix and obtain the predictive distributions for the random effects in both filtering (conditioning on past and current data) and smoothing (conditioning on all data) contexts. To implement these procedures, we introduce an R package: ngme. We reanalyse two data sets, from cystic fibrosis and nephrology research, that were previously analysed by using Gaussian linear mixed effects models.</p>
 
-<p>Abstract:
-Soil hydrology is a key control for the functioning of the terrestrial environment. Many environmental issues that we need to tackle today are directly linked to soil water dynamics. This includes agricultural production and food security, nutrient cycling and carbon storage, prevention of soil degradation and erosion, and last but not least, clean water resources and flood protection. However, these problems need to be addressed at the scales of fields, regions, and landscapes, while soil water dynamics and soil hydraulic properties are well understood and typically measured at much smaller scales-the comfort zone of soil physics. An obvious problem is how to link these vastly different scales and how to profit from small-scale understanding to improve our capability to predict what is going on at the large scale. In this update, this problem is discussed based on insights gained during the last decades. As a synthesis, a two-step scaling approach is proposed for modeling so
- il water dynamics from local to landscape scales where the scale of the soil profile is the stepping stone.</p>
+<h3 id="circular-regression-trees-and-forests-with-an-application-to-probabilistic-wind-direction-forecasting">Circular regression trees and forests with an application to probabilistic wind direction forecasting</h3>
 
-<h3 id="strength-matters-resisting-erosion-across-upland-landscapes">Strength matters: Resisting erosion across upland landscapes</h3>
+<p>Has an R package</p>
 
-<p>Authors:
-Heimsath, AM; Whipple, KX</p>
+<p>https://rss.onlinelibrary.wiley.com/doi/10.1111/rssc.12437</p>
 
-<p>Source:
-<em>EARTH SURFACE PROCESSES AND LANDFORMS</em>, 44 (9):1748-1754; JUL 2019</p>
+<p>Although circular data occur in a wide range of scientific fields, the methodology for distributional modelling and probabilistic forecasting of circular response variables is quite limited. Most of the existing methods are built on generalized linear and additive models, which are often challenging to optimize and interpret. Specifically, capturing abrupt changes or interactions is not straightforward but often relevant, e.g. for modelling wind directions subject to different wind regimes. Additionally, automatic covariate selection is desirable when many predictor variables are available, as is often the case in weather forecasting. To address these challenges we suggest a general distributional approach using regression trees and random forests to obtain probabilistic forecasts for circular responses. Using trees simplifies model estimation as covariates are used only for partitioning the data and subsequently just a simple von Mises distribution is fitted in the resulting subgroups. Circular regression trees are straightforward to interpret, can capture non‐linear effects and interactions, and automatically select covariates affecting location and/or scale in the von Mises distribution. Circular random forests regularize and smooth the effects from an ensemble of trees. The new methods are applied to probabilistic wind direction forecasting at two Austrian airports, considering other common approaches as a benchmark.</p>
 
-<p>Abstract:
-Soil-covered upland landscapes comprise a critical part of the habitable world and our understanding of their evolution as a function of different climatic, tectonic, and geologic regimes is important across a wide range of disciplines. Soil production and transport play essential roles in controlling the spatial variation of soil depth and therefore hillslope hydrological processes, distribution of vegetation, and soil biological activity. Field-based confirmation of the hypothesized relationship between soil thickness and soil production is relatively recent, however, and here we quantify a direct, material strength-based influence on variable soil production across landscapes. We report clear empirical linkages between the shear strength of the parent material (its erodibility) and the overlying soil thickness. Specifically, we use a cone penetrometer and a shear vane to determine saprolite resistance to shear. We find that saprolite shear strength increases systematically
-  with overlying soil thickness across three very different field sites where we previously quantified soil production rates. At these sites, soil production rates, determined from in situ produced beryllium-10 (Be-10) and aluminum-26 (Al-26), decrease with overlying soil thickness and we therefore infer that the efficiency of soil production must decrease with increasing parent material shear strength. We use our field-based data to help explain the linkages between biogenic processes, chemical weathering, hillslope hydrology, and the evolution of the Earth’s surface.</p>
+<h3 id="use-of-diffuse-reflectance-spectroscopy-and-nix-pro-color-sensor-in-combination-for-rapid-prediction-of-soil-organic-carbon">Use of diffuse reflectance spectroscopy and Nix pro color sensor in combination for rapid prediction of soil organic carbon</h3>
 
-<h3 id="using-deep-learning-for-multivariate-mapping-of-soil-with-quantified-uncertainty">Using deep learning for multivariate mapping of soil with quantified uncertainty</h3>
+<p>Contemporary soil characterization is increasingly dependent upon proximal sensor data whereby high sample throughput and low-cost analysis are realized. Recent research studies have shown that combined sensor platforms generally offer greater predictive model stability and increased accuracy than the use of sensors in isolation. In this study, data from an inexpensive ($350 USD) Nix Pro color sensor, which measures the true color of an object by using red, blue, and green filters, was used with diffuse reflectance spectroscopy (DRS) (590–2490 nm) to predict soil organic carbon (OC) content in highly disturbed, landfill soils of India ex-situ. Generalized additive model (GAM) and partial least squares regression (PLSR) were applied to model DRS and Nix Pro data, respectively, both independently and by combining model predictions using a bilinear regression. Results showed that the combined model outperformed either sensor independently where the 30% external test set achieved a validation R2 of 0.95, residual prediction deviation (RPD) of 4.54, and the ratio of performance to interquartile range of 6.25 relative to laboratory-measured OC data. In contrary, the GAM-OC model using Nix Pro data alone and the PLSR-OC model using DRS data alone exhibited validation R2 values of 0.58 and 0.81, respectively. In sum, the addition of the inexpensive Nix Pro sensor substantively improved the prediction of soil OC relative to the use of DRS in isolation. Future studies should evaluate the effectiveness of such an approach on a wider variety of soil types (e.g., colors), its effectiveness in-situ under variable moisture conditions, and in possible combination with other proximal sensing platforms.</p>
 
-<p>Authors:
-Wadoux, AMJC</p>
+<h3 id="a-framework-for-modelling-soil-structure-dynamics-induced-by-biological-activity">A framework for modelling soil structure dynamics induced by biological activity</h3>
 
-<p>Source:
-<em>GEODERMA</em>, 351 59-70; OCT 1 2019</p>
-
-<p>Abstract:
-Digital soil mapping (DSM) techniques are widely employed to generate soil maps. Soil properties are typically predicted individually, while ignoring the interrelation between them. Models for predicting multiple properties exist, but they are computationally demanding and often fail to provide accurate description of the associated uncertainty. In this paper a convolutional neural network (CNN) model is described to predict several soil properties with quantified uncertainty. CNN has the advantage that it incorporates spatial contextual information of environmental covariates surrounding an observation. A single CNN model can be trained to predict multiple soil properties simultaneously. I further propose a two-step approach to estimate the uncertainty of the prediction for mapping using a neural network model. The methodology is tested mapping six soil properties on the French metropolitan territory using measurements from the LUCAS dataset and a large set of environmental 
- covariates portraying the factors of soil formation. Results indicate that the multivariate CNN model produces accurate maps as shown by the coefficient of determination and concordance correlation coefficient, compared to a conventional machine learning technique. For this country extent mapping, the maps predicted by CNN have a detailed pattern with significant spatial variation. Evaluation of the uncertainty maps using the median of the standardized squared prediction error and accuracy plots suggests that the uncertainty was accurately quantified, albeit slightly underestimated. The tests conducted using different window size of input covariates to predict the soil properties indicate that CNN benefits from using local contextual information in a radius of 4.5 km. I conclude that CNN is an effective model to predict several soil properties and that the associated uncertainty can be accurately quantified with the proposed approach.</p>
-
+<p>Soil degradation is a worsening global phenomenon driven by socio‐economic pressures, poor land management practices and climate change. A deterioration of soil structure at timescales ranging from seconds to centuries is implicated in most forms of soil degradation including the depletion of nutrients and organic matter, erosion and compaction. New soil–crop models that could account for soil structure dynamics at decadal to centennial timescales would provide insights into the relative importance of the various underlying physical (e.g. tillage, traffic compaction, swell/shrink and freeze/thaw) and biological (e.g. plant root growth, soil microbial and faunal activity) mechanisms, their impacts on soil hydrological processes and plant growth, as well as the relevant timescales of soil degradation and recovery. However, the development of such a model remains a challenge due to the enormous complexity of the interactions in the soil–plant system. In this paper, we focus on the impacts of biological processes on soil structure dynamics, especially the growth of plant roots and the activity of soil fauna and microorganisms. We first define what we mean by soil structure and then review current understanding of how these biological agents impact soil structure. We then develop a new framework for modelling soil structure dynamics, which is designed to be compatible with soil–crop models that operate at the soil profile scale and for long temporal scales (i.e. decades, centuries). We illustrate the modelling concept with a case study on the role of root growth and earthworm bioturbation in restoring the structure of a severely compacted soil.</p>
 
       <footer class="entry-meta">
         <span class="entry-tags"><a href="/tags/#Journal Papers" title="Pages tagged Journal Papers" class="tag"><span class="term">Journal Papers</span></a><a href="/tags/#Research" title="Pages tagged Research" class="tag"><span class="term">Research</span></a></span>
-        <span>Updated on <span class="entry-date date updated"><time datetime="2019-07-30">July 30, 2019</time></span></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2020-10-19">October 19, 2020</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/2019/07/journalDigest" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/2019/07/journalDigest" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=/2019/07/journalDigest" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/2020/10/journalDigest" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/2020/10/journalDigest" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/2020/10/journalDigest" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div><!-- /.social-share -->
       </footer>
@@ -233,7 +215,7 @@ Digital soil mapping (DSM) techniques are widely employed to generate soil maps.
     <div class="read-more">
   
     <div class="read-more-header">
-      <a href="/2019/07/journalDigest" class="read-more-btn">Read More</a>
+      <a href="/2020/08/journalDigest" class="read-more-btn">Read More</a>
     </div><!-- /.read-more-header -->
     <div class="read-more-content">
       <h3><a href="/2020/11/journalDigest" title="Journal Paper Digests">Journal Paper Digests</a></h3>
