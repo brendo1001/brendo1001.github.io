@@ -1,0 +1,487 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>R Literacy &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Part 6">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="R Literacy">
+<meta name="twitter:description" content="Part 6">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R Literacy">
+<meta property="og:description" content="Part 6">
+<meta property="og:url" content="/DSM_book/pages/r_literacy/part6/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_literacy/part6/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>R Literacy</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Part 6</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">R Literacy</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~7 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part6.R">here</a></p>
+
+<h2 id="exploratory-data-analysis">Exploratory data analysis</h2>
+
+<h3 id="summary-statistics">Summary statistics</h3>
+
+<p>We will again use the <code class="highlighter-rouge">soil.data</code> set to demonstrate calculation of
+summary statistics. Just for recall, lets see what is in this data
+frame.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+    </span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">USYD_soil1</span><span class="w">
+    </span><span class="nf">names</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##  [1] "PROFILE"      "Landclass"    "Upper.Depth"  "Lower.Depth"  "clay"        </span><span class="w">
+    </span><span class="c1">##  [6] "silt"         "sand"         "pH_CaCl2"     "Total_Carbon" "EC"          </span><span class="w">
+    </span><span class="c1">## [11] "ESP"          "ExchNa"       "ExchK"        "ExchCa"       "ExchMg"      </span><span class="w">
+    </span><span class="c1">## [16] "CEC"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Here are some useful functions (and note the usage of the <code class="highlighter-rouge">na.rm</code>
+argument) for calculation of means (<code class="highlighter-rouge">mean</code>), medians (<code class="highlighter-rouge">median</code>),
+standard deviations (<code class="highlighter-rouge">sd</code>) and variances (<code class="highlighter-rouge">var</code>):</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mean</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 26.95302</span><span class="w">
+
+    </span><span class="n">median</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 21</span><span class="w">
+
+    </span><span class="n">sd</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 15.6996</span><span class="w">
+
+    </span><span class="n">var</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## [1] 246.4775</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">R</code> has a built-in function for summarizing vectors or data frames
+called <code class="highlighter-rouge">summary</code>. This function is a generic function—what it returns is
+dependent on the type of data set to it. Applying the <code class="highlighter-rouge">summary</code> function
+to the first 6 columns in the <code class="highlighter-rouge">soil.data</code> set results in the following
+output:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">soil.data</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">])</span><span class="w">
+
+    </span><span class="c1">##     PROFILE                 Landclass   Upper.Depth      Lower.Depth    </span><span class="w">
+    </span><span class="c1">##  Min.   : 1.00   Cropping        :49   Min.   :0.0000   Min.   :0.0200  </span><span class="w">
+    </span><span class="c1">##  1st Qu.: 8.00   Forest          :50   1st Qu.:0.0200   1st Qu.:0.0500  </span><span class="w">
+    </span><span class="c1">##  Median :15.00   improved pasture:35   Median :0.0500   Median :0.1000  </span><span class="w">
+    </span><span class="c1">##  Mean   :14.73   native pasture  :32   Mean   :0.1816   Mean   :0.2464  </span><span class="w">
+    </span><span class="c1">##  3rd Qu.:22.00                         3rd Qu.:0.2000   3rd Qu.:0.3000  </span><span class="w">
+    </span><span class="c1">##  Max.   :29.00                         Max.   :0.7000   Max.   :0.8000  </span><span class="w">
+    </span><span class="c1">##                                                                         </span><span class="w">
+    </span><span class="c1">##       clay            silt     </span><span class="w">
+    </span><span class="c1">##  Min.   : 5.00   Min.   : 6.0  </span><span class="w">
+    </span><span class="c1">##  1st Qu.:15.00   1st Qu.:11.0  </span><span class="w">
+    </span><span class="c1">##  Median :21.00   Median :15.0  </span><span class="w">
+    </span><span class="c1">##  Mean   :26.95   Mean   :16.5  </span><span class="w">
+    </span><span class="c1">##  3rd Qu.:37.00   3rd Qu.:20.0  </span><span class="w">
+    </span><span class="c1">##  Max.   :68.00   Max.   :32.0  </span><span class="w">
+    </span><span class="c1">##  NA's   :17      NA's   :1</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Notice the difference between numerical and categorical variables. The
+<code class="highlighter-rouge">summary</code> function should probably be your first stop after organizing
+your data, and before analyzing it as it provides an easy way to check
+for wildly erroneous values.</p>
+
+<h3 id="histograms-and-box-plots">Histograms and box plots</h3>
+
+<p>Box plots and histograms are simple but useful ways of summarizing data.
+You can generate a histogram in <code class="highlighter-rouge">R</code> using the function <code class="highlighter-rouge">hist</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">hist</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<figure>
+    <img src="/images/dsm_book/histo.png" alt="rconsole" />
+    <figcaption> Histogram of clay content from `soil.data`.</figcaption>
+</figure>
+
+<p>The histogram above can be made to look nicer, by applying some of the
+plotting parameters or arguments that were covered in Part 4 about the
+<code class="highlighter-rouge">plot</code> function. There are also some additional <em>plotting</em> arguments
+that can be sourced in the <code class="highlighter-rouge">hist</code> help file. One of these is the ability
+to specify the number or location of breaks in the histogram.</p>
+
+<p>Box plots are also a useful way to summarize data. We can use it simply,
+for example, summarize the clay content in the <code class="highlighter-rouge">soil.data</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/boxplotF.png" alt="rconsole" />
+    <figcaption> Boxplot of clay content from `soil.data`.</figcaption>
+</figure>
+
+<p>By default, the heavy line shows the median, the box shows the
+25<sup><em>t**h</em></sup> and 75<sup><em>t**h</em></sup> percentiles, the <em>whiskers</em>
+show the extreme values, and points show outliers beyond these.</p>
+
+<p>Another approach is to plot a single variable by some factor. Here we
+will plot <code class="highlighter-rouge">Total_Carbon</code> by <code class="highlighter-rouge">Landclass</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">Total_Carbon</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Landclass</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soil.data</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/boxplotTC.png" alt="rconsole" />
+    <figcaption> Box plot of total carbon with respect to landclass.</figcaption>
+</figure>
+
+<p>Note the use of the tilde symbol <code class="highlighter-rouge">∼</code> in the above command. The code
+<code class="highlighter-rouge">Total_Carbon</code><code class="highlighter-rouge">∼</code><code class="highlighter-rouge">Landclass</code> is analogous to a model formula in this
+case, and simply indicates that <code class="highlighter-rouge">Total_Carbon</code> is described by
+<code class="highlighter-rouge">Landclass</code> and should be split up based on the category of this
+variable. We will see more of this character with the specification of
+soil spatial prediction functions later on.</p>
+
+<h3 id="normal-quantile-and-cumulative-probability-plots">Normal quantile and cumulative probability plots</h3>
+
+<p>One way to assess the normality of the distribution of a given variable
+is with a quantile-quantile plot. This plot shows data values
+vs. quantiles based on a normal distribution.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">qqnorm</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">,</span><span class="w"> </span><span class="n">plot.it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">)</span><span class="w">
+    </span><span class="n">qqline</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/QQ1.png" alt="rconsole" />
+    <figcaption> QQ plot of total carbon in the `soil.data` set.</figcaption>
+</figure>
+
+<p>There definitely seems to be some deviation from normality here. This is
+not unusual for soil carbon information. It is common (in order to
+proceed with statistical modelling) to perform a transformation of sorts
+in order to get these data to conform to a normal distribution. Often a
+log transformation will be sutiable.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">qqnorm</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">),</span><span class="w"> </span><span class="n">plot.it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">)</span><span class="w">
+    </span><span class="n">qqline</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/QQ2.png" alt="rconsole" />
+    <figcaption> QQ plot of log-transformed total carbon in the `soil.data` set.</figcaption>
+</figure>
+
+<p>Finally, another useful data exploratory tool is quantile calculations.
+<code class="highlighter-rouge">R</code> will return the quantiles of a given data set with the <code class="highlighter-rouge">quantile</code>
+function. Note that there are nine different algorithms available for
+doing this. You can find descriptions in the help file for <code class="highlighter-rouge">quantile</code>.
+By default, the quartiles of a data distribution are given when using
+this function, but any quantiles can be estimated using the <code class="highlighter-rouge">probs</code>
+function parameter.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">quantile</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##    0%   25%   50%   75%  100% </span><span class="w">
+    </span><span class="c1">##  0.09  0.39  1.05  1.60 12.74</span><span class="w">
+
+    </span><span class="n">quantile</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.05</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##     0%     5%    10%    15%    20%    25%    30%    35%    40%    45%    50% </span><span class="w">
+    </span><span class="c1">##  0.090  0.170  0.230  0.270  0.328  0.390  0.502  0.604  0.730  0.866  1.050 </span><span class="w">
+    </span><span class="c1">##    55%    60%    65%    70%    75%    80%    85%    90%    95%   100% </span><span class="w">
+    </span><span class="c1">##  1.150  1.268  1.448  1.548  1.600  1.762  2.026  2.928  4.494 12.740</span><span class="w">
+
+    </span><span class="n">quantile</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">probs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">0.9</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0.01</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##     90%     91%     92%     93%     94%     95%     96%     97%     98%     99% </span><span class="w">
+    </span><span class="c1">##  2.9280  3.3208  3.9128  4.0152  4.2388  4.4940  5.5920  6.4488  7.0536  9.8344 </span><span class="w">
+    </span><span class="c1">##    100% </span><span class="w">
+    </span><span class="c1">## 12.7400</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="exercises">Exercises</h3>
+
+<ol>
+  <li>
+    <p>Using the <code class="highlighter-rouge">soil.data</code> set firstly determine the summary statistics
+for each of the numerical or quantitative variables. You want to
+calculate things like maximum, minimum, mean, median, standard
+deviation, and variance. There are a couple of ways to do this.
+However, put all the results into a data frame and export as a text
+file.</p>
+  </li>
+  <li>
+    <p>Generate histograms and QQ plots for each of the quantitative
+variables. Do any need some sort of transformation so that their
+distribution is normal. If so, do the transformation and perform the
+plots again.</p>
+  </li>
+</ol>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-02">May 02, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_literacy/part6/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_literacy/part6/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_literacy/part6/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Getting spatial in R &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="generic GIS stuff for R">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Getting spatial in R">
+<meta name="twitter:description" content="generic GIS stuff for R">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting spatial in R">
+<meta property="og:description" content="generic GIS stuff for R">
+<meta property="og:url" content="/DSM_book/pages/r_gis/clipping/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_gis/clipping/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Getting spatial in R</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">generic GIS stuff for R</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Getting spatial in R</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~6 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h2 id="clipping-rasters">Clipping rasters</h2>
+
+<p>In addition to <a href="/DSM_book/pages/r_gis/reprojs/">resampling and reprojecting
+rasters</a>, the
+other common GIS task needed to harmonise different data source is to
+clip them too. Usually the clipping is done with the extent, or bounds
+of another layer usually a polygon, but can be a another raster too.
+This short piece, shows a workflow for doing this procedure in <code class="highlighter-rouge">R</code> where
+we have a couple of different rasters, and a polygon.</p>
+
+<p>Code is available
+<a href="/DSM_book/rcode/raster_clipping.R">here</a></p>
+
+<p>The specific raster data with which to do the exercises is found
+<a href="/DSM_book/data/reproj.zip">here</a></p>
+
+<p>The specific polygon data is found
+<a href="/DSM_book/data/clipping.zip">here</a></p>
+
+<p>You will need to unzip these folders to get at the data.</p>
+
+<p>Initialise the libraries that are needed</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Loading required package: sp</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
+</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
+</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
+</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
+</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
+</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
+</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
+</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There are three rasters here, but for this exercise we will just use
+two:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="s2">"/~/"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tif$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">files</span><span class="w">
+
+</span><span class="c1">## [1] "/~/20140509.B3.tif"</span><span class="w">
+</span><span class="c1">## [2] "/~/elevation.tif"  </span><span class="w">
+</span><span class="c1">## [3] "/~/GR_Th.tif"</span><span class="w">
+
+</span><span class="c1"># RASTER 1: remote sensing data</span><span class="w">
+</span><span class="n">rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
+</span><span class="n">rs.raster</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 3026, 4037, 12215962  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 0.0002245788, 0.0002245788  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 149.863, 150.7696, -31.64765, -30.96807  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
+</span><span class="c1">## source     : /~/20140509.B3.tif </span><span class="w">
+</span><span class="c1">## names      : X20140509.B3</span><span class="w">
+
+</span><span class="c1"># RASTER 2: digital elevation model</span><span class="w">
+</span><span class="n">elev.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w">
+</span><span class="n">elev.raster</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : /~/elevation.tif </span><span class="w">
+</span><span class="c1">## names      : elevation </span><span class="w">
+</span><span class="c1">## values     : 312.4171, 590.6609  (min, max)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Next we load the polygon data which is called <code class="highlighter-rouge">clipper_polygon.shp</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readOGR</span><span class="p">(</span><span class="s2">"/~/clipper_polygon.shp"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## OGR data source with driver: ESRI Shapefile </span><span class="w">
+</span><span class="c1">## Source: "/~/clipper_polygon.shp", layer: "clipper_polygon"</span><span class="w">
+</span><span class="c1">## with 3 features</span><span class="w">
+</span><span class="c1">## It has 1 fields</span><span class="w">
+</span><span class="c1">## Integer64 fields read as strings:  id</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Checking the CRS of each the the data sources, two have the same
+parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="highlighter-rouge">poly.clip</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># CRS of data</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## CRS arguments:</span><span class="w">
+</span><span class="c1">##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
+
+</span><span class="n">crs</span><span class="p">(</span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## CRS arguments:</span><span class="w">
+</span><span class="c1">##  +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0</span><span class="w">
+</span><span class="c1">## +ellps=GRS80 +units=m +no_defs</span><span class="w">
+
+</span><span class="n">crs</span><span class="p">(</span><span class="n">poly.clip</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## CRS arguments:</span><span class="w">
+</span><span class="c1">##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Below, two workflows are demonstrated.</p>
+
+<ol>
+  <li>
+    <p>Clip <code class="highlighter-rouge">rs.raster</code> with <code class="highlighter-rouge">poly.clip</code></p>
+  </li>
+  <li>
+    <p>Reproject the result from 1 to the same resolution and extent of
+<code class="highlighter-rouge">elev.raster</code>, and also reproject <code class="highlighter-rouge">poly.clip</code> to this same CRS. Then
+clip both rasters simultaneously with the reprojected polygon.</p>
+  </li>
+</ol>
+
+<h3 id="clip-rsraster-with-polyclip">Clip <code class="highlighter-rouge">rs.raster</code> with <code class="highlighter-rouge">poly.clip</code></h3>
+
+<p>The basic workflow is to use <code class="highlighter-rouge">crop</code>, <code class="highlighter-rouge">rasterize</code>, and <code class="highlighter-rouge">mask</code> from the
+<code class="highlighter-rouge">raster</code> package in sequential steps to 1) crop the raster data to
+extent of polygon, 2) rasterise polygon to use as a mask, 3) finalise
+clipping by applying the mask to the cropped raster.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># crop the rs.raster to extent of polygon</span><span class="w">
+</span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crop</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">extent</span><span class="p">(</span><span class="n">poly.clip</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"out"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># rasterise the polygon</span><span class="w">
+</span><span class="n">fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># clip using mask</span><span class="w">
+</span><span class="n">cr.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr</span><span class="p">)</span><span class="w">  </span><span class="c1">#use the mask </span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can visualise each of the steps in the below figure.</p>
+
+<figure>
+    <img src="/images/dsm_book/raster_clip_3plot.png" alt="rconsole" />
+    <figcaption> Top left plot shows the RS data extent and the relatively smaller polygon situated on it. The top right plot is the cropped RS data, and the bottom left plot is the RS data clipped with the rasterised polygon (mask).</figcaption>
+</figure>
+
+<h2 id="clipping-multiple-rasters-simultaneously">Clipping multiple rasters simultaneously</h2>
+
+<p>First we use <code class="highlighter-rouge">projectRaster</code> to make <code class="highlighter-rouge">cr.clip</code> from above to have the
+same CRS, resolution and extent as <code class="highlighter-rouge">elev.raster</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## reproject clipped rs.raster to same as elev.raster</span><span class="w">
+</span><span class="n">reproj.rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr.clip</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
+</span><span class="n">reproj.rs.raster</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : memory</span><span class="w">
+</span><span class="c1">## names      : X20140509.B3 </span><span class="w">
+</span><span class="c1">## values     : 0.06522314, 0.1324395  (min, max)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Stack the rasters to prepare both for clipping</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># stack rasters</span><span class="w">
+</span><span class="n">stack.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">reproj.rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now reproject <code class="highlighter-rouge">poly.clip</code> to the same CRS as the <code class="highlighter-rouge">stack.raster</code> object
+created above. Here we are using <code class="highlighter-rouge">spTransform</code> from the <code class="highlighter-rouge">sp</code> package.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rp.poly.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spTransform</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">CRSobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">stack.raster</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now clipping proceeds as we did above but this time the target are the
+two raster in <code class="highlighter-rouge">stack.raster</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># crop the rs.raster to extent of polygon</span><span class="w">
+</span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">crop</span><span class="p">(</span><span class="n">stack.raster</span><span class="p">,</span><span class="w"> </span><span class="n">extent</span><span class="p">(</span><span class="n">rp.poly.clip</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"out"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># rasterise the polygon</span><span class="w">
+</span><span class="n">fr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rp.poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># clip using mask</span><span class="w">
+</span><span class="n">cr.clip</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cr</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can visualise both clipped rasters in the below figure.</p>
+
+<figure>
+    <img src="/images/dsm_book/clipped_rasters2.png" alt="rconsole" />
+    <figcaption> Reprojected and clipped RS data and elevation rasters.</figcaption>
+</figure>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-06-01">June 01, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_gis/clipping/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_gis/clipping/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_gis/clipping/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

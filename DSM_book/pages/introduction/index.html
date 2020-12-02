@@ -1,0 +1,529 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Digital Soil Mapping - The fundamentals &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Digital Soil Mapping - The fundamentals">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digital Soil Mapping - The fundamentals">
+<meta property="og:description" content="">
+<meta property="og:url" content="/DSM_book/pages/introduction/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/introduction/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Digital Soil Mapping - The fundamentals</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading"></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Digital Soil Mapping - The fundamentals</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~10 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h3 id="introduction">Introduction</h3>
+
+<p>In recent times we have bared witness to the advancement of the computer
+and information technology ages. With such advances, there have come
+vast amounts of data and tools in all fields of endeavor. This has
+motivated numerous initiatives around the world to build spatial data
+infrastructures aiming to facilitate the collection, maintenance,
+dissemination and use of spatial information.</p>
+
+<p>Soil science potentially contributes to the development of such generic
+spatial data infrastructure through the ongoing creation of regional,
+continental and worldwide soil databases, and which are now operational
+for some uses e.g. land resource assessment and risk evaluation
+(Lagacherie and McBratney 2006).</p>
+
+<p>Unfortunately the existing soil databases are neither exhaustive enough
+nor precise enough for promoting an extensive and credible use of the
+soil information within the spatial data infrastructure that is being
+developed worldwide. The main reason is that their present capacities
+only allow the storage of data from conventional soil surveys which are
+scarce and sporadically available (Lagacherie and McBratney 2006).</p>
+
+<p>The main reason for this lack of soil spatial data is simply that
+conventional soil survey methods are relatively slow and expensive.
+Furthermore, we have also witnessed a global reduction in soil science
+funding that started in the 1980s (Hartemink and McBratney 2008), which
+has meant a significant scaling back in wide scale soil spatial data
+collection and/or conventional soil surveying.</p>
+
+<p>To face this situation, it is necessary for the current spatial soil
+information systems to extend their functionality from the storage and
+use of digitized (existing) soil maps, to the production of soil maps
+<em>ab initio</em> (Lagacherie and McBratney 2006). This is precisely the aim
+of Digital Soil Mapping (DSM) which can be defined as:</p>
+
+<p><em>The creation and population of spatial soil information systems by
+numerical models inferring the spatial and temporal variations of soil
+types and soil properties from soil observation and knowledge from
+related environmental variables</em></p>
+
+<p>The concepts and methodologies for DSM were formalized in an extensive
+review by McBratney, Mendonca Santos, and Minasny (2003). In the
+McBratney, Mendonca Santos, and Minasny (2003) paper, the <em>scorpan</em>
+approach for predictive modelling (and mapping) of soil was introduced,
+which in itself is rooted in earlier works by Jenny (1941) and Russian
+soil scientist Dokuchaev. <em>scorpan</em> is a mnemonic for factors for
+prediction of soil attributes: soil, climate, organisms, relief, parent
+materials, age, and spatial position. The <em>scorpan</em> approach is
+formulated by the equation:</p>
+
+<p><em>S</em> = <em>f</em>(<em>s</em>, <em>c</em>, <em>o</em>, <em>r</em>, <em>r</em>, <em>p</em>, <em>a</em>, <em>n</em>) + <em>ϵ</em></p>
+
+<p>or</p>
+
+<p><em>S</em> = <em>f</em>(<em>Q</em>) + <em>ϵ</em></p>
+
+<p>Long-handed, the equation states that the soil type or attribute at an
+unvisited site (<em>S</em>) can be predicted from a numerical function or model
+(<em>f</em>) given the factors just described plus the locally varying, spatial
+dependent residuals (<em>ϵ</em>). The <em>f</em>(<em>Q</em>) part of the formulation is the
+deterministic component or in other words, the empirical quantitative
+function linking <em>S</em> to the <em>scorpan</em> factors (Lagacherie and McBratney
+2006). The <em>scorpan</em> factors or environmental covariates come in the
+form of spatially populated digitally available data, for instance from
+digital elevation models and the indices derived from them which
+include, slope, aspect, MRVBF etc. Landsat data, and other remote
+sensing images, radiometric data, geological survey maps, legacy soil
+maps and data, just to name a few. For the residuals (<em>ϵ</em>) part of the
+formulation, we assume there to be some spatial structure. This is for a
+number of reasons which include that the attributes used in the
+deterministic component were inadequate, interactions between attributes
+were not taken into account, or the form of <em>f()</em> was mis-specified.
+Overall this general formulation is called the <em>scorpan</em>-kriging method,
+where the kriging component is the process of defining the spatial trend
+of the residuals (with variograms) and using kriging to estimate the
+residuals at the non-visited sites.</p>
+
+<p>Without getting into detail with regards to some of the statistical
+nuances such as bias issues, which can be prevalent when using legacy
+soil point data for DSM, the application of <em>scorpan</em>-kriging can only
+be done in extents where there is available soil point data. The
+challenge therefore is: what to do in situations where this type of data
+is not available? In the context of the global soil mapping key soil
+attributes, this is a problem, but can be overcome with the usage of
+other sources of legacy soil data such as existing soil maps. It is even
+more of a problem when this information is not available either.
+However, in the context of global soil mapping, Minasny and McBratney
+(2010) proposed a decision tree structure for actioning DSM on the basis
+of the nature of available legacy soil data. This is summarized in
+figure below. But bear in mind that this decision tree is not
+constrained only to DSM at a global scale but at any mapping extent
+where the user wishes to perform DSM given the availability of soil data
+for their particular area.</p>
+
+<figure>
+    <img src="/images/dsm_book/globDSMmeths.png" alt="rconsole" />
+    <figcaption> A decision tree for digital soil mapping based on legacy soil data. Adapted from Minasny and McBratney (2010).</figcaption>
+</figure>
+
+<p>As can be seen from the above figure, once you have defined an area of
+interest, and assembled a suite of environmental covariates for that
+area, then determined the availability of the soil data there, you
+follow the respective pathway. <em>scorpan</em>-kriging is performed
+exclusively when there is only point data, but can be used also when
+there is both point and map data available, e.g. Malone et al. (2014).</p>
+
+<p>The work flow is quite different when there is only soil map information
+available. Bear in mind that the quality of the soil map depends on the
+scale and subsequently variation of soil cover; such that smaller scaled
+maps e.g. 1:100 000 would be considered better and more detailed than
+large scaled maps e.g. 1:500 000. The elemental basis for extracting
+soil properties from legacy soil maps comes from the central and
+distributional concepts of soil mapping units. For example, modal soil
+profile data of soil classes can be used to quickly build soil property
+maps. Where mapping units consist of more than one component, we can use
+a spatially weighted means type method i.e. estimation of the soil
+properties is based on the modal profile of the components and the
+proportional area of the mapping unit each component covers, e.g.
+Odgers, Libohova, and Thompson (2012). As a pre-processing step prior to
+creating soil attribute maps, it may be necessary to harmonize soil
+mapping units (in the case of adjacent soil maps) and/or perform some
+type of disaggregation technique in order to retrieve the map unit
+component information. Some approaches for doing so have been described
+in Bui and Moran (2003). More recently soil map disaggregation has been
+a target of DSM interest with a sound contribution from Odgers et al.
+(2014) for extracting individual soil series or soil class information
+from convolved soil map units by way of the DSMART algorithm. The DSMART
+algorithm can best be explained as a data mining with repeated
+re-sampling algorithm. Furthering the DSMART algorithm, Odgers,
+McBratney, and Minasny (2015) then introduced the PROPR algorithm which
+takes probability outputs from DSMART together with modal soil profile
+data of given soil classes, to estimate soil attribute quantities (with
+estimates of uncertainty).</p>
+
+<p>What is the process when there is no soil data available at all? This is
+obviously quite a difficult situation to confront, but a real one at
+that. The central concept that was discussed by Minasny and McBratney
+(2010) for addressing these situations is based on the assumed homology
+of soil forming factors between a reference area and the region of
+interest for mapping. Malone, Jha, and Minasny (2016) provides a further
+overview of the topic together with a real world application which
+compared different extrapolating functions. Overall, the soil homologue
+concept or Homosoil, relative to other areas of DSM research is still in
+its development. But considering from a global perspective, the
+sparseness of soil data and limited research funds for new soil survey,
+application of the Homosoil approach or other analogues will become
+increasingly important for the operational advancement of DSM.</p>
+
+<h3 id="what-is-the-intention-behind-of-this-dsm-course">What is the intention behind of this DSM course?</h3>
+
+<p>These pages cover some of the territory that is described in the figure
+above, particularly the <em>scorpan</em>-kriging type approach of DSM; as this
+is probably most commonly undertaken. Also covered is spatial
+disagregation of polygonal maps. This is framed in the context of
+updating digital soil maps and downscaling in terms of deriving soil
+class or attribute information from aggregated soil mapping units.
+Importantly there is a theme of implementation about these pages; a sort
+of how-to-guide. So there are some examples of how to create digital
+soil maps of both continuous and categorical target variable data, given
+available points and a portfolio of available covariates. The procedural
+detail is explained and implemented using the <code class="highlighter-rouge">R</code> computing language.
+Subsequently, some effort is required to become literate in this
+programming language, both for general purpose usage and for DSM and
+other related soil studies.</p>
+
+<p>The motivation of this course then shifts to operational concerns and
+based around real case-studies. For example, the book looks at how we
+might statistically validate a digital soil map. Another operational
+study is that of digital soil assessment (Carre et al. 2007). Digital
+soil assessment (DSA) is akin to the translation of digital soil maps
+into decision making aids. These could be risk-based assessments, or
+assessing threats to soil (erosion, decline of organic matter etc.), and
+assessing soil functions. These type of assessments can not be easily
+derived from a digital soil map alone, but require some form of
+post-processing inference. This could be done with quantitative modeling
+and or a deep mechanistic understanding of the assessment that needs to
+be made. A natural candidate in this realm of DSM is land capability or
+agricultural enterprise suitability. A case study of this type of DSA is
+demonstrated in this course. Specific topics of this course include:</p>
+
+<ul>
+  <li>Attainment of <code class="highlighter-rouge">R</code> literacy in general and for DSM.</li>
+  <li>Algorithmic development for soil science.</li>
+  <li>General GIS operations relevant to DSM.</li>
+  <li>Soil data preparation, examination and harmonization for DSM.</li>
+  <li>Quantitative functions for continuous and categorical (and
+combinations of both) soil attribute modeling and mapping.</li>
+  <li>Quantifying digital soil map uncertainty.</li>
+  <li>Assessing the quality of digital soil maps.</li>
+  <li>Updating, harmonizing and disaggregating legacy soil mapping.</li>
+  <li>Digital soil assessment in terms of land suitability for
+agricultural enterprises.</li>
+  <li>Digital identification of soil homologues.</li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<p>Bui, E.N., and C. J. Moran. 2003. “A Strategy to Fill Gaps in Soil
+Survey over Large Spatial Extents: An Example from the Murray-Darling
+Basin of Australia.” <em>Geoderma</em> 111: 21–41.</p>
+
+<p>Carre, F., Alex B. McBratney, Thomas Mayr, and Luca Montanarella. 2007.
+“Digital Soil Assessments: Beyond Dsm.” <em>Geoderma</em> 142 (1-2): 69–79.
+<a href="https://doi.org/http://dx.doi.org/10.1016/j.geoderma.2007.08.015">https://doi.org/http://dx.doi.org/10.1016/j.geoderma.2007.08.015</a>.</p>
+
+<p>Hartemink, A E, and A B McBratney. 2008. “A Soil Science Renaissance.”
+<em>Geoderma</em> 148: 123–29.</p>
+
+<p>Jenny, H. 1941. <em>Factors of Soil Formation</em>. New York: McGraw-Hill.</p>
+
+<p>Lagacherie, P, and A B McBratney. 2006. “Digital Soil Mapping: An
+Introductory Perspective.” In, edited by P Lagacherie, A B McBratney,
+and M Voltz, 3–22. Amsterdam: Elsevier.</p>
+
+<p>Malone, B P, S K Jha, and A B Minasny B McBratney. 2016. “Comparing
+Regression-Based Digital Soil Mapping and Multiple-Point Geostatistics
+for the Spatial Extrapolation of Soil Data.” <em>Geoderma</em> 262: 243–53.</p>
+
+<p>Malone, B P, B Minasny, N P Odgers, and A B McBratney. 2014. “Using
+Model Averaging to Combine Soil Property Rasters from Legacy Soil Maps
+and from Point Data.” <em>Geoderma</em> 232-234: 34–44.</p>
+
+<p>McBratney, A B, M L Mendonca Santos, and B Minasny. 2003. “On Digital
+Soil Mapping.” <em>Geoderma</em> 117: 3–52.</p>
+
+<p>Minasny, B, and A B McBratney. 2010. “Digital Soil Mapping: Bridging
+Research, Environmental Application, and Operation.” In, edited by J L
+Boettinger, D W Howell, A C Moore, A E Hartemink, and Kienast-Brown S,
+429–25. Dordrecht: Springer.</p>
+
+<p>Odgers, N P, Z Libohova, and J A Thompson. 2012. “Equal-Area Spline
+Functions Applied to a Legacy Soil Database to Create Weighted-Means
+Maps of Soil Organic Carbon at a Continental Scale.” <em>Georderma</em>
+189-190: 153–63.</p>
+
+<p>Odgers, N P, A B McBratney, and B Minasny. 2015. “Digital Soil Property
+Mapping and Uncertainty Estimation Using Soil Class Probability
+Rasters.” <em>Geoderma</em> 237-238: 190–98.</p>
+
+<p>Odgers, N P, W Sun, A B McBratney, B Minasny, and D Clifford. 2014.
+“Disaggregating and Harmonising Soil Map Units Through Resampled
+Classification Trees.” <em>Geoderma</em> 214-215: 91–100.</p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-24">May 24, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/introduction/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/introduction/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/introduction/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

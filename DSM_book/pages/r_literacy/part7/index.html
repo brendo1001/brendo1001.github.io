@@ -1,0 +1,620 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>R Literacy &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Part 7">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="R Literacy">
+<meta name="twitter:description" content="Part 7">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R Literacy">
+<meta property="og:description" content="Part 7">
+<meta property="og:url" content="/DSM_book/pages/r_literacy/part7/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_literacy/part7/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>R Literacy</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Part 7</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">R Literacy</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~11 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <p>Code is <a href="/DSM_book/rcode/intro2R/P3_Intro_R_2017_Part7.R">here</a></p>
+
+<h2 id="linear-models-the-basics">Linear models: the basics</h2>
+
+<h3 id="the-lm-function-model-formulas-and-statistical-output">The <code class="highlighter-rouge">lm</code> function, model formulas, and statistical output</h3>
+
+<p>In <code class="highlighter-rouge">R</code> several classical statistical models can be implemented using one
+function: <code class="highlighter-rouge">lm</code> (for linear model). The <code class="highlighter-rouge">lm</code> function can be used for
+simple and multiple linear regression, analysis of variance (ANVOVA),
+and analysis of covariance (ANCOVA). The help file for <code class="highlighter-rouge">lm</code> lists the
+following.</p>
+
+<p><code class="highlighter-rouge">lm(formula, data, subset, weights, na.action, method = ``qr'', model = TRUE, x = FALSE, y = FALSE, qr = TRUE, singular.ok = TRUE, contrasts = NULL, offset, ...)</code></p>
+
+<p>The first argument in the <code class="highlighter-rouge">lm</code> function call (<code class="highlighter-rouge">formula</code>) is where you
+specify the structure of the statistical model. This approach is used in
+other <code class="highlighter-rouge">R</code> functions as well, such as <code class="highlighter-rouge">glm</code>, <code class="highlighter-rouge">gam</code>, and others, which we
+will later investigate. The most common structures of a statistical
+model are:</p>
+
+<p><code class="highlighter-rouge">y</code> <code class="highlighter-rouge">∼</code> <code class="highlighter-rouge">x</code> :Simple linear regression of y on x</p>
+
+<p><code class="highlighter-rouge">y</code> <code class="highlighter-rouge">∼</code> <code class="highlighter-rouge">x</code> + <code class="highlighter-rouge">z</code> :Multiple regression of y on x and z</p>
+
+<p>There are many others, but it is these model structures that are used in
+one form or another for digital soil mapping.</p>
+
+<p>There is some similarity between the statistical output in <code class="highlighter-rouge">R</code> and in
+other statistical software programs. However, by default, <code class="highlighter-rouge">R</code> usually
+gives only basic output. More detailed output can be retrieved with the
+<code class="highlighter-rouge">summary</code> function. For specific statistics, you can use <em>extractor</em>
+functions, such as <code class="highlighter-rouge">coef</code> or <code class="highlighter-rouge">deviance</code>. Output from the <code class="highlighter-rouge">lm</code> function
+is of the class <code class="highlighter-rouge">lm</code>, and both default output and specialized output
+from extractor functions can be assigned to objects (this is of course
+true for other model objects as well). This quality is very handy when
+writing code that uses the results of statistical models in further
+calculations or in compiling summaries.</p>
+
+<h3 id="linear-regression">Linear regression</h3>
+
+<p>To demonstrate simple linear regression in <code class="highlighter-rouge">R</code>, we will again use the
+<code class="highlighter-rouge">soil.data</code> set. Here we will regress CEC content on clay.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+    </span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
+    </span><span class="n">soil.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">USYD_soil1</span><span class="w">
+    </span><span class="n">summary</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">clay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">CEC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##       clay            CEC        </span><span class="w">
+    </span><span class="c1">##  Min.   : 5.00   Min.   : 1.900  </span><span class="w">
+    </span><span class="c1">##  1st Qu.:15.00   1st Qu.: 5.350  </span><span class="w">
+    </span><span class="c1">##  Median :21.00   Median : 8.600  </span><span class="w">
+    </span><span class="c1">##  Mean   :26.95   Mean   : 9.515  </span><span class="w">
+    </span><span class="c1">##  3rd Qu.:37.00   3rd Qu.:12.110  </span><span class="w">
+    </span><span class="c1">##  Max.   :68.00   Max.   :28.210  </span><span class="w">
+    </span><span class="c1">##  NA's   :17      NA's   :5</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The (alternative) hypothesis here is that clay content is a good
+predictor of CEC. As a start, let us have a look at what the data looks
+like.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">plot</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/lm1.png" alt="rconsole" />
+    <figcaption> plot of against from the `soil.data` set.</figcaption>
+</figure>
+
+<p>There appears to be some meaningful relationship. To fit a linear model,
+we can use the <code class="highlighter-rouge">lm</code> function:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mod.1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">CEC</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+    </span><span class="n">mod.1</span><span class="w">
+
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Call:</span><span class="w">
+    </span><span class="c1">## lm(formula = CEC ~ clay, data = soil.data, x = TRUE, y = TRUE)</span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Coefficients:</span><span class="w">
+    </span><span class="c1">## (Intercept)         clay  </span><span class="w">
+    </span><span class="c1">##      3.7791       0.2053</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">R</code> returns only the call and coefficients by default. You can get more
+information using the <code class="highlighter-rouge">summary</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Call:</span><span class="w">
+    </span><span class="c1">## lm(formula = CEC ~ clay, data = soil.data, x = TRUE, y = TRUE)</span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Residuals:</span><span class="w">
+    </span><span class="c1">##     Min      1Q  Median      3Q     Max </span><span class="w">
+    </span><span class="c1">## -7.1829 -2.3369 -0.6767  1.0185 19.0924 </span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Coefficients:</span><span class="w">
+    </span><span class="c1">##             Estimate Std. Error t value Pr(&gt;|t|)    </span><span class="w">
+    </span><span class="c1">## (Intercept)  3.77913    0.63060   5.993 1.58e-08 ***</span><span class="w">
+    </span><span class="c1">## clay         0.20533    0.02005  10.240  &lt; 2e-16 ***</span><span class="w">
+    </span><span class="c1">## ---</span><span class="w">
+    </span><span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Residual standard error: 3.783 on 144 degrees of freedom</span><span class="w">
+    </span><span class="c1">##   (20 observations deleted due to missingness)</span><span class="w">
+    </span><span class="c1">## Multiple R-squared:  0.4214, Adjusted R-squared:  0.4174 </span><span class="w">
+    </span><span class="c1">## F-statistic: 104.9 on 1 and 144 DF,  p-value: &lt; 2.2e-16</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Clay does appear to be a significant predictor of CEC as one would
+generally surmise when applying our soil science knowledge. As mentioned
+above, the output from the <code class="highlighter-rouge">lm</code> function is an object of class <code class="highlighter-rouge">lm</code>.
+These objects are lists that contain at least the following elements
+(you can find this list in the help file for <code class="highlighter-rouge">lm</code>):</p>
+
+<ul>
+  <li><code class="highlighter-rouge">coefficients</code>: a named vector of model coefficients</li>
+  <li><code class="highlighter-rouge">residuals</code>: model residuals (observed - predicted values)</li>
+  <li><code class="highlighter-rouge">fitted.value</code>: the fitted mean values</li>
+  <li><code class="highlighter-rouge">rank</code>: a numeric rank of the fitted linear model</li>
+  <li><code class="highlighter-rouge">weights</code>: (only for weighted fits) the specified weights</li>
+  <li><code class="highlighter-rouge">df.residual</code>: the residual degrees of freedom</li>
+  <li><code class="highlighter-rouge">call</code>: the matched call</li>
+  <li><code class="highlighter-rouge">terms</code>: the terms object used</li>
+  <li><code class="highlighter-rouge">contrasts</code>: (only where relevant) the contrasts used</li>
+  <li><code class="highlighter-rouge">xlevels</code>: (only where relevant) a record of the levels of the
+factors used in fitting</li>
+  <li><code class="highlighter-rouge">offset</code>: the offset used (missing if none were used)</li>
+  <li><code class="highlighter-rouge">y</code>: if requested, the response used</li>
+  <li><code class="highlighter-rouge">x</code>: if requested, the model matrix used</li>
+  <li><code class="highlighter-rouge">model</code>: if requested (the default), the model frame used</li>
+  <li><code class="highlighter-rouge">na.action</code>: (where relevant) information returned by model frame on
+the handling of <code class="highlighter-rouge">NA</code>s</li>
+</ul>
+
+<p>To get at the elements listed above, you can simply index the <code class="highlighter-rouge">lm</code>
+object, i.e. call up part of the list.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mod.1</span><span class="o">$</span><span class="n">coefficients</span><span class="w">
+
+    </span><span class="c1">## (Intercept)        clay </span><span class="w">
+    </span><span class="c1">##   3.7791256   0.2053256</span><span class="w">
+</span></code></pre></div></div>
+
+<p>However, <code class="highlighter-rouge">R</code> has several extractor functions designed precisely for
+pulling data out of statistical model output. Some of the most commonly
+used ones are: <code class="highlighter-rouge">add1</code>, <code class="highlighter-rouge">alias</code>, <code class="highlighter-rouge">anova</code>, <code class="highlighter-rouge">coef</code>, <code class="highlighter-rouge">deviance</code>, <code class="highlighter-rouge">drop1</code>,
+<code class="highlighter-rouge">effects</code>, <code class="highlighter-rouge">family</code>, <code class="highlighter-rouge">formula</code>, <code class="highlighter-rouge">kappa</code>, <code class="highlighter-rouge">labels</code>, <code class="highlighter-rouge">plot</code>, <code class="highlighter-rouge">predict</code>,
+<code class="highlighter-rouge">print</code>, <code class="highlighter-rouge">proj</code>, <code class="highlighter-rouge">residuals</code>, <code class="highlighter-rouge">step</code>, <code class="highlighter-rouge">summary</code>, and <code class="highlighter-rouge">vcov</code>. For
+example:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">coef</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## (Intercept)        clay </span><span class="w">
+    </span><span class="c1">##   3.7791256   0.2053256</span><span class="w">
+
+    </span><span class="n">head</span><span class="p">(</span><span class="n">residuals</span><span class="p">(</span><span class="n">mod.1</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##          1          2          3          4          6          7 </span><span class="w">
+    </span><span class="c1">## -0.1317300 -1.7217300 -2.5617300 -2.5017300 -0.5226822 -2.0370556</span><span class="w">
+</span></code></pre></div></div>
+
+<p>As mentioned before, the <code class="highlighter-rouge">summary</code> function is a generic function. What
+it does and what it returns is dependent on the class of its first
+argument. Here is a list of what is available from the <code class="highlighter-rouge">summary</code>
+function for this model:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##  [1] "call"          "terms"         "residuals"     "coefficients" </span><span class="w">
+    </span><span class="c1">##  [5] "aliased"       "sigma"         "df"            "r.squared"    </span><span class="w">
+    </span><span class="c1">##  [9] "adj.r.squared" "fstatistic"    "cov.unscaled"  "na.action"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To extract some of the information in the <code class="highlighter-rouge">summary</code> which is of a list
+structure, we would use:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)[[</span><span class="m">4</span><span class="p">]]</span><span class="w">
+
+    </span><span class="c1">##              Estimate Std. Error   t value     Pr(&gt;|t|)</span><span class="w">
+    </span><span class="c1">## (Intercept) 3.7791256 0.63060292  5.992877 1.577664e-08</span><span class="w">
+    </span><span class="c1">## clay        0.2053256 0.02005048 10.240431 7.910414e-19</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To look at the statistical summary. What is the <em>R</em><sup>2</sup> of
+<code class="highlighter-rouge">mod.1</code>? <strong>Answer</strong>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)[[</span><span class="s2">"r.squared"</span><span class="p">]]</span><span class="w">
+
+    </span><span class="c1">## [1] 0.4213764</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This flexibility is useful, but makes for some redundancy in <code class="highlighter-rouge">R</code>. For
+many model statistics, there are three ways to get your data: an
+extractor function (such as <code class="highlighter-rouge">coef</code>), indexing the <code class="highlighter-rouge">lm</code> object, and
+indexing the <code class="highlighter-rouge">summary</code> function. The best approach is to use an
+extractor function whenever you can. In some cases, the <code class="highlighter-rouge">summary</code>
+function will return results that you can not get by indexing or using
+extractor functions.</p>
+
+<p>Once we have fit a model in <code class="highlighter-rouge">R</code>, we can generate predicted values using
+the <code class="highlighter-rouge">predict</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">mod.1</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##         1         2         3         4         6         7 </span><span class="w">
+    </span><span class="c1">##  5.421730  5.421730  5.421730  5.421730 15.482682  5.627056</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Lets plot the observed vs. the predict from this model.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">plot</span><span class="p">(</span><span class="n">mod.1</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">mod.1</span><span class="o">$</span><span class="n">fitted.values</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/lm3.png" alt="rconsole" />
+    <figcaption> observed vs. predicted plot of CEC from `soil.data`.</figcaption>
+</figure>
+
+<p>As we will see later on, the <code class="highlighter-rouge">predict</code> function works for a whole range
+of statistical models in <code class="highlighter-rouge">R</code>. Not just <code class="highlighter-rouge">lm</code> objects. We can treat the
+predictions as we would any vector. For example we can add them to the
+above plot or put them back in the original data frame. The <code class="highlighter-rouge">predict</code>
+function can also give confidence and prediction intervals.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">mod.1</span><span class="p">,</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"conf"</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##         fit       lwr       upr</span><span class="w">
+    </span><span class="c1">## 1  5.421730  4.437845  6.405615</span><span class="w">
+    </span><span class="c1">## 2  5.421730  4.437845  6.405615</span><span class="w">
+    </span><span class="c1">## 3  5.421730  4.437845  6.405615</span><span class="w">
+    </span><span class="c1">## 4  5.421730  4.437845  6.405615</span><span class="w">
+    </span><span class="c1">## 6 15.482682 14.152940 16.812425</span><span class="w">
+    </span><span class="c1">## 7  5.627056  4.673657  6.580454</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A quick way to demonstrate multiple linear regression in <code class="highlighter-rouge">R</code>, we will
+regress <code class="highlighter-rouge">CEC</code> on <code class="highlighter-rouge">clay</code> plus the exchangeable cations: <code class="highlighter-rouge">ExchNa</code> and
+<code class="highlighter-rouge">ExchCa</code>. First lets subset these data out, then get their summary
+statistics.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">subs.soil.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">soil.data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"clay"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CEC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ExchNa"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ExchCa"</span><span class="p">)]</span><span class="w">
+    </span><span class="n">summary</span><span class="p">(</span><span class="n">subs.soil.data</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">##       clay            CEC             ExchNa           ExchCa      </span><span class="w">
+    </span><span class="c1">##  Min.   : 5.00   Min.   : 1.900   Min.   :0.0000   Min.   : 1.010  </span><span class="w">
+    </span><span class="c1">##  1st Qu.:15.00   1st Qu.: 5.350   1st Qu.:0.0200   1st Qu.: 2.920  </span><span class="w">
+    </span><span class="c1">##  Median :21.00   Median : 8.600   Median :0.0500   Median : 4.610  </span><span class="w">
+    </span><span class="c1">##  Mean   :26.95   Mean   : 9.515   Mean   :0.2563   Mean   : 5.353  </span><span class="w">
+    </span><span class="c1">##  3rd Qu.:37.00   3rd Qu.:12.110   3rd Qu.:0.1500   3rd Qu.: 7.240  </span><span class="w">
+    </span><span class="c1">##  Max.   :68.00   Max.   :28.210   Max.   :6.8100   Max.   :25.390  </span><span class="w">
+    </span><span class="c1">##  NA's   :17      NA's   :5        NA's   :5        NA's   :5</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A quick way to look for relationships between variables in a data frame
+is with the <code class="highlighter-rouge">cor</code> function. Note the use of the <code class="highlighter-rouge">na.omit</code> function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">cor</span><span class="p">(</span><span class="n">na.omit</span><span class="p">(</span><span class="n">subs.soil.data</span><span class="p">))</span><span class="w">
+
+    </span><span class="c1">##             clay       CEC      ExchNa      ExchCa</span><span class="w">
+    </span><span class="c1">## clay   1.0000000 0.6491351  0.17104962  0.54615778</span><span class="w">
+    </span><span class="c1">## CEC    0.6491351 1.0000000  0.33369789  0.87570029</span><span class="w">
+    </span><span class="c1">## ExchNa 0.1710496 0.3336979  1.00000000 -0.02055496</span><span class="w">
+    </span><span class="c1">## ExchCa 0.5461578 0.8757003 -0.02055496  1.00000000</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To visualize these relationships, we can use <code class="highlighter-rouge">pairs</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">pairs</span><span class="p">(</span><span class="n">na.omit</span><span class="p">(</span><span class="n">subs.soil.data</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/pairs.png" alt="rconsole" />
+    <figcaption> A pairs plot of a select few soil attributes from the `soil.data` set.</figcaption>
+</figure>
+
+<p>There are some interesting relationships here. Now for fitting the
+model:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mod.2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">CEC</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">clay</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ExchNa</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ExchCa</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subs.soil.data</span><span class="p">)</span><span class="w">
+    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.2</span><span class="p">)</span><span class="w">
+
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Call:</span><span class="w">
+    </span><span class="c1">## lm(formula = CEC ~ clay + ExchNa + ExchCa, data = subs.soil.data)</span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Residuals:</span><span class="w">
+    </span><span class="c1">##     Min      1Q  Median      3Q     Max </span><span class="w">
+    </span><span class="c1">## -5.2008 -0.7065 -0.0470  0.6455  9.4025 </span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Coefficients:</span><span class="w">
+    </span><span class="c1">##             Estimate Std. Error t value Pr(&gt;|t|)    </span><span class="w">
+    </span><span class="c1">## (Intercept) 1.048318   0.274264   3.822 0.000197 ***</span><span class="w">
+    </span><span class="c1">## clay        0.050503   0.009867   5.119 9.83e-07 ***</span><span class="w">
+    </span><span class="c1">## ExchNa      2.018149   0.163436  12.348  &lt; 2e-16 ***</span><span class="w">
+    </span><span class="c1">## ExchCa      1.214156   0.046940  25.866  &lt; 2e-16 ***</span><span class="w">
+    </span><span class="c1">## ---</span><span class="w">
+    </span><span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span><span class="w">
+    </span><span class="c1">## </span><span class="w">
+    </span><span class="c1">## Residual standard error: 1.522 on 142 degrees of freedom</span><span class="w">
+    </span><span class="c1">##   (20 observations deleted due to missingness)</span><span class="w">
+    </span><span class="c1">## Multiple R-squared:  0.9076, Adjusted R-squared:  0.9057 </span><span class="w">
+    </span><span class="c1">## F-statistic: 465.1 on 3 and 142 DF,  p-value: &lt; 2.2e-16</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For much of the remainder of the exercises, we will be investigating
+these regression type relationships using a variety of different model
+types for soil spatial prediction. These fundamental modelling concepts
+of the <code class="highlighter-rouge">lm</code> will become useful as we progress ahead.</p>
+
+<h3 id="exercises">Exercises</h3>
+
+<ol>
+  <li>
+    <p>Using the <code class="highlighter-rouge">soil.data</code> set firstly generate a correlation matrix of
+all the soil variables.</p>
+  </li>
+  <li>
+    <p>Choose two variables that you think would be good to regress against
+each other, and fit a model. Is the model any good? Can you plot the
+observed vs. predicted values? Can you draw a line of concordance
+(maybe want to consult an appropriate help file to do this). Something a bit trickier: Can you add the predictions to the data
+frame <code class="highlighter-rouge">soil.data</code> correctly.</p>
+  </li>
+  <li>
+    <p>Now repeat what you did for the previous question, except this time
+perform a multiple linear regression i.e. use more than 1 predictor
+variable to make a prediction of the variable you are targeting.</p>
+  </li>
+</ol>
+
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-02">May 02, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_literacy/part7/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_literacy/part7/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_literacy/part7/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

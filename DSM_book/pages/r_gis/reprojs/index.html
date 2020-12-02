@@ -1,0 +1,670 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Getting spatial in R &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="generic GIS stuff for R">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Getting spatial in R">
+<meta name="twitter:description" content="generic GIS stuff for R">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting spatial in R">
+<meta property="og:description" content="generic GIS stuff for R">
+<meta property="og:url" content="/DSM_book/pages/r_gis/reprojs/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_gis/reprojs/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Getting spatial in R</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">generic GIS stuff for R</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Getting spatial in R</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~15 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h2 id="reprojections-resampling-and-rasterisation">Reprojections, resampling and rasterisation</h2>
+
+<p>A useful thing to do in <code class="highlighter-rouge">R</code> in the GIS context are the procedures around
+resampling and reprojections. Such tasks are useful in the situation of
+aligning spatial data to common resolutions and extents. For digital
+soil mapping this is an important and regular task to perform. Similarly
+rasterisation of polygon data is regularly performed. This page will
+cover some know-how on how to do these varied tasks.</p>
+
+<ul>
+  <li><a href="#s-1">Data preparation</a></li>
+  <li><a href="#s-2">Resampling</a></li>
+  <li><a href="#s-3">Simultaneous reprojection and resampling</a></li>
+  <li><a href="#s-4">Reprojection and resolution change</a></li>
+  <li><a href="#s-5">Polygon reprojection</a></li>
+  <li><a href="#s-6">Polygon rasterisation</a></li>
+</ul>
+
+<p>Code is available
+<a href="/DSM_book/rcode/resamplingRasters.R">here</a></p>
+
+<p>The specific data with which to do the exercises is found
+<a href="/DSM_book/data/reproj.zip">here</a></p>
+
+<p>Initialise the libraries that are needed</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Loading required package: sp</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
+</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
+</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
+</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
+</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
+</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
+</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
+</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
+
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="data-preparation-">Data preparation <a id="s-1"></a></h3>
+<p>In this first part we will be working with three raster layers, each
+covering the same geographical area but have different projection
+systems, resolutions and spatial extents. After you have downloaded the
+data, you can use the following code to establish where they are located
+and retrieve the metadata of each raster.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="s2">"~"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"tif$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">files</span><span class="w">
+
+</span><span class="c1">## [1] "~/20140509.B3.tif"</span><span class="w">
+</span><span class="c1">## [2] "~/elevation.tif"  </span><span class="w">
+</span><span class="c1">## [3] "~/GR_Th.tif"</span><span class="w">
+
+</span><span class="c1"># RASTER 1: remote sensing data</span><span class="w">
+</span><span class="n">rs.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
+</span><span class="n">rs.raster</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 3026, 4037, 12215962  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 0.0002245788, 0.0002245788  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 149.863, 150.7696, -31.64765, -30.96807  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
+</span><span class="c1">## source     : /~/20140509.B3.tif </span><span class="w">
+</span><span class="c1">## names      : X20140509.B3</span><span class="w">
+
+</span><span class="c1"># RASTER 2: digital elevation model</span><span class="w">
+</span><span class="n">elev.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w">
+</span><span class="n">elev.raster</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 54, 81, 4374  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : /~/elevation.tif </span><span class="w">
+</span><span class="c1">## names      : elevation </span><span class="w">
+</span><span class="c1">## values     : 312.4171, 590.6609  (min, max)</span><span class="w">
+
+</span><span class="c1"># RASTER 3: Very granular gamma radiometrics data</span><span class="w">
+</span><span class="n">gamma.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">3</span><span class="p">])</span><span class="w">
+</span><span class="n">gamma.raster</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 606, 865, 524190  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 10, 10  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510418, 1519068, -3637349, -3631289  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : /~/GR_Th.tif </span><span class="w">
+</span><span class="c1">## names      : GR_Th </span><span class="w">
+</span><span class="c1">## values     : 1.815541, 8.94882  (min, max)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="raster-resampling-">Raster resampling <a id="s-2"></a></h3>
+
+<p>The function to use here is <code class="highlighter-rouge">resample</code>. Here we want to get the
+<code class="highlighter-rouge">elev.raster</code> to be the same resolution and extent to the
+<code class="highlighter-rouge">gamma.raster</code>. Essentially going from a 100m grid cell to a 10m grid
+cell. The resampling method used in bi-linear interpolation. The
+alternative is nearest neighbor interpolation which is generally not
+appropriate for numerical data, dependent on the context and use-case of
+course.</p>
+
+<p>Stacking rasters is a nice feature of <code class="highlighter-rouge">raster</code> as it confirms to the
+user that a collection of rasters all have the same CRS, resolution and
+extent. This is really important for doing digital soil mapping. When
+rasters don’t stack, it means there is a problem, and one will have
+difficulty in subsequent steps in the DSM workflow. The <code class="highlighter-rouge">stack</code> function
+is the tool that we need. Also the <code class="highlighter-rouge">brick</code> function appears to do the
+same sort of thing as <code class="highlighter-rouge">stack</code> too, but seems to be used more for
+temporal data, or data stacks of the same provenance. <code class="highlighter-rouge">stack</code> appears to
+be a generic function.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># resample</span><span class="w">
+</span><span class="n">rs.grid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">resample</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gamma.raster</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
+</span><span class="n">rs.grid</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 606, 865, 524190  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 10, 10  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510418, 1519068, -3637349, -3631289  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : memory</span><span class="w">
+</span><span class="c1">## names      : elevation </span><span class="w">
+</span><span class="c1">## values     : 312.4438, 590.6609  (min, max)</span><span class="w">
+
+</span><span class="c1"># stack</span><span class="w">
+</span><span class="n">r</span><span class="m">3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">rs.grid</span><span class="p">,</span><span class="w"> </span><span class="n">gamma.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r</span><span class="m">3</span><span class="w">
+
+</span><span class="c1">## class      : RasterStack </span><span class="w">
+</span><span class="c1">## dimensions : 606, 865, 524190, 2  (nrow, ncol, ncell, nlayers)</span><span class="w">
+</span><span class="c1">## resolution : 10, 10  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510418, 1519068, -3637349, -3631289  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## names      :  elevation,      GR_Th </span><span class="w">
+</span><span class="c1">## min values : 312.443825,   1.815541 </span><span class="w">
+</span><span class="c1">## max values :  590.66095,    8.94882</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="simultaneous-reprojection-and-resampling-">Simultaneous reprojection and resampling <a id="s-3"></a></h3>
+
+<p>The function <code class="highlighter-rouge">projectRaster</code> is an incredibly useful function from the
+<code class="highlighter-rouge">raster</code> package. As the name suggests it is used for changing data from
+one projection system to another. This function also usefully does
+resampling to by default where the raster (or stack of rasters) to be
+processed is given the same CRS, resolution and extent as the target
+raster (or stack of rasters). First, the default use case in
+demonstrated, followed by a change to the target CRS but with a
+resolution change.</p>
+
+<p>If you recall from earlier, the <code class="highlighter-rouge">rs.grid</code> has the WGS1984 geographic
+CRS: <code class="highlighter-rouge">+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</code>,
+where the grid cell have a resolution of about 22m, albeit expressed in
+decimal degrees. The target raster is the <code class="highlighter-rouge">elev.raster</code> which has the
+GDA94/ Geoscience Australia Lambert projection where the units are
+expressed in meters. The resolution of this raster is 100m. Therefore in
+this instance we do a reprojection and resample all in one step with the
+following code. Note the use of nearest neighbor interpolation.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># reproject remote sensing grid</span><span class="w">
+</span><span class="n">pl.grid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ngb"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># stack</span><span class="w">
+</span><span class="n">r</span><span class="m">4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">pl.grid</span><span class="p">,</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r</span><span class="m">4</span><span class="w">
+
+</span><span class="c1">## class      : RasterStack </span><span class="w">
+</span><span class="c1">## dimensions : 54, 81, 4374, 2  (nrow, ncol, ncell, nlayers)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1510462, 1518562, -3636821, -3631421  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## names      : X20140509.B3,    elevation </span><span class="w">
+</span><span class="c1">## min values :   0.05698202, 312.41711426 </span><span class="w">
+</span><span class="c1">## max values :    0.2888759,  590.6609497</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Although both rasters above stack together you will note by plotting
+each raster that the remote sensing raster appears has a rectangular
+extent, yet the <code class="highlighter-rouge">elev.raster</code> is clipped to some boundary. Both rasters
+actually have the same extent, but for the <code class="highlighter-rouge">elev.raster</code>, part of this
+data extent has no data. This is because this data is just concerned
+with a particular landholding and there is not any need to have the data
+surrounding it. In the exercise concerned with <a href="/DSM_book/pages/r_gis/clipping/">raster
+clipping</a>,
+one can, if there is a requirement, to clip the <code class="highlighter-rouge">pl.grid</code> to the bounds
+of the data in <code class="highlighter-rouge">elev.raster</code>.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="reprojection-and-resolution-change-">Reprojection and resolution change <a id="s-4"></a></h3>
+
+<p>Rather than set the target raster to the same properties as a source
+raster, one can re-project to a common CRS, but set the resolution to
+what is desired. Below the <code class="highlighter-rouge">rs.raster</code> to reprojected to the the same
+CRS as the <code class="highlighter-rouge">elev.raster</code>, and outputted to 50m resolution (rather than
+100m as is the source raster).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># reproject and resample (50m pixels)</span><span class="w">
+</span><span class="n">pl.grid50</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">elev.raster</span><span class="p">),</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ngb"</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w">
+</span><span class="n">pl.grid50</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 1711, 1898, 3247478  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 50, 50  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1486689, 1581589, -3675366, -3589816  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## source     : memory</span><span class="w">
+</span><span class="c1">## names      : X20140509.B3 </span><span class="w">
+</span><span class="c1">## values     : -Inf, 0.5445645  (min, max)</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="polygon-reprojection-">Polygon reprojection <a id="s-5"></a></h3>
+
+<p>Back in the work with <a href="/DSM_book/pages/r_gis/pointpatterns/">point patterns
+data</a>
+you were shown how to change the CRS of <code class="highlighter-rouge">SpatialPointsDataFrames</code>. This
+type of transformation can also be readily extended to spatial lines and
+polygons too. Below, we will be working with a shapefile where the data
+is given as polygons, and is in fact a legacy soil map for the same
+geographic area as the raster data we were working with above. What we
+will do is load the data, do a reprojection, and a rasterisation
+procedure on this data. Ultimately for a digital soil mapping context we
+might want to use polygon data as a predictive covariate. Therefore
+these data need to be processed accordingly.</p>
+
+<p>Now to load the data we use the <code class="highlighter-rouge">readOGR</code> function form the <code class="highlighter-rouge">sp</code>
+package. You will note after import of the shapefile this data is
+encoded as a <code class="highlighter-rouge">SpatialPolygonsDataFrame</code>. The data frame elements of this
+polygon data contain the pertinent details of each polygon which in our
+case is descriptive information of the soil type and landscape.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readOGR</span><span class="p">(</span><span class="s2">"/~/Soils_Curlewis_GDA94.shp"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## OGR data source with driver: ESRI Shapefile </span><span class="w">
+</span><span class="c1">## Source: "/~/Soils_Curlewis_GDA94.shp", layer: "Soils_Curlewis_GDA94"</span><span class="w">
+</span><span class="c1">## with 354 features</span><span class="w">
+</span><span class="c1">## It has 6 fields</span><span class="w">
+
+</span><span class="n">poly.dat</span><span class="w">
+
+</span><span class="c1">## class       : SpatialPolygonsDataFrame </span><span class="w">
+</span><span class="c1">## features    : 354 </span><span class="w">
+</span><span class="c1">## extent      : 150.0011, 150.5011, -31.49843, -30.99843  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs         : +proj=longlat +ellps=GRS80 +no_defs </span><span class="w">
+</span><span class="c1">## variables   : 6</span><span class="w">
+</span><span class="c1">## names       :         NAME, LANDSCAPE, CODE,            LENGTH,        SHAPE_AREA,     PROCESS </span><span class="w">
+</span><span class="c1">## min values  : BATTERY HILL,      AElo,   bh, 0.004701920115403,    3.82996751e-07,     AEOLIAN </span><span class="w">
+</span><span class="c1">## max values  :     YARRAMAN,     TRwfa,   ya,  2.62094635880552, 0.031703676998096, TRANSFERRAL</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Lets find out a bit more information about the <code class="highlighter-rouge">poly.dat</code> object i.e. the soil map.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Attribute table</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">poly.dat</span><span class="o">@</span><span class="n">data</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##              NAME LANDSCAPE CODE     LENGTH   SHAPE_AREA     PROCESS</span><span class="w">
+</span><span class="c1">## 0 KILPHYSICS ROAD      TRkr   kr 0.06258586 1.763738e-04 TRANSFERRAL</span><span class="w">
+</span><span class="c1">## 1      EAST LYNNE      COel   el 0.03153234 1.838048e-05   COLLUVIAL</span><span class="w">
+</span><span class="c1">## 2   LONG MOUNTAIN      RElm   lm 0.03033508 1.855672e-05    RESIDUAL</span><span class="w">
+</span><span class="c1">## 3  QUIRINDI CREEK      ALqc   qc 0.05039743 8.478940e-05    ALLUVIAL</span><span class="w">
+</span><span class="c1">## 4  QUIRINDI CREEK      ALqc   qc 0.02419802 2.233679e-05    ALLUVIAL</span><span class="w">
+</span><span class="c1">## 5       CONADILLY      ALcd   cd 0.03408230 3.911834e-05    ALLUVIAL</span><span class="w">
+
+</span><span class="c1"># soil type code and frequency</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">poly.dat</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">CODE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##  bh  bj  bo  ca  cd  cr  cu  dh  el  fr  gi  gl  go  gy  ha  kr  lg lga  lm  lo </span><span class="w">
+</span><span class="c1">##  18  26   9  10  16  12   1   2  12  12   6   4  16   3   2   1   2   2  13  14 </span><span class="w">
+</span><span class="c1">##  lr  ma  md  mm  mn  mo  mt  mw  nj  ph  pn  po  qc  sg  ta  tf  tu  wa wfa  xx </span><span class="w">
+</span><span class="c1">##   3   1   1  17   2   4   6   2   9  12  10   8  13  29   5   7  11  10   1  21 </span><span class="w">
+</span><span class="c1">##  ya </span><span class="w">
+</span><span class="c1">##   1</span><span class="w">
+
+</span><span class="n">summary</span><span class="p">(</span><span class="n">as.factor</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">poly.dat</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">CODE</span><span class="p">)))</span><span class="w">  </span><span class="c1"># numeric factor</span><span class="w">
+
+</span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 </span><span class="w">
+</span><span class="c1">## 18 26  9 10 16 12  1  2 12 12  6  4 16  3  2  1  2  2 13 14  3  1  1 17  2  4 </span><span class="w">
+</span><span class="c1">## 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 </span><span class="w">
+</span><span class="c1">##  6  2  9 12 10  8 13 29  5  7 11 10  1 21  1</span><span class="w">
+
+</span><span class="c1"># Basic plot plot(poly.dat) invisible(text(getSpPPolygonsLabptSlots(poly.dat),</span><span class="w">
+</span><span class="c1"># labels = as.character(poly.dat@data$CODE), cex = 0.4))</span><span class="w">
+
+</span><span class="c1"># coordinate reference system</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">poly.dat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## CRS arguments: +proj=longlat +ellps=GRS80 +no_defs</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Currently the data is in GDA94 CRS:
+<code class="highlighter-rouge">+proj=longlat +ellps=GRS80 +no_defs</code>, and we want to have it in the
+project GDA94 Lambert system as for the rasters that were processed
+above.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Reproject to new projection (newProj)</span><span class="w">
+</span><span class="n">newProj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"+proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs"</span><span class="w">
+</span><span class="n">poly.dat.T</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">spTransform</span><span class="p">(</span><span class="n">poly.dat</span><span class="p">,</span><span class="w"> </span><span class="n">CRSobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newProj</span><span class="p">)</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">poly.dat.T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] "SpatialPolygonsDataFrame"</span><span class="w">
+</span><span class="c1">## attr(,"package")</span><span class="w">
+</span><span class="c1">## [1] "sp"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To confirm this worked we can plot the remote sensing grid (<code class="highlighter-rouge">pl.grid50</code>)
+and overlay the polygon data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">pl.grid</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">poly.dat.T</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="nf">invisible</span><span class="p">(</span><span class="n">text</span><span class="p">(</span><span class="n">getSpPPolygonsLabptSlots</span><span class="p">(</span><span class="n">poly.dat.T</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">poly.dat.T</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">CODE</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.2</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/soil_map_raster.png" alt="rconsole" />
+    <figcaption> Gridded remote sensing data overlayed with soil map polygons. Each data source have the same CRS.</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="rasterisation-">Rasterisation <a id="s-6"></a></h3>
+
+<p>The function we need here is <code class="highlighter-rouge">rasterize</code> from the <code class="highlighter-rouge">raster</code> package. Here
+we will rasterise the <code class="highlighter-rouge">CODE</code> variable of the polygon data, and fit it to
+the same resolution and extent as the <code class="highlighter-rouge">pl.grid50</code> remote sensing data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># rasterise</span><span class="w">
+</span><span class="n">poly.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterize</span><span class="p">(</span><span class="n">poly.dat.T</span><span class="p">,</span><span class="w"> </span><span class="n">pl.grid50</span><span class="p">,</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"CODE"</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">poly.raster</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"soil_map_CODE"</span><span class="w">
+
+</span><span class="c1"># stack</span><span class="w">
+</span><span class="n">r</span><span class="m">5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">pl.grid50</span><span class="p">,</span><span class="w"> </span><span class="n">poly.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r</span><span class="m">5</span><span class="w">
+
+</span><span class="c1">## class      : RasterStack </span><span class="w">
+</span><span class="c1">## dimensions : 1711, 1898, 3247478, 2  (nrow, ncol, ncell, nlayers)</span><span class="w">
+</span><span class="c1">## resolution : 50, 50  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 1486689, 1581589, -3675366, -3589816  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=lcc +lat_1=-18 +lat_2=-36 +lat_0=0 +lon_0=134 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## names      : X20140509.B3, soil_map_CODE </span><span class="w">
+</span><span class="c1">## min values :         -Inf,             1 </span><span class="w">
+</span><span class="c1">## max values :    0.5445645,    41.0000000</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Plotting rasters in <code class="highlighter-rouge">R</code> is easily facilitated with the <code class="highlighter-rouge">plot()</code>
+function, and is hackable in terms of customising legends, titles and
+other graphical features. Experience of using this function for
+categorical data like we have just created in <code class="highlighter-rouge">poly.raster</code> does not
+result in very nice looking maps. The approach to map categorical
+variables in <code class="highlighter-rouge">R</code> nicely can be done via <code class="highlighter-rouge">levelplot</code> from the <code class="highlighter-rouge">rasterVis</code>
+package. The below code is a generic one to use to display categorical
+maps.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># plot rasterised polygon</span><span class="w">
+</span><span class="n">r</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">r</span><span class="m">2</span><span class="p">)</span><span class="w">
+</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">r</span><span class="m">2</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+
+</span><span class="c1"># Match raster levels to polygon code</span><span class="w">
+</span><span class="n">m</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">as.matrix</span><span class="p">(</span><span class="n">levels</span><span class="p">(</span><span class="n">r</span><span class="m">2</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]))</span><span class="w">
+</span><span class="n">m</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">poly.dat</span><span class="o">@</span><span class="n">data</span><span class="o">$</span><span class="n">CODE</span><span class="p">)[</span><span class="n">m</span><span class="m">1</span><span class="p">]</span><span class="w">
+</span><span class="n">rat</span><span class="p">[[</span><span class="s2">"code"</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">m</span><span class="m">2</span><span class="p">)</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">r</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
+
+</span><span class="c1"># plot</span><span class="w">
+</span><span class="n">rasterVis</span><span class="o">::</span><span class="n">levelplot</span><span class="p">(</span><span class="n">r</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/rasterised_soilmap.png" alt="rconsole" />
+    <figcaption> Rasterised soil map created using the `levelplot` function. This function is more suitable to use for raster mapping in particular in instances of working with categorical data.</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-31">May 31, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_gis/reprojs/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_gis/reprojs/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_gis/reprojs/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

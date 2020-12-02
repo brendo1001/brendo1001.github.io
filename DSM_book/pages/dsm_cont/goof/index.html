@@ -1,0 +1,392 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Model goodness of fit &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Model goodness of fit">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Model goodness of fit">
+<meta property="og:description" content="">
+<meta property="og:url" content="/DSM_book/pages/dsm_cont/goof/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_cont/goof/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Model goodness of fit</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading"></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Model goodness of fit</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~4 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h3 id="diognostics">Diognostics</h3>
+
+<p>Essentially, whenever we train or calibrate a model, we can then
+generate some predictions. The question one needs to ask is how good are
+those predictions? Generally, we confront this question by comparing
+observed values with their corresponding predictions. Some of the more
+common goodness of fit measures are the root mean square error (RMSE),
+bias, coefficient of determination or commonly the <em>R</em><sup>2</sup>
+value, and concordance. You will also find in the digital soil mapping
+and general statisitcal literature various other model assessment
+statisitcs. The RMSE is defined as:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?RMSE=\sqrt[2]{(\frac{\sum_{i=1}^{n}(obs_{i}-pred_{i})^{2}}{n})}" alt="RMSE=\sqrt[2]{(\frac{\sum_{i=1}^{n}(obs_{i}-pred_{i})^{2}}{n})}" /></p>
+
+<p>where <em>obs</em> is the observed soil property, <em>pred</em> is the
+predicted soil property from a given model, and <em>n</em> is the number of
+observations <em>i</em>.</p>
+
+<p>Bias, also called the mean error of prediction and is defined as:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?bias=\frac{\sum_{i=1}^{n}pred_{i}-obs_{i}}{n}" alt="bias=\frac{\sum_{i=1}^{n}pred_{i}-obs_{i}}{n}" /></p>
+
+<p>The <em>R</em><sup>2</sup> is evaluated as the square of the sample correlation
+coefficient (Pearson’s) between the observations and their corresponding
+predictions. Pearson’s correlation coefficient <code class="highlighter-rouge">r</code> when applied to
+observed and predicted values is defined as:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?r=\frac{\sum_{i=1}^{n}(obs_{i}-\overline{obs})(pred_{i}-\overline{pred})}{\sqrt[2]{\sum_{i=1}^{n}(obs_{i}-\overline{obs})^2}\sqrt[2]{\sum_{i=1}^{n}(pred_{i}-\overline{pred})^2}}" alt="r=\frac{\sum_{i=1}^{n}(obs_{i}-\overline{obs})(pred_{i}-\overline{pred})}{\sqrt[2]{\sum_{i=1}^{n}(obs_{i}-\overline{obs})^2}\sqrt[2]{\sum_{i=1}^{n}(pred_{i}-\overline{pred})^2}}" /></p>
+
+<p>The <em>R</em><sup>2</sup> measures the precision of the relationship (between
+observed and predicted). Concordance, or more formally — Lin’s
+concordance correlation coefficient (Lin (1989)), on the other hand is a
+single statistic that both evaluates the accuracy and precision of the
+relationship. It is often referred to as the goodness of fit along a 45
+degreee line. Thus it is probably a more useful statistic than the
+<em>R</em><sup>2</sup> alone. Concordance <em>ρ</em><sub><em>c</em></sub> is defined as:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?\rho_{c}=\frac{2\rho\sigma_{pred}\sigma_{obs}}{\sigma_{pred}^2+\sigma_{obs}^2+(\mu_{pred}-\mu_{obs})^2}" alt="\rho_{c}=\frac{2\rho\sigma_{pred}\sigma_{obs}}{\sigma_{pred}^2+\sigma_{obs}^2+(\mu_{pred}-\mu_{obs})^2}" /></p>
+
+<p>where <em>μ</em><sub><em>pred</em></sub> and <em>μ</em><sub><em>obs</em></sub> are the
+means of the predicted and observed values respectively.
+<em>σ</em><sub><em>pred</em></sub><sup>2</sup> and
+<em>σ</em><sub><em>obs</em></sub><sup>2</sup> are the corresponding variances. <em>ρ</em>
+is the correlation coefficient between the predictions and observations.</p>
+
+<h3 id="example-usage">Example usage</h3>
+
+<p>So lets fit a simple linear model. We will use the <code class="highlighter-rouge">soil.data</code> set from
+the <code class="highlighter-rouge">ithir</code> package. First load the data in. We then want to regress CEC
+content on clay (also be sure to remove as NAs).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
+</span><span class="n">soil.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">USYD_soil1</span><span class="w">
+</span><span class="n">mod.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"clay"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CEC"</span><span class="p">)])</span><span class="w">
+</span><span class="n">mod.1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">CEC</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">mod.1</span><span class="w">
+
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Call:</span><span class="w">
+</span><span class="c1">## lm(formula = CEC ~ clay, data = mod.data, x = TRUE, y = TRUE)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Coefficients:</span><span class="w">
+</span><span class="c1">## (Intercept)         clay  </span><span class="w">
+</span><span class="c1">##      3.7791       0.2053</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You may recall that this is the same model that was fitted during the
+<a href="/DSM_book/pages/r_literacy//part7/">introduction to <code class="highlighter-rouge">R</code> chapter</a>. 
+What we now want to do is evaluate some of the model quality statistics
+that were described above. Conveniently, these are available in the
+<code class="highlighter-rouge">goof</code> function in the <code class="highlighter-rouge">ithir</code> package. We will use this function a lot
+when doing digital soil mapping, so it might be useful to describe it.
+<code class="highlighter-rouge">goof</code> takes four inputs. A vector of <code class="highlighter-rouge">observed</code> values, a vector of
+<code class="highlighter-rouge">predicted</code> values, a logical choice of whether an output plot is
+required, and a character input of what type of output is required.
+There are number of possible goodness of fit statistics that can be
+requested, with only some being used frequently in digital soil mapping
+projects. Therefore setting the <code class="highlighter-rouge">type</code> parameter to <code class="highlighter-rouge">DSM</code> will output
+only the <em>R</em><sup>2</sup>, RMSE, MSE, bias and concordance statistics as
+these are most most relevant to DSM. Additional statitistics can be
+returned if <code class="highlighter-rouge">spec</code> is specified for the <code class="highlighter-rouge">type</code> parameter.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.1</span><span class="o">$</span><span class="n">fitted.values</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"DSM"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##          R2 concordance      MSE     RMSE bias</span><span class="w">
+</span><span class="c1">## 1 0.4213764   0.5888521 14.11304 3.756733    0</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You may wish to generate a plot in which case you would set the
+<code class="highlighter-rouge">plot.it</code> logical to <code class="highlighter-rouge">TRUE</code>. Note that the <code class="highlighter-rouge">MASS</code> package also needs to
+be installed and loaded if you want to use the <code class="highlighter-rouge">plot.it</code> parameter.</p>
+
+<p>This model <code class="highlighter-rouge">mod.1</code> does not seem to be too bad. On average the
+predictions are 3.75 cmol (+)/<em>kg</em> off the true value. The model on
+average is neither over- or under-predictive, but we can see that a few
+high CEC values are influencing the concordance and <em>R</em><sup>2</sup>.
+This outcome may mean that there are other factors that influence the
+CEC, such as mineralogy type for example.</p>
+
+<h3 id="references">References</h3>
+
+<p>Lin, L I. 1989. “A Concordance Correlation Coeficient to Evaluate
+Reproducibility.” <em>Biometrics</em> 45: 255–68.</p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-26">July 26, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cont/goof/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cont/goof/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cont/goof/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

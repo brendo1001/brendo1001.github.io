@@ -1,0 +1,582 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>C5 decision trees &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Categorical Variables">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="C5 decision trees">
+<meta name="twitter:description" content="Categorical Variables">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C5 decision trees">
+<meta property="og:description" content="Categorical Variables">
+<meta property="og:url" content="/DSM_book/pages/dsm_cat/c5/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_cat/c5/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>C5 decision trees</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Categorical Variables</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">C5 decision trees</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~13 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <ul>
+  <li><a href="#s-1">Introduction</a></li>
+  <li><a href="#s-2">Data preparation</a></li>
+  <li><a href="#s-3">Model fitting</a></li>
+  <li><a href="#s-4">Model goodness of fit</a></li>
+  <li><a href="#s-5">Applying the model spatially</a></li>
+</ul>
+
+<h3 id="introduction-">Introduction <a id="s-1"></a></h3>
+
+<p>The C5 decision tree model is available in the <code class="highlighter-rouge">C50</code> package. The
+function <code class="highlighter-rouge">C5.0</code> fits classification tree models or rule-based models
+using Quinlans’s C5.0 algorithm (Quinlan 1993).</p>
+
+<p>Essentially we will go through the same process as we did for the
+<a href="/DSM_book/pages/dsm_cat/mlr/">multinomial logistic regression</a>. The
+<code class="highlighter-rouge">C5.0</code> function and its internal parameters are similar in nature to
+that of the <a href="/DSM_book/pages/dsm_cont/sspfs/cubist/"><code class="highlighter-rouge">Cubist</code> function for predicting continuous variables</a>.
+The <code class="highlighter-rouge">trials</code> parameter lets you implement a boosted classification tree
+process, with the results aggregated at the end. There are also many
+other useful model tuning parameters in the <code class="highlighter-rouge">C5.0Control</code> parameter set
+too that are worth a look. Just see the help files for more information.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="data-preparation-">Data Preparation <a id="s-2"></a></h3>
+
+<p>The data to be used for the following modelling exercises are Terron
+classes as sampled from the map presented in Malone et al. (2014) .The
+sample data contains 1000 entries of which there are 12 different Terron
+classes. Before getting into the modeling, we first load in the data and
+then perform the covariate layer intersection using the suite of
+environmental variables contained in the <code class="highlighter-rouge">hunterCovariates</code> data object
+in the <code class="highlighter-rouge">ithir</code> package. The small selection of covariates cover an area
+of approximately 220<em>k**m</em><sup>2</sup> at a spatial resolution of 25m.
+They include those derived from a DEM: altitude above channel network
+(AACN), solar light insolation and terrain wetness index (TWI). Gamma
+radiometric data (total count) is also included together with a surface
+that depicts soil drainage in form of a continuous index (ranging from 0
+to 5). These 5 different covariate layers are stacked together via a
+<code class="highlighter-rouge">rasterStack</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># load data</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">SpatialPointsDataFrame</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">names</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] "x"      "y"      "terron"</span><span class="w">
+
+</span><span class="n">coordinates</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span></code></pre></div></div>
+
+<p>As these data are of the same spatial projection as the
+<code class="highlighter-rouge">hunterCovariates</code>, there is no need to perform a coordinate
+transformation. So we can perform the intersection immediately.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">,</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    1000 obs. of  8 variables:</span><span class="w">
+</span><span class="c1">##  $ x                : num  346535 334760 340910 336460 344510 ...</span><span class="w">
+</span><span class="c1">##  $ y                : num  6371940 6375840 6377690 6382040 6378116 ...</span><span class="w">
+</span><span class="c1">##  $ terron           : Factor w/ 12 levels "1","2","3","4",..: 3 4 12 5 6 11 3 10 3 5 ...</span><span class="w">
+</span><span class="c1">##  $ AACN             : num  37.544 25.564 32.865 0.605 9.516 ...</span><span class="w">
+</span><span class="c1">##  $ Drainage.Index   : num  4.72 4.78 2 4.19 4.68 ...</span><span class="w">
+</span><span class="c1">##  $ Light.Insolation : num  1690 1736 1712 1712 1677 ...</span><span class="w">
+</span><span class="c1">##  $ TWI              : num  11.5 13.8 13.4 18.6 19.8 ...</span><span class="w">
+</span><span class="c1">##  $ Gamma.Total.Count: num  380 407 384 388 454 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is always good practice to check to see if any of the observational
+data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is
+<code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the
+extent of the covariate layers. It is best to remove these observations
+from the data set.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">## integer(0)</span><span class="w">
+
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We will also subset the data for an external validation i.e. random hold
+back validation. Here 70% of the data for model calibration, leaving the
+other 30% for validation.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">655</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># create calibration/validation datasets</span><span class="w">
+</span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-fitting-">Model fitting <a id="s-3"></a></h3>
+
+<p>With the calibration data prepared, we will fit the C5 model as in the
+script below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">C</span><span class="m">50</span><span class="p">)</span><span class="w">
+</span><span class="n">hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">C</span><span class="m">5.0</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"AACN"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Drainage.Index"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Light.Insolation"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"TWI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Gamma.Total.Count"</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C</span><span class="m">5.0</span><span class="n">Control</span><span class="p">(</span><span class="n">CF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="n">minCases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">earlyStopping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>By calling the <code class="highlighter-rouge">summary</code> function, some useful model fit diagnostics are
+given. These include the tree structure, together with the covariates
+used and mis-classification error of the model, as well as a rudimentary
+confusion matrix. A useful feature of the C5 model is that it can omit
+in an automated fashion, unnecessary covariates.</p>
+
+<p>The <code class="highlighter-rouge">predict</code> function can either return the predicted class or the
+confidence of the predictions (which is controlled using the
+<code class="highlighter-rouge">type= prob</code> parameter. The probabilities are quantified such that if an
+observation is classified by a single leaf of a decision tree, the
+confidence value is the proportion of training cases at that leaf that
+belong to the predicted class. If more than one leaf is involved (i.e.,
+one or more of the attributes on the path has missing values), the value
+is a weighted sum of the individual leaves’ confidences. For
+rule-classifiers, each applicable rule votes for a class with the voting
+weight being the rule’s confidence value. If the sum of the votes for
+class C is W(C), then the predicted class P is chosen so that W(P) is
+maximal, and the confidence is the greater of (1), the voting weight of
+the most specific applicable rule for predicted class P; or (2) the
+average vote for class P (so, W(P) divided by the number of applicable
+rules for class P).Boosted classifiers are similar, but individual
+classifiers vote for a class with weight equal to their confidence
+value. Overall, the confidence associated with each class for every
+observation are made to sum to 1.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># return the class predictions [first 10 cases]</span><span class="w">
+</span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span><span class="w">
+
+</span><span class="c1">##  [1] 3  8  8  5  3  5  8  6  8  12</span><span class="w">
+</span><span class="c1">## Levels: 1 2 3 4 5 6 7 8 9 10 11 12</span><span class="w">
+
+</span><span class="c1"># return the class probabilities [first 10 cases]</span><span class="w">
+</span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"prob"</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+</span><span class="c1">##                1            2            3            4           5           6</span><span class="w">
+</span><span class="c1">## 366 0.0003479853 1.648352e-04 0.4500366339 0.0520695959 0.001684982 0.001227106</span><span class="w">
+</span><span class="c1">## 79  0.0001833977 8.687259e-05 0.0006949807 0.0274420842 0.122509653 0.047944016</span><span class="w">
+</span><span class="c1">## 946 0.0001833977 8.687259e-05 0.0006949807 0.0274420842 0.122509653 0.047944016</span><span class="w">
+</span><span class="c1">## 148 0.0003525046 1.669759e-04 0.0013358070 0.0007977737 0.573135431 0.027217069</span><span class="w">
+</span><span class="c1">## 710 0.0003479853 1.648352e-04 0.4500366339 0.0520695959 0.001684982 0.001227106</span><span class="w">
+</span><span class="c1">## 729 0.0007539682 3.571428e-04 0.0028571428 0.0017063492 0.503650805 0.419325387</span><span class="w">
+</span><span class="c1">## 848 0.0012925170 6.122449e-04 0.0048979592 0.0029251702 0.149115652 0.052176872</span><span class="w">
+</span><span class="c1">## 20  0.0005219780 2.472527e-04 0.0019780219 0.0011813187 0.060219780 0.809532966</span><span class="w">
+</span><span class="c1">## 923 0.0001833977 8.687259e-05 0.0006949807 0.0274420842 0.122509653 0.047944016</span><span class="w">
+</span><span class="c1">## 397 0.0354187203 4.433497e-04 0.0725123176 0.0366009864 0.039014779 0.003300493</span><span class="w">
+</span><span class="c1">##               7           8           9          10           11           12</span><span class="w">
+</span><span class="c1">## 366 0.168901096 0.014816850 0.077765564 0.000989011 0.1416300399 0.0903663012</span><span class="w">
+</span><span class="c1">## 79  0.176853281 0.426727801 0.020714285 0.095115831 0.0813996118 0.0003281853</span><span class="w">
+</span><span class="c1">## 946 0.176853281 0.426727801 0.020714285 0.095115831 0.0813996118 0.0003281853</span><span class="w">
+</span><span class="c1">## 148 0.002263451 0.053970316 0.169684604 0.169833027 0.0006122449 0.0006307978</span><span class="w">
+</span><span class="c1">## 710 0.168901096 0.014816850 0.077765564 0.000989011 0.1416300399 0.0903663012</span><span class="w">
+</span><span class="c1">## 729 0.004841270 0.004325397 0.029603174 0.029920634 0.0013095237 0.0013492063</span><span class="w">
+</span><span class="c1">## 848 0.008299320 0.340748295 0.050748300 0.337006798 0.0022448979 0.0499319738</span><span class="w">
+</span><span class="c1">## 20  0.003351648 0.079917584 0.001263736 0.020714286 0.0201373630 0.0009340660</span><span class="w">
+</span><span class="c1">## 923 0.176853281 0.426727801 0.020714285 0.095115831 0.0813996118 0.0003281853</span><span class="w">
+</span><span class="c1">## 397 0.074975372 0.005369458 0.002266010 0.347487689 0.0016256157 0.3809852094</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-goodness-of-fit-">Model goodness of fit <a id="s-4"></a></h3>
+
+<p>So lets look at the calibration and validation statistics. First, the
+calibration statistics:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C.pred.hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C.pred.hv.C5</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## $confusion_matrix</span><span class="w">
+</span><span class="c1">##     1 2  3  4  5  6  7  8  9 10 11 12</span><span class="w">
+</span><span class="c1">## 1  10 5  1  4  0  0  0  0  2  0  0  0</span><span class="w">
+</span><span class="c1">## 2   0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 3   5 3 43  5  0  0 14  1  6  1 11  8</span><span class="w">
+</span><span class="c1">## 4   3 0 11 23  0  0  3  3 12  0  5  1</span><span class="w">
+</span><span class="c1">## 5   0 0  0  0 62 17  0  4 14 14  0  0</span><span class="w">
+</span><span class="c1">## 6   0 0  0  0  3 42  0  4  0  1  1  0</span><span class="w">
+</span><span class="c1">## 7   0 1 15  6  0  0 77 15  7  6  4 12</span><span class="w">
+</span><span class="c1">## 8   0 0  0  4 26  8 26 82  5 22 12  2</span><span class="w">
+</span><span class="c1">## 9   0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 10  0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 11  0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 12  1 0  2  1  1  0  2  0  0 10  0 11</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $overall_accuracy</span><span class="w">
+</span><span class="c1">## [1] 50</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $producers_accuracy</span><span class="w">
+</span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
+</span><span class="c1">## 53  0 60 54 68 63 64 76  0  0  0 33 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $users_accuracy</span><span class="w">
+</span><span class="c1">##   1   2   3   4   5   6   7   8   9  10  11  12 </span><span class="w">
+</span><span class="c1">##  46 NaN  45  38  56  83  54  44 NaN NaN NaN  40 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $kappa</span><span class="w">
+</span><span class="c1">## [1] 0.4269877</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It will be noticed that some of the Terron classes failed to be
+predicted by the fitted model. For example Terron classes 2, 9, 11, and
+12 were all predicted as being a different class. All observations of
+Terron class 2 were predicted as Terron class 1. Doing the external
+validation we return the following:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">V.pred.hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V.pred.hv.C5</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## $confusion_matrix</span><span class="w">
+</span><span class="c1">##    1 2  3  4  5  6  7  8 9 10 11 12</span><span class="w">
+</span><span class="c1">## 1  7 2  0  0  0  0  0  0 1  0  0  0</span><span class="w">
+</span><span class="c1">## 2  0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
+</span><span class="c1">## 3  1 1 15  3  0  0  3  0 3  1  4  3</span><span class="w">
+</span><span class="c1">## 4  0 1  3 19  0  1  1  2 4  0  2  0</span><span class="w">
+</span><span class="c1">## 5  0 0  0  0 23  6  1  2 4  1  0  0</span><span class="w">
+</span><span class="c1">## 6  0 0  0  0  5 15  0  4 1  0  0  0</span><span class="w">
+</span><span class="c1">## 7  0 0  7  5  1  0 36 11 2  4  4  4</span><span class="w">
+</span><span class="c1">## 8  0 0  0  5 11  3 11 22 5 13  5  2</span><span class="w">
+</span><span class="c1">## 9  0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
+</span><span class="c1">## 10 0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
+</span><span class="c1">## 11 0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
+</span><span class="c1">## 12 0 0  2  0  0  0  1  0 0  5  0  2</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $overall_accuracy</span><span class="w">
+</span><span class="c1">## [1] 47</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $producers_accuracy</span><span class="w">
+</span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
+</span><span class="c1">## 88  0 56 60 58 60 68 54  0  0  0 19 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $users_accuracy</span><span class="w">
+</span><span class="c1">##   1   2   3   4   5   6   7   8   9  10  11  12 </span><span class="w">
+</span><span class="c1">##  70 NaN  45  58  63  60  49  29 NaN NaN NaN  20 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $kappa</span><span class="w">
+</span><span class="c1">## [1] 0.3859025</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="apply-model-spatially-">Apply model spatially <a id="s-5"></a></h3>
+
+<p>And finally, creating the map derived from the <code class="highlighter-rouge">hv.C5</code> model using the
+raster <code class="highlighter-rouge">predict</code> function. Note that the C5 model returned 0% producer’s
+accuracy for Terron classes 2, 9, 11 and 12. These data account for only
+a small proportion of the data set, and/or, they may be similar to other
+existing Terron classes (based on the available predictive covariates).
+Consequently, they did not feature in the <code class="highlighter-rouge">hv.C5</code> model and ultimately,
+the final map.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># class prediction</span><span class="w">
+</span><span class="n">map.C5.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">covStack</span><span class="p">,</span><span class="w"> </span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hv_C5_class.tif"</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">map.C5.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">)</span><span class="w">
+</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+</span><span class="n">rat</span><span class="p">[[</span><span class="s2">"terron"</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">)</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
+
+</span><span class="c1"># plot</span><span class="w">
+</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">)</span><span class="w">
+</span><span class="n">rasterVis</span><span class="o">::</span><span class="n">levelplot</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">,</span><span class="w"> </span><span class="n">col.regions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/c5.png" alt="rconsole" />
+    <figcaption> Hunter Valley Terron class map created using C5 decision tree model.</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="references">References</h3>
+
+<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for
+the Identification of Terrons in the Lower Hunter Valley, Australia.”
+<em>Geoderma Regional</em> 1: 31–47.</p>
+
+<p>Quinlan, J R. 1993. <em>C4.5: Programs for Machine Learning</em>. Morgan
+Kaufmann, San Mateo, California.</p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-09-13">September 13, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cat/c5/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cat/c5/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cat/c5/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

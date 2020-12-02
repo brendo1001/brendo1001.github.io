@@ -1,0 +1,519 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Preparatory and exploratory analysis for digital soil mapping &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Preparatory and exploratory analysis for digital soil mapping">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Preparatory and exploratory analysis for digital soil mapping">
+<meta property="og:description" content="">
+<meta property="og:url" content="/DSM_book/pages/dsm_prep/intersection/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_prep/intersection/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Preparatory and exploratory analysis for digital soil mapping</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading"></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Preparatory and exploratory analysis for digital soil mapping</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~11 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h2 id="intersecting-soil-point-observations-with-environmental-covariates">Intersecting soil point observations with environmental covariates</h2>
+
+<p>In order to carry out digital soil mapping in terms of evaluating the
+significance of environmental variables in explaining the spatial
+variation of the target soil variable under investigation, we need to
+link both sets of data together and extract the values of the covariates
+at the locations of the soil point data.</p>
+
+<p>The first task is to bring in to our working environment some soil point
+data. We will be using a data set of soil samples collected from the
+Hunter Valley, NSW Australia. The area in question is an approximately
+22<em>k**m</em><sup>2</sup> sub-area of the Hunter Wine Country Private
+Irrigation District (HWCPID), situated in the Lower Hunter Valley, NSW
+(<a href="https://www.google.com.au/maps/place/32%C2%B049'58.4%22S+151%C2%B021'14.4%22E/@-32.7833933,151.2510364,12.63z/data=!4m5!3m4!1s0x0:0x0!8m2!3d-32.8329!4d151.354">32.8329S,151.354E</a>).
+The HWCPID is approximately 140 km north of Sydney, NSW, Australia. The
+target variable is soil pH. The data was preprocessed such that the
+predicted values are outputs of the <a href="/DSM_book/pages/dsm_prep/splines/">mass-preserving depth
+function</a>.
+You will find that most examples in this section and other sections of
+this course that this data set is used quite a bit. The data is loaded
+in from the <code class="highlighter-rouge">ithir</code> package with the following script:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    506 obs. of  14 variables:</span><span class="w">
+</span><span class="c1">##  $ X                       : num  340386 340345 340559 340483 340734 ...</span><span class="w">
+</span><span class="c1">##  $ Y                       : num  6368690 6368491 6369168 6368740 6368964 ...</span><span class="w">
+</span><span class="c1">##  $ pH60_100cm              : num  4.47 5.42 6.26 8.03 8.86 ...</span><span class="w">
+</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  1.34 1.42 1.64 1.04 1.27 ...</span><span class="w">
+</span><span class="c1">##  $ AACN                    : num  1.619 0.281 2.301 1.74 3.114 ...</span><span class="w">
+</span><span class="c1">##  $ Landsat_Band1           : int  57 47 59 52 62 53 47 52 53 63 ...</span><span class="w">
+</span><span class="c1">##  $ Elevation               : num  103.1 103.7 99.9 101.9 99.8 ...</span><span class="w">
+</span><span class="c1">##  $ Hillshading             : num  1.849 1.428 0.934 1.517 1.652 ...</span><span class="w">
+</span><span class="c1">##  $ Light_insolation        : num  1689 1701 1722 1688 1735 ...</span><span class="w">
+</span><span class="c1">##  $ Mid_Slope_Positon       : num  0.876 0.914 0.844 0.848 0.833 ...</span><span class="w">
+</span><span class="c1">##  $ MRVBF                   : num  3.85 3.31 3.66 3.92 3.89 ...</span><span class="w">
+</span><span class="c1">##  $ NDVI                    : num  -0.143 -0.386 -0.197 -0.14 -0.15 ...</span><span class="w">
+</span><span class="c1">##  $ TWI                     : num  17.5 18.2 18.8 18 17.8 ...</span><span class="w">
+</span><span class="c1">##  $ Slope                   : num  1.79 1.42 1.01 1.49 1.83 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>As you will note, there are 506 observations of soil pH. These data are
+associated with a spatial coordinate and also have associated
+environmental covariate data that have been intersected with the point
+data. The environmental covariates have been sourced from a digital
+elevation model and Landsat 7 satellite data. For the demonstration
+purposes of the exercise, we will firstly remove this already
+intersected data and start fresh - essentially this is an opportunity to
+recall earlier work on <a href="/DSM_book/pages/r_literacy/part5/">dataframe manipulation and
+indexing</a>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># round pH data to 2 decimal places</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># remove already intersected data</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># add an id column</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># re-arrange order of columns</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># Change names of coordinate columns</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Also in the <code class="highlighter-rouge">ithir</code> package are a collection of rasters that correspond
+to environmental covariates that cover the extent of the just loaded
+soil point data. These can be loaded using the script:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
+</span><span class="n">hunterCovariates_sub</span><span class="w">
+
+</span><span class="c1">## class      : RasterStack </span><span class="w">
+</span><span class="c1">## dimensions : 249, 210, 52290, 11  (nrow, ncol, ncell, nlayers)</span><span class="w">
+</span><span class="c1">## resolution : 25, 25  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 338422.3, 343672.3, 6364203, 6370428  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=utm +zone=56 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs </span><span class="w">
+</span><span class="c1">## names      : Terrain_Ruggedness_Index,        AACN, Landsat_Band1,   Elevation, Hillshading, Light_insolation, Mid_Slope_Positon,       MRVBF,        NDVI,         TWI,       Slope </span><span class="w">
+</span><span class="c1">## min values :                 0.194371,    0.000000,     26.000000,   72.217499,    0.000677,      1236.662840,          0.000009,    0.000002,   -0.573034,    8.224325,    0.001708 </span><span class="w">
+</span><span class="c1">## max values :                15.945321,  106.665482,    140.000000,  212.632507,   32.440960,      1934.199950,          0.956529,    4.581594,    0.466667,   20.393652,   21.809752</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This data set is a stack of 11 <code class="highlighter-rouge">rasterLayers</code> which correspond to mainly
+indices derived from a digital elevation model: elevation(<code class="highlighter-rouge">elevation</code>),
+terrain wetness index (<code class="highlighter-rouge">TWI</code>), altitude above channel network (<code class="highlighter-rouge">AACN</code>),
+terrain ruggedness index (<code class="highlighter-rouge">Terrain_Ruggedness_Index</code>), hillshading
+(<code class="highlighter-rouge">Hillshading</code>), incoming solar radiation (<code class="highlighter-rouge">Light_insolation</code>),
+mid-slope position (<code class="highlighter-rouge">Mid_Slope_Positon</code>), multi-resolution valley bottom
+flatness index (<code class="highlighter-rouge">MRVBF</code>), and slope gradient (<code class="highlighter-rouge">Slope</code>). Landsat 7
+satellite spectral data, specifically band 1 (<code class="highlighter-rouge">Landsat_Band1</code>} and
+normalised difference vegetation index (<code class="highlighter-rouge">NDVI</code>) are provided too, and
+give some indication of the spatial variation of vegetation patterns
+across the study area.</p>
+
+<p>You may notice that there is a commonality between these <code class="highlighter-rouge">rasterlayers</code>
+in terms of their CRS, dimensions and resolution. When you have multiple
+<code class="highlighter-rouge">rasterlayers</code> as individual rasters, but they are common to each other
+in terms of resolution and extent, rather than working with each raster
+independently it is much more efficient to stack them all into a single
+object. The <code class="highlighter-rouge">stack</code> function from the <code class="highlighter-rouge">raster</code> package is ready-made for
+this, of which the <code class="highlighter-rouge">hunterCovariates_sub</code> stack is an output. This
+harmony is an ideal situation for DSM where there may often be instances
+where rasters from the some area under investigation may have different
+resolutions, extents and even CRSs. It these situations it is common to
+reproject and or resample to a common projection and resolution. The
+functions from the <code class="highlighter-rouge">raster</code> package which may be of use in these
+situations are <code class="highlighter-rouge">projectRaster</code> and <code class="highlighter-rouge">resample</code>. The <a href="/DSM_book/pages/r_gis/reprojs/">Reprojections,
+resampling and rasterisation</a>
+page takes you through a number of different scenarios and workflows
+using these functions and others.</p>
+
+<p>While the example is a little contrived, it is useful to always
+determine whether or not the available covariates have complete coverage
+of the soil point data. This might be done with the following script
+which will produce a map like in the figure below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># plot raster</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">[[</span><span class="s2">"Elevation"</span><span class="p">]],</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hunter Valley elevation map with overlayed point locations"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## plot points</span><span class="w">
+</span><span class="n">coordinates</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/hunterValley1.png" alt="rconsole" />
+    <figcaption> unter Valley elevation map with the soil point locations overlayed upon it.</figcaption>
+</figure>
+
+<p>With the soil point data and covariates prepared, it is time to perform
+the intersection between the soil observations and covariate layers
+using the script:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">coordinates</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">extract</code> function is quite useful. Essentially the function ingests
+the <code class="highlighter-rouge">rasterStack</code> object, together with the <code class="highlighter-rouge">SpatialPointsDataFrame</code>
+object <code class="highlighter-rouge">HV_subsoilpH</code>. The <code class="highlighter-rouge">sp</code> parameter set to 1 means that the
+extracted covariate data gets appended to the existing
+<code class="highlighter-rouge">SpatialPointsDataFrame</code> object. While the <code class="highlighter-rouge">method</code> object specifies the
+extraction method which in our case is <em>simple</em> which likened to get the
+covariate value nearest to the points i.e it is likened to <em>drilling
+down</em>.</p>
+
+<p>A good practice is to then export the soil and covariate data intersect
+object to file for later use. First we convert the spatial object to a
+<code class="highlighter-rouge">data.frame</code>, then export as a comma separated file.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">,</span><span class="w"> </span><span class="s2">"hunterValley_SoilCovariates_pH.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In the previous example the rasters we wanted to use are available data
+from the <code class="highlighter-rouge">ithir</code> package. More generally we will have the raster data we
+need sitting on our computer, a USB or even on the cloud somewhere. The
+steps for intersecting the soil observation data with the covariates are
+the same as before, except we now need to specify the location where our
+raster covariate data is located. We need not even have to load in the
+rasters to memory, just point <code class="highlighter-rouge">R</code> to where they are, and then run the
+raster <code class="highlighter-rouge">extract</code> function. This utility is obviously a very handy
+feature when we are dealing with an inordinately large or large number
+of rasters. The workhorse function we need is <code class="highlighter-rouge">list.files</code>. First you
+will need to download the <a href="/DSM_book/data/testGrids.zip">testGrids.zip</a>
+folder, and unzip them into a directory of your choosing. Now try the
+following script:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/testGrids"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\\.tif$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##  [1] "~/AACN.tif"                    </span><span class="w">
+</span><span class="c1">##  [2] "~/Elevation.tif"               </span><span class="w">
+</span><span class="c1">##  [3] "~/Hillshading.tif"             </span><span class="w">
+</span><span class="c1">##  [4] "~/Landsat_Band1.tif"           </span><span class="w">
+</span><span class="c1">##  [5] "~/Light_insolation.tif"        </span><span class="w">
+</span><span class="c1">##  [6] "~/Mid_Slope_Positon.tif"       </span><span class="w">
+</span><span class="c1">##  [7] "~/MRVBF.tif"                   </span><span class="w">
+</span><span class="c1">##  [8] "~/NDVI.tif"                    </span><span class="w">
+</span><span class="c1">##  [9] "~/Slope.tif"                   </span><span class="w">
+</span><span class="c1">## [10] "~/Terrain_Ruggedness_Index.tif"</span><span class="w">
+</span><span class="c1">## [11] "~/TWI.tif"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The parameter <code class="highlighter-rouge">path</code> is essentially the directory location where the
+raster files are sitting. If needed, we may also want to do recursive
+listing into directories that are within that path directory. We want
+<code class="highlighter-rouge">list.files()</code> to return all the files (in our case) that have the
+<em>.tif</em> extension. This criteria is set via the <code class="highlighter-rouge">pattern</code> parameter, such
+that <code class="highlighter-rouge">$</code> at the end means that this is end of string, and but adding
+<code class="highlighter-rouge">\\</code>. ensures that you match only files with extension <em>.tif</em>, otherwise
+it may list (if they exist), files that end in <em>.atif</em> as an example.
+You may guess that any other type of pattern matching criteria could be
+used to suit your own specific data. The <code class="highlighter-rouge">full.names</code> logical parameter
+is just a question of whether we want to return the full pathway address
+of the raster file, in which case, we do.</p>
+
+<p>All we then need to do is perform a raster stack of these individual
+rasters, then perform the intersection. This is really the handy feature
+where to perform the stack, we still need not require the loading of the
+rasters into the R memory. They are still on file!.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/testGrids"</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\\.tif$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># stack rasters</span><span class="w">
+</span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">files</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">files</span><span class="p">[</span><span class="n">i</span><span class="p">])}</span><span class="w">
+</span><span class="n">r</span><span class="m">1</span><span class="w">
+
+</span><span class="c1">## class      : RasterStack </span><span class="w">
+</span><span class="c1">## dimensions : 249, 210, 52290, 11  (nrow, ncol, ncell, nlayers)</span><span class="w">
+</span><span class="c1">## resolution : 25, 25  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 338422.3, 343672.3, 6364203, 6370428  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +proj=utm +zone=56 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
+</span><span class="c1">## names      :        AACN,   Elevation, Hillshading, Landsat_Band1, Light_insolation, Mid_Slope_Positon,       MRVBF,        NDVI,       Slope, Terrain_Ruggedness_Index,         TWI </span><span class="w">
+</span><span class="c1">## min values :    0.000000,   72.217499,    0.000677,     26.000000,      1236.662840,          0.000009,    0.000002,   -0.573034,    0.001708,                 0.194371,    8.224325 </span><span class="w">
+</span><span class="c1">## max values :  106.665482,  212.632507,   32.440960,    140.000000,      1934.199950,          0.956529,    4.581594,    0.466667,   21.809752,                15.945321,   20.393652</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that the stacking of rasters can only be possible if they are all
+equivalent in terms of resolution and extent. The <a href="/DSM_book/pages/r_gis/reprojs/">Reprojections,
+resampling and rasterisation</a>
+page takes you through a number of different scenarios and workflows for
+getting your data layers all harmonised. With the stacked rasters, we
+can perform the soil point data intersection as done previously.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-06-18">June 18, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_prep/intersection/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_prep/intersection/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_prep/intersection/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Getting spatial in R &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="generic GIS stuff for R">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Getting spatial in R">
+<meta name="twitter:description" content="generic GIS stuff for R">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting spatial in R">
+<meta property="og:description" content="generic GIS stuff for R">
+<meta property="og:url" content="/DSM_book/pages/r_gis/rasters/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/r_gis/rasters/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Getting spatial in R</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">generic GIS stuff for R</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Getting spatial in R</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~5 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h2 id="working-with-raster-data">Working with raster data</h2>
+
+<p>Code is <a href="/DSM_book/rcode/P3_1_RGIS.R">here</a></p>
+
+<p>Most of the functions needed for handling raster data are contained in
+the <code class="highlighter-rouge">raster</code> package. There are functions for reading and writing raster
+files from and to different raster formats. In DSM we work quite a deal
+with data in table format and then rasterise this data so that we can
+make a map. To do this in <code class="highlighter-rouge">R</code>, lets bring in a <code class="highlighter-rouge">data.frame</code>. This could
+be either from a text-file, but as for the previous occasions, the data
+is imported from the <code class="highlighter-rouge">ithir</code> package. This data is a digital elevation
+model with 100m grid resolution, from the Hunter Valley, NSW, Australia.
+The same area where the data point pattern used in the <a href="%7B%7B%20site.url%20%7D%7D/DSM_book/pages/r_gis/pointpatterns/">point patterns
+page</a>
+originated from.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    21518 obs. of  3 variables:</span><span class="w">
+</span><span class="c1">##  $ X        : num  340210 340310 340110 340210 340310 ...</span><span class="w">
+</span><span class="c1">##  $ Y        : num  6362640 6362640 6362740 6362740 6362740 ...</span><span class="w">
+</span><span class="c1">##  $ elevation: num  177 175 178 172 173 ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>As the data is already a <em>raster</em> (such that the row observation
+indicate locations on a regular spaced grid), but in a table format, we
+can just use the <code class="highlighter-rouge">rasterFromXYZ</code> function from <code class="highlighter-rouge">raster</code>. Also we can
+define the CRS just like we did with the <code class="highlighter-rouge">HV100</code> point data we worked
+with <a href="/DSM_book/pages/r_gis/pointpatterns/">before</a>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r.DEM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">HV_dem</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">])</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"+init=epsg:32756"</span><span class="w">
+</span><span class="n">r.DEM</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 215, 169, 36335  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 334459.8, 351359.8, 6362590, 6384090  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : +init=epsg:32756 +proj=utm +zone=56 +south +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0 </span><span class="w">
+</span><span class="c1">## source     : memory</span><span class="w">
+</span><span class="c1">## names      : elevation </span><span class="w">
+</span><span class="c1">## values     : 29.61407, 315.6837  (min, max)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>So lets do a quick plot of this raster and overlay the <code class="highlighter-rouge">HV100</code> point
+locations. (Note you will have needed to process the <code class="highlighter-rouge">HV100</code> data
+accordingly as per the <a href="/DSM_book/pages/r_gis/pointpatterns/">point patterns page</a> to show this figure).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">)</span><span class="w">
+</span><span class="n">points</span><span class="p">(</span><span class="n">HV100</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/HV_demP.png" alt="rconsole" />
+    <figcaption> Digital elevation model for the Hunter Valley, overlayed with the `HV100` sampling sites.</figcaption>
+</figure>
+
+<p>So we may want to export this raster to a suitable format for further
+work in a standard GIS environment. See the help file for <code class="highlighter-rouge">writeRaster</code>
+to get information regarding the supported grid types that data can be
+exported. For demonstration, we will export our data to ESRI Ascii
+ascii, as it is a common and universal raster format.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">writeRaster</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"~/HV_dem100.asc"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ascii"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>What about exporting raster data to KML file? Here you could use the KML
+function. Remember that we need to reproject our data because it is in
+the UTM system, and need to get it to WGS84 geographic. The raster
+re-projection is performed using the <code class="highlighter-rouge">projectRaster</code> function. Look at
+the help file for this function. Probably the most important parameters
+are <code class="highlighter-rouge">crs</code>, which takes the CRS string of the projection you want to
+convert the existing raster to, assuming it already has a defined CRS.
+The other is <code class="highlighter-rouge">method</code> which controls the interpolation method. For
+continuous data, <em>bilinear</em> would be suitable, but for categorical,
+<em>ngb</em>, (which is nearest neighbor interpolation) is probably better
+suited. Some more information and applications of the <code class="highlighter-rouge">projectRaster</code>
+function can be found in the <a href="/DSM_book/pages/r_gis/reprojs/">Raster resampling and
+reprojections</a>
+page. <code class="highlighter-rouge">KML</code> is a handy function from <code class="highlighter-rouge">raster</code> for exporting grids to kml
+format.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p.r.DEM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">projectRaster</span><span class="p">(</span><span class="n">r.DEM</span><span class="p">,</span><span class="w"> </span><span class="n">crs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"+init=epsg:4326"</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
+</span><span class="n">KML</span><span class="p">(</span><span class="n">p.r.DEM</span><span class="p">,</span><span class="w"> </span><span class="s2">"HV_DEM.kml"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rev</span><span class="p">(</span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">255</span><span class="p">)),</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Check yor working directory for presence of the kml file</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now visualize this in Google Earth and overlay this map with the points
+that were created before.</p>
+
+<p>The other useful procedure we can perform is to import rasters directly
+into <code class="highlighter-rouge">R</code> so we can perform further analyses. <code class="highlighter-rouge">rgdal</code> interfaces with the
+GDAL library, which means that there are <a href="https://gdal.org/drivers/raster/index.html">many supported grid formats
+that can be read into <code class="highlighter-rouge">R</code></a>.
+Here we will load in <code class="highlighter-rouge">HV_dem100.asc</code> raster that was made just before.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">read.grid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readGDAL</span><span class="p">(</span><span class="s2">"~/HV_dem100.asc"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## ~/HV_dem100.asc has GDAL driver AAIGrid </span><span class="w">
+</span><span class="c1">## and has 215 rows and 169 columns</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The imported raster <code class="highlighter-rouge">read.grid</code> is a <code class="highlighter-rouge">SpatialGridDataFrame</code>, which is a
+formal class of the <code class="highlighter-rouge">sp</code> package. To be able to use the raster functions
+from <code class="highlighter-rouge">raster</code> we need to convert it to the <code class="highlighter-rouge">RasterLayer</code> class. This is
+not exactly a conversion, rather just using the <code class="highlighter-rouge">raster</code> function to
+read in the <code class="highlighter-rouge">read.grid</code> file. Although, the <code class="highlighter-rouge">raster</code> function does do a
+conversion from <code class="highlighter-rouge">SpatialGridDataFrame</code> to <code class="highlighter-rouge">RasterLayer</code> with this
+function too.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grid.dem</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="s2">"~/HV_dem100.asc"</span><span class="p">)</span><span class="w">
+</span><span class="n">grid.dem</span><span class="w">
+
+</span><span class="c1">## class      : RasterLayer </span><span class="w">
+</span><span class="c1">## dimensions : 215, 169, 36335  (nrow, ncol, ncell)</span><span class="w">
+</span><span class="c1">## resolution : 100, 100  (x, y)</span><span class="w">
+</span><span class="c1">## extent     : 334459.8, 351359.8, 6362590, 6384090  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## crs        : NA </span><span class="w">
+</span><span class="c1">## source     : In Memory </span><span class="w">
+</span><span class="c1">## names      : HV_dem100</span><span class="w">
+</span></code></pre></div></div>
+
+<p>You will notice from the <code class="highlighter-rouge">R</code> generated output indicating the data
+source, it says it is loaded into memory. This is fine for small
+rasters, but can become a problem when very large rasters need to be
+handled. A really powerful feature of the <code class="highlighter-rouge">raster</code> package is the
+ability to point to the location of a raster/s without the need to load
+it into memory. It is only very rarely that one needs to use all the
+data contained in a raster at one time. As will be seen later on, this
+useful feature makes for a very efficient way to perform digital soil
+mapping across very large spatial extents.</p>
+
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-31">May 31, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/r_gis/rasters/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/r_gis/rasters/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/r_gis/rasters/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

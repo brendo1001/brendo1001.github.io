@@ -1,0 +1,472 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Model goodness of fit &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="Categorical variables">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Model goodness of fit">
+<meta name="twitter:description" content="Categorical variables">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Model goodness of fit">
+<meta property="og:description" content="Categorical variables">
+<meta property="og:url" content="/DSM_book/pages/dsm_cat/val/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_cat/val/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Model goodness of fit</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">Categorical variables</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Model goodness of fit</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~7 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h3 id="model-validation-of-categorical-prediction-models">Model validation of categorical prediction models</h3>
+
+<p>The special characteristic of categorical data and its prediction within
+models, is that a class is either predicted or it is not. For binary
+variables. the prediction is either a <strong>yes</strong> or <strong>no</strong>, <strong>black</strong> or
+<strong>white</strong>, <strong>present</strong> or <strong>absent</strong> etc. For multinomial variables,
+there are more than 2 classes, for example either <strong>black</strong>, <strong>grey</strong>,
+or <strong>white</strong> etc. (which could actually be an ordinal categorical
+classification, rather than nominal).</p>
+
+<p>There is no in between; rather discrete entities. Exceptions are that
+some models do estimate the probability of the existence of a particular
+class, which will be touched on later. Additionally, there are methods
+of fuzzy classification which are common in the soil sciences (McBratney
+and Odeh 1997), but will not be covered till a bit later in the course.
+Discrete categories and models for their prediction require other
+measures of validation than those that were used for continuous
+variables. The most important quality measures are described in
+Congalton (1991) and include:</p>
+
+<ul>
+  <li>Overall accuracy</li>
+  <li>User’s accuracy</li>
+  <li>Producer’s accuracy</li>
+  <li>Kappa coefficient of agreement</li>
+</ul>
+
+<p>Using a contrived example, each of these quality measures will be
+illustrated. We will make a 4 × 4 matrix, and call it <code class="highlighter-rouge">con.mat</code>, and
+append some column and row names — in this case <a href="https://www.clw.csiro.au/aclep/asc/index.htm">Australian Soil
+Classification</a> Order
+codes. We then populate the matrix with some more-or-less random
+integers.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">con.mat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+</span><span class="n">rownames</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"DE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"VE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"KU"</span><span class="p">)</span><span class="w">
+</span><span class="n">colnames</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"DE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"VE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"KU"</span><span class="p">)</span><span class="w">
+</span><span class="n">con.mat</span><span class="w">
+
+</span><span class="c1">##    DE VE CH KU</span><span class="w">
+</span><span class="c1">## DE  5  0  0  0</span><span class="w">
+</span><span class="c1">## VE  0 15  1 10</span><span class="w">
+</span><span class="c1">## CH  1  0 31  2</span><span class="w">
+</span><span class="c1">## KU  2  5  0 11</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">con.mat</code> takes the form of a confusion matrix, and ones such as this
+are often the output of a classification model. If we summed each of the
+columns (using the <code class="highlighter-rouge">colSums</code> function), we would obtain the total number
+of observations for each soil class. Having column sums reflecting the
+number of observations is a widely used convention in classification
+studies.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## DE VE CH KU </span><span class="w">
+</span><span class="c1">##  8 20 32 23</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Similarly, if we summed each of the rows we would retrieve the total
+number of predictions of each soil class. The predictions could have
+been made through any sort of model or classification process.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rowSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## DE VE CH KU </span><span class="w">
+</span><span class="c1">##  5 26 34 18</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Therefore, the numbers on the diagonal of the matrix will indicate
+fidelity between the observed class and the subsequent prediction.
+Numbers on the off-diagonals indicate a mis-classification or error.
+Overall accuracy is therefore computed by dividing the total correct
+(i.e., the sum of the diagonal) by the total number of observations (sum
+of the column sums).</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">ceiling</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">))</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 75</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Accuracy of individual classes can be computed in a similar manner.
+However, there is a choice of dividing the number of correct predictions
+for each class by either the totals (observations or predictions) in the
+corresponding columns or rows respectively. Traditionally, the total
+number of correct predictions of a class is divided by the total number
+of observations of that class (i.e. the column sum). This accuracy
+measure indicates the probability of an observation being correctly
+classified and is really a measure of omission error, or the <em>producer’s
+accuracy</em>. This is because the producer of the model is interested in
+how well a certain class can be predicted.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">ceiling</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="o">/</span><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## DE VE CH KU </span><span class="w">
+</span><span class="c1">## 63 75 97 48</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Alternatively, if the total number of correct predictions of a class is
+divided by the total number of predictions that were predicted in that
+category, then this result is a measure of commission error, or <em>user’s
+accuracy</em>. This measure is indicative of the probability that a
+prediction on the map actually represents that particular category on
+the ground or in the field.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">ceiling</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="o">/</span><span class="n">rowSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##  DE  VE  CH  KU </span><span class="w">
+</span><span class="c1">## 100  58  92  62</span><span class="w">
+</span></code></pre></div></div>
+
+<p>So if we use the <code class="highlighter-rouge">DE</code> category as an example, the <em>model</em> predicts this
+class correctly 63% of the time, but when it is actually predicted it is
+correct 100% of the time.</p>
+
+<p>The Kappa coefficient is another statistical measure of the fidelity
+between observations and predictions of a classification. The
+calculation is based on the difference between how much agreement is
+actually present (<em>observed</em> agreement) compared to how much agreement
+would be expected to be present by chance alone (<em>expected</em> agreement).
+The observed agreement is simply the overall accuracy percentage. We may
+also want to know how different the observed agreement is from the
+expected agreement. The Kappa coefficient is a measure of this
+difference, standardized to lie on a -1 to 1 scale, where 1 is perfect
+agreement, 0 is exactly what would be expected by chance, and negative
+values indicate agreement less than chance, i.e., potential systematic
+disagreement between observations and predictions. The Kappa coefficient
+is defined as:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?K=%20\frac{p_{o}-p_{e}}{1-P_{e}}" alt="K= \frac{p_{o}-p_{e}}{1-P_{e}}" /></p>
+
+<p>where <em>p</em><sub><em>o</em></sub> is the overall or observed accuracy, and
+<em>p</em><sub><em>e</em></sub> is the expected accuracy, where:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?p_{e}=%20\sum_{i=1}^n(\frac{colSum_{i}}{TO})\times(\frac{rowSum_{i}}{TO})" alt="p_{e}= \sum_{i=1}^n(\frac{colSum_{i}}{TO})\times(\frac{rowSum_{i}}{TO})" /></p>
+
+<p><em>TO</em> is the total number of observations and <em>n</em> is the number of
+classes. Rather than scripting the above equations, the kappa
+coefficient together with the other accuracy measures are contained in a
+function called <code class="highlighter-rouge">goofcat</code> in the <code class="highlighter-rouge">ithir</code> package. As we already have a
+confusion matrix prepared, we can enter it directly into the function as
+in the script below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ithir</span><span class="o">::</span><span class="n">goofcat</span><span class="p">(</span><span class="n">conf.mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con.mat</span><span class="p">,</span><span class="w"> </span><span class="n">imp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## $confusion_matrix</span><span class="w">
+</span><span class="c1">##    DE VE CH KU</span><span class="w">
+</span><span class="c1">## DE  5  0  0  0</span><span class="w">
+</span><span class="c1">## VE  0 15  1 10</span><span class="w">
+</span><span class="c1">## CH  1  0 31  2</span><span class="w">
+</span><span class="c1">## KU  2  5  0 11</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $overall_accuracy</span><span class="w">
+</span><span class="c1">## [1] 75</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $producers_accuracy</span><span class="w">
+</span><span class="c1">## DE VE CH KU </span><span class="w">
+</span><span class="c1">## 63 75 97 48 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $users_accuracy</span><span class="w">
+</span><span class="c1">##  DE  VE  CH  KU </span><span class="w">
+</span><span class="c1">## 100  58  92  62 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $kappa</span><span class="w">
+</span><span class="c1">## [1] 0.6389062</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Some people have derived rules of thumb for the interpretation of kappa
+coefficients e.g. Landis and Koch (1977). Some might find these useful
+or a guide in assessing the quality of a model, but it is best to
+interpret the Kappa alongside other metrics rather than independently.</p>
+
+<h3 id="references">References</h3>
+
+<p>Congalton, R. G. 1991. “A Review of Assessing the Accuracy of
+Classifcations of Remotely Sensed Data.” <em>Remote Sensing of the
+Environment</em> 37: 35–46.</p>
+
+<p>Landis, R.J., and G. G Koch. 1977. “The Measurment of Observer Agreement
+for Categorical Data.” <em>Biometrics</em> 33: 159–74.</p>
+
+<p>McBratney, A. B, and I. O. A Odeh. 1997. “Application of Fuzzy Sets in
+Soil Science: Fuzzy Logic, Fuzzy Measurments and Fuzzy Decisions.”
+<em>Geoderma</em> 77: 85–113.</p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-26">July 26, 2020</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_cat/val/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_cat/val/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_cat/val/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2020 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2020, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>
