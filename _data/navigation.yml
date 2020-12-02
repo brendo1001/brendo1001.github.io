@@ -1,0 +1,20 @@
+# Menu navigation links
+
+- title:    Home
+  url:      /
+
+- title:    Publications
+  url:      /publications/
+
+- title:    Software
+  url:      /software/
+
+- title:    Journal Digests
+  url:      /blog/
+  
+- title:    Blog
+  url:      /UseCases/
+
+- title:    Using R for Digital Soil Mapping
+  url:      /DSM_book/
+

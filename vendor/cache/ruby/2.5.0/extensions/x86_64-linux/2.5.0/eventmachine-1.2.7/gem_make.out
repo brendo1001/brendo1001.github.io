@@ -1,0 +1,24 @@
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+<<<<<<< HEAD
+/usr/bin/ruby2.5 -r ./siteconf20190201-6747-py887l.rb extconf.rb
+=======
+/usr/bin/ruby2.5 -r ./siteconf20190201-25684-qbtkqq.rb extconf.rb
+>>>>>>> develop
+creating Makefile
+
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+<<<<<<< HEAD
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20190201-6747-14huu5n
+=======
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20190201-25684-1r7grcw
+>>>>>>> develop

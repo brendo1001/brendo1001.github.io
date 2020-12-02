@@ -1,0 +1,5 @@
+current directory: /home/malone/mywork/site_source/vendor/cache/ruby/2.4.0/gems/commonmarker-0.17.13/ext/commonmarker
+/usr/bin/ruby2.4 -r ./siteconf20190321-17700-kc226m.rb extconf.rb
+mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+
+extconf failed, exit code 1

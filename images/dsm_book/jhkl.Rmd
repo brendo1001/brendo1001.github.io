@@ -1,0 +1,8 @@
+---
+title: "Digitalxcvjbknlent: Homosoil."
+bibliography: references1.bib
+output: html_document
+---
+
+
+The [lithology is from a global digital](https://www.clisap.de/fileadmin/B-Research/IA/IA5/LITHOMAP/) map which represent the different broad groups of parent materials. The lithology classes are: non- or semi-consolidated sediments, mixed consolidated sediments, silic-clastic sediments, acid volcanic rocks, basic volcanic rocks, complex of metamorphic and igneous rocks, and complex lithology. 

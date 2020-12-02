@@ -1,0 +1,43 @@
+# Brendan Malone'sPublications - Thesis
+
+- id: malone2012x
+  title: 'Practicable methodologies for delivering comprehensive spatial soils information'
+  page: 265
+  year: 2012
+  advisor:
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+    role: Supervisor
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+    role: Supervisor
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  publisher: University of Sydney
+  city: 'Sydney, Australia'
+  source: PhD Thesis
+  fulltext: 'bp-malone-2012-thesis.pdf'
+  
+- id: malone2008x
+  title: 'The features and spatial distribution of loessic soils around Mt. Canobolas in the New South Wales Central Tablelands'
+  page: 37
+  year: 2008
+  advisor:
+  - given: Stephen
+    given_initial: S. R.
+    family: Cattle
+    role: Supervisor
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  publisher: University of Sydney
+  city: 'Sydney, Australia'
+  source: Honors Thesis
+  fulltext: 'Canobolas manuscript_bmal_thesis.pdf'

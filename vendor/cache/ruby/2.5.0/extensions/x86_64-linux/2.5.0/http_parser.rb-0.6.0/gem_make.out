@@ -1,0 +1,24 @@
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+<<<<<<< HEAD
+/usr/bin/ruby2.5 -r ./siteconf20190201-6747-iq7is0.rb extconf.rb
+=======
+/usr/bin/ruby2.5 -r ./siteconf20190201-25684-8n1k93.rb extconf.rb
+>>>>>>> develop
+creating Makefile
+
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/brendo1001/mywork/mywebsite/site_source/vendor/cache/ruby/2.5.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+<<<<<<< HEAD
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20190201-6747-1pdw458
+=======
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20190201-25684-tkx6bj
+>>>>>>> develop

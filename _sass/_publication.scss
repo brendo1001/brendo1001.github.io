@@ -1,0 +1,40 @@
+.panel-pub {
+    ol li {
+        padding-bottom: 1em;
+    }
+    .title {
+        font-weight: bold;
+        a {
+            &:hover {
+                color: $danger;
+            }
+        }
+    }
+    .booktitle {
+        font-weight: bold;
+        font-style: italic;
+        a {
+            &:hover {
+                color: $danger;
+            }
+        }
+    }
+    .year {
+        font-weight: bold;
+    }
+    .comment {
+        font-style: italic;
+    }
+    .source {
+        font-style: italic;
+    }
+    .author {
+        .main {
+            font-weight: bold;
+        }
+    }
+    .volume {
+        font-style: italic;
+    }
+
+}

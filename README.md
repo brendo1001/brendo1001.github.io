@@ -1,4 +1,3 @@
-# Smart digital agriculture
-A simple holding website of stuff about agriculture, soil science, and science in general. 
+# My Stuff
 
-site URL: www.smartdigiag.com
+Source material. Private Repo

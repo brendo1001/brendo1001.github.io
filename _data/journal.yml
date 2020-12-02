@@ -1,0 +1,1827 @@
+# Brendan Malone Publications - Journal articles
+
+- title: 'Improvements to the Australian national soil thickness map using an integrated data mining approach'
+  volume: '377'
+  page: '114579'
+  year: 2020
+  author:
+  - given: Brendan
+    given_initial: B.
+    family: Malone
+    role: main
+  - given: Ross
+    given_initial: R.
+    family: Searle
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "https://reader.elsevier.com/reader/sd/pii/S0016706119328630?token=5D156467D15BEB57DF88EC47A4459AF82CB68B38212BF10EF0800E449B22C8B5303B8434FEBE8D8AD4B20CB759362D2B"
+  type: article
+  fulltext: malone2020_4.pdf
+  language: english
+  comment: First lead author paper since joining CSIRO
+
+- title: 'Disaggregating a Regional Extent Digital Soil Map using Bayesian Area-to-Point Regression Kriging for Farm-Scale Soil Carbon Assessment'
+  volume: '22'
+  page: 'e00314'
+  year: 2020
+  author:
+  - given: Sanjee
+    given_initial: S.
+    family: Somarathna
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B.
+    family: Malone  
+  journal:
+    fullname: SOIL
+    abbreviation: SOIL
+  URL: "https://doi.org/10.5194/soil-2019-75"
+  type: article
+  fulltext: malone2020_3.pdf
+  language: english
+  comment: 
+
+- title: 'Digital soil assessment delivers impact across scales in Australia and the Philippines'
+  volume: '22'
+  page: 'e00314'
+  year: 2020
+  author:
+  - given: Mike
+    given_initial: M.J.
+    family: Grundy
+    role: main
+  - given: Ross
+    given_initial: R.
+    family: Searle
+  - given: Elizabeth
+    given_initial: E.
+    family: Meier
+  - given: Anthony  
+    given_initial: A.
+    family: Ringrose-Voase
+  - given: Darren  
+    given_initial: D.
+    family: Kidd
+  - given: Tom  
+    given_initial: T.
+    family: Orton
+  - given: John  
+    given_initial: J.
+    family: Triantafilis
+  - given: Seonaid  
+    given_initial: S.
+    family: Philip
+  - given: Craig  
+    given_initial: C.
+    family: Liddicoat
+  - given: Brendan  
+    given_initial: B.
+    family: Malone
+  - given: Mark  
+    given_initial: M.
+    family: Thomas
+  - given: Jon  
+    given_initial: J.
+    family: Gray
+  - given: John  
+    given_initial: J.
+    family: Bennett
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "https://www.sciencedirect.com/science/article/pii/S2352009420300638"
+  type: article
+  fulltext: malone2020_2.pdf
+  language: english
+  comment: Stradbroke Island Workshop 
+
+- title: 'Evaluating an adaptive sampling algorithm to assist soil surveying New South Wales, Australia'
+  volume: '21'
+  page: 'e00284'
+  year: 2020
+  author:
+  - given: Jingyi
+    given_initial: J.
+    family: Huang
+    role: main
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan  
+    given_initial: B.
+    family: Malone
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "https://www.sciencedirect.com/science/article/pii/S235200942030033X"
+  type: article
+  fulltext: malone2020_1.pdf
+  language: english
+  comment:
+
+- title: 'Lateral and Vertical Variations of Soil Organic and Inorganic Carbon Content in Aridisols and Entisols of a Rangeland'
+  volume: '52'
+  page: '1064-2293'
+  year: 2019
+  author:
+  - given: Amin
+    given_initial: A.
+    family: Sharififar
+    role: main
+  - given: F
+    given_initial: F.
+    family: Sarmadiana
+  - given: H
+    given_initial: H.
+    family: Alikhani
+  - given: A
+    given_initial: A.
+    family: Keshavarzi
+  - given: O
+    given_initial: O.
+    family: Asghari
+  - given: Brendan  
+    given_initial: B.
+    family: Malone
+  journal:
+    fullname: Eurasian Soil Science
+    abbreviation: Eurasian Soil Science
+  URL: "https://"
+  type: article
+  fulltext: malone2019_12.pdf
+  language: english
+  comment:
+  
+
+- title: 'Digital mapping of peatlands - A critical review'
+  volume: '196'
+  page: '10287'
+  year: 2019
+  author:
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+    role: main
+  - given: ?rjan
+    given_initial: ?.
+    family: Berglund
+  - given: John
+    given_initial: J.
+    family: Connolly
+  - given: Carolyn
+    given_initial: C.
+    family: Hedley
+  - given: Folkert
+    given_initial: F.
+    family: de Vries
+  - given: Alassandro
+    given_initial: A.
+    family: Gimona
+  - given: Bas
+    given_initial: B.
+    family: Kempen
+  - given: Darren
+    given_initial: K.
+    family: Kidd
+  - given: Harry
+    given_initial: H.
+    family: Lilja
+  - given: Brendan
+    given_initial: B.
+    family: Malone
+  - given: Alex
+    given_initial: A.
+    family: McBratney
+  - given: Pierre
+    given_initial: P.
+    family: Roudier
+  - given: Sharon
+    given_initial: S.
+    family: O'Rourke
+  - given: Rudiyanto
+    given_initial: 
+    family: 
+  - given: Jose
+    given_initial: J. 
+    family: Padarian
+  - given: Laura
+    given_initial: L. 
+    family: Poggio
+  - given: Alexandre
+    given_initial: A.
+    family: ten Caten
+  - given: Daniel
+    given_initial: D.
+    family: Thompson
+  - given: Clint
+    given_initial: C.
+    family: Tuve
+  - given: Wirastuti
+    given_initial: W.
+    family: Widyatmanti
+  journal:
+    fullname: Earth Science Reviews
+    abbreviation: Earth Science Reviews
+  URL: "https://www.sciencedirect.com/science/article/pii/S001282521830360X?dgcid=coauthor"
+  type: article
+  fulltext: malone2019_11.pdf
+  language: english
+  comment:
+
+- title: 'Addressing the issue of digital mapping of soil classes with imbalanced class observations'
+  volume: '350'
+  page: '84-92'
+  year: 2019
+  author:
+  - given: Amin
+    given_initial: A.
+    family: Sharififar
+    role: main
+  - given: Fereydoon
+    given_initial: F.
+    family: Sarmadian
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "https://www.sciencedirect.com/science/article/pii/S0016706118319499?dgcid=coauthor"
+  type: article
+  fulltext: malone2019_10.pdf
+  language: english
+  comment:
+
+- title: 'Pedology and digital soil mapping (DSM)'
+  volume: '70'
+  page: '216-235'
+  year: 2019
+  author:
+  - given: Yuxin
+    given_initial: Y.
+    family: Ma
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  journal:
+    fullname: European Journal of Soil Science
+    abbreviation: EJSS
+  URL: "https://onlinelibrary.wiley.com/doi/full/10.1111/ejss.12790"
+  type: article
+  fulltext: malone2019_9.pdf
+  language: english
+  comment: PhD research from Yuxin Ma
+
+- title: 'Towards meaningful geographical indications: Validating terroirs on a 200 km2 scale in Australia lower Hunter Valley'
+  volume: '16'
+  page: 'e00209'
+  year: 2019
+  author:
+  - given: Sam
+    given_initial: S.
+    family: Coggins
+    role: main
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: Uta
+    given_initial: U.
+    family: Stockmann
+  - given: Malcolm
+    given_initial: M.
+    family: Possell
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "https://www.sciencedirect.com/science/article/pii/S2352009418302669?dgcid=coauthor"
+  type: article
+  fulltext: malone2019_8.pdf
+  language: english
+  comment: Research coming from 2017 honours student Sam Coggins
+
+
+- title: 'Some methods to improve the utility of conditioned Latin Hypercube sampling'
+  volume: '7'
+  page: 'e6451'
+  year: 2019
+  author:
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Colby
+    given_initial: C.
+    family: Brungard
+  journal:
+    fullname: PeerJ 
+    abbreviation: PeerJ
+  URL: "https://peerj.com/articles/5722/"
+  type: article
+  fulltext: malone2019_7.pdf
+  language: english
+  comment: soil sample optimisation using conditioned latin hypercube sampling
+
+- title: 'Optimizing wavelength selection by using informative vectors forparsimonious infrared spectra modelling'
+  volume: '158'
+  page: '201-210'
+  year: 2019
+  author:
+  - given: Wartini
+    given_initial: W.
+    family: Ng
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: M
+    given_initial: M.C.
+    family: Sarathjith
+  - given: Bhabani
+    given_initial: B.S.
+    family: Das
+  journal:
+    fullname: Computers and Electronics in Agriculture 
+    abbreviation: Computers and Electronics in Agriculture
+  URL: "https://www.sciencedirect.com/science/article/pii/S0168169918306434"
+  type: article
+  fulltext: malone2019_6.pdf
+  language: english
+  comment: soil spectra model optimisation.
+
+- title: 'Using model predictions of soil carbon in farm-scale auditing - A software tool'
+  volume: '169'
+  page: '24-30'
+  year: 2019
+  author:
+  - given: Jaap
+    given_initial: J.J.
+    family: de Gruijter
+    role: main
+  - given: Ischani
+    given_initial: I.
+    family: Wheeler
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  journal:
+    fullname: Agricultural Systems
+    abbreviation: Agricultural Systems
+  URL: "https://www.sciencedirect.com/science/article/pii/S0308521X18310801"
+  type: article
+  fulltext: malone2019_5.pdf
+  language: english
+  comment: Julia programming language.
+  
+
+- title: 'The feasibility of predicting the spatial pattern of soil particle-sizedistribution using a pedogenesis model'
+  volume: '341'
+  page: '195-205'
+  year: 2019
+  author:
+  - given: Yuxin
+    given_initial: Y.
+    family: Ma
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: W
+    given_initial: W.D.
+    family: Dimuth
+  - given: P
+    given_initial: P.
+    family: Welivitiya
+  - given: Brendan  
+    given_initial: B.P.
+    family: Malone
+  - given: Garry
+    given_initial: G.R.
+    family: Willgoose
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "https://reader.elsevier.com/reader/sd/pii/S0016706117320554?token=08EA9E12864418D87779835EBAE4F873818175D5D0B93B6A4B49E320E8C1D54EAFBFB99AB37964ABCD0F78BACA0F21A8"
+  type: article
+  fulltext: malone2019_4.pdf
+  language: english
+  comment: Pushing into new DSM territory with empiro-mechanistic spatial modelling. Work lead by PhD Candidate Yuxin Ma from Sydney Uni.
+  
+
+
+- title: 'Improved disaggregation of conventional soil maps'
+  volume: '341'
+  page: '148-160'
+  year: 2019
+  author:
+  - given: Anders
+    given_initial: A.B.
+    family: Moller
+    role: main
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: Nathan
+    given_initial: N.P.
+    family: Odgers
+  - given: Amelie
+    given_initial: A.
+    family: Beucher
+  - given: Bo
+    given_initial: B.V.
+    family: Iversen
+  - given: Mogens
+    given_initial: M.H.
+    family: Greve
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "https://www.sciencedirect.com/science/article/pii/S0016706118308899?dgcid=coauthor"
+  type: article
+  fulltext: malone2019_3.pdf
+  language: english
+  comment: PhD Candidate Anders from Denmark spent some time in study at USYD, and this is some resulting output.
+
+
+- title: 'Retrospective monitoring of the spatial variability of crystalline iron in soils of the east shore of Urmia Lake, Iran using remotely sensed data and digital maps'
+  volume: '337'
+  page: '1196-1207'
+  year: 2019
+  author:
+  - given: Farzin
+    given_initial: F.
+    family: Shahbazi
+    role: main
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  - given: Shahin
+    given_initial: S.
+    family: Oustan
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "https://www.sciencedirect.com/science/article/pii/S0016706118304622?via%3Dihub"
+  type: article
+  fulltext: malone2019_2.pdf
+  language: english
+  comment: Collaboration with visiting Iranian researcher Assoc. Prof. Farzin Shahbazi (University of Tabriz, Iran)
+
+
+
+- title: 'Evaluating the spatial and vertical distribution of agriculturally important nutrients - nitrogen, phosphorous and boron - in North West Iran'
+  volume: '173'
+  page: '71-82'
+  year: 2019
+  author:
+  - given: Farzin
+    given_initial: F.
+    family: Shahbazi
+    role: main
+  - given: Philip
+    given_initial: P.
+    family: Hughes
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B.P.
+    family: Malone
+  journal:
+    fullname: Catena
+    abbreviation: Catena
+  URL: "https://www.sciencedirect.com/science/article/pii/S0341816218304338"
+  type: article
+  fulltext: malone2019_1.pdf
+  language: english
+  comment: Collaboration with visiting Iranian researcher Assoc. Prof. Farzin Shahbazi (University of Tabriz, Iran)
+
+- title: 'Accounting for the measurement error of spectroscopically inferred soilcarbon data for improved precision of spatial predictions'
+  volume: '631-632'
+  page: '377-389'
+  year: 2018
+  author:
+  - given: Sanjee
+    given_initial: P.D.S.N.
+    family: Somarathna
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Uta
+    given_initial: U.
+    family: Stockmann
+  - given: Alex
+    given_initial: A.
+    family: McBratney
+  journal:
+    fullname: Science of the Total Environment
+    abbreviation: STOTEN
+  URL: "https://www.sciencedirect.com/science/article/pii/S0048969718307022"
+  type: article
+  fulltext: malone2018_5.pdf
+  language: english
+  comment: Accounting for measurment error in spatial predictions
+
+- title: 'In search of an optimum sampling algorithm for prediction of soil properties from infrared spectra'
+  volume: 'XX'
+  page: 'XX'
+  year: 2018
+  author:
+  - given: Wartini
+    given_initial: W.
+    family: Ng
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Patrick
+    given_initial: P.
+    family: Filippi
+  journal:
+    fullname: PeerJ
+    abbreviation: PeerJ
+  URL: "https://peerj.com/articles/5722/"
+  type: article
+  fulltext: malone2018_4.pdf
+  language: english
+  comment: Nice and and thorough investigation from PhD student Wartini Ng
+
+- title: 'Mapping the transition from pre-European settlement to contemporary soil conditions in the Lower Hunter Valley, Australia'
+  volume: '329'
+  page: '27-42'
+  year: 2018
+  author:
+  - given: Jingyi
+    given_initial: J.
+    family: Huang
+    role: main
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Damien
+    given_initial: D.J.
+    family: Field
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "https://www.sciencedirect.com/science/article/pii/S0016706117322401"
+  type: article
+  fulltext: malone2018_3.pdf
+  language: english
+  comment:
+
+- title: 'Description and spatial inference of soil drainage using matrix soil colours in the Lower Hunter Valley, New South Wales, Australia'
+  volume: '6'
+  page: 'e4659'
+  year: 2018
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: PeerJ
+    abbreviation: PeerJ
+  URL: "https://peerj.com/articles/4659/"
+  type: article
+  fulltext: malone2018_2.pdf
+  language: english
+  comment:
+
+- title: 'Auditing on-farm soil carbon stocks using downscaled national mapping products: Examples from Australia and New Zealand'
+  volume: '13'
+  page: '1-14'
+  year: 2018
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Carolyn
+    given_initial: C.
+    family: Hedley
+  - given: Pierre
+    given_initial: P.
+    family: Roudier
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Edward
+    given_initial: E.
+    family: Jones
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "https://www.sciencedirect.com/science/article/pii/S2352009417302559"
+  type: article
+  fulltext: malone2018_1.pdf
+  language: english
+  comment: Collaboration with Landcare Research, New Zealand.
+
+- title: 'More Data or a Better Model? Figuring Out What Matters Most for the Spatial Prediction of Soil Carbon'
+  volume: '81'
+  page: '1413-1426'
+  year: 2017
+  author:
+  - given: Sanjee
+    given_initial: P. D. S. N.
+    family: Somarathna
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  journal:
+    fullname: Soil Science Society of America journal
+    abbreviation: Soil Science Society of America journal
+  URL: "https://dl.sciencesocieties.org/publications/sssaj/abstracts/0/0/sssaj2016.11.0376"
+  type: article
+  fulltext: malone2017_9.pdf
+  language: english
+  comment: Paper by PhD student Sanji towards the end of her candidature
+
+- title: 'Comparison of regression methods for spatial downscaling of soil organic carbon stocks maps'
+  volume: '142'
+  page: '91-100'
+  year: 2017
+  author:
+  - given: Pierre
+    given_initial: P.
+    family: Roudier
+    role: 'main corr'
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Carolyn
+    given_initial: C. B.
+    family: Hedley
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  journal:
+    fullname: Computer and Electronics in Agriculture
+    abbreviation: Computer and Electronics in Agriculture
+  URL: "http://www.sciencedirect.com/science/article/pii/S0168169917304192"
+  type: article
+  fulltext: malone2017_8.pdf
+  language: english
+  comment: 
+
+- title: 'Evaluating a Bayesian modelling approach (INLA-SPADE) for environmental mapping'
+  volume: '609'
+  page: '621-632'
+  year: 2017
+  author:
+  - given: Jingyi
+    given_initial: J.
+    family: Huang
+    role: 'main corr'
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A.B.
+    family: McBratney
+  - given: John
+    given_initial: J.
+    family: Triantafilis
+  journal:
+    fullname: Science of the Total Environment
+    abbreviation: Science of the Total Environment
+  URL: "http://www.sciencedirect.com/science/article/pii/S0048969717319046"
+  type: article
+  fulltext: malone2017_7.pdf
+  language: english
+  comment: 
+
+
+- title: 'Rejoinder to Comments on Minasny et al., 2017 Soil carbon 4 per mille Geoderma 292, 59-86'
+  volume: 'xx'
+  page: 'xxx'
+  year: 2017
+  author:
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+    role: 'main corr'
+  - given: Dominique
+    given_initial: D.
+    family: Arrouays
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Denis
+    given_initial: D. A.
+    family: Angers
+  - given: Adam
+    given_initial: A.
+    family: Chambers
+  - given: Vincent
+    given_initial: V.
+    family: Chaplot
+  - given: Zueng-Sang
+    given_initial: Z.
+    family: Chen
+  - given: Kun
+    given_initial: K.
+    family: Cheng
+  - given: Bhabani
+    given_initial: B. S.
+    family: Das
+  - given: Damien
+    given_initial: D. J.
+    family: Field
+  - given: Alessandro
+    given_initial: A.
+    family: Gimona
+  - given: Carolyn
+    given_initial: C. B.
+    family: Hedley
+  - given: Suk Young
+    given_initial: S.
+    family: Hong
+  - given: Biswapati
+    given_initial: B.
+    family: Mandal
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Ben
+    given_initial: B. P.
+    family: Marchant
+  - given: Manuel
+    given_initial: M.
+    family: Martin
+  - given: McConkey
+    given_initial: B. G.
+    family: Brian
+  - given: Vera
+    given_initial: V. L.
+    family: Mulder
+  - given: Sharon
+    given_initial: S.
+    family: O'Rourke
+  - given: Anne
+    given_initial: A. R.
+    family: Richer-de-Forges
+  - given: Inakwu
+    given_initial: I.
+    family: Odeh
+  - given: Jose
+    given_initial: J.
+    family: Padarian
+  - given: Keith
+    given_initial: K.
+    family: Paustian
+  - given: Genxing
+    given_initial: G.
+    family: Pan
+  - given: Laura
+    given_initial: L.
+    family: Poggio
+  - given: Igor
+    given_initial: I.
+    family: Savin
+  - given: Vladimir
+    given_initial: V.
+    family: Stolbovoy
+  - given: Uta
+    given_initial: U.
+    family: Stockmann
+  - given: Yiyi
+    given_initial: Y.
+    family: Sulaeman
+  - given: Chun-Chih
+    given_initial: C.
+    family: Tsui
+  - given: Tor-Gunnar
+    given_initial: T.
+    family: Vagen
+  - given: Bas
+    given_initial: B.
+    family: van Wesemael
+  - given: Leigh
+    given_initial: L.
+    family: Winowiecki
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706117307474"
+  type: article
+  fulltext: malone2017_6.pdf
+  language: english
+  comment: A letter to the editor
+
+- title: 'Geochemical fingerprinting of volcanic soils used for wetland rice in West Sumatra, Indonesia'
+  volume: '10'
+  page: '48-63'
+  year: 2017
+  author:
+  - given: Dian
+    given_initial: D.
+    family: Fiantis
+    role: 'main corr'
+  - given: Gusnidar
+    given_initial:
+    family: Gusnidar
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Robert
+    given_initial: R.
+    family: Pallasser
+  - given: Eric
+    given_initial: E.
+    family: Van Ranst
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "http://www.sciencedirect.com/science/article/pii/S2352009416301195"
+  type: article
+  fulltext: malone2017_5.pdf
+  language: english
+  comment: Prof. Dian Fiantis is from the Department of Soil Science, Faculty of Agriculture, Universitas Andalas, Kampus Limau Manis.
+
+
+- title: 'Quantifying and predicting spatio-temporal variability of soil CH4 and N2O fluxes from a seemingly homogeneous Australian agricultural field'
+  volume: '240'
+  page: '182-193'
+  year: 2017
+  author:
+  - given: Marshall
+    given_initial: M. D.
+    family: McDaniel
+    role: 'main corr'
+  - given: Robert
+    given_initial: R. G.
+    family: Simpson
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Mark
+    given_initial: M. A.
+    family: Adams
+  journal:
+    fullname: Agriculture, Ecosystems & Environment
+    abbreviation: Agriculture, Ecosystems & Environment
+  URL: "http://www.sciencedirect.com/science/article/pii/S0167880917300804"
+  type: article
+  fulltext: malone2017_4.pdf
+  language: english
+  comment: 
+
+- title: 'Soil carbon 4 per mille'
+  volume: '292'
+  page: '59-86'
+  year: 2017
+  author:
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+    role: 'main corr'
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Denis
+    given_initial: D. A.
+    family: Angers
+  - given: Dominique
+    given_initial: D.
+    family: Arrouays
+  - given: Adam
+    given_initial: A.
+    family: Chambers
+  - given: Vincent
+    given_initial: V.
+    family: Chaplot
+  - given: Zueng-Sang
+    given_initial: Z.
+    family: Chen
+  - given: Kun
+    given_initial: K.
+    family: Cheng
+  - given: Bhabani
+    given_initial: B. S.
+    family: Das
+  - given: Damien
+    given_initial: D. J.
+    family: Field
+  - given: Alessandro
+    given_initial: A.
+    family: Gimona
+  - given: Carolyn
+    given_initial: C. B.
+    family: Hedley
+  - given: Suk Young
+    given_initial: S.
+    family: Hong
+  - given: Biswapati
+    given_initial: B.
+    family: Mandal
+  - given: Ben
+    given_initial: B. P.
+    family: Marchant
+  - given: Manuel
+    given_initial: M.
+    family: Martin
+  - given: McConkey
+    given_initial: B. G.
+    family: Brian
+  - given: Vera
+    given_initial: V. L.
+    family: Mulder
+  - given: Sharon
+    given_initial: S.
+    family: O'Rourke
+  - given: Anne
+    given_initial: A. R.
+    family: Richer-de-Forges
+  - given: Inakwu
+    given_initial: I.
+    family: Odeh
+  - given: Jose
+    given_initial: J.
+    family: Padarian
+  - given: Keith
+    given_initial: K.
+    family: Paustian
+  - given: Genxing
+    given_initial: G.
+    family: Pan
+  - given: Laura
+    given_initial: L.
+    family: Poggio
+  - given: Igor
+    given_initial: I.
+    family: Savin
+  - given: Vladimir
+    given_initial: V.
+    family: Stolbovoy
+  - given: Uta
+    given_initial: U.
+    family: Stockmann
+  - given: Yiyi
+    given_initial: Y.
+    family: Sulaeman
+  - given: Chun-Chih
+    given_initial: C.
+    family: Tsui
+  - given: Tor-Gunnar
+    given_initial: T.
+    family: Vagen
+  - given: Bas
+    given_initial: B.
+    family: van Wesemael
+  - given: Leigh
+    given_initial: L.
+    family: Winowiecki
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706117300095"
+  type: article
+  fulltext: malone2017_3.pdf
+  language: english
+  comment: 
+
+
+- title: 'Digital soil mapping of soil carbon at the farm scale: A spatial downscaling approach in consideration of measured and uncertain data'
+  volume: '290'
+  page: '91-99'
+  year: 2017
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: 'main corr'
+  - given: Quentin
+    given_initial: Q.
+    family: Styc
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706116309922"
+  type: article
+  fulltext: malone2017_2.pdf
+  language: english
+  comment: 
+
+- title: 'Rapid assessment of petroleum-contaminated soils with infrared spectroscopy'
+  volume: '289'
+  page: '150-160'
+  year: 2017
+  author:
+  - given: Wartini
+    given_initial: W.
+    family: Ng
+    role: 'main corr'
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S001670611630893X"
+  type: article
+  fulltext: malone2017_1.pdf
+  language: english
+  comment: First lead author paper for new PhD student Wartini Ng
+
+- title: 'Using the nonparametric k-nearest neighbor approach for predicting cation exchange capacity'
+  volume: '265'
+  page: '111-119'
+  year: 2016
+  author:
+  - given: A
+    given_initial: A. A.
+    family: Zolfaghari
+  - given: Ruhollah
+    given_initial: R.
+    family: Taghizadeh-Mehrjardi
+    role: 'main corr'
+  - given: A
+    given_initial: A. R.
+    family: Moshki
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: A
+    given_initial: A. O.
+    family: Weldeyohannes
+  - given: F
+    given_initial: F.
+    family: Sarmadian
+  - given: M
+    given_initial: M. R. 
+    family: Yazdani
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706115301282"
+  type: article
+  fulltext: malone2016_6.pdf
+  language: english
+  comment:
+  
+- title: 'Prediction of soil surface salinity in arid region of central Iran using auxiliary variables and genetic programming'
+  volume: '30'
+  page: '49-64'
+  year: 2016
+  author:
+  - given: Ruhollah
+    given_initial: R.
+    family: Taghizadeh-Mehrjardi
+    role: main
+  - given: S
+    given_initial: S.
+    family: Ayoubi
+  - given: Z
+    given_initial: Z.
+    family: Namazi
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: A
+    given_initial: A. A.
+    family: Zolfaghari
+  - given: F
+    given_initial: F. R. 
+    family: Sadrabadi
+  journal:
+    fullname: Arid Land Research and Management
+    abbreviation: Arid Land Research and Management
+  URL: "http://www.tandfonline.com/doi/full/10.1080/15324982.2015.1046092"
+  type: article
+  fulltext: malone2016_4.pdf
+  language: english
+
+- title: 'Mapping soil organic carbon content over New South Wales, Australia using local regression kriging'
+  volume: '7'
+  page: '38-48'
+  year: 2016
+  author:
+  - given: Sanjee
+    given_initial: P. D. S. N.
+    family: Somarathna
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "http://www.sciencedirect.com/science/article/pii/S235200941530016X"
+  type: article
+  fulltext: malone2016_3.pdf
+  language: english
+
+- title: 'Comparing regression-based digital soil mapping and multiple-point geostatistics for the spatial extrapolation of soil data'
+  volume: '262'
+  page: '243-253'
+  year: 2016
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Sanjeev
+    given_initial: S. K.
+    family: Jha
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706115300665"
+  type: article
+  fulltext: malone2016_1.pdf
+  language: english
+
+- title: 'Reply to Comment on Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review by Horta et al'
+  volume: '271'
+  page: '256-257'
+  year: 2016
+  author:
+  - given: Anna
+    given_initial: A.
+    family: Horta
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Uta
+    given_initial: U.
+    family: Stockmann
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Tom
+    given_initial: T. F. A.
+    family: Bishop
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Robert
+    given_initial: R.
+    family: Pallasser
+  - given: Liana
+    given_initial: L.
+    family: Pozza
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706115002566"
+  type: article
+  fulltext: malone2016_5.pdf
+  language: english
+
+- title: 'Farm-scale soil carbon auditing'
+  volume: '265'
+  page: '120-130'
+  year: 2016
+  author:
+  - given: Jaap 
+    given_initial: J. J.
+    family: de Gruijter
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Ischani
+    given_initial: I.
+    family: Wheeler
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Uta 
+    given_initial: U.
+    family: Stockmann
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706115301269"
+  type: article
+  fulltext: malone2016_2.pdf
+  language: english
+  comment: Voted by Geoderma as best research paper for 2016
+
+- title: 'Landscape-scale exploratory radiometric mapping using proximal soil sensing'
+  volume: '239'
+  page: '115-129'
+  year: 2015
+  author:
+  - given: Uta 
+    given_initial: U.
+    family: Stockmann
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706114003723"
+  type: article
+  fulltext: malone2015_3.pdf
+  language: english
+
+- title: 'Taking account of uncertainties in digital land suitability assessment'
+  volume: '3'
+  page: '1-21'
+  year: 2015
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Darren
+    given_initial: D.
+    family: Kidd
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  journal:
+    fullname: PeerJ
+    abbreviation: PeerJ
+  URL: "https://peerj.com/articles/1366/"
+  type: article
+  fulltext: malone2015_6.pdf
+  language: english
+
+- title: 'Eighty-metre resolution 3D soil-attribute maps for Tasmania, Australia'
+  volume: '53'
+  page: '932-955'
+  year: 2015
+  author:
+  - given: Darren
+    given_initial: D.
+    family: Kidd
+    role: main
+  - given: Matthew
+    given_initial: M.
+    family: Webb
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  journal:
+    fullname: Soil Research
+    abbreviation: Soil Research
+  URL: "http://www.publish.csiro.au/sr/SR14268"
+  type: article
+  fulltext: malone2015_2.pdf
+  language: english
+
+- title: 'Digital soil assessment of agricultural suitability, versatility and capital in Tasmania, Australia'
+  volume: '6'
+  page: '7-21'
+  year: 2015
+  author:
+  - given: Darren
+    given_initial: D.
+    family: Kidd
+    role: main
+  - given: Matthew
+    given_initial: M.
+    family: Webb
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "http://www.sciencedirect.com/science/article/pii/S2352009415300092"
+  type: article
+  fulltext: malone2015_1.pdf
+  language: english
+
+- title: 'Operational sampling challenges to digital soil mapping in Tasmania, Australia'
+  volume: '4'
+  page: '1-10'
+  year: 2015
+  author:
+  - given: Darren
+    given_initial: D.
+    family: Kidd
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Matthew
+    given_initial: M.
+    family: Webb
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "http://www.sciencedirect.com/science/article/pii/S2352009414000406"
+  type: article
+  fulltext: malone2015_4.pdf
+  language: english
+
+- title: 'Potential of integrated field spectroscopy and spatial analysis for enhanced assessment of soil contamination: A prospective review'
+  volume: '241-242'
+  page: '180-209'
+  year: 2015
+  author:
+  - given: Anna
+    given_initial: A.
+    family: Horta
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Uta
+    given_initial: U.
+    family: Stockmann
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Tom
+    given_initial: T. F. A.
+    family: Bishop
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Robert
+    given_initial: R.
+    family: Pallasser
+  - given: Liana
+    given_initial: L.
+    family: Pozza
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706114004224"
+  type: article
+  fulltext: malone2015_5.pdf
+  language: english
+  comment: Geoderma best paper award. Best Review of 2015.
+
+- title: 'Digital mapping of soil salinity in ardakan region, central Iran'
+  volume: '213'
+  page: '15-28'
+  year: 2014
+  author:
+  - given: Ruhollah
+    given_initial: R.
+    family: Taghizadeh-Mehrjardi
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: F
+    given_initial: F.
+    family: Sarmadian
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706113002565"
+  type: article
+  fulltext: malone2014_3.pdf
+  language: english
+
+- title: 'Using model averaging to combine soil property rasters from legacy soil maps and from point data'
+  volume: '232-234'
+  page: '34-44'
+  year: 2014
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Nathan
+    given_initial: N. P.
+    family: Odgers
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706114001906"
+  type: article
+  fulltext: malone2014_5.pdf
+  language: english
+
+- title: 'Soil-landscape endemism: The Glasserton Rigs of the Machars Peninsula, Scotland'
+  volume: '2-3'
+  page: '72-81'
+  year: 2014
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Jack
+    given_initial: J. E.
+    family: Collins
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "http://www.sciencedirect.com/science/article/pii/S2352009414000261"
+  type: article
+  fulltext: malone2014_4.pdf
+  language: english
+
+- title: 'A model for the identification of terrons in the Lower Hunter Valley, Australia'
+  volume: '1'
+  page: '31-47'
+  year: 2014
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Philip
+    given_initial: P.
+    family: Hughes
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma Regional
+    abbreviation: Geoderma Regional
+  URL: "http://www.sciencedirect.com/science/article/pii/S2352009414000066"
+  type: article
+  fulltext: malone2014_1.pdf
+  language: english
+
+
+- title: 'Digital mapping of a soil drainage index for irrigated enterprise suitability in Tasmania, Australia'
+  volume: '52'
+  page: '107-119'
+  year: 2014
+  author:
+  - given: Darren
+    given_initial: D. K.
+    family: Kidd
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Matthew
+    given_initial: M. A.
+    family: Webb
+  journal:
+    fullname: Soil Research
+    abbreviation: Soil Research
+  URL: "http://www.publish.csiro.au/sr/SR13100"
+  type: article
+  fulltext: malone2014_2.pdf
+  language: english
+
+- title: 'Digital Mapping of Soil Carbon'
+  volume: '118'
+  page: '1-47'
+  year: 2013
+  author:
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Ischani
+    given_initial: I.
+    family: Wheeler
+  journal:
+    fullname: Advances in Agronomy
+    abbreviation: Advances in Agronomy
+  URL: "http://www.sciencedirect.com/science/article/pii/B9780124059429000013"
+  type: article
+  fulltext: malone2013_1.pdf
+  language: english
+
+- title: 'Spatial scaling for digital soil mapping'
+  volume: '77'
+  page: '890-902'
+  year: 2013
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Soil Science Society of America Journal
+    abbreviation: Soil Science Society of America Journal
+  URL: "https://dl.sciencesocieties.org/publications/sssaj/abstracts/77/3/890?access=0&view=pdf"
+  type: article
+  fulltext: malone2013_3.pdf
+  language: english
+
+- title: 'High-Resolution 3-D Mapping of Soil texture In Denmark'
+  volume: '77'
+  page: '860-876'
+  year: 2013
+  author:
+  - given: Kabindra
+    given_initial: K.
+    family: Adhikari
+    role: main
+  - given: R
+    given_initial: R.
+    family: Bou Kheir
+  - given: Morgans
+    given_initial: M.
+    family: Greve
+  - given: P
+    given_initial: P.
+    family: Bocher
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: M
+    given_initial: M. H.
+    family: Greve
+  journal:
+    fullname: Soil Science Society of America Journal
+    abbreviation: Soil Science Society of America Journal
+  URL: "https://dl.sciencesocieties.org/publications/sssaj/abstracts/77/3/860"
+  type: article
+  fulltext: malone2013_2.pdf
+  language: english
+
+- title: 'A general method for downscaling earth resource information'
+  volume: '41'
+  page: '119-125'
+  year: 2012
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Ischani
+    given_initial: I.
+    family: Wheeler
+  journal:
+    fullname: Computers and Geosciences
+    abbreviation: Computers and Geosciences
+  URL: "http://www.sciencedirect.com/science/article/pii/S0098300411002895"
+  type: article
+  fulltext: malone2012_1.pdf
+  language: english
+
+- title: 'Empirical estimates of uncertainty for mapping continuous depth functions of soil attributes'
+  volume: '160'
+  page: '614-626'
+  year: 2011
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706110003666"
+  type: article
+  fulltext: malone2011_1.pdf
+  language: english
+
+- title: 'Using Additional Criteria for Measuring the Quality of Predictions and Their Uncertainties in a Digital Soil Mapping Framework'
+  volume: '75'
+  page: '1032-1043'
+  year: 2011
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Jaap
+    given_initial: J. J.
+    family: de Gruijter
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Dick
+    given_initial: D. J.
+    family: Brus
+  journal:
+    fullname: Soil Science Society of America Journal
+    abbreviation: Soil Science Society of America Journal
+  URL: "https://dl.sciencesocieties.org/publications/sssaj/abstracts/75/3/1032?access=0&view=pdf"
+  type: article
+  fulltext: malone2011_2.pdf
+  language: english
+  
+- title: 'Mapping continuous depth functions of soil carbon storage and available water capacity'
+  volume: '154'
+  page: '138-152'
+  year: 2009
+  author:
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+    role: main
+  - given: Alex
+    given_initial: A. B.
+    family: McBratney
+  - given: Budiman
+    given_initial: B.
+    family: Minasny
+  - given: Geoff
+    given_initial: G. M.
+    family: Laslett
+  journal:
+    fullname: Geoderma
+    abbreviation: Geoderma
+  URL: "http://www.sciencedirect.com/science/article/pii/S0016706109003255"
+  type: article
+  fulltext: malone2009_2.pdf
+  language: english
+
+- title: 'The effect of dust on topsoil variation in the Orange wine region'
+  page: '22-24'
+  year: 2009
+  author:
+  - given: Stephen
+    given_initial: S.
+    family: Cattle
+    role: main
+  - given: Brendan
+    given_initial: B. P.
+    family: Malone
+  - given: David
+    given_initial: D.
+    family: MacKenzie
+  journal:
+    fullname: Australian & New Zealand Grapegrower & Winemaker
+    abbreviation: Australian & New Zealand Grapegrower & Winemaker
+  URL: "http://winetitles.com.au/gwm/view/?action=view&id=86"
+  type: article
+  fulltext: malone2009_1.pdf
+  language: english
+
