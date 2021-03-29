@@ -4,13 +4,134 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2021-03-14T10:07:04+11:00</updated>
+<updated>2021-03-29T21:09:47+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/03/journalDigest" />
+  <id>/2021/03/journalDigest</id>
+  <updated>2020-03-29T00:00:00-00:00</updated>
+  <published>2021-03-29T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-9&quot;&gt;Journal Paper Digests 2021 #9&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rethinking restoration indicators and end-points for post-mining landscapes in light of novel ecosystems&lt;/li&gt;
+  &lt;li&gt;Getting the message right on nature-based solutions to climate change&lt;/li&gt;
+  &lt;li&gt;Assessment of the interpretability of data mining for the spatial modelling of water erosion using game theory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;rethinking-restoration-indicators-and-end-points-for-post-mining-landscapes-in-light-of-novel-ecosystems&quot;&gt;Rethinking restoration indicators and end-points for post-mining landscapes in light of novel ecosystems&lt;/h3&gt;
+
+&lt;p&gt;Degraded post-mining landscapes exhibit unique biotic and abiotic components and processes relative to predisturbance natural ecosystems. Yet the concept of pre-disturbance reference natural ecosystems and their associated soil quality indicators (SQIs) (e.g., pH, soil organic carbon) are prominently used for assessing restoration of post-mining landscapes. Limited reviews exist on the validity, limitations, opportunities and knowledge gaps associated with the application of the concept and SQIs on post-mining landscapes. Hence, evidence was examined to highlight constraints, opportunities and future research directions pertaining to the concept and SQIs. First, as novel, hybrid or designer ecosystems, severely degraded post-mining landscapes lack reference natural ecosystems. The framing of restoration is multi-dimensional, and dependent on spatial and temporal scales. Therefore, short-term data on SQIs often measured at point scale cannot adequately account for the multi-dimensionality and scales. Moreover, evidence linking SQIs to ecosystem functions, goods, values, services, and benefits on degraded post-mining landscapes remains weak. Potential redundancy exists among SQIs, because soil properties exhibit spatial and temporal correlation. The universality of SQIs remains unconfirmed, because data validating the measurement protocols and interpretation of SQIs across various biomes are scarce. A framework is presented proposing: (1) a shift from the concept of reference natural ecosystems to novel and designer ecosystems in restoration ecology, (2) the development of the next generation of hierarchical or ecosystem cascade indicators, and end-points addressing the multi-dimensionality and scale issues, and (3) a decision matrix for integrating novel, hybrid and designer ecosystems. The potential applications of novel tools such as drones, laser-based cameras, genomics, and big data analytics are highlighted. Such novel tools could unravel the complex linkages among biotic and abiotic components, and ecosystem function and services, which are currently difficult to investigate using conventional techniques. Finally, ten tentative hypotheses are presented on the restoration of degraded post-mining landscapes.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-the-message-right-on-nature-based-solutions-to-climate-change&quot;&gt;Getting the message right on nature-based solutions to climate change&lt;/h3&gt;
+
+&lt;p&gt;Nature-based solutions (NbS)-solutions to societal challenges that involve working with nature-have recently gained popularity as an integrated approach that can address climate change and biodiversity loss, while supporting sustainable development. Although well-designed NbS can deliver multiple benefits for people and nature, much of the recent limelight has been on tree planting for carbon sequestration. There are serious concerns that this is distracting from the need to rapidly phase out use of fossil fuels and protect existing intact ecosystems. There are also concerns that the expansion of forestry framed as a climate change mitigation solution is coming at the cost of carbon rich and biodiverse native ecosystems and local resource rights. Here, we discuss the promise and pitfalls of the NbS framing and its current political traction, and we present recommendations on how to get the message right. We urge policymakers, practitioners and researchers to consider the synergies and trade-offs associated with NbS and to follow four guiding principles to enable NbS to provide sustainable benefits to society: (1) NbS are not a substitute for the rapid phase out of fossil fuels; (2) NbS involve a wide range of ecosystems on land and in the sea, not just forests; (3) NbS are implemented with the full engagement and consent of Indigenous Peoples and local communities in a way that respects their cultural and ecological rights; and (4) NbS should be explicitly designed to provide measurable benefits for biodiversity. Only by following these guidelines will we design robust and resilient NbS that address the urgent challenges of climate change and biodiversity loss, sustaining nature and people together, now and into the future.&lt;/p&gt;
+
+&lt;h3 id=&quot;assessment-of-the-interpretability-of-data-mining-for-the-spatial-modelling-of-water-erosion-using-game-theory&quot;&gt;Assessment of the interpretability of data mining for the spatial modelling of water erosion using game theory&lt;/h3&gt;
+
+&lt;p&gt;This study undertook a comprehensive application of 15 data mining (DM) models, most of which have, thus far, not been commonly used in environmental sciences, to predict land susceptibility to water erosion hazard in the Kahorestan catchment, southern Iran. The DM models were BGLM, BGAM, Cforest, CITree, GAMS, LRSS, NCPQR, PLS, PLSGLM, QR, RLM, SGB, SVM, BCART and BTR. We identified 18 factors usually considered as key controls for water erosion, comprising 10 factors extracted from a digital elevation model (DEM), three indices extracted from Landsat 8 images, a sediment connectivity index (SCI) and three other intrinsic factors. Three indicators consisting of MAE, MBE, RMSE, and a Taylor diagram were applied to assess model performance and accuracy. Game theory was applied to assess the interpretability of the DM models for predicting water erosion hazard. Among the 15 predictive models, BGAM and PLS respectively returned the best and worst performance in predicting water erosion hazard in the study area. The most accurate model, BGAM predicted that 22%, 8.2%, 9.4% and 60.4% of the total area should be classified as low, moderate, high and very high susceptibility to soil erosion by water, respectively. Based on BGAM and game theory, the factors extracted from the DEM (e.g., DEM, TWI, Slope, TST, TRI, and SPI) were considered the most important ones controlling the predicted severity of soil erosion by water. We conclude that overall, game theory is a valuable technique for assessing the interpretability of predictive models because this theory through SHAP (Shapley additive explanations) and PFIM (permutation feature importance measure) addresses the important concerns regarding the interpretability of more complex DM models.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 29, 2021.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/03/journalDigest" />
+  <id>/2021/03/journalDigest</id>
+  <updated>2020-03-28T00:00:00-00:00</updated>
+  <published>2021-03-28T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-8&quot;&gt;Journal Paper Digests 2021 #8&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Global Surface Soil Moisture Drydown Patterns&lt;/li&gt;
+  &lt;li&gt;Disentangling the Impact of Catchment Heterogeneity on Nitrate Export Dynamics From Event to Long-Term Time Scales&lt;/li&gt;
+  &lt;li&gt;Mass-balance approach to quantify water distribution in soils based onX-ray computed tomography images&lt;/li&gt;
+  &lt;li&gt;Land system diversity, scaling laws and polygons map analysis&lt;/li&gt;
+  &lt;li&gt;Statistical approaches for spatial sample survey: Persistent misconceptions and new&lt;/li&gt;
+  &lt;li&gt;Estimation of carbon stocks in boreal cropland soils - methodological considerations&lt;/li&gt;
+  &lt;li&gt;Introducing a mechanistic model in digital soil mapping to predict soil organic matter stocks in theCantabrianregion (Spain)&lt;/li&gt;
+  &lt;li&gt;A log -barrier approach for airborne gamma-ray spectrometry inversion&lt;/li&gt;
+  &lt;li&gt;The influence of rock fragments on field capacity water content in stony soils from hard sandstone alluvium&lt;/li&gt;
+  &lt;li&gt;Soil quality and grain yield: A win-win combination in clayey tropical oxisols&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;global-surface-soil-moisture-drydown-patterns&quot;&gt;Global Surface Soil Moisture Drydown Patterns&lt;/h3&gt;
+
+&lt;p&gt;Understanding the global soil moisture (SM) dynamics and its governing controls beyond the Darcy Scale is critical for various hydrological, meteorological, agricultural, and environmental applications. In this study, we parameterize the pathways of global surface SM (theta(RS)) drydowns using seasonal observation from Soil Moisture Active Passive (SMAP) satellite (between 2015 and 2019) at 36 km resolution. We develop a new data-driven nonparametric approach to identify the canonical forms of theta(RS) drydown, followed by a nonlinear least squares parameterization of the seasonal drydown pathways at each SMAP footprint. The derived parameters provide the effective soil water retention parameters (SWRPeff), land-atmospheric coupling strength and soil hydrologic regimes for SMAP footprint. Depending on the footprint heterogeneity, climate, and season, the characteristics curves comprising different drydown phases are discovered at SMAP footprints. Drydown curves respond to the within-footprint changes in the meteorological drivers, land-surface characteristics, and the soil-vegetative and atmospheric dynamics. Drydown parameters display high interseasonal variability, especially in the grasslands, croplands, and savannah landscapes due to significant changes in the landscape characteristics and moisture patterns at the subgrid-scale. Soil texture exerts influence on the soil water retention and drydown parameters only when the footprint mean theta(RS) is low, specifically in arid and sparsely vegetated regions. The interseasonal variability of the SWRPeff is primarily driven by the landuse and climate of the SMAP footprint. A global understanding of the SM drydown features at SMAP footprint provides a significant step toward a scale-specific, effective soil hydrologic parameterization for various applications.&lt;/p&gt;
+
+&lt;h3 id=&quot;disentangling-the-impact-of-catchment-heterogeneity-on-nitrate-export-dynamics-from-event-to-long-term-time-scales&quot;&gt;Disentangling the Impact of Catchment Heterogeneity on Nitrate Export Dynamics From Event to Long-Term Time Scales&lt;/h3&gt;
+
+&lt;p&gt;Defining effective measures to reduce nitrate pollution in heterogeneous mesoscale catchments remains challenging when based on concentration measurements at the outlet only. One reason for this is our limited understanding of the subcatchment contributions to nitrate export and their importance at different time scales. While upstream subcatchments often disproportionally contribute to runoff generation and in turn to nutrient export, agricultural areas (which are typically found in downstream lowlands) are known to be a major source of nitrate pollution. To examine the interplay of different subcatchments, we analyzed seasonal long-term trends and event dynamics of nitrate concentrations, loads, and the concentration-discharge relationship in three nested catchments within the Selke catchment (456 km(2)), Germany. The upstream subcatchments (40.4% of total catchment area, 34.5% of N input) had short transit times and dynamic concentration-discharge relationships with elevated nitrate concentrations during wet seasons and events. Consequently, the upstream subcatchments dominated nitrate export during high flow and disproportionally contributed to overall annual nitrate loads at the outlet (64.2%). The downstream subcatchment was characterized by higher N input, longer transit times, and relatively constant nitrate concentrations between seasons, dominating nitrate export during low-flow periods. Neglecting the disproportional role of upstream subcatchments for temporally elevated nitrate concentrations and net annual loads can lead to an overestimation of the role of agricultural lowlands. Nonetheless, constantly high concentrations from nitrate legacies pose a long-term threat to water quality in agricultural lowlands. This knowledge is crucial for an effective and site-specific water quality management.&lt;/p&gt;
+
+&lt;p&gt;Plain Language Summary To efficiently remove nitrate pollution, we need to understand how it is transported, mobilized, and stored within large and heterogeneous catchments. Previous studies have shown that upstream catchments often have a disproportional impact on nutrient export, while agriculture (a major nitrate source) is often located in downstream lowlands. To understand which parts of a catchment contribute most to nitrate export and when, we analyzed long-term (1983-2016) and high-frequency (2010-2016) data in the Selke catchment (Germany) at three locations. The mountainous upstream part dominated nitrate transport during winter, spring, and rain events. It had a surprisingly high contribution to annual nitrate loads. The agricultural downstream part of the catchment dominated nitrate export during summer and autumn, with relatively constant concentrations between seasons. Here, nitrogen inputs needed more than a decade to travel through the subsurface of the catchment, which causes a time lag between measures to reduce nitrate pollution and their measurable effect. The resulting storage of nitrate in the groundwater threatens drinking water quality for decades to come. While the role of agricultural lowlands for nitrate export can be overestimated if neglecting the disproportional role of upstream subcatchments, their impact poses a long-term threat to water quality.&lt;/p&gt;
+
+&lt;h3 id=&quot;mass-balance-approach-to-quantify-water-distribution-in-soils-based-onx-ray-computed-tomography-images&quot;&gt;Mass-balance approach to quantify water distribution in soils based onX-ray computed tomography images&lt;/h3&gt;
+
+&lt;p&gt;X-ray computed tomography (CT) is commonly used in soil science to quantify distributions of pores, water and solids within soil samples. Particularly promising for liquid visualization is dual-energy scanning of samples with added dopant solutions. The approach uses solutions of heavy elements as a proxy for the soil water and utilizes the abrupt increase of the mass attenuation coefficient of heavy elements when crossing an X-ray absorption edge, detectable by dual-energy CT scanning. However, a key step in visualization of the added liquid is image segmentation. In partially saturated soils, the X-ray CT images consist of voxels with the presence of solid, liquid and gaseous phases in different ratios. These ratios are generally ignored by the traditional image segmentation methods, which separate image voxels into groups with either zero or complete saturation by either prevailing phase. The objective of this study was to develop and test a new physically based segmentation approach that accounts for partial saturation of image voxels by liquids. We combined a theoretical equation for detected photon intensity with the mass conservation equation to compute saturation of image voxels by dopant solution applied to the soil. This approach was tested on soil micro-columns with potassium iodide (KI) solutions. The proposed approach outperformed the traditional segmentation methods, particularly at low and intermediate water contents. Tests conducted forKIsolutions in the concentration ranges from 2 to 20% revealed deterioration of the method accuracy with decreasing dopant concentration in the soil. Based on the results of this study we recommend 10 wt% KI solution for quantifying spatial distribution of liquids in soils using dual-energy X-ray microtomography. Highlights
+We developed a new approach to quantify soil water distribution based on X-ray CT. This approach accounts for partial saturation of image voxels by liquids. This approach outperforms the standard image segmentation methods. Its application is limited to using dual energy monochromatic X-ray beams.&lt;/p&gt;
+
+&lt;h3 id=&quot;land-system-diversity-scaling-laws-and-polygons-map-analysis&quot;&gt;Land system diversity, scaling laws and polygons map analysis&lt;/h3&gt;
+
+&lt;p&gt;Numerous lines of evidence have been presented in the literature that show the patterns of pedodiversity and biodiversity are very similar. One of the most corroborated patterns lies in the fits of the relationships between biodiversity and soil diversity to power laws according to the increase in study area. Several authors have analysed the presence of fractal and multifractal features in pedodiversity and biodiversity analyses. Similarly, it has also been found that valuable information can be extracted from the polygons of soil and vegetation maps, which also have surprising similarities. These approaches concern information on the spatial distribution of natural resources. However, other more artificial but interesting maps and their comparison have been neglected by such studies. Land systems maps and their georeferenced databases fall into this latter category, and they include most of the soil-forming factors. In this paper a georeferenced land system database and map were analysed and the results compared with those obtained in previous pedodiversity and biodiversity studies, primarily the spatial patterns of the polygons. The results showed that the analysed land system map units followed the same patterns that were previously found in pedodiversity and biodiversity studies; that is, the power law concerning richness-area relationships. The same patterns occur with the number of polygons. Some geographers claim there is a “law” that states that there are far more small things/objects than larger ones across several orders of magnitude in geographic space and thus this regularity conforms to scaling laws, independent of the resource involved. The results obtained corroborate this conjecture irrespective of whether natural resources or artificial cartographies were analysed. This paper represents a first test of land use maps; additional work in this area is needed. Highlights
+Spatial patterns detected in natural and land system maps seem to be similar Composite GIS maps have the same spatial patterns as their base maps. Soil and land system units conform to long-tail or heavy tail distributions. Soil maps and land system maps conform to power laws, fingerprints of fractal structures There are more small polygons than large ones across several magnitude orders on choropleth maps.&lt;/p&gt;
+
+&lt;h3 id=&quot;statistical-approaches-for-spatial-sample-survey-persistent-misconceptions-and-new&quot;&gt;Statistical approaches for spatial sample survey: Persistent misconceptions and new&lt;/h3&gt;
+
+&lt;p&gt;Several misconceptions about the design-based approach for sampling and statistical inference, based on classical sampling theory, seem to be quite persistent. These misconceptions are the result of confusion about basic statistical concepts such as independence, expectation, and bias and variance of estimators or predictors. These concepts have a different meaning in the design-based and model-based approach, because they consider different sources of randomness. Also, a population mean is still often confused with a model mean, and a population variance with a model-variance, leading to invalid formulas for the variance of an estimator of the population mean. In this paper the fundamental differences between these two approaches are illustrated with simulations, so that hopefully more pedometricians get a better understanding of this subject. An overview is presented of how in the design-based approach we can make use of knowledge of the spatial structure of the study variable. In the second part, new developments in both the design-based and model-based approach are described that try to combine the strengths of the two approaches.&lt;/p&gt;
+
+&lt;h3 id=&quot;estimation-of-carbon-stocks-in-boreal-cropland-soils---methodological-considerations&quot;&gt;Estimation of carbon stocks in boreal cropland soils - methodological considerations&lt;/h3&gt;
+
+&lt;p&gt;High expectations to harness agricultural soils as sinks for atmospheric carbon (C) necessitate methods for verifying changes in soil organic C (SOC) stocks and improving the accuracy of regional SOC stock estimates specific to various land-use and management types. In this study we used a sample set included in the Finnish national soil monitoring network (n = 125) to determine the SOC stock and its vertical distribution in Finnish agricultural mineral soils using fixed depth (FD) and equivalent soil mass (ESM) methods. Further, we explored the within-field variation in SOC stock and minimum sample size in the context of SOC sequestration. Boreal agricultural mineral soils were found to be rich in SOC. The average SOC stock ranged between 8.4 and 9.8 kg m(-2)in the top 30 cm depending on cropping system and soil type. Cultivation of perennial crops tended to enrich the C close to the soil surface in comparison to dominantly annual crops, which exhibited a less steep C gradient with depth. The commonly used van Bemmelen factor of 1.724 to convert results of loss on ignition to SOC was found to be appropriate for coarse-textured Finnish agricultural soils. However, the results showed that in clay-rich soils, it is critical to take into account the structural water bound in clay particles to avoid overestimation of the SOC content. The study also demonstrated that the minimum sample size required to detect the change of 0.1 kg C m(-2)at field level is typically several hundreds. Therefore empirical soil sampling is not at all cost-effective enough for verifying the changes in SOC stocks with regard to compensation of C sequestration for farmers. Thus, alternative verification methods, such as SOC modelling in combination with field-level data collected, for example, using remote sensing should be developed further. Highlights
+Boreal agricultural mineral soils are rich in C Rotations where perennial crops dominated tended to enrich C in the soil surface Soil clay content should be taken into account when converting SOM to SOC The sample size required to verify SOC stock changes for C trading is extremely high&lt;/p&gt;
+
+&lt;h3 id=&quot;introducing-a-mechanistic-model-in-digital-soil-mapping-to-predict-soil-organic-matter-stocks-in-thecantabrianregion-spain&quot;&gt;Introducing a mechanistic model in digital soil mapping to predict soil organic matter stocks in theCantabrianregion (Spain)&lt;/h3&gt;
+
+&lt;p&gt;Digital soil mapping (DSM) is an effective mapping technique that supports the increased need for quantitative soil data. In DSM, soil properties are correlated with environmental characteristics using statistical models such as regression. However, many of these relationships are explicitly described in mechanistic simulation models. Therefore, the mechanistic relationships can, in theory, replace the statistical relationships in DSM. This study aims to develop a mechanistic model to predict soil organic matter (SOM) stocks in Natura2000 areas of the Cantabria region (Spain). The mechanistic model is established in four steps: (a) identify major processes that influence SOM stocks, (b) review existing models describing the major processes and the respective environmental data that they require, (c) establish a database with the required input data, and (d) calibrate the model with field observations. The SOM stocks map resulting from the mechanistic model had a mean error (ME) of -2 t SOM ha(-1)and a root mean square error (RMSE) of 66 t SOM ha(-1). The Lin’s concordance correlation coefficient was 0.47 and the amount of variance explained (AVE) was 0.21. The results of the mechanistic model were compared to the results of a statistical model. It turned out that the correlation coefficient between the two SOM stock maps was 0.8. This study illustrated that mechanistic soil models can be used for DSM, which brings new opportunities. Mechanistic models for DSM should be considered for mapping soil characteristics that are difficult to predict by statistical models, and for extrapolation purposes. Highlights
+Theoretically, mechanistic models can replace the statistical relationships in digital soil mapping. Mechanistic soil models were used to develop a mechanistic model for digital soil mapping that predicted SOM stocks. The applicability of the mechanistic approach needs to be explored for different soil properties and regions.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-log--barrier-approach-for-airborne-gamma-ray-spectrometry-inversion&quot;&gt;A log -barrier approach for airborne gamma-ray spectrometry inversion&lt;/h3&gt;
+
+&lt;p&gt;The standard processing of airborne gamma-ray spectrometry (AGRS) data provides useful preliminary information to interpretation in several contexts, such as environmental studies, geological mapping, and analysis of mineral deposits. For optimal results, the acquisition conditions should be nearly constant, and the flight height should be uniform. However, abrupt changes in flight height (often originated from mountainous terrain) are common and lead to spurious variations and incorrect anomaly interpretation. Moreover, the commonly used corrections applied to radiometric data do not consider the effective sampling area of a survey, especially the overlap between successive fields of view. As a consequence, the concentrations estimates of potassium (K), uranium (eU), and thorium (eTh) are not sharp. A solution to deal with this problem is to compute the concentration from the AGRS data through an inversion algorithm. Inversion of AGRS data has shown to be an effective approach to suppress the significant overlap between successive fields of view. We introduce a logarithmic barrier approach for the radiometric inversion to avoid spurious negative values in the radioelement concentration models. We choose calibration ranges from Brazil and Canada to test the proposed methodology. We produced concentration models for K, eU and eTh and compared the standard approach model with the recovered model from both ranges. The predicted data from inversion of both calibration ranges are mostly consistent with the survey data, not over smoothing the data or fitting noise. The predicted data from inversion showed more consistency with the observed data than the one predicted from the standard procedure.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-influence-of-rock-fragments-on-field-capacity-water-content-in-stony-soils-from-hard-sandstone-alluvium&quot;&gt;The influence of rock fragments on field capacity water content in stony soils from hard sandstone alluvium&lt;/h3&gt;
+
+&lt;p&gt;Worldwide, rock fragments (RFs) are generally considered inert with respect to bulk soil hydraulic properties, such that all soil water retention properties predicted by national pedotransfer functions (such as S-map) are based on the volumetric fraction of the fine earth (&amp;lt;2 mm fraction) only. Research findings contradict those assumptions, but studies commonly focus on porous RFs, and rely on repacked cores and lab studies, leaving uncertainty as to how low porosity RFs characteristic of common strongly indurated lithologies affect soil in the field. We address this question by examining soil water storage in 52 pits excavated into stony soils on the Canterbury Plains, New Zealand, which are formed in sediment derived from a Mesozoic hard sandstone. The soils at each site were watered to saturation, and then after two days of drainage (a proxy for field capacity), a 30 x 30 cm pit was excavated in 10 cm increments to a depth of 60 cm. From each increment, soil samples were collected and analysed to determine the volumetric size distribution of RFs, the water content of the fine earth and the water content of the RFs themselves. Our results indicated that RFs could influence the fine earth bulk density, porosity, and soil chemistry. RFs could also retain water: 2-20 mm RFs (0.07 m(3) m(-3)) retained twice as much water as &amp;gt;20 mm RFs (0.03 m(3) m(-3)). The water retention of the hard sandstone was low compared to other lithologies, but the volumetric abundance of RFs in the stony soils we sampled meant that they accounted for similar to 10% of the water retained to a depth of 60 cm at field capacity. Our results demonstrate that similar to 13 mm of water retained by RFs at field capacity is not currently considered in water budgets and nutrient leaching predictions, which may be relevant to best practice land management.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-quality-and-grain-yield-a-win-win-combination-in-clayey-tropical-oxisols&quot;&gt;Soil quality and grain yield: A win-win combination in clayey tropical oxisols&lt;/h3&gt;
+
+&lt;p&gt;Relationships between a soil quality index (SQI(FERTBIO)) and soil functions with both relative cumulative grain yields (RCY) and soil organic carbon (SOC), were evaluated in a tropical clayey Cerrado Oxisol. Soil quality (SQ) was quantified integrating chemical (FERT) and biological (BIO) indicators in a weighted-additive soil quality index combining three soil functions and respective indicators: (F1) nutrient cycling (based on the activities of soil enzymes beta-glucosidase and arylsulfatase), (F2) nutrient storage (SOC and cation exchange capacity, CEC) and (F3) nutrient supply (Ca+2, Mg+2, K+, P, pH, H + Al; Al+3, sum of bases (SB) and base saturation (%BS)). The contribution of each indicator for the related soil function was scored using standardized scoring functions (SSF) that transform the indicator value on a scale between 0 and 1. Soil samples (0 to 10 cm depth) were collected in 2013 and 2015 from 21 treatments from three long-term field experiments, with different P fertilizer management strategies. P-fertilization resulted in higher cumulative crop yields that in turn were associated with better SQI(FERTBIO) and soil functions scores. Through linear regression analyses, critical limits (CLs) to interpret the individual scores of the SQI and of the soil functions, based on RCY and SOC were defined. The proposed SQI was positively associated with RCY (p &amp;lt; 0,001; R-2 = 0,95) and SOC (p &amp;lt; 0,001; R-2 = 0,88). Similar significant relationships were found between the three soil functions and RCY or SOC. Overall, the lower and upper limits of the interpretative classes for the SQI(FERTBIO) and soil functions scores (where the index scores are equivalent, respectively, to 40% and 80% of the optimal RCY or SOC) were 0.42 and 0.64. The combination of chemical and biological indicators in different soil functions and in the SQI(FERTBIO) proved to be a simple and useful strategy to assess SQ in tropical Oxisols, linking agronomic management practices to both SQ, yield benefits and SOC. These results will help extensionists, agronomists and soil scientists, when assisting farmers, in soil health assessments, by making easier to explain the importance of SQ for the economic performance of farms.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 28, 2021.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1127,177 +1248,6 @@ The concept of causal interactions between components is an integral part of hyd
 &lt;p&gt;By: Feng, Xue GLOBAL CHANGE BIOLOGY Volume:  26 Issue:  6 Pages:  3190-3192 Published:  JUN 2020 Context Sensitive Links Free Full Text from Publisher Close Abstract This is a Commentary on Paschalis et al. Building models to predict ecosystem responses to future rainfall changes requires closely matching model complexity to data availability. A new study by Paschalis et al. (Global Change Biology, 2020) examines opportunities to improve both data availability and model structure in 10 state-of-the-art terrestrial biosphere models.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 08, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
-  <id>/2020/06/journalDigest</id>
-  <updated>2020-06-02T00:00:00-00:00</updated>
-  <published>2020-06-02T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-10&quot;&gt;Journal Paper Digests 2020 #10&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data fusion of vis-NIR and PXRF spectra to predict soil physical and chemical properties&lt;/li&gt;
-  &lt;li&gt;Boundary line models for soil nutrient concentrations and wheat yield in national-scale datasets&lt;/li&gt;
-  &lt;li&gt;Global patterns of soil heterotrophic respiration - A meta-analysis of available dataset&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;data-fusion-of-vis-nir-and-pxrf-spectra-to-predict-soil-physical-and-chemical-properties&quot;&gt;Data fusion of vis-NIR and PXRF spectra to predict soil physical and chemical properties&lt;/h3&gt;
-&lt;p&gt;By: Zhang, Yakun; Hartemink, Alfred E.
-EUROPEAN JOURNAL OF SOIL SCIENCE  Volume: 71   Issue: 3   Pages: 316-333   Published: MAY 2020
-Context Sensitive Links  Close Abstract
-We tested one front-end data fusion method to combine visible near-infrared (vis-NIR) and portable X-ray fluorescence (PXRF) spectra for predicting different soil properties and investigated the contribution of different sensor data. A total of 197 soil samples were collected from 25 Alfisols and Mollisols in south-central Wisconsin, USA. Soils were analysed in the laboratory for clay, sand, silt content, total carbon (TC), total nitrogen (TN) and pH. Air-dried soil samples were scanned with vis-NIR and PXRF spectrometers. A principal component analysis (PCA) was applied to each of the vis-NIR and PXRF spectra to extract the first 10 principal components (PCs), which were used in the Cubist model. Five types of input data were compared for constructing the models using a front-end data fusion approach, including: (a) 10 PCs from vis-NIR spectra, (b) 10 PCs from spectra of PXRF beam 1 (XRF40), (c) 10 PCs from spectra of PXRF beam 2 (XRF10), (d) concatenating 20 PCs from two PXRF spectra (XRF40 + 10), and (e) concatenating 30 PCs from two PXRF spectra and vis-NIR spectra (XRF40 + 10 + NIR). In addition, the performances of the preprocessing methods (four smoothing methods with or without background removal) of PXRF spectra were compared. Multiple linear regression was also used to predict soil properties directly from 11 PXRF-estimated elements. Our results suggest that smoothing should be applied to the PXRF spectra prior to developing predictive models. PXRF spectra and elemental data can predict soil texture with validation R-2 &amp;gt; 0.85, better than using solely vis-NIR spectra, and combining vis-NIR and PXRF spectra improved the prediction. Combining PXRF and vis-NIR can also predict TC and TN moderately well. Soil pH cannot be predicted from vis-NIR or PXRF spectra in this dataset due to its weak correlations with other soil properties and elements. It is concluded that PXRF spectra can be solely used to estimate soil texture, whereas combining vis-NIR and PXRF spectra via PCA should be used to estimate TC and TN. Highlights
-The use of front-end data fusion method to combine vis-NIR and PXRF spectra for predicting soil properties. Different preprocessing algorithms were compared systematically for PXRF spectra. Spectral smoothing should be applied to the PXRF spectra prior to developing predictive models. PXRF spectra can be used solely to estimate soil texture, whereas combining vis-NIR and PXRF spectra via PCA should be used to estimate TC and TN.&lt;/p&gt;
-
-&lt;h3 id=&quot;boundary-line-models-for-soil-nutrient-concentrations-and-wheat-yield-in-national-scale-datasets&quot;&gt;Boundary line models for soil nutrient concentrations and wheat yield in national-scale datasets&lt;/h3&gt;
-
-&lt;p&gt;By: Lark, Richard M.; Gillingham, Vincent; Langton, David; et al.&lt;/p&gt;
-
-&lt;p&gt;EUROPEAN JOURNAL OF SOIL SCIENCE  Volume: 71   Issue: 3   Pages: 334-351   Published: MAY 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links Free Full Text from Publisher Close Abstract&lt;/p&gt;
-
-&lt;p&gt;In boundary line analysis a biological response (e.g., crop yield) is assumed to be a function of a variable (e.g., soil nutrient concentration), which limits the response in only some subset of observations because other limiting factors also apply. The response function is therefore expressed by an upper boundary of the plot of the response against the variable. This model has been used in various branches of soil science. In this paper we apply it to the analysis of some large datasets, originating from commercial farms in England and Wales, on the recorded yield of wheat and measured concentrations of soil nutrients in within-field soil management zones. We considered boundary line models for the effects of potassium (K), phosphorus (P) and magnesium (Mg) on yield, comparing the model with a simple bivariate normal distribution or a bivariate normal censored at a constant maximum yield. We were able to show, using likelihood-based methods, that the boundary line model was preferable in most cases. The boundary line model suggested that the standard RB209 soil nutrient index values (Agriculture and Horticulture Development Board, nutrient management guide (RB209), 2017) are robust and apply at the within-field scale. However, there was evidence that wheat yield could respond to additional Mg at concentrations above index 0, contrary to RB209 guidelines. Furthermore, there was evidence that the boundary line model for yield and P differs between soils at different pH and depth intervals, suggesting that shallow soils with larger pH require a larger target P index than others. Highlights
-Boundary line analysis is one way to examine how soil variables influence crop yield in large datasets. We showed that boundary line models could be applied to large datasets on soil nutrients and crop yield. The resulting models are consistent with current practice for P and K, but not for Mg. Models suggest that more refined recommendations for P requirement could be based on soil pH and depth.&lt;/p&gt;
-
-&lt;h3 id=&quot;global-patterns-of-soil-heterotrophic-respiration---a-meta-analysis-of-available-dataset&quot;&gt;Global patterns of soil heterotrophic respiration - A meta-analysis of available dataset&lt;/h3&gt;
-
-&lt;p&gt;By: Tang, Xiaolu; Du, Jie; Shi, Yuehong; et al.&lt;/p&gt;
-
-&lt;p&gt;CATENA  Volume: 191   Pages: 4574-4574   Published: AUG 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract&lt;/p&gt;
-
-&lt;p&gt;Soil heterotrophic respiration (RH) represents the carbon losses from the decomposition of litter detritus and soil organic matter by microorganisms. Despite conflicting findings on the dominant climatic, soil and vegetation controls on RH from local studies, little is known on the global patterns of RH and the potential drivers behind these patterns. Based on the updated Global Soil Respiration Database, we conducted a meta-analysis to evaluate the direct and indirect effects of climatic, soil and vegetation controls on RH across the globe using structure equation model (SEM). Our results showed that the global weighted mean RH was 457 +/- 139 g C m(-2) a(-1) (mean +/- standard deviation), but RH differed significantly among ecosystem types and positively correlated with gross primary production, highlighting the importance of the vegetation control on RH. Climate was the most important environmental control on RH indicated by SEM. Soil organic carbon (SOC) content had a negative influence on RH at the global scale, challenging the current understanding that SOC leads to a positive effect on RH at site or ecosystem scale, further indicating that SOC quantity may dominate RH at local scales, while SOC quality and availability may dominate RH at regional or global scales. Great differences were found not only between observed and dymanic global vegetation model (DGVM)-based RH, but also among different DGVMs, highlighting a better parameterizing of DGVMs, particularly the model output not validated by field observations, to better understand RH and belowground carbon dynamics.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 02, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
-  <id>/2020/06/journalDigest</id>
-  <updated>2020-06-01T00:00:00-00:00</updated>
-  <published>2020-06-01T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-9&quot;&gt;Journal Paper Digests 2020 #9&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sub-pixel mapping with point constraints&lt;/li&gt;
-  &lt;li&gt;An integrated methodology using open soil spectral libraries and Earth Observation data for soil organic carbon estimations in support of soil-related SDGs.&lt;/li&gt;
-  &lt;li&gt;Earth observation-based ecosystem services indicators for national and subnational reporting of the sustainable development goals&lt;/li&gt;
-  &lt;li&gt;Validation practices for satellite soil moisture retrievals: What are (the) errors?&lt;/li&gt;
-  &lt;li&gt;Agricultural drought mitigating indices derived from the changes in drought characteristics&lt;/li&gt;
-  &lt;li&gt;An optimal design for hierarchical generalized group testing&lt;/li&gt;
-  &lt;li&gt;“sen2r”: An R toolbox for automatically downloading and preprocessing Sentinel-2 satellite data&lt;/li&gt;
-  &lt;li&gt;atakrig: An R package for multivariate area-to-area and area-to-point kriging predictions&lt;/li&gt;
-  &lt;li&gt;Content search within large environmental datasets using a convolution neural network&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;sub-pixel-mapping-with-point-constraints&quot;&gt;Sub-pixel mapping with point constraints&lt;/h3&gt;
-
-&lt;p&gt;By: Wang, Qunming; Zhang, Chengyuan; Atkinson, Peter M.
-REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11817-11817   Published: JUL 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-Remote sensing images contain abundant land cover information. Due to the complex nature of land cover, however, mixed pixels exist widely in remote sensing images. Sub-pixel mapping (SPM) is a technique for predicting the spatial distribution of land cover classes within mixed pixels. As an ill-posed inverse problem, the uncertainty of prediction cannot be eliminated and hinders the production of accurate sub-pixel maps. In contrast to conventional methods that use continuous geospatial information (e.g., images) to enhance SPM, in this paper, a SPM method with point constraints into SPM is proposed. The method of fusing point constraints is implemented based on the pixel swapping algorithm (PSA) and utilizes the auxiliary point information to reduce the uncertainty in the SPM process and increase map accuracy. The point data are incorporated into both the initialization and optimization processes of PSA. Experiments were performed on three images to validate the proposed method. The influences of the performances were also investigated under different numbers of point data, different spatial characters of land cover and different zoom factors. The results show that by using the point data, the proposed SPM method can separate more small-sized targets from aggregated artifacts and the accuracies are increased obviously. The proposed method is also more accurate than the advanced radial basis function interpolation-based method. The advantage of using point data is more evident when the point data size and scale factor are large and the spatial autocorrelation of the land cover is small. As the amount of point data increases, however, the increase in accuracy becomes less noticeable. Furthermore, the SPM accuracy can still be increased even if the point data and coarse proportions contain errors.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-integrated-methodology-using-open-soil-spectral-libraries-and-earth-observation-data-for-soil-organic-carbon-estimations-in-support-of-soil-related-sdgs&quot;&gt;An integrated methodology using open soil spectral libraries and Earth Observation data for soil organic carbon estimations in support of soil-related SDGs&lt;/h3&gt;
-
-&lt;p&gt;By: Tziolas, Nikolaos; Tsakiridis, Nikolaos; Ogen, Yaron; et al.&lt;/p&gt;
-
-&lt;p&gt;REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11793-11793   Published: JUL 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-There is a growing realization amongst policy-makers that reliable and accurate soil monitoring information is required at scales ranging from regional to global to support ecosystem functions and services in a sustainable manner under the amplifying climate change enabling countries in target setting of the Sustainable Development Goals (SDGs). In this line, the need of access to and integration of existing regional in situ Earth Observation (EO) data and different sources such as contemporary and forthcoming satellite imagery is highlighted. The current study puts major emphasis on leveraging existing open soil spectral libraries and EO systems and bridging them with memory-based learning algorithms that create more cost-efficient and targeted large scale mapping of soil properties. Relying mostly on contemporary capacities and open resources it can be readily applied to countries with differing capacities and levels of development. To test our methodology, the GEOCRADLE SSL developed in the Balkans, Middle East, and North Africa region and a hyperspectral airborne image were utilized to provide Soil Organic Carbon (SOC) maps of cropland fields over an agricultural region near the city of Netanya, Israel. Furthermore, simulated data of forthcoming space-borne satellite (EnMAP) and current super-spectral mission (Sentinel 2) were explored. The SOC content of the collected in situ soil samples was predicted using a novel local regression approach that combines spatial proximity and spectral similarities. These predictions were subsequently used to develop models using the airborne and simulated satellite spectra, achieving a fair prediction accuracy of R-2 &amp;gt; 0.8 and RPIQ &amp;gt; 2.&lt;/p&gt;
-
-&lt;h3 id=&quot;earth-observation-based-ecosystem-services-indicators-for-national-and-subnational-reporting-of-the-sustainable-development-goals&quot;&gt;Earth observation-based ecosystem services indicators for national and subnational reporting of the sustainable development goals&lt;/h3&gt;
-
-&lt;p&gt;By: Cochran, Ferdouz; Daniel, Jessica; Jackson, Laura; et al.
-REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11796-11796   Published: JUL 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-Decision-making that impacts sustainability occurs at national and subnational levels, highlighting the need for multi-scale Earth observations (EO) and geospatial data for assessing the United Nations’ Sustainable Development Goals (SDGs). EnviroAtlas, developed by the United States Environmental Protection Agency and partners, provides a collection of web-based, interactive maps of environmental and socio-economic data relevant to the SDGs. EnviroAtlas maps ecosystem services indicators at national, regional, and local extents that can contribute to targets set forth in numerous goals, such as SDG 6 for clean water, SDG 11 for sustainable cities and communities, and SDG 15 for life on land. Examples of EnviroAtlas indicators that provide a way to view spatial inequalities, help fill gaps in environmental indicators, and integrate socio-economic and environmental data for the SDGs are explored herein. Remotely sensed EO data are essential for producing these indicators and informing planning and decision-making for the SDGs at subnational scales. The National Land Cover Dataset is the basis for many EnviroAtlas maps at the national extent, while National Agriculture Imagery Program and Light Detection and Ranging (LiDAR) data are used to classify Meter-scale Urban Land Cover in select US metro areas. These 30 m and 1 m land cover products are combined with demographic and other geospatial data (remotely sensed and otherwise) to produce integrated indicators that can aid in target setting of the SDGs. Though EnviroAtlas was created for the conterminous US, the methods for indicator creation are transferable, and the open-source code for the EnviroAtlas resource may serve as an example for other nations. Achieving the SDGs means assessing targets and decision-making outcomes at local, regional, and national levels using consistent and accurate data. Geospatial resources like EnviroAtlas that provide open access to indicators based on EO data and allow for assessment at multiple extents and resolutions are critical to broadly addressing national to subnational SDG goals and targets.&lt;/p&gt;
-
-&lt;h3 id=&quot;validation-practices-for-satellite-soil-moisture-retrievals-what-are-the-errors&quot;&gt;Validation practices for satellite soil moisture retrievals: What are (the) errors?&lt;/h3&gt;
-
-&lt;p&gt;By: Gruber, A.; De Lannoy, G.; Albergel, C.; et al.&lt;/p&gt;
-
-&lt;p&gt;REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11806-11806   Published: JUL 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links Free Full Text from Publisher Close Abstract
-This paper presents a community effort to develop good practice guidelines for the validation of global coarse-scale satellite soil moisture products. We provide theoretical background, a review of state-of-the-art methodologies for estimating errors in soil moisture data sets, practical recommendations on data pre-processing and presentation of statistical results, and a recommended validation protocol that is supplemented with an example validation exercise focused on microwave-based surface soil moisture products. We conclude by identifying research gaps that should be addressed in the near future.&lt;/p&gt;
-
-&lt;h3 id=&quot;agricultural-drought-mitigating-indices-derived-from-the-changes-in-drought-characteristics&quot;&gt;Agricultural drought mitigating indices derived from the changes in drought characteristics&lt;/h3&gt;
-
-&lt;p&gt;By: Wu, Bingfang; Ma, Zonghan; Yan, Nana&lt;/p&gt;
-
-&lt;p&gt;REMOTE SENSING OF ENVIRONMENT  Volume: 244   Pages: 11813-11813   Published: JUL 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-Droughts can cause tremendous losses to agricultural and economic development; humans have explored many anti-drought measures to mitigate the influence of drought and accordingly altering the characteristics of actual agricultural drought. In this study, a method is proposed to detect the spatiotemporal changes in drought characteristics, which show the effects of anti-drought measures on drought mitigation. Two agricultural drought mitigation evaluation indices are proposed, the agricultural drought frequency change (ADFC) and agricultural drought area change (ADAC), which are calculated by combining the Palmer drought severity index (PDSI) and vegetation health index (VHI), two widely used drought monitoring indices. The PDSI and VHI represent the natural and actual agricultural drought severity under natural and actual conditions respectively, and their differences in drought frequency and affected area reflect the level of anti-drought measures in mitigating agricultural drought. The feasibility of using ADFC and ADAC to quantify the effects of anti-drought measures for agriculture is explored using data from six typical agricultural provinces in the North China Plain and Northeast China. The results show that ADFC and ADAC could reflect both the spatiotemporal changes in agricultural drought characteristics and the influence of anti-drought measures on agricultural drought. The trend of the drought mitigation index is consistent with agricultural activity statistics. These two indices could be further used to evaluate the effects of different anti-drought methods and aid in defeating agricultural drought across many countries.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-optimal-design-for-hierarchical-generalized-group-testing&quot;&gt;An optimal design for hierarchical generalized group testing&lt;/h3&gt;
-
-&lt;p&gt;By: Malinovsky, Yaakov; Haber, Gregory; Albert, Paul S.&lt;/p&gt;
-
-&lt;p&gt;JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS  Volume: 69   Issue: 3   Pages: 607-621   Published: JUN 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-Choosing an optimal strategy for hierarchical group testing is an important problem for practitioners who are interested in disease screening with limited resources. For example, when screening for infectious diseases in large populations, it is important to use algorithms that minimize the cost of potentially expensive assays. Black and co-workers described this as an intractable problem unless the number of individuals to screen is small. They proposed an approximation to an optimal strategy that is difficult to implement for large population sizes. We develop an optimal design with respect to the expected total number of tests that can be obtained by using a novel dynamic programming algorithm. We show that this algorithm is substantially more efficient than the approach that was proposed by Black and co-workers. In addition, we compare the two designs for imperfect tests. R code is provided for practitioners.&lt;/p&gt;
-
-&lt;h3 id=&quot;sen2r-an-r-toolbox-for-automatically-downloading-and-preprocessing-sentinel-2-satellite-data&quot;&gt;“sen2r”: An R toolbox for automatically downloading and preprocessing Sentinel-2 satellite data&lt;/h3&gt;
-
-&lt;p&gt;By: Ranghetti, Luigi; Boschetti, Mirco; Nutini, Francesco; et al.&lt;/p&gt;
-
-&lt;p&gt;COMPUTERS &amp;amp; GEOSCIENCES  Volume: 139   Pages: 4473-4473   Published: JUN 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-sen2r is a scalable and flexible R package to enable downloading and preprocessing of Sentinel-2 satellite imagery via an accessible and easy to install interface. It allows the execution of several preprocessing steps which are commonly performed by Sentinel-2 users: searching the Sentinel-2 archive for datasets available over a spatial area of interest and in a defined time window, downloading them, applying the Sen2Cor atmospheric correction algorithm to compute surface reflectances, merging adjacent files, performing geometric transformations, applying a cloud mask, computing spectral indices and colour images. The package is designed to be accessible to a range of users, from beginners to skilled R users. It comes with a Graphical User Interface, which can be used to set the processing parameters and launch processing operations: this feature makes sen2r accessible also for novices with limited programming experience. High-level R functions, which enable customised image processing workflows and control over intermediate steps, can be useful to experienced remote sensing researchers. Thanks to those functions it is possible to easily schedule automatic processing chains, so to manage massive processing operations. This paper describes the main characteristics, functionalities and performance of the package and highlights its usefulness as the operational back-end of service-oriented architectures, as illustrated by the SATURNO project.&lt;/p&gt;
-
-&lt;h3 id=&quot;atakrig-an-r-package-for-multivariate-area-to-area-and-area-to-point-kriging-predictions&quot;&gt;atakrig: An R package for multivariate area-to-area and area-to-point kriging predictions&lt;/h3&gt;
-
-&lt;p&gt;By: Hu, Maogui; Huang, Yanwei&lt;/p&gt;
-
-&lt;p&gt;COMPUTERS &amp;amp; GEOSCIENCES  Volume: 139   Pages: 4471-4471   Published: JUN 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract
-Geostatistical interpolation methods are used in diverse disciplines, such as environmental science, ecology, and hydrology. With the increasing availability of areal spatial data, area-to-area and area-to-point interpolations have great application potential. In this study, based on the variogram deconvolution algorithm proposed by Goovaerts (2008), an open-source area-to-area kriging package atakrig is developed in the R environment. In atakrig, point-scale variogram and cross-variogram can be automatically deconvoluted from spatial areal samples. It provides a general framework for area-to-area and area-to-point ordinary kriging and cokriging. Two applications show that the package works well in river runoff prediction and missing data interpolation for remote sensing aerosol optical depth. The package can be deployed on different operating systems and computer hardware platforms.&lt;/p&gt;
-
-&lt;h3 id=&quot;content-search-within-large-environmental-datasets-using-a-convolution-neural-network&quot;&gt;Content search within large environmental datasets using a convolution neural network&lt;/h3&gt;
-
-&lt;p&gt;By: Freeman, J.&lt;/p&gt;
-
-&lt;p&gt;COMPUTERS &amp;amp; GEOSCIENCES  Volume: 139   Pages: 4479-4479   Published: JUN 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links  Close Abstract&lt;/p&gt;
-
-&lt;p&gt;Convolution Neural Networks (CNN) have demonstrated a high level of performance in the areas of image recognition and classification. The training of such networks over large corpora of imagery has facilitated additional applications such as content-based image searching and retrieval. Here we investigate the efficacy of applying a pre-trained deep CNN to the task of content searching within large environmental datasets. It is demonstrated that the learned convolution filters from a pre-trained network provide sufficient fidelity and diversity to accurately perform a content search within a dataset that is unrelated to the CNN training data.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 01, 2020.&lt;/p&gt;
   </content>
 </entry>
 
