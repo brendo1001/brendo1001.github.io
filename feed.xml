@@ -4,13 +4,53 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2021-03-29T21:09:47+11:00</updated>
+<updated>2021-04-05T08:35:45+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/04/journalDigest" />
+  <id>/2021/04/journalDigest</id>
+  <updated>2020-04-05T00:00:00-00:00</updated>
+  <published>2021-04-05T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-10&quot;&gt;Journal Paper Digests 2021 #10&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Estimation of soil water retention curves from soil bulk electrical conductivity and water content measurements&lt;/li&gt;
+  &lt;li&gt;The effect of organic carbon content on soil compression characteristics&lt;/li&gt;
+  &lt;li&gt;A comparison of isometric and amalgamation logratio balances in compositional data analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;estimation-of-soil-water-retention-curves-from-soil-bulk-electrical-conductivity-and-water-content-measurements&quot;&gt;Estimation of soil water retention curves from soil bulk electrical conductivity and water content measurements&lt;/h3&gt;
+
+&lt;p&gt;Measurement of soil water retention curves (SWRCs) is time consuming, and there is no single laboratory device available to measure a SWRC over an entire range of relevant pressures. The van Genuchten (vG) model is commonly used to characterize the shape of the SWRC. Bulk soil electrical conductivity as a function of water content, sigma(theta), has been used to estimate hydraulic properties of unsaturated soils, thus making it possible to relate sigma(theta) and SWRC. The saturated and residual water content values, theta(s) and theta(r), can be estimated from soil bulk density and particle size distribution. In this study, we present an approach to estimate vG parameters m and alpha from sigma measured at saturated and residual soil water contents, as well as sigma(theta) values measured at intermediate water contents. A thermo-time domain reflectometry (thermo-TDR) sensor is used to measure sigma and theta of the same soil sample volume. SWRCs for three soils (Glassil 530 sand, Tennessee silt loam and Illinois clay loam with bulk densities ranging from 1.52 to 1.67 g cm(-3), 1.05 to 1.25 g cm(-3) and 1.05 to 1.2 g cm(-3), respectively) are estimated from sigma(theta) measurements and compared with direct SWRC measurements obtained with a tension table and pressure plate extractors. Additional comparisons are made using data obtained from the literature. The proposed method to estimate SWRCs performs well when compared to direct SWRC measurements (with an average RMSE and an average bias of 0.041 cm(3) cm(-3) and 0.008 cm(3) cm(-3), respectively). Results indicate that the new sigma(theta) based method accurately estimates SWRCs.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-effect-of-organic-carbon-content-on-soil-compression-characteristics&quot;&gt;The effect of organic carbon content on soil compression characteristics&lt;/h3&gt;
+
+&lt;p&gt;We investigated the effect of soil organic carbon (SOC) on the consolidation behaviour of soil from two long term field experiments at Rothamsted; the Broadbalk Wheat Experiment and Hoosfield Spring Barley. These experiments are located on soil with similar particle size distributions, and include treatments with SOC contents ranging from approximately 1?3.5 g/100 g. Soils taken from plots with contrasting SOC contents were compressed and deformed in a triaxial cell and the normal consolidation and critical state lines were determined. We found that the compression index was independent of SOC, but the void ratio at any given effective stress was highly correlated with organic carbon content. By comparison with uniaxial compression data, the apparent influence of SOC on the compression index is likely to be due to its effect on soil hydraulic properties rather than any intrinsic effects of strength. The plastic limit test appears to be a useful and simple test to allow direct comparison of soil physical behaviour and expected soil density.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-comparison-of-isometric-and-amalgamation-logratio-balances-in-compositional-data-analysis&quot;&gt;A comparison of isometric and amalgamation logratio balances in compositional data analysis&lt;/h3&gt;
+
+&lt;p&gt;The isometric logratio transformation, in the form of what has been called a “balance”, has been promoted as a way to contrast two groups of parts in a compositional data set by forming ratios of their respective geometric means. This transformation has attractive theoretical properties and hence provides a useful reference, but geometric means are highly affected by parts with small relative values. When a comparison between two groups of parts is required in practical applications, such as the investigation and construction of models, while making use of substantive domain knowledge, it is demonstrated that the logratio of two amalgamations serves as an alternative, interpretable form of balance. A geochemical data set is considered, which has been analyzed previously by transforming to a set of isometric logratio balances. An alternative approach, using a reduced set of pairwise logratios of parts, optionally involving prescribed amalgamations, is very close to optimal in accounting for the variance in this compositional data set. These simpler transformations also have an exact back transformation to the original parts. This approach highlights for this dataset which compositional parts are driving the data structure, using variables that are easy to interpret and that map well to research-driven objectives.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 05, 2021.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1205,49 +1245,6 @@ Context Sensitive Links Free Full Text from Publisher Close Abstract
 The concept of causal interactions between components is an integral part of hydrology and Earth system sciences. Modelers, decision makers, scientists, and other water resources stakeholders all utilize some notion of cause-and-effect to understand processes, make decisions, and infer how systems react to change. However, there are different perspectives on the meaning of causality in complex systems and, further, different frameworks and methodologies with which to detect causal interactions. We propose here that information theory (IT) provides a compelling framework for the detection of causality and discuss approaches for several levels of analyses that capture interactions that range from pairwise to multivariate in nature. We illustrate these types of analyses with an example based on weather station time series variables, in which variables may interact pairwise or jointly and on short to long time scales. In general, many unsolved or even unanticipated questions in the hydrologic sciences could benefit from this perspective.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 12, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
-  <id>/2020/06/journalDigest</id>
-  <updated>2020-06-08T00:00:00-00:00</updated>
-  <published>2020-06-08T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-11&quot;&gt;Journal Paper Digests 2020 #11&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bibliometric analysis of research on soil health from 1999 to 2018&lt;/li&gt;
-  &lt;li&gt;Climate drives global soil carbon sequestration and crop yield changes under conservation agriculture&lt;/li&gt;
-  &lt;li&gt;Marching in step: The importance of matching model complexity to data availability in terrestrial biosphere models&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;bibliometric-analysis-of-research-on-soil-health-from-1999-to-2018&quot;&gt;Bibliometric analysis of research on soil health from 1999 to 2018&lt;/h3&gt;
-&lt;p&gt;By: Liu, Yanan; Wu, Kening; Zhao, Rui&lt;/p&gt;
-
-&lt;p&gt;JOURNAL OF SOILS AND SEDIMENTS Volume:  20 Issue:  3 Pages:  1513-1525 Published:  MAR 2020 Context Sensitive Links Close Abstract Purpose Soil health has been a major focus of research by international scholars because it is an important factor that supports human survival and development. However, few scholars have performed bibliometric analyses of research on soil health. This study investigated the current research status and development characteristics of soil health. Materials and methods We performed a bibliometric analysis of documents on soil health from 1999 to 2018 in the Web of Science Core Collection. The bibliometric analysis tools, CiteSpace and HistCite software, were applied. Results and discussion A total of 1629 documents on soil health in the Web of Science Core Collection were identified. From the research status of soil health, the number of publications will continue to increase. Most of the research institutions examining soil health are located in the USA, and there is little cooperation and communication among countries, neither do research institutions in this field. Each country has its own research labs while lab cooperation within individual countries is relatively close. Most documents on the research of soil health have been published in the journal Applied Soil Ecology. In addition, research directions are expanding from the basic study of soil production, soil health indicators, and soil pollution to the comprehensive study of soil ecosystem. Conclusions Bibliometric analysis tools, CiteSpace and HistCite software, provide a comprehensive approach for making predictions regarding trends in the field. This method was used in this study to identify the hotspots, frontiers, and future development of soil health to provide guidance for future research.&lt;/p&gt;
-
-&lt;h3 id=&quot;climate-drives-global-soil-carbon-sequestration-and-crop-yield-changes-under-conservation-agriculture&quot;&gt;Climate drives global soil carbon sequestration and crop yield changes under conservation agriculture&lt;/h3&gt;
-&lt;p&gt;By: Sun, Wenjuan; Canadell, Josep G.; Yu, Lijun; et al.&lt;/p&gt;
-
-&lt;p&gt;GLOBAL CHANGE BIOLOGY Volume:  26 Issue:  6 Pages:  3325-3335 Published:  JUN 2020&lt;/p&gt;
-
-&lt;p&gt;Context Sensitive Links Close Abstract Conservation agriculture has been shown to have multiple benefits for soils, crop yield and the environment, and consequently, no-till, the central practice of conservation agriculture, has rapidly expanded. However, studies show that the potential for carbon (C) sequestration in no-till farming sometimes is not realized, let alone the ability to maintain or improve crop yield. Here we present a global analysis of no-till-induced changes of soil C and crop yield based on 260 and 1,970 paired studies; respectively. We show that, relative to local conventional tillage, arid regions can benefit the most from conservation agriculture by achieving a win-win outcome of enhanced C sequestration and increased crop yield. However, more humid regions are more likely to increase SOC only, while some colder regions have yield losses and soil C loss as likely as soil C gains. In addition to site-specific characteristics and management, a careful assessment of the regional climate is needed to determine the potential benefits of adopting conservation agriculture.&lt;/p&gt;
-
-&lt;h3 id=&quot;marching-in-step-the-importance-of-matching-model-complexity-to-data-availability-in-terrestrial-biosphere-models&quot;&gt;Marching in step: The importance of matching model complexity to data availability in terrestrial biosphere models&lt;/h3&gt;
-&lt;p&gt;By: Feng, Xue GLOBAL CHANGE BIOLOGY Volume:  26 Issue:  6 Pages:  3190-3192 Published:  JUN 2020 Context Sensitive Links Free Full Text from Publisher Close Abstract This is a Commentary on Paschalis et al. Building models to predict ecosystem responses to future rainfall changes requires closely matching model complexity to data availability. A new study by Paschalis et al. (Global Change Biology, 2020) examines opportunities to improve both data availability and model structure in 10 state-of-the-art terrestrial biosphere models.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 08, 2020.&lt;/p&gt;
   </content>
 </entry>
 
