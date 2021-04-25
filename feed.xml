@@ -4,13 +4,174 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2021-04-05T08:35:45+10:00</updated>
+<updated>2021-04-26T07:56:35+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/04/journalDigest" />
+  <id>/2021/04/journalDigest</id>
+  <updated>2020-04-26T00:00:00-00:00</updated>
+  <published>2021-04-26T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-13&quot;&gt;Journal Paper Digests 2021 #13&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Multi-sensor remote sensing for drought characterization: current status, opportunities and a roadmap for the future&lt;/li&gt;
+  &lt;li&gt;Estimation of soil water retention in conservation agriculture using published and new pedotransfer functions&lt;/li&gt;
+  &lt;li&gt;On the interpretation of surprisingly high variation of soil map diversity in country-wide study of flood-affected agroecosystems using the legacy data in the Czech Republic&lt;/li&gt;
+  &lt;li&gt;Building a resilient and sustainable food system in a changing world -&amp;amp; nbsp;A case for climate-smart and nutrient dense crops&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;multi-sensor-remote-sensing-for-drought-characterization-current-status-opportunities-and-a-roadmap-for-the-future&quot;&gt;Multi-sensor remote sensing for drought characterization: current status, opportunities and a roadmap for the future&lt;/h3&gt;
+
+&lt;p&gt;Satellite based remote sensing offers one of the few approaches able to monitor the spatial and temporal development of regional to continental scale droughts. A unique element of remote sensing platforms is their multi-sensor capability, which enhances the capacity for characterizing drought from a variety of perspectives. Such aspects include monitoring drought influences on vegetation and hydrological responses, as well as assessing sectoral impacts (e.g., agriculture). With advances in remote sensing systems along with an increasing range of platforms available for analysis, this contribution provides a timely and systematic review of multi sensor remote sensing drought studies, with a particular focus on drought related datasets, drought related phenomena and mechanisms, and drought modeling. To explore this topic, we first present a comprehensive summary of large-scale remote sensing datasets that can be used for multi-sensor drought studies. We then review the role of multi-sensor remote sensing for exploring key drought related phenomena and mechanisms, including vegetation responses to drought, land-atmospheric feedbacks during drought, drought-induced tree mortality, drought-related ecosystem fires, post-drought recovery and legacy effects, flash drought, as well as drought trends under climate change. A summary of recent modeling advances towards developing integrated multi-sensor remote sensing drought indices is also provided. We conclude that leveraging multi-sensor remote sensing provides unique benefits for regional to global drought studies, particularly in: 1) revealing the complex drought impact mechanisms on ecosystem components; 2) providing continuous long-term drought related information at large scales; 3) presenting real-time drought information with high spatiotemporal resolution; 4) providing multiple lines of evidence of drought monitoring to improve modeling and prediction robustness; and 5) improving the accuracy of drought monitoring and assessment efforts. We specifically highlight that more mechanism-oriented drought studies that leverage a combination of sensors and techniques (e.g., optical, microwave, hyperspectral, LiDAR, and constellations) across a range of spatiotemporal scales are needed in order to progress and advance our understanding, characterization and description of drought in the future.&lt;/p&gt;
+
+&lt;h3 id=&quot;estimation-of-soil-water-retention-in-conservation-agriculture-using-published-and-new-pedotransfer-functions&quot;&gt;Estimation of soil water retention in conservation agriculture using published and new pedotransfer functions&lt;/h3&gt;
+
+&lt;p&gt;Conservation agriculture has been developed as a means to improve the sustainability of agricultural systems and reduce drawbacks of conventional agricultural practices. Cropping practices can have a large influence on soil properties such as water retention. Proper tools are needed to assess and model effects of conservation agriculture on soil properties. As measuring soil water retention is expensive and time consuming, pedotransfer functions (PTFs) are now commonly used to predict them. The objectives of this study were to (i) present a new dataset of conservation agriculture data, (ii) assess performances of existing PTFs in predicting soil water retention of soils under conservation agriculture and (iii) develop new specific PTFs to predict water retention in conservation agriculture more accurately. We used data collected only in fields under conservation agriculture in France to evaluate several published PTFs with three evaluation criteria (RMSE, prediction bias (ME) and Nash-Sutcliffe Efficiency (EF)). We then developed new PTFs using three methods - multiple linear regression, regression tree and random forest - to predict soil water content at matric heads of -100 (theta(100), field capacity for sandy soils), -330 (theta(330), field capacity for other soils) and -15 000 cm (theta(15) 000, wilting point). Soil tillage, presence of a cover crop, rotation length and previous reduced/no tillage were used as predictors in addition to basic soil properties for regression trees and random forests. The quality of prediction (RMSE, ME and EF) was calculated for each new PTF using a cross-validation procedure. Generally, predictions of wilting point had lower absolute error than those of sandy-soil field capacity (RMSE = 0.044 and 0.066 cm(3)/cm(3), respectively). EF was usually negative for all water contents. The cross-validation performance of the new PTFs was similar for multiple linear regression (RMSE: 0.028, ME: 0.000, EF: 0.34 for theta(100)) and random forest (RMSE: 0.027, ME: 0.000, EF: 0.36 for theta(100)), and generally worse for regression tree (especially EF). Multiple linear regression that did not consider cropping practices performed as well as random forest and thus did not identify any major influence of agricultural management on predicted water content. Future research on developing PTFs should focus on identifying more relevant predictors.&lt;/p&gt;
+
+&lt;h3 id=&quot;on-the-interpretation-of-surprisingly-high-variation-of-soil-map-diversity-in-country-wide-study-of-flood-affected-agroecosystems-using-the-legacy-data-in-the-czech-republic&quot;&gt;On the interpretation of surprisingly high variation of soil map diversity in country-wide study of flood-affected agroecosystems using the legacy data in the Czech Republic&lt;/h3&gt;
+
+&lt;p&gt;Legacy soil data have been produced worldwide to provide maps of soil classes or properties. In this study, we joined the legacy results of conventional soil mapping with the application of the pedodiversity concept and compositional data analysis in a comprehensive spatial analysis of the mapped soil diversity within flood-prone agroecosystems in the Czech Republic. After the statistical differences in Shannon’s entropy (conventional and adjusted with taxonomic distances) over different regional inundation areas had been statistically examined, their interpretation was based on Aitchison’s geometry of simplex, rendering an appropriate statistical framework to avoid methodological bias through the use of raw proportions in soil taxa compositions. Working with tailored orthonormal coordinates enabled us to verify the dependency of the soil taxa composition on the multicategory factors of agroecosystem type and flood-periodicity through a conventional linear modelling. The supervised compositional approach improved interpretability of soil information within the Czech legacy soil maps, and hence general patterns of pedodiversity in floodplains might be effectively described in an informative and quantitative manner. The most obvious differences of the soil map diversity proved the regional inundation areas within the catchments with the enhanced complexity of drainage network that might arise from multiple sources (substrate diversity, climatic zonality, man-induced landscape alteration).&lt;/p&gt;
+
+&lt;h3 id=&quot;building-a-resilient-and-sustainable-food-system-in-a-changing-world---nbspa-case-for-climate-smart-and-nutrient-dense-crops&quot;&gt;Building a resilient and sustainable food system in a changing world -&amp;amp; nbsp;A case for climate-smart and nutrient dense crops&lt;/h3&gt;
+
+&lt;p&gt;Current food production and consumption practices have had negative impacts on the environment and are central to global health concerns. Using a mixed-methods review, we examined the nutritional and environmental impacts of our global food systems and addressed the apparent decrease in food sources and crop diversity, and its implication on sustainable and healthy diets. Moreover, we explored the merits of weighing the use of natural capital and agricultural inputs against the output generated in terms of nutrient density. Transforming our food systems to safeguard planetary health will require a shift towards sufficient production of nutrient dense crops that are environmentally sustainable. Such a transformation largely depends on valuing crops for their natural nutrient density and matching them to suitable environments.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 26, 2021.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/04/journalDigest" />
+  <id>/2021/04/journalDigest</id>
+  <updated>2020-04-25T00:00:00-00:00</updated>
+  <published>2021-04-25T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-12&quot;&gt;Journal Paper Digests 2021 #12&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Direct cell extraction from fresh and stored soil samples: Impact on microbial viability and community compositions&lt;/li&gt;
+  &lt;li&gt;Soil aggregate size-dependent relationships between microbial functional diversity and multifunctionality&lt;/li&gt;
+  &lt;li&gt;Finding exceedance locations in a large spatial database using nonparametric regression&lt;/li&gt;
+  &lt;li&gt;Natural and managed soil structure: On the fragile scaffolding for soil functioning&lt;/li&gt;
+  &lt;li&gt;SLAKES and 3D Scans characterize management effects on soil structure in farm fields&lt;/li&gt;
+  &lt;li&gt;Pattern analysis of Australia soil profiles for plant available water capacity&lt;/li&gt;
+  &lt;li&gt;Factors of soil formation in the 21st century&lt;/li&gt;
+  &lt;li&gt;Information depth of NIR/SWIR soil reflectance spectroscopy&lt;/li&gt;
+  &lt;li&gt;Paying the price for environmentally sustainable and healthy EU diets&lt;/li&gt;
+  &lt;li&gt;The role of nitrogen in achieving sustainable food systems for healthy diets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;paying-the-price-for-environmentally-sustainable-and-healthy-eu-diets&quot;&gt;Paying the price for environmentally sustainable and healthy EU diets&lt;/h3&gt;
+
+&lt;p&gt;We review consumer-side interventions and their effectiveness to support a transition to healthier and more environmentally sustainable diets and identify taxes/subsidies as relevant instruments. To quantify the scope of necessary tax levels to achieve dietary recommendations on EU average, we apply three established economic models. Our business-as-usual food intake projections stress the need for policy intervention to resolve continued divergence from nutrition guidelines. Our findings suggest that food group specific taxes are effective in reaching nutrition and environmental sustainability targets. However, considerable tax levels are required to achieve the targeted consumption shifts, inducing a discussion about alternative policy designs and current model limitations. A coherent policy package is suggested to approach nutrition and sustainability objectives simultaneously.&lt;/p&gt;
+
+&lt;h3 id=&quot;direct-cell-extraction-from-fresh-and-stored-soil-samples-impact-on-microbial-viability-and-community-compositions&quot;&gt;Direct cell extraction from fresh and stored soil samples: Impact on microbial viability and community compositions&lt;/h3&gt;
+
+&lt;p&gt;The direct extraction of viable microbes from soil samples is critical for the application of many single-cell related technologies. However, there are many aspects of extraction technologies that can impact the viability and diversity of extractable cells from fresh or stored soil samples. In this study, physical dispersion method, chemical dispersion method, and Nycodenz density gradient medium concentration were optimized with two sequential rounds of cell extraction from four soil samples having diverse physicochemical properties. Cell viability was quantified with fluorescence staining and flow cytometry. The viable microbial community compositions in soil extractable cells and soil samples were assessed after selective removal of DNA from dead cells. Among the four different extraction and purification methods, a protocol that included physical blending, Tween 20 treatment, and centrifugation with 80% Nycodenz, had the highest cell viability and yield. Repeated extraction increased the yield but reduced the cell viability. The over- or under-represented taxa in extractable cells might contribute to the bias of the extractable microbial communities. Using the optimized cell extraction procedure, the effect of soil storage conditions (4 degrees C, -80 degrees C, and air-drying) on yield, viability, and community composition of soil extractable cells were assessed. Cell viability decreased in all stored soil samples, but significant decreases in cell yield was only observed in air-dried soil samples. Microbial community compositions changed significantly in all stored soil samples, with the least changes were observed in soil stored at 4 degrees C, confirming that 4 degrees C short-term storage is suitable for highly efficient viable cell extraction. Taken together, the developed method offers great potential for advancing our analyses and understanding of soil microbial ecology and the role of individual microbes.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-aggregate-size-dependent-relationships-between-microbial-functional-diversity-and-multifunctionality&quot;&gt;Soil aggregate size-dependent relationships between microbial functional diversity and multifunctionality&lt;/h3&gt;
+
+&lt;p&gt;Soil stability and aggregates are important drivers of soil fertility and microbial diversity and are highly vulnerable to land degradation. However, the role of soil aggregates in driving the responses of microbial functional diversity and multiple ecosystem services and functions (multifunctionality) to further degradation (e. g., fertilization) remains largely unexplored and poorly understood. In this study, we used soils from long-term experiments involving inorganic and organic fertilization treatments to investigate the role soil aggregates (microscale) play in driving microbial functional gene diversity (via GeoChip) and the activity of multiple extracellular enzymes in an agricultural ecosystem. We found that microbial functional gene diversity has a significant and positive relationship with soil multifunctionality, which is enhanced in soil aggregates by organic fertilizer but is reduced by inorganic fertilizer. We also found that soil aggregate fractions indirectly controlled multiple ecosystem functions via changes in functional diversity. Smaller soil aggregates with higher resource availability (carbon and nitrogen) supported more ecological functions than larger aggregates under contrasting fertilizer management regimes. Soil multifunctionality is regulated by the differences in resource availability and not by microbial functional gene composition, which suggests that microbial functional diversity contributed more to multifunctionality than gene composition. Random forest analysis and structural equation modeling indicated that soil carbon and nitrogen and microbial functional diversity together determined the multifunctionality, whereas soil traits have more standardized total effects than functional diversity. Our study highlights that soil aggregation stratifies soil nutrition and microbial functional diversity, which leads to the differentiation of aggregate ecosystem multifunctionality.&lt;/p&gt;
+
+&lt;h3 id=&quot;finding-exceedance-locations-in-a-large-spatial-database-using-nonparametric-regression&quot;&gt;Finding exceedance locations in a large spatial database using nonparametric regression&lt;/h3&gt;
+
+&lt;p&gt;In the era of big data analysis, it is of interest to develop diagnostic tools for preliminary scanning of large spatial databases. One problem is identification of locations where certain characteristics exceed a given norm, e.g. timber volume or mean tree diameter exceeding a user-defined threshold. Some of the challenges are, large size of the database, randomness, complex shape of the spatial mean surface, heterogeneity and others. In a step-bystep procedure, we propose a method for achieving this for large spatial data sets. For illustration, we work through a simulated spatial data set as well as a forest inventory data set from Alaska (source: USDA Forest Services). Working within the framework of nonparametric regression modeling, the proposed method can attain a high degree of flexibility regarding the shape of the spatial mean surface. Taking advantage of the large sample size, we also provide asymptotic formulas that are easy to implement in any statistical software.&lt;/p&gt;
+
+&lt;h3 id=&quot;natural-and-managed-soil-structure-on-the-fragile-scaffolding-for-soil-functioning&quot;&gt;Natural and managed soil structure: On the fragile scaffolding for soil functioning&lt;/h3&gt;
+
+&lt;p&gt;Soil structure in natural systems is a product of complex interactions between biological activity, climate and soil minerals that promote aggregation and accumulation of biopores. In arable lands, the management of soil structure often requires the mechanical fragmentation of hardened soil to improve seedbed, control weeds and bury plant residue. Despite difficulties in defining and quantifying soil structure, its critical role is evidenced by loss of productivity when natural structure is perturbed (e.g. compaction) and the long history of tillage in agriculture. To overcome persistent ambiguities among scientific disciplines regarding definition and function of soil structure, we propose a framework for distinguishing managed and natural soil structure based on their different formation processes and functions. Natural soil structure preserves ecological order and legacy that promotes biopore reuse, stabilizes foodwebs and protects soil organic carbon (SOC). The contribution of net primary productivity of natural lands to soil structure forming processes makes it a useful (surrogate) metric of soil structure. The benefits of managed soil structure for crops are quantified indirectly via comparisons with no till farming under similar conditions. The levels and trends of SOC are useful metrics for the status of natural and managed soil structure. The systematic consideration of soil structure state in natural and arable lands using suitable metrics is a prerequisite for rational decisions related to land management and ensuring sustainable functioning of a fragile and central resource such as soil.&lt;/p&gt;
+
+&lt;h3 id=&quot;slakes-and-3d-scans-characterize-management-effects-on-soil-structure-in-farm-fields&quot;&gt;SLAKES and 3D Scans characterize management effects on soil structure in farm fields&lt;/h3&gt;
+
+&lt;p&gt;Adoption of no-till (NT) is low in the Lower and Middle Brazos River Watershed of Texas, leaving soil vulnerable to erosion, exacerbating flooding, and contributing to high nutrient and sediment levels in surface waters. To investigate the impact of NT on soil structure and hydraulic function in the region, we measured saturated hydraulic conductivity, organic carbon, bulk density, slaking index of soil aggregates (inversely related to aggregate stability), and soil structure in farm fields under three management systems: conventional tillage (CT), NT, and perennial grass (PG). Soil structure was measured using a novel method for 3D scanning of soil surface horizons - multistripe laser triangulation. Slaking index was measured using a recently developed smartphone application. Exploratory factor analysis combined with a semi-supervised cluster analysis showed that, in general, CT and PG fields were classified into different clusters from one another. Three fields managed with NT for 21, 21, and 7 years were classified in the same cluster as PG fields, while the remaining fields (managed with NT for 21, 21, 18, and 3 years) were classified with CT fields. Organic carbon was significantly higher in NT compared to CT fields. Conventional fields had significantly lower hydraulic conductivity than PG fields and hydraulic conductivity was 1.3 cm h-1 higher in NT than CT fields. Soil structure measured from 10-30 cm depth was significantly improved in NT compared to CT. Improvements in organic carbon and soil hydraulic function are meaningful indicators of improved physical soil health that can be used to promote NT adoption. Improvements in organic carbon and soil hydraulic function also provide ecosystem services to off-site stakeholders who are impacted by erosion and sedimentation resulting from soil tillage. The two novel measurements (a metric derived from scanning of soil structure and slaking index from a smartphone application) were particularly sensitive to management system.&lt;/p&gt;
+
+&lt;h3 id=&quot;pattern-analysis-of-australia-soil-profiles-for-plant-available-water-capacity&quot;&gt;Pattern analysis of Australia soil profiles for plant available water capacity&lt;/h3&gt;
+
+&lt;p&gt;Plant available water capacity (PAWC), defined as the amount of water held in the soil between the drained upper limit (DUL) and crop lower limit (CLL), is a major determinant for crop yield in dryland cropping areas. However, measured soil profile data quantifying the physical soil parameters that determine PAWC are limited. Choosing a ‘representative’ soil profile in order to parameterise a deterministic model is often subjective and may not be appropriate, leading to biased conclusions. To help support these deterministic crop modelling studies, we analysed soil profile data in Australia available in the APSoil database; a database of field and laboratory measured physical soil properties used to parameterise the Agricultural Production Systems sIMulator (APSIM) model. Specifically, we developed typical soil pattern profiles utilizing wheat for CLL using statistical shape analysis and cluster analysis. Our method allows modellers to reduce the number of soil profile parameter choices using a statistically sound basis. We implement our method by grouping the APSoil soil profiles into five clusters, whereby each cluster is represented by a more general soil profile. The representative soil profiles reflect impact of the soil texture on PAWC. The five clusters and representative soil profiles can then be used in future modelling studies to investigate the impact of soil variation on systems performance. In turn, soil scientists will have a plausible and quantifiable collection of soil profiles to choose from for future studies.&lt;/p&gt;
+
+&lt;h3 id=&quot;factors-of-soil-formation-in-the-21st-century&quot;&gt;Factors of soil formation in the 21st century&lt;/h3&gt;
+
+&lt;p&gt;The year 2021 marks the 80th anniversary of the publication of Factors of Soil Formation. A System of Quantitative Pedology by Hans Jenny. Given the exponential surge in annual citations of the book over the past 30 years, and this important milestone in its history, it is an opportune time to examine what the book presents, and how it is relevant to transdisciplinary research in the 21st Century. The book did not originate the concept of soil forming factors, which were by then already widely accepted in soil science, but instead translated it into a quantitative scientific framework through rigorous definition of the soil system, and the identification and separation of dependent and independent variables. The initial formulation of the theoretical framework was inspired by thermodynamics, but with pedologically-relevant state variables. Subsequent formulations of the model by Jenny articulated the connection and utility to examining energy and mass fluxes through the soil system, a point of departure for recent efforts to bring open system, non-equilibrium thermodynamic methods to bear on soil research. The State Factor theory is a powerful lens to examine a number of academic and societally relevant issues in the 21st century, such as the role of the biotic factor and its interplay with the physical soil environment. However, the most critical, and understudied, state factor is the effect of humans on soil systems. Earth science must embrace the challenge, and obligation to society, to explore the human footprint on the planet, and devise ways to remediate its impact.&lt;/p&gt;
+
+&lt;h3 id=&quot;information-depth-of-nirswir-soil-reflectance-spectroscopy&quot;&gt;Information depth of NIR/SWIR soil reflectance spectroscopy&lt;/h3&gt;
+
+&lt;p&gt;Proximal and remote sensing techniques in the optical domain are cost-effective alternatives to standard soil property characterization methods. However, the extent of light penetration into the soil sample, also termed soil information depth, is not well understood. In this study a new analytical model that links the particle size distribution and soil reflectance in the near infrared (NIR) and shortwave infrared (SWIR) bands of the electromagnetic spectrum is introduced. The model enables the partitioning of measured reflectance spectra into surface and volume (subsurface) contributions, thereby yielding insights about the soil information depth. The model simulations indicate that the surface reflectance contribution to the total reflectance is significantly higher than the volume reflectance contribution for a broad range of soils that vastly differ in texture, mineralogical composition and organic matter contents. The ratio of volume to total reflectance is higher for sandy soils than for clayey soils, especially at longer optical wavelengths, but the ratio rarely exceeds 15%. Therefore, the light reflection from dry soils is predominantly a surface phenomenon and the information depth in most soils rarely exceeds 1 mm. The results of this study reveal an intimate physical relationship between soil reflectance and the particle size distribution in the NIR/SWIR range, which opens a potential new avenue for retrieval of the particle size distribution from remotely sensed reflectance via a universal process-based approach.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-role-of-nitrogen-in-achieving-sustainable-food-systems-for-healthy-diets&quot;&gt;The role of nitrogen in achieving sustainable food systems for healthy diets&lt;/h3&gt;
+
+&lt;p&gt;The ‘food system’ urgently needs a sustainable transformation. Two major challenges have to be solved: the food system has to provide food security with healthy, accessible, affordable, safe and diverse food for all, and it has to do so within the safe operating space of the planetary boundaries, where the pollution from reactive nitrogen turned out to be the largest bottleneck. Here we argue that thinking strategically about how to balance nitrogen flows throughout the food system will make current food systems more resilient and robust. Looking from a material and a governance perspective on the food system, we highlight major nitrogen losses and policy blind spots originating from a compartmentalization of food system spheres. We conclude that a participatory and integrated approach to manage nitrogen flows throughout the food system is necessary to stay within regional and global nitrogen boundaries, and will additionally provide synergies with a sustainable and healthy diet for all.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 25, 2021.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/04/journalDigest" />
+  <id>/2021/04/journalDigest</id>
+  <updated>2020-04-14T00:00:00-00:00</updated>
+  <published>2021-04-14T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-11&quot;&gt;Journal Paper Digests 2021 #11&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Progress in recent airborne gamma ray spectrometry measurement technology&lt;/li&gt;
+  &lt;li&gt;Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm&lt;/li&gt;
+  &lt;li&gt;Soil organic carbon sequestration calculated from depth distribution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;progress-in-recent-airborne-gamma-ray-spectrometry-measurement-technology&quot;&gt;Progress in recent airborne gamma ray spectrometry measurement technology&lt;/h3&gt;
+
+&lt;p&gt;With the development of deep resource exploration, rapid nuclear emergency response, environmental monitoring, great progress has been made in airborne gamma-ray spectrum (AGS) measurement technology during the past few decades. Its development prospects are closely related to the AGS instruments and data processing technology. The AGS technology can be used to retrieve radionuclide information, which makes it a hot research field to improve the sensitivity, accuracy and detection limit of the AGS detection effectively. This paper focuses on the progress made in the AGS instruments and data processing since 1940s’, deeply reviews the technology characteristics and development status, thoroughly discusses the typical AGS applications, summarizes the current technology trend, and puts forward potential research directions.&lt;/p&gt;
+
+&lt;h3 id=&quot;retrievals-of-soil-moisture-and-vegetation-optical-depth-using-a-multi-channel-collaborative-algorithm&quot;&gt;Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm&lt;/h3&gt;
+
+&lt;p&gt;Due to the success of the SMOS (Soil Moisture and Ocean Salinity) and SMAP (Soil Moisture Active Passive) missions, new satellite missions are on the horizon. The current and future missions can benefit from investigations that seek to improve retrieval algorithms that quantitatively map global soil moisture and vegetation optical depth (tau) from Earth’s microwave emissions. In this study, we explore multi-angular and multi-frequency approaches for the retrieval of soil moisture and vegetation tau, considering the payload configurations of current and future satellite missions (such as the Copernicus Imaging Microwave Radiometer, the Water Cycle Observation Mission, and the Terrestrial Water Resources Satellite) using a new set of ground observations. Two ground-based microwave radiometry datasets collected in Inner Mongolia during the Soil Moisture Experiment in the Luan River from July to August 2017 (cropland) and August to September 2018 (grassland) are used for this study. The corn field, which covers an entire growth period, indicated that the degree of information increases linearly as the number of channels (in terms of the incidence angle and frequency) increases, and that the multi-frequency observations contain slightly more independent information than do the multi-angular observations under the same number of channels. The polarization difference in brightness temperature is sensitive to both soil moisture and vegetation water content, especially at L-band due to its penetrating ability. Soil moisture explains most of the variance in frequency differences of brightness temperature at adjacent frequencies (L- &amp;amp; C-bands, C- &amp;amp; X-bands), while the variance in incidence-angle differences of brightness temperature is mostly associated with the vegetation water content. A multi-channel collaborative algorithm (MCCA) is developed based on the two-component version of the omega-tau model, which utilizes information from collaborative channels expressed as an analytical form of brightness temperature at the core channel to rule out the parameters to be retrieved. Results of soil moisture retrieval show that the multi-angular approach used by the MCCA generally has a better performance, unbiased mot mean square difference (ubRMSD) varying from 0.028 cm(3)/cm(3) to 0.037 cm(3)/cm(3), than the multi-frequency approach (ubRMSD from 0.028 cm(3)/cm(3) to 0.089 cm(3)/cm(3)) for the corn field. This is attributed to the dependence of vegetation tau on the frequency being more significant than that on the incidence angle. Except for in the C- &amp;amp; X-band combination, the multi-frequency approach used by the MCCA performs better (ubRMSD from 0.018 cm(3)/cm(3) to 0.023 cm(3)/cm(3)) than the multi-angular version (ubRMSD from 0.026 cm(3)/cm(3) to 0.034 cm(3)/cm(3)) for the grass field due to reduced vegetation effects for this type of cover. It is affirmed that increasing the number of observation channels could make the soil moisture retrieval more robust, but might also limit the retrieval performance, as the probability that the model estimations will not match the observations is increased. This study provides new insights into the design of potential satellite missions to improve soil moisture retrieval. A satellite with simultaneous multi-angular and multi-frequency observation capabilities is highly recommended.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-organic-carbon-sequestration-calculated-from-depth-distribution&quot;&gt;Soil organic carbon sequestration calculated from depth distribution&lt;/h3&gt;
+
+&lt;p&gt;Context Sensitive Links Free Full Text from Publisher Close Abstract
+Sequestration of organic C in agricultural soils is necessary to improve soil health to meet the challenges of climate change, diminishing biodiversity, water quality deterioration, and rising demands for food and fiber production. New assessment approaches are needed to quantify how conservation agriculture might contribute to soil health improvement and soil organic C (SOC) sequestration. In the southeastern United States, conservation management has been repeatedly shown to stratify SOC concentration with depth. Starting immediately below a zone of tillage influence (i.e., 30-cm depth), SOC concentration is rarely affected by management due to low C inputs and high decomposition potential, whereas concentration increases toward the surface in a nonlinear manner, presumably with greater inputs of residue and root inputs and changing temperature and moisture conditions. Using these observations as an ecological foundation, SOC sequestration was calculated as the summation of SOC stock greater than the baseline condition at 30-cm depth. Data from literature sources were mathematically fitted with this new approach as a validation. Two on-farm surveys with different agricultural management practices (5-40 yr) in the southeastern United States yielded preliminary estimates of SOC sequestration. The interquartile range of calculated SOC sequestration was 4.2-9.4 Mg C ha(-1) for conventional-tillage cropland (n = 45 fields), 13.6-29.7 Mg C ha(-1) for no-tillage cropland (n = 97 fields), and 15.9-26.1 Mg C ha(-1) for perennial pasture (n = 29 fields). This new approach will be valuable to estimate SOC sequestration from a greater diversity of conservation agricultural systems practiced on farms within a region and independent of soil type.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 14, 2021.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1057,194 +1218,6 @@ Pages: 6594-6603 First Published: 01 September 2020&lt;/p&gt;
 &lt;p&gt;The soil mineralogical constitution directly influences its chemical, physical and hydraulic characteristics. Although very important, it is still rarely used for decision-making in agriculture, mainly due to the complexity and cost of standard analyzes. In this sense, the middle infrared spectroscopy (mid-IR, 4000 to 400 cm−1) has great potential to obtain soil mineralogical information quickly and accurately. Nevertheless, some soil constituents can severely influence the spectra and produce misinterpretations. In this research, we aim to detect changes in the mid-IR spectra caused by water, iron forms and organic matter (OM), and to relate soil attributes to laboratory spectra and remote sensing simulated spectral bands. The research area is located in São Paulo State, Brazil, where seventeen soil samples were collected. The reflectance intensities, shapes and absorption features of the mid-IR spectra before and after the removal of OM and iron forms and the addition of water were described. Soil attributes, such as kaolinite, gibbsite, 2:1 minerals among others were correlated with the mid-IR spectra and simulated ASTER spectral bands by Pearson’s analysis, to verify its potential on mineralogical evaluation. The description of mid-IR revealed that the removal of the OM from the soil samples decreased the reflectance intensities between 4000 and 2000 cm−1. Iron forms mainly influence the 3250 – 1200 cm−1 spectral range and mask the spectral features of other minerals as well. The addition of water masked several absorption features and decreased the reflectance intensities from 3700 to 2700 cm−1. High correlation coefficients were obtained between soil attributes and ASTER simulated spectral bands, which allowed the selection of potential spectral regions for future satellite sensors: 2760 – 2500 cm−1 (3600 – 4000 nm), 2150 – 1875 cm−1 (4600 – 5300 nm), and 840 – 740 cm−1 (11900 – 3500 nm).&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2020/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 16, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/08/journalDigest" />
-  <id>/2020/08/journalDigest</id>
-  <updated>2020-08-06T00:00:00-00:00</updated>
-  <published>2020-08-06T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-14&quot;&gt;Journal Paper Digests 2020 #14&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Quantifying uncertainty for remote spectroscopy of surface composition&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;quantifying-uncertainty-for-remote-spectroscopy-of-surface-composition&quot;&gt;Quantifying uncertainty for remote spectroscopy of surface composition&lt;/h3&gt;
-
-&lt;p&gt;Remote Sensing of Environment
-Volume 247, 15 September 2020, 111898&lt;/p&gt;
-
-&lt;p&gt;Abstract
-Remote surface measurements by imaging spectrometers play an important role in planetary and Earth science. To make these measurements, investigators calibrate instrument data to absolute units, invert physical models to estimate atmospheric effects, and then determine surface properties from the spectral reflectance. This study quantifies the uncertainty in this process. Global missions demand predictive uncertainty models that can estimate future errors for varied environments and observing conditions. Here we validate uncertainty predictions with remote surface composition retrievals and in situ measurements in a field analogue of Earth and planetary exploration. We consider rover transects at Cuprite, Nevada, and remote observations by NASA’s Next-Generation Airborne Visible Infrared Imaging Spectrometer (AVIRIS-NG). We show that accounting for input uncertainties can benefit mineral detection methods such as constrained spectrum fitting. This suggests that operational uncertainty estimates could improve future NASA missions like the Earth Mineral dust source InvesTigation (EMIT) and the Lunar Trailblazer mission, as well as NASA’s Decadal Surface Biology and Geology (SBG) Investigation.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 06, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/07/journalDigest" />
-  <id>/2020/07/journalDigest</id>
-  <updated>2020-07-30T00:00:00-00:00</updated>
-  <published>2020-07-30T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-13&quot;&gt;Journal Paper Digests 2020 #13&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mapping soil profile depth, bulk density and carbon stock in Scotland using remote sensing and spatial covariates&lt;/li&gt;
-  &lt;li&gt;A new approach for studying vertical infiltration&lt;/li&gt;
-  &lt;li&gt;Increasing the organic carbon stocks in mineral soils sequesters large amounts of phosphorus&lt;/li&gt;
-  &lt;li&gt;Global human influence maps reveal clear opportunities in conserving Earth’s remaining intact terrestrial ecosystems&lt;/li&gt;
-  &lt;li&gt;Distinct controls over the temporal dynamics of soil carbon fractions after land use change&lt;/li&gt;
-  &lt;li&gt;Soil as an extended composite phenotype of the microbial metagenome&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;mapping-soil-profile-depth-bulk-density-and-carbon-stock-in-scotland-using-remote-sensing-and-spatial-covariates&quot;&gt;Mapping soil profile depth, bulk density and carbon stock in Scotland using remote sensing and spatial covariates&lt;/h3&gt;
-
-&lt;p&gt;Matt Aitkenhead Malcolm Coull
-EJSS&lt;/p&gt;
-
-&lt;h3 id=&quot;a-new-approach-for-studying-vertical-infiltration&quot;&gt;A new approach for studying vertical infiltration&lt;/h3&gt;
-
-&lt;p&gt;Alexander Poulovassilis 0000-0003-1117-1158 and Ioannis Argyrokastritis 0000-0003-0519-2219
-pp. 509-518&lt;/p&gt;
-
-&lt;p&gt;The absorption of rain and irrigation water by soils, called the infiltration process, is of vital importance for plant growth. This process is controlled by the permeability properties of soils, and this paper presents new methods for determining these properties and new equations describing the infiltration process more precisely than in previous works. These contributions allow a better understanding of the infiltration process and more precise calculation of water infiltration rates under conditions imposed by both nature and irrigation practices.&lt;/p&gt;
-
-&lt;h3 id=&quot;increasing-the-organic-carbon-stocks-in-mineral-soils-sequesters-large-amounts-of-phosphorus&quot;&gt;Increasing the organic carbon stocks in mineral soils sequesters large amounts of phosphorus&lt;/h3&gt;
-
-&lt;p&gt;Marie Spohn
-Global CHange Biology&lt;/p&gt;
-
-&lt;h3 id=&quot;global-human-influence-maps-reveal-clear-opportunities-in-conserving-earths-remaining-intact-terrestrial-ecosystems&quot;&gt;Global human influence maps reveal clear opportunities in conserving Earth’s remaining intact terrestrial ecosystems&lt;/h3&gt;
-
-&lt;p&gt;Jason Riggio Jonathan E. M. Baillie Steven Brumby Erle Ellis Christina M. Kennedy James R. Oakleaf Alex Tait Therese Tepe David M. Theobald Oscar Venter James E. M. Watson Andrew P. Jacobson
-Pages: 4344-4356 First Published: 05 June 2020&lt;/p&gt;
-
-&lt;p&gt;Leading up to the Convention on Biological Diversity Conference of the Parties 15, there is momentum around setting bold conservation targets. Yet it remains unclear how much of Earth’s land area remains without significant human influence. We compare four recent global maps of human influences (Anthromes, Global Human Modification, Human Footprint, and Low Impact Areas) and find that about half of Earth’s terrestrial surface has relatively low human influence. These findings offer opportunities for proactive conservation actions to retain the last intact ecosystems on the planet, although the relative abundance of ecosystem areas with low human influence varies widely by biome.&lt;/p&gt;
-
-&lt;h3 id=&quot;distinct-controls-over-the-temporal-dynamics-of-soil-carbon-fractions-after-land-use-change&quot;&gt;Distinct controls over the temporal dynamics of soil carbon fractions after land use change&lt;/h3&gt;
-
-&lt;p&gt;Zhongkui Luo Raphael A. Viscarra Rossel Zhou Shi
-Pages: 4614-4625 First Published: 13 May 2020&lt;/p&gt;
-
-&lt;p&gt;Our understanding on the controls over soil organic carbon (SOC) composition, particularly its temporal dynamics, is quite limited, inhibiting reliable prediction of SOC dynamics. By assessing a comprehensive dataset including temporal measurements of three SOC fractions (i.e. particulate, mineral-associated and charred organic carbon) after land use change, we found that environmental factors present distinct effects on the dynamics of the three fractions, and these effects were time-dependent. To reduce uncertainties in SOC predictions in response to global change and land management, the distinct controls over the dynamics of SOC fractions should be properly considered in carbon models.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-as-an-extended-composite-phenotype-of-the-microbial-metagenome&quot;&gt;Soil as an extended composite phenotype of the microbial metagenome&lt;/h3&gt;
-&lt;p&gt;Andrew L. Neal, Aur?lie Bacq-Labreuil, Xiaoxian Zhang, Ian M. Clark, Kevin Coleman, Sacha J. Mooney, Karl Ritz &amp;amp; John W. Crawford&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 30, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/06/journalDigest" />
-  <id>/2020/06/journalDigest</id>
-  <updated>2020-06-19T00:00:00-00:00</updated>
-  <published>2020-06-12T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-12&quot;&gt;Journal Paper Digests 2020 #12&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Soil magnetic susceptibility and its relationship with naturally occurring processes and soil attributes in pedosphere, in a tropical environment&lt;/li&gt;
-  &lt;li&gt;The challenge for the soil science community to contribute to the implementation of the UN Sustainable Development Goals&lt;/li&gt;
-  &lt;li&gt;Evaluating a low-cost portable NIR spectrometer for the prediction of soil organic and total carbon using different calibration models&lt;/li&gt;
-  &lt;li&gt;The Dynamics of Soil Microbial Communities on Different Timescales: A Review&lt;/li&gt;
-  &lt;li&gt;Debates: Does Information Theory Provide a New Paradigm for Earth Science? Sharper Predictions Using Occam’s Digital Razor&lt;/li&gt;
-  &lt;li&gt;Can Continental Models Convey Useful Seasonal Hydrologic Information at the Catchment Scale?&lt;/li&gt;
-  &lt;li&gt;Does Information Theory Provide a New Paradigm for Earth Science? Hypothesis Testing&lt;/li&gt;
-  &lt;li&gt;Climate Adaptation as a Control Problem: Review and Perspectives on Dynamic Water Resources Planning Under Uncertainty&lt;/li&gt;
-  &lt;li&gt;Debates-Does Information Theory Provide a New Paradigm for Earth Science? Causality, Interaction, and Feedback&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;soil-magnetic-susceptibility-and-its-relationship-with-naturally-occurring-processes-and-soil-attributes-in-pedosphere-in-a-tropical-environment&quot;&gt;Soil magnetic susceptibility and its relationship with naturally occurring processes and soil attributes in pedosphere, in a tropical environment&lt;/h3&gt;
-&lt;p&gt;By: de Mello, Danilo Cesar; Dematte, Jose A. M.; Silvero, Nelida E. Q.; et al.
-GEODERMA  Volume:  372   Pages:  14364-14364   Published:  AUG 1 2020&lt;/p&gt;
-
-&lt;p&gt;Soil magnetic susceptibility (kappa) has potential to be used as a pedoenvironmental indicator from which mineralogy, pedogeochemical, pedogeomorphological and pedogenic processes can be inferred. It can be used in pedosphere studies, as an auxiliary information for appropriate and sustainable soil use and management. This research aimed to analyze how pedogenesis and geochemical processes affect the kappa and some of its attributes, as well as its potential use in discriminating soil great groups, following the digital soil mapping approach. The study area is located in Sao Paulo State - Brazil. Soil samples were collected for physical-chemical analysis from 79 locations (0-20 cm depth). At these sites, magnetic susceptibility was measured with a portable field instrument and analyzed in terms of geology, relief and soil class. The results showed that geology strongly affects kappa, mainly in diabase derived soils, followed by metamorphosed siltstone and siltstone. In fluvial sediments, the kappa exhibits different behaviors due to different sediments deposited by the Capivari River. In less evolved soils, such as Cambisols, lithology is a more important contributor to kappa than pedogenesis. In more evolved soils, pedogenesis increases kappa, whereas argilluviation/ferralitization reduces it. The kappa values did not decrease significantly or even increase downslope, due to the presence of diabase on the lower parts. Differences in kappa where observed between diabase bedrock located in different parts of the study area, indicating more of an influence by geomorphic processes rather than lithology. With respect to soil attributes, positive correlations between kappa and base saturation, cation exchange capacity, organic matter, and iron and clay content were found, whereas a negative correlation was found between kappa and sand content. The kappa correlates with changes in lithology and soil class demonstrating its application as a potential tool for the discrimination of soil great groups and digital soil mapping.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-challenge-for-the-soil-science-community-to-contribute-to-the-implementation-of-the-un-sustainable-development-goals&quot;&gt;The challenge for the soil science community to contribute to the implementation of the UN Sustainable Development Goals&lt;/h3&gt;
-&lt;p&gt;By: Bouma, Johan; Montanarella, Luca; Evanylo, Gregory
-SOIL USE AND MANAGEMENT  Volume:  35   Issue:  4   Pages:  538-546   Published:  DEC 2019
-Context Sensitive Links Full Text from Publisher  Close Abstract
-Seventeen Sustainable Development Goals (SDGs) were adopted by 193 Governments at the General Assembly of the United Nations in 2015 for achievement by 2030. These SDGs present a roadmap to a sustainable future and a challenge to the science community. To guide activities and check progress, targets and indicators have been and are still being defined. The soil science community has published documents that describe the primary importance of soil for SDGs addressing hunger, water quality, climate mitigation and biodiversity preservation, and secondary relevance of soil for addressing several other SDGs. Soil scientists only marginally participated in the SDG discussions and are currently only peripherally engaged in discussions on targets or indicators. Agreement on several soil-related indicators has still not been achieved. Involvement of soil scientists in SDG–based studies is desirable for both developing solutions and increasing the visibility of the soil profession. Inputs into policy decisions should be improved as SDG committee members are appointed by Governments. Possible contributions of soil science in defining indicators for the SDGs are explored in this paper. We advocate the pragmatic use of soil-water-atmosphere-plant simulation models and available soil surveys and soil databases where “representative” soil profiles for mapping units (genetically defined genoforms) are functionally expressed in terms of several phenoforms reflecting effects of different types of soil use and management that strongly affect functionality.&lt;/p&gt;
-
-&lt;h3 id=&quot;evaluating-a-low-cost-portable-nir-spectrometer-for-the-prediction-of-soil-organic-and-total-carbon-using-different-calibration-models&quot;&gt;Evaluating a low-cost portable NIR spectrometer for the prediction of soil organic and total carbon using different calibration models&lt;/h3&gt;
-&lt;p&gt;By: Sharififar, Amin; Singh, Kanika; Jones, Edward; et al.
-SOIL USE AND MANAGEMENT  Volume:  35   Issue:  4   Pages:  607-616   Published:  DEC 2019
-Context Sensitive Links  Close Abstract
-This study aims to assess the performance of a low-cost, micro-electromechanical system-based, near infrared spectrometer for soil organic carbon (OC) and total carbon (TC) estimation. TC was measured on 151 soil profiles up to the depth of 1 m in NSW, Australia, and from which a subset of 24 soil profiles were measured for OC. Two commercial spectrometers including the AgriSpec(TM) (ASD) and NeoSpectra(TM) (Neospectra) with spectral wavelength ranges of 350-2,500 and 1,300-2,500 nm, respectively, were used to scan the soil samples, according to the standard contact probe protocol. Savitzky-Golay smoothing filter and standard normal variate (SNV) transformation were performed on the spectral data for noise reduction and baseline correction. Three calibration models, including Cubist tree model, partial least squares regression (PLSR) and support vector machine (SVM), were assessed for the prediction of soil OC and TC using spectral data. A 10-fold cross-validation analysis was performed for evaluation of the models and devices accuracies. Results showed that Cubist model predicts OC and TC more accurately than PLSR and SVM. For OC prediction, Cubist showed R-2 = 0.89 (RMSE = 0.12%) and R-2 = 0.78 (RMSE = 0.16%) using ASD and NeoSpectra, respectively. For TC prediction, Cubist produced R-2 = 0.75 (RMSE = 0.45%) and R-2 = 0.70 (RMSE = 0.50%) using ASD and NeoSpectra, respectively. ASD performed better than NeoSpectra. However, the low-cost NeoSpectra predictions were comparable to the ASD. These finding can be helpful for more efficient future spectroscopic prediction of soil OC and TC with less costly devices.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-dynamics-of-soil-microbial-communities-on-different-timescales-a-review&quot;&gt;The Dynamics of Soil Microbial Communities on Different Timescales: A Review&lt;/h3&gt;
-&lt;p&gt;By: Chernov, T. I.; Zhelezova, A. D.
-EURASIAN SOIL SCIENCE  Volume:  53   Issue:  5   Pages:  643-652   Published:  MAY 2020
-Context Sensitive Links  Close Abstract
-Soil microbial communities are subjected to significant changes over time. The most rapid changes caused by temperature and soil moisture alternations or the by the inflow of fresh organic matter occur during the several hours or days. They are mostly related to the soil microbial activity. Seasonal dynamics are caused by annual variations in temperature and precipitation that affect the microbial community directly or indirectly through the regulation of plant life. The microbial biomass and the taxonomic composition of soil microbial communities vary significantly throughout the year, which should be taken into account when sampling for a comparative analysis of different soils. The long-term dynamics of microbial communities during primary or secondary successions lead to an increase in the total microbial biomass and the fungi/bacteria ratio, as well as to changes in the taxonomic composition of microbial communities. The main factors of the long-term dynamics are the accumulation of soil organic matter, plant successions, and changes in pH. The diversity of microbial communities during long-term dynamics can vary in different ways and does not follow a single trend. The longest dynamics of soil microbial communities are associated with changes in bioclimatic conditions. Information about soil microbial communities of the past can be obtained by studying buried and permafrost soils. The study of future changes in soil microbial communities is possible in experiments with artificial changes in climatic parameters. Plants are a significant factor in the dynamics of soil microbial communities on all timescales; in short-term periods, the major role is played by the activity of plants; in the long-term trends, the changes in the vegetation abundance and diversity are the most important factors.&lt;/p&gt;
-
-&lt;h3 id=&quot;debates-does-information-theory-provide-a-new-paradigm-for-earth-science-sharper-predictions-using-occams-digital-razor&quot;&gt;Debates: Does Information Theory Provide a New Paradigm for Earth Science? Sharper Predictions Using Occam’s Digital Razor&lt;/h3&gt;
-&lt;p&gt;By: Weijs, Steven. V.; Ruddell, Benjamin. L.
-WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  26471-26471   Published:  FEB 2020
-Context Sensitive Links Free Full Text from Publisher Close Abstract
-Occam’s Razor is a bedrock principle of science philosophy, stating that the simplest hypothesis (or model) is preferred, at any given level of model predictive performance. A modern restatement often attributed to Einstein explains, “Everything should be made as simple as possible, but not simpler.” Using principles from (algorithmic) information theory, both model descriptive performance and model complexity can be quantified in bits. This quantification yields a Pareto-style trade-off between model complexity (length of the model program in bits) and model performance (information loss in bits, or the missing information, needed to describe the original observations). Model complexity and performance can be collapsed to one single measure of lossless model size, which, when minimized, leads to optimal model complexity versus loss trade-off for generalization and prediction. Our view puts both simple data-driven and complex physical-process-based models on a continuum, in the sense that both describe patterns in observed data in compressed form, with different degrees of generality, model complexity, and descriptive performance. Information theory-based assessment of compression performance with fair and meaningful accounting for model complexity will enable us to best compare and combine the strengths of physics knowledge and data-driven modeling for a given problem, given the availability of data. “Suppose we draw a set of points on paper in a totally random manner” …“I am saying it is possible to find a geometric line whose notation is constant and uniform, following a certain law, that will pass through all points, and in the sameorder they were drawn.” … “But if that law is strongly composed,the thing that conforms to it should be seen as irregular”Gottfried Wilhelm Leibniz, 1686: Discours de metaphysique V, VI (from French)&lt;/p&gt;
-
-&lt;h3 id=&quot;can-continental-models-convey-useful-seasonal-hydrologic-information-at-the-catchment-scale&quot;&gt;Can Continental Models Convey Useful Seasonal Hydrologic Information at the Catchment Scale?&lt;/h3&gt;
-&lt;p&gt;By: Crochemore, L.; Ramos, M. -H.; Pechlivanidis, I. G.
-WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  25700-25700   Published:  FEB 2020
-Context Sensitive Links Free Full Text from Publisher Close Abstract
-The development and availability of climate forecasting systems have allowed the implementation of seasonal hydroclimatic services at the continental scale. User guidance and quality of the forecast information are key components to ensure user engagement and service uptake, yet forecast quality depends on the hydrologic model setup. Here, we address how seasonal forecasts from continental services can be used to address user needs at the catchment scale. We compare a continentally calibrated process-based model (E-HYPE) and a catchment-specific parsimonious model (GR6J) to forecast streamflow in a set of French catchments. Results show that despite expected high performance from the catchment setup against observed streamflow, the continental setup can, in some catchments, match or even outperform the catchment-specific setup for 3-month aggregations and threshold exceedance. Forecast systems can become comparable when looking at statistics relative to model climatology, such as anomalies, and adequate initial conditions are the main source of skill in both systems. We highlight the need for consistency in data used in modeling chains and in tailoring service outputs for use at the catchment scale. Finally, we show that the spread in internal model states varies largely between the two systems, reflecting the differences in their setups and calibration strategies, and highlighting that caution is needed before extracting hydrologic variables other than streamflow. We overall argue that continental hydroclimatic services show potential on addressing needs at the catchment scale, yet guidance is needed to extract, tailor and use the information provided.
-Plain Language Summary Climatic variations can have a significant impact on a number of water-related sectors. Managing such variations through accurate predictions is thus crucial. Continental hydroclimate services have recently received attention to address various user needs. However, predictions for months ahead can be limited at catchment scale, highlighting the need for data tailoring. Here, we compare the predictions from two hydrologic setups at catchment scale. One setup (E-HYPE) is used in a European hydroclimate service, whereas the other (GR6J) is used for local water-related risk assessment. Our results show that predictions from the continental setup can be as accurate as the predictions from the local model when predicting streamflow averaged over several months and when looking at changes in streamflow rather than absolute values. A good estimation of the hydrologic states, such as soil moisture or lake levels, prior to the prediction is the most important factor in obtaining accurate streamflow predictions in both setups. However, the differences in the setups can result in different uncertainties for variables other than streamflow, like in the case of soil water content. We argue that useful information is provided by continental services, yet guidance for information extraction can result into tailored information for regional needs.&lt;/p&gt;
-
-&lt;h3 id=&quot;does-information-theory-provide-a-new-paradigm-for-earth-science-hypothesis-testing&quot;&gt;Does Information Theory Provide a New Paradigm for Earth Science? Hypothesis Testing&lt;/h3&gt;
-&lt;p&gt;By: Nearing, Grey S.; Ruddell, Benjamin L.; Bennett, Andrew R.; et al.
-WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  24918-24918   Published:  FEB 2020
-Context Sensitive Links Free Full Text from Publisher Close Abstract
-Model evaluation and hypothesis testing are fundamental to any field of science. We propose here that by changing slightly the way we think and communicate about inference-from being fundamentally a problem of uncertainty quantification to being a problem of information quantification-allows us to avoid certain problems related to testing models as hypotheses. We propose that scientists are typically interested in assessing the information provided by models, not the truth value or likelihood of a model. Information theory allows us to formalize this perspective.&lt;/p&gt;
-
-&lt;h3 id=&quot;climate-adaptation-as-a-control-problem-review-and-perspectives-on-dynamic-water-resources-planning-under-uncertainty&quot;&gt;Climate Adaptation as a Control Problem: Review and Perspectives on Dynamic Water Resources Planning Under Uncertainty&lt;/h3&gt;
-&lt;p&gt;By: Herman, Jonathan D.; Quinn, Julianne D.; Steinschneider, Scott; et al.
-WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  24389-24389   Published:  FEB 2020
-Context Sensitive Links Free Full Text from Publisher Close Abstract
-Climate change introduces substantial uncertainty to water resources planning and raises the key question: when, or under what conditions, should adaptation occur? A number of recent studies aim to identify policies mapping future observations to actions-in other words, framing climate adaptation as an optimal control problem. This paper uses the control paradigm to review and classify recent dynamic planning studies according to their approaches to uncertainty characterization, policy structure, and solution methods. We propose a set of research gaps and opportunities in this area centered on the challenge of characterizing uncertainty, which prevents the unambiguous application of control methods to this problem. These include exogenous uncertainty in forcing, model structure, and parameters propagated through a chain of climate and hydrologic models; endogenous uncertainty in human-environmental system dynamics across multiple scales; and sampling uncertainty due to the finite length of historical observations and future projections. Recognizing these challenges, several opportunities exist to improve the use of control methods for climate adaptation, namely, how problem context and understanding of climate processes might assist with uncertainty quantification and experimental design, out-of-sample validation and robustness of optimized adaptation policies, and monitoring and data assimilation, including trend detection, Bayesian inference, and indicator variable selection. We conclude with a summary of recommendations for dynamic water resources planning under climate change through the lens of optimal control.&lt;/p&gt;
-
-&lt;h3 id=&quot;debates-does-information-theory-provide-a-new-paradigm-for-earth-science-causality-interaction-and-feedback&quot;&gt;Debates-Does Information Theory Provide a New Paradigm for Earth Science? Causality, Interaction, and Feedback&lt;/h3&gt;
-&lt;p&gt;By: Goodwell, Allison E.; Jiang, Peishi; Ruddell, Benjamin L.; et al.
-WATER RESOURCES RESEARCH  Volume:  56   Issue:  2   Pages:  24940-24940   Published:  FEB 2020
-Context Sensitive Links Free Full Text from Publisher Close Abstract
-The concept of causal interactions between components is an integral part of hydrology and Earth system sciences. Modelers, decision makers, scientists, and other water resources stakeholders all utilize some notion of cause-and-effect to understand processes, make decisions, and infer how systems react to change. However, there are different perspectives on the meaning of causality in complex systems and, further, different frameworks and methodologies with which to detect causal interactions. We propose here that information theory (IT) provides a compelling framework for the detection of causality and discuss approaches for several levels of analyses that capture interactions that range from pairwise to multivariate in nature. We illustrate these types of analyses with an example based on weather station time series variables, in which variables may interact pairwise or jointly and on short to long time scales. In general, many unsolved or even unanticipated questions in the hydrologic sciences could benefit from this perspective.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 12, 2020.&lt;/p&gt;
   </content>
 </entry>
 
