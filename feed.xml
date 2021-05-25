@@ -4,13 +4,163 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2021-04-26T07:56:35+10:00</updated>
+<updated>2021-05-25T21:23:19+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/05/journalDigest" />
+  <id>/2021/05/journalDigest</id>
+  <updated>2021-05-26T00:00:00-00:00</updated>
+  <published>2021-05-26T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-16&quot;&gt;Journal Paper Digests 2021 #16&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Soil carbon dynamics during drying vs. rewetting: Importance of antecedent moisture conditions&lt;/li&gt;
+  &lt;li&gt;Air-drying and long time preservation of soil do not significantly impact microbial community composition and structure&lt;/li&gt;
+  &lt;li&gt;Organic carbon pools and organic matter chemical composition in response to different land uses in southern Brazil&lt;/li&gt;
+  &lt;li&gt;Introducing digital twins to agriculture&lt;/li&gt;
+  &lt;li&gt;A review of geostatistical simulation models applied to satellite remote sensing: Methods and applications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;soil-carbon-dynamics-during-drying-vs-rewetting-importance-of-antecedent-moisture-conditions&quot;&gt;Soil carbon dynamics during drying vs. rewetting: Importance of antecedent moisture conditions&lt;/h3&gt;
+
+&lt;p&gt;Soil moisture influences soil carbon dynamics, including microbial growth and respiration. The response of such ‘soil respiration’ to moisture changes is generally assumed to be linear and reversible, i.e. to depend only on the current moisture state. Current models thus do not account for antecedent soil moisture conditions when determining soil respiration or the available substrate pool. We conducted a laboratory incubation to determine how the antecedent conditions of drought and flood influenced soil organic matter (SOM) chemistry, bioavailability, and respiration. We sampled soils from an upland coastal forest, Beaver Creek, WA USA, and subjected them to drying and rewetting treatments. For the drying treatment, field moist soils were saturated and then dried to 75, 50, 35, and 5% saturation. In the rewetting treatment, field moist soils were air-dried and then rewet to 35, 50, 75, and 100% saturation. We measured respiration and water extractable organic carbon (WEOC) concentrations and used H-1-NMR and FT-ICR-MS to characterize the WEOC pool across the treatments. The drying vs. wetting treatment strongly influenced SOM bioavailability, as rewet soils (with antecedent drought) had greater WEOC concentrations and respiration fluxes compared to the drying soils (with antecedent flood). In addition, air-dry soils had the highest WEOC concentrations, and the NMR-resolved peaks showed a strong contribution of protein groups in these soils. Both NMR and FT-ICR-MS analyses indicated increased contribution of complex aromatic groups/molecules in the rewet soils, compared to the drying soils. We suggest that drying introduced organic matter into the WEOC pool via desorption of aromatic molecules and/or by microbial cell lysis, and this stimulated microbial mineralization rates. Our work indicates that even short-term shifts in antecedent moisture conditions can strongly influence soil C dynamics at the core scale. The predictive uncertainties in current soil models may be reduced by a more accurate representation of soil water and C persistence that includes a mechanistic and quantitative understanding of the impact of antecedent moisture conditions.&lt;/p&gt;
+
+&lt;h3 id=&quot;air-drying-and-long-time-preservation-of-soil-do-not-significantly-impact-microbial-community-composition-and-structure&quot;&gt;Air-drying and long time preservation of soil do not significantly impact microbial community composition and structure&lt;/h3&gt;
+
+&lt;p&gt;To determine whether archived air-dried soils can be potentially used to explore microbial information upon sampling, we examined microbial community dynamics during soil air-drying and long time preserving. Fresh soils from five long-term fertilization treatments were sampled, air-dried, and preserved. Soil microbial community was characterized at specific intervals (from 0 h to 8192 h) by Illumina sequencing. The results showed that both prokaryotic and fungal community profiles did not substantially change during air-drying and long time preserving. The fertilization effects on microbial community structure could still be identified using the airdried soils. These findings suggest that air-drying and preserving exerts an almost negligible impact on soil microbial community profiles, laying the foundation for utilizing worldwide archived soils to investigate microbial community.&lt;/p&gt;
+
+&lt;h3 id=&quot;organic-carbon-pools-and-organic-matter-chemical-composition-in-response-to-different-land-uses-in-southern-brazil&quot;&gt;Organic carbon pools and organic matter chemical composition in response to different land uses in southern Brazil&lt;/h3&gt;
+
+&lt;p&gt;The adoption of conservation agriculture (e.g., no-till system) has been recognized as pivotal to maintaining soil functions, but the potential of this system to enhance organic carbon (OC) quantity and quality and how this OC is stabilized in soils are not well established. In this study, we evaluated the effects of land-use types (native vegetation (NV) vs. no-till system (NT)) on OC stocks and on the chemical composition of organic matter (OM), and sought to understand the mechanisms that govern OC protection in the studied highly weathered soils. To achieve these objectives, we used an OC fractionation scheme in a combination of solid-state C-13 nuclear magnetic resonance (NMR) spectroscopic analyses in soils from six farms in southern Brazil. Our results showed smaller OC stocks (whole soil) under NT than under NV in four of the six sites. In addition, the OC stock differences between land-use types were larger in coarser textured soils and in those where conventional tillage was used before the adoption of NT. Among fractions, particulate organic carbon (POC) represented only 8% of the whole OC stock but was the fraction most affected by land-use type. In contrast, the humus organic carbon (HOC) fraction contributed 78% of the whole OC stock and was little altered by land-use type. Resistant organic carbon (ROC) represented 14% of the whole OC stock and it was altered by land-use type, demonstrating that this fraction is not as inert as previously thought. Overall, OM chemical composition was quite similar between land uses, with O-alkyl-C being the predominant C type. This labile component was further highly correlated with OC stock and silt + clay contents, indicating that the accumulation of OC in these highly weathered soils is mainly a response to the association between labile C compounds and minerals.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-review-of-geostatistical-simulation-models-applied-to-satellite-remote-sensing-methods-and-applications&quot;&gt;A review of geostatistical simulation models applied to satellite remote sensing: Methods and applications&lt;/h3&gt;
+
+&lt;p&gt;Despite an ever-increasing number of spaceborne, airborne, and ground-based data acquisition platforms, remote sensing data are still often spatially incomplete or temporally irregular. While deterministic interpolation techniques are often used, they tend to create unrealistic spatial patterns and generally do not provide uncertainty quantification. Geostatistical simulation models are effective in generating an ensemble of realistic and equally probable realizations of an unmeasured phenomenon, allowing data uncertainty to be propagated. These models are commonly used in several fields of earth science, and in recent years, they have been applied widely to remotely sensed data. This study provides the first review of the applications of geostatistical simulation to remote sensing data. We review recent geostatistical simulation models relevant to satellite remote sensing data and discuss the characteristics and advantages of each approach. Finally, the applications of each geostatistical simulation model are categorized in different domains of natural sciences, including soil, vegetation, topography, and atmospheric science.&lt;/p&gt;
+
+&lt;h3 id=&quot;introducing-digital-twins-to-agriculture&quot;&gt;Introducing digital twins to agriculture&lt;/h3&gt;
+
+&lt;p&gt;Digital twins are being adopted by increasingly more industries, transforming them and bringing new opportunities. Digital twins provide previously unheard levels of control over physical entities and help to manage complex systems by integrating an array of technologies. Recently, agriculture has seen several technological advancements, but it is still unclear if this community is making an effort to adopt digital twins in its operations. In this work, we employ a mixed-method approach to investigate the added-value of digital twins for agriculture. We examine the extent of digital twin adoption in agriculture, shed light on the concept and the benefits it brings, and provide an application-based roadmap for a more extended adoption. We report a literature review of digital twins in agriculture, covering years 2017-2020. We identify 28 use cases, and compare them with use cases in other disciplines. We compare reported benefits, service categories, and technology readiness levels to assess the level of digital twin adoption in agriculture. We distill the digital twin characteristics that can provide addedvalue to agriculture from the examined digital twin applications in agriculture and in other disciplines. Then, inspired by digital twin applications in other disciplines, we propose a roadmap for digital twins in agriculture, consisting of examples of growing complexity. We conclude this paper by identifying the distinctive characteristics of agricultural digital twins.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/05/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on May 26, 2021.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/05/journalDigest" />
+  <id>/2021/05/journalDigest</id>
+  <updated>2020-05-25T00:00:00-00:00</updated>
+  <published>2021-05-25T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-15&quot;&gt;Journal Paper Digests 2021 #15&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stochastic and deterministic interpretation of pool models&lt;/li&gt;
+  &lt;li&gt;Classifying human influences on terrestrial ecosystems&lt;/li&gt;
+  &lt;li&gt;Feasibility of the 4 per 1000 aspirational target for soil carbon: A case study for France&lt;/li&gt;
+  &lt;li&gt;Environmental covariates improve the spectral predictions of organic carbon in subtropical soils in southern Brazil&lt;/li&gt;
+  &lt;li&gt;Using autoencoders to compress soil VNIR-SWIR spectra for more robust prediction of soil properties&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;classifying-human-influences-on-terrestrial-ecosystems&quot;&gt;Classifying human influences on terrestrial ecosystems&lt;/h3&gt;
+
+&lt;p&gt;Human activity is affecting every ecosystem on Earth, with terrestrial biodiversity decreasing rapidly. Human influences materialize in the form of numerous, jointly acting factors, yet the experimental study of such joint impacts is not well developed. We identify the absence of a systematic ordering system of factors according to their properties (traits) as an impediment to progress and offer an a priori trait-based factor classification to illustrate this point, starting at the coarsest level with the physical, biological or chemical nature of factors. Such factor classifications can serve in communication of science, but also can be used as heuristic tools to develop questions and formulate new hypotheses, or as predictors of effects, which we explore here. We hope that classifications such as the one proposed here can help shift the spotlight on the multitude of anthropogenic changes affecting ecosystems, and that such classifications can be used to help unravel joint impacts of a great number of factors.&lt;/p&gt;
+
+&lt;h3 id=&quot;stochastic-and-deterministic-interpretation-of-pool-models&quot;&gt;Stochastic and deterministic interpretation of pool models&lt;/h3&gt;
+
+&lt;p&gt;Carbon and element cycling models can be expressed in terms of the dynamics of individual particles or collection of them in aggregated pools. In both cases, the models represent the same dynamics and provide similar predictions. The time required for individual particles to pass through a system, that is, the transit time, can be obtained from both approaches. Pool models can be analyzed from a stochastic or a deterministic point of view.&lt;/p&gt;
+
+&lt;h3 id=&quot;feasibility-of-the-4-per-1000-aspirational-target-for-soil-carbon-a-case-study-for-france&quot;&gt;Feasibility of the 4 per 1000 aspirational target for soil carbon: A case study for France&lt;/h3&gt;
+
+&lt;p&gt;Increasing soil organic carbon (SOC) stocks is a promising way to mitigate the increase in atmospheric CO2 concentration. Based on a simple ratio between CO2 anthropogenic emissions and SOC stocks worldwide, it has been suggested that a 0.4% (4 per 1000) yearly increase in SOC stocks could compensate for current anthropogenic CO2 emissions. Here, we used a reverse RothC modelling approach to estimate the amount of C inputs to soils required to sustain current SOC stocks and to increase them by 4 parts per thousand per year over a period of 30 years. We assessed the feasibility of this aspirational target first by comparing the required C input with net primary productivity (NPP) flowing to the soil, and second by considering the SOC saturation concept. Calculations were performed for mainland France, at a 1 km grid cell resolution. Results showed that a 30%-40% increase in C inputs to soil would be needed to obtain a 4 parts per thousand increase per year over a 30-year period. 88.4% of cropland areas were considered unsaturated in terms of mineral-associated SOC, but characterized by a below target C balance, that is, less NPP available than required to reach the 4 parts per thousand aspirational target. Conversely, 90.4% of unimproved grasslands were characterized by an above target C balance, that is, enough NPP to reach the 4 parts per thousand objective, but 59.1% were also saturated. The situation of improved grasslands and forests was more evenly distributed among the four categories (saturated vs. unsaturated and above vs below target C balance). Future data from soil monitoring networks should enable to validate these results. Overall, our results suggest that, for mainland France, priorities should be (1) to increase NPP returns in cropland soils that are unsaturated and have a below target carbon balance and (2) to preserve SOC stocks in other land uses.&lt;/p&gt;
+
+&lt;h3 id=&quot;environmental-covariates-improve-the-spectral-predictions-of-organic-carbon-in-subtropical-soils-in-southern-brazil&quot;&gt;Environmental covariates improve the spectral predictions of organic carbon in subtropical soils in southern Brazil&lt;/h3&gt;
+
+&lt;p&gt;Including environmental covariates, when available, can be a valuable strategy for achieving higher soil predictive performance, but it is still unknown whether environmental data should be used either as covariates, combined with Vis-NIR spectra, to predict soil organic carbon (SOC) or as criteria to stratify a soil spectral library (SSL). We hypothesized that the performance of Vis-NIR spectroscopy in predicting SOC could be improved by the inclusion of auxiliary environmental data as covariates in Cubist models and thereby overcome the data stratification limitations. To test this, we evaluated six covariate sets, in which the following covariates were combined: spectral data, spectral classes, pedological data, and environmental data calibrated using Cubist models. An SSL composed of 2,461 samples from southern Brazil was used to calibrate models considering different sets of covariates. Model 1 included Vis-NIR reflectance (350-2500 nm), and Model 2 included Vis-NIR reflectance and spectral class. Model 3 included physiographic region, land-use/land-cover (LULC), climate, parent material, elevation, and clay content, while Model 4 included the parameters from Model 3 with the addition of Vis-NIR reflectance. Model 5 included Vis-NIR reflectance, spectral class, physiographic region, LULC, and soil textural class, while Model 6 included Vis-NIR reflectance, spectral class, physiographic region, LULC, climate, parent material, elevation, and clay content. The inclusion of environmental data as covariates along with Vis-NIR improved the predictive performance for SOC. Among the six covariate sets tested, the set including all covariates (Model 6) showed the best performance, improving the accuracy in prediction by 12% and reducing the prediction error (RMSE) by 22% compared to Model 1. Model 6 was the most accurate, and the input of environmental data as covariates is a promising strategy to achieve more accurate SOC predictions. Thus, covariates (e.g. elevation, clay content) that correlate with SOC improved the prediction accuracy of VisNIR spectroscopy models. The Cubist model was able to achieve similar accuracy and overcome the limitations presented by the stratification strategy documented in the literature by preventing the reduction of the sample size in the calibration of the models.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-autoencoders-to-compress-soil-vnir-swir-spectra-for-more-robust-prediction-of-soil-properties&quot;&gt;Using autoencoders to compress soil VNIR-SWIR spectra for more robust prediction of soil properties&lt;/h3&gt;
+
+&lt;p&gt;In the past two decades, research efforts have focused on using near infrared diffuse reflectance spectroscopy (350-2500 nm) as a rapid and cost-effective method for soil analysis. Given the multi-faceted importance of the soil ecosystem, and considering the increasing pressures exerted upon it due to climate change, degradation and urbanization, the advantages of soil spectroscopy are significant. Large soil spectral libraries have been developed to this end throughout the world. The soil matrix is however complex, posing a challenge in the determination of key soil properties from the spectra. To tackle this challenge, two methodologies are generally used: a) the use of spectral pre-processing techniques to transfer the spectra into a new space in which the association between spectrum and soil property is supposed to be more clear, and b) the use of more sophisticated machine learning models (e.g. deep learning). In this paper, we propose a novel methodology using stacked autoencoders to transform the initially recorded spectra in a new compressed (i.e. latent) space which can help the chemometric models enhance the accuracy of prediction. This is an unsupervised learning approach which only depends on the input data (i.e. the spectra). Following the significant results obtained in the literature using combinations of different spectra pre-processing techniques and the simultaneous prediction of multiple soil properties, the proposed methodology is extended to facilitate these approaches. We demonstrate this capacity by applying it in the mineral samples of the LUCAS 2009 topsoil database, and simultaneously predicting eight properties (the particle size distribution, pH, CEC, organic carbon, calcium carbonate, and total nitrogen) using an artificial neural network. Compared to standard pre-processing techniques and other transformations such as the principal components space, the proposed methodology using only one spectral source as input decreases the RMSE on average by 8.4% and by 3.5%, respectively. With respect to the current state-of-the-art and in particular a multi-input convolutional neural network which was recently proposed and outperformed the compared methodologies, the results of our multi-input methodology exhibit an average RMSE decrease of 9.9%. The interpretability aspect of the transformed feature space and the compressed spectra was also examined to identify how the compressed information encodes the input data and enables better associations between input and output.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/05/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on May 25, 2021.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/05/journalDigest" />
+  <id>/2021/05/journalDigest</id>
+  <updated>2020-05-10T00:00:00-00:00</updated>
+  <published>2021-05-10T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-14&quot;&gt;Journal Paper Digests 2021 #14&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Time, Hydrologic Landscape, and the Long-Term Storage of Peatland Carbon in Sedimentary Basins&lt;/li&gt;
+  &lt;li&gt;Predicting soil organic matter nitrogen mineralization&lt;/li&gt;
+  &lt;li&gt;A regional soil classification framework to improve soil health diagnosis and management&lt;/li&gt;
+  &lt;li&gt;Two centuries of water-level records at Lake George, NSW&lt;/li&gt;
+  &lt;li&gt;Production of global daily seamless data cubes and quantification of global land cover change from 1985 to 2020-iMap World 1.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;time-hydrologic-landscape-and-the-long-term-storage-of-peatland-carbon-in-sedimentary-basins&quot;&gt;Time, Hydrologic Landscape, and the Long-Term Storage of Peatland Carbon in Sedimentary Basins&lt;/h3&gt;
+
+&lt;p&gt;Peatland carbon may enter long-term storage in sedimentary basins preserved as either coal or lignite. The time required to account for the carbon in 1-10 m thick coal seams must represent 10(5)-10(6) years, an order of magnitude more than previously assumed. To understand the process by which this happens requires extrapolation of our understanding of peatland carbon accumulation over timescales that greatly exceed those of Holocene peat. We analyze the consequences of extrapolating peat growth to periods of 10(6) years. We deduce that that key to sustained peat growth are hydrologic landscapes that can maintain a saturated peat body above the level of clastic deposition. Contrary to current stratigraphic frameworks, we conclude that the generation of accommodation space at low rates of 0.1-0.2 mm/yr can adequately accommodate thick peat accumulation over periods &amp;gt;10(5) years. However, generation of accommodation space at rates &amp;gt;0.5 mm/yr cannot. The low rates that permit accommodation of thick peat are typical of the rates of subsidence in specific tectonic settings, particularly foreland basins, and this has implications for our understanding of the links between terrestrial carbon burial, tectonics and the carbon cycle. The long-term stability of extensive peatland required to form coal also requires sediment bypass, modifying basin wide sediment transport and deposition. Limits to peatland growth under very low accommodation rates must exist but the relative importance of the limiting process is not understood. Finally, we discuss the consequences of these factors for predicting the future of the peatland carbon reservoir.&lt;/p&gt;
+
+&lt;h3 id=&quot;predicting-soil-organic-matter-nitrogen-mineralization&quot;&gt;Predicting soil organic matter nitrogen mineralization&lt;/h3&gt;
+
+&lt;p&gt;The objectives of this study were to develop a model for soil organic matter (SOM) N mineralization that required minimal inputs, to test the model using independent datasets, and to determine if the results could be used in adjusting commercial N fertilizer recommendations. A first-order model was adjusted monthly for differences in soil temperature and moisture. A daily time step was used to allow N mineralization estimates from one date to another. Simulations began in the month where temperature exceeded 10 degrees C. Model predictions were compared with those in published studies in northern California and Illinois. In the first California study, model predictions were near observed values in four of five locations. In the second California study, model predictions were within the 95% confidence interval of those based on laboratory incubation corrected for field temperature and moisture regimes. In a third study, unfertilized corn (Zea mays L.) yields were compared with seasonal N mineralization predictions plus N from the prior crop for 15 Illinois soils. The result was 32.0 kg corn kg(-1) seasonal available N as compared with the typical value of 67.5 kg corn kg(-1) commercial N fertilizer. Nitrogen mineralization predictions for Illinois soils were related to total N, suggesting that an equation could replace simulation modeling for a given soil-location combination. It is proposed that the N mineralization model, which has readily obtainable inputs (total N, bulk density, monthly weather), could be used in conjunction with field studies to refine commercial N fertilizer recommendations.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-regional-soil-classification-framework-to-improve-soil-health-diagnosis-and-management&quot;&gt;A regional soil classification framework to improve soil health diagnosis and management&lt;/h3&gt;
+
+&lt;p&gt;Soil health research has developed soil tests to validate management strategies for creating healthier soils, such as cover crops, compost, and reduced tillage. Missing in this research agenda are soil health management strategies and diagnostics tailored to the systematic variation of soils. The Soil Survey Geographic (SSURGO) database offers comprehensive estimates for many properties linked to soil health indicators. This research uses unsupervised classification of soil surface (0-30 cm) properties and root restrictive horizons in an internationally important agricultural region, the Central and Coastal Valleys of California, covering 5.6 million ha of mostly cropland. K-means clustering of 10 soil properties derived from SSURGO revealed groups distinct from USDA-NRCS Soil Taxonomy. Clustering metrics, data visualization, and validation tests justified a seven-region soil health conceptual model that divided the landscape into two broad classes-those with and without performance limitations. Results revealed three pedogenic conditions limiting soil performance: (a) root restrictive horizons that impede root growth into deeper soil; (b) salinity and alkalinity harmful to crops; and (c) shrink-swell properties making soils challenging to cultivate. Soils without performance limitations, soils with restrictive horizons, and salt-affected soils are further divided by texture and/or organic matter for a total of seven soil health regions. In reality, variation in soil properties is often continuous across the landscape and sometimes fractal in nature, but this research establishes a testable framework for evaluating soil health diagnostics according to geographically coherent differences in soil properties, demonstrating potential for how soil health management and interpretation can be tailor-made to the landscape.&lt;/p&gt;
+
+&lt;h3 id=&quot;two-centuries-of-water-level-records-at-lake-george-nsw&quot;&gt;Two centuries of water-level records at Lake George, NSW&lt;/h3&gt;
+
+&lt;p&gt;The year 2020 marked the 200th anniversary of European settlers first encountering the ‘noble expanse of water’ of Lake George in New South Wales. Since 1820, unofficial observations and official measurements of the lake’s water-level have been recorded almost continuously by various individuals, research teams, government departments and private companies. The lake’s recent hydrographic history has been characterised by periods of flood and drought, which correspond with the prevailing climate conditions of SE Australia. This is the longest water-level record of its sort in the Southern Hemisphere and hence of great scientific and historic value. Here, we have compiled all available historic water-level data for Lake George, referenced them to common datums and presented a methodology for continuing the record using satellite imagery in lieu of on-site measurements.&lt;/p&gt;
+
+&lt;h3 id=&quot;production-of-global-daily-seamless-data-cubes-and-quantification-of-global-land-cover-change-from-1985-to-2020-imap-world-10&quot;&gt;Production of global daily seamless data cubes and quantification of global land cover change from 1985 to 2020-iMap World 1.0&lt;/h3&gt;
+
+&lt;p&gt;Longer time high-resolution, high-frequency, consistent, and more detailed land cover data are urgently needed in order to achieve sustainable development goals on food security, high-quality habitat construction, biodiversity conservation and planetary health, and for the understanding, simulation and management of the Earth system. However, due to technological constraints, it is difficult to provide simultaneously high spatial resolution, high temporal frequency, and high quality observation data. Existing mapping solutions are limited by traditional remotely sensed data, that have shorter observation periods, poor spatio-temporal consistency and comparability. Therefore, a new mapping paradigm is needed. This paper develops a framework for intelligent mapping (iMap) of land cover based on state-of-the-art technologies such as cloud computing, artificial intelligence, virtual constellations, and spatio-temporal reconstruction and fusion. Under this framework, we built an automated, serverless, end-to-end data production chain and parallel mapping system based on Amazon Web Services (AWS) and produced the first 30 m global daily seamless data cubes (SDC), and annual to seasonal land cover maps for 1985?2020. The SDC was produced through a multi-source spatio-temporal data reconstruction and fusion workflow based on Landsat, MODIS, and AVHRR virtual constellations. Independent validation results show that the relative mean error of the SDC is less than 2.14%. As analysis ready data (ARD), it can lay a foundation for high-precision quantitative remote sensing information extraction. From this SDC, we produced 36-year long, 30 m resolution global land cover map data set by combining strategies of sample migration, machine learning, and spatio-temporal adjustment. The average overall accuracy of our annual land cover maps over multiple periods of time is 80% for level 1 classification and over 73% for level 2 classification (29 and 33 classes). Based on an objective validation sample consisting of FLUXNET sites, our map accuracy is 10% higher than that of existing global land cover datasets including Globeland30. Our results show that the average global land cover change rate is 0.36%/yr. Global forest decreased by 1.47 million km2 from 38.44 million km2, cropland increased by 0.84 million km2 from 12.49 million km2 and impervious surface increased by 0.48 million km2 from 0.57 million km2 during 1985? 2020.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/05/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on May 10, 2021.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1070,154 +1220,6 @@ https://doi.org/10.1016/j.geoderma.2020.114680&lt;/p&gt;
 Fertilizer recommendations are key for farmers: the investment is relatively large for smallholders and risky with unknown yield responses and variable fertilizer prices. Are agronomists able to provide useful site-specific fertilizer recommendations that reduce these uncertainties? We evaluated the influence of errors introduced due to soil sampling and chemical analysis procedures both within- and among laboratories on fertilizer recommendations. Using what we consider to be conservative estimates of the uncertainty in estimating soil supply of N, P and K in a single composite soil sample, the resulting 90% confidence interval of fertilizer recommendations ranged from 86 to 186, 0–58 and 38–114 kg N, P and K ha−1 respectively. The numerous laboratory services and digital applications providing field-specific recommendations appear to promise more accuracy than soil analysis can realistically deliver. We conclude that a field-specific fertilizer recommendation based on a single composite soil sample is indeed a pipe-dream.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2020/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 07, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/11/journalDigest" />
-  <id>/2020/11/journalDigest</id>
-  <updated>2020-11-03T00:00:00-00:00</updated>
-  <published>2020-11-03T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-17&quot;&gt;Journal Paper Digests 2020 #17&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mapping the effectiveness of nature‐based solutions for climate change adaptation&lt;/li&gt;
-  &lt;li&gt;Diversity‐dependent soil acidification under nitrogen enrichment constrains biomass productivity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;mapping-the-effectiveness-of-naturebased-solutions-for-climate-change-adaptation&quot;&gt;Mapping the effectiveness of nature‐based solutions for climate change adaptation&lt;/h3&gt;
-
-&lt;p&gt;Alexandre Chausson Beth Turner Dan Seddon Nicole Chabaneix Cécile A. J. Girardin Valerie Kapos Isabel Key Dilys Roe Alison Smith Stephen Woroniecki Nathalie Seddon
-Pages: 6134-6155 First Published: 09 September 2020&lt;/p&gt;
-
-&lt;p&gt;We present the first global systematic map of the effectiveness of nature‐based solutions (NbS) for addressing the impacts of climate change and hydrometeorological hazards on people. We found that most studies on NbS interventions in natural or semi‐natural ecosystems reported reduced climate impacts and that, overall, more synergies than trade‐offs were reported between addressing climate impacts and broader ecological, social and climate change mitigation outcomes. However, to strengthen the evidence base and support the upscaling of NbS, future studies should compare the cost‐effectiveness of NbS with engineered alternatives and consider social and ecological outcomes. More NbS research is also needed in the Global South.&lt;/p&gt;
-
-&lt;h3 id=&quot;diversitydependent-soil-acidification-under-nitrogen-enrichment-constrains-biomass-productivity&quot;&gt;Diversity‐dependent soil acidification under nitrogen enrichment constrains biomass productivity&lt;/h3&gt;
-
-&lt;p&gt;Kaitlin Kimmel George N. Furey Sarah E. Hobbie Forest Isbell David Tilman Peter B. Reich
-Pages: 6594-6603 First Published: 01 September 2020&lt;/p&gt;
-
-&lt;p&gt;Nitrogen enrichment is known to increase plant productivity, while also decreasing species richness and acidifying soils. We show that productivity could have been 14.5% greater on average in monocultures if not for nitrogen‐induced soil acidification and about 28.5% greater on average in 16 species communities if not for nitrogen‐induced species losses in a 20 year planted richness by nitrogen addition grassland plant experiment. Our results suggest that the positive effect of nutrient enrichment on productivity can diminish over time, especially because of soil acidification in low diversity communities and especially because of plant diversity loss in initially high diversity communities.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 03, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/10/journalDigest" />
-  <id>/2020/10/journalDigest</id>
-  <updated>2020-10-19T00:00:00-00:00</updated>
-  <published>2020-10-19T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-16&quot;&gt;Journal Paper Digests 2020 #16&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Molecular trade-offs in soil organic carbon composition at continental scale&lt;/li&gt;
-  &lt;li&gt;Linear mixed effects models for non‐Gaussian continuous repeated measurement data&lt;/li&gt;
-  &lt;li&gt;Circular regression trees and forests with an application to probabilistic wind direction forecasting&lt;/li&gt;
-  &lt;li&gt;Use of diffuse reflectance spectroscopy and Nix pro color sensor in combination for rapid prediction of soil organic carbon&lt;/li&gt;
-  &lt;li&gt;A framework for modelling soil structure dynamics induced by biological activity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;molecular-trade-offs-in-soil-organic-carbon-composition-at-continental-scale&quot;&gt;Molecular trade-offs in soil organic carbon composition at continental scale&lt;/h3&gt;
-
-&lt;p&gt;https://www.nature.com/articles/s41561-020-0634-x&lt;/p&gt;
-
-&lt;p&gt;The molecular composition of soil organic carbon remains contentious. Microbial-, plant- and fire-derived compounds may each contribute, but whether they vary predictably among ecosystems remains unclear. Here we present carbon functional groups and molecules from a diverse spectrum of North American surface mineral soils, collected primarily from the National Ecological Observatory Network and quantified by nuclear magnetic resonance spectroscopy and a molecular mixing model. We find that soils vary widely in relative contributions of carbohydrate, lipid, protein, lignin and char-like carbon, but each compound class has similar overall abundance. Ninety percent of the variance in carbon composition can be explained by three principal component axes representing a trade-off between lignin and protein, a trade-off between carbohydrate and char, and lipids. Reactive aluminium, crystalline iron oxides and pH plus overlying organic horizon thickness—predictors that are all related to climate—best explain variation along each respective axis. Together, our data point to continental-scale trade-offs in soil carbon molecular composition that are linked to environmental and geochemical variables known to predict carbon mass concentrations. Controversies regarding the genesis of soil carbon and its potential responses to global change can be partially reconciled by considering diverse ecosystem properties that drive complementary persistence mechanisms.&lt;/p&gt;
-
-&lt;h3 id=&quot;linear-mixed-effects-models-for-nongaussian-continuous-repeated-measurement-data&quot;&gt;Linear mixed effects models for non‐Gaussian continuous repeated measurement data&lt;/h3&gt;
-
-&lt;p&gt;Has an R package&lt;/p&gt;
-
-&lt;p&gt;https://rss.onlinelibrary.wiley.com/doi/10.1111/rssc.12405&lt;/p&gt;
-
-&lt;p&gt;We consider the analysis of continuous repeated measurement outcomes that are collected longitudinally. A standard framework for analysing data of this kind is a linear Gaussian mixed effects model within which the outcome variable can be decomposed into fixed effects, time invariant and time‐varying random effects, and measurement noise. We develop methodology that, for the first time, allows any combination of these stochastic components to be non‐Gaussian, using multivariate normal variance–mean mixtures. To meet the computational challenges that are presented by large data sets, i.e. in the current context, data sets with many subjects and/or many repeated measurements per subject, we propose a novel implementation of maximum likelihood estimation using a computationally efficient subsampling‐based stochastic gradient algorithm. We obtain standard error estimates by inverting the observed Fisher information matrix and obtain the predictive distributions for the random effects in both filtering (conditioning on past and current data) and smoothing (conditioning on all data) contexts. To implement these procedures, we introduce an R package: ngme. We reanalyse two data sets, from cystic fibrosis and nephrology research, that were previously analysed by using Gaussian linear mixed effects models.&lt;/p&gt;
-
-&lt;h3 id=&quot;circular-regression-trees-and-forests-with-an-application-to-probabilistic-wind-direction-forecasting&quot;&gt;Circular regression trees and forests with an application to probabilistic wind direction forecasting&lt;/h3&gt;
-
-&lt;p&gt;Has an R package&lt;/p&gt;
-
-&lt;p&gt;https://rss.onlinelibrary.wiley.com/doi/10.1111/rssc.12437&lt;/p&gt;
-
-&lt;p&gt;Although circular data occur in a wide range of scientific fields, the methodology for distributional modelling and probabilistic forecasting of circular response variables is quite limited. Most of the existing methods are built on generalized linear and additive models, which are often challenging to optimize and interpret. Specifically, capturing abrupt changes or interactions is not straightforward but often relevant, e.g. for modelling wind directions subject to different wind regimes. Additionally, automatic covariate selection is desirable when many predictor variables are available, as is often the case in weather forecasting. To address these challenges we suggest a general distributional approach using regression trees and random forests to obtain probabilistic forecasts for circular responses. Using trees simplifies model estimation as covariates are used only for partitioning the data and subsequently just a simple von Mises distribution is fitted in the resulting subgroups. Circular regression trees are straightforward to interpret, can capture non‐linear effects and interactions, and automatically select covariates affecting location and/or scale in the von Mises distribution. Circular random forests regularize and smooth the effects from an ensemble of trees. The new methods are applied to probabilistic wind direction forecasting at two Austrian airports, considering other common approaches as a benchmark.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-of-diffuse-reflectance-spectroscopy-and-nix-pro-color-sensor-in-combination-for-rapid-prediction-of-soil-organic-carbon&quot;&gt;Use of diffuse reflectance spectroscopy and Nix pro color sensor in combination for rapid prediction of soil organic carbon&lt;/h3&gt;
-
-&lt;p&gt;Contemporary soil characterization is increasingly dependent upon proximal sensor data whereby high sample throughput and low-cost analysis are realized. Recent research studies have shown that combined sensor platforms generally offer greater predictive model stability and increased accuracy than the use of sensors in isolation. In this study, data from an inexpensive ($350 USD) Nix Pro color sensor, which measures the true color of an object by using red, blue, and green filters, was used with diffuse reflectance spectroscopy (DRS) (590–2490 nm) to predict soil organic carbon (OC) content in highly disturbed, landfill soils of India ex-situ. Generalized additive model (GAM) and partial least squares regression (PLSR) were applied to model DRS and Nix Pro data, respectively, both independently and by combining model predictions using a bilinear regression. Results showed that the combined model outperformed either sensor independently where the 30% external test set achieved a validation R2 of 0.95, residual prediction deviation (RPD) of 4.54, and the ratio of performance to interquartile range of 6.25 relative to laboratory-measured OC data. In contrary, the GAM-OC model using Nix Pro data alone and the PLSR-OC model using DRS data alone exhibited validation R2 values of 0.58 and 0.81, respectively. In sum, the addition of the inexpensive Nix Pro sensor substantively improved the prediction of soil OC relative to the use of DRS in isolation. Future studies should evaluate the effectiveness of such an approach on a wider variety of soil types (e.g., colors), its effectiveness in-situ under variable moisture conditions, and in possible combination with other proximal sensing platforms.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-framework-for-modelling-soil-structure-dynamics-induced-by-biological-activity&quot;&gt;A framework for modelling soil structure dynamics induced by biological activity&lt;/h3&gt;
-
-&lt;p&gt;Soil degradation is a worsening global phenomenon driven by socio‐economic pressures, poor land management practices and climate change. A deterioration of soil structure at timescales ranging from seconds to centuries is implicated in most forms of soil degradation including the depletion of nutrients and organic matter, erosion and compaction. New soil–crop models that could account for soil structure dynamics at decadal to centennial timescales would provide insights into the relative importance of the various underlying physical (e.g. tillage, traffic compaction, swell/shrink and freeze/thaw) and biological (e.g. plant root growth, soil microbial and faunal activity) mechanisms, their impacts on soil hydrological processes and plant growth, as well as the relevant timescales of soil degradation and recovery. However, the development of such a model remains a challenge due to the enormous complexity of the interactions in the soil–plant system. In this paper, we focus on the impacts of biological processes on soil structure dynamics, especially the growth of plant roots and the activity of soil fauna and microorganisms. We first define what we mean by soil structure and then review current understanding of how these biological agents impact soil structure. We then develop a new framework for modelling soil structure dynamics, which is designed to be compatible with soil–crop models that operate at the soil profile scale and for long temporal scales (i.e. decades, centuries). We illustrate the modelling concept with a case study on the role of root growth and earthworm bioturbation in restoring the structure of a severely compacted soil.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/10/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on October 19, 2020.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2020/08/journalDigest" />
-  <id>/2020/08/journalDigest</id>
-  <updated>2020-08-16T00:00:00-00:00</updated>
-  <published>2020-08-16T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2020-15&quot;&gt;Journal Paper Digests 2020 #15&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Characterising the biophysical, economic and social impacts of soil carbon sequestration as a greenhouse gas removal technology&lt;/li&gt;
-  &lt;li&gt;Adapting smartphone app used in water testing, for soil nutrient analysis&lt;/li&gt;
-  &lt;li&gt;From sensor data to Munsell color system: Machine learning algorithm applied to tropical soil color classification via Nix™ Pro sensor&lt;/li&gt;
-  &lt;li&gt;Effects of water, organic matter, and iron forms in mid-IR spectra of soils: Assessments from laboratory to satellite-simulated data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;quantifying-uncertainty-for-remote-spectroscopy-of-surface-composition&quot;&gt;Quantifying uncertainty for remote spectroscopy of surface composition&lt;/h3&gt;
-
-&lt;p&gt;Characterising the biophysical, economic and social impacts of soil carbon sequestration as a greenhouse gas removal technology&lt;/p&gt;
-
-&lt;p&gt;To limit warming to well below 2°C, most scenario projections rely on greenhouse gas removal technologies (GGRTs); one such GGRT uses soil carbon sequestration (SCS) in agricultural land. In addition to their role in mitigating climate change, SCS practices play a role in delivering agroecosystem resilience, climate change adaptability and food security. Environmental heterogeneity and differences in agricultural practices challenge the practical implementation of SCS, and our analysis addresses the associated knowledge gap. Previous assessments have focused on global potentials, but there is a need among policymakers to operationalise SCS. Here, we assess a range of practices already proposed to deliver SCS, and distil these into a subset of specific measures. We provide a multidisciplinary summary of the barriers and potential incentives towards practical implementation of these measures. First, we identify specific practices with potential for both a positive impact on SCS at farm level and an uptake rate compatible with global impact. These focus on: (a) optimising crop primary productivity (e.g. nutrient optimisation, pH management, irrigation); (b) reducing soil disturbance and managing soil physical properties (e.g. improved rotations, minimum till); (c) minimising deliberate removal of C or lateral transport via erosion processes (e.g. support measures, bare fallow reduction); (d) addition of C produced outside the system (e.g. organic manure amendments, biochar addition); (e) provision of additional C inputs within the cropping system (e.g. agroforestry, cover cropping). We then consider economic and non‐cost barriers and incentives for land managers implementing these measures, along with the potential externalised impacts of implementation. This offers a framework and reference point for holistic assessment of the impacts of SCS. Finally, we summarise and discuss the ability of extant scientific approaches to quantify the technical potential and externalities of SCS measures, and the barriers and incentives to their implementation in global agricultural systems.&lt;/p&gt;
-
-&lt;h3 id=&quot;adapting-smartphone-app-used-in-water-testing-for-soil-nutrient-analysis&quot;&gt;Adapting smartphone app used in water testing, for soil nutrient analysis&lt;/h3&gt;
-
-&lt;p&gt;Smartphone technology has now penetrated every aspect of modern life. At such high rates of access and utilization, there is today much potential for the development of smartphones as high-performing tools in a number of industries. Traditionally, smartphones have been used as e.g. point-of-care testing devices in developing countries; now a similar approach can be extended to agriculture. This paper assesses the viability of utilizing smartphones in soil analysis. An Android-based smartphone application, in conjunction with commercially available Quantofix® test strips, was employed to analyze 92 soil samples collected across Indonesia. The soils tested encompassed a wide range of different textures (with 13%, 60% and 25% of samples constituting sandy, loamy and clayey soils, respectively), soil organic matter contents (range: 0.8–19.7%) and nutrient concentrations (range for plant-available N: 0.1–137.4 mg kg−1 and P: 1.2 to 64.2 mg kg−1; on dry soil basis). The app utilizes the smartphone as a portable reflectometer, which relates the color of test strips to the concentration of particular nutrients present in the soil medium. Three mobile devices currently available on the market, representing low, mid- and high-end products, were used to test the application. The results obtained via the smartphone were compared against standard methods for determination of extractable nitrate-N and exchangeable phosphorus (Olsen-P) under laboratory conditions. The smartphone-mediated soil analysis was found to have a high degree of agreement with standard methods for nitrate-N determination (87% of samples with nitrate-N differed by less than 10 mg kg−1 from the standard method for the high-end smartphone) but not for phosphorus determination where chemical interferences to test strip colour development were noted. All three mobile devices were shown to be effective as portable reflectometers. However, color perception was found to differ amongst the devices, resulting in a consistent bias between the high-end phone and the remaining appliances. Whereas, it is essential to consider the inter-smartphone variability in readings and environmental factors such as temperature prior to the smartphone-mediated soil analysis, the smartphone-test strip combination might be employed as acceptable screening tool for soil nutrient concentration assessment to enhance crop outcomes, increasing yield, and preventing over-application of inputs, reducing consequent financial and environmental impact. Further enhancements can test the applicability of smartphone-mediated soil analysis in field conditions.&lt;/p&gt;
-
-&lt;h3 id=&quot;from-sensor-data-to-munsell-color-system-machine-learning-algorithm-applied-to-tropical-soil-color-classification-via-nix-pro-sensor&quot;&gt;From sensor data to Munsell color system: Machine learning algorithm applied to tropical soil color classification via Nix™ Pro sensor&lt;/h3&gt;
-
-&lt;p&gt;Soil color has historically drawn humans’ attention, although its definition is somewhat subjective. It is correlated with several soil attributes and it allows for inferences about several soil aspects. New proximal sensors, such as the Nix™ Pro color sensor, can determine soil color values, but its correlation with the widely used Munsell soil color chart (MSCC) has yet to be investigated. This work aimed to train machine learning models using the Random Forest (RF) algorithm to predict each notation of MSCC chips from data extracted by the Nix™ Pro sensor, test the model’s accuracy by evaluating whether it can identify MSCC chips using a brand-new and a dirty MSCC, and compare model predictions with soil color classifications made by the human eye. Additionally, MSCC data obtained via Nix™ was compared to Munsell renotation data to assess the color detection accuracy of the sensor. Prediction models were calibrated by scanning every MSCC chip (437 in total) in triplicate. All validation samples were excluded from model calibration. Accuracy of the predictions of MSCC notation reached overall accuracy and Kappa index values of 0.93 for the brand-new MSCC and of 0.70 for the dirty MSCC. Soil color classification by human eye had little agreement with the predicted MSCC notation, as expected due to the variable conditions affecting soil color conventional determination in the field. Color difference was calculated by the Euclidian distance (ΔE&lt;em&gt;ab) between three color stimuli in the CIELAB color space. The mean ΔE&lt;/em&gt;ab between Nix™-provided data and renotation data was 2.9, demonstrating high color detection accuracy. The Nix™ Pro color sensor allows for assessment of accurate color data. When applied together with machine learning algorithms, Nix™ Pro provides a reliable determination of soil color classification equivalent to MSCC in an easily reproducible, rapid, inexpensive and non-subjective way.&lt;/p&gt;
-
-&lt;h3 id=&quot;effects-of-water-organic-matter-and-iron-forms-in-mid-ir-spectra-of-soils-assessments-from-laboratory-to-satellite-simulated-data&quot;&gt;Effects of water, organic matter, and iron forms in mid-IR spectra of soils: Assessments from laboratory to satellite-simulated data&lt;/h3&gt;
-
-&lt;p&gt;The soil mineralogical constitution directly influences its chemical, physical and hydraulic characteristics. Although very important, it is still rarely used for decision-making in agriculture, mainly due to the complexity and cost of standard analyzes. In this sense, the middle infrared spectroscopy (mid-IR, 4000 to 400 cm−1) has great potential to obtain soil mineralogical information quickly and accurately. Nevertheless, some soil constituents can severely influence the spectra and produce misinterpretations. In this research, we aim to detect changes in the mid-IR spectra caused by water, iron forms and organic matter (OM), and to relate soil attributes to laboratory spectra and remote sensing simulated spectral bands. The research area is located in São Paulo State, Brazil, where seventeen soil samples were collected. The reflectance intensities, shapes and absorption features of the mid-IR spectra before and after the removal of OM and iron forms and the addition of water were described. Soil attributes, such as kaolinite, gibbsite, 2:1 minerals among others were correlated with the mid-IR spectra and simulated ASTER spectral bands by Pearson’s analysis, to verify its potential on mineralogical evaluation. The description of mid-IR revealed that the removal of the OM from the soil samples decreased the reflectance intensities between 4000 and 2000 cm−1. Iron forms mainly influence the 3250 – 1200 cm−1 spectral range and mask the spectral features of other minerals as well. The addition of water masked several absorption features and decreased the reflectance intensities from 3700 to 2700 cm−1. High correlation coefficients were obtained between soil attributes and ASTER simulated spectral bands, which allowed the selection of potential spectral regions for future satellite sensors: 2760 – 2500 cm−1 (3600 – 4000 nm), 2150 – 1875 cm−1 (4600 – 5300 nm), and 840 – 740 cm−1 (11900 – 3500 nm).&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2020/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 16, 2020.&lt;/p&gt;
   </content>
 </entry>
 
