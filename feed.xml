@@ -4,13 +4,107 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2021-08-17T10:06:38+10:00</updated>
+<updated>2021-08-31T09:31:31+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
+  <id>/2021/08/journalDigest</id>
+  <updated>2021-08-31T00:00:00-00:00</updated>
+  <published>2021-08-31T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-28&quot;&gt;Journal Paper Digests 2021 #28&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Proposed algorithm for the identification of rural areas with regard to variability of soil quality.&lt;/li&gt;
+  &lt;li&gt;Use of metabolomics to quantify changes in soil microbial function in response to fertiliser nitrogen supply and extreme drought&lt;/li&gt;
+  &lt;li&gt;Altered mineral mapping based on ground-airborne hyperspectral data and wavelet spectral angle mapper tri-training model: Case studies from Dehua-Youxi-Yongtai Ore District, Central Fujian, China&lt;/li&gt;
+  &lt;li&gt;Iterative Deep Learning (IDL) for agricultural landscape classification using fine spatial resolution remotely sensed imagery&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;proposed-algorithm-for-the-identification-of-rural-areas-with-regard-to-variability-of-soil-quality&quot;&gt;Proposed algorithm for the identification of rural areas with regard to variability of soil quality&lt;/h3&gt;
+
+&lt;p&gt;The development of agriculture in many countries and its productivity are considerably differentiated in terms of space. At present, Poland has agricultural areas which in many respects can compete with agriculture in the member states of the European Union. However, in some areas agricultural production run by private farms owned by individuals is on the verge of or falls below the limit of profitability. The priorities of the common agricultural policy in the European Union (EU) include a willingness to improve the quality of life in rural areas and effective utilization of their resources. Another goal is to support agricultural activity and align development chances for farms in areas featuring adverse environmental conditions and low soil productivity. This article presents the results of studies regarding the development of a method for identifying useless agricultural land. The study covered 44 villages with a registered surface area totalling 53941.00 ha, situated in the district of Brzoz ‘ ow, Subcarpathian voivodeship, in south-eastern Poland. Studies showed that it is possible to identify problem areas for agriculture, thanks to which the produced methodology may prove to be a useful tool in land consolidation works facilitating reasonable planning of the development of such areas. Thus, a universal tool can be designed for analysing large areas, e.g., communes, districts or voivodeships, and a high level of consistency of results can be a guarantee of reliable decisions regarding the development strategy for the specific area.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-of-metabolomics-to-quantify-changes-in-soil-microbial-function-in-response-to-fertiliser-nitrogen-supply-and-extreme-drought&quot;&gt;Use of metabolomics to quantify changes in soil microbial function in response to fertiliser nitrogen supply and extreme drought&lt;/h3&gt;
+
+&lt;p&gt;Climate change is expected to increase the frequency and severity of droughts in many regions of the world. Soil health is likely to be negatively impacted by these extreme events. It is therefore important to understand the impact of drought on soil functioning and the delivery of soil-related ecosystem services. This study aimed to assess the resilience and change in physiological status of the microbial community under extreme moisture stress conditions using novel metabolic profiling approaches, namely complex lipids and untargeted primary metabolites. In addition, we used phospholipid fatty acid (PLFA) profiling to identify changes in microbial community structure. Soil samples were collected during a natural, extreme drought event and post-drought from replicated grassland split plots, planted with either deep-rooting Festulolium (cv. AberNiche) or Lolium perenne L. (cv. AberEcho), receiving nitrogen (N) fertiliser loading rates at either 0 or 300 kg N ha-1 yr- 1. These plots were split at the start of the drought period, and half of each subplot was irrigated with water throughout the drought period at a rate of 50 mm week-1 to alleviate moisture stress. PLFA analysis revealed a distinct shift in microbial community between drought and post-drought conditions, primarily driven by N loading and water deficit. Complex lipid analysis identified 239 compounds and untargeted analysis of primary metabolites identified 155 compounds. Both soil complex lipids and primary metabolites showed significant changes under drought conditions. Additionally, the irrigated ‘reference’ plots had a significantly higher cumulative greenhouse gas (CO2 and N2O) flux over the period of sampling. Recovery of the microbial lipidome and metabolome to reference plot levels post-drought was rapid (within days). Considerable changes in soil primary metabolomic and lipidomic concentrations shown in this study demonstrate that while soil metabolism was strongly affected by moisture stress, the system (plant and soil) was highly resilient to an intense drought.&lt;/p&gt;
+
+&lt;h3 id=&quot;altered-mineral-mapping-based-on-ground-airborne-hyperspectral-data-and-wavelet-spectral-angle-mapper-tri-training-model-case-studies-from-dehua-youxi-yongtai-ore-district-central-fujian-china&quot;&gt;Altered mineral mapping based on ground-airborne hyperspectral data and wavelet spectral angle mapper tri-training model: Case studies from Dehua-Youxi-Yongtai Ore District, Central Fujian, China&lt;/h3&gt;
+
+&lt;p&gt;Mineral mapping is an important procedure for the utilization of mineral resources, and it is also significant to the analysis of mineralization zone especially for altered minerals. The emergence of remote sensing, especially hyperspectral data has become a new approach for mineral mapping on a wide scale. In addition, spectral angle mapping (SAM) is a commonly used classifier to distinguish the minerals, but the discrimination ability is weak on a mapping scale, and the identification accuracy is poor for a series of minerals with similar spectral curves when a single classifier is applied. In this work, altered minerals are identified at Dehua-Youxi-Yongtai Ore District uniting ground and airborne hyperspectral data, and wavelet SAM (WSAM) tri-training model is constructed to discriminate the category of 9 altered minerals. Experimental results demonstrate that the proposed technique provides the identification accuracy of 82% and 70% for virtual and XRD verifications, and the mapping result is believable compared with measured sampling.&lt;/p&gt;
+
+&lt;h3 id=&quot;iterative-deep-learning-idl-for-agricultural-landscape-classification-using-fine-spatial-resolution-remotely-sensed-imagery&quot;&gt;Iterative Deep Learning (IDL) for agricultural landscape classification using fine spatial resolution remotely sensed imagery&lt;/h3&gt;
+
+&lt;p&gt;The agricultural landscape can be interpreted at different semantic levels, such as fine low-level crop (LLC) classes (e.g., Wheat, Almond, and Alfalfa) and broad high-level crop (HLC) classes (e.g., Winter crops, Tree crops, and Forage). The LLC and HLC are hierarchically correlated with each other, but such intrinsically hierarchical relationships have been overlooked in previous crop classification studies in remote sensing. In this research, a novel Iterative Deep Learning (IDL) framework was proposed for the classification of complex agricultural landscapes using remotely sensed imagery. The IDL adopts an object-based convolutional neural network (OCNN) as the basic classifier for both the LLC and HLC classifications, which has the advantage of maintaining precise crop parcel boundaries. In IDL, the HLC classification implemented by the OCNN is conditional upon the LLC classification probabilities, whereas the HLC probabilities combined with the original imagery are, in turn, re-used as inputs to the OCNN to enhance the LLC classification. Such an iterative updating procedure forms a Markov process, where both the LLC and HLC classifications are refined and evolve collaboratively. The effectiveness of the IDL was tested on two heterogeneous agricultural fields using fine spatial resolution (FSR) SAR and optical imagery. The experimental results demonstrate that the iterative process of IDL helps to resolve contradictions within the class hierarchies. The new proposed IDL consistently increased the accuracies of both the LLC and HLC classifications with iteration, and achieved the highest accuracies for each at four iterations. The average overall accuracies were 88.4% for LLC and 91.2% for HLC, for both study sites, far greater than the accuracies of the state-of-the-art benchmarks, including the pixel-wise CNN (81.7% and 85.9%), object-based image analysis (OBIA) (84.0% and 85.8%), and OCNN (84.0% and 88.4%). To the best of our knowledge, the proposed model is the first to identify and use the relationship between the class levels in an ontological hierarchy in a remote sensing classification process. It is applied here to increase progressively the accuracy of classification at two levels for a complex agricultural landscape. As such IDL represents an entirely new paradigm for remote sensing image classification. Moreover, the promising results demonstrate the great potential of the proposed IDL with wide application prospect.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 31, 2021.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
+  <id>/2021/08/journalDigest</id>
+  <updated>2021-08-30T00:00:00-00:00</updated>
+  <published>2021-08-30T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2021-29&quot;&gt;Journal Paper Digests 2021 #29&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;VNIR and MIR spectroscopy of PLFA-derived soil microbial properties and associated soil physicochemical characteristics in an experimental plant diversity gradient.&lt;/li&gt;
+  &lt;li&gt;The blue carbon wealth of nations&lt;/li&gt;
+  &lt;li&gt;Both carbon sequestration and yield are related to particulate organic carbon stability affected by organic amendment origins in mollisol&lt;/li&gt;
+  &lt;li&gt;A two-field geostatistical model combining point and areal observations-A case study of annual runoff predictions in the Voss area.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;vnir-and-mir-spectroscopy-of-plfa-derived-soil-microbial-properties-and-associated-soil-physicochemical-characteristics-in-an-experimental-plant-diversity-gradient&quot;&gt;VNIR and MIR spectroscopy of PLFA-derived soil microbial properties and associated soil physicochemical characteristics in an experimental plant diversity gradient&lt;/h3&gt;
+&lt;p&gt;Hutengs, C; Eisenhauer, N; (…); Vohland, M
+Sep 2021 | SOIL BIOLOGY &amp;amp; BIOCHEMISTRY 160 , pp.8319-8319
+Improving our understanding of the functions and processes of soil microbial communities and their interactions with the physicochemical soil environment requires large amounts of timely and cost-efficient soil data, which is difficult to obtain with routine laboratory-analytical methods. Soil spectroscopy with portable visible-to-near infrared (VNIR) and mid-infrared (MIR) instruments can fill this gap by facilitating the rapid acquisition of biotic and abiotic soil information. In this study, we evaluated the capabilities of VNIR and MIR spectroscopy to analyze soil physicochemical and microbial properties in a long-term grassland biodiversity-ecosystem functioning experiment. Soil samples were collected at the Jena Experiment (Jena, Germany) and measured with portable VNIR and MIR spectrometers in field-moist condition to determine their potential for on-site data collection and analysis. Reference data to calibrate spectroscopic models were acquired with routine analytical methods, including PLFA extractions of microbial biomarkers. We further collected reference VNIR and MIR data on pre-treated soils (dried and finely ground) to assess the anticipated impact of field measurements on spectroscopic calibrations. MIR spectra allowed more accurate estimates of soil physicochemical and microbial properties than VNIR data on pre-treated samples. For soils in field condition, MIR calibrations were more accurate for physicochemical properties, but VNIR data gave significantly better estimates of microbial properties. Combined VNIR/MIR estimates achieved the most accurate estimation results for all soil properties in each case. Soil physicochemical properties could be estimated from VNIR/MIR data with high accuracy (R2 = 0.72-0.99) on pre-treated soil samples, whereas the results for soil microbial properties were more moderate (R2 = 0.66-0.72). On field-moist soils, estimation accuracies decreased notably for organic and inorganic carbon (Delta RMSE = 52-72%), improved slightly for soil texture (Delta RMSE = 4-7%) and decreased slightly for microbial properties (Delta RMSE = 4-9%). The VNIR/MIR estimates derived from soils in field condition were sufficiently accurate to detect experimental plant treatment effects on organic carbon, as well as bacterial and fungal biomass. We further found that spectroscopic estimates of soil microbial properties were primarily enabled through indirect correlations with spectrally active soil constituents, i.e., associations between soil microbial properties and the physicochemical soil environment. Our findings highlight the capacity of VNIR and MIR spectroscopy to analyze the physicochemical soil environment, including potential on-site data collection and analysis on soils in field condition, and indicate that VNIR/MIR data can estimate soil microbial properties when soil physicochemical properties shape the distribution of soil microbial communities.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-blue-carbon-wealth-of-nations&quot;&gt;The blue carbon wealth of nations&lt;/h3&gt;
+&lt;p&gt;Bertram, C; Quaas, M; (…); Rickels, W
+Aug 2021 | NATURE CLIMATE CHANGE 11 (8) , pp.704-+
+Carbon sequestration and storage in mangroves, salt marshes and seagrass meadows is an essential coastal ‘blue carbon’ ecosystem service for climate change mitigation. Here we offer a comprehensive, global and spatially explicit economic assessment of carbon sequestration and storage in three coastal ecosystem types at the global and national levels. We propose a new approach based on the country-specific social cost of carbon that allows us to calculate each country’s contribution to, and redistribution of, global blue carbon wealth. Globally, coastal ecosystems contribute a mean +/- s.e.m. of US190.67 +/- 30 bn yr(-1) to blue carbon wealth. The three countries generating the largest positive net blue wealth contribution for other countries are Australia, Indonesia and Cuba, with Australia alone generating a positive net benefit of US$22.8 +/- 3.8 bn yr(-)(1) for the rest of the world through coastal ecosystem carbon sequestration and storage in its territory.&lt;/p&gt;
+
+&lt;p&gt;Blue carbon ecosystems take up and store substantial amounts of carbon. This represents an important ecosystem service in the context of climate change, with coastal ecosystems contributing nearly US$200 bn yr(-)(1) to blue carbon wealth.&lt;/p&gt;
+
+&lt;h3 id=&quot;both-carbon-sequestration-and-yield-are-related-to-particulate-organic-carbon-stability-affected-by-organic-amendment-origins-in-mollisol&quot;&gt;Both carbon sequestration and yield are related to particulate organic carbon stability affected by organic amendment origins in mollisol&lt;/h3&gt;
+
+&lt;p&gt;Purpose Exploring how organic amendments influence carbon sequestration by affecting particulate organic carbon (POC) and determining the optimum amendment for protecting and restoring mollisol and increasing yields. Methods Differences of POC properties and maize yields in 3-year soils amended with organic material of different origins were studied. POC was separated by a wet sieving method, and the structure was analyzed by C-13 NMR spectroscopy. Results We found that SOC accumulation in soils amended with plant origin organic materials resulted from increasing organic fractions other than POC, while that in soils amended with animal origin materials resulted from increasing POC. The proportion of POC net variation in SOC net variation was significantly negatively correlated with SOC (p &amp;lt; 0.01). POC, mainly composed of alkyl C and alkoxyl C (more than 68%), had its stability more accurately evaluated through combined analysis of the carbonyl C content and alkyl C/alkoxyl C ratio. The addition of organic materials improved POC stability by increasing the alkyl C/alkoxyl C ratio and decreasing the carbonyl C content. Maize yields were positively correlated with SOC content and POC stability (p &amp;lt; 0.01), which increased by at least 2012 kg ha(-1) with the addition of organic materials. Conclusion Increasing more stable POC will promote the carbon sink. The order of the stability of POC in mollisol amended with organic materials of different origins was woody plant material &amp;gt; herb material &amp;gt; livestock dung &amp;gt; poultry dung. The woody plant material was the optimum organic amendment for mollisol, enhanced POC stability, and promoted SOC sequestration while increasing the yield.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-two-field-geostatistical-model-combining-point-and-areal-observations-a-case-study-of-annual-runoff-predictions-in-the-voss-area&quot;&gt;A two-field geostatistical model combining point and areal observations-A case study of annual runoff predictions in the Voss area&lt;/h3&gt;
+
+&lt;p&gt;We estimate annual runoff by using a Bayesian geostatistical model for interpolation of hydrological data of different spatial support: streamflow observations from catchments (areal data), and precipitation and evaporation data (point data). The model contains one climatic spatial effect that is common for all years under study, and 1 year specific spatial effect. Hence, the framework enables a quantification of the spatial variability caused by long-term weather patterns and processes. This can contribute to a better understanding of biases and uncertainties in environmental modelling. The suggested model is evaluated by predicting annual runoff for catchments around Voss in Norway and through a simulation study. We find that on average we benefit from combining point and areal data compared to using only one of the data types, and that the interaction between nested areal data and point data gives a spatial model that takes us beyond smoothing. Another finding is that when climatic effects dominate over annual effects, systematic under- and overestimation of runoff can be expected over time. However, a dominating climatic spatial effect also implies that short records of runoff from an otherwise ungauged catchment can lead to large improvements in the predictive performance.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 30, 2021.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1029,86 +1123,6 @@ Particulate and mineral-associated soil organic carbon have different climate se
 Sequestration of organic C in agricultural soils is necessary to improve soil health to meet the challenges of climate change, diminishing biodiversity, water quality deterioration, and rising demands for food and fiber production. New assessment approaches are needed to quantify how conservation agriculture might contribute to soil health improvement and soil organic C (SOC) sequestration. In the southeastern United States, conservation management has been repeatedly shown to stratify SOC concentration with depth. Starting immediately below a zone of tillage influence (i.e., 30-cm depth), SOC concentration is rarely affected by management due to low C inputs and high decomposition potential, whereas concentration increases toward the surface in a nonlinear manner, presumably with greater inputs of residue and root inputs and changing temperature and moisture conditions. Using these observations as an ecological foundation, SOC sequestration was calculated as the summation of SOC stock greater than the baseline condition at 30-cm depth. Data from literature sources were mathematically fitted with this new approach as a validation. Two on-farm surveys with different agricultural management practices (5-40 yr) in the southeastern United States yielded preliminary estimates of SOC sequestration. The interquartile range of calculated SOC sequestration was 4.2-9.4 Mg C ha(-1) for conventional-tillage cropland (n = 45 fields), 13.6-29.7 Mg C ha(-1) for no-tillage cropland (n = 97 fields), and 15.9-26.1 Mg C ha(-1) for perennial pasture (n = 29 fields). This new approach will be valuable to estimate SOC sequestration from a greater diversity of conservation agricultural systems practiced on farms within a region and independent of soil type.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2021/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 14, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/04/journalDigest" />
-  <id>/2021/04/journalDigest</id>
-  <updated>2020-04-05T00:00:00-00:00</updated>
-  <published>2021-04-05T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-10&quot;&gt;Journal Paper Digests 2021 #10&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Estimation of soil water retention curves from soil bulk electrical conductivity and water content measurements&lt;/li&gt;
-  &lt;li&gt;The effect of organic carbon content on soil compression characteristics&lt;/li&gt;
-  &lt;li&gt;A comparison of isometric and amalgamation logratio balances in compositional data analysis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;estimation-of-soil-water-retention-curves-from-soil-bulk-electrical-conductivity-and-water-content-measurements&quot;&gt;Estimation of soil water retention curves from soil bulk electrical conductivity and water content measurements&lt;/h3&gt;
-
-&lt;p&gt;Measurement of soil water retention curves (SWRCs) is time consuming, and there is no single laboratory device available to measure a SWRC over an entire range of relevant pressures. The van Genuchten (vG) model is commonly used to characterize the shape of the SWRC. Bulk soil electrical conductivity as a function of water content, sigma(theta), has been used to estimate hydraulic properties of unsaturated soils, thus making it possible to relate sigma(theta) and SWRC. The saturated and residual water content values, theta(s) and theta(r), can be estimated from soil bulk density and particle size distribution. In this study, we present an approach to estimate vG parameters m and alpha from sigma measured at saturated and residual soil water contents, as well as sigma(theta) values measured at intermediate water contents. A thermo-time domain reflectometry (thermo-TDR) sensor is used to measure sigma and theta of the same soil sample volume. SWRCs for three soils (Glassil 530 sand, Tennessee silt loam and Illinois clay loam with bulk densities ranging from 1.52 to 1.67 g cm(-3), 1.05 to 1.25 g cm(-3) and 1.05 to 1.2 g cm(-3), respectively) are estimated from sigma(theta) measurements and compared with direct SWRC measurements obtained with a tension table and pressure plate extractors. Additional comparisons are made using data obtained from the literature. The proposed method to estimate SWRCs performs well when compared to direct SWRC measurements (with an average RMSE and an average bias of 0.041 cm(3) cm(-3) and 0.008 cm(3) cm(-3), respectively). Results indicate that the new sigma(theta) based method accurately estimates SWRCs.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-effect-of-organic-carbon-content-on-soil-compression-characteristics&quot;&gt;The effect of organic carbon content on soil compression characteristics&lt;/h3&gt;
-
-&lt;p&gt;We investigated the effect of soil organic carbon (SOC) on the consolidation behaviour of soil from two long term field experiments at Rothamsted; the Broadbalk Wheat Experiment and Hoosfield Spring Barley. These experiments are located on soil with similar particle size distributions, and include treatments with SOC contents ranging from approximately 1?3.5 g/100 g. Soils taken from plots with contrasting SOC contents were compressed and deformed in a triaxial cell and the normal consolidation and critical state lines were determined. We found that the compression index was independent of SOC, but the void ratio at any given effective stress was highly correlated with organic carbon content. By comparison with uniaxial compression data, the apparent influence of SOC on the compression index is likely to be due to its effect on soil hydraulic properties rather than any intrinsic effects of strength. The plastic limit test appears to be a useful and simple test to allow direct comparison of soil physical behaviour and expected soil density.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-comparison-of-isometric-and-amalgamation-logratio-balances-in-compositional-data-analysis&quot;&gt;A comparison of isometric and amalgamation logratio balances in compositional data analysis&lt;/h3&gt;
-
-&lt;p&gt;The isometric logratio transformation, in the form of what has been called a “balance”, has been promoted as a way to contrast two groups of parts in a compositional data set by forming ratios of their respective geometric means. This transformation has attractive theoretical properties and hence provides a useful reference, but geometric means are highly affected by parts with small relative values. When a comparison between two groups of parts is required in practical applications, such as the investigation and construction of models, while making use of substantive domain knowledge, it is demonstrated that the logratio of two amalgamations serves as an alternative, interpretable form of balance. A geochemical data set is considered, which has been analyzed previously by transforming to a set of isometric logratio balances. An alternative approach, using a reduced set of pairwise logratios of parts, optionally involving prescribed amalgamations, is very close to optimal in accounting for the variance in this compositional data set. These simpler transformations also have an exact back transformation to the original parts. This approach highlights for this dataset which compositional parts are driving the data structure, using variables that are easy to interpret and that map well to research-driven objectives.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/04/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on April 05, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/03/journalDigest" />
-  <id>/2021/03/journalDigest</id>
-  <updated>2020-03-29T00:00:00-00:00</updated>
-  <published>2021-03-29T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-9&quot;&gt;Journal Paper Digests 2021 #9&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Rethinking restoration indicators and end-points for post-mining landscapes in light of novel ecosystems&lt;/li&gt;
-  &lt;li&gt;Getting the message right on nature-based solutions to climate change&lt;/li&gt;
-  &lt;li&gt;Assessment of the interpretability of data mining for the spatial modelling of water erosion using game theory&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;rethinking-restoration-indicators-and-end-points-for-post-mining-landscapes-in-light-of-novel-ecosystems&quot;&gt;Rethinking restoration indicators and end-points for post-mining landscapes in light of novel ecosystems&lt;/h3&gt;
-
-&lt;p&gt;Degraded post-mining landscapes exhibit unique biotic and abiotic components and processes relative to predisturbance natural ecosystems. Yet the concept of pre-disturbance reference natural ecosystems and their associated soil quality indicators (SQIs) (e.g., pH, soil organic carbon) are prominently used for assessing restoration of post-mining landscapes. Limited reviews exist on the validity, limitations, opportunities and knowledge gaps associated with the application of the concept and SQIs on post-mining landscapes. Hence, evidence was examined to highlight constraints, opportunities and future research directions pertaining to the concept and SQIs. First, as novel, hybrid or designer ecosystems, severely degraded post-mining landscapes lack reference natural ecosystems. The framing of restoration is multi-dimensional, and dependent on spatial and temporal scales. Therefore, short-term data on SQIs often measured at point scale cannot adequately account for the multi-dimensionality and scales. Moreover, evidence linking SQIs to ecosystem functions, goods, values, services, and benefits on degraded post-mining landscapes remains weak. Potential redundancy exists among SQIs, because soil properties exhibit spatial and temporal correlation. The universality of SQIs remains unconfirmed, because data validating the measurement protocols and interpretation of SQIs across various biomes are scarce. A framework is presented proposing: (1) a shift from the concept of reference natural ecosystems to novel and designer ecosystems in restoration ecology, (2) the development of the next generation of hierarchical or ecosystem cascade indicators, and end-points addressing the multi-dimensionality and scale issues, and (3) a decision matrix for integrating novel, hybrid and designer ecosystems. The potential applications of novel tools such as drones, laser-based cameras, genomics, and big data analytics are highlighted. Such novel tools could unravel the complex linkages among biotic and abiotic components, and ecosystem function and services, which are currently difficult to investigate using conventional techniques. Finally, ten tentative hypotheses are presented on the restoration of degraded post-mining landscapes.&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-the-message-right-on-nature-based-solutions-to-climate-change&quot;&gt;Getting the message right on nature-based solutions to climate change&lt;/h3&gt;
-
-&lt;p&gt;Nature-based solutions (NbS)-solutions to societal challenges that involve working with nature-have recently gained popularity as an integrated approach that can address climate change and biodiversity loss, while supporting sustainable development. Although well-designed NbS can deliver multiple benefits for people and nature, much of the recent limelight has been on tree planting for carbon sequestration. There are serious concerns that this is distracting from the need to rapidly phase out use of fossil fuels and protect existing intact ecosystems. There are also concerns that the expansion of forestry framed as a climate change mitigation solution is coming at the cost of carbon rich and biodiverse native ecosystems and local resource rights. Here, we discuss the promise and pitfalls of the NbS framing and its current political traction, and we present recommendations on how to get the message right. We urge policymakers, practitioners and researchers to consider the synergies and trade-offs associated with NbS and to follow four guiding principles to enable NbS to provide sustainable benefits to society: (1) NbS are not a substitute for the rapid phase out of fossil fuels; (2) NbS involve a wide range of ecosystems on land and in the sea, not just forests; (3) NbS are implemented with the full engagement and consent of Indigenous Peoples and local communities in a way that respects their cultural and ecological rights; and (4) NbS should be explicitly designed to provide measurable benefits for biodiversity. Only by following these guidelines will we design robust and resilient NbS that address the urgent challenges of climate change and biodiversity loss, sustaining nature and people together, now and into the future.&lt;/p&gt;
-
-&lt;h3 id=&quot;assessment-of-the-interpretability-of-data-mining-for-the-spatial-modelling-of-water-erosion-using-game-theory&quot;&gt;Assessment of the interpretability of data mining for the spatial modelling of water erosion using game theory&lt;/h3&gt;
-
-&lt;p&gt;This study undertook a comprehensive application of 15 data mining (DM) models, most of which have, thus far, not been commonly used in environmental sciences, to predict land susceptibility to water erosion hazard in the Kahorestan catchment, southern Iran. The DM models were BGLM, BGAM, Cforest, CITree, GAMS, LRSS, NCPQR, PLS, PLSGLM, QR, RLM, SGB, SVM, BCART and BTR. We identified 18 factors usually considered as key controls for water erosion, comprising 10 factors extracted from a digital elevation model (DEM), three indices extracted from Landsat 8 images, a sediment connectivity index (SCI) and three other intrinsic factors. Three indicators consisting of MAE, MBE, RMSE, and a Taylor diagram were applied to assess model performance and accuracy. Game theory was applied to assess the interpretability of the DM models for predicting water erosion hazard. Among the 15 predictive models, BGAM and PLS respectively returned the best and worst performance in predicting water erosion hazard in the study area. The most accurate model, BGAM predicted that 22%, 8.2%, 9.4% and 60.4% of the total area should be classified as low, moderate, high and very high susceptibility to soil erosion by water, respectively. Based on BGAM and game theory, the factors extracted from the DEM (e.g., DEM, TWI, Slope, TST, TRI, and SPI) were considered the most important ones controlling the predicted severity of soil erosion by water. We conclude that overall, game theory is a valuable technique for assessing the interpretability of predictive models because this theory through SHAP (Shapley additive explanations) and PFIM (permutation feature importance measure) addresses the important concerns regarding the interpretability of more complex DM models.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 29, 2021.&lt;/p&gt;
   </content>
 </entry>
 
