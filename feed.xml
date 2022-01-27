@@ -4,13 +4,184 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2021-12-21T21:08:41+11:00</updated>
+<updated>2022-01-28T10:28:57+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/01/journalDigest" />
+  <id>/2022/01/journalDigest</id>
+  <updated>2022-01-29T00:00:00-00:00</updated>
+  <published>2022-01-29T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-3&quot;&gt;Journal Paper Digests 2022 #3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Estimating cation exchange capacity from agronomic soil tests: Comparing Mehlich-3 and ammonium acetate sum of cations&lt;/li&gt;
+  &lt;li&gt;Evaluation of Mehlich-3 for determination of cation exchange capacity in Kansas soils&lt;/li&gt;
+  &lt;li&gt;The meaning of net zero and how to get it right&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;the-meaning-of-net-zero-and-how-to-get-it-right&quot;&gt;The meaning of net zero and how to get it right&lt;/h3&gt;
+
+&lt;p&gt;The concept of net-zero carbon emissions has emerged from physical climate science. However, it is operationalized through social, political and economic systems. We identify seven attributes of net zero, which are important to make it a successful framework for climate action. The seven attributes highlight the urgency of emission reductions, which need to be front-loaded, and of coverage of all emission sources, including currently difficult ones. The attributes emphasize the need for social and environmental integrity. This means carbon dioxide removals should be used cautiously and the use of carbon offsets should be regulated effectively. Net zero must be aligned with broader sustainable development objectives, which implies an equitable net-zero transition, socio-ecological sustainability and the pursuit of broad economic opportunities.&lt;/p&gt;
+
+&lt;p&gt;Net-zero emissions is more than a concept of physical climate science. It is implemented in social, political and economic contexts. This Perspective proposes seven attributes that are critical for the practical and effective implementation of net zero.&lt;/p&gt;
+
+&lt;h3 id=&quot;estimating-cation-exchange-capacity-from-agronomic-soil-tests-comparing-mehlich-3-and-ammonium-acetate-sum-of-cations&quot;&gt;Estimating cation exchange capacity from agronomic soil tests: Comparing Mehlich-3 and ammonium acetate sum of cations&lt;/h3&gt;
+
+&lt;p&gt;Soil cation exchange capacity (CEC) measures the capability of soils to hold and release nutrients. It is an important measure for classifying soils and planning nutrient additions, but it is not included in routine soil tests offered to farmers. In this study, we compared CEC measured with standard laboratory practices (neutral ammonium acetate [AAc]) with CEC estimated from agronomic soil test data (Mehlich-3 and AAc). We applied previously published estimation methods to a dataset of 48 soil samples. Based on the results, traditional methods underestimate measured cation exchange capacity by 36% for Mehlich-3 and 24% for AAc. The estimation can be improved by including aluminium (12% overestimate) or by fitting a localized pedotransfer function (3% underestimate), which offers a possibility for informing land managers about their soil nutrient holding capacity without adding costs to the analysis.&lt;/p&gt;
+
+&lt;h3 id=&quot;evaluation-of-mehlich-3-for-determination-of-cation-exchange-capacity-in-kansas-soils&quot;&gt;Evaluation of Mehlich-3 for determination of cation exchange capacity in Kansas soils&lt;/h3&gt;
+
+&lt;p&gt;Soil testing laboratories across the United States have implemented the Mehlich-3 (M3) extraction method for phosphorus (P) and other nutrients. Though M3 is known to work well as a multinutrient extractant, it raises concerns for measuring exchangeable cations, particularly in calcareous soils. The objectives of this study were (a) to evaluate M3 as an extractant for base cations for Kansas soils, (b) to identify a range of soil pH where M3 may be a suitable replacement for ammonium acetate (AA), and (c) to examine the relationship between cation exchange capacity (CEC) summation and CEC displacement. A study was conducted evaluating 308 soils collected from across Kansas and extracted using both the M3 and AA soil extraction methods. Cation exchange capacity was estimated using the summation approach from measurements of both the M3 and AA, and the displacement method. Results indicate a strong correlation among M3 and AA methods for K, Mg, and Na (R-2 = .98, .96, .97, respectively). However, these relationships were considerably weaker for extractable Ca (R-2 = .78), where extractable Ca was higher in the M3 extracts for high pH soils. Estimated CEC was also affected by soil pH for the M3 method, with an estimated critical pH value of 7.3. Extractable Ca and CEC for soils with a pH below 7.3 showed a strong correlation between M3 and AA methods (R-2 = .9). Using M3 as a multinutrient extractant can improve turnaround time for sample analysis in soil testing laboratories. However, the use of the M3 procedure in soils with a pH of 7.3 or above will likely result in overestimation of exchangeable Ca and CEC.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/01/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on January 29, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/01/journalDigest" />
+  <id>/2022/01/journalDigest</id>
+  <updated>2022-01-28T00:00:00-00:00</updated>
+  <published>2022-01-28T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-2&quot;&gt;Journal Paper Digests 2022 #2&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mechanisms of soil organic carbon stability and its response to no-till: A global synthesis and perspective&lt;/li&gt;
+  &lt;li&gt;Global variation in soil carbon sequestration potential through improved cropland management&lt;/li&gt;
+  &lt;li&gt;Beyond bulk: Density fractions explain heterogeneity in global soil carbon abundance and persistence&lt;/li&gt;
+  &lt;li&gt;What Can We Learn From the Water Retention Characteristic of a Soil Regarding Its Hydrological and Agricultural Functions? Review and Analysis of Actual Knowledge&lt;/li&gt;
+  &lt;li&gt;Soil carbon stocks in temperate grasslands differ strongly across sites but are insensitive to decade-long fertilization&lt;/li&gt;
+  &lt;li&gt;A global overview of studies about land management, land-use change, and climate change effects on soil organic carbon&lt;/li&gt;
+  &lt;li&gt;A new open-path eddy covariance method for nitrous oxide and other trace gases that minimizes temperature corrections&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;a-new-open-path-eddy-covariance-method-for-nitrous-oxide-and-other-trace-gases-that-minimizes-temperature-corrections&quot;&gt;A new open-path eddy covariance method for nitrous oxide and other trace gases that minimizes temperature corrections&lt;/h3&gt;
+
+&lt;p&gt;Low-power, open-path gas sensors enable eddy covariance (EC) flux measurements in remote areas without line power. However, open-path flux measurements are sensitive to fluctuations in air temperature, pressure, and humidity. Laser-based, open-path sensors with the needed sensitivity for trace gases like methane (CH4) and nitrous oxide (N2O) are impacted by additional spectroscopic effects. Corrections for these effects, especially those related to temperature fluctuations, often exceed the flux of gases, leading to large uncertainties in the associated fluxes. For example, the density and spectroscopic corrections arising from temperature fluctuations can be one or two orders of magnitude greater than background N2O fluxes. Consequently, measuring background fluxes with laser-based, open-path sensors is extremely challenging, particularly for N2O and gases with similar high-precision requirements. We demonstrate a new laser-based, open-path N2O sensor and a general approach applicable to other gases that minimizes temperature-related corrections for EC flux measurements. The method identifies absorption lines with spectroscopic effects in the opposite direction of density effects from temperature and, thus, density and spectroscopic effects nearly cancel one another. The new open-path N2O sensor was tested at a corn (Zea mays L.) field in Southwestern Michigan, United States. The sensor had an optimal precision of 0.1 ppbv at 10 Hz and power consumption of 50 W. Field trials showed that temperature-related corrections were 6% of density corrections, reducing EC random errors by 20-fold compared to previously examined lines. Measured open-path N2O EC fluxes showed excellent agreement with those made with static chambers (m = 1.0 +/- 0.3; r(2) = .96). More generally, we identified absorption lines for CO2 and CH4 flux measurements that can reduce the temperature-related corrections by 10-100 times compared to existing open-path sensors. The proposed method provides a new direction for future open-path sensors, facilitating the expansion of accurate EC flux measurements.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-global-overview-of-studies-about-land-management-land-use-change-and-climate-change-effects-on-soil-organic-carbon&quot;&gt;A global overview of studies about land management, land-use change, and climate change effects on soil organic carbon&lt;/h3&gt;
+
+&lt;p&gt;Major drivers of gains or losses in soil organic carbon (SOC) include land management, land-use change, and climate change. Thousands of original studies have focused on these drivers of SOC change and are now compiled in a growing number of meta-analyses. To critically assess the research efforts in this domain, we retrieved and characterized 192 meta-analyses of SOC stocks or concentrations. These meta-analyses comprise more than 13,200 original studies conducted from 1910 to 2020 in 150 countries. First, we show that, despite a growing number of studies over time, the geographical coverage of studies is limited. For example, the effect of land management, land-use change, and climate change on SOC has been only occasionally studied in North and Central Africa, and in the Middle East and Central Asia. Second, the meta-analyses investigated a limited number of land management practices, mostly mineral fertilization, organic amendments, and tillage. Third, the meta-analyses demonstrated relatively low quality and transparency. Lastly, we discuss the mismatch between the increasing number of studies and the need for more local, reusable, and diversified knowledge on how to preserve high SOC stocks or restore depleted SOC stocks.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-carbon-stocks-in-temperate-grasslands-differ-strongly-across-sites-but-are-insensitive-to-decade-long-fertilization&quot;&gt;Soil carbon stocks in temperate grasslands differ strongly across sites but are insensitive to decade-long fertilization&lt;/h3&gt;
+
+&lt;p&gt;Enhancing soil carbon (C) storage has the potential to offset human-caused increases in atmospheric CO2. Rising CO2 has occurred concurrently with increasing supply rates of biologically limiting nutrients such as nitrogen (N) and phosphorus (P). However, it is unclear how increased supplies of N and P will alter soil C sequestration, particularly in grasslands, which make up nearly a third of non-agricultural land worldwide. Here, we leverage a globally distributed nutrient addition experiment (the Nutrient Network) to examine how a decade of N and P fertilization (alone and in combination) influenced soil C and N stocks at nine grassland sites spanning the continental United States. We measured changes in bulk soil C and N stocks and in three soil C fractions (light and heavy particulate organic matter, and mineral-associated organic matter fractions). Nutrient amendment had variable effects on soil C and N pools that ranged from strongly positive to strongly negative, while soil C and N pool sizes varied by more than an order of magnitude across sites. Piecewise SEM clarified that small increases in plant C inputs with fertilization did not translate to greater soil C storage. Nevertheless, peak season aboveground plant biomass (but not root biomass or production) was strongly positively related to soil C storage at seven of the nine sites, and across all nine sites, soil C covaried with moisture index and soil mineralogy, regardless of fertilization. Overall, we show that site factors such as moisture index, plant productivity, soil texture, and mineralogy were key predictors of cross-site soil C, while nutrient amendment had weaker and site-specific effects on C sequestration. This suggests that prioritizing the protection of highly productive temperate grasslands is critical for reducing future greenhouse gas losses arising from land use change.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-can-we-learn-from-the-water-retention-characteristic-of-a-soil-regarding-its-hydrological-and-agricultural-functions-review-and-analysis-of-actual-knowledge&quot;&gt;What Can We Learn From the Water Retention Characteristic of a Soil Regarding Its Hydrological and Agricultural Functions? Review and Analysis of Actual Knowledge&lt;/h3&gt;
+
+&lt;p&gt;The soil properties of the upper soil layer determine the partitioning between infiltration, runoff, and evaporation, key processes related to soil agricultural and hydrological functioning. It is therefore important to have some information on these soil functions based on available and easy-to-measure properties. This study presents what we can learn a-priori from the soil water retention characteristic (WRC) on some important hydrological and agricultural functions. Based on a mathematical expression of the soil WRC, it is possible to estimate: the characteristic length, L-C, related to the disruption of hydraulic continuity of the water liquid phase in the soil; the saturated hydraulic conductivity K-s; the unsaturated hydraulic conductivity function of water and air, K(theta(w)) and K(theta(a)); the saturation degree S-eFC at field capacity and how long it will take to reach that state; the available water content in the soil, AWC; the capillary head at the wetting front, psi(f); the infiltration capacity curve based on the Green and Ampt model, q(cap)(t); the time to ponding, t(p), for any prescribed wetting rate; the cumulative water loss during stage-1 evaporation; the duration of stage-1 evaporation. All these a-priori estimates are valuable and sometimes necessary for efficient design and planning in agricultural and hydrological applications. The values of these estimates depend upon the specific mathematical expression chosen to represent the WRC.&lt;/p&gt;
+
+&lt;h3 id=&quot;beyond-bulk-density-fractions-explain-heterogeneity-in-global-soil-carbon-abundance-and-persistence&quot;&gt;Beyond bulk: Density fractions explain heterogeneity in global soil carbon abundance and persistence&lt;/h3&gt;
+
+&lt;p&gt;Understanding the controls on the amount and persistence of soil organic carbon (C) is essential for predicting its sensitivity to global change. The response may depend on whether C is unprotected, isolated within aggregates, or protected from decomposition by mineral associations. Here, we present a global synthesis of the relative influence of environmental factors on soil organic C partitioning among pools, abundance in each pool (mg C g(-1) soil), and persistence (as approximated by radiocarbon abundance) in relatively unprotected particulate and protected mineral-bound pools. We show that C within particulate and mineral-associated pools consistently differed from one another in degree of persistence and relationship to environmental factors. Soil depth was the best predictor of C abundance and persistence, though it accounted for more variance in persistence. Persistence of all C pools decreased with increasing mean annual temperature (MAT) throughout the soil profile, whereas persistence increased with increasing wetness index (MAP/PET) in subsurface soils (30-176 cm). The relationship of C abundance (mg C g(-1) soil) to climate varied among pools and with depth. Mineral-associated C in surface soils (&amp;lt;30 cm) increased more strongly with increasing wetness index than the free particulate C, but both pools showed attenuated responses to the wetness index at depth. Overall, these relationships suggest a strong influence of climate on soil C properties, and a potential loss of soil C from protected pools in areas with decreasing wetness. Relative persistence and abundance of C pools varied significantly among land cover types and soil parent material lithologies. This variability in each pool’s relationship to environmental factors suggests that not all soil organic C is equally vulnerable to global change. Therefore, projections of future soil organic C based on patterns and responses of bulk soil organic C may be misleading.&lt;/p&gt;
+
+&lt;h3 id=&quot;global-variation-in-soil-carbon-sequestration-potential-through-improved-cropland-management&quot;&gt;Global variation in soil carbon sequestration potential through improved cropland management&lt;/h3&gt;
+
+&lt;p&gt;Widespread adoption of improved cropland management measures is advocated to increase soil organic carbon (SOC) levels, thereby improving soil fertility and mitigating climate change. However, spatially explicit insight on management impacts is limited, which is crucial for region-specific and climate-smart practices. To overcome these limitations, we combined global meta-analytical results on improved management practices on SOC sequestration with spatially explicit data on current management practices and potential areas for the adoption of these measures. We included (a) fertilization practices, i.e., use of organic fertilizer compared to inorganic fertilizer or no fertilizer, (b) soil tillage practices, i.e., no-tillage relative to high or intermediate intensity tillage, and (c) crop management practices, i.e., use of cover crops and enhanced crop residue incorporation. We show that the estimated global C sequestration potential varies between 0.44 and 0.68 Gt C yr(-1), assuming maximum complementarity among all measures taken. A more realistic estimate, not assuming maximum complementarity, is from 0.28 to 0.43 Gt C yr(-1), being on the lower end of the current range of 0.1-2 Gt C yr(-1) found in the literature. One reason for the lower estimate is the limited availability of manure that has not yet been recycled. Another reason is the limited area for the adoption of improved measures, considering their current application and application limitations. We found large regional differences in carbon sequestration potential due to differences in yield gaps, SOC levels, and current practices applied. The highest potential is found in regions with low crop production, low initial SOC levels, and in regions where livestock manure and crop residues are only partially recycled. Supporting previous findings, we highlight that to encourage both soil fertility and SOC sequestration, it is best to focus on agricultural soils with large yield gaps and/or where SOC values are below levels that may limit crop production.&lt;/p&gt;
+
+&lt;h3 id=&quot;mechanisms-of-soil-organic-carbon-stability-and-its-response-to-no-till-a-global-synthesis-and-perspective&quot;&gt;Mechanisms of soil organic carbon stability and its response to no-till: A global synthesis and perspective&lt;/h3&gt;
+
+&lt;p&gt;Mechanisms of soil organic carbon (SOC) stabilization have been widely studied due to their relevance in the global carbon cycle. No-till (NT) has been frequently adopted to sequester SOC; however, limited information is available regarding whether sequestered SOC will be stabilized for long term. Thus, we reviewed the mechanisms affecting SOC stability in NT systems, including the priming effects (PE), molecular structure of SOC, aggregate protection, association with soil minerals, microbial properties, and environmental effects. Although a more steady-state molecular structure of SOC is observed in NT compared with conventional tillage (CT), SOC stability may depend more on physical and chemical protection. On average, NT improves macro-aggregation by 32.7%, and lowers SOC mineralization in macro-aggregates compared with CT. Chemical protection is also important due to the direct adsorption of organic molecules and the enhancement of aggregation by soil minerals. Higher microbial activity in NT could also produce binding agents to promote aggregation and the formation of metal-oxidant organic complexes. Thus, microbial residues could be stabilized in soils over the long term through their attachment to mineral surfaces and entrapment of aggregates under NT. On average, NT reduces SOC mineralization by 18.8% and PE intensities after fresh carbon inputs by 21.0% compared with CT (p &amp;lt; .05). Although higher temperature sensitivity (Q(10)) is observed in NT due to greater Q(10) in macro-aggregates, an increase of soil moisture regime in NT could potentially constrain the improvement of Q(10). This review improves process-based understanding of the physical and chemical mechanism of protection that can act, independently or interactively, to enhance SOC preservation. It is concluded that SOC sequestered in NT systems is likely to be stabilized over the long term.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/01/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on January 28, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/01/journalDigest" />
+  <id>/2022/01/journalDigest</id>
+  <updated>2022-01-27T00:00:00-00:00</updated>
+  <published>2022-01-27T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-1&quot;&gt;Journal Paper Digests 2022 #1&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bacterial and archaeal taxa are reliable indicators of soil restoration across distributed calcareous grasslands&lt;/li&gt;
+  &lt;li&gt;Soil health cluster analysis based on national monitoring of soil indicators&lt;/li&gt;
+  &lt;li&gt;What is a good level of soil organic matter? An index based on organic carbon to clay ratio&lt;/li&gt;
+  &lt;li&gt;Biochar in climate change mitigation&lt;/li&gt;
+  &lt;li&gt;Digital trust substitution technologies to support smallholder livelihoods in Sub-Saharan Africa&lt;/li&gt;
+  &lt;li&gt;Humic Substances: Hypotheses and Reality (a Review)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;bacterial-and-archaeal-taxa-are-reliable-indicators-of-soil-restoration-across-distributed-calcareous-grasslands&quot;&gt;Bacterial and archaeal taxa are reliable indicators of soil restoration across distributed calcareous grasslands&lt;/h3&gt;
+
+&lt;p&gt;Land-use intensification can reduce soil carbon stocks and changes microbial community biodiversity and functionality. However, there is a lack of consensus on whether management consistently affects microbial biodiversity across geographic scales, and how this relates to altered soil function. From a regulatory and monitoring perspective, there is a need to identify functionally relevant indicators of land use in order to evaluate the progress of soil restoration approaches. We performed a landscape-scale survey of unimproved calcareous grasslands paired with local arable contrasts, and assessed the consistency of responses in a variety of soil, biotic and functional measures. In addition, adjacent grasslands undergoing restoration were assessed to identify soil microbial indicators of recovery. Organic matter content was consistently larger in grasslands than in arable fields, and increased with time in the restoring sites. Molecular comparisons of grassland versus arable soils revealed numerous bacterial, archaeal and fungal indicators, with more representatives of Ca. Xiphinematobacter, DA101, Bradyrhizobium, Rhodoplanes, Mycobacteria and Mortierella in old grassland soils, whereas Nitrososphaera, Sporosarcina and Alternaria infectoria were more abundant in arable soils. Extracellular enzymatic responses were more variable, with none of the eight investigated enzymes being consistent indicators of grassland or arable soils. Correlation analyses, incorporating the molecular and enzymatic responses across all surveyed soils, revealed that molecular indicators were more strongly correlated with soil organic matter increases with restoration of arable soils. Our results highlight that microbial taxa are among the most sensitive indicators of soil restoration, and we identify consistent responses of specific taxa to management across geographic scales. This discovery will be important for both the instigation and monitoring of soil restoration.&lt;/p&gt;
+
+&lt;p&gt;Highlights&lt;/p&gt;
+
+&lt;p&gt;Soil microbes are key drivers of soil ecosystem services and are affected by management&lt;/p&gt;
+
+&lt;p&gt;Calcareous grassland exhibited abundant Verrucomicrobia; cropping increased Nitrososphaera&lt;/p&gt;
+
+&lt;p&gt;These taxa responded to SOM increases with grassland restoration, more so than enzymes and fungi&lt;/p&gt;
+
+&lt;p&gt;Microbes provide consistent, site-independent indicators for calcareous grassland soil function restoration&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-health-cluster-analysis-based-on-national-monitoring-of-soil-indicators&quot;&gt;Soil health cluster analysis based on national monitoring of soil indicators&lt;/h3&gt;
+
+&lt;p&gt;A major challenge in soil science is to monitor and understand the state and change of soils at a national scale to inform decision making and policy. To address this, there is a need to identify key parameters for soil health and function and determine how they relate to other parameters, including traditional soil surveys. Here we present a national-scale dataset of topsoil sampled as part of a wider agri-environment monitoring scheme in Wales, UK. Over 1,350 topsoils (0-15 cm) were sampled across a very wide range of habitats and a range of physical, chemical and biological soil quality indicators were measured. We show consistent differences in soil physicochemical properties across habitat types, with carbon decreasing and pH increasing across the habitat productivity gradient from bogs through woodlands and grasslands to arable systems. The soils within our dataset are largely within the limits identified as important for supporting habitat function, with the exception of excessive phosphate levels in mesotrophic grassland. Cluster detection methods identified four soil functional classes based on measured topsoil properties, which were more related to habitat type than the genesis-based soil classification from soil maps. These soil functional classes can be interpreted as phenoforms within the soil genoforms found by traditional soil classification. This shows the importance of land-use management in determining the soil health and functional capacity of soils. Our work provides an account of the current state of soil health in Wales, its relationship to soil function and a baseline for future monitoring to track changes against agri-environment and other policy targets.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-a-good-level-of-soil-organic-matter-an-index-based-on-organic-carbon-to-clay-ratio&quot;&gt;What is a good level of soil organic matter? An index based on organic carbon to clay ratio&lt;/h3&gt;
+
+&lt;p&gt;Simple measures of appropriate levels of soil organic matter are needed for soil evaluation, management and monitoring, based on readily measurable soil properties. We test an index of soil organic matter based on the soil organic carbon (SOC) to clay ratio, defined by thresholds of SOC/clay ratio for specified levels of soil structural quality. The thresholds were originally delineated for a small number of Swiss soils. We assess the index using data from the initial sampling (1978-83) of the National Soil Inventory of England and Wales, covering 3,809 sites under arable land, grassland and woodland. Land use, soil type, annual precipitation and soil pH together explained 21% of the variance in SOC/clay ratio in the dataset, with land use the most important variable. Thresholds of SOC/clay ratio of 1/8, 1/10 and 1/13 indicated the boundaries between “very good”, “good”, “moderate” and “degraded” levels of structural condition. On this scale, 38.2, 6.6 and 5.6% of arable, grassland and woodland sites, respectively, were degraded. The index gives a method to assess and monitor soil organic matter at national, regional or sub-regional scales based on two routinely measured soil properties. Given the wide range of soils and land uses across England and Wales in the dataset used to test the index, we suggest it should apply to other European soils in similar climate zones. Highlights&lt;/p&gt;
+
+&lt;p&gt;We assess the use of SOC/clay ratios as guidelines for soil management in England and Wales. We use data from 3,809 sites to assess thresholds based on work for Polish, French and Swiss soils. SOC/clay threshold values can indicate degraded and good soil structural condition. The thresholds show the effect of land use and provide an index for use in England and Wales.&lt;/p&gt;
+
+&lt;h3 id=&quot;biochar-in-climate-change-mitigation&quot;&gt;Biochar in climate change mitigation&lt;/h3&gt;
+
+&lt;p&gt;Climate change mitigation strategies based on biochar generation-and its application to agricultural soils-can effectively sequester carbon, although biogeochemical and economic trade-offs must be considered.&lt;/p&gt;
+
+&lt;p&gt;Climate change mitigation not only requires reductions of greenhouse gas emissions, but also withdrawal of carbon dioxide (CO2) from the atmosphere. Here we review the relationship between emissions reductions and CO2 removal by biochar systems, which are based on pyrolysing biomass to produce biochar, used for soil application, and renewable bioenergy. Half of the emission reductions and the majority of CO2 removal result from the one to two orders of magnitude longer persistence of biochar than the biomass it is made from. Globally, biochar systems could deliver emission reductions of 3.4-6.3 PgCO(2)e, half of which constitutes CO2 removal. Relevant trade-offs exist between making and sequestering biochar in soil or producing more energy. Importantly, these trade-offs depend on what type of energy is replaced: relative to producing bioenergy, emissions of biochar systems increase by 3% when biochar replaces coal, whereas emissions decrease by 95% when biochar replaces renewable energy. The lack of a clear relationship between crop yield increases in response to fertilizer and to biochar additions suggests opportunities for biochar to increase crop yields where fertilizer alone is not effective, but also questions blanket recommendations based on known fertilizer responses. Locally specific decision support must recognize these relationships and trade-offs to establish carbon-trading mechanisms that facilitate a judicious implementation commensurate with climate change mitigation needs.&lt;/p&gt;
+
+&lt;h3 id=&quot;digital-trust-substitution-technologies-to-support-smallholder-livelihoods-in-sub-saharan-africa&quot;&gt;Digital trust substitution technologies to support smallholder livelihoods in Sub-Saharan Africa&lt;/h3&gt;
+
+&lt;p&gt;Blockchain technology has the potential to reduce the need for trust and to ensure accountability and equity in smallholder agricultural development. We present two applications - one already in progress and one hypothetical - using blockchain to address market failures in the smallholder sector in Sub-Saharan Africa. First, we explore BanQu, a blockchain-based platform used by Anheuser-Busch InBev to create verified financial identities for smallholders along the supply chain. Second, we discuss a hypothetical blockchain application to improve the reliability of actors within smallholder dairy cooperatives. Blockchain applications in smallholder agriculture could be transformative, serving as substitutes for trust, but alone blockchain is not a solution to the multiple challenges facing the smallholder farming sector.&lt;/p&gt;
+
+&lt;h3 id=&quot;humic-substances-hypotheses-and-reality-a-review&quot;&gt;Humic Substances: Hypotheses and Reality (a Review)&lt;/h3&gt;
+
+&lt;p&gt;The term humic substances (HS) refers to a group of heterogeneous, dark-colored polydisperse substances found in soils, peats, natural waters, and sediments. It is hypothesized that HSs are formed as a result of degradation and transformation of biomolecules of organic residues and free radical condensation reactions (a process called humification). Humic substances are classified as a special category of natural compounds that are dissimilar to the biomolecules of plant and microbial tissues, and are resistant to biodegradation. On the basis of their solubility in alkalis, HSs are divided into humic acids (HAs, soluble, precipitated at pH &amp;lt; 2), fulvic acids (FAs, soluble at all pH values), and humin (insoluble residue). The review provides a critical analysis of the HS terminology and nomenclature, the method of extraction of HS from natural objects, and the hypotheses describing their formation. The ambiguity and duality of the concept of HSs (specific compounds and the sum of operational fractions) are demonstrated, as well as an arbitrary character of the division of organic matter (OM) into the dark-colored compounds of poorly defined structure (HSs) and the substances with a known structure (non-HSs). The interpretation of HSs as mass products of a secondary synthesis requires revision. The possibility of extracellular free radical reactions in soils leaves no doubt; however, a quantitative contribution of the corresponding products to the natural OM has not been established yet. The traditional alkaline extraction should be considered as a method for isolation of hydrophilic polar substances, while the precipitation with acid as their concentration for further analysis. The historical names of humic fractions (HAs, FAs, and humin) should be retained as well-established generic terms and names of the preparations obtained in a certain way without attaching unique features and specificity to all components of these fractions. The C-HA/C-FA (or C-HA/C-org) ratios are simple and convenient indicators of the types of humus reflecting bioclimatic conditions of its formation.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/01/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on January 27, 2022.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -935,169 +1106,6 @@ Carbon sequestration and storage in mangroves, salt marshes and seagrass meadows
 &lt;p&gt;We estimate annual runoff by using a Bayesian geostatistical model for interpolation of hydrological data of different spatial support: streamflow observations from catchments (areal data), and precipitation and evaporation data (point data). The model contains one climatic spatial effect that is common for all years under study, and 1 year specific spatial effect. Hence, the framework enables a quantification of the spatial variability caused by long-term weather patterns and processes. This can contribute to a better understanding of biases and uncertainties in environmental modelling. The suggested model is evaluated by predicting annual runoff for catchments around Voss in Norway and through a simulation study. We find that on average we benefit from combining point and areal data compared to using only one of the data types, and that the interaction between nested areal data and point data gives a spatial model that takes us beyond smoothing. Another finding is that when climatic effects dominate over annual effects, systematic under- and overestimation of runoff can be expected over time. However, a dominating climatic spatial effect also implies that short records of runoff from an otherwise ungauged catchment can lead to large improvements in the predictive performance.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 30, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
-  <id>/2021/08/journalDigest</id>
-  <updated>2021-08-07T00:00:00-00:00</updated>
-  <published>2021-08-07T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-27&quot;&gt;Journal Paper Digests 2021 #27&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Toward Developing a Generalizable Pedotransfer Function for Saturated Hydraulic Conductivity Using Transfer Learning and Predictor Selector Algorithm&lt;/li&gt;
-  &lt;li&gt;A Robust Drought Index Accounting Changing Precipitation Characteristics&lt;/li&gt;
-  &lt;li&gt;The impact of climate change on the productivity of conservation agriculture&lt;/li&gt;
-  &lt;li&gt;Global patterns of geo-ecological controls on the response of soil respiration to warming&lt;/li&gt;
-  &lt;li&gt;Microplastics in terrestrial ecosystems: Moving beyond the state of the art to minimize the risk of ecological surprise&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;toward-developing-a-generalizable-pedotransfer-function-for-saturated-hydraulic-conductivity-using-transfer-learning-and-predictor-selector-algorithm&quot;&gt;Toward Developing a Generalizable Pedotransfer Function for Saturated Hydraulic Conductivity Using Transfer Learning and Predictor Selector Algorithm&lt;/h3&gt;
-
-&lt;p&gt;Pedotransfer functions (PTFs) are being instrumental in saturated hydraulic conductivity (K-s) estimation. Despite various advancements, the performance of existing generic K-s predicting PTFs need augmentation. This study developed a robust K-s predicting PTF using a machine learning (ML) algorithm and exhaustive data set for 324 soils with 28 properties sampled over a tropical savanna region of India. Four ML algorithms were evaluated for this purpose, and random forest (RF) outperformed all others. A substantial improvement to the prediction by RF-based PTF was achieved through predictor selection using a hybrid wrapper-embedded algorithm. The predictor selection algorithm selected eight pertinent predictors (HID-S): S, Si, C, FSF, C-u, GMD, D-60, and D-10. The mean absolute error (MAE), root mean squared error (RMSE), coefficient of determination (R-2), and Nash-Sutcliffe efficiency (NSE) obtained as average tenfold cross-validation scores for RF algorithm training with HID-S were 0.87, 1.47, 0.94, and 0.94, respectively. The developed PTF (RF-HID-S) was evaluated alongside the recently published PTFs by Araya and Ghezzehei (2019, ), within and outside the study region. In that process, it was observed that the RF-HID-S possessed superior prediction proficiency compared to the recently published and commonly used PTFs in both cases. These findings mark RF-HID-S as the most robust generalizable PTF, which may further be evaluated in different parts of the world. Moreover, looking at the performance of the eight selected predictors within and outside the study region, they can be considered for experiment design globally to make K-s estimation accurate and cost-effective.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-robust-drought-index-accounting-changing-precipitation-characteristics&quot;&gt;A Robust Drought Index Accounting Changing Precipitation Characteristics&lt;/h3&gt;
-
-&lt;p&gt;A realistic evaluation of drought onset is inevitable for the effective implementation of mitigation strategies. Meteorological droughts indicating the onset of drought propagation are usually quantified through unbiased indices that consider the month-wise magnitude variations in historical climatic variables, while completely ignoring their intramonthly distributions. However, the applicability of such indices under the present scenario of changing climate, where intense short wet spells are reportedly increasing, is questionable. Such changes in the wet spells could eventually lead to prolonged intramonthly dry spells, which in turn will pose many agricultural and socioeconomic risks. To monitor the changed scenario realistically, we propose a new drought index-the Standardized Net-Precipitation Distribution Index (SNEPI), which incorporates the distribution characteristics of the daily net-precipitation variable. The applicability of SNEPI is critically evaluated using synthetically generated and observed precipitation series over six diverse climatic locations of India, at 1-, 3-, 6-, and 12-month time scales. The utility of SNEPI is more profound for longer time scales, understandably due to the enhanced emphasis imparted on the distribution of rainfall spells by the longer periods. Standardized Net-Precipitation Distribution Index proves to be efficient in capturing the present scenario of increasing dryness (wetness) in wet (dry) regions when compared with the traditional Standardized Precipitation Evapotranspiration Index. Hence, the proposed index, which incorporates the changing precipitation characteristics, may aid in better quantification and monitoring of meteorological drought under the scenario of changing climate.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-impact-of-climate-change-on-the-productivity-of-conservation-agriculture&quot;&gt;The impact of climate change on the productivity of conservation agriculture&lt;/h3&gt;
-
-&lt;p&gt;The authors assess the productivity of conservation agriculture systems for eight major crops under current and future climate using a global-scale probabilistic machine-learning approach, revealing substantial differences in yield gain probabilities across crop type, management practice, climate zone and geography.&lt;/p&gt;
-
-&lt;p&gt;Conservation agriculture (CA) is being promoted as a set of management practices that can sustain crop production while providing positive environmental benefits. However, its impact on crop productivity is hotly debated, and how this productivity will be affected by climate change remains uncertain. Here we compare the productivity of CA systems and their variants on the basis of no tillage versus conventional tillage systems for eight major crop species under current and future climate conditions using a probabilistic machine-learning approach at the global scale. We reveal large differences in the probability of yield gains with CA across crop types, agricultural management practices, climate zones and geographical regions. For most crops, CA performed better in continental, dry and temperate regions than in tropical ones. Under future climate conditions, the performance of CA is expected to mostly increase for maize over its tropical areas, improving the competitiveness of CA for this staple crop.&lt;/p&gt;
-
-&lt;h3 id=&quot;global-patterns-of-geo-ecological-controls-on-the-response-of-soil-respiration-to-warming&quot;&gt;Global patterns of geo-ecological controls on the response of soil respiration to warming&lt;/h3&gt;
-
-&lt;p&gt;While soil respiration is known to be controlled by a range of biotic and abiotic factors, its temperature sensitivity in global models is largely related to climate parameters. Here, we show that temperature sensitivity of soil respiration is primarily controlled by interacting soil properties and only secondarily by vegetation traits and plant growth conditions. Temperature was not identified as a primary driver for the response of soil respiration to warming. In contrast, the nonlinearity and large spatial variability of identified controls stress the importance of the interplay among soil, vegetation and climate parameters in controlling warming responses. Global models might predict current soil respiration but not future rates because they neglect the controls exerted by soil development. To accurately predict the response of soil respiration to warming at the global scale, more observational studies across pedogenetically diverse soils are needed rather than focusing on the isolated effect of warming alone.&lt;/p&gt;
-
-&lt;p&gt;Understanding the temperature sensitivity of soil respiration is critical to determining soil carbon dynamics under climate change. Spatial heterogeneity in controls highlights the importance of interactions between vegetation, soil and climate in driving the response of respiration to warming.&lt;/p&gt;
-
-&lt;h3 id=&quot;microplastics-in-terrestrial-ecosystems-moving-beyond-the-state-of-the-art-to-minimize-the-risk-of-ecological-surprise&quot;&gt;Microplastics in terrestrial ecosystems: Moving beyond the state of the art to minimize the risk of ecological surprise&lt;/h3&gt;
-
-&lt;p&gt;Microplastic (plastic particles measuring &amp;lt;5mm) pollution is ubiquitous. Unlike in other well-studied ecosystems, for example, marine and freshwater environments, microplastics in terrestrial systems are relatively understudied. Their potential impacts on terrestrial environments, in particular the risk of causing ecological surprise, must be better understood and quantified. Ecological surprise occurs when ecosystem behavior deviates radically from expectations and generally has negative consequences for ecosystem services. The properties and behavior of microplastics within terrestrial environments may increase their likelihood of causing ecological surprises as they (a) are highly persistent global pollutants that will last for centuries, (b) can interact with the abiotic environment in a complex manner, (c) can impact terrestrial organisms directly or indirectly and (d) interact with other contaminants and can facilitate their transport. Here, we compiled findings of previous research on microplastics in terrestrial environments. We systematically focused on studies addressing different facets of microplastics related to their distribution, dispersion, impact on soil characteristics and functions, levels of biological organization of tested terrestrial biota (single species vs. assemblages), scale of experimental study and corresponding ecotoxicological effects. Our systematic assessment of previous microplastic research revealed that most studies have been conducted on single species under laboratory conditions with short-term exposures; few studies were conducted under more realistic long-term field conditions and/or with multi-species assemblages. Studies targeting multi-species assemblages primarily considered soil bacterial communities and showed that microplastics can alter essential nutrient cycling functions. More ecologically meaningful studies of terrestrial microplastics encompassing multi-species assemblages, critical ecological processes (e.g., biogeochemical cycles and pollination) and interactions with other anthropogenic stressors must be conducted. Addressing these knowledge gaps will provide a better understanding of microplastics as emerging global stressors and should lower the risk of ecological surprise in terrestrial ecosystems.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 07, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
-  <id>/2021/08/journalDigest</id>
-  <updated>2021-08-06T00:00:00-00:00</updated>
-  <published>2021-08-06T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-26&quot;&gt;Journal Paper Digests 2021 #26&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Returning lands to nature&lt;/li&gt;
-  &lt;li&gt;Boosting the generalization ability of Vis-NIR-spectroscopy-based regression models through dimension reduction and transfer learning&lt;/li&gt;
-  &lt;li&gt;One shot evaluation of NPK in soils by “electronic tongue”&lt;/li&gt;
-  &lt;li&gt;Trafficking intensity index for soil compaction management in grasslands&lt;/li&gt;
-  &lt;li&gt;Geophysics conquering new territories: The rise of “agrogeophysics”&lt;/li&gt;
-  &lt;li&gt;Developing a strategy for the national coordinated soil moisture monitoring network&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;returning-lands-to-nature&quot;&gt;Returning lands to nature&lt;/h3&gt;
-
-&lt;p&gt;Land-use-induced ecosystem reduction and degradation has profound impacts on the Earth system. Proceeding with currently unsustainable land use may jeopardize climate and ecosystem restoration targets.&lt;/p&gt;
-
-&lt;h3 id=&quot;boosting-the-generalization-ability-of-vis-nir-spectroscopy-based-regression-models-through-dimension-reduction-and-transfer-learning&quot;&gt;Boosting the generalization ability of Vis-NIR-spectroscopy-based regression models through dimension reduction and transfer learning&lt;/h3&gt;
-
-&lt;p&gt;Calibration regression models based on visible and near-infrared (Vis/NIR) spectroscopy are now widely used in the rapid non-destructive prediction of agricultural products’ quality parameters. However, the distributions of products’ quality parameters and spectral responses are different in various batches of products, so a calibration regression model built on one dataset might be ineffective when tested in another. How to improve the generalization ability of models is a crucial problem and is formulated as ‘Calibration Transfer’. Calibration transfer was firstly proposed to eliminate the difference of spectral responses between spectrometers, but now it has been applied in the transfer between different domains of spectral samples or different components. In this paper, we proposed two robust models with great generalization ability in the calibration transfer task, respectively using dimension reduction and transfer learning, namely SPRS (Standard normal variate, Partial least squares dimension reduction, Ridge regression, Slope/bias) and SNV-based Aug-TrAdaBoost.R2. We tested the two models in spectral datasets of tea leaves to predict the moisture content of samples, it was found that SPRS and SNV-based Aug-TrAdaBoost.R2 can reach great performance over both source and target domains across different batches, different varieties, and different classes of tea leaf samples. SPRS and SNV-based Aug-TrAdaBoost.R2 achieved R2 values of 0.9314 and 0.9895 in cross-tea-class prediction whereas traditional calibration method PLSR + S/B only achieved 0.4874. SPRS had low computation complexity and was more robust while SNV-based Aug-TrAdaBoost.R2 had higher accuracy in target domain prediction but was computationconsuming. The two proposed models showed the potentials of online automatic quality parameters prediction and high-accuracy prediction across domains of various samples.&lt;/p&gt;
-
-&lt;h3 id=&quot;one-shot-evaluation-of-npk-in-soils-by-electronic-tongue&quot;&gt;One shot evaluation of NPK in soils by “electronic tongue”&lt;/h3&gt;
-
-&lt;p&gt;Smart introduction of fertilizers in the soil should help to decrease the negative impact of chemicals on the environment without dramatic reduction of crop yield. The amounts of fertilizers have to be carefully tuned according to actual nutrients content in the soil and vegetation period of the plants. Since most of the chemical soil analyses are performed in the laboratory nowadays, fast and simple analytical tools have to be developed for this task. In this study, a potentiometric multisensor system was used for simultaneous determination of the N, P and K in the water extracts of the soils. It was shown that potentimetric sensors with multivariate data processing can be used for assessment of all three macronutrients, along with estimation of pH and conductivity of soil samples. Correlation coefficients between targeted parameters and sensor responses varied from 0.69 to 0.96. The quantification of N was possible with RMSE of 50 mg/kg in the range 60-426 mg/kg. The main benefits of the proposed approach are the short measurement duration - just 8 min for all the parameters, and reagentless procedure.&lt;/p&gt;
-
-&lt;h3 id=&quot;assessment-of-apparent-n-mineralization-at-field-scale&quot;&gt;Assessment of apparent N mineralization at field scale&lt;/h3&gt;
-
-&lt;p&gt;Quantification of nitrogen mineralization at the field scale is necessary to improve current N fertilizer recommendations. The objective of this study was to identify a suitable set of explanatory variables and an appropriate modelling framework to estimate the average daily amount of N mineralized (DANM) during a corn (Zea mays L.) growing season. In six field experiments in Flat Inland Pampas, Argentina, DANM was evaluated in three different homogeneous zones (HZ), which were defined based on terrain elevation. Mixed-effect generalized linear models were developed that included growing season as random effect as well as HZ, sand, clay, silt, soil organic carbon, and normalized difference vegetation index (NDVI) as fixed effects. Results showed that DANM ranged from 0.19 to 1.25 kg N ha(-1) day(-1) with a mean of 0.64 kg N ha(-1) day(-1), which is equivalent to 110 kg N ha(-1) for the corn growing season. The best model included HZ, sand, and early NDVI measurements, and predicted DANM with an RMSE of 0.19 kg N ha(-1) day(-1). Thus, the model should be improved and tested in the Inland Flat Pampas before it could be used to assess N fertilizer application rates.&lt;/p&gt;
-
-&lt;h3 id=&quot;trafficking-intensity-index-for-soil-compaction-management-in-grasslands&quot;&gt;Trafficking intensity index for soil compaction management in grasslands&lt;/h3&gt;
-
-&lt;p&gt;Good soil structure provides multiple benefits for society but in grass-based production systems is underpinned by trafficking management regime. For Irish soils, there is no soil trafficking intensity index that considers the effect of geo-climatic variability or differences in drainage classes on soil compaction risk. Grazing and machinery activity data were compiled across 38 managed grasslands along with common soil structural quality indicators in order to develop and validate a ‘soil trafficking intensity index for compaction (STICi)’. Two component indices ofSTIC(i)were developed: (a) a grazing trafficking index (G(i), kg x year ha(-1)) and (b) a machinery trafficking index (M-i, kg x year ha(-1)). The average annual grazing trafficking pressure observed was 213,914 kg x year ha(-1), and the average annual machinery trafficking pressure was 4,412 kg x year ha(-1). These figures represent thresholds above which soils are at higher risk of compaction. M(i)spanned a wider range (-2.1 &amp;lt;= M-i &amp;lt;= 2.8) compared with G(i)(-1.32 &amp;lt;= G(i) &amp;lt;= 1.06).STIC(i)and components, when disaggregated by soil drainage class, were able to detect changes in direct indicators of soil structural quality, such as bulk density, total porosity, water holding capacity, water conductivity and visual soil assessment.STICi(M(i)and G(i)) were also related to indirect indicators, such as, soil carbon content, earthworms and microbial biomass. In general, poorly drained sites showed higher vulnerability to machinery trafficking intensity compared with grazing trafficking pressure. At national scale,STIC(i)can be utilized to identify soils at risk of compaction and underpin targeted management advice for supporting sustainable grassland production.&lt;/p&gt;
-
-&lt;h3 id=&quot;geophysics-conquering-new-territories-the-rise-of-agrogeophysics&quot;&gt;Geophysics conquering new territories: The rise of “agrogeophysics”&lt;/h3&gt;
-
-&lt;p&gt;Agriculture is facing immense challenges. We have to produce enough food while safe-guarding the environment for future generations. This results in the need to use less water and fertilizer, and to harness soil quality. Key to achieving this goal is improving the understanding of processes and interactions governing the soil-plant-atmosphere continuum of agricultural ecosystems. Geophysical tools have great potential to better characterize and quantify these processes noninvasively from the plot to landscape scale. Nevertheless, a number of challenges remain for geophysical results to be better exploited by different scientific communities and by decision-makers. In this special section, we explore ongoing research in the relatively new field of agrogeophysics, and we provide an overview of potential applications and highlight future research needs.&lt;/p&gt;
-
-&lt;h3 id=&quot;developing-a-strategy-for-the-national-coordinated-soil-moisture-monitoring-network&quot;&gt;Developing a strategy for the national coordinated soil moisture monitoring network&lt;/h3&gt;
-
-&lt;p&gt;Soil moisture is a critical land surface variable, affecting a wide variety of climatological, agricultural, and hydrological processes. Determining the current soil moisture status is possible via a variety of methods, including in situ monitoring, remote sensing, and numerical modeling. Although all of these approaches are rapidly evolving, there is no cohesive strategy or framework to integrate these diverse information sources to develop and disseminate coordinated national soil moisture products that will improve our ability to understand climate variability. The National Coordinated Soil Moisture Monitoring Network initiative has developed a national strategy for network coordination with NOAA’s National Integrated Drought Information System. The strategy is currently in review within NOAA, and work is underway to implement the initial milestones of the strategy. This update reviews the goals and steps being taken to establish this national-scale coordination for soil moisture monitoring in the United States.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 06, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
-  <id>/2021/08/journalDigest</id>
-  <updated>2021-08-05T00:00:00-00:00</updated>
-  <published>2021-08-05T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-25&quot;&gt;Journal Paper Digests 2021 #25&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A comparison between three legacy soil maps of Zambia at national scale: The spatial patterns of legend units and their relation to soil properties.&lt;/li&gt;
-  &lt;li&gt;Dielectric models for moisture determination of soils with variable organic matter content&lt;/li&gt;
-  &lt;li&gt;Ten challenges for the future of pedometrics&lt;/li&gt;
-  &lt;li&gt;Pedotransfer functions for estimating soil hydraulic properties from saturation to dryness&lt;/li&gt;
-  &lt;li&gt;Soil weathering behavior assessed by combined spectral ranges: Insights into aggregate analysis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;a-comparison-between-three-legacy-soil-maps-of-zambia-at-national-scale-the-spatial-patterns-of-legend-units-and-their-relation-to-soil-properties&quot;&gt;A comparison between three legacy soil maps of Zambia at national scale: The spatial patterns of legend units and their relation to soil properties&lt;/h3&gt;
-
-&lt;p&gt;We examined three soil maps of Zambia, two published at scales of 1:1 million - the Exploratory Soil Map of Zambia (ESMZ) and the Vegetation-Soil Map produced by Trapnell and colleagues in 1947 - and one at 1:3 million, the Soil Atlas of Africa (SAA). We estimated components of variance for measurements of clay, sand and organic carbon content and bulk density of the soil across the country using models which included different mean values for soil map units as random effects. For all but organic carbon content there was significant variation accounted for by differences between legend units for two of the maps, ESMZ with legend units based on the FAO-Unesco and SAA with legend units based on the World Reference Base respectively. This was despite their small cartographic scale. For the Vegetation-Soil Map, we examined differences between broad soil physiographic units. These did not account for significant variation in the soil properties. There were clear similarities between the soil physiographic units of the Soil-Vegetation Map and broader physiographic units into which the legend units of the ESMZ are grouped. The spatial pattern of soil units of the SAA was the most spatially heterogeneous, as measured by the sum of indicator variograms, despite being at the smallest published scale. It was apparent that some of the soil variation within the largest physiographic unit of the Soil-Vegetation Map, the Plateau Soils, as expressed by the map units of the SAA was significantly associated with the different vegetation units mapped in 1947. These studies show how quantitative assessment of legacy soil information may help us understand its potential and limitations.&lt;/p&gt;
-
-&lt;h3 id=&quot;dielectric-models-for-moisture-determination-of-soils-with-variable-organic-matter-content&quot;&gt;Dielectric models for moisture determination of soils with variable organic matter content&lt;/h3&gt;
-
-&lt;p&gt;An accurate calibration function relating soil dielectric permittivity to its volumetric water content is essential for reliable measurements of soil moisture with the use of dielectric sensors. In the operational frequency range of popular capacitance and impedance sensors, various soil properties may influence the relation between the soil moisture and dielectric permittivity, which may worsen the measurement accuracy of a sensor. The aim of this paper is to investigate the relations among the organic matter content, dry bulk density, volumetric water content and dielectric permittivity in the 10-500 MHz frequency range, which covers the frequency range of operation of common soil moisture dielectric sensors operating in the frequency domain. Samples of soil material of belonging to sand, sandy loam and silt loam texture classes with varied organic matter content were measured with the use of a coaxial-like open-ended seven-rod probe connected to a vector-network-analyzer. A new simplified dielectric model is presented in order to accurately describe the obtained spectra. Next, several models connecting the real part of dielectric permittivity and volumetric water content, taking account of the impact of bulk density, were examined. It was found that two linear segmented models fitted to the obtained data better in the case of soil materials of sandy loam and silt loam textures. The best segmented model exhibited RMSE of about 0.023 m(3) m(-3) in comparison to about 0.04 m(3) m(-3) in the case of a simple linear model without density correction.&lt;/p&gt;
-
-&lt;h3 id=&quot;ten-challenges-for-the-future-of-pedometrics&quot;&gt;Ten challenges for the future of pedometrics&lt;/h3&gt;
-
-&lt;p&gt;Pedometrics, the application of mathematical and statistical methods to the study of the distribution and genesis of soils, has broadened its scope over the past two decades. The primary focus of pedometricians has traditionally been on spatial and spatio-temporal soil inventories with numerical soil classification, geostatistical modelling of spatial variation and mapping. The rapid development of remote and proximal soil sensing as well as data-driven statistical modelling techniques have had a major impact on pedometrics over the past decades. During this time, a general demand for quantitative digital soil information for environmental modelling and management has compelled pedometricians to address other soil-related questions from a quantitative point of view: soil genesis and utility and quality of soil. While scientific progress is largely an autonomous process that is difficult to steer, research efforts could benefit from an agenda with pressing pedometric research topics. This paper defines and discusses ten recent or longstanding pedometrics challenges, with the attempt to identify knowledge gaps and suggest new concepts and methods to overcome them. The ten challenges were selected through a collaborative effort and may serve as a guidance for future pedometrics research and to foster collaboration among soil scientists. The challenges discussed in this paper are also indicators of the current understanding and state of knowledge from which progress can be measured in the future.&lt;/p&gt;
-
-&lt;h3 id=&quot;pedotransfer-functions-for-estimating-soil-hydraulic-properties-from-saturation-to-dryness&quot;&gt;Pedotransfer functions for estimating soil hydraulic properties from saturation to dryness&lt;/h3&gt;
-
-&lt;p&gt;Current pedotransfer functions (PTFs) for estimating soil hydraulic curves are mostly developed to predict parameters of the Mualem-van Genuchten hydraulic functions. The Mualem-van Genuchten functions are recognised to be inadequate in representing soil water retention hydraulic conductivity curves at low pressure head ranges. This study presents neuroFX, a suite of PTFs, for estimating soil water retention and unsaturated hydraulic conductivity curves from saturation to complete dryness based on the Fredlund-Xing-Wang (FXW) model. The PTFs were calibrated using the neuro-m neural networks approach with three different sets of inputs: (1) SSCBD uses the sand, silt, and clay fractions, and bulk density; (2) SSC uses the sand, silt and clay fractions, and (3) soil textural class input. NeuroFX PTFs were trained using fitted parameters of the FXW model from selected data in the UNSODA database and validated using 5-fold cross-validation that was repeated 10 times. NeuroFX provides an uncertainty estimate of hydraulic parameters. The prediction quality of neuroFX was compared with two existing PTFs: ROSETTA and Brunswick-Weber (BW) PTFs. Based on multiple criteria, we found that neuroFX performed better than ROSETTA and BW PTFs in the same test sample. NeuroFX PTF with the SSCBD input yielded the best prediction of soil water retention and unsaturated hydraulic conductivity curves with RMSE in water content of 0.052 cm(3) cm(-3) and RMSE in log(10)(K) = 0.732 (in the magnitude of cm day(-1)), indicating the importance of including bulk density in the input of PTFs. NeuroFX was then used to map parameters of the FXW model for the whole of the continental USA over 6 depth intervals.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-weathering-behavior-assessed-by-combined-spectral-ranges-insights-into-aggregate-analysis&quot;&gt;Soil weathering behavior assessed by combined spectral ranges: Insights into aggregate analysis&lt;/h3&gt;
-
-&lt;p&gt;Most research applying spectral sensors has focused on soil attributes quantification, with strong statistics and hundreds of data. Nevertheless, the explanation of the fundamental relationship between several spectral ranges and specific soil processes remains unclear. Soil sensing can be performed in many spectral ranges, however, the focus is usually on a specific one, which limits the knowledge of the phenomenon. Thus, this work investigated the synergistic performance of several spectral ranges (Gamma-ray; X-ray fluorescence, XRF; visible, Vis; near infrared, NIR; shortwave infrared, SWIR; and mid-infrared, MIR) on the weathering process of soils developed from magmatic material. Two soil profiles from Southeast Brazil (Sao Paulo state) were analyzed, assessing their chemical, physical and mineralogical data. The same profiles were analyzed by the indicated spectral ranges, which were related to mineralogy, weathering indices and mass balance (MB). The elements provided by Gamma-ray were related to the soil mineralogy and weathering degree of horizons. The XRF data enabled the calculation of MB and weathering indices, which were similar to those calculated by the traditional analysis. The spectra of the Vis-NIR-SWIR-MIR region presented alterations in their behavior related to the weathering degree of horizons. This synergic approach separated soil horizons by weathering degree more efficiently than a single spectral region. Single spectral measurements identified several elements and indices, which explained the weathering process. These results support further understanding of large datasets and their validation in statistical modeling.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 05, 2021.&lt;/p&gt;
   </content>
 </entry>
 
