@@ -4,13 +4,104 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2022-01-28T10:28:57+11:00</updated>
+<updated>2022-02-18T08:04:01+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/02/journalDigest" />
+  <id>/2022/02/journalDigest</id>
+  <updated>2022-02-16T00:00:00-00:00</updated>
+  <published>2022-02-16T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-5&quot;&gt;Journal Paper Digests 2022 #5&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Soil enzymes as indicators of soil function: A step toward greater realism in microbial ecological modeling&lt;/li&gt;
+  &lt;li&gt;What type of gully is that? The need for a classification of gullies&lt;/li&gt;
+  &lt;li&gt;The naturalness index for the identification of natural areas on regional scale&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;soil-enzymes-as-indicators-of-soil-function-a-step-toward-greater-realism-in-microbial-ecological-modeling&quot;&gt;Soil enzymes as indicators of soil function: A step toward greater realism in microbial ecological modeling&lt;/h3&gt;
+
+&lt;p&gt;Soil carbon (C) and nitrogen (N) cycles and their complex responses to environmental changes have received increasing attention. However, large uncertainties in model predictions remain, partially due to the lack of explicit representation and parameterization of microbial processes. One great challenge is to effectively integrate rich microbial functional traits into ecosystem modeling for better predictions. Here, using soil enzymes as indicators of soil function, we developed a competitive dynamic enzyme allocation scheme and detailed enzyme-mediated soil inorganic N processes in the Microbial-ENzyme Decomposition (MEND) model. We conducted a rigorous calibration and validation of MEND with diverse soil C-N fluxes, microbial C:N ratios, and functional gene abundances from a 12-year CO2 x N grassland experiment (BioCON) in Minnesota, USA. In addition to accurately simulating soil CO2 fluxes and multiple N variables, the model correctly predicted microbial C:N ratios and their negative response to enriched N supply. Model validation further showed that, compared to the changes in simulated enzyme concentrations and decomposition rates, the changes in simulated activities of eight C-N-associated enzymes were better explained by the measured gene abundances in responses to elevated atmospheric CO2 concentration. Our results demonstrated that using enzymes as indicators of soil function and validating model predictions with functional gene abundances in ecosystem modeling can provide a basis for testing hypotheses about microbially mediated biogeochemical processes in response to environmental changes. Further development and applications of the modeling framework presented here will enable microbial ecologists to address ecosystem-level questions beyond empirical observations, toward more predictive understanding, an ultimate goal of microbial ecology.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-type-of-gully-is-that-the-need-for-a-classification-of-gullies&quot;&gt;What type of gully is that? The need for a classification of gullies&lt;/h3&gt;
+
+&lt;p&gt;Despite over a century of investigations into gullies and gully erosion, the characterization and categorization of gullies and the varied definitions, nomenclatures and terminology used has caused some confusion in understanding and communicating the relationships of gully forms and processes around the world. We firstly review the gully literature and highlight how a lack of consistency in gully definition and characterization prevents unifying theory from being developed within this important field of research, since it is often unclear whether different landscape features being discussed are comparable. We propose that conventionally employed qualitative planform and cross-sectional characteristics of gullies alone are inadequate to define gully types, yet both these features remain central to most modern gully descriptions. We discuss the need to revise and augment these basic characteristics with clearly defined morphogenetic attributes such as landscape context, soil material characteristics, erosion processes, hydrological integrity, modes of development, and head/side-wall morphology for an effective, practicable, generic gully classification scheme. Central to a gully classification scheme is the need for a clear definition of what a gully is - and is not - for which geomorphological criteria are proposed to differentiate a ‘gully’ from other ‘incisional land surface forms’. This gully definition hinges largely on the identification of a retreating head scarp and the internal erosion by mass-movement and other sidewall slope erosion processes, coupled with the transport of the soil materials from the gully void. By defining a gully and synthesizing descriptions of gully ‘types’ from the literature and our own experience, we propose key morphogenetic attributes of gullies necessary to form a framework for a systematic gully classification scheme. An initial, eclectic classification framework is presented as both a summation and a synthesis of the literature review, and as a progenitor to a dynamic generic classification scheme that is proposed in a follow-up article.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-naturalness-index-for-the-identification-of-natural-areas-on-regional-scale&quot;&gt;The naturalness index for the identification of natural areas on regional scale&lt;/h3&gt;
+
+&lt;p&gt;Researchers have been trying to measure the influence of humankind on our environment for several decades. Among the technical solutions for this goal, approaches for a rule-based fusion of different geospatial information layers have reached the greatest level of maturity, enabling the (semi-)automatic production of maps at resolutions of about 1 square kilometer. While those existing approaches aim at a global analysis of human influence, conservation efforts are usually implemented on a regional scale. To bridge the gap between a global, lowresolution analysis and a local, high-resolution analysis, with this paper, we propose the Naturalness Index (NI), which represents the naturalness of the Earth’s surface as a metric between 0 and 100 at a spatial resolution of 10 m per pixel. Our approach builds on the established Human Influence Index, but replaces different geospatial input layers with more recent, higher resolution counterparts. Using the cloud computing platform Google Earth Engine, regional maps at a resolution of 10 m x 10 m per pixel can be produced efficiently in a fully automatic manner. We demonstrate the functionality by creating maps for three different localities in Europe - Bavaria, Lapland, and Scotland. A comparison of the NI values achieved with our approach to official conservation areas as well as a correlation with existing similar maps indicate the validity of our approach.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 16, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/02/journalDigest" />
+  <id>/2022/02/journalDigest</id>
+  <updated>2022-02-10T00:00:00-00:00</updated>
+  <published>2022-02-10T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-4&quot;&gt;Journal Paper Digests 2022 #4&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A miniaturized method for fast, simple, and sensitive pesticide analysis in soils&lt;/li&gt;
+  &lt;li&gt;Bio-mediated soil improvement: An introspection into processes, materials, characterization and applications&lt;/li&gt;
+  &lt;li&gt;Soil salinity: A global threat to sustainable development&lt;/li&gt;
+  &lt;li&gt;Responding to Ecological Transformation: Mental Models, External Constraints, and Manager Decision-Making&lt;/li&gt;
+  &lt;li&gt;Management Foundations for Navigating Ecological Transformation by Resisting, Accepting, or Directing Social-Ecological Change&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;management-foundations-for-navigating-ecological-transformation-by-resisting-accepting-or-directing-social-ecological-change&quot;&gt;Management Foundations for Navigating Ecological Transformation by Resisting, Accepting, or Directing Social-Ecological Change&lt;/h3&gt;
+
+&lt;p&gt;Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems. Many social-ecological systems are moving into novel conditions that can result in ecological transformation. We present four foundations to enable a transition to future-oriented conservation and management that increases capacity to manage change. The foundations are to identify plausible social-ecological trajectories, to apply upstream and deliberate engagement and decision-making with stakeholders, to formulate management pathways to desired futures, and to consider a portfolio approach to manage risk and account for multiple preferences across space and time. We use the Kenai National Wildlife Refuge in Alaska as a case study to illustrate how the four foundations address common land management challenges for navigating transformation and deciding when, where, and how to resist, accept, or direct social-ecological change.&lt;/p&gt;
+
+&lt;h3 id=&quot;responding-to-ecological-transformation-mental-models-external-constraints-and-manager-decision-making&quot;&gt;Responding to Ecological Transformation: Mental Models, External Constraints, and Manager Decision-Making&lt;/h3&gt;
+
+&lt;p&gt;Ecological transformation creates many challenges for public natural resource management and requires managers to grapple with new relationships to change and new ways to manage it. In the context of unfamiliar trajectories of ecological change, a manager can resist, accept, or direct change, choices that make up the resist-accept-direct (RAD) framework. In this article, we provide a conceptual framework for how to think about this new decision space that managers must navigate. We identify internal factors (mental models) and external factors (social feasibility, institutional context, and scientific uncertainty) that shape management decisions. We then apply this conceptual framework to the RAD strategies (resist, accept, direct) to illuminate how internal and external factors shape those decisions. Finally, we conclude with a discussion of how this conceptual framework shapes our understanding of management decisions, especially how these decisions are not just ecological but also social, and the implications for research and management.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-salinity-a-global-threat-to-sustainable-development&quot;&gt;Soil salinity: A global threat to sustainable development&lt;/h3&gt;
+
+&lt;p&gt;Soil is a vital resource for feeding the burgeoning global population, and it is also essential for realizing most of the ‘United Nations Sustainable Development Goals (SDGs)’. For example, it is vital to realizing the ‘Zero hunger (SDG2), Good health and well-being (SDG3), Clean water and sanitation (SDG6), and Life on land (SDG15)’. Excess salts present in the soil make it saline, and it poses a significant threat to agricultural production and environmental health. Soil salinity is an extensive problem and spreads over one billion hectares extended over 100 countries. This paper presents a comprehensive review of global soil salinity management through the applications of remote sensing and GIS. All possible sources of relevant and current literature were accessed and more than 260 publications were collected and carefully analysed, for this review. The rationale and severity of the salinity problem are provided. The impact of salinity on plant yield and the effect of climate change on soil salinity are detailed. The salinity indicators and salinity monitoring and mapping are provided, and the global cases of soil salinity management through remote sensing and GIS applications under different agro-hydro-climatic environments are discussed, followed by a summary of conclusions and challenges along with future research directions. The analysis of past investigations showed that remote sensing strategy might be a practical approach to adequately assess plant response such as evapotranspiration under diverse salinity environments, yet it additionally has various difficulties. The lower spatial and temporal resolution of imagery may reason errors because of subpixel heterogeneity. However, with the improvement of the better-resolution thermal infrared remote method, there is the possibility to spot spatial variations at a smaller scale.&lt;/p&gt;
+
+&lt;h3 id=&quot;bio-mediated-soil-improvement-an-introspection-into-processes-materials-characterization-and-applications&quot;&gt;Bio-mediated soil improvement: An introspection into processes, materials, characterization and applications&lt;/h3&gt;
+
+&lt;p&gt;For a long time in the practice of geotechnical engineering, soil has been viewed as an inert material, comprising only inorganic phases. However, microorganisms including bacteria, archaea and eukaryotes are ubiquitous in soil and have the capacity and capability to alter bio-geochemical processes in the local soil environment. The cumulative changes could consequently modify the physical, mechanical, conductive and chemical properties of the bulk soil matrix. In recent years, the topic of bio-mediated geotechnics has gained momentum in the scientific literature. It involves the manipulation of various bio-geochemical soil processes to improve soil engineering performance. In particular, the process of microbial-induced calcium carbonate precipitation (MICP) has received the most attention for its superior performance for soil improvement. The present work aims to shape a comprehensive understanding of recent developments in bio-mediated geotechnics, with a focus on MICP. Referring to around one hundred studies published over the past five years, this review focuses on popular and alternative MICP processes, innovative raw materials and additives for MICP, emerging tools and testing methodologies for characterizing MICP at multi-scale, and applications in emerging and/or unconventional geotechnical fields.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-miniaturized-method-for-fast-simple-and-sensitive-pesticide-analysis-in-soils&quot;&gt;A miniaturized method for fast, simple, and sensitive pesticide analysis in soils&lt;/h3&gt;
+
+&lt;p&gt;Purpose Organochlorine pesticides (OCPs) like lindane and DDT have been used extensively after World War II until the 1990s. Still, residues of these pesticides can be found in agricultural soils all over the world, especially in developing countries. Often, they occur in extensive areas and elevated concentrations so that food safety is jeopardized. Hence, simple, cheap, and fast analytical methods are needed for a straight-forward assessment of risks. A miniaturized solid-liquid extraction combined with solid-phase microextraction (SPME) based on a proven ISO method is presented. Methods The performance of the method is evaluated by extracting three different soils which were spiked with HCH and DDT congeners, and trifluralin, and aged for 35 days. The results are compared with those of a modified quick, easy, cheap, efficient, rugged, and safe (QuEChERS) method. For further validation, both methods are applied to three environmental soil samples. Results Validation results show limits of detection and quantification as well as recovery rates in good agreement with standard requirements. The new method was found to be quicker than QuEChERS, which requires time-consuming preparation of reagents. Conclusion Merits include low time and sample volume requirements (0.5 g) and the possibility to extract many samples simultaneously, which allows the screening of large sample sizes to determine the pollution status of whole landscape regions. However, access to an automated SPME apparatus is assumed. The authors can recommend this method as a cheap and fast alternative where SPME is available.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2022/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 10, 2022.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1012,100 +1103,6 @@
 &lt;p&gt;A dual-probe heat pulse (DPHP) sensor is a robust tool that can measure soil thermal properties and associated soil physical properties and processes. A new DPHP based sensor was developed to simultaneously measure soil thermal properties, soil water content and soil water matric potential. A series of experiments were performed to evaluate the sensor performance. The new sensor was able to measure each soil property with acceptable accuracy. The accuracy of the matric potential determinations was approximately 10% in log scale. The effective range for w measurements was -1000 to -2.5 m of water, and the accuracy of the w determinations was best between -350 and -2.5 m of water, which included values of field capacity and wilting point for most soils and crops. The sensor design included a single heater wire to provide simultaneous heat inputs to two different materials, i.e., the soil and the sensor porous medium. The single heater wire did not influence sensor accuracy as long as the soil and the sensor porous medium thermal conductivity values were not significantly different. The new DPHP based sensor effectively measured various soil properties, including soil water matric potential, soil water content, and soil thermal property values.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2021/09/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on September 09, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
-  <id>/2021/08/journalDigest</id>
-  <updated>2021-08-31T00:00:00-00:00</updated>
-  <published>2021-08-31T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-28&quot;&gt;Journal Paper Digests 2021 #28&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Proposed algorithm for the identification of rural areas with regard to variability of soil quality.&lt;/li&gt;
-  &lt;li&gt;Use of metabolomics to quantify changes in soil microbial function in response to fertiliser nitrogen supply and extreme drought&lt;/li&gt;
-  &lt;li&gt;Altered mineral mapping based on ground-airborne hyperspectral data and wavelet spectral angle mapper tri-training model: Case studies from Dehua-Youxi-Yongtai Ore District, Central Fujian, China&lt;/li&gt;
-  &lt;li&gt;Iterative Deep Learning (IDL) for agricultural landscape classification using fine spatial resolution remotely sensed imagery&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;proposed-algorithm-for-the-identification-of-rural-areas-with-regard-to-variability-of-soil-quality&quot;&gt;Proposed algorithm for the identification of rural areas with regard to variability of soil quality&lt;/h3&gt;
-
-&lt;p&gt;The development of agriculture in many countries and its productivity are considerably differentiated in terms of space. At present, Poland has agricultural areas which in many respects can compete with agriculture in the member states of the European Union. However, in some areas agricultural production run by private farms owned by individuals is on the verge of or falls below the limit of profitability. The priorities of the common agricultural policy in the European Union (EU) include a willingness to improve the quality of life in rural areas and effective utilization of their resources. Another goal is to support agricultural activity and align development chances for farms in areas featuring adverse environmental conditions and low soil productivity. This article presents the results of studies regarding the development of a method for identifying useless agricultural land. The study covered 44 villages with a registered surface area totalling 53941.00 ha, situated in the district of Brzoz ‘ ow, Subcarpathian voivodeship, in south-eastern Poland. Studies showed that it is possible to identify problem areas for agriculture, thanks to which the produced methodology may prove to be a useful tool in land consolidation works facilitating reasonable planning of the development of such areas. Thus, a universal tool can be designed for analysing large areas, e.g., communes, districts or voivodeships, and a high level of consistency of results can be a guarantee of reliable decisions regarding the development strategy for the specific area.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-of-metabolomics-to-quantify-changes-in-soil-microbial-function-in-response-to-fertiliser-nitrogen-supply-and-extreme-drought&quot;&gt;Use of metabolomics to quantify changes in soil microbial function in response to fertiliser nitrogen supply and extreme drought&lt;/h3&gt;
-
-&lt;p&gt;Climate change is expected to increase the frequency and severity of droughts in many regions of the world. Soil health is likely to be negatively impacted by these extreme events. It is therefore important to understand the impact of drought on soil functioning and the delivery of soil-related ecosystem services. This study aimed to assess the resilience and change in physiological status of the microbial community under extreme moisture stress conditions using novel metabolic profiling approaches, namely complex lipids and untargeted primary metabolites. In addition, we used phospholipid fatty acid (PLFA) profiling to identify changes in microbial community structure. Soil samples were collected during a natural, extreme drought event and post-drought from replicated grassland split plots, planted with either deep-rooting Festulolium (cv. AberNiche) or Lolium perenne L. (cv. AberEcho), receiving nitrogen (N) fertiliser loading rates at either 0 or 300 kg N ha-1 yr- 1. These plots were split at the start of the drought period, and half of each subplot was irrigated with water throughout the drought period at a rate of 50 mm week-1 to alleviate moisture stress. PLFA analysis revealed a distinct shift in microbial community between drought and post-drought conditions, primarily driven by N loading and water deficit. Complex lipid analysis identified 239 compounds and untargeted analysis of primary metabolites identified 155 compounds. Both soil complex lipids and primary metabolites showed significant changes under drought conditions. Additionally, the irrigated ‘reference’ plots had a significantly higher cumulative greenhouse gas (CO2 and N2O) flux over the period of sampling. Recovery of the microbial lipidome and metabolome to reference plot levels post-drought was rapid (within days). Considerable changes in soil primary metabolomic and lipidomic concentrations shown in this study demonstrate that while soil metabolism was strongly affected by moisture stress, the system (plant and soil) was highly resilient to an intense drought.&lt;/p&gt;
-
-&lt;h3 id=&quot;altered-mineral-mapping-based-on-ground-airborne-hyperspectral-data-and-wavelet-spectral-angle-mapper-tri-training-model-case-studies-from-dehua-youxi-yongtai-ore-district-central-fujian-china&quot;&gt;Altered mineral mapping based on ground-airborne hyperspectral data and wavelet spectral angle mapper tri-training model: Case studies from Dehua-Youxi-Yongtai Ore District, Central Fujian, China&lt;/h3&gt;
-
-&lt;p&gt;Mineral mapping is an important procedure for the utilization of mineral resources, and it is also significant to the analysis of mineralization zone especially for altered minerals. The emergence of remote sensing, especially hyperspectral data has become a new approach for mineral mapping on a wide scale. In addition, spectral angle mapping (SAM) is a commonly used classifier to distinguish the minerals, but the discrimination ability is weak on a mapping scale, and the identification accuracy is poor for a series of minerals with similar spectral curves when a single classifier is applied. In this work, altered minerals are identified at Dehua-Youxi-Yongtai Ore District uniting ground and airborne hyperspectral data, and wavelet SAM (WSAM) tri-training model is constructed to discriminate the category of 9 altered minerals. Experimental results demonstrate that the proposed technique provides the identification accuracy of 82% and 70% for virtual and XRD verifications, and the mapping result is believable compared with measured sampling.&lt;/p&gt;
-
-&lt;h3 id=&quot;iterative-deep-learning-idl-for-agricultural-landscape-classification-using-fine-spatial-resolution-remotely-sensed-imagery&quot;&gt;Iterative Deep Learning (IDL) for agricultural landscape classification using fine spatial resolution remotely sensed imagery&lt;/h3&gt;
-
-&lt;p&gt;The agricultural landscape can be interpreted at different semantic levels, such as fine low-level crop (LLC) classes (e.g., Wheat, Almond, and Alfalfa) and broad high-level crop (HLC) classes (e.g., Winter crops, Tree crops, and Forage). The LLC and HLC are hierarchically correlated with each other, but such intrinsically hierarchical relationships have been overlooked in previous crop classification studies in remote sensing. In this research, a novel Iterative Deep Learning (IDL) framework was proposed for the classification of complex agricultural landscapes using remotely sensed imagery. The IDL adopts an object-based convolutional neural network (OCNN) as the basic classifier for both the LLC and HLC classifications, which has the advantage of maintaining precise crop parcel boundaries. In IDL, the HLC classification implemented by the OCNN is conditional upon the LLC classification probabilities, whereas the HLC probabilities combined with the original imagery are, in turn, re-used as inputs to the OCNN to enhance the LLC classification. Such an iterative updating procedure forms a Markov process, where both the LLC and HLC classifications are refined and evolve collaboratively. The effectiveness of the IDL was tested on two heterogeneous agricultural fields using fine spatial resolution (FSR) SAR and optical imagery. The experimental results demonstrate that the iterative process of IDL helps to resolve contradictions within the class hierarchies. The new proposed IDL consistently increased the accuracies of both the LLC and HLC classifications with iteration, and achieved the highest accuracies for each at four iterations. The average overall accuracies were 88.4% for LLC and 91.2% for HLC, for both study sites, far greater than the accuracies of the state-of-the-art benchmarks, including the pixel-wise CNN (81.7% and 85.9%), object-based image analysis (OBIA) (84.0% and 85.8%), and OCNN (84.0% and 88.4%). To the best of our knowledge, the proposed model is the first to identify and use the relationship between the class levels in an ontological hierarchy in a remote sensing classification process. It is applied here to increase progressively the accuracy of classification at two levels for a complex agricultural landscape. As such IDL represents an entirely new paradigm for remote sensing image classification. Moreover, the promising results demonstrate the great potential of the proposed IDL with wide application prospect.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 31, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/08/journalDigest" />
-  <id>/2021/08/journalDigest</id>
-  <updated>2021-08-30T00:00:00-00:00</updated>
-  <published>2021-08-30T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-29&quot;&gt;Journal Paper Digests 2021 #29&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;VNIR and MIR spectroscopy of PLFA-derived soil microbial properties and associated soil physicochemical characteristics in an experimental plant diversity gradient.&lt;/li&gt;
-  &lt;li&gt;The blue carbon wealth of nations&lt;/li&gt;
-  &lt;li&gt;Both carbon sequestration and yield are related to particulate organic carbon stability affected by organic amendment origins in mollisol&lt;/li&gt;
-  &lt;li&gt;A two-field geostatistical model combining point and areal observations-A case study of annual runoff predictions in the Voss area.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;vnir-and-mir-spectroscopy-of-plfa-derived-soil-microbial-properties-and-associated-soil-physicochemical-characteristics-in-an-experimental-plant-diversity-gradient&quot;&gt;VNIR and MIR spectroscopy of PLFA-derived soil microbial properties and associated soil physicochemical characteristics in an experimental plant diversity gradient&lt;/h3&gt;
-&lt;p&gt;Hutengs, C; Eisenhauer, N; (…); Vohland, M
-Sep 2021 | SOIL BIOLOGY &amp;amp; BIOCHEMISTRY 160 , pp.8319-8319
-Improving our understanding of the functions and processes of soil microbial communities and their interactions with the physicochemical soil environment requires large amounts of timely and cost-efficient soil data, which is difficult to obtain with routine laboratory-analytical methods. Soil spectroscopy with portable visible-to-near infrared (VNIR) and mid-infrared (MIR) instruments can fill this gap by facilitating the rapid acquisition of biotic and abiotic soil information. In this study, we evaluated the capabilities of VNIR and MIR spectroscopy to analyze soil physicochemical and microbial properties in a long-term grassland biodiversity-ecosystem functioning experiment. Soil samples were collected at the Jena Experiment (Jena, Germany) and measured with portable VNIR and MIR spectrometers in field-moist condition to determine their potential for on-site data collection and analysis. Reference data to calibrate spectroscopic models were acquired with routine analytical methods, including PLFA extractions of microbial biomarkers. We further collected reference VNIR and MIR data on pre-treated soils (dried and finely ground) to assess the anticipated impact of field measurements on spectroscopic calibrations. MIR spectra allowed more accurate estimates of soil physicochemical and microbial properties than VNIR data on pre-treated samples. For soils in field condition, MIR calibrations were more accurate for physicochemical properties, but VNIR data gave significantly better estimates of microbial properties. Combined VNIR/MIR estimates achieved the most accurate estimation results for all soil properties in each case. Soil physicochemical properties could be estimated from VNIR/MIR data with high accuracy (R2 = 0.72-0.99) on pre-treated soil samples, whereas the results for soil microbial properties were more moderate (R2 = 0.66-0.72). On field-moist soils, estimation accuracies decreased notably for organic and inorganic carbon (Delta RMSE = 52-72%), improved slightly for soil texture (Delta RMSE = 4-7%) and decreased slightly for microbial properties (Delta RMSE = 4-9%). The VNIR/MIR estimates derived from soils in field condition were sufficiently accurate to detect experimental plant treatment effects on organic carbon, as well as bacterial and fungal biomass. We further found that spectroscopic estimates of soil microbial properties were primarily enabled through indirect correlations with spectrally active soil constituents, i.e., associations between soil microbial properties and the physicochemical soil environment. Our findings highlight the capacity of VNIR and MIR spectroscopy to analyze the physicochemical soil environment, including potential on-site data collection and analysis on soils in field condition, and indicate that VNIR/MIR data can estimate soil microbial properties when soil physicochemical properties shape the distribution of soil microbial communities.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-blue-carbon-wealth-of-nations&quot;&gt;The blue carbon wealth of nations&lt;/h3&gt;
-&lt;p&gt;Bertram, C; Quaas, M; (…); Rickels, W
-Aug 2021 | NATURE CLIMATE CHANGE 11 (8) , pp.704-+
-Carbon sequestration and storage in mangroves, salt marshes and seagrass meadows is an essential coastal ‘blue carbon’ ecosystem service for climate change mitigation. Here we offer a comprehensive, global and spatially explicit economic assessment of carbon sequestration and storage in three coastal ecosystem types at the global and national levels. We propose a new approach based on the country-specific social cost of carbon that allows us to calculate each country’s contribution to, and redistribution of, global blue carbon wealth. Globally, coastal ecosystems contribute a mean +/- s.e.m. of US190.67 +/- 30 bn yr(-1) to blue carbon wealth. The three countries generating the largest positive net blue wealth contribution for other countries are Australia, Indonesia and Cuba, with Australia alone generating a positive net benefit of US$22.8 +/- 3.8 bn yr(-)(1) for the rest of the world through coastal ecosystem carbon sequestration and storage in its territory.&lt;/p&gt;
-
-&lt;p&gt;Blue carbon ecosystems take up and store substantial amounts of carbon. This represents an important ecosystem service in the context of climate change, with coastal ecosystems contributing nearly US$200 bn yr(-)(1) to blue carbon wealth.&lt;/p&gt;
-
-&lt;h3 id=&quot;both-carbon-sequestration-and-yield-are-related-to-particulate-organic-carbon-stability-affected-by-organic-amendment-origins-in-mollisol&quot;&gt;Both carbon sequestration and yield are related to particulate organic carbon stability affected by organic amendment origins in mollisol&lt;/h3&gt;
-
-&lt;p&gt;Purpose Exploring how organic amendments influence carbon sequestration by affecting particulate organic carbon (POC) and determining the optimum amendment for protecting and restoring mollisol and increasing yields. Methods Differences of POC properties and maize yields in 3-year soils amended with organic material of different origins were studied. POC was separated by a wet sieving method, and the structure was analyzed by C-13 NMR spectroscopy. Results We found that SOC accumulation in soils amended with plant origin organic materials resulted from increasing organic fractions other than POC, while that in soils amended with animal origin materials resulted from increasing POC. The proportion of POC net variation in SOC net variation was significantly negatively correlated with SOC (p &amp;lt; 0.01). POC, mainly composed of alkyl C and alkoxyl C (more than 68%), had its stability more accurately evaluated through combined analysis of the carbonyl C content and alkyl C/alkoxyl C ratio. The addition of organic materials improved POC stability by increasing the alkyl C/alkoxyl C ratio and decreasing the carbonyl C content. Maize yields were positively correlated with SOC content and POC stability (p &amp;lt; 0.01), which increased by at least 2012 kg ha(-1) with the addition of organic materials. Conclusion Increasing more stable POC will promote the carbon sink. The order of the stability of POC in mollisol amended with organic materials of different origins was woody plant material &amp;gt; herb material &amp;gt; livestock dung &amp;gt; poultry dung. The woody plant material was the optimum organic amendment for mollisol, enhanced POC stability, and promoted SOC sequestration while increasing the yield.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-two-field-geostatistical-model-combining-point-and-areal-observations-a-case-study-of-annual-runoff-predictions-in-the-voss-area&quot;&gt;A two-field geostatistical model combining point and areal observations-A case study of annual runoff predictions in the Voss area&lt;/h3&gt;
-
-&lt;p&gt;We estimate annual runoff by using a Bayesian geostatistical model for interpolation of hydrological data of different spatial support: streamflow observations from catchments (areal data), and precipitation and evaporation data (point data). The model contains one climatic spatial effect that is common for all years under study, and 1 year specific spatial effect. Hence, the framework enables a quantification of the spatial variability caused by long-term weather patterns and processes. This can contribute to a better understanding of biases and uncertainties in environmental modelling. The suggested model is evaluated by predicting annual runoff for catchments around Voss in Norway and through a simulation study. We find that on average we benefit from combining point and areal data compared to using only one of the data types, and that the interaction between nested areal data and point data gives a spatial model that takes us beyond smoothing. Another finding is that when climatic effects dominate over annual effects, systematic under- and overestimation of runoff can be expected over time. However, a dominating climatic spatial effect also implies that short records of runoff from an otherwise ungauged catchment can lead to large improvements in the predictive performance.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 30, 2021.&lt;/p&gt;
   </content>
 </entry>
 
