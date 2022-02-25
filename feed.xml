@@ -4,13 +4,48 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2022-02-18T08:04:01+11:00</updated>
+<updated>2022-02-25T12:41:23+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/02/journalDigest" />
+  <id>/2022/02/journalDigest</id>
+  <updated>2022-02-25T00:00:00-00:00</updated>
+  <published>2022-02-25T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-5&quot;&gt;Journal Paper Digests 2022 #5&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variations and controlling factors of soil denitrification rate&lt;/li&gt;
+  &lt;li&gt;Uncovering the critical soil moisture thresholds of plant water stress for European ecosystems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;variations-and-controlling-factors-of-soil-denitrification-rate&quot;&gt;Variations and controlling factors of soil denitrification rate&lt;/h3&gt;
+
+&lt;p&gt;The denitrification process profoundly affects soil nitrogen (N) availability and generates its byproduct, nitrous oxide, as a potent greenhouse gas. There are large uncertainties in predicting global denitrification because its controlling factors remain elusive. In this study, we compiled 4301 observations of denitrification rates across a variety of terrestrial ecosystems from 214 papers published in the literature. The averaged denitrification rate was 3516.3 +/- 91.1 mu g N kg(-1) soil day(-1). The highest denitrification rate was 4242.3 +/- 152.3 mu g N kg(-1) soil day(-1) under humid subtropical climates, and the lowest was 965.8 +/- 150.4 mu g N kg(-1) under dry climates. The denitrification rate increased with temperature, precipitation, soil carbon and N contents, as well as microbial biomass carbon and N, but decreased with soil clay contents. The variables related to soil N contents (e.g., nitrate, ammonium, and total N) explained the variation of denitrification more than climatic and edaphic variables (e.g., mean annual temperature (MAT), soil moisture, soil pH, and clay content) according to structural equation models. Soil microbial biomass carbon, which was influenced by soil nitrate, ammonium, and total N, also strongly influenced denitrification at a global scale. Collectively, soil N contents, microbial biomass, pH, texture, moisture, and MAT accounted for 60% of the variation in global denitrification rates. The findings suggest that soil N contents and microbial biomass are strong predictors of denitrification at the global scale.&lt;/p&gt;
+
+&lt;h3 id=&quot;uncovering-the-critical-soil-moisture-thresholds-of-plant-water-stress-for-european-ecosystems&quot;&gt;Uncovering the critical soil moisture thresholds of plant water stress for European ecosystems&lt;/h3&gt;
+
+&lt;p&gt;Understanding the critical soil moisture (SM) threshold (theta(crit)) of plant water stress and land surface energy partitioning is a basis to evaluate drought impacts and improve models for predicting future ecosystem condition and climate. Quantifying the theta(crit) across biomes and climates is challenging because observations of surface energy fluxes and SM remain sparse. Here, we used the latest database of eddy covariance measurements to estimate theta(crit) across Europe by evaluating evaporative fraction (EF)-SM relationships and investigating the covariance between vapor pressure deficit (VPD) and gross primary production (GPP) during SM dry-down periods. We found that the theta(crit) and soil matric potential threshold in Europe are 16.5% and -0.7 MPa, respectively. Surface energy partitioning characteristics varied among different vegetation types; EF in savannas had the highest sensitivities to SM in water-limited stage, and the lowest in forests. The sign of the covariance between daily VPD and GPP consistently changed from positive to negative during dry-down across all sites when EF shifted from relatively high to low values. This sign of the covariance changed after longer period of SM decline in forests than in grasslands and savannas. Estimated theta(crit) from the VPD-GPP covariance method match well with the EF-SM method, showing this covariance method can be used to detect the theta(crit). We further found that soil texture dominates the spatial variability of theta(crit) while shortwave radiation and VPD are the major drivers in determining the spatial pattern of EF sensitivities. Our results highlight for the first time that the sign change of the covariance between daily VPD and GPP can be used as an indicator of how ecosystems transition from energy to SM limitation. We also characterized the corresponding theta(crit) and its drivers across diverse ecosystems in Europe, an essential variable to improve the representation of water stress in land surface models.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 25, 2022.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1031,78 +1066,6 @@
 &lt;p&gt;Soil bulk density (BD) is a key soil property in soil science. BD is measured at the scale of the soil horizon with conventional methods: core sampling and rubber balloon. Regardless of the method, BD measurement in the field is cumbersome and time consuming, especially in stony soils, and new, less invasive methods have emerged, but their measurement quality needs to be compared with conventional methods. The photogrammetric technique (SfM) consists of the reconstruction of a given scene in 3D from multi-view photographs. The aim of the present work is to assess the SfM as a rapid, accurate method of measuring the volume of undisturbed soil for BD measurements, regardless of the soil depth and stone content. Ten soil horizons were investigated from various types of soils with different soil properties, especially texture (10 to 48% of clay) and stone content (0 to 73%). The bulk density of each horizon was measured with a reference method (core sampling), an excavation method (rubber balloon) and two recently developed sensor-based methods: SfM and a lightweight flash LiDar. For the sensor-based methods, an automated post-processing method was developed to reduce the human operating time. The BDs measured from the SfM were significantly similar to those measured from core sampling. At this stage, the lightweight flash LiDar is not sufficient to measure the BD with high accuracy. Finally, we recommend the use of SfM to measure BD regarding its robustness in varying soil conditions, especially stony soils, and we discuss the potential of the method regarding the recent advances in its field use with smartphones.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2021/09/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on September 11, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/09/journalDigest" />
-  <id>/2021/09/journalDigest</id>
-  <updated>2021-09-09T00:00:00-00:00</updated>
-  <published>2021-09-09T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-29&quot;&gt;Journal Paper Digests 2021 #29&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pedological characteristics of artificialized soils: A snapshot&lt;/li&gt;
-  &lt;li&gt;How the composition of sandstone matrices affects rates of soil formation&lt;/li&gt;
-  &lt;li&gt;Field test of two background temperature correction methods of dual probe heat pulse method&lt;/li&gt;
-  &lt;li&gt;Agricultural Drought Prediction Based on Conditional Distributions of Vine Copulas&lt;/li&gt;
-  &lt;li&gt;Advancing Space-Time Simulation of Random Fields: From Storms to Cyclones and Beyond&lt;/li&gt;
-  &lt;li&gt;Mapping potential surface ponding in agriculture using UAV-SfM&lt;/li&gt;
-  &lt;li&gt;Development of a soil fertility index using on-line Vis-NIR spectroscopy&lt;/li&gt;
-  &lt;li&gt;Internet of Things (IoT) for double ring infiltrometer automation&lt;/li&gt;
-  &lt;li&gt;A dual-probe heat pulse-based sensor that simultaneously determines soil thermal properties, soil water content and soil water matric potential&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;pedological-characteristics-of-artificialized-soils-a-snapshot&quot;&gt;Pedological characteristics of artificialized soils: A snapshot&lt;/h3&gt;
-
-&lt;p&gt;The onset of industrialization entailed the increase in soil artificialization worldwide. Soils from artificialized zones (SAZ) are the result of urban, industrial, traffic, mining or recreational land use. Knowledge of their characteristics is a prerequisite for evaluating the ability of SAZ to perform key functions and provide soil ecosystem services. Based on a selection of 102 papers published between 1991 and 2017, this article aims at providing a quantitative vision of the pedological characteristics of the different categories of SAZs as a function of the land use and soil type (natural profile, soil developed on allochthonous material). We show that, overall, the inherent characteristics of SAZ topsoil generally depend on the soil type - soil of allochthonous material being more stony and poorer in the &amp;lt; 2 mu m fraction - while manageable characteristics are a function of both the soil type and the land use, with the exception of pH that is mainly driven by the land use. However, a good characterization of SAZs requires a more systematic description, sampling and analysis to obtain comprehensive knowledge of their characteristics as several features are still too rarely measured such as cationic exchange capacity, electrical conductivity, soil depth, and nutrient concentrations. Sealed soils are still too rarely considered despite their large surface area. Such a characterization would allow a better management of the ecosystem services that SAZs fulfill.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-the-composition-of-sandstone-matrices-affects-rates-of-soil-formation&quot;&gt;How the composition of sandstone matrices affects rates of soil formation&lt;/h3&gt;
-
-&lt;p&gt;Soils deliver multiple ecosystem services and their long-term sustainability is fundamentally controlled by the rates at which they form and erode. Our knowledge and understanding of soil formation is not commensurate with that of soil erosion, in part due to the difficulty of measuring the former. However, developments in cosmogenic radionuclide accumulation models have enabled soil scientists to more accurately constrain the rates at which soils form from bedrock. To date, all three major rock types - igneous, sedimentary and metamorphic lithologies - have been examined in such work. Soil formation rates have been measured and compared between these rock types, but the impact of rock characteristics on soil formation rates, such as rock matrices and mineralogy, have seldom been explored. In this UK-based study, we used cosmogenic radionuclide analysis to investigate whether the lithological variability of sandstone governs pedogenesis. Soil formation rates were measured on two arable hillslopes at Woburn and Hilton, which are underlain by different types of arenite sandstone. Rates were faster at Woburn, and we suggest that this is due to the fact that the Woburn sandstone formation is less cemented that that at Hilton. Similarly, rates at Woburn and Hilton were found to be faster than those measured at two other sandstone-based sites in the UK, and faster than those compiled in a global inventory of cosmogenic studies on sandstone-based soils. We suggest that the cementing agents present in matrix-abundant wackes studied previously may afford these sandstones greater structural integrity and resistance to weathering. This work points to the importance of factoring bedrock matrices into our understanding of soil formation rates, and the biogeochemical cycles these underpin.&lt;/p&gt;
-
-&lt;h4 id=&quot;field-test-of-two-background-temperature-correction-methods-of-dual-probe-heat-pulse-method&quot;&gt;Field test of two background temperature correction methods of dual probe heat pulse method&lt;/h4&gt;
-
-&lt;p&gt;Dual probe heat pulse (DPHP) method is a useful method to measure many soil physical properties in-situ, which play important roles in soil science, meteorology, hydrology and so on. It is essential to remove the effect of background temperature fluctuations for DPHP estimations. We compared two background temperature correction methods of DPHP method, linear trend method (LTM) and reference temperature method (RTM) in field experiments. We found that misused LTM lead to large errors in DPHP estimations with shallow burial depth. When the burial depth of temperature probe (d) of DPHP sensor is &amp;lt;14 mm, background temperature changes are related to environmental factors such as solar radiation and wind, and RTM can decrease the relative error (RE) in thermal conductivity (A) from 667% to 68%. Besides, our results also showed during the period from 9:00 to 16:00, the RTM method is valuable for getting accurate DPHP estimations with the 2 mm burial depth. After replacing LTM by RTM, REs were decreased to (6 +/- 28)% from (17 +/- 87) % in lambda, and were decreased to (9 +/- 17)% from (10 +/- 18)% in volumetric heat capacity (C-v). But RTM is also affected by other factors such as the spatially heterogeneous temperature distribution of tested sample and should be taken into account in the further studies.&lt;/p&gt;
-
-&lt;h3 id=&quot;agricultural-drought-prediction-based-on-conditional-distributions-of-vine-copulas&quot;&gt;Agricultural Drought Prediction Based on Conditional Distributions of Vine Copulas&lt;/h3&gt;
-
-&lt;p&gt;Monitoring and prediction of agricultural drought are paramount to food security at the global and regional scales, particularly under the influence of climate change and anthropogenic activities. Soil moisture is an effective indicator for monitoring and characterizing agricultural drought. Soil moisture (agricultural drought) is mainly affected by precipitation (meteorological drought) and temperature (hot conditions). Owing to the flexibility of vine copulas in handling multidimensional variables by decomposing them into pair copula constructions (PCCs), we propose a novel drought prediction method using three predictors, namely antecedent meteorological drought, previous hot conditions, and persistent agricultural drought, based on the conditional distributions of C-vine copulas in a four-dimensional scenario. The proposed model was applied to agricultural drought (characterized by the standardized soil moisture index (SSI)) prediction with 1-2-months lead time for the summer season (i.e., August at a 6-months timescale) in China. Taking two severe agricultural drought events that occurred in many regions across China in August of 2006 and 2014 as validation cases, the SSI predictions with 1-2-months lead time using the conditional C-vine copulas model were found to be generally consistent with the corresponding historical SSI observations in most parts of China. Performance evaluation using the Nash-Sutcliffe efficiency (NSE), coefficient of determination (R-2), and F-1 score (F1S) for different climate regions also indicated that this model provided a reliable prediction of agricultural drought for most areas of China. The outcome of this study can serve as a guidance for drought prediction, early warning, and drought mitigation.&lt;/p&gt;
-
-&lt;h3 id=&quot;advancing-space-time-simulation-of-random-fields-from-storms-to-cyclones-and-beyond&quot;&gt;Advancing Space-Time Simulation of Random Fields: From Storms to Cyclones and Beyond&lt;/h3&gt;
-
-&lt;p&gt;Realistic stochastic simulation of hydro-environmental fluxes in space and time, such as rainfall, is challenging yet of paramount importance to inform environmental risk analysis and decision making under uncertainty. Here, we advance random fields simulation by introducing the concepts of general velocity fields and general anisotropy transformations. This expands the capabilities of the so-called Complete Stochastic Modeling Solution (CoSMoS) framework enabling the simulation of random fields (RF’s) preserving: (a) any non-Gaussian marginal distribution, (b) any spatiotemporal correlation structure (STCS), (c) general advection expressed by velocity fields with locally varying speed and direction, and (d) locally varying anisotropy. We also introduce new copula-based STCS’s and provide conditions guaranteeing their positive definiteness. To illustrate the potential of CoSMoS, we simulate RF’s with complex patterns and motion mimicking rainfall storms moving across an area, spiraling fields resembling weather cyclones, fields converging to (or diverging from) a point, and colliding air masses. The proposed methodology is implemented in the freely available CoSMoS R package.&lt;/p&gt;
-
-&lt;h3 id=&quot;mapping-potential-surface-ponding-in-agriculture-using-uav-sfm&quot;&gt;Mapping potential surface ponding in agriculture using UAV-SfM&lt;/h3&gt;
-
-&lt;p&gt;Among the environmental problems that could affect agriculture, one of the most critical is ponding. This may be defined as water storage on the surface in concavities and depressions due to soil saturation. Stagnant water can seriously affect crops and the management of agricultural landscapes. It is mainly caused by prolonged rainfall events, soil type, or wrong mechanization practices, which cause soil compaction. To better understand this problem and thus provide adequate solutions to reduce the related risk, high-resolution topographic information could be strategically important because it offers an accurate representation of the surface morphology. In the last decades, new remote sensing techniques provide interesting opportunities to understand the processes on the Earth’s surface based on geomorphic signatures. Among these, Uncrewed Aerial Vehicles (UAVs), combined with the structure-from-motion (SfM) photogrammetry technique, represent a solid, low-cost, rapid, and flexible solution for geomorphological analysis.&lt;/p&gt;
-
-&lt;p&gt;This study aims to present a new approach to detect the potential areas exposed to water stagnation at the farm scale. The high-resolution digital elevation model (DEM) from UAV-SfM data is used to do this. The potential water depth was calculated in the DEM using the relative elevation attribute algorithm. The detection of more pronounced concavities and convexities allowed an estimation and mapping of the potential ponding conditions. The results were assessed by observations and field measurements and are promising, showing a Cohen’s k(X) accuracy of 0.683 for the planimetric extent of the ponding phenomena and a Pearson’s r(xy) coefficient of 0.971 for the estimation of pond water depth. The proposed workflow provides a useful indication to stakeholders for better agricultural management in lowland landscapes.&lt;/p&gt;
-
-&lt;h3 id=&quot;development-of-a-soil-fertility-index-using-on-line-vis-nir-spectroscopy&quot;&gt;Development of a soil fertility index using on-line Vis-NIR spectroscopy&lt;/h3&gt;
-
-&lt;p&gt;Soil fertility index (SFI) is commonly used for soil fertility assessment, which is critical for managing in-field variabilities and maximizing crop production with minimum environmental impacts. However, the majority of earlier SFIs were laboratory-based soil analyses. This study developed a novel SFI using on-line collected visible and near-infrared (vis-NIR) spectra. Six agricultural fields were scanned using an on-line vis-NIR sensor (CompactSpec, Tec5 Technology, Germany), when 139 soil samples were collected and analyzed for soil pH, organic carbon, available- phosphorous (P), potassium, magnesium (Mg), calcium, sodium, moisture content (MC) and cation exchange capacity. A minimum dataset was developed comprising the fertility attributes that showed pairwise correlation (r) smaller than 0.75. This was followed by a principal component analysis to calculate the weight factor of each parameter to be used in the SFI formulation using a double-weighted additive function. The data matrix consisting of the SFI and soil spectra was divided into calibration (70 %) and prediction (30 datasets. The former set was subjected to a partial least squares regression to calibrate SFI model, whose accuracy was validated using the prediction set. Results showed that the derived SFI was moderately to highly correlated with P (r = 0.57), pH (r = 0.75), and Mg (r = 0.74) and weakly correlated with MC (r = 0.26). The online vis-NIR sensor predicted SFI with very good accuracy [coefficient of determination (R-2) = 0.75 and ratio of prediction to deviation (RPD) = 2.01]. Therefore, it is concluded that the vis-NIR can accurately predict SFI directly from on-line scanned soil spectra, which can effectively assess soil fertility and manage in-field variability.&lt;/p&gt;
-
-&lt;h3 id=&quot;internet-of-things-iot-for-double-ring-infiltrometer-automation&quot;&gt;Internet of Things (IoT) for double ring infiltrometer automation&lt;/h3&gt;
-
-&lt;p&gt;Double ring infiltrometer is a simple device used to measure water infiltration rate in the soil, one of the most important hydro physical characteristics and an essential parameter for various applications including: surface irrigation and drainage projects, infiltration or water purification basins, seepage losses at canals, soil leaching at waste storage sites. However, the high spatial variability of a soil makes a single point measurement rarely representative of an entire field. Nonetheless, Double Ring Infiltration tests are tedious, time consuming and require continuous attention, hence limiting the number of tests that may be performed simultaneously on a given site. In the present research, an automated Internet of Things (IoT) double ring infiltrometer (DRI) is developed and validated in a loamy field. It consists of a DRI equipped with an ESP-32 microcontroller chip, a GPS module, a solenoid valve, a DIY conductance water level sensor, and a SD card module powered by a 12 V 11000mAh Li-ion battery charged by a 10 W solar panel. The double ring infiltrometer is designed to calculate the infiltration rate in real time, to store the data with the time stamp and geographical coordinates on an SD card or, to use a cloud service platform to upload the data over the internet. The aim is to facilitate soil infiltration mapping for precision agriculture and to build a soil infiltration inventory that could be used to continuously improve existing soil database. The system was assembled and tested at nine different locations on a loamy soil experimental field. For validation, conventional (manually operated) tests were conducted at the same time. The system proved to be reliable (R2 = 0.99), cost effective (115$) and a hassle-free solution, ideal for multiple soil infiltration measurements.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-dual-probe-heat-pulse-based-sensor-that-simultaneously-determines-soil-thermal-properties-soil-water-content-and-soil-water-matric-potential&quot;&gt;A dual-probe heat pulse-based sensor that simultaneously determines soil thermal properties, soil water content and soil water matric potential&lt;/h3&gt;
-
-&lt;p&gt;A dual-probe heat pulse (DPHP) sensor is a robust tool that can measure soil thermal properties and associated soil physical properties and processes. A new DPHP based sensor was developed to simultaneously measure soil thermal properties, soil water content and soil water matric potential. A series of experiments were performed to evaluate the sensor performance. The new sensor was able to measure each soil property with acceptable accuracy. The accuracy of the matric potential determinations was approximately 10% in log scale. The effective range for w measurements was -1000 to -2.5 m of water, and the accuracy of the w determinations was best between -350 and -2.5 m of water, which included values of field capacity and wilting point for most soils and crops. The sensor design included a single heater wire to provide simultaneous heat inputs to two different materials, i.e., the soil and the sensor porous medium. The single heater wire did not influence sensor accuracy as long as the soil and the sensor porous medium thermal conductivity values were not significantly different. The new DPHP based sensor effectively measured various soil properties, including soil water matric potential, soil water content, and soil thermal property values.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/09/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on September 09, 2021.&lt;/p&gt;
   </content>
 </entry>
 
