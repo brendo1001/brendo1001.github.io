@@ -4,13 +4,117 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2022-07-17T18:24:22+10:00</updated>
+<updated>2022-08-03T12:13:27+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/08/journalDigest" />
+  <id>/2022/08/journalDigest</id>
+  <updated>2022-07-08T00:00:00-00:00</updated>
+  <published>2022-08-03T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-15&quot;&gt;Journal Paper Digests 2022 #15&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Calibration set optimization and library transfer for soil carbon estimation using soil spectroscopy-A review&lt;/li&gt;
+  &lt;li&gt;Figures, landscapes and landsystems: Digital locations, connectivity and communications COMMENT&lt;/li&gt;
+  &lt;li&gt;Sub-sampling a large physical soil archive for additional analyses to support spatial mapping; a pre-registered experiment in the Southern Nations, Nationalities, and Peoples Region (SNNPR) of Ethiopia&lt;/li&gt;
+  &lt;li&gt;A scalable method for the estimation of spatial disaggregation models&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;a-scalable-method-for-the-estimation-of-spatial-disaggregation-models&quot;&gt;A scalable method for the estimation of spatial disaggregation models&lt;/h3&gt;
+
+&lt;p&gt;Gaining information about detailed processes using aggregation information is a frequent challenge in research involving geospatial data, with examples in different fields of knowledge such as agronomy, soil science, meteorology, public health, epidemiology, and others. Analyses using aggregated data lead to distorted conclusions since they disregard local patterns, and such a problem has motivated different approaches for reconstructing the information in a finer resolution from the aggregated data. However, most existing methods focus on the particular case where the volume of data does not exceed the amount of memory available for computations, a situation that has become increasingly less frequent with the fast pace of data generation nowadays. In practice, this problem limits either spatial resolution or coverage of applications, thus precluding their use in a more general context. In this paper, we address the problem of disaggregation of spatial data with huge datasets by proposing a scalable method to estimate the parameters of a well-established model. We propose an iterative scheme for model estimation and prove its convergence to a critical point of the likelihood function derived. To test the method, we provide a controlled simulation and a real example for sugarcane production in Brazil. In the simulation, the results indicate a successful reconstruction of 1 million pixels from 90 block areas. In the real example, the results had a compatible match with the agronomic literature, indicating a reasonable prediction of sugarcane production in a 100 m spatial resolution (i.e., approx. 5 x 10(8) pixels) from 5,565 block-areas. Compared to the most similar previous work, scalability allowed us to use a nearly 100 times higher resolution, which corresponds to 10,000 times more pixels. With our methods, we expect to assist researchers from different fields in disaggregating spatial information to larger areas or higher resolutions.&lt;/p&gt;
+
+&lt;h3 id=&quot;sub-sampling-a-large-physical-soil-archive-for-additional-analyses-to-support-spatial-mapping-a-pre-registered-experiment-in-the-southern-nations-nationalities-and-peoples-region-snnpr-of-ethiopia&quot;&gt;Sub-sampling a large physical soil archive for additional analyses to support spatial mapping; a pre-registered experiment in the Southern Nations, Nationalities, and Peoples Region (SNNPR) of Ethiopia&lt;/h3&gt;
+
+&lt;p&gt;The value of physical archives of soil material from field sampling activities has been widely recognized. If we want to use archive material for new destructive analyses to support a task, such as spatial mapping, then an efficient sub-sampling strategy is needed, both to manage analytical costs and to conserve the archive material. In this paper we present an approach to this problem when the objective is spatial mapping by ordinary kriging. Our objective was to subsample the physical archive from the Ethiopia Soil Information System (EthioSIS) survey of the Southern Nations, Nationalities and Peoples Region (SNNPR) for spatial mapping of two variables, concentrations of particular fractions of selenium and iodine in the soil, which had not been measured there. We used data from cognate parts of surrounding regions of Ethiopia to estimate variograms of these properties, and then computed prediction error variances for maps in SNNPR based on proposed subsets of the archive of different size, selected to optimize a spatial coverage criterion (with some close sample pairs included). On this basis a subsample was selected. This is a preregistered experiment in that we have proposed criteria for evaluating the success of our approach, and are publishing that in advance of receiving analytical data on the subsampled material from the laboratories where they are being processed. A subsequent short report will publish the outcome. The use of preregistered trials is widely recommended and used in areas of science including public health, and we believe that it is a sound strategy to promote reproducible research in soil science.&lt;/p&gt;
+
+&lt;h3 id=&quot;figures-landscapes-and-landsystems-digital-locations-connectivity-and-communications-comment&quot;&gt;Figures, landscapes and landsystems: Digital locations, connectivity and communications COMMENT&lt;/h3&gt;
+
+&lt;p&gt;Current geomorphological research tends to give preference to landforms rather than landscapes. This commentary brings these notions closer together and incorporates varied views of ‘landscape’ (such as landscapes in art and poetry) as well as showing the difficulties of communicating them to audiences wider than geomorphology. The paper promotes the use of decimal Latitude Longitude (dLL) values to assist better location of samples, analyses and especially landforms, to produce ‘information surfaces’ within landscape and landsystem approaches to geomorphology. This will also help the development of geomorphic visual literacy.&lt;/p&gt;
+
+&lt;h3 id=&quot;calibration-set-optimization-and-library-transfer-for-soil-carbon-estimation-using-soil-spectroscopy-a-review&quot;&gt;Calibration set optimization and library transfer for soil carbon estimation using soil spectroscopy-A review&lt;/h3&gt;
+
+&lt;p&gt;Resource-efficient techniques for accurate soil property estimation are necessary to satisfy the increasing demand for soil data to support environmental monitoring, precision agriculture, and spatial modeling. Over the last 30 yr, infrared soil spectroscopy has developed into a rapid, robust, and cost-effective technique for soil carbon analysis. Ongoing global efforts to make soil spectroscopy operational require the development of soil spectral libraries, which are the main source of data for the construction of calibration models. Understanding calibration optimization is important to ensure the efficient use of soil spectral libraries for the accurate estimation of soil carbon. Moreover, spectral library transfer can benefit new data collection, soil monitoring, and modeling efforts. This review presents techniques for optimization of calibration models and library transfer. Selection of calibration set size and subsetting are presented as current calibration optimization techniques. Moreover, spiking is discussed as an effective technique for spectral library transfer. Overall, studies have suggested that an increase in calibration size improves model performance and this continues until an optimal size is reached. Additionally, subsetting can improve model performance if the resulting subsets reduce the variability of spectrally active components. Studies have also suggested that spiking is effective when used in conjunction with subsetting techniques. These findings denote the current applicability and potential of optimization and library transfer techniques for the accurate estimation of soil carbon with soil spectroscopy. Future efforts should focus on refining optimization techniques to further expand the operability of soil spectroscopy for soil carbon estimation.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 03, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/07/journalDigest" />
+  <id>/2022/07/journalDigest</id>
+  <updated>2022-07-29T00:00:00-00:00</updated>
+  <published>2022-07-29T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-14&quot;&gt;Journal Paper Digests 2022 #14&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comparison of bagging, boosting and stacking algorithms for surface soil moisture mapping using optical-thermal-microwave remote sensing synergies&lt;/li&gt;
+  &lt;li&gt;Same soil, different climate: Crop model intercomparison on translocated lysimeters&lt;/li&gt;
+  &lt;li&gt;Machine learning in vadose zone hydrology: A flashback&lt;/li&gt;
+  &lt;li&gt;Soil water potential: A historical perspective and recent breakthroughs&lt;/li&gt;
+  &lt;li&gt;Estimating textural fractions of the USDA using those of the International System: A quantile approach&lt;/li&gt;
+  &lt;li&gt;Will fungi solve the carbon dilemma?&lt;/li&gt;
+  &lt;li&gt;Realistic rates of nitrogen addition increase carbon flux rates but do not change soil carbon stocks in a temperate grassland&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;realistic-rates-of-nitrogen-addition-increase-carbon-flux-rates-but-do-not-change-soil-carbon-stocks-in-a-temperate-grassland&quot;&gt;Realistic rates of nitrogen addition increase carbon flux rates but do not change soil carbon stocks in a temperate grassland&lt;/h3&gt;
+&lt;p&gt;Changes in the biosphere carbon (C) sink are of utmost importance given rising atmospheric CO2 levels. Concurrent global changes, such as increasing nitrogen (N) deposition, are affecting how much C can be stored in terrestrial ecosystems. Understanding the extent of these impacts will help in predicting the fate of the biosphere C sink. However, most N addition experiments add N in rates that greatly exceed ambient rates of N deposition, making inference from current knowledge difficult. Here, we leveraged data from a 13-year N addition gradient experiment with addition rates spanning realistic rates of N deposition (0, 1, 5, and 10 g N m−2 year−1) to assess the rates of N addition at which C uptake and storage were stimulated in a temperate grassland. Very low rates of N addition stimulated gross primary productivity and plant biomass, but also stimulated ecosystem respiration such that there was no net change in C uptake or storage. Furthermore, we found consistent, nonlinear relationships between N addition rate and plant responses such that intermediate rates of N addition induced the greatest ecosystem responses. Soil pH and microbial biomass and respiration all declined with increasing N addition indicating that negative consequences of N addition have direct effects on belowground processes, which could then affect whole ecosystem C uptake and storage. Our work demonstrates that experiments that add large amounts of N may be underestimating the effect of low to intermediate rates of N deposition on grassland C cycling. Furthermore, we show that plant biomass does not reliably indicate rates of C uptake or soil C storage, and that measuring rates of C loss (i.e., ecosystem and soil respiration) in conjunction with rates of C uptake and C pools are crucial for accurately understanding grassland C storage.&lt;/p&gt;
+
+&lt;h3 id=&quot;will-fungi-solve-the-carbon-dilemma&quot;&gt;Will fungi solve the carbon dilemma?&lt;/h3&gt;
+
+&lt;p&gt;Soils are hotspots of diversity and sustain many globally important functions. Here we focus on the most burning issue: how to keep soils as carbon sinks while maintaining their productivity. Evidence shows that life in soils plays a crucial role in improving soil health yet soil ecological processes are often ignored in soil sciences. In this review, we highlight the potential of fungi to increase soil carbon sequestration while maintaining crop yield, functions needed to sustain human population on Earth and at same time keep the Earth livable. We propose management strategies that steer towards more fungal activity but also high functional diversity of fungi which will lead to more stable carbon sources in soil but also affects the structure of the soil food web up to ecosystem level. We list knowledge gaps that limit our ability to steer soil fungal communities such that stabilising carbon in top soils becomes more effective. Using the natural capacity of a biodiverse soil community to sequester carbon delivers double benefit: reduction of atmospheric carbon dioxide by storing photosynthesized carbon in soil and increasing agricultural yields by restoring organic matter content of degraded soils.&lt;/p&gt;
+
+&lt;h3 id=&quot;estimating-textural-fractions-of-the-usda-using-those-of-the-international-system-a-quantile-approach&quot;&gt;Estimating textural fractions of the USDA using those of the International System: A quantile approach&lt;/h3&gt;
+
+&lt;p&gt;In soil science, the two most frequently used classification systems for the soil particle size distribution are the schemes by the United States Department of Agriculture (USDA) and the so-called International System (IS), whose difference is the upper particle size limit of the silt fraction, namely, 0.02 mm for the IS and 0.05 mm for the USDA system. The existence of these and other systems creates a disparity that hinders and prevents the use and exchange of soil information worldwide. To solve this problem, it is necessary to devise methodologies for the conversion of textural fractions between the different classification systems. This work focuses on the estimation of the USDA silt fraction from the basic textural fractions (sand, silt and clay) in the IS. Five models are currently available for that purpose: the log-linear interpolation method, the Minasny-McBratney-Bristow regression formula, the Shirazi-Boersma-Johnson interpolation method, the Minasny-McBratney regression formula, and the Padarian-Minasny-McBratney regression formula. The accuracy of some of these methods has already been assessed, but in this work we develop a new methodology, based on a local quantile regression, which improves and enriches this evaluation, providing both the regions of the textural triangle where the predictions of the models are acceptable, and the regions where each model is most appropriate. The data used were taken from the publicly available National Cooperative Soil Survey Soil Characterization Database, from which more than 270,000 soil horizon samples were selected for having valid texture data. The analysis carried out concludes that the Padarian-Minasny-McBratney regression formula is the best model of those evaluated. In addition, the tool developed for the evaluation of the models becomes a new model that provides point estimates of the USDA silt fraction from the basic textural fractions in the IS, with further improvement, compared to the 5 models evaluated, as it also provides a prediction interval for those estimates.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-water-potential-a-historical-perspective-and-recent-breakthroughs&quot;&gt;Soil water potential: A historical perspective and recent breakthroughs&lt;/h3&gt;
+
+&lt;p&gt;Soil water potential is a cornerstone in defining the thermodynamic state of soil water required to quantify phenomena such as water phase change, water movement, heat transfer, electric current, chemical transport, and mechanical stress and deformation in the earth’s shallow subsurface environment. This potential has historically been conceptualized as free energy stored in a until volume of soil water. Though the concept of soil water potential has been evolving over the past 120 yr, a consensual definition is still lacking, and answers to some fundamental questions remain controversial and elusive. What are the origins and mechanisms for the free energy of soil water? Can the common mathematical expression of soil water potential as superposition of gravitational, osmotic, and matric potentials be used to define water phase transitions in soil? Are these major components of soil water potential independent or coupled? Is pore water pressure always tensile under unsaturated conditions? If so, how can soil water density be as high as 1.7 g cm(-3)? How do adsorptive soil-water interactions originating from the electromagnetic field around and within soil particles transfer to mechanical pore pressure? In this review, the authors (a) provide critical analysis of historical definitions of soil water potential to identify their strengths, limitations, and flaws; (b) synthesize the origins of electromagnetic energies in soil to clarify the fundamental differences between adsorptive and capillary soil water potential mechanisms; (c) introduce a recently emerging concept of soil matric potential that unifies contributions of adsorption and capillarity to soil water potential; and (d) illustrate the generality and promise of the unified definition of soil water potential for answering some of the fundamental questions that remain elusive to the hydrology, geoengineering, and geoscience communities.&lt;/p&gt;
+
+&lt;h3 id=&quot;machine-learning-in-vadose-zone-hydrology-a-flashback&quot;&gt;Machine learning in vadose zone hydrology: A flashback&lt;/h3&gt;
+
+&lt;p&gt;Artificial intelligence (AI) and machine learning (ML) have been recently applied extensively in various disciplines of vadose zone hydrology. However, not much attention has been paid to their database-dependent accuracy and uncertainty, reproducibility, and delivery, which undermines their applications to real-world problems. We discuss lessons from the past and emphasize the need for and lack of fundamental protocols (i.e., detailed clarification on data processing, ML models accessibility, and a clear path for reproducing results).&lt;/p&gt;
+
+&lt;h3 id=&quot;same-soil-different-climate-crop-model-intercomparison-on-translocated-lysimeters&quot;&gt;Same soil, different climate: Crop model intercomparison on translocated lysimeters&lt;/h3&gt;
+
+&lt;p&gt;Crop model intercomparison studies have mostly focused on the assessment of predictive capabilities for crop development using weather and basic soil data from the same location. Still challenging is the model performance when considering complex interrelations between soil and crop dynamics under a changing climate. The objective of this study was to test the agronomic crop and environmental flux-related performance of a set of crop models. The aim was to predict weighing lysimeter-based crop (i.e., agronomic) and water-related flux or state data (i.e., environmental) obtained for the same soil monoliths that were taken from their original environment and translocated to regions with different climatic conditions, after model calibration at the original site. Eleven models were deployed in the study. The lysimeter data (2014-2018) were from the Dedelow (Dd), Bad Lauchstadt (BL), and Selhausen (Se) sites of the TERENO (TERrestrial ENvironmental Observatories) SOILCan network. Soil monoliths from Dd were transferred to the drier and warmer BL site and the wetter and warmer Se site, which allowed a comparison of similar soil and crop under varying climatic conditions. The model parameters were calibrated using an identical set of crop- and soil-related data from Dd. Environmental fluxes and crop growth of Dd soil were predicted for conditions at BL and Se sites using the calibrated models. The comparison of predicted and measured data of Dd lysimeters at BL and Se revealed differences among models. At site BL, the crop models predicted agronomic and environmental components similarly well. Model performance values indicate that the environmental components at site Se were better predicted than agronomic ones. The multi-model mean was for most observations the better predictor compared with those of individual models. For Se site conditions, crop models failed to predict site-specific crop development indicating that climatic conditions (i.e., heat stress) were outside the range of variation in the data sets considered for model calibration. For improving predictive ability of crop models (i.e., productivity and fluxes), more attention should be paid to soil-related data (i.e., water fluxes and system states) when simulating soil-crop-climate interrelations in changing climatic conditions.&lt;/p&gt;
+
+&lt;h3 id=&quot;comparison-of-bagging-boosting-and-stacking-algorithms-for-surface-soil-moisture-mapping-using-optical-thermal-microwave-remote-sensing-synergies&quot;&gt;Comparison of bagging, boosting and stacking algorithms for surface soil moisture mapping using optical-thermal-microwave remote sensing synergies&lt;/h3&gt;
+
+&lt;p&gt;Soil moisture information is key to irrigation water management, drought monitoring, and yield prediction. It plays a vital role in the water cycle and energy budget between the earth’s surface and atmosphere. Hence, its monitoring is crucial for both natural and anthropogenic environments. While the current remote sensing-based global SM products available at coarser resolution (3/15 km) are unsuitable for field-level operations, the most widely used microwave remote sensing suffers from model complexities and in-situ data requirements. Weather conditions limit the alternate approaches such as optical/thermal. This study aims to map surface soil moisture (SSM) at 30 m spatial resolution in a semi-arid region by fusing optical, thermal, and microwave remote sensing data using bagging, boosting, and stacking machine learning approaches. The reference data were collected using a soil moisture meter. The covariates included radar backscatter from Sentinel-1, visible, near-infrared, shortwave infrared, land surface temperature, and spectral indices derived from Landsat 8. Boruta algorithm was used for feature selection which identified radar backscatter, modified normalized difference water index, and land surface temperature as the most critical covariates impacting the SSM. The random forest (RF) showed the highest correlation coefficient (r = 0.71), and least root mean square error (RMSE = 5.17%). The cubist model had the least mean bias error (MBE = 0.21%) during independent validation. Stacking of cubist, gradient boosting machine (GBM), and RF using elastic net (ELNET) as meta-learner further reduced the MBE (0.18%) and RMSE (5.03%) during the validation. Overall, stacking multiple machine learning models improved model prediction and can be recommended to improve the digital soil moisture mapping.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 29, 2022.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -930,87 +1034,6 @@
 &lt;p&gt;Global food security is at a tipping point. After decades of both absolute and relative improvement in food security worldwide, climate change, market disruptions and declining productivity have reversed the trend. After four decades of improving food security, both more people and a larger portion of the global population are hungry today than in 2015. In response, researchers and their funders, governments, industries and interest groups are urging renewed collaboration and partnerships to recover and return to accelerate food production and to improve food distribution. Recently some public academics and civil society organizations are opposing these public-private partnerships (P3s). The article reviews the context, discusses the logic for P3s and explores the range of P3s that have been used and their impacts on the global agri-food system. We conclude that rather than reversing direction, the use of both strategic and tactical partnerships should be accelerated in order to improve global food security.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2021/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 24, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/11/journalDigest" />
-  <id>/2021/11/journalDigest</id>
-  <updated>2021-11-23T00:00:00-00:00</updated>
-  <published>2021-11-23T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-37&quot;&gt;Journal Paper Digests 2021 #37&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Potential of visible-near infrared spectroscopy for the determination of three soil aggregate stability indices&lt;/li&gt;
-  &lt;li&gt;Minimising the effect of moisture on soil property prediction accuracy using external parameter orthogonalization&lt;/li&gt;
-  &lt;li&gt;The trajectory of soil development and its relationship to soil carbon dynamics&lt;/li&gt;
-  &lt;li&gt;Estimating soil organic carbon stock change at multiple scales using machine learning and multivariate geostatistics&lt;/li&gt;
-  &lt;li&gt;Land-based measures to mitigate climate change: Potential and feasibility by country&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h3 id=&quot;land-based-measures-to-mitigate-climate-change-potential-and-feasibility-by-country&quot;&gt;Land-based measures to mitigate climate change: Potential and feasibility by country&lt;/h3&gt;
-
-&lt;p&gt;Land-based climate mitigation measures have gained significant attention and importance in public and private sector climate policies. Building on previous studies, we refine and update the mitigation potentials for 20 land-based measures in &amp;gt;200 countries and five regions, comparing “bottom-up” sectoral estimates with integrated assessment models (IAMs). We also assess implementation feasibility at the country level. Cost-effective (available up to $100/tCO(2)eq) land-based mitigation is 8-13.8 GtCO(2)eq yr(-1) between 2020 and 2050, with the bottom end of this range representing the IAM median and the upper end representing the sectoral estimate. The cost-effective sectoral estimate is about 40% of available technical potential and is in line with achieving a 1.5 degrees C pathway in 2050. Compared to technical potentials, cost-effective estimates represent a more realistic and actionable target for policy. The cost-effective potential is approximately 50% from forests and other ecosystems, 35% from agriculture, and 15% from demand-side measures. The potential varies sixfold across the five regions assessed (0.75-4.8 GtCO2eq yr(-1)) and the top 15 countries account for about 60% of the global potential. Protection of forests and other ecosystems and demand-side measures present particularly high mitigation efficiency, high provision of co-benefits, and relatively lower costs. The feasibility assessment suggests that governance, economic investment, and socio-cultural conditions influence the likelihood that land-based mitigation potentials are realized. A substantial portion of potential (80%) is in developing countries and LDCs, where feasibility barriers are of greatest concern. Assisting countries to overcome barriers may result in significant quantities of near-term, low-cost mitigation while locally achieving important climate adaptation and development benefits. Opportunities among countries vary widely depending on types of land-based measures available, their potential co-benefits and risks, and their feasibility. Enhanced investments and country-specific plans that accommodate this complexity are urgently needed to realize the large global potential from improved land stewardship.&lt;/p&gt;
-
-&lt;h3 id=&quot;estimating-soil-organic-carbon-stock-change-at-multiple-scales-using-machine-learning-and-multivariate-geostatistics&quot;&gt;Estimating soil organic carbon stock change at multiple scales using machine learning and multivariate geostatistics&lt;/h3&gt;
-
-&lt;p&gt;Many national and international initiatives rely on spatially explicit information on soil organic carbon (SOC) stock change at multiple scales to support policies aiming at land degradation neutrality and climate change mitigation. In this study, we used regression cokriging with random forest and spatial stochastic cosimulation to predict the SOC stock change between two years (i.e. 1992 and 2010) in Hungary at multiple aggregation levels (i.e. point support, 1 x 1 km, 10 x 10 km square blocks, Hungarian counties and entire Hungary). We also quantified the uncertainty associated with these predictions in order to identify and delimit areas with statistically significant SOC stock change. Our study highlighted that prediction of spatial totals and averages with quantified uncertainty requires a geostatistical approach and cannot be solved by machine learning alone, because it does not account for spatial correlation in prediction errors. The total topsoil SOC stock for Hungary was predicted to increase between 1992 and 2010 with 14.9 Tg, with lower and upper limits of a 90% prediction interval equal to 11.2 Tg and 18.2 Tg, respectively. Results also showed that both the predictions and uncertainties of the average SOC stock change were smaller for larger spatial supports, while spatial aggregation also made it easier to obtain statistically significant SOC stock changes. The latter is important for carbon accounting studies that need to prove in Measurement, Reporting and Verification protocols that observed SOC stock changes are not only practically but also statistically significant.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-trajectory-of-soil-development-and-its-relationship-to-soil-carbon-dynamics&quot;&gt;The trajectory of soil development and its relationship to soil carbon dynamics&lt;/h3&gt;
-
-&lt;p&gt;It has been postulated that the amount of soil organic carbon (SOC) associated with soil minerals exhibits a threshold relationship in response to effective soil moisture (estimated as precipitation less evapotranspiration). To better characterize the role of moisture in influencing mechanisms of SOC storage during pedogenesis, we compare soils from two different chronosequence sites: the Santa Cruz and Mattole River marine terraces that together form a soil age-by-climate gradient (i.e., climo-chronosequence). Our results demonstrate how variation in the effective soil moisture may drive soil development along divergent pedogenic trajectories, resulting in variations in the form and depth distribution of secondary weathering products. In particular, the residual metals Fe and Al are directly related to the type of secondary minerals that accumulate during weathering, and these variations are coupled to differences in the storage and long-term preservation of SOC both within and between soils. Over time, these differences in soil development may lead to ‘pedogenic thresholds’ that further differentiate soil characteristics and influence SOC dynamics. In this case, the pedogenic threshold takes the form of clay-rich argillic horizons that once formed, inhibit aqueous transport, decouple shallow and deep soil environments, and potentially limit SOC inputs and increase microbial recycling in deep soils. Our data suggest argillic horizon development is favorable in the drier Santa Cruz soils, where kaolinite is the dominant secondary weathering product. In contrast, greater available moisture in soils of the Mattole chronosequence drive a different weathering trajectory characterized by the accumulation of more amorphous secondary minerals. As a result, the Mattole soils and do not exhibit argillic horizon development but are instead characterized by greater accumulation of SOC across all depths sampled. Overall, our results illustrate how the interaction of climate (i.e., moisture) and time may shape the trajectory of soil development and the dynamics of SOC storage and preservation.&lt;/p&gt;
-
-&lt;h3 id=&quot;minimising-the-effect-of-moisture-on-soil-property-prediction-accuracy-using-external-parameter-orthogonalization&quot;&gt;Minimising the effect of moisture on soil property prediction accuracy using external parameter orthogonalization&lt;/h3&gt;
-
-&lt;p&gt;Moisture is one of the most important factors affecting soil reflectance spectra. However, provisional and dynamic behavior of soil moisture (SM) in salty soils reduce the capability of field spectrometry in the estimation of soil properties. This study aims minimising the effect of SM on the accuracy of visible and near-infrared (VNIR) spectra estimation of clay, calcium carbonate (CaCO3), and organic carbon (OC) content in semi-arid soils by adopting External parameter orthogonalization (EPO). Spectral reflectance of disturbed soil samples was measured for seven moisture contents (i.e. air dried, 6%, 12%, 18%, 24%, 30%, and 36%) and five levels of electerical conductivity (EC) (i.e. &amp;lt; 1, 4, 8, 12 and 16 dS/m). The EPO algorithm was customized for four textural classes. The performances of EPO algorithm was evaluated through partial least squares-backpropagation neural network (PLS-BPNN). The optimum number of components for the EPO matrix was determined to be four. Results showed that geometric parameters (area, depth, and width) of diagnostic absorption features (AF) in 550 nm, 2200 nm, and 2340 nm were affected by SM, and the interaction between SM and reflectance was not completely equivalent through different texture classes. The EPO correction showed an improvement of prediction accuracy of clay (RPIQ improved from 1.82 to 2.93), CaCO3 (RPIQ improved from 1.96 to 2.73), and OC (RPIQ improved from 1.94 to 3.44). Also better results have been gained by the customization of EPO for different texture classes. The performances of the EPO algorithm for clay and OC modeling dropped by increasing EC. This suggests that further studies are required to develop a method for eliminating the effects of the external parameters caused by increased salt levels in the soil.&lt;/p&gt;
-
-&lt;h3 id=&quot;potential-of-visible-near-infrared-spectroscopy-for-the-determination-of-three-soil-aggregate-stability-indices&quot;&gt;Potential of visible-near infrared spectroscopy for the determination of three soil aggregate stability indices&lt;/h3&gt;
-
-&lt;p&gt;Aggregate stability (AS) is an important parameter to evaluate soil resistance to erosion. The conventional determination methods to measure AS are time consuming, difficult and labour intensive. Visible (vis) and near infrared (NIR) spectroscopy could be a better alternative to the conventional determination methods of AS. This study explored the possibilities of estimating three AS indices, reflecting stability upon slow wetting (SW), fast wetting (FW) and mechanical breakdown (MB), using vis-NIR spectra data on some air-dried, non-sieved soils of the Belgian loam belt. Partial least squares regression (PLSR) was used to build calibration models for the three stability indices, using a calibration set accounting for 70% and a validation set of 30% of the total samples. Results showed that all three AS indices can be predicted to appreciable accuracies from vis-NIR-PLSR models [coefficient of determination (R-2) = 0.72-0.80, residual prediction deviation (RPD) = 1.93-2.27, ratio of performance to interquartile range (RPIQ) = 2.23-4.09 and root mean square error (RMSE) = 0.29-0.52 mm]. The prediction results suggest that omission of sample pre-treatment by sieving or grinding may have very limited impact on the prediction accuracy. This opens up opportunities for the in-situ deployment of vis-NIR spectroscopy, provided that problems associated with variable soil moisture contents can be overcome.&lt;/p&gt;
-
-&lt;p&gt;###&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 23, 2021.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2021/11/journalDigest" />
-  <id>/2021/11/journalDigest</id>
-  <updated>2021-11-08T00:00:00-00:00</updated>
-  <published>2021-11-08T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2021-38&quot;&gt;Journal Paper Digests 2021 #38&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Response of global farmland soil organic carbon to nitrogen application over time depends on soil type&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;response-of-global-farmland-soil-organic-carbon-to-nitrogen-application-over-time-depends-on-soil-type&quot;&gt;Response of global farmland soil organic carbon to nitrogen application over time depends on soil type&lt;/h3&gt;
-
-&lt;p&gt;Carbon (C) and nitrogen (N) are closely coupled to regulate the cycle of soil organic carbon (SOC) and its feedback to climate change in terrestrial ecosystem. However, the response of SOC content to N input in different soil types on time scales is still less understood. Here, we did a meta-analysis by collecting global farmland data across 60 years based on soil taxonomy, as well as our long-term field agricultural experiment from 2006 to 2019 (total number of observations, n = 301). The results showed that N addition promoted the increase of SOC content on an average of 9.1% in agrosystem, but varied considerably in different soil types (5.2%-12.0%). The SOC content of Alfisols and Mollisols soils showed a significant increasing response along the time scale. Furthermore, random forest model and structural equation model analysis indicated that climate factors and soil types indirectly affect the temporal response of SOC to N application through soil properties such as TN and C:N. This study emphasizes that the temporal response of SOC content to long-term N addition depends on soil type, with an scale-up effect in soil types with relative high SOC content (like Alfisols and Mollisols), which provides a new perspective for better understanding the C sequestration as the consequence of coupling effect of C and N in farmland system under long-term human activities.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2021/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 08, 2021.&lt;/p&gt;
   </content>
 </entry>
 
