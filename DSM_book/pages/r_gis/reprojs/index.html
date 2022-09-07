@@ -168,7 +168,7 @@
       <h2 id="reprojections-resampling-and-rasterisation">Reprojections, resampling and rasterisation</h2>
 
 <p>A useful thing to do in <code class="highlighter-rouge">R</code> in the GIS context are the procedures around
-resampling and reprojections. Such tasks are useful in the situation of
+resampling and re-projections. Such tasks are useful in the situation of
 aligning spatial data to common resolutions and extents. For digital
 soil mapping this is an important and regular task to perform. Similarly
 rasterisation of polygon data is regularly performed. This page will
@@ -184,32 +184,18 @@ cover some know-how on how to do these varied tasks.</p>
 </ul>
 
 <p>Code is available
-<a href="/DSM_book/rcode/resamplingRasters.R">here</a></p>
+<a href="%7B%7B%20site.url%20%7D%7D/DSM_book/rcode/resamplingRasters.R">here</a></p>
 
 <p>The specific data with which to do the exercises is found
-<a href="/DSM_book/data/reproj.zip">here</a></p>
+<a href="%7B%7B%20site.url%20%7D%7D/DSM_book/data/reproj.zip">here</a></p>
 
-<p>Initialise the libraries that are needed</p>
+<p>Initialize the libraries that are needed</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## Loading required package: sp</span><span class="w">
-
-</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
-</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
-</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
-</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
-</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
-</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
-</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
-</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
-
-</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">);</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">);</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <h3 id="data-preparation-">Data preparation <a id="s-1"></a></h3>
+
 <p>In this first part we will be working with three raster layers, each
 covering the same geographical area but have different projection
 systems, resolutions and spatial extents. After you have downloaded the
@@ -356,7 +342,7 @@ extent, yet the <code class="highlighter-rouge">elev.raster</code> is clipped to
 actually have the same extent, but for the <code class="highlighter-rouge">elev.raster</code>, part of this
 data extent has no data. This is because this data is just concerned
 with a particular landholding and there is not any need to have the data
-surrounding it. In the exercise concerned with <a href="/DSM_book/pages/r_gis/clipping/">raster
+surrounding it. In the exercise concerned with <a href="%7B%7B%20site.url%20%7D%7D/DSM_book/pages/r_gis/clipping/">raster
 clipping</a>,
 one can, if there is a requirement, to clip the <code class="highlighter-rouge">pl.grid</code> to the bounds
 of the data in <code class="highlighter-rouge">elev.raster</code>.</p>
@@ -389,7 +375,7 @@ CRS as the <code class="highlighter-rouge">elev.raster</code>, and outputted to 
 
 <h3 id="polygon-reprojection-">Polygon reprojection <a id="s-5"></a></h3>
 
-<p>Back in the work with <a href="/DSM_book/pages/r_gis/pointpatterns/">point patterns
+<p>Back in the work with <a href="%7B%7B%20site.url%20%7D%7D/DSM_book/pages/r_gis/pointpatterns/">point patterns
 data</a>
 you were shown how to change the CRS of <code class="highlighter-rouge">SpatialPointsDataFrames</code>. This
 type of transformation can also be readily extended to spatial lines and
@@ -426,9 +412,10 @@ case is descriptive information of the soil type and landscape.</p>
 </span><span class="c1">## max values  :     YARRAMAN,     TRwfa,   ya,  2.62094635880552, 0.031703676998096, TRANSFERRAL</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Lets find out a bit more information about the <code class="highlighter-rouge">poly.dat</code> object i.e. the soil map.</p>
+<p>Lets find out a bit more information about the <code class="highlighter-rouge">poly.dat</code> object i.e.
+the soil map.</p>
 
-<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Attribute table</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Attribute table</span><span class="w">
 </span><span class="n">head</span><span class="p">(</span><span class="n">poly.dat</span><span class="o">@</span><span class="n">data</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">##              NAME LANDSCAPE CODE     LENGTH   SHAPE_AREA     PROCESS</span><span class="w">
@@ -489,8 +476,12 @@ and overlay the polygon data.</p>
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/soil_map_raster.png" alt="rconsole" />
-    <figcaption> Gridded remote sensing data overlayed with soil map polygons. Each data source have the same CRS.</figcaption>
+
+<img src="/images/dsm_book/soil_map_raster.png" alt="rconsole" />
+
+<figcaption>Gridded remote sensing data overlayed with soil map
+polygons. Each data source have the same CRS.</figcaption>
+
 </figure>
 
 <p><a href="#top">Back to top</a></p>
@@ -543,14 +534,19 @@ maps.</p>
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/rasterised_soilmap.png" alt="rconsole" />
-    <figcaption> Rasterised soil map created using the `levelplot` function. This function is more suitable to use for raster mapping in particular in instances of working with categorical data.</figcaption>
+
+<img src="/images/dsm_book/rasterised_soilmap.png" alt="rconsole" />
+
+<figcaption>Rasterised soil map created using the `levelplot` function.
+This function is more suitable to use for raster mapping in particular
+in instances of working with categorical data.</figcaption>
+
 </figure>
 
 <p><a href="#top">Back to top</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-31">May 31, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2022-08-23">August 23, 2022</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
