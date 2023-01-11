@@ -4,13 +4,182 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2022-11-17T21:11:38+11:00</updated>
+<updated>2023-01-11T21:41:07+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2023/01/journalDigest" />
+  <id>/2023/01/journalDigest</id>
+  <updated>2023-01-11T00:00:00-00:00</updated>
+  <published>2023-01-11T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2023-1&quot;&gt;Journal Paper Digests 2023 #1&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variability of phosphorus sorption properties in hydromorphic soils: Consequences for P losses in agricultural landscapes&lt;/li&gt;
+  &lt;li&gt;Fraser Island (K’gari) and initiation of the Great Barrier Reef linked by Middle Pleistocene sea-level change&lt;/li&gt;
+  &lt;li&gt;Stable Carbon Isotopic Composition (delta C-13) as a Proxy of Organic Matter Dynamics in Soils on the Western Shore of Lake Baikal&lt;/li&gt;
+  &lt;li&gt;Methods for downhole soil water sensor calibration-Complications of bulk density and water content variations&lt;/li&gt;
+  &lt;li&gt;Feasibility assessment on use of proximal geophysical sensors to support precision management&lt;/li&gt;
+  &lt;li&gt;Soil acidity amelioration improves N and C cycles in the short term in a system with soybean followed by maize-guinea grass intercropping&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;soil-acidity-amelioration-improves-n-and-c-cycles-in-the-short-term-in-a-system-with-soybean-followed-by-maize-guinea-grass-intercropping&quot;&gt;Soil acidity amelioration improves N and C cycles in the short term in a system with soybean followed by maize-guinea grass intercropping&lt;/h3&gt;
+
+&lt;p&gt;Lime application has been associated with N and C losses from agricultural systems through NO3- leaching, N2O and CO2 emissions. However, we hypothesized that in an intensive crop system where soybean is grown in rotation with maize intercropped with a forage grass, liming associated with the application of gypsum to ameliorate the subsoil, and N fertilization increase soil N and C by improving root and crop growth. To evaluate the interaction of lime, gypsum and N fertilizer on soil and N and C partial balances, an experiment was carried out under no-till, where soybean was grown in rotation with maize intercropped with Guinea grass (Megathyrsus maximus cv Tanzania) as relay crop. Lime and gypsum were applied before soybean planting in October 2016 and October 2017. Two N rates (0 and 160 kg ha(-1) yr(-1) of N as ammonium sulphate) were applied to maize annually. Outputs through N-NO3- leaching, N-N2O emission and N-NH3 volatilization did not exceed 30 kg ha(-1) of N in two years. The N exported in grains consisted in 96% of the N output and was greater with fertilizer and lime. Soil acidity amelioration and N-fertilization favoured soil C fixation with high plant biomass production (C in plant residue, roots, and grains), while soil C-CO2 emission was not affected, and soil C increased. Although the partial N balance was negative, there was an increase in soil N, probably due to biological N fixation by soybean, which was not considered in the partial balance. We concluded that lime and gypsum application, along with an adequate N fertilization, to a tropical highly-weathered soil with soybean cropped in rotation with maize-guinea grass intercropping benefit N and C cycles and the environment in the short-term, increasing soil N and C stocks and reducing GHG emitted to the atmosphere.&lt;/p&gt;
+
+&lt;h3 id=&quot;feasibility-assessment-on-use-of-proximal-geophysical-sensors-to-support-precision-management&quot;&gt;Feasibility assessment on use of proximal geophysical sensors to support precision management&lt;/h3&gt;
+
+&lt;p&gt;A study was conducted at three sites in North Dakota to strengthen understanding of the usefulness of different proximal geophysical data types in agricultural contexts of varying pedology. This study hypothesizes that electromagnetic induction (EMI), gamma-ray sensor (GRS), cosmic-ray neutron sensor (CRNS), and elevation data layers are all useful in multiple linear regression (MLR) predictions of soil properties that meet expert criteria at three agricultural sites. In addition to geophysical data collection with vehicle-mounted sensors, 15 soil samples were collected at each site and analyzed for nine soil properties of interest. A set of model training data was compiled by pairing the sampled soil property measurements with the nearest geophysical data. Eleven models passed expert-defined uncertainty criteria at Site 1, 16 passed at Site 2, and 14 passed at Site 3. Electrical conductivity (EC), organic matter (OM), available water holding capacity, silt, and clay were predicted at Site 1 with an R-squared of prediction (Rpred2)$(R_{pred}&amp;lt;^&amp;gt;2)$ &amp;gt; .50 and acceptable root mean square error of prediction (RMSEP). Bulk density (BD), OM, available water capacity, silt, and clay were predicted with Rpred2$R_{pred}&amp;lt;^&amp;gt;2$ &amp;gt; .50 and acceptable RMSEP at Site 2. At Site 3, no soil properties were predicted with acceptable RMSEP and an Rpred2$R_{pred}&amp;lt;^&amp;gt;2$ &amp;gt; .50. These results confirm feasibility of our method, and the authors recommend the prioritization of EMI data collection if geophysical data collection is limited to a single mapping effort and calibration soil samples are few.&lt;/p&gt;
+
+&lt;h3 id=&quot;methods-for-downhole-soil-water-sensor-calibration-complications-of-bulk-density-and-water-content-variations&quot;&gt;Methods for downhole soil water sensor calibration-Complications of bulk density and water content variations&lt;/h3&gt;
+
+&lt;p&gt;Downhole soil volumetric water content (VWC) sensors are used in access tubes to assess the soil water content at multiple depths. If sensor readings are spaced closely enough vertically and are accurate enough, then accurate soil profile water content storage and change in storage can be determined over the depth range of readings, leading to accurate estimates of evapotranspiration (ET) if readings extend to well below the root zone. Even if sensing only covers the active root zone, soil water depletion may be determined well enough to inform irrigation scheduling. While sensor accuracy is dependent on many factors, including the sensor’s physical principle of operation, soil-specific calibration is typically required for good accuracy. In soils with multiple horizons (layers) of different texture, bulk density (BD), or chemical composition, horizon-specific calibrations may be necessary. We describe methods and equipment used for downhole sensor calibration to typical accuracy of &amp;lt;0.01 m(3) m(-3) with specific reference to calibration of 10 neutron scattering meters in a soil that required three different horizon-specific calibrations. Our results contrast with the factory calibration, which would result in a 38-mm error in water stored in a 1.5-m deep profile of our soil. We describe variability of measured VWC and BD with depth, distance, and water content and the errors that result from using BD to convert mass basis (g g(-1)) water content data to VWC data, which can be as much as 35 mm (7.26% underestimation) for soil water storage in a 1.5-m deep profile of our soil.&lt;/p&gt;
+
+&lt;h3 id=&quot;stable-carbon-isotopic-composition-delta-c-13-as-a-proxy-of-organic-matter-dynamics-in-soils-on-the-western-shore-of-lake-baikal&quot;&gt;Stable Carbon Isotopic Composition (delta C-13) as a Proxy of Organic Matter Dynamics in Soils on the Western Shore of Lake Baikal&lt;/h3&gt;
+
+&lt;p&gt;Assessing the main factors that control carbon dynamics in soils is an urgent problem in the context of modern climate change. The analysis of stable carbon isotope (delta C-13) composition is one of the approaches to understanding this dynamics. The study was carried out in the landscapes of the southeastern slope and foothills of the Primorskii Range, characterized by contrasting physico-geographical conditions. Climatic parameters, spatial variations in the composition of stable carbon isotopes and their distribution in soil profiles, and soil physicochemical properties controlling carbon dynamics have been analyzed. The soil humus horizons formed in mountainous tundra and steppe landscapes manifest the highest delta C-13 values (-24.72 and -23.97 … -24.75 parts per thousand ); whereas the lowest (-25.61 … -27.18 parts per thousand ) values are registered in the mountainous taiga soils. Based on the calculation of linear dependence between delta C-13 values and the total carbon content in soil, which varies with the depth, the carbon turnover intensity was determined using the slope of linear regression. It was revealed that under the contrasting conditions of mountainous tundra and steppe landscapes, the climate (deficiency of heat and moisture) has a significant impact on the intensity of organic matter transformation, blocking the effect of edaphic (soil profile) factors. Under more favorable climatic conditions of mountainous taiga landscapes, the dynamics of organic matter in soils is controlled mainly by edaphic factors.&lt;/p&gt;
+
+&lt;h3 id=&quot;fraser-island-kgari-and-initiation-of-the-great-barrier-reef-linked-by-middle-pleistocene-sea-level-change&quot;&gt;Fraser Island (K’gari) and initiation of the Great Barrier Reef linked by Middle Pleistocene sea-level change&lt;/h3&gt;
+
+&lt;p&gt;The eastern Australia coastline is characterized by impressive coastal landforms and an extensive northward-moving longshore drift system that have been influenced by a stable, long-term tectonic history over the Quaternary period. However, the timing and drivers of the formation of two conspicuous landscape features-Fraser Island (K’gari) and the Great Barrier Reef-remain poorly understood. Here we use optically stimulated luminescence and palaeomagnetic dating to constrain the formation of the extensive dunes that make up Fraser Island, the world’s largest sand island, and adjacent Cooloola Sand Mass in southeastern Queensland. We find that both formed between 1.2 Ma and 0.7 Ma, during a global climate reconfiguration across the Middle Pleistocene transition. They formed as a direct result of increased amplitude of sea-level fluctuations associated with increasing global ice volume that redistributed previously stored sediment across the continental shelf. The development of Fraser Island dramatically reduced sediment supply to the continental shelf north of the island. This facilitated widespread coral reef formation in the southern and central Great Barrier Reef and was a necessary precondition for its development. This major reorganization of the coastal sedimentary system is probably not unique to eastern Australia and should be investigated in other passive-margin coastlines.&lt;/p&gt;
+
+&lt;p&gt;Disruption of sediment flows along the eastern Australia coast due to the Middle Pleistocene formation of Fraser Island set the stage for Great Barrier Reef initiation, according to optically stimulated luminescence and palaeomagnetic dating of sand dunes.&lt;/p&gt;
+
+&lt;h3 id=&quot;variability-of-phosphorus-sorption-properties-in-hydromorphic-soils-consequences-for-p-losses-in-agricultural-landscapes&quot;&gt;Variability of phosphorus sorption properties in hydromorphic soils: Consequences for P losses in agricultural landscapes&lt;/h3&gt;
+
+&lt;p&gt;Increasing concerns over water eutrophication due to agricultural phosphorus (P) loss have led to the development of indicators to assess the risk of P release from agricultural soils. Recently, a logarithmic equation linking the degree of phosphorus saturation (DPS) to the simple water-soluble P (WSP) content of soils has been proposed as a universal method to assess this risk based, however, mainly on the analysis of well-drained soils. Here, we studied the P sorption properties and DPS values of 69 hydromorphic soils from cultivated and uncultivated wetland zones located in Brittany, Western France, to test whether the method could also apply to poorly-drained soils. The bulk soil analysis showed that P contents of the studied hydromorphic soils were 30% to 80% higher than P contents normally found in Brittany soils, evidencing a possible P enrichment process. Adsorption isotherms revealed a surprisingly high variability in the P sorption properties as a function of the location of the soil (maximum P adsorption capacity ranging from 500 to 1850 mg kg(-1)), which is caused by variations in the phases controlling P sorption in soil (from clay to organic matter and/or iron and aluminium oxides, depending on the soil location). Distinct relationships between DPS and WSP values were also obtained depending on the location of the soils. The obtained DPS versus WSP relationships showed that the P saturation threshold above which the risk of dissolved P release increases markedly is 30% lower on average for hydromorphic soils than for well-drained soils. Hydromorphic soils appear to be more at risk of releasing dissolved P at the same DPS values than well-drained soils. The present study indicates an underestimation of the P release risk from hydromorphic soils by the existing method developed for well-drained soils and calls for the development of specific risk assessment tools for hydromorphic soils, especially given on the strong spatial heterogeneity of their P sorption properties.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2023/01/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on January 11, 2023.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/12/journalDigest" />
+  <id>/2022/12/journalDigest</id>
+  <updated>2022-12-07T00:00:00-00:00</updated>
+  <published>2022-12-07T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-24&quot;&gt;Journal Paper Digests 2022 #24&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fusion of Gamma-rays and portable X-ray fluorescence spectral data to measure extractable potassium in soils&lt;/li&gt;
+  &lt;li&gt;Tipping points of marine phytoplankton to multiple environmental stressors&lt;/li&gt;
+  &lt;li&gt;Warming reduces global agricultural production by decreasing cropping frequency and yields&lt;/li&gt;
+  &lt;li&gt;Benchmarking downscaled satellite-based soil moisture products using sparse, point-scale ground observations&lt;/li&gt;
+  &lt;li&gt;A web-based system for satellite-based high-resolution global soil moisture maps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;a-web-based-system-for-satellite-based-high-resolution-global-soil-moisture-maps&quot;&gt;A web-based system for satellite-based high-resolution global soil moisture maps&lt;/h3&gt;
+
+&lt;p&gt;Nowadays, a wide range of applications require near-real-time Surface Soil Moisture (SSM) data at high spatial resolution. However, operational passive microwave systems like SMOS and SMAP can only acquire such information at a relatively coarser resolution. Therefore, several downscaling algorithms have been developed to address this issue and provide SSM maps at a finer spatial scale. Users may, however, find it difficult to implement the downscaling algorithm due to the complexity of integrating various data sources. Disaggregation based on Physical and Theoretical scale Change (DisPATCh) is one of the algorithms that is widely accepted to downscale passive microwave SSM observations. But the complexity of modeling, the variety of data sources and formats of input data make it very difficult for users to implement the algorithm. Thus, we developed a Satellitebased Hydrological Monitoring System (SHMS), which facilitates this gap through the implementation of the DisPATCh algorithm to generate large-scale SSM maps with high resolution, which is achieved by combining SMAP and MODIS products. The System Usability Scale (SUS) method was used to evaluate the system’s strengths and weaknesses. The SUS evaluation results show that 74.75% of SHMS users are satisfied with the system’s performance.&lt;/p&gt;
+
+&lt;h3 id=&quot;benchmarking-downscaled-satellite-based-soil-moisture-products-using-sparse-point-scale-ground-observations&quot;&gt;Benchmarking downscaled satellite-based soil moisture products using sparse, point-scale ground observations&lt;/h3&gt;
+
+&lt;p&gt;While strides have been made in their accuracy and availability, the overall utility of satellite-derived surface soil moisture (SM) datasets derived from passive microwave radiometry is still reduced by their relatively coarse spatial resolution (typically &amp;gt;30 km). In response to this shortcoming, many independent satellite-based SM downscaling approaches have been introduced recently. However, owing to limitations in the spatial sampling characteristics of existing SM ground-monitoring networks, it has proven difficult to obtain reliable reference SM observations at the target downscaling resolution for these approaches (typically 1 to 10 km). As a result, the objective evaluation of SM downscaling approaches is often challenging and/or limited to very localized conditions. Here, we introduce and evaluate a point-scale downscaling (PSD) benchmarking strategy whereby spatially sparse, long-term, point-scale SM observations available from existing ground-based SM networks are utilized for the objective benchmarking of downscaled satellite-based SM products. First, we define criteria that must be met for a given SM downscaling strategy to add either temporal accuracy or spatial skill relative to its coarse-resolution SM baseline. Next, we illustrate, both analytically and numerically, that such criteria can be accurately evaluated using sparse, point-scale SM observations available from existing ground-based SM networks. Finally, we apply our new PSD benchmarking approach to evaluate existing fine-scale SM products. Results demonstrate that the PSD approach, in concert with existing ground-based network data, can be leveraged to robustly evaluate SM downscaling approaches.&lt;/p&gt;
+
+&lt;h3 id=&quot;warming-reduces-global-agricultural-production-by-decreasing-cropping-frequency-and-yields&quot;&gt;Warming reduces global agricultural production by decreasing cropping frequency and yields&lt;/h3&gt;
+
+&lt;p&gt;Annual food caloric production is the product of caloric yield, cropping frequency (CF, number of production seasons per year) and cropland area. Existing studies have largely focused on crop yield, whereas how CF responds to climate change remains poorly understood. Here, we evaluate the global climate sensitivity of caloric yields and CF at national scale. We find a robust negative association between warming and both caloric yield and CF. By the 2050s, projected CF increases in cold regions are offset by larger decreases in warm regions, resulting in a net global CF reduction (-4.2 +/- 2.5% in high emission scenario), suggesting that climate-driven decline in CF will exacerbate crop production loss and not provide climate adaptation alone. Although irrigation is effective in offsetting the projected production loss, irrigation areas have to be expanded by &amp;gt;5% in warm regions to fully offset climate-induced production losses by the 2050s.&lt;/p&gt;
+
+&lt;p&gt;Climate change will impact agriculture, and this study shows cropping frequency and caloric yield are negatively impacted on the global scale by warming. While cold regions will increase cropping frequency, warm regions will see greater decreases, resulting in an overall decline in production.&lt;/p&gt;
+
+&lt;h3 id=&quot;tipping-points-of-marine-phytoplankton-to-multiple-environmental-stressors&quot;&gt;Tipping points of marine phytoplankton to multiple environmental stressors&lt;/h3&gt;
+
+&lt;p&gt;The authors establish machine learning models to identify multifactor tipping points of global marine phytoplankton. They show that temperature and carbon dioxide dominate risks, and project crossing tipping points in tropical area production (50%) and resistance (41%) by 2100 under high emissions.&lt;/p&gt;
+
+&lt;p&gt;Globally, anthropogenic climate change is threatening marine species. However, whether and how global marine phytoplankton, which represent the base of marine food webs, will exceed their tipping points under multiple climate factors remain unclear. Here, by establishing machine learning models, we identified the tipping points of global marine phytoplankton production and resistance under eight environmental stressors. Phytoplankton production and resistance are affected by multiple factors and the temperature and partial pressure of carbon dioxide dominate the risks for reaching their tipping points. If the current emission scenario continues, 50% (40-61% at 90% confidence) and 41% (2-80% at 90% confidence) of tropical areas would reach the tipping points of ongoing phytoplankton production and resistance decline, respectively, in 2100. Compared with single- or few-factor studies, machine learning (for example, ensemble machine learning) provides a powerful and realistic solution for policy-makers facing large-scale ecological responses to global climate changes under multiple environmental stressors.&lt;/p&gt;
+
+&lt;h3 id=&quot;fusion-of-gamma-rays-and-portable-x-ray-fluorescence-spectral-data-to-measure-extractable-potassium-in-soils&quot;&gt;Fusion of Gamma-rays and portable X-ray fluorescence spectral data to measure extractable potassium in soils&lt;/h3&gt;
+
+&lt;p&gt;The detection and mapping of plant-extractable potassium (K-a) using proximal soil sensing and data fusion (DF) techniques are essential to optimise K2O fertiliser application, improve crop yield, and minimise environmental and financial costs. This work evaluates the potential of combined use of portable gamma ray and x-ray fluorescence spectroscopy for in field detection and mapping of K-a. After subjected to various pre-processing methods, spectral data were split into calibration (75%) and validation (25%) sets, and single sensor and DF models were developed using partial least squares regression (PLSR). Maps of Ka were used to present spatial variability of potassium across an 8.4 ha Voor de Hoeves target field, in Flanders, Belgium. Results showed that the gamma-ray PLSR model using wet soils had greater predictive ability with coefficient of determination (R-2) = 0.71, ratio of performance deviation (RPD) = 1.89, root mean square error (RMSE) = 31.7 mg kg(-1), and ratio of performance to interquartile range (RPIQ) = 2.36 than the corresponding wet-XRF PLSR model (R-2 = 0.61, RPD = 1.64, RMSE = 48.8 mg kg(-1) and RPIQ = 1.84). The DF PLSR model on wet soils, resulted in a more accurate Ka predictive ability (R-2 = 0.75, RPD = 2.03, RMSE = 31.3 mg kg(-1) and RPIQ = 2.79), compared to the individual gamma ray or XRF sensors in wet soils. The best accuracy was obtained with XRF spectrometer using dry samples (R-2 = 0.77, RPD = 2.14, RMSE = 26.5 mg kg(-1) and RPIQ = 3.39). All Ka prediction maps showed spatial similarity to the corresponding measured maps in the target field. In conclusion, since DF increased the Ka prediction accuracy compared to the single sensor models using wet soils, it is recommended to be adopted in future studies as a potential solution for Ka measurement, mapping, and ultimately for site-specific K2O fertilisation management. The XRF analysis of dry spectra is recommended as the best method for accurate measurement of K-a.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/2022/12/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on December 07, 2022.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2022/12/journalDigest" />
+  <id>/2022/12/journalDigest</id>
+  <updated>2022-12-05T00:00:00-00:00</updated>
+  <published>2022-12-05T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2022-23&quot;&gt;Journal Paper Digests 2022 #23&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The radiometric accuracy of the 8-band multi-spectral surface reflectance from the planet SuperDove constellation&lt;/li&gt;
+  &lt;li&gt;Modeling carbon storage in urban vegetation: Progress, challenges, and opportunities&lt;/li&gt;
+  &lt;li&gt;Enigmatic annular landform on a Miocene planar karst surface, Nullarbor Plain, Australia&lt;/li&gt;
+  &lt;li&gt;Integrating scientific knowledge into machine learning using interactive decision trees&lt;/li&gt;
+  &lt;li&gt;Soil microbiome signatures are associated with pesticide residues in arable landscapes&lt;/li&gt;
+  &lt;li&gt;The driving factors and buffering mechanism regulating cropland soil acidification across the Sichuan Basin of China&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;the-driving-factors-and-buffering-mechanism-regulating-cropland-soil-acidification-across-the-sichuan-basin-of-china&quot;&gt;The driving factors and buffering mechanism regulating cropland soil acidification across the Sichuan Basin of China&lt;/h3&gt;
+
+&lt;p&gt;Cropland soil has a higher acidification risk, with the driving factors and the soil buffering capacity controlling the degree of soil acidification. However, the relative importance of the main driving factors at broad geographic scales remains unclear, and the evidence on the acid-buffering process is rarely examined by large-scale observations. Using 4101 soil samples obtained in 1980s and 4348 soil samples collected in 2010s, this study explored topsoil pH changes of cropland across the Sichuan Basin of China and identified the relative importance of the main affecting factors. The results showed that topsoil pH (20 cm) has decreased by an average of 0.30 units (p &amp;lt; 0.001). Spatially, soil pH decline mainly occurred in the periphery of the Sichuan Basin where the initial pH (1980s) were less than 7.5. The magnitudes of soil pH decline were positively correlated with precipitation, base cation removal by crops and nitrogen fertilizer rates. Precipitation was identified as the most important factor in driving soil acidification. Moreover, the soil pH decrease was primarily buffered by soil carbonates and secondarily by soil CEC, and this study identified a critical level of 36.76 g kg(-1) for soil carbonates, above which the acid-buffering capacity was mainly provided by soil carbonates, otherwise by soil CEC. These findings emphasize the importance of formulating precipitation-based optimizing agronomic management practices for preventing or mitigating cropland soil acidification, and also provide a regional observation-dependent evidence for the changing acid-buffering process during the soil acidification process.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-microbiome-signatures-are-associated-with-pesticide-residues-in-arable-landscapes&quot;&gt;Soil microbiome signatures are associated with pesticide residues in arable landscapes&lt;/h3&gt;
+
+&lt;p&gt;Pesticides are widely applied in agriculture to combat disease, pests, and weeds, leading to long-lasting contamination of agricultural soils with pesticide residues. While classical risk assessment experiments have repeatedly addressed immediate pesticide effects, we employ an ecological approach to investigate how pesticide residues persisting in soils influence the soil microbiome under realistic agricultural conditions. We assessed a wide range of soil characteristics, including the occurrence of 48 widely-used pesticides in 60 fields under conventional, no-tillage and organic management. We then tested which factors best explain soil microbiome traits. Environmental factors, including climate, geography, and soil characteristics, were the soil microbiome’s leading drivers. Remarkably, of all management factors, pesticide residues showed the strongest associations with soil microbiome traits, which were even more pronounced than the effects of cropping systems. Pesticide residues were almost exclusively positively associated with the relative abundance of 113 bacterial and 130 fungal taxa, many of them being assigned to taxa of known pesticide degraders. While fungal diversity and abundance were primarily positively associated with pesticide residues, bacterial diversity and abundance of the gene nifH -essential for biological nitrogen fixation -were negatively linked to the concentration of individual pesticide residues. Our results suggest that pesticide residues alter the soil microbiome, with potential long-term implications for the functioning of agricultural soils.&lt;/p&gt;
+
+&lt;h3 id=&quot;integrating-scientific-knowledge-into-machine-learning-using-interactive-decision-trees&quot;&gt;Integrating scientific knowledge into machine learning using interactive decision trees&lt;/h3&gt;
+
+&lt;p&gt;Decision Trees (DT) describe a type of machine learning method that has been widely used in the geosciences to automatically extract patterns from complex and high dimensional data. However, like any data-based method, the application of DT is hindered by data limitations, such as significant biases, leading to potentially physically unrealistic results. We develop interactive DT (iDT) that put humans in the loop to integrate the power of experts’ scientific knowledge with the power of the algorithms to automatically learn patterns from large datasets. We created an open-source Python toolbox that implements the iDT framework. Users can interactively create new composite variables, change the variable and threshold to split, prune and group variables based on their physical meaning. We demonstrate with three case studies how iDT overcomes problems with current DT thus achieving higher interpretability and robustness of the result.&lt;/p&gt;
+
+&lt;h3 id=&quot;enigmatic-annular-landform-on-a-miocene-planar-karst-surface-nullarbor-plain-australia&quot;&gt;Enigmatic annular landform on a Miocene planar karst surface, Nullarbor Plain, Australia&lt;/h3&gt;
+
+&lt;p&gt;The Nullarbor Plain is a similar to 200,000 km(2) planar karst surface in southern Australia, underlain by Cenozoic shallow-water limestones. During the Miocene the area was uplifted, and although the plain is generally considered extremely flat, locally, the geomorphology of the Nullarbor Plain retains evidence of earth surface processes across a long, middle Miocene-to-present time span. The accessibility of the recent 0.4 arc-second TanDEM-X digital elevation model (DEM) by the German Aerospace Centre motivated the search for other possible fine-scale landforms that would previously have been unresolvable. The analysis of DEM images revealed an enigmatic annular landform with an outer diameter between 1200 m and 1300 m. It consists of a circular elevated rim and a central dome. Its morphology is distinct from other landforms observed on the plain, and cannot be readily explained as a part of known active or inferred/expected processes on the plain (e.g., fluvial, aeolian, karst, tectonic or extra-terrestrial impact processes).&lt;/p&gt;
+
+&lt;p&gt;More recent karst processes (dayas formation) overprinting the landform indicates the presence of the annular structure prior to dayas formation. A unique microbial boundstone facies sampled from the bed-rock of the annular structure supports an interpretation of long-lived, at least partial retention of a primary depositional structure. Differential carbonate deposition, especially bioherm growth, was a likely origin of the annular topographical expression of the present-day landform and is comparable to biogenic structures in the modern day deeper Great Barrier Reef.&lt;/p&gt;
+
+&lt;h3 id=&quot;modeling-carbon-storage-in-urban-vegetation-progress-challenges-and-opportunities&quot;&gt;Modeling carbon storage in urban vegetation: Progress, challenges, and opportunities&lt;/h3&gt;
+
+&lt;p&gt;Urban vegetation (UV) and its carbon storage capacity are critical for terrestrial carbon cycling and global sustainable development goals (SDGs). With complex spatial distribution, composition and ecological functions, UV is essential for global carbon cycling and climate change. Therefore, improving UV carbon storage capacity modeling is a research hotspot that deserves extensive investigation. However, the uniqueness of UV lead to great challenges in carbon storage modeling, including (1) limitations in data and algorithms due to complex and sensitive urban environments; (2) the severe scarcity of in-city field observation data (e.g., EC towers and field surveys); (3) difficulty in parameter inversion (e.g., canopy height, LAI, etc.); (4) poor transferability when migrating estimation models from natural vegetation to urban scenarios. The progress in carbon storage modeling in urban settings is reviewed, with detailed discussions on carbon storage modeling methods and major challenges. We then propose strategies to overcome existing challenges, including (1) implementing novel and improved remote sensing (RS) techniques (e.g., hyper-spectral, LiDAR, carbon satellites, etc.) to obtain enhanced structural and functional information on UV; (2) improving critical nodes of the earth observation sensor network, especially the distribution of EC towers in urban settings; (3) leveraging “Model-Data Fusion” tech-nology by integrating big earth data with carbon estimation models to reduce the uncertainty in UV carbon storage estimations. This review provides new insights for modeling UV carbon storage and is expected to help the research community to achieve a better understanding of UV towards carbon neutrality.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-radiometric-accuracy-of-the-8-band-multi-spectral-surface-reflectance-from-the-planet-superdove-constellation&quot;&gt;The radiometric accuracy of the 8-band multi-spectral surface reflectance from the planet SuperDove constellation&lt;/h3&gt;
+
+&lt;p&gt;Advances in the capabilities of commercial CubeSat constellations have enabled the retrieval of multi-spectral surface reflectance data over the Earth’s terrestrial surfaces on an almost daily basis. For example, while the earliest versions of Planet’s CubeSats provided tri-band and then quad-band optical image data, the most recent iterations deliver imaging capabilities with eight unique spectral bands for Earth system monitoring. To determine the utility of these rich geospatial data collections for a range of applications, it is necessary to characterise their radiometric accuracy. Leveraging on-ground spectroradiometer measurements of radiometrically pseudoinvariant features, we assess the absolute accuracy of an annual sequence of Planet SuperDove surface reflectance data. Date-coincident and spectrally overlapping Sentinel-2 image data were also used to assess the relative radiometric accuracy of the CubeSat reflectance data. Additionally, confidence levels for acquiring consistent SuperDove surface reflectance data were calculated, and the multi-temporal patterns of surface reflectance between the SuperDove and Sentinel-2 surface reflectance products were evaluated by examining their rank correlation. Our findings demonstrate that (1) the average accuracy of the Coastal-Blue, Blue, Green I, and Green II SuperDove surface reflectance bands was 5% higher than for the Yellow, Red, Red-Edge, and Near-Infrared bands; (2) the SuperDove surface reflectance data was on average almost identical to the surface reflectance derived from the coincident Sentinel-2 data; and (3) the radiometric accuracies (i.e., mean errors) can be improved by using band combinations (e.g. normalised difference vegetation index). However, due to the different radiometric performance between the spectral bands, some vegetation indices (e.g. the Yellowness Index) did not provide a linear relationship between the SuperDove and reference data. The probability of acquiring surface reflectance data with less than 5% reflectance variation was approximately 90% for the annual multi-satellite dataset. On average, 68% of the data derived from a single satellite had at least 95% probability of acquiring surface reflectance with less than 5% variation. The time series patterns of the SuperDove reflectance data had an average rank correlation coefficient of 0.67 for all types of surface units and 0.77 for vegetated surfaces when compared with the spectrally overlapping bands of the Sentinel-2 surface reflectance data. In addition to providing confidence levels for users to directly assess the radiometric accuracies of SuperDove surface reflectance products, we also provide suggestions to improve the data quality from an end-user’s perspective.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2022/12/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on December 05, 2022.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -951,132 +1120,6 @@
 &lt;p&gt;The 2017-2027 National Academies’ Decadal Survey, Thriving on Our Changing Planet, recommended Surface Biology and Geology (SBG) as a “Designated Targeted Observable” (DO). The SBG DO is based on the need for agriculture, natural habitats, water use/quality, and urban development. We review existing algorithms in the community-state-of-practice in each category. This effort synthesizes the findings of more than 130 scientists.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2022/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/02/journalDigest" />
-  <id>/2022/02/journalDigest</id>
-  <updated>2022-02-25T00:00:00-00:00</updated>
-  <published>2022-02-25T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-5&quot;&gt;Journal Paper Digests 2022 #5&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Variations and controlling factors of soil denitrification rate&lt;/li&gt;
-  &lt;li&gt;Uncovering the critical soil moisture thresholds of plant water stress for European ecosystems&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;variations-and-controlling-factors-of-soil-denitrification-rate&quot;&gt;Variations and controlling factors of soil denitrification rate&lt;/h3&gt;
-
-&lt;p&gt;The denitrification process profoundly affects soil nitrogen (N) availability and generates its byproduct, nitrous oxide, as a potent greenhouse gas. There are large uncertainties in predicting global denitrification because its controlling factors remain elusive. In this study, we compiled 4301 observations of denitrification rates across a variety of terrestrial ecosystems from 214 papers published in the literature. The averaged denitrification rate was 3516.3 +/- 91.1 mu g N kg(-1) soil day(-1). The highest denitrification rate was 4242.3 +/- 152.3 mu g N kg(-1) soil day(-1) under humid subtropical climates, and the lowest was 965.8 +/- 150.4 mu g N kg(-1) under dry climates. The denitrification rate increased with temperature, precipitation, soil carbon and N contents, as well as microbial biomass carbon and N, but decreased with soil clay contents. The variables related to soil N contents (e.g., nitrate, ammonium, and total N) explained the variation of denitrification more than climatic and edaphic variables (e.g., mean annual temperature (MAT), soil moisture, soil pH, and clay content) according to structural equation models. Soil microbial biomass carbon, which was influenced by soil nitrate, ammonium, and total N, also strongly influenced denitrification at a global scale. Collectively, soil N contents, microbial biomass, pH, texture, moisture, and MAT accounted for 60% of the variation in global denitrification rates. The findings suggest that soil N contents and microbial biomass are strong predictors of denitrification at the global scale.&lt;/p&gt;
-
-&lt;h3 id=&quot;uncovering-the-critical-soil-moisture-thresholds-of-plant-water-stress-for-european-ecosystems&quot;&gt;Uncovering the critical soil moisture thresholds of plant water stress for European ecosystems&lt;/h3&gt;
-
-&lt;p&gt;Understanding the critical soil moisture (SM) threshold (theta(crit)) of plant water stress and land surface energy partitioning is a basis to evaluate drought impacts and improve models for predicting future ecosystem condition and climate. Quantifying the theta(crit) across biomes and climates is challenging because observations of surface energy fluxes and SM remain sparse. Here, we used the latest database of eddy covariance measurements to estimate theta(crit) across Europe by evaluating evaporative fraction (EF)-SM relationships and investigating the covariance between vapor pressure deficit (VPD) and gross primary production (GPP) during SM dry-down periods. We found that the theta(crit) and soil matric potential threshold in Europe are 16.5% and -0.7 MPa, respectively. Surface energy partitioning characteristics varied among different vegetation types; EF in savannas had the highest sensitivities to SM in water-limited stage, and the lowest in forests. The sign of the covariance between daily VPD and GPP consistently changed from positive to negative during dry-down across all sites when EF shifted from relatively high to low values. This sign of the covariance changed after longer period of SM decline in forests than in grasslands and savannas. Estimated theta(crit) from the VPD-GPP covariance method match well with the EF-SM method, showing this covariance method can be used to detect the theta(crit). We further found that soil texture dominates the spatial variability of theta(crit) while shortwave radiation and VPD are the major drivers in determining the spatial pattern of EF sensitivities. Our results highlight for the first time that the sign change of the covariance between daily VPD and GPP can be used as an indicator of how ecosystems transition from energy to SM limitation. We also characterized the corresponding theta(crit) and its drivers across diverse ecosystems in Europe, an essential variable to improve the representation of water stress in land surface models.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2022/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 25, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/02/journalDigest" />
-  <id>/2022/02/journalDigest</id>
-  <updated>2022-02-16T00:00:00-00:00</updated>
-  <published>2022-02-16T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-5&quot;&gt;Journal Paper Digests 2022 #5&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Soil enzymes as indicators of soil function: A step toward greater realism in microbial ecological modeling&lt;/li&gt;
-  &lt;li&gt;What type of gully is that? The need for a classification of gullies&lt;/li&gt;
-  &lt;li&gt;The naturalness index for the identification of natural areas on regional scale&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;soil-enzymes-as-indicators-of-soil-function-a-step-toward-greater-realism-in-microbial-ecological-modeling&quot;&gt;Soil enzymes as indicators of soil function: A step toward greater realism in microbial ecological modeling&lt;/h3&gt;
-
-&lt;p&gt;Soil carbon (C) and nitrogen (N) cycles and their complex responses to environmental changes have received increasing attention. However, large uncertainties in model predictions remain, partially due to the lack of explicit representation and parameterization of microbial processes. One great challenge is to effectively integrate rich microbial functional traits into ecosystem modeling for better predictions. Here, using soil enzymes as indicators of soil function, we developed a competitive dynamic enzyme allocation scheme and detailed enzyme-mediated soil inorganic N processes in the Microbial-ENzyme Decomposition (MEND) model. We conducted a rigorous calibration and validation of MEND with diverse soil C-N fluxes, microbial C:N ratios, and functional gene abundances from a 12-year CO2 x N grassland experiment (BioCON) in Minnesota, USA. In addition to accurately simulating soil CO2 fluxes and multiple N variables, the model correctly predicted microbial C:N ratios and their negative response to enriched N supply. Model validation further showed that, compared to the changes in simulated enzyme concentrations and decomposition rates, the changes in simulated activities of eight C-N-associated enzymes were better explained by the measured gene abundances in responses to elevated atmospheric CO2 concentration. Our results demonstrated that using enzymes as indicators of soil function and validating model predictions with functional gene abundances in ecosystem modeling can provide a basis for testing hypotheses about microbially mediated biogeochemical processes in response to environmental changes. Further development and applications of the modeling framework presented here will enable microbial ecologists to address ecosystem-level questions beyond empirical observations, toward more predictive understanding, an ultimate goal of microbial ecology.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-type-of-gully-is-that-the-need-for-a-classification-of-gullies&quot;&gt;What type of gully is that? The need for a classification of gullies&lt;/h3&gt;
-
-&lt;p&gt;Despite over a century of investigations into gullies and gully erosion, the characterization and categorization of gullies and the varied definitions, nomenclatures and terminology used has caused some confusion in understanding and communicating the relationships of gully forms and processes around the world. We firstly review the gully literature and highlight how a lack of consistency in gully definition and characterization prevents unifying theory from being developed within this important field of research, since it is often unclear whether different landscape features being discussed are comparable. We propose that conventionally employed qualitative planform and cross-sectional characteristics of gullies alone are inadequate to define gully types, yet both these features remain central to most modern gully descriptions. We discuss the need to revise and augment these basic characteristics with clearly defined morphogenetic attributes such as landscape context, soil material characteristics, erosion processes, hydrological integrity, modes of development, and head/side-wall morphology for an effective, practicable, generic gully classification scheme. Central to a gully classification scheme is the need for a clear definition of what a gully is - and is not - for which geomorphological criteria are proposed to differentiate a ‘gully’ from other ‘incisional land surface forms’. This gully definition hinges largely on the identification of a retreating head scarp and the internal erosion by mass-movement and other sidewall slope erosion processes, coupled with the transport of the soil materials from the gully void. By defining a gully and synthesizing descriptions of gully ‘types’ from the literature and our own experience, we propose key morphogenetic attributes of gullies necessary to form a framework for a systematic gully classification scheme. An initial, eclectic classification framework is presented as both a summation and a synthesis of the literature review, and as a progenitor to a dynamic generic classification scheme that is proposed in a follow-up article.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-naturalness-index-for-the-identification-of-natural-areas-on-regional-scale&quot;&gt;The naturalness index for the identification of natural areas on regional scale&lt;/h3&gt;
-
-&lt;p&gt;Researchers have been trying to measure the influence of humankind on our environment for several decades. Among the technical solutions for this goal, approaches for a rule-based fusion of different geospatial information layers have reached the greatest level of maturity, enabling the (semi-)automatic production of maps at resolutions of about 1 square kilometer. While those existing approaches aim at a global analysis of human influence, conservation efforts are usually implemented on a regional scale. To bridge the gap between a global, lowresolution analysis and a local, high-resolution analysis, with this paper, we propose the Naturalness Index (NI), which represents the naturalness of the Earth’s surface as a metric between 0 and 100 at a spatial resolution of 10 m per pixel. Our approach builds on the established Human Influence Index, but replaces different geospatial input layers with more recent, higher resolution counterparts. Using the cloud computing platform Google Earth Engine, regional maps at a resolution of 10 m x 10 m per pixel can be produced efficiently in a fully automatic manner. We demonstrate the functionality by creating maps for three different localities in Europe - Bavaria, Lapland, and Scotland. A comparison of the NI values achieved with our approach to official conservation areas as well as a correlation with existing similar maps indicate the validity of our approach.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2022/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 16, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/02/journalDigest" />
-  <id>/2022/02/journalDigest</id>
-  <updated>2022-02-10T00:00:00-00:00</updated>
-  <published>2022-02-10T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-4&quot;&gt;Journal Paper Digests 2022 #4&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A miniaturized method for fast, simple, and sensitive pesticide analysis in soils&lt;/li&gt;
-  &lt;li&gt;Bio-mediated soil improvement: An introspection into processes, materials, characterization and applications&lt;/li&gt;
-  &lt;li&gt;Soil salinity: A global threat to sustainable development&lt;/li&gt;
-  &lt;li&gt;Responding to Ecological Transformation: Mental Models, External Constraints, and Manager Decision-Making&lt;/li&gt;
-  &lt;li&gt;Management Foundations for Navigating Ecological Transformation by Resisting, Accepting, or Directing Social-Ecological Change&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;management-foundations-for-navigating-ecological-transformation-by-resisting-accepting-or-directing-social-ecological-change&quot;&gt;Management Foundations for Navigating Ecological Transformation by Resisting, Accepting, or Directing Social-Ecological Change&lt;/h3&gt;
-
-&lt;p&gt;Despite striking global change, management to ensure healthy landscapes and sustained natural resources has tended to set objectives on the basis of the historical range of variability in stationary ecosystems. Many social-ecological systems are moving into novel conditions that can result in ecological transformation. We present four foundations to enable a transition to future-oriented conservation and management that increases capacity to manage change. The foundations are to identify plausible social-ecological trajectories, to apply upstream and deliberate engagement and decision-making with stakeholders, to formulate management pathways to desired futures, and to consider a portfolio approach to manage risk and account for multiple preferences across space and time. We use the Kenai National Wildlife Refuge in Alaska as a case study to illustrate how the four foundations address common land management challenges for navigating transformation and deciding when, where, and how to resist, accept, or direct social-ecological change.&lt;/p&gt;
-
-&lt;h3 id=&quot;responding-to-ecological-transformation-mental-models-external-constraints-and-manager-decision-making&quot;&gt;Responding to Ecological Transformation: Mental Models, External Constraints, and Manager Decision-Making&lt;/h3&gt;
-
-&lt;p&gt;Ecological transformation creates many challenges for public natural resource management and requires managers to grapple with new relationships to change and new ways to manage it. In the context of unfamiliar trajectories of ecological change, a manager can resist, accept, or direct change, choices that make up the resist-accept-direct (RAD) framework. In this article, we provide a conceptual framework for how to think about this new decision space that managers must navigate. We identify internal factors (mental models) and external factors (social feasibility, institutional context, and scientific uncertainty) that shape management decisions. We then apply this conceptual framework to the RAD strategies (resist, accept, direct) to illuminate how internal and external factors shape those decisions. Finally, we conclude with a discussion of how this conceptual framework shapes our understanding of management decisions, especially how these decisions are not just ecological but also social, and the implications for research and management.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-salinity-a-global-threat-to-sustainable-development&quot;&gt;Soil salinity: A global threat to sustainable development&lt;/h3&gt;
-
-&lt;p&gt;Soil is a vital resource for feeding the burgeoning global population, and it is also essential for realizing most of the ‘United Nations Sustainable Development Goals (SDGs)’. For example, it is vital to realizing the ‘Zero hunger (SDG2), Good health and well-being (SDG3), Clean water and sanitation (SDG6), and Life on land (SDG15)’. Excess salts present in the soil make it saline, and it poses a significant threat to agricultural production and environmental health. Soil salinity is an extensive problem and spreads over one billion hectares extended over 100 countries. This paper presents a comprehensive review of global soil salinity management through the applications of remote sensing and GIS. All possible sources of relevant and current literature were accessed and more than 260 publications were collected and carefully analysed, for this review. The rationale and severity of the salinity problem are provided. The impact of salinity on plant yield and the effect of climate change on soil salinity are detailed. The salinity indicators and salinity monitoring and mapping are provided, and the global cases of soil salinity management through remote sensing and GIS applications under different agro-hydro-climatic environments are discussed, followed by a summary of conclusions and challenges along with future research directions. The analysis of past investigations showed that remote sensing strategy might be a practical approach to adequately assess plant response such as evapotranspiration under diverse salinity environments, yet it additionally has various difficulties. The lower spatial and temporal resolution of imagery may reason errors because of subpixel heterogeneity. However, with the improvement of the better-resolution thermal infrared remote method, there is the possibility to spot spatial variations at a smaller scale.&lt;/p&gt;
-
-&lt;h3 id=&quot;bio-mediated-soil-improvement-an-introspection-into-processes-materials-characterization-and-applications&quot;&gt;Bio-mediated soil improvement: An introspection into processes, materials, characterization and applications&lt;/h3&gt;
-
-&lt;p&gt;For a long time in the practice of geotechnical engineering, soil has been viewed as an inert material, comprising only inorganic phases. However, microorganisms including bacteria, archaea and eukaryotes are ubiquitous in soil and have the capacity and capability to alter bio-geochemical processes in the local soil environment. The cumulative changes could consequently modify the physical, mechanical, conductive and chemical properties of the bulk soil matrix. In recent years, the topic of bio-mediated geotechnics has gained momentum in the scientific literature. It involves the manipulation of various bio-geochemical soil processes to improve soil engineering performance. In particular, the process of microbial-induced calcium carbonate precipitation (MICP) has received the most attention for its superior performance for soil improvement. The present work aims to shape a comprehensive understanding of recent developments in bio-mediated geotechnics, with a focus on MICP. Referring to around one hundred studies published over the past five years, this review focuses on popular and alternative MICP processes, innovative raw materials and additives for MICP, emerging tools and testing methodologies for characterizing MICP at multi-scale, and applications in emerging and/or unconventional geotechnical fields.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-miniaturized-method-for-fast-simple-and-sensitive-pesticide-analysis-in-soils&quot;&gt;A miniaturized method for fast, simple, and sensitive pesticide analysis in soils&lt;/h3&gt;
-
-&lt;p&gt;Purpose Organochlorine pesticides (OCPs) like lindane and DDT have been used extensively after World War II until the 1990s. Still, residues of these pesticides can be found in agricultural soils all over the world, especially in developing countries. Often, they occur in extensive areas and elevated concentrations so that food safety is jeopardized. Hence, simple, cheap, and fast analytical methods are needed for a straight-forward assessment of risks. A miniaturized solid-liquid extraction combined with solid-phase microextraction (SPME) based on a proven ISO method is presented. Methods The performance of the method is evaluated by extracting three different soils which were spiked with HCH and DDT congeners, and trifluralin, and aged for 35 days. The results are compared with those of a modified quick, easy, cheap, efficient, rugged, and safe (QuEChERS) method. For further validation, both methods are applied to three environmental soil samples. Results Validation results show limits of detection and quantification as well as recovery rates in good agreement with standard requirements. The new method was found to be quicker than QuEChERS, which requires time-consuming preparation of reagents. Conclusion Merits include low time and sample volume requirements (0.5 g) and the possibility to extract many samples simultaneously, which allows the screening of large sample sizes to determine the pollution status of whole landscape regions. However, access to an automated SPME apparatus is assumed. The authors can recommend this method as a cheap and fast alternative where SPME is available.&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;/2022/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 10, 2022.&lt;/p&gt;
   </content>
 </entry>
 
