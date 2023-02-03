@@ -4,13 +4,123 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2023-01-11T21:41:07+11:00</updated>
+<updated>2023-02-03T11:52:55+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2023/02/journalDigest" />
+  <id>/2023/02/journalDigest</id>
+  <updated>2023-02-03T00:00:00-00:00</updated>
+  <published>2023-02-03T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2023-3&quot;&gt;Journal Paper Digests 2023 #3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Multi-modelling predictions show high uncertainty of required carbon input changes to reach a 4 parts per thousand target&lt;/li&gt;
+  &lt;li&gt;Applications of Computed Tomography (CT) in environmental soil and plant sciences&lt;/li&gt;
+  &lt;li&gt;How does soil structure affect water infiltration? A meta-data systematic review&lt;/li&gt;
+  &lt;li&gt;Knowledge Is Power: Where Digital Soil Mapping Needs Geopedology&lt;/li&gt;
+  &lt;li&gt;Those who can don’t want to, and those who want to can’t: An eco-evolutionary mechanism of soil carbon persistence&lt;/li&gt;
+  &lt;li&gt;Land use legacy footprint in Mediterranean forest soils: An infrared spectroscopy approach&lt;/li&gt;
+  &lt;li&gt;Interactive soil moisture interface of multi-depth change over time&lt;/li&gt;
+  &lt;li&gt;Assessing alteration of soil quality, degradation, and resistance indices under different land uses through network and factor analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;assessing-alteration-of-soil-quality-degradation-and-resistance-indices-under-different-land-uses-through-network-and-factor-analysis&quot;&gt;Assessing alteration of soil quality, degradation, and resistance indices under different land uses through network and factor analysis&lt;/h3&gt;
+
+&lt;p&gt;Over-increasing population and their needs necessitate sustainable use of soil and the other natural resources. In these circumstances land use changes may occur for supplying the food and settlement requirements of the increased population. Therefore, it is needed to evaluate and monitor quality and degradation of the soils. Recently, identification of appropriate soil quality (SQI) and degradation (SDI) indices for assessing sustainable use of soil resources has received increased attention. However, evaluation of quality, degradation, and resistance indices through various new approaches (e.g., network, NA and factor, FA analysis) particularly under different land uses to determine their susceptibility have been rarely conducted. The present study aimed to i) determine SQI, SDI, and resistance (SRI) indices NA and FA approaches under different land uses; ii) investigate the most influential attributes to soil quality (SQ); and iii) to compare SQIs obtained using two different Integrated (IQI) and Nemoro (NQI) Quality Indices, and indicator selection (Minimum Data Set, MDS and Total Data Set, TDS) approaches. Composite soil samples of cropland, forestland, and rangeland were collected and twentyone soil physicochemical and fertility indicators were measured. MDS was determined using principal component analysis (PCA). The SDI and SRI were computed and compared. Results revealed that the SDI was -13.8% and -4.6% for the cropland and rangeland, respectively indicating inappropriate soil managerial practices in cropland. SRI was 0.01 and 0.41 for the cropland and rangeland, respectively. The lowest SRI values were obtained for critical level of organic matter (CLOM), organic matter (OM), zinc (Zn) and manganese (Mn) showing that these properties, compared with the others, are more sensitive to land use change. Regression equations between SDI and SRI revealed that these substantial relationships show similar trends indicating that these are useful indices to determine SQ and evaluate the effect of land use change and managerial practices. Soils in cropland had a significantly lower deterioration index (DI) (-66.70) than that of the other land uses. SQI in the cropland was the lowest, especially when screened with the NA method. Furthermore, SQI showed the highest correlation with clay and CLOM. The linear SQI value derived from correlation-based-NA method showed greater max/min ratios than that of the FA. Therefore, the NA-based-SQI, as a novel statistical approach, would be more effective than the SQI-derived-FA for evaluating the effects of land use changes and managerial practices. In general, the mentioned technique is a relatively comprehensive approach integrating different influential soil indicators with various weights showing their contributions to soil quality or degradation process.&lt;/p&gt;
+
+&lt;h3 id=&quot;interactive-soil-moisture-interface-of-multi-depth-change-over-time&quot;&gt;Interactive soil moisture interface of multi-depth change over time&lt;/h3&gt;
+
+&lt;p&gt;Estimation of soil moisture throughout a crop root zone (nowcasting) is prone to spatial error, even when the time variable (forecasting) is removed. Measurement at discrete points in the field is now common using multi -depth sensors reporting at high temporal resolution, e.g.; every 15 or 60 min. The agricultural industry standard for data representation is suitable for prescriptive applications such as irrigation scheduling but is inadequate for descriptive applications such as reviewing change through a rainfed growing season. We developed an inter-active interface for animating past data and tested it on 61 EnviroPro (R) capacitance probes for up to 24 months starting mid 2019. Probes were installed in grey vertisol cropping soils of northern NSW, Australia, which contract when dry to produce deep cracks. When static, the interface highlights change in moisture at each level to the present date, with a default value of seven days. The interface shows these values against historical ex-tremes for the installation duration. When animated, the interface enables exploration of soil moisture change over one or more seasons by depth and crop phenology. We believe this descriptive use of data improves un-derstanding of crop-water relations, particularly for dryland crop production systems where management de-cisions are reliant on longer-term projections.&lt;/p&gt;
+
+&lt;h3 id=&quot;land-use-legacy-footprint-in-mediterranean-forest-soils-an-infrared-spectroscopy-approach&quot;&gt;Land use legacy footprint in Mediterranean forest soils: An infrared spectroscopy approach&lt;/h3&gt;
+
+&lt;p&gt;Chemical properties of forest soils can strongly influence this compartment vulnerability to climate change ef-fects. Past human activities can play a major role in structuring soil chemical properties. In the Mediterranean region, abandonment of terrace agriculture since 1860 induced the coexistence of forests with different ages. Here, soil chemical signature (SCS) was compared between very recent, recent and ancient forests using Fourier Transform InfraRed (FTIR) spectroscopy and other chemical properties (total C and N, CaCO3 percentages). Land Use Legacy (LUL) effects were analysed depending on soil depths and on contrasted climate conditions (humid vs subhumid Mediterranean climates). Statistic treatments, Linear Mixed-Effect and Anova COMmon DIMension models, were used to highlight the influence of depth’s soil, climate and LUL effects. Interestingly, the soil depth did not influence LUL effect on soil spectra. The effect of climate, LUL and their interactions were observed on the SCS. Higher available N was observed in soils from ancient forests than in soils from very recent forests. Moreover, mineral fraction discriminated soils with different LUL (very recent vs recent and ancient forests) and this depended on climate. Under subhumid climate, soils from very recent forests were indeed negatively correlated with the mineral fraction, while under humid climate, they were positively correlated to it. Finally, a recovery of soils chemical properties was observed in recent forests under humid climate, while under subhumid climate, SCS of post agricultural forests was different from that of ancient forests.&lt;/p&gt;
+
+&lt;h3 id=&quot;those-who-can-dont-want-to-and-those-who-want-to-cant-an-eco-evolutionary-mechanism-of-soil-carbon-persistence&quot;&gt;Those who can don’t want to, and those who want to can’t: An eco-evolutionary mechanism of soil carbon persistence&lt;/h3&gt;
+
+&lt;p&gt;Reliable manipulation of soil organic matter (SOM) - a necessity for optimal land management - is constrained by our limited mechanistic understanding of SOM formation. Here we propose a novel mechanistic element that may contribute to SOM dynamics, supplementing existing frameworks, based on evolutionary-ecological rather than chemical or physical limitations to decomposition. We argue that decomposition of some substrates may be constrained by spatial competition from opportunists. We describe and test a mathematical model based on our framework, providing a proof-of-concept that substrate can, in principle, be spared decomposition and accumulate even when it is physically and chemically accessible. Our framework can help explain a variety of SOM dynamics, including priming and the suppression of decomposition by nitrogen addition, as well as the typical composition of SOM. An augmented mechanistic framework for understanding SOM dynamics can help guide targeted empirical study, which in turn can contribute to more optimised land management.&lt;/p&gt;
+
+&lt;h3 id=&quot;knowledge-is-power-where-digital-soil-mapping-needs-geopedology&quot;&gt;Knowledge Is Power: Where Digital Soil Mapping Needs Geopedology&lt;/h3&gt;
+
+&lt;p&gt;Much of current digital soil mapping (DSM) practice relies on terrain, climate and remote sensing-derived covariates. These are easy to obtain and can serve as proxies to soil forming factors and from these to soil properties or classes. However, mapping of soil bodies, not properties in isolation, is what gives insight into the soil landscape. A naïve attempt at correlating environmental covariates will not succeed in the presence of unmapped variations in parent material, soil bodies and landforms inherited from past environments. It also takes no account of spatial relations among soil bodies. Geopedology integrates an understanding of the geomorphic conditions under which soils evolve with field observations. Examples where simplistic DSM would fail but geopedology would succeed in mapping and, even better, explaining the soil distribution are shown: exhumed paleosols, low-relief depositional environments, inverted landscapes, and recent post-glacial landscapes.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-does-soil-structure-affect-water-infiltration-a-meta-data-systematic-review&quot;&gt;How does soil structure affect water infiltration? A meta-data systematic review&lt;/h3&gt;
+
+&lt;p&gt;Soil structure is a key attribute of soil quality and health that significantly impacts water infiltration. Structure can be significantly altered by natural or anthropogenic drivers including soil management practices and can in turn impact soil infiltration. Those changes in soil structure are often complex to quantify and can lead to conflicting impacts on water infiltration into soils. Here, we present a narrative systematic review (SR) of the impacts of soil structure on water infiltration. Based on inclusion and exclusion criteria, as well as defined methods for literature search and data extraction, our systematic review led to a total of 153 papers divided into two sets: experimental (131) and theoretical (22) papers. That implied a significant number of in-situ and field experiments that were conducted to assess the impacts of soil structure on water infiltration under the influence of different land uses and soil practices. Analysis of the metadata extracted from the collected papers revealed significant impacts of soil structure on water infiltration. Those effects were further attributed to land use and management, where we demonstrate the impact of three unique categories: soil amendments, crop management and tillage. Furthermore, significant correlations were established between infiltration rate and soil structural properties, with R2 values ranging from 0.51 to 0.80 and for saturated hydraulic conductivity and soil structural properties, with R2 values ranging from 0.21 to 0.78. Finally, our review highlighted the significant absence of and the need for theoretical frameworks studying the impacts of soil structure on water infiltration.&lt;/p&gt;
+
+&lt;h3 id=&quot;multi-modelling-predictions-show-high-uncertainty-of-required-carbon-input-changes-to-reach-a-4-parts-per-thousand-target&quot;&gt;Multi-modelling predictions show high uncertainty of required carbon input changes to reach a 4 parts per thousand target&lt;/h3&gt;
+
+&lt;p&gt;Soils store vast amounts of carbon (C) on land, and increasing soil organic carbon (SOC) stocks in already managed soils such as croplands may be one way to remove C from the atmosphere, thereby limiting subsequent warming. The main objective of this study was to estimate the amount of additional C input needed to annually increase SOC stocks by 4%(0) at 16 long-term agricultural experiments in Europe, including exogenous organic matter (EOM) additions. We used an ensemble of six SOC models and ran them under two configurations: (1) with default parametrization and (2) with parameters calibrated site-by-site to fit the evolution of SOC stocks in the control treatments (without EOM). We compared model simulations and analysed the factors generating variability across models. The calibrated ensemble was able to reproduce the SOC stock evolution in the unfertilised control treatments. We found that, on average, the experimental sites needed an additional 1.5 +/- 1.2 Mg C ha(-)(1) year(-1) to increase SOC stocks by 4%(0) per year over 30 years, compared to the C input in the control treatments (multi-model median +/- median standard deviation across sites). That is, a 119% increase compared to the control. While mean annual temperature, initial SOC stocks and initial C input had a significant effect on the variability of the predicted C input in the default configuration (i.e., the relative standard deviation of the predicted C input from the mean), only water-related variables (i.e., mean annual precipitation and potential evapotranspiration) explained the divergence between models when calibrated. Our work highlights the challenge of increasing SOC stocks in agriculture and accentuates the need to increasingly lean on multi-model ensembles when predicting SOC stock trends and related processes. To increase the reliability of SOC models under future climate change, we suggest model developers to better constrain the effect of water-related variables on SOC decomposition.&lt;/p&gt;
+
+&lt;h3 id=&quot;applications-of-computed-tomography-ct-in-environmental-soil-and-plant-sciences&quot;&gt;Applications of Computed Tomography (CT) in environmental soil and plant sciences&lt;/h3&gt;
+
+&lt;p&gt;Computed tomography (CT) in combination with advanced image processing can be used to non-invasively and non-destructively visualize complex interiors of living and non-living media in 2 and 3-dimensional space. In addition to medical applications, CT has also been widely used in soil and plant science for visual and quanti-tative descriptions of physical, chemical, and biological properties and processes. The technique has been used successfully on numerous applications. However, with a rapidly evolving CT technologies and expanding ap-plications, a renewed review is desirable. Only a few attempts have been made to collate and review examples of CT applications involving the integrated field of soil and plant research in recent years. Therefore, the objectives of this work were to: (1) briefly introduce the basic principles of CT and image processing; (2) identify the research status and hot spots of CT using bibliometric analysis based on Web of Science literature over the past three decades; (3) provide an overall review of CT applications in soil science for measuring soil properties (e.g., porous soil structure, soil components, soil biology, heat transfer, water flow, and solute transport); and (4) give an overview of applications of CT in plant science to detect morphological structures, plant material properties, and root-soil interaction. Moreover, the limitations of CT and image processing are discussed and future per-spectives are given.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2023/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 03, 2023.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2023/02/journalDigest" />
+  <id>/2023/02/journalDigest</id>
+  <updated>2023-02-01T00:00:00-00:00</updated>
+  <published>2023-02-01T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2023-2&quot;&gt;Journal Paper Digests 2023 #2&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Behaviour as leverage&lt;/li&gt;
+  &lt;li&gt;Interactive effects of global change drivers as determinants of the link between soil biodiversity and ecosystem functioning&lt;/li&gt;
+  &lt;li&gt;Effects of land clearing for agriculture on soil organic carbon stocks in drylands: A meta-analysis&lt;/li&gt;
+  &lt;li&gt;Soils in warmer and less developed countries have less micronutrients globally&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;soils-in-warmer-and-less-developed-countries-have-less-micronutrients-globally&quot;&gt;Soils in warmer and less developed countries have less micronutrients globally&lt;/h3&gt;
+
+&lt;p&gt;Soil micronutrients are capital for the delivery of ecosystem functioning and food provision worldwide. Yet, despite their importance, the global biogeography and ecological drivers of soil micronutrients remain virtually unknown, limiting our capacity to anticipate abrupt unexpected changes in soil micronutrients in the face of climate change. Here, we analyzed &amp;gt;1300 topsoil samples to examine the global distribution of six metallic micronutrients (Cu, Fe, Mn, Zn, Co and Ni) across all continents, climates and vegetation types. We found that warmer arid and tropical ecosystems, present in the least developed countries, sustain the lowest contents of multiple soil micronutrients. We further provide evidence that temperature increases may potentially result in abrupt and simultaneous reductions in the content of multiple soil micronutrients when a temperature threshold of 12-14 degrees C is crossed, which may be occurring on 3% of the planet over the next century. Altogether, our findings provide fundamental understanding of the global distribution of soil micronutrients, with direct implications for the maintenance of ecosystem functioning, rangeland management and food production in the warmest and poorest regions of the planet.&lt;/p&gt;
+
+&lt;h3 id=&quot;effects-of-land-clearing-for-agriculture-on-soil-organic-carbon-stocks-in-drylands-a-meta-analysis&quot;&gt;Effects of land clearing for agriculture on soil organic carbon stocks in drylands: A meta-analysis&lt;/h3&gt;
+
+&lt;p&gt;Agricultural activities have been expanding globally with the pressure to provide food security to the earth’s growing population. These agricultural activities have profoundly impacted soil organic carbon (SOC) stocks in global drylands. However, the effects of clearing natural ecosystems for cropland (CNEC) on SOC are uncertain. To improve our understanding of carbon emissions and sequestration under different land uses, it is necessary to characterize the response patterns of SOC stocks to different types of CNEC. We conducted a meta-analysis with mixed-effect model based on 873 paired observations of SOC in croplands and adjacent natural ecosystems from 159 individual studies in global drylands. Our results indicate that CNEC significantly (p &amp;lt; .05) affects SOC stocks, resulting from a combination of natural land clearing, cropland management practices (fertilizer application, crop species, cultivation duration) and the significant negative effects of initial SOC stocks. Increases in SOC stocks (in 1 m depth) were found in croplands which previously natural land (deserts and shrublands) had low SOC stocks, and the increases were 278.86% (95% confidence interval, 196.43%-361.29%) and 45.38% (26.53%-62.23%), respectively. In contrast, SOC stocks (in 1 m depth) decreased by 24.11% (18.38%-29.85%) and 10.70% (1.80%-19.59%) in clearing forests and grasslands for cropland, respectively. We also established the general response curves of SOC stocks change to increasing cultivation duration, which is crucial for accurately estimating regional carbon dynamics following CNEC. SOC stocks increased significantly (p &amp;lt; .05) with high long-term fertilizer consumption in cleared grasslands with low initial SOC stocks (about 27.2 Mg ha(-1)). The results derived from our meta-analysis could be used for refining the estimation of dryland carbon dynamics and developing SOC sequestration strategies to achieve the removal of CO2 from the atmosphere.&lt;/p&gt;
+
+&lt;h3 id=&quot;interactive-effects-of-global-change-drivers-as-determinants-of-the-link-between-soil-biodiversity-and-ecosystem-functioning&quot;&gt;Interactive effects of global change drivers as determinants of the link between soil biodiversity and ecosystem functioning&lt;/h3&gt;
+
+&lt;p&gt;Biodiversity, both aboveground and belowground, is negatively affected by global changes such as drought or warming. This loss of biodiversity impacts Earth’s ecosystems, as there is a positive relationship between biodiversity and ecosystem functioning (BEF). Even though soils host a large fraction of biodiversity that underlies major ecosystem functions, studies exploring the relationship between soil biodiversity and ecosystem functioning (sBEF) as influenced by global change drivers (GCDs) remain scarce. Here we highlight the need to decipher sBEF relationships under the effect of interactive GCDs that are intimately connected in a changing world. We first state that sBEF relationships depend on the type of function (e.g., C cycling or decomposition) and biodiversity facet (e.g., abundance, species richness, or biomass) considered. Then, we shed light on the impact of single and interactive GCDs on soil biodiversity and sBEF and show that results from scarce studies studying interactive effects range from antagonistic to additive to synergistic when two individual GCDs cooccur. This indicates the need for studies quantitatively accounting for the impacts of interactive GCDs on sBEF relationships. Finally, we provide guidelines for optimized methodological and experimental approaches to study sBEF in a changing world that will provide more valuable information on the real impact of (interactive) GCDs on sBEF. Together, we highlight the need to decipher the sBEF relationship in soils to better understand soil functioning under ongoing global changes, as changes in sBEF are of immediate importance for ecosystem functioning.&lt;/p&gt;
+
+&lt;h3 id=&quot;behaviour-as-leverage&quot;&gt;Behaviour as leverage&lt;/h3&gt;
+
+&lt;p&gt;Behaviour change is essential for effective solutions to climate threats. Thus, policy-relevant behavioural science studies are needed for a shift towards human-centred climate actions.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2023/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 01, 2023.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1045,81 +1155,6 @@
 &lt;p&gt;Vegetation cover significantly influences the hydrometeorological processes of land surfaces. The heterogeneity of vegetation cover makes these processes more complex and impacts the interaction between water held in the soil matrix and vegetation cover. The backscatter measured by Synthetic Aperture Radar (SAR) is sensitive to target dielectric and morphological properties. In addition, SAR acquisitions are weather-independent, providing a major advantage over optical imaging during periods of cloud cover. Most often, vegetation properties are measured using vegetation indices, including simple ratios of backscatter intensities. However, this approach can miss the scattered wave purity from vegetation targets. The scattered wave characteristic is an essential parameter as it is susceptible to the complex random structure of vegetation. In this study, we propose a novel dual-polarimetric SAR vegetation descriptor based on the co-pol purity component of the wave. We use this descriptor within a semi-empirical vegetation model to estimate soil moisture. It is noteworthy that this proposed method to retrieve soil moisture uses only the dual-polarimetric Ground Range Detected (GRD) SAR product, i.e., only backscatter intensities. Therefore, the proposed method has the potential for operational scale monitoring applications at a global scale. This study validated different crop types (viz. canola, oats, forage, maize, soybeans, sugar beet, wheat, winter wheat, winter barley) over two test sites using airborne SAR data. The Root Mean Square Error (RMSE) values for soil moisture are within the range of 4.3% to 7.7% with the Pearson correlation coefficient r greater than 0.6. This novel descriptor will facilitate the operational use of dual-polarimetric GRD SAR data for vegetation monitoring and soil moisture estimation.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2022/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 25, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/03/journalDigest" />
-  <id>/2022/03/journalDigest</id>
-  <updated>2022-03-10T00:00:00-00:00</updated>
-  <published>2022-03-10T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-7&quot;&gt;Journal Paper Digests 2022 #7&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Optimal smart contract for autonomous greenhouse environment based on IoT blockchain network in agriculture&lt;/li&gt;
-  &lt;li&gt;Advances in gas sensors and electronic nose technologies for agricultural cycle applications&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;advances-in-gas-sensors-and-electronic-nose-technologies-for-agricultural-cycle-applications&quot;&gt;Advances in gas sensors and electronic nose technologies for agricultural cycle applications&lt;/h3&gt;
-
-&lt;p&gt;Agricultural cycle is the annual cycle of activities for planting and harvesting. The global warming and climate change currently cause serious impacts on the agricultural cycle leading to reduced crop quantity and quality. In the past decade, the gas sensors and electronic nose (E-nose) technologies have shown great promise and utility in monitoring and prediction of important parameters related to the growth and harvest of a crop. This review summarizes overall the evolution of utilizing gas sensors and E-nose technologies for guideline of agricultural best management practices including applications on cultivation preparation, crop production, harvesting and storage of crops. Advantages and limitations of these technologies in agricultural applications are reviewed to highlight potential research directions.&lt;/p&gt;
-
-&lt;h3 id=&quot;optimal-smart-contract-for-autonomous-greenhouse-environment-based-on-iot-blockchain-network-in-agriculture&quot;&gt;Optimal smart contract for autonomous greenhouse environment based on IoT blockchain network in agriculture&lt;/h3&gt;
-
-&lt;p&gt;The Internet of Things (IoT) has been widely adopted in many smart applications such as smart cities, healthcare, smart farms, industry etc. In recent few years, the greenhouse industry has earned significant consideration from the agriculture community due to its ability to produce fresh agricultural products with immense growth and production rate. However, labour and energy consumption costs increase the production cost of the greenhouse by 40-50% approximately. Moreover, the security and authenticity of agriculture data, particularly for yield monitoring and analysis, is also a challenging issue in current greenhouse systems.The greenhouse require optimal parameter settings with controlled environment to produce increase food production. Therefore, slight advancement can bring remarkable improvements concerning the increase in production with reduced overall cost. In this work, we contributed blockchain enabled optimization approach for greenhouse system. The proposed approach works in three steps to provide optimal greenhouse environment that are; prediction, optimization, and finally controlling. Initially, the Kalman filter algorithm is employed for predicting the greenhouse sensor data. In next step, the optimal parameters are computed for the indoor greenhouse environment. Finally, the optimized parameters are utilized by the control module to operate and regulate the actuator’s state to meet the desired settings in the indoor environment. To evaluate the performance of our proposed greenhouse system, we have developed an emulation tool. The proposed system has been investigated and compared against baseline approach concerning production rate and energy consumption. The obtained results reveal that the proposed optimization approach has improved the energy consumption by 19% against the prediction based approach and 41% against the Baseline scheme. Furthermore, the proof-of-concept based on the Hyperledger Fabric network is implemented on the top of the proposed greenhouse platform. For experimental analysis, we have conducted a series of experiments using Hyperledger calliper concerning throughput, latency, and resource utilization. These results advocates the efficiency of the proposed optimal greenhouse system.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2022/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 10, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/03/journalDigest" />
-  <id>/2022/03/journalDigest</id>
-  <updated>2022-03-04T00:00:00-00:00</updated>
-  <published>2022-03-04T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-6&quot;&gt;Journal Paper Digests 2022 #6&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Carbon stocks in umbric ferralsols driven by plant productivity and geomorphic processes, not by mineral protection&lt;/li&gt;
-  &lt;li&gt;NASA’s surface biology and geology designated observable: A perspective on surface imaging algorithms&lt;/li&gt;
-  &lt;li&gt;Transforming food systems: Multi-stakeholder platforms driven by consumer concerns and public demands&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;transforming-food-systems-multi-stakeholder-platforms-driven-by-consumer-concerns-and-public-demands&quot;&gt;Transforming food systems: Multi-stakeholder platforms driven by consumer concerns and public demands&lt;/h3&gt;
-
-&lt;p&gt;Food systems governance for healthy and sustainable diets remains a challenge. New structures are needed to better connect food systems actors. This paper argues that existing multi-stakeholder platforms (MSPs) have the potential to contribute to food systems governance by facilitating linkages between actors and scales. In a nonexperimental study existing MSPs (n = 89) were explored in four countries addressing food and nutrition security. A diagnostic framework was used to identify MSP’s capacities to address governance principles like system-based problem framing, boundary spanning, adaptability, inclusiveness, and transformative capacity. Existing MSPs can play a role in spanning boundaries, thereby increasing adaptability and learning, but seem less promising in shifting to systems-based narratives and thus may have limited capacity to truly transform food systems.&lt;/p&gt;
-
-&lt;h3 id=&quot;carbon-stocks-in-umbric-ferralsols-driven-by-plant-productivity-and-geomorphic-processes-not-by-mineral-protection&quot;&gt;Carbon stocks in umbric ferralsols driven by plant productivity and geomorphic processes, not by mineral protection&lt;/h3&gt;
-
-&lt;p&gt;Umbric ferralsols (UF) have organic carbon stocks within the first 1 m of soil profile depth that are nearly double the size (similar to 19 kg Cm-2) compared to the average carbon stocks of all other ferralsols (similar to 10 kg Cm-2). Here, we investigate processes that allow UF to gain and maintain such extraordinary carbon stocks. Using the International Soil Research and Information Center database, complemented with recently published datasets, we show that the carbon saturation capacity of the clay + silt fractions in UF (22.8 +/- 5.7 g C kg(-1) soil, n = 59) does not exceed the carbon saturation capacity in other ferralsols (23.3 +/- 6.2 g C kg(-1) soil, n = 165), thus eliminating a particularly retentive mineral matrix as a possible explanation. Rather, carbon stocks were correlated with the thickness of A horizons (106 +/- 49 cm, n = 59 in umbric versus 35 +/- 22 cm, n = 165 in non-umbric ferralsols). We subsequently hypothesized that differences in A-horizon thickness arose from two pedogenic scenarios: (i) superior carbon accrual resulting from a unique vegetation cover capable of allocating large quantities of carbon to belowground plant organs; and (ii) geomorphic processes that led to carbon burial. We evaluated the plausibility of these scenarios considering landscape history and associated carbon flux rates, hillslope position, as well as delta C-13 values and Ti/Zr ratios for subsets of ferralsol profiles studied by us in a region that encompasses latitudes from 26 to 7 degrees S in eastern Brazil. We found that exceptional carbon stocks were most prevalent in the gradual transition zone (ecotone) between savanna and rainforest, likely resulting from erosion-deposition processes, historic changes of vegetation cover composed of grasses and arboreal elements, and active bioturbation. We suggest that attempts to sequester carbon in non-umbric ferralsols will be most successful if they emulate or promote the biotic and abiotic processes prevalent in the savanna/rainforest ecotone.&lt;/p&gt;
-
-&lt;h3 id=&quot;nasas-surface-biology-and-geology-designated-observable-a-perspective-on-surface-imaging-algorithms&quot;&gt;NASA’s surface biology and geology designated observable: A perspective on surface imaging algorithms&lt;/h3&gt;
-
-&lt;p&gt;The 2017-2027 National Academies’ Decadal Survey, Thriving on Our Changing Planet, recommended Surface Biology and Geology (SBG) as a “Designated Targeted Observable” (DO). The SBG DO is based on the need for agriculture, natural habitats, water use/quality, and urban development. We review existing algorithms in the community-state-of-practice in each category. This effort synthesizes the findings of more than 130 scientists.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2022/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 04, 2022.&lt;/p&gt;
   </content>
 </entry>
 
