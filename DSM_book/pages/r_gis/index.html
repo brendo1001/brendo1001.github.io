@@ -167,7 +167,7 @@
     <div class="entry-content">
       <h2 id="getting-spatial-in-r">Getting spatial in R</h2>
 
-<p>The following pages will introduce some basic concepts of using the <code class="highlighter-rouge">R</code> software for GIS operations. Nothing over the top but just a simple introduction to basic concepts like converting data to spatial objects, doing some spatial transformations, and data import and export of GIS data. <code class="highlighter-rouge">R</code> continues to enhance its GIS functionality, so it is likley the number of subpages will grow to try and illustrate these developments with digital soil science examples.</p>
+<p>The following pages will introduce some basic concepts of using the <code class="highlighter-rouge">R</code> software for GIS operations. Nothing over the top but just a simple introduction to basic concepts like converting data to spatial objects, doing some spatial transformations, and data import and export of GIS data. <code class="highlighter-rouge">R</code> continues to enhance its GIS functionality, so it is likely the number of sub pages will grow to try and illustrate these developments with digital soil science examples.</p>
 
 <ul>
   <li><a href="/DSM_book/pages/r_gis/pointpatterns/">Basic GIS operations with point data</a></li>
@@ -181,61 +181,22 @@
 <h3 id="notes-on-using-r-for-gis-stuff">Notes on using <code class="highlighter-rouge">R</code> for GIS stuff</h3>
 
 <p><code class="highlighter-rouge">R</code> is richly served with functionality to work with, analyse,
-manipulate and map spatial data. Many procedures one would carry out in
-a GIS software, can more-or-less be performed (and automated) relatively
-easy in <code class="highlighter-rouge">R</code>. The application of spatial data analysis in <code class="highlighter-rouge">R</code> is well
-documented in Bivand, Pebesma, and Gomez-Rubio (2008). There you will
-find a deep analysis with numerous examples of basic concepts right
-through to quite advanced analyses. Similarly <a href="https://geocompr.robinlovelace.net/">Geocomputation with
-R</a> (with proper citation:
-(Lovelace, Nowosad, and Muenchow 2019)) is a great resource and probably
-demonstrates more of the recent developments and applications for doing
-GIS work in <code class="highlighter-rouge">R</code>.</p>
+manipulate and map spatial data. Many procedures one would carry out in a GIS software, can more-or-less be scripted, automated and performed relatively easily in <code class="highlighter-rouge">R</code>. The application of spatial data analysis in <code class="highlighter-rouge">R</code> is well documented in Pebesma and Bivand (2023). There you will find a deep analysis with numerous examples of basic concepts right through to quite advanced analyses. Similarly <a href="https://r.geocompx.org/">Geocomputation with R</a> is also a great resource with several relevant applications.</p>
 
-<p>Naturally, in DSM, we constantly work with spatial data in one form or
-another e.g., points, polygons, rasters. We need to to such things as
-import, view, and export points to, in, and from a GIS. Similarly for
-polygons and rasters.</p>
+<p>Naturally, in DSM, we constantly work with spatial data in one form or another e.g., points, polygons, rasters. We need to do such things as import, view, and export points to, in, and from a GIS. Similarly for polygons and rasters.</p>
 
-<p>Many of the functions used for working with spatial data do not come
-with the base function suite installed with the <code class="highlighter-rouge">R</code> software. Thus we
-need to use specific functions from a range of different contributed <code class="highlighter-rouge">R</code>
-packages. Probably the most important and most frequently used are:</p>
+<p>Many of the functions used for working with spatial data do not come with the base <code class="highlighter-rouge">R</code> software. Thus we need to use specific functions from a range of different contributed <code class="highlighter-rouge">R</code> packages. Probably the most important and most frequently used are:</p>
 
 <ul>
-  <li><a href="https://cran.r-project.org/web/packages/sp/index.html"><code class="highlighter-rouge">sp</code></a>
-contains many functions for handling vector (polygon) data.</li>
-  <li><a href="https://cran.r-project.org/web/packages/raster/index.html"><code class="highlighter-rouge">raster</code></a>
-very rich source of functions for handling raster data.</li>
-  <li><a href="https://cran.r-project.org/web/packages/rgdal/index.html"><code class="highlighter-rouge">rgdal</code></a>
-function for projections and spatial data I/O.</li>
+  <li><a href="https://cran.r-project.org/web/packages/sp/index.html"><code class="highlighter-rouge">sf</code></a> provides support for simple features, a standardized way to encode spatial vector data. Binds to <code class="highlighter-rouge">GDAL</code> for reading and writing data, to <code class="highlighter-rouge">GEOS</code> for geometrical operations, and to <code class="highlighter-rouge">PROJ</code> for projection conversions and datum transformations.</li>
+  <li><a href="https://cran.r-project.org/web/packages/raster/index.html"><code class="highlighter-rouge">terra</code></a> provides methods for spatial data analysis with vector (points, lines, polygons) and raster (grid) data. Methods for vector data include geometric operations such as intersect and buffer. Raster methods include local, focal, global, zonal and geometric operations. The predict and interpolate methods facilitate the use of regression type (interpolation, machine learning) models for spatial prediction, including with satellite remote sensing data.</li>
 </ul>
 
-<p>These 3 packages are more than able to do a very large suite of tasks.
-Relatively newer packages like
-<a href="https://cran.r-project.org/web/packages/sf/index.html"><code class="highlighter-rouge">sf</code></a> and
-<a href="https://cran.r-project.org/web/packages/stars/index.html"><code class="highlighter-rouge">stars</code></a> are
-increasingly popular packages for geospatial analyses of vector and
-raster data respectively. Yet at the time of writing the author is less
-familiar with these packages and what relative advantages they have over
-their <code class="highlighter-rouge">sp</code> and <code class="highlighter-rouge">raster</code> counterparts. Currently most GIS functionality
-needed for DSM can ably be done with with those packages mentioned
-above, but note that applications involving more specialized GIS
-functionality, handling and manipulating spatial-temporal data, and
-working with data cubes, then perhaps the newer packages are going to
-provide the required solutions. I will keep an eye on these packages
-and determine whether a given DSM task can be better crafted with these
-packages when the opportunity arises.</p>
-
-<p>With regard to either <code class="highlighter-rouge">sp</code>, <code class="highlighter-rouge">raster</code>, <code class="highlighter-rouge">rgdal</code> (or any <code class="highlighter-rouge">R</code> package for
-that matter), always consult the help files and online documentation
-regarding these packages, and you will quickly realize that there is
-deeper set of functionality that comes with the package that is not
-covered in these pages.</p>
+<p>These 2 packages supercede previously fundamental packages like  <code class="highlighter-rouge">sp</code>, <code class="highlighter-rouge">raster</code>, and <code class="highlighter-rouge">rgdal</code>. While there several other <code class="highlighter-rouge">R</code> libraries for helping with geospatial work, and many excellent resources available online (as indicated above) or in books, currently most GIS functionality needed for DSM can ably be done with with those packages mentioned above. However, note that applications involving more specialized GIS functionality, handling and manipulating spatial-temporal data, and working with data cubes for example, then perhaps packages like <a href="https://cran.r-project.org/web/packages/stars/index.html"><code class="highlighter-rouge">stars</code></a> are going to provide what you need. There will be examples in this course where other GIS relevant <code class="highlighter-rouge">R</code> packages are used other than the main ones listed here, and will be introduced in due course.</p>
 
 <h2 id="references">References</h2>
 
-<p>Bivand, R S, E J Pebesma, and V Gomez-Rubio. 2008. <em>Applied Spatial Data Analysis with R</em>. UseR! Series, Springer.</p>
+<p>Pebesma, E.; Bivand, R. (2023). <em>Spatial Data Science: With Applications in R</em> (1st ed.). 314 pages. Chapman and Hall/CRC. https://doi.org/10.1201/9780429459016</p>
 
 <p>Lovelace, R, J Nowosad, and J Muenchow. 2019. <em>Geocomputation with R</em>. Chapman &amp; Hall/CRC The R Series.</p>
 

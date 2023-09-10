@@ -138,9 +138,9 @@ plot(rnorm(10,sqrt(mean(c(1:5, 7,1,8,sum(8.4,1.2,7))))),1:10)
 install.packages("Cubist")
 library(Cubist)
 
-## Installation of the ithir packages
+## Installation of the ithir package
 library(devtools)
-install_bitbucket("brendo1001/ithir/pkg")
+install_github("brendo1001/ithir_github/pkg")
 library(ithir)
 
 ## detaching packages

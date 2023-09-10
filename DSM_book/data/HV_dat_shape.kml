@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="HV_dat_shape" id="HV_dat_shape">
+	<SimpleField name="site" type="string"></SimpleField>
+	<SimpleField name="OC" type="float"></SimpleField>
+	<SimpleField name="EC" type="float"></SimpleField>
+	<SimpleField name="pH" type="float"></SimpleField>
+</Schema>
+<Folder><name>HV_dat_shape</name>
+  <Placemark>
+	<name>a1</name>
+	<description>2.03</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.129</SimpleData>
+		<SimpleData name="OC">6.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.268823637018,-32.774227719222</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a10</name>
+	<description>2.6</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.08500000000000001</SimpleData>
+		<SimpleData name="OC">5.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.335718112486,-32.736352170407</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a11</name>
+	<description>3.42</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.036</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.366803531213,-32.7726124496873</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a12</name>
+	<description>4.1</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.081</SimpleData>
+		<SimpleData name="OC">6.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.27218954185,-32.8071934456648</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a13</name>
+	<description>3.04</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.104</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.309355942003,-32.8325031808334</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a15</name>
+	<description>4.07</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.138</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.262988228679,-32.7860970572175</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a17</name>
+	<description>2.95</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.07000000000000001</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.380875465611,-32.7324340874831</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a18</name>
+	<description>3.1</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.097</SimpleData>
+		<SimpleData name="OC">5.5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.309240558074,-32.8385894369853</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a19</name>
+	<description>4.59</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.114</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.32626882916,-32.7993600813012</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a2</name>
+	<description>1.77</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.031</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.302524724346,-32.700055941319</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a21</name>
+	<description>4.32</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.192</SimpleData>
+		<SimpleData name="OC">5.2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.331251161102,-32.7326851060927</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a22</name>
+	<description>3.05</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.08</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.307043249386,-32.743183378046</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a23</name>
+	<description>3.89</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.168</SimpleData>
+		<SimpleData name="OC">5.5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.408993088544,-32.7564698146636</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a24</name>
+	<description>3.21</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.049</SimpleData>
+		<SimpleData name="OC">5.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.376539552035,-32.7508674350934</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a25</name>
+	<description>0.85</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.063</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.365303264599,-32.7962681720352</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a26</name>
+	<description>3.43</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.172</SimpleData>
+		<SimpleData name="OC">5.5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.264550138429,-32.7743940516774</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a27</name>
+	<description>2.48</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.173</SimpleData>
+		<SimpleData name="OC">6.5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.283163623728,-32.8057661135332</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a28</name>
+	<description>3.02</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.119</SimpleData>
+		<SimpleData name="OC">6.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.260777760015,-32.6938469394642</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a29</name>
+	<description>3.08</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.203</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.391971517833,-32.7533212478077</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a30</name>
+	<description>2.57</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.094</SimpleData>
+		<SimpleData name="OC">5.2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.300100454949,-32.8136633977673</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a32</name>
+	<description>2.77</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.06900000000000001</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.273526273486,-32.7794785524335</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a34</name>
+	<description>3.04</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.073</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.361583215194,-32.7953176342023</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a4</name>
+	<description>3.26</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.07199999999999999</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.310148401519,-32.8329648345816</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a6</name>
+	<description>3.97</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.161</SimpleData>
+		<SimpleData name="OC">6.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.289591230812,-32.8047267260451</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>a7</name>
+	<description>3.26</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.093</SimpleData>
+		<SimpleData name="OC">5.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.301460906759,-32.812329016308</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b1</name>
+	<description>3.96</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.155</SimpleData>
+		<SimpleData name="OC">5.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.27232167997,-32.7589437144712</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b11</name>
+	<description>1.67</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.132</SimpleData>
+		<SimpleData name="OC">7.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.265669792494,-32.7579499021095</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b12</name>
+	<description>2.74</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.097</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.329875584776,-32.7349215729337</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b13</name>
+	<description>4.3</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.131</SimpleData>
+		<SimpleData name="OC">7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.286841483488,-32.8367064395257</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b14</name>
+	<description>3.34</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.154</SimpleData>
+		<SimpleData name="OC">6.5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.291324506445,-32.8396988971093</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b15</name>
+	<description>2.68</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.061</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.317137249581,-32.8305787937894</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b16</name>
+	<description>3.26</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.064</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.269727154526,-32.6860790259331</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b18</name>
+	<description>1.74</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.044</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.38120565714,-32.7879065631376</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b19</name>
+	<description>2.31</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.096</SimpleData>
+		<SimpleData name="OC">6.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.308161961329,-32.7686774109937</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b20</name>
+	<description>1.6</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.08699999999999999</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.315329934936,-32.7139828606735</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b21</name>
+	<description>2.62</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.136</SimpleData>
+		<SimpleData name="OC">5.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.314578029007,-32.8246819969471</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b22</name>
+	<description>3.44</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.154</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.305699296444,-32.8281697053149</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b24</name>
+	<description>2.65</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.14</SimpleData>
+		<SimpleData name="OC">7.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.306988006299,-32.7742984650624</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b25</name>
+	<description>3.9</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.178</SimpleData>
+		<SimpleData name="OC">5.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.272575394843,-32.7596236392168</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b26</name>
+	<description>1.72</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.118</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.308445829428,-32.7677793375526</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b27</name>
+	<description>2.42</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.166</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.318122638384,-32.7782815893944</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b28</name>
+	<description>2.7</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.082</SimpleData>
+		<SimpleData name="OC">5.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.278127648145,-32.7761597760936</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b29</name>
+	<description>2.31</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.078</SimpleData>
+		<SimpleData name="OC">5.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.284608679131,-32.7304770557059</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b30</name>
+	<description>3.31</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.094</SimpleData>
+		<SimpleData name="OC">6.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.287369078436,-32.753513423525</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b33</name>
+	<description>2.05</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.055</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.304574323671,-32.7467576362158</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b38</name>
+	<description>2.46</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.054</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.325048997163,-32.8074609202927</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b4</name>
+	<description>1.86</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.081</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.327275854173,-32.7312792394661</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b40</name>
+	<description>1.07</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.092</SimpleData>
+		<SimpleData name="OC">6.2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.26435780521,-32.7568043573048</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b6</name>
+	<description>4.21</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.09</SimpleData>
+		<SimpleData name="OC">5.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.302287447531,-32.81098737888</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>b9</name>
+	<description>3.41</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.12</SimpleData>
+		<SimpleData name="OC">5.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.254026632379,-32.6845085822234</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c10</name>
+	<description>1.79</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.067</SimpleData>
+		<SimpleData name="OC">5.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.296878934241,-32.7024596498024</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c11</name>
+	<description>4.39</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.067</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.265927237207,-32.7308964053504</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c14</name>
+	<description>2.34</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.043</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.36073492261,-32.710526120857</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c15</name>
+	<description>3.93</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.083</SimpleData>
+		<SimpleData name="OC">5.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.360339510777,-32.7612540311039</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c17</name>
+	<description>2.28</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.055</SimpleData>
+		<SimpleData name="OC">4.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.353671155277,-32.7320796955363</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c19</name>
+	<description>0.6</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.026</SimpleData>
+		<SimpleData name="OC">5.2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.361223108084,-32.7858428206898</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c22</name>
+	<description>1.17</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.051</SimpleData>
+		<SimpleData name="OC">6.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.277748397759,-32.7265498714715</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c23</name>
+	<description>4.64</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.191</SimpleData>
+		<SimpleData name="OC">5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.285531246621,-32.8076023571747</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c25</name>
+	<description>3.03</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.186</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.36321236681,-32.764673793215</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c26</name>
+	<description>3.76</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.107</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.368946391587,-32.7721894132407</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c27</name>
+	<description>4.01</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.035</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.356354170609,-32.7602998885696</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c28</name>
+	<description>0.85</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.262</SimpleData>
+		<SimpleData name="OC">6.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.268461697364,-32.7101876162626</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c29</name>
+	<description>1.76</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.101</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.34456564365,-32.7195583612536</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c3</name>
+	<description>3.73</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.114</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.342361004252,-32.7377930875426</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c30</name>
+	<description>3.49</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.073</SimpleData>
+		<SimpleData name="OC">6.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.280570407929,-32.787918035786</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c35</name>
+	<description>5.11</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.663</SimpleData>
+		<SimpleData name="OC">7.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.273801693764,-32.8342724941801</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c37</name>
+	<description>1.81</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.08599999999999999</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.275449182427,-32.8043072326917</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c38</name>
+	<description>2.15</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.044</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.334831520695,-32.726644783886</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c39</name>
+	<description>3.97</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.851</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.276217772304,-32.8336293824515</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c4</name>
+	<description>3.74</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.406</SimpleData>
+		<SimpleData name="OC">5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.290996411314,-32.7172611517239</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c43</name>
+	<description>1.82</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.053</SimpleData>
+		<SimpleData name="OC">6.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.310349048833,-32.7517961447796</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c44</name>
+	<description>2.45</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.169</SimpleData>
+		<SimpleData name="OC">7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.362828650136,-32.7418953089543</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c45</name>
+	<description>1.65</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.065</SimpleData>
+		<SimpleData name="OC">7.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.353121156878,-32.732974390287</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c46</name>
+	<description>1.27</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.049</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.343736463682,-32.7211257692346</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>c7</name>
+	<description>1.95</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.054</SimpleData>
+		<SimpleData name="OC">5.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.353503646845,-32.7701835360946</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d10</name>
+	<description>2.59</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.063</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.248369835591,-32.7283975026004</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d13</name>
+	<description>2.6</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.218</SimpleData>
+		<SimpleData name="OC">5.5</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.283810369217,-32.7581997233436</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d15</name>
+	<description>1.86</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.06900000000000001</SimpleData>
+		<SimpleData name="OC">6.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.252180843266,-32.7381461380466</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d16</name>
+	<description>3.95</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.051</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.266081051919,-32.8055306700532</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d2</name>
+	<description>1.13</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.026</SimpleData>
+		<SimpleData name="OC">5.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.332456631304,-32.7538961570487</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d20</name>
+	<description>3.39</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.097</SimpleData>
+		<SimpleData name="OC">5.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.266637357782,-32.6803994234042</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d25</name>
+	<description>5.49</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.154</SimpleData>
+		<SimpleData name="OC">6.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.26109616325,-32.7324077999878</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d26</name>
+	<description>2.75</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.168</SimpleData>
+		<SimpleData name="OC">7.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.259732019587,-32.7339671943511</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d27</name>
+	<description>1.61</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.066</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.265986628631,-32.6864783217897</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d28</name>
+	<description>3.31</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.08799999999999999</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.272819314765,-32.802241711335</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d29</name>
+	<description>4.2</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.17</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.257458950897,-32.7273968195223</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d3</name>
+	<description>2.66</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.04</SimpleData>
+		<SimpleData name="OC">7.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.33030144661,-32.7549948455616</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d30</name>
+	<description>2.85</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.064</SimpleData>
+		<SimpleData name="OC">5.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.337731615871,-32.7284871141725</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d31</name>
+	<description>3.68</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.161</SimpleData>
+		<SimpleData name="OC">5.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.251206475412,-32.7333975684809</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d32</name>
+	<description>3.03</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.036</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.304936884595,-32.8261301083216</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d33</name>
+	<description>2.77</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.13</SimpleData>
+		<SimpleData name="OC">6.4</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.269787268681,-32.8071602653479</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d35</name>
+	<description>1.31</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.098</SimpleData>
+		<SimpleData name="OC">7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.272423510536,-32.7260256387384</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d37</name>
+	<description>0.73</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.053</SimpleData>
+		<SimpleData name="OC">7.1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.280410868668,-32.7268119037419</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d38</name>
+	<description>2.87</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.106</SimpleData>
+		<SimpleData name="OC">5.2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.345911834202,-32.7621917590318</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d39</name>
+	<description>2.35</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.048</SimpleData>
+		<SimpleData name="OC">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.389570545104,-32.7532904103305</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d4</name>
+	<description>2.55</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.039</SimpleData>
+		<SimpleData name="OC">6.6</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.285966795876,-32.840527508397</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d5</name>
+	<description>4.24</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.166</SimpleData>
+		<SimpleData name="OC">4.9</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.314253961878,-32.7994243594245</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d7</name>
+	<description>1.78</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.037</SimpleData>
+		<SimpleData name="OC">5.8</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.346837215936,-32.75543960531</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d8</name>
+	<description>3.8</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.127</SimpleData>
+		<SimpleData name="OC">6.3</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.351468835948,-32.7647452787538</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>d9</name>
+	<description>4.23</description>
+	<ExtendedData><SchemaData schemaUrl="#HV_dat_shape">
+		<SimpleData name="site">0.076</SimpleData>
+		<SimpleData name="OC">6.7</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>151.240973629121,-32.7246863214401</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

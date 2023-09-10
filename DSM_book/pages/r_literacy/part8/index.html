@@ -169,7 +169,7 @@
 
 <h2 id="logical-thinking-and-algorithm-development">Logical thinking and algorithm development</h2>
 
-<p>One of the advantages of using a scripting language, such as <code class="highlighter-rouge">R</code> is that
+<p>One of the advantages of using a scripting language such as <code class="highlighter-rouge">R</code> is that
 we can develop algorithms or script a set of commands for
 problem-solving. We illustrate this by developing an algorithm for
 generating a catena, or more correctly, a digital toposequence from a
@@ -184,7 +184,7 @@ a stream (Odgers, McBratney, and Minasny 2008). To generate a principal
 toposequence, one can start from the highest point in an area. If we
 numerically consider a rainfall as a discrete packet of <em>precipitation</em>
 that falls on the highest elevation pixel, then this precipitation will
-mostly move to its neighbor with the highest slope. As DEM is stored in
+mostly move to its neighbor with the highest slope. As a DEM is stored in
 matrix format, we simply look around its 3 x 3 neighbors and determine
 which pixel is the lowest elevation. The algorithm for principal
 toposequence can be written as:</p>
@@ -449,14 +449,13 @@ Subsequently the 2 new functions would take the following form:</p>
 
 <p>Now we can generate a random toposequence. We will use the same
 <code class="highlighter-rouge">topo_dem</code> data as before. First we select a point at random using a
-random selection of a row and column value. Keep in mind that the random
-point selected here may be different to the one you get because we are
-using a random number generator via the <code class="highlighter-rouge">sample.int</code> function.</p>
+random selection of a row and column value. We use <code class="highlighter-rouge">set.seed()</code> to ensure results are identical in terms of random selection of the seed point.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">nr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">topo_dem</span><span class="p">)</span><span class="w">  </span><span class="c1"># no. rows in a DEM</span><span class="w">
     </span><span class="n">nc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ncol</span><span class="p">(</span><span class="n">topo_dem</span><span class="p">)</span><span class="w">  </span><span class="c1"># no. cols in a DEM</span><span class="w">
 
     </span><span class="c1"># start with a random pixel as seed point</span><span class="w">
+    </span><span class="n">set.seed</span><span class="p">(</span><span class="m">1203</span><span class="p">)</span><span class="w">
     </span><span class="n">row_z1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample.int</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
     </span><span class="n">col_z1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample.int</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -572,7 +571,7 @@ Kth-Order Random Toposequences.” <em>Computers &amp; Geosciences</em> 34 (5):
 479–90.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-08">May 08, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-08-21">August 21, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">

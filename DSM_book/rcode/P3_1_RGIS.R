@@ -9,73 +9,62 @@ str(HV100)
 
 
 ## Necessary R packages
-library(sp)
-library(raster)
-library(rgdal)
+library(sf)
+library(terra)
+
 
 ## Spatial points
-coordinates(HV100) <- ~x + y
-str(HV100)
+HV100 <- sf::st_as_sf(x = HV100,coords = c("x", "y"))
 
 ## Plot points
- spplot(HV100, "OC", scales = list(draw = T), cuts = 5,
-        col.regions = bpy.colors (cutoff.tails = 0.1, alpha = 1), cex = 1)
+plot(HV100)
 
 ## Coordinate reference systems
-proj4string(HV100) <- CRS("+init=epsg:32756")
-HV100@proj4string
+sf::st_crs(HV100) <- "+init=epsg:32756"
+st_crs(HV100)
 
 ## Write point data to shapefile
- writeOGR(HV100, ".", "HV_dat_shape", "ESRI Shapefile")
+st_write(HV100, "/home/brendo1001/mystuff/devs/site_source/DSM_book/data/HV_dat_shape.shp")
+
 
 
 ## Coordinate transformation
-HV100.ll <- spTransform(HV100, CRS("+init=epsg:4326"))
+HV100.ll <- st_transform(x = HV100, crs = 4326)
 
 # Export file to KML
-writeOGR(HV100.ll, "HV100.kml", "ID", "KML")
+st_write(HV100.ll, "/home/brendo1001/mystuff/devs/site_source/DSM_book/data/HV_dat_shape.kml")
 
 
 ## Read shapefile into memory
-imp.HV.dat <- readOGR(".", "HV_dat_shape")
-imp.HV.dat@proj4string
+imp.HV.dat <- st_read("/home/brendo1001/mystuff/devs/site_source/DSM_book/data/HV_dat_shape.shp")
 
 
-
-## Ratser data
+## Raster data
 library(ithir)
 data(HV_dem)
 str(HV_dem)
 
 
 ## convert data to raster object and CRS definition
-r.DEM <- rasterFromXYZ(HV_dem)
-proj4string(r.DEM) <- CRS("+init=epsg:32756")
+r.DEM <- terra::rast(x = HV_dem, type = "xyz")
+crs(r.DEM) <- "+init=epsg:32756"
+r.DEM
 
 ## Ratser plotting and point overlay
 plot(r.DEM)
 points(HV100, pch = 20)
 
 ## Write raster to disk
-writeRaster(r.DEM, filename = "HV_dem100.asc", format = "ascii", overwrite = TRUE)
+terra::writeRaster(x = r.DEM, 
+                   filename = "/home/brendo1001/mystuff/devs/site_source/DSM_book/data/HV_dem100.tif", 
+                   overwrite = TRUE)
 
 
 ## raster reprojection
-p.r.DEM <- projectRaster(r.DEM, crs = "+init=epsg:4326", method = "bilinear")
-KML(p.r.DEM, "HV_DEM.kml", col = rev(terrain.colors(255)), overwrite = TRUE)
+p.r.DEM <- terra::project(x = r.DEM, y = "+init=epsg:4326", method = "bilinear")
+p.r.DEM
 
 
-## Read raster from file
-read.grid <- readGDAL("HV_dem100.asc")
-
-## convert to raster object
-grid.dem <- raster(read.grid)
-grid.dem
-
-## Raster object remains on disk not R memory
-grid.dem <- raster(paste(paste(getwd(),"/",sep=""),"HV_dem100.asc", sep=""))
-grid.dem
-plot(grid.dem)
 
 ###########################################################################################################3
 ## Interactive mapping

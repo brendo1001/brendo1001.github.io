@@ -96,7 +96,7 @@ subset(soil.data, ESP>10)
 subset(soil.data, ESP>10 & Lower.Depth > 0.3 )
 
 ## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=FALSE, background='white'-----
-## subset(soil.data, Landclass=="Forest" | Landclass=="native pasture" )
+subset(soil.data, Landclass=="Forest" | Landclass=="native pasture" )
 
 ## ----echo=TRUE, tidy=TRUE,cache=FALSE,eval=TRUE, background='white'------
 head(subset(soil.data, Landclass %in% c("Forest", "native pasture")))

@@ -4,13 +4,184 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2023-08-01T01:33:42+10:00</updated>
+<updated>2023-09-11T00:21:40+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2023/09/journalDigest" />
+  <id>/2023/09/journalDigest</id>
+  <updated>2023-09-10T00:00:00-00:00</updated>
+  <published>2023-09-10T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2023-19&quot;&gt;Journal Paper Digests 2023 #19&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Exploratory Analysis of Surrogate Metrics to Assess the Resilience of Water Distribution Networks&lt;/li&gt;
+  &lt;li&gt;Prolonged Drought in a Northern California Coastal Region Suppresses Wildfire Impacts on Hydrology&lt;/li&gt;
+  &lt;li&gt;Evidence and Controls of the Acceleration of the Hydrological Cycle Over Land&lt;/li&gt;
+  &lt;li&gt;Cycles-L: A Coupled, 3-D, Land Surface, Hydrologic, and Agroecosystem Landscape Model&lt;/li&gt;
+  &lt;li&gt;Early Warning Indicators of Groundwater Drought in Mountainous Regions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;early-warning-indicators-of-groundwater-drought-in-mountainous-regions&quot;&gt;Early Warning Indicators of Groundwater Drought in Mountainous Regions&lt;/h3&gt;
+
+&lt;p&gt;Generalized additive models are used to identify predictor variables associated with summer groundwater levels&lt;/p&gt;
+
+&lt;p&gt;Summer groundwater levels are influenced uniquely by region-specific seasonal climate and hydrological variables&lt;/p&gt;
+
+&lt;p&gt;Combinations of predictor variables can be used as early warning indicators of groundwater drought&lt;/p&gt;
+
+&lt;h3 id=&quot;cycles-l-a-coupled-3-d-land-surface-hydrologic-and-agroecosystem-landscape-model&quot;&gt;Cycles-L: A Coupled, 3-D, Land Surface, Hydrologic, and Agroecosystem Landscape Model&lt;/h3&gt;
+
+&lt;p&gt;Cycles-L is a coupled agroecosystem hydrologic modeling system that couples an agroecosystem model with a 3-D land surface hydrologic model&lt;/p&gt;
+
+&lt;p&gt;Cycles-L simulated well stream discharge, grain crops yield, and nitrogen exports in the stream at a 730-ha agricultural experimental watershed&lt;/p&gt;
+
+&lt;p&gt;Cycles-L can simulate landscape level processes affected by climate, topography, soil heterogeneity, and management practices&lt;/p&gt;
+
+&lt;h3 id=&quot;evidence-and-controls-of-the-acceleration-of-the-hydrological-cycle-over-land&quot;&gt;Evidence and Controls of the Acceleration of the Hydrological Cycle Over Land&lt;/h3&gt;
+
+&lt;p&gt;Several methods to approximate soil water residence time from commonly available hydrological variables are introduced and compared&lt;/p&gt;
+
+&lt;p&gt;The global terrestrial water cycle is currently accelerating and projected to do so in future climate scenarios&lt;/p&gt;
+
+&lt;p&gt;Precipitation changes play a more dominant role in the acceleration of the terrestrial water cycle when compared to evapotranspiration&lt;/p&gt;
+
+&lt;h3 id=&quot;prolonged-drought-in-a-northern-california-coastal-region-suppresses-wildfire-impacts-on-hydrology&quot;&gt;Prolonged Drought in a Northern California Coastal Region Suppresses Wildfire Impacts on Hydrology&lt;/h3&gt;
+
+&lt;p&gt;Little evidence of wildfire-related shifts in hydrology in drought-prone Northern California coastal region having a Mediterranean climate&lt;/p&gt;
+
+&lt;p&gt;When the percent of burned area increased beyond 30% of the watershed, the magnitude of the runoff response asymptotes&lt;/p&gt;
+
+&lt;p&gt;Post-wildfire hydrological variability did not extend outside of pre-wildfire streamflow conditions&lt;/p&gt;
+
+&lt;h3 id=&quot;exploratory-analysis-of-surrogate-metrics-to-assess-the-resilience-of-water-distribution-networks&quot;&gt;Exploratory Analysis of Surrogate Metrics to Assess the Resilience of Water Distribution Networks&lt;/h3&gt;
+
+&lt;p&gt;Comparative study of surrogate resilience metrics based on surplus energy, entropy and graph-theory&lt;/p&gt;
+
+&lt;p&gt;Sensitivity analysis allowed the selection of adequate metrics to assess resilience to demand increase and pipe failure&lt;/p&gt;
+
+&lt;p&gt;The weighted resilience index is the most complete metric, capable of assessing hydraulic resilience and network redundancy&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2023/09/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on September 10, 2023.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2023/08/journalDigest" />
+  <id>/2023/08/journalDigest</id>
+  <updated>2023-08-15T00:00:00-00:00</updated>
+  <published>2023-08-15T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2023-18&quot;&gt;Journal Paper Digests 2023 #18&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Molecular complexity and diversity of persistent soil organic matter&lt;/li&gt;
+  &lt;li&gt;Ecosystem-scale modelling of soil carbon dynamics: Time for a radical shift of perspective?&lt;/li&gt;
+  &lt;li&gt;A numerical approach for modeling crack closure and infiltrated flow in cracked soils&lt;/li&gt;
+  &lt;li&gt;Do diversified crop rotations influence soil physical health? A meta-analysis&lt;/li&gt;
+  &lt;li&gt;Life cycle assessment, life cycle cost, and exergoeconomic analysis of different tillage systems in safflower production by micronutrients&lt;/li&gt;
+  &lt;li&gt;Response of soil organic carbon stock to land use is modulated by soil hydraulic properties&lt;/li&gt;
+  &lt;li&gt;Definition of Spatial Copula Based Dependence Using a Family of Non-Gaussian Spatial Random Fields&lt;/li&gt;
+  &lt;li&gt;Subsoil carbon loss&lt;/li&gt;
+  &lt;li&gt;Real-time social media sentiment analysis for rapid impact assessment of floods&lt;/li&gt;
+  &lt;li&gt;Filling the maize yield gap based on precision agriculture – A MaxEnt approach&lt;/li&gt;
+  &lt;li&gt;A multi-scale algorithm for the NISAR mission high-resolution soil moisture product&lt;/li&gt;
+  &lt;li&gt;Quantifying uncertainty in land-use land-cover classification using conformal statistics&lt;/li&gt;
+  &lt;li&gt;Prediction of Na- and Ca-montmorillonite contents and swelling properties of clay mixtures using Vis-NIR spectroscopy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;prediction-of-na--and-ca-montmorillonite-contents-and-swelling-properties-of-clay-mixtures-using-vis-nir-spectroscopy&quot;&gt;Prediction of Na- and Ca-montmorillonite contents and swelling properties of clay mixtures using Vis-NIR spectroscopy&lt;/h3&gt;
+
+&lt;p&gt;The aim of this study was to evaluate whether Na- and Ca-montmorillonite and the swell-indicating properties (i.e., free swell index, water uptake capacity, and cation exchange capacity (CEC)) of clay mineral mixtures can be estimated using visible-near-infrared (Vis-NIR) spectral features. The data regarding four types of reference clay minerals (KGa-1b, kaolinite; IYd, illite; SWy-3, Na-montmorillonite; STx-1b, Ca-montmorillonite) and binary and ternary mixtures of the reference clay minerals (SWy-3/KGa-1b/IYd, and STx-1b/KGa-1b/IYd) with specific mass percentage ratios were used as a calibration dataset. The absorption spectral features could be correlated well with changes in the clay mineral content of the mixtures. The leave-one-out cross-validation results showed that the partial least square regression (PLSR) calibration models produced the best prediction in the following order: Na or Ca-montmorillonite, kaolinite, and illite amounts in the mixtures. The calibration models produced better predictions in the ascending order of CEC, free swell index, and water uptake capacity, regardless of the multivariate statistical methods and type of exchangeable cations in montmorillonite. Validation using an independent dataset indicated that the PLSR model predicted the Na- and Ca-montmorillonite content in clay mineral mixtures and bentonite samples. The results of this study provide the possibility of using Vis-NIR absorption spectral features as a screening tool for predicting the montmorillonite content with different interlayer cations in relatively pure clay soils (e.g., bentonite), if the calibration model is developed using the specific montmorillonite contained in the clay soil of interest.&lt;/p&gt;
+
+&lt;h3 id=&quot;quantifying-uncertainty-in-land-use-land-cover-classification-using-conformal-statistics&quot;&gt;Quantifying uncertainty in land-use land-cover classification using conformal statistics&lt;/h3&gt;
+
+&lt;p&gt;Land-use land-cover (LULC) change is one of the most important anthropogenic threats to biodiversity and ecosystems integrity. As a result, the systematic generation of annual regional, national, and global LULC map products derived from the classification of satellite imagery data have become critical inputs for multiple scientific disciplines. The importance of quantifying pixel-level uncertainty to improve the robustness of downstream analyses has long been acknowledged but this practice is still not widely adopted in the generation of these LULC products. The lack of uncertainty quantification is likely due to the fact that most approaches that have been put forward for this task are too computationally intensive for large-scale analysis (e.g., bootstrapping). In this article, we describe how conformal statistics can be used to quantify pixel-level uncertainty in a way that is not computationally intensive, is statistically rigorous despite relying on few assumptions, and can be used together with any classification algorithm that produces class probabilities. Our simulation results show how the size of the predictive sets created by conformal statistics can be used as an indicator of classification uncertainty at the pixel level. Our analysis based on data from the Brazilian Amazon reveals that both forest and water have high certainty whereas pasture and the “natural (other)” category have substantial uncertainty. This information can guide additional ground-truth data collection and the resulting raster combining the LULC classification with the uncertainty results can be used to communicate in a transparent way to downstream users which classified pixels have high or low uncertainty. Given the importance of systematic LULC maps and uncertainty quantification, we believe that this approach will find wide use in the remote sensing community.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-multi-scale-algorithm-for-the-nisar-mission-high-resolution-soil-moisture-product&quot;&gt;A multi-scale algorithm for the NISAR mission high-resolution soil moisture product&lt;/h3&gt;
+
+&lt;p&gt;This study proposes a multi-scale soil moisture algorithm for the upcoming NASA-ISRO SAR (NISAR) mission to estimate high-resolution (200 [m]) soil moisture (the water content of the soil). The algorithm takes advantage of the high-resolution (∼10 [m]) synthetic aperture radar (SAR) backscatter and coarse resolution modeled/reanalysis soil moisture products (∼ 9 [km]) to create a high-resolution (200 [m]) soil moisture product at a global extent. The end goal of the algorithm is to remove dependencies on any complex modeling, tedious retrieval steps, or multiple ancillary data needs, and subsequently decrease the degrees of freedom to achieve optimal accuracy in soil moisture retrievals. The use of modeled/reanalysis soil moisture products with high temporal resolution gives an added advantage in reducing the temporal mismatch between the two different inputs used in the algorithm. In this study, the proposed algorithm is tested using L-band UAVSAR backscatter (σ°) data and Advanced Land Observing Satellite −2 (ALOS-2) SAR σ° as a substitute for the NISAR L-band SAR observations. The algorithm uses the L-band SAR σ° to disaggregate coarse resolution (∼9 [km]) reanalysis soil moisture of the European Centre for Medium-Range Weather Forecast (ECMWF) to a high-resolution of ∼200 [m] soil moisture product. The potential of the algorithm is demonstrated over three sites in different hydroclimatic regions of the world, such as India, the USA, and Canada. The high-resolution soil moisture estimates were compared with the in-situ soil moisture measurements available for three sites (North India, Southern California, and Carman, Manitoba, Canada). In North India, in-situ measurements are from paddy crops with high vegetation water content, the unbiased root-mean-square-error (ubRMSE) for the high-resolution soil moisture retrievals was found to be 0.036 [m3/m3] with a bias of −0.051 [m3/m3]. For the southern California site, the validation statistics shows low ubRMSE of 0.027 [m3/m3] and a low bias of 0.016 [m3/m3]. At the Carman, Manitoba test site of Canada, where in-situ soil measurements were available for multiple crop types, the comparison shows that the ubRMSE for all the crop types lies below 0.05 [m3/m3] with an average bias of &amp;lt;0.07 [m3/m3]. The result confirms that the proposed algorithm meets the NISAR mission’s accuracy goals, i.e., 0.06 [m3/m3] ubRMSE over areas with vegetation water content (VWC) below 5 [kg/m2]. Rigorous validation work will still need to be carried out in the future based on the availability of L-band SAR datasets and after the launch of the NISAR satellite.&lt;/p&gt;
+
+&lt;h3 id=&quot;filling-the-maize-yield-gap-based-on-precision-agriculture--a-maxent-approach&quot;&gt;Filling the maize yield gap based on precision agriculture – A MaxEnt approach&lt;/h3&gt;
+
+&lt;p&gt;Precision agriculture (PA) and yield gap (Yg) analysis are promising strategies to achieve the desired sustainable intensification of agricultural production systems. Current crop Yg approaches do not consider the internal field yield variability caused by soil properties. Topographic and edaphic characteristics causing consistent high and low yield patterns in time and space can be interpreted as an ecological niche and used as proxies for potential yield (Yp) and Yg. Ecological niche models (ENMs) are statistical models originally developed to forecast a species’ niche. However, its application to analyse crop yield spatio-temporal variability has never been made. This study aimed to fill this void by developing a novel approach: i) to quantify the magnitude and spatio-temporal distribution of Yp and Yg, ii) to identify the main factors that cause the Yg, and iii) to provide statistical and agronomical interpretation of the data to reduce the Yg. We performed this work using high-resolution maize yield maps from three seasons, with an ancillary dataset composed of soil electrical conductivity, soil properties and digital elevation models provided by “Quinta da Cholda”, Portugal. The yield maps were averaged, resulting in a standardised multiyear yield map. The 90th and 10th yield percentiles were interpreted as proxies for Yp and Yg, and analysed by an ENM machine learning algorithm – maximum entropy (MaxEnt). The average Yg and Yp were quantified as 1.5 and 19.1 ton/ha. Yp was characterised by having silty, richer soils and lower elevations, with several nutritional factors above the critical limits to maintain higher yields. Yg had loam soils coupled with higher relative elevations and lower nutrition content. This innovative modelling approach can efficiently manage high-dimensional spatio-temporal data to support advanced PA solutions, allowing detailed support for narrowing the Yg.&lt;/p&gt;
+
+&lt;h3 id=&quot;real-time-social-media-sentiment-analysis-for-rapid-impact-assessment-of-floods&quot;&gt;Real-time social media sentiment analysis for rapid impact assessment of floods&lt;/h3&gt;
+
+&lt;p&gt;Traditional approaches to flood modelling mostly rely on hydrodynamic physical simulations. While these simulations can be accurate, they are computationally expensive and prohibitively so when thinking about real-time prediction based on dynamic environmental conditions.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, social media platforms such as Twitter are often used by people to communicate during a flooding event, but discovering which tweets hold useful information is the key challenge in extracting information from posts in real time.&lt;/p&gt;
+
+&lt;p&gt;In this article, we present a novel model for flood forecasting and monitoring that makes use of a transformer network that assesses the severity of a flooding situation based on sentiment analysis of the multimodal inputs (text and images). We also present an experimental comparison of a range of state-of-the-art deep learning methods for image processing and natural language processing. Finally, we demonstrate that information induced from tweets can be used effectively to visualise fine-grained geographical flood-related information dynamically and in real-time.&lt;/p&gt;
+
+&lt;h3 id=&quot;subsoil-carbon-loss&quot;&gt;Subsoil carbon loss&lt;/h3&gt;
+
+&lt;p&gt;A field-based study of 4.5 years of whole-soil warming reveals that warming stimulates loss of structurally complex organic carbon at the same rate as that for bulk organic carbon in subsoil.&lt;/p&gt;
+
+&lt;h3 id=&quot;definition-of-spatial-copula-based-dependence-using-a-family-of-non-gaussian-spatial-random-fields&quot;&gt;Definition of Spatial Copula Based Dependence Using a Family of Non-Gaussian Spatial Random Fields&lt;/h3&gt;
+
+&lt;p&gt;Spatial structures of natural variables are often very complex due to the different physical chemical or biological processes which contributed to the emergence of the fields. These structures often show non-Gaussian spatial dependence. Unfortunately, there are only a limited number of approaches that can explicitly consider non-Gaussian behavior. In this contribution, a very flexible way of defining non-Gaussian spatial dependence is presented. The approach is based on a kind of continuous deformation of fields with different Gaussian spatial dependence. Theoretical examples illustrate the methodology for a wide variety of non-Gaussian structures. A real-life example of groundwater quality parameters shows the practical applicability of the geostatistical model.&lt;/p&gt;
+
+&lt;p&gt;Key Points
+A method to define a wide range of non-Gaussian spatial dependence is presented&lt;/p&gt;
+
+&lt;p&gt;A conditional simulation approach for these non-Gaussian structures via Monte Carlo optimization is presented&lt;/p&gt;
+
+&lt;p&gt;A groundwater quality parameter study demonstrates the benefits of the approach&lt;/p&gt;
+
+&lt;h3 id=&quot;response-of-soil-organic-carbon-stock-to-land-use-is-modulated-by-soil-hydraulic-properties&quot;&gt;Response of soil organic carbon stock to land use is modulated by soil hydraulic properties&lt;/h3&gt;
+
+&lt;p&gt;Understanding the effects of land use on soil organic carbon (SOC) stock is important to develop practices that promote agricultural sustainability and mitigate climate change. The objective of this study was to explore whether the effects of land use on SOC stock differed with soil type and, particularly, with soil hydraulic properties. For this purpose, 90 sites from the Canterbury Plains, New Zealand, were sampled to a depth of 30 cm. The sampled sites consisted of long-term (&amp;gt;20 years) dryland pasture [DP], irrigated pasture [IP], and irrigated cropping [IC] covering three contrasting soil types with different soil drainage levels, including well drained Lismore (LIS) soil, imperfectly drained Templeton (TEM) soil, and poorly drained Waterton/Temuka (WAT) soil. On average, compared with DP, IP increased SOC and hot water extractable carbon (HWEC) stock at all depths; IC decreased SOC and HWEC at 0–15 cm. The results highlighted that the effects of land use change from DP to IP and IC on total SOC and HWEC stock significantly differed between soil types. The greatest gains in SOC and HWEC stocks following change from DP to IP were found in LIS soil; the greatest losses in SOC and HWEC stocks following change from DP to IC were found in WAT soil; and no significant differences in SOC stocks with land use changes were found in TEM soil. The results implied that the interaction between land use and soil type on SOC and HWEC stocks was associated with soil hydraulic properties (e.g. available water capacity and field capacity) that regulate the response of C inputs (net primary productivity) and outputs (microbial decomposition) to land use and management practices (e.g. irrigation and cultivation). Therefore, soil hydraulic properties should be taken into account in designing land use for the purpose of SOC sequestration.&lt;/p&gt;
+
+&lt;h3 id=&quot;life-cycle-assessment-life-cycle-cost-and-exergoeconomic-analysis-of-different-tillage-systems-in-safflower-production-by-micronutrients&quot;&gt;Life cycle assessment, life cycle cost, and exergoeconomic analysis of different tillage systems in safflower production by micronutrients&lt;/h3&gt;
+
+&lt;p&gt;In recent decades, one of the biggest challenges facing agriculture has been sustainability. To achieve sustainability goals, it is necessary to consider the compatibility of environmental, economic, and energy aspects. The main aim of this study is to conduct an environmental-economic-exergy assessment of safflower production under different tillage systems with Zn and Fe micronutrients using life cycle cost (LCC), life cycle assessment (LCA), and exergoeconomic analysis. For this purpose, three scenarios are evaluated: conventional tillage (Sc-CT), reduced tillage (Sc-RT), and no-tillage setup (Sc-NT). The LCA method ReCiPe2016 is used to assess environmental impacts based on one ton of safflower seeds as a functional unit. In addition, the emissions social cost (ESC) is considered as a hidden part of LCC in safflower production. Finally, a combination of cumulative exergy demand and net profit is used to compute an exergoeconomic index in agriculture as a novelty. Results indicate that On-Farm emissions derived from nitrogen and diesel fuel are the most significant contributor, accounting for over 50% of the impact on human health and ecosystems. Sc-RT with 62.62 Pt and Sc-NT with 71.66 Pt are the best and worst LCA scenarios of this study. Sc-CT has the highest ESC, with 51.14 $, and Sc-NT has the lowest LCC, with 380.39 $. Exergy results show that nitrogen fertilizer has the largest share of cumulative exergy demand, and Sc-RT, with 0.073 $ MJ−1, is the best scenario from an exergoeconomic perspective. In summary, Sc-RT, Sc-CT, and Sc-NT are ranked first, second, and third, respectively, from an environmental-economic-exergy-friendly point of view.&lt;/p&gt;
+
+&lt;h3 id=&quot;do-diversified-crop-rotations-influence-soil-physical-health-a-meta-analysis&quot;&gt;Do diversified crop rotations influence soil physical health? A meta-analysis&lt;/h3&gt;
+
+&lt;p&gt;Crop management practices such as rotation, as well as climatic and edaphic factors, modulate soil physical health. However, the overall magnitude of crop rotation benefits on soil physical health properties across a broad range of different conditions remains uncertain. To address this, we conducted a meta-analysis on 865 paired comparisons from 148 rotation studies to examine i) how crop diversity affected soil physical health properties: bulk density, aggregate stability, porosity, infiltration rate, and saturated hydraulic conductivity, and ii) how management practices, climatic, and edaphic factors influenced crop diversity effects. Overall, increased crop diversity (i.e., number of crop species in the rotation) significantly reduced bulk density (−1.6 ± 1.3%), enhanced soil aggregation (15.9 ± 12.7%), improved porosity (3.1 ± 2.0%), and saturated hydraulic conductivity (112.8 ± 57.9%), but did not significantly change infiltration rate (92.2 ± 98.7%) compared to less diverse systems. Compared to using conventional tillage and cereals-only rotations, diverse rotations combined with conservation tillage or including grain legumes performed even better in enhancing both soil aggregation and porosity. Diverse crop rotations managed for 5–10 yr showed greater benefits in regions experiencing mean annual precipitation &amp;gt; 900 mm, and in medium- and fine-textured soils. Among soil physical health properties, saturated hydraulic conductivity was the most responsive to management practices. Based on this meta-analysis, we conclude that rotations including diverse crop species and grain legumes, managed under conservation tillage are best for improving soil physical health, and thus should be considered when designing and developing sustainable cropping systems that promote soil health, system resilience, and crop productivity.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-numerical-approach-for-modeling-crack-closure-and-infiltrated-flow-in-cracked-soils&quot;&gt;A numerical approach for modeling crack closure and infiltrated flow in cracked soils&lt;/h3&gt;
+
+&lt;p&gt;Soil cracks generated in natural fields will change soil structure and provide pathways for preferential flow. Although most simulations have focused on the influences of surface cracks or subsurface cracks in the fields, few studies are conducted on the deformable cracks extending from soil surface to deep soil layer. The present study addresses a fundamental issue and investigates the differences in water flow during infiltration processes of deformable and non-deformable cracked soils. Based on the discrete crack network model, a two-dimensional numerical approach is proposed to investigate the preferential flow in deformable cracked soil. Numerical simulations on water flow are implemented for matrix domain and cracks with the finite element method, which are discretized into solid elements and zero thickness elements, respectively. The proposed model is validated through explicit modeling and experimental observation and then compared with deformable crack approach. It is further employed to simulate the infiltration process of deformable cracked soil revealing significant differences in infiltration characteristics between deformable and non-deformable cracked soils, even if the cracks all act as preferential flow pathways. Although the saturation in crack closure of numerical model is variable during infiltration process, the effect of saturation is still affected by the number of cracks. Furthermore, cracks do not entirely close over a long period of infiltration, and thus they can become preferential flow pathways in subsequent infiltration events. These findings highlight the gap in simulations of water infiltration in cracked soil and the potential for erroneous simulations of water condition when cracks cannot be deformable during infiltration process.&lt;/p&gt;
+
+&lt;h3 id=&quot;ecosystem-scale-modelling-of-soil-carbon-dynamics-time-for-a-radical-shift-of-perspective&quot;&gt;Ecosystem-scale modelling of soil carbon dynamics: Time for a radical shift of perspective?&lt;/h3&gt;
+
+&lt;p&gt;Over the last few years, several researchers working on the development of “biogeochemical” or “ecosystem-scale” models of soil carbon dynamics have reported struggling with a number of difficult challenges. At the same time, work in this area has focused exclusively on microbial activity described at a macro-ecological level, and has entirely bypassed the abundant literature produced in the last two decades on the study of soil processes at the microscale. Juxtaposition of these different observations suggests that a radical shift of perspective is in order. In this general context, the present article carries out an in-depth analysis of several of the key limitations of current ecosystem-scale models and recommends a number of steps to shift the perspective to one that is argued to have a better chance of success in the relatively short time we have to address several pressing soil-related environmental problems. These steps, in particular, require the development of large-spatial-scale models of soil carbon dynamics to be far more interdisciplinary than it has been till now, and to adopt a “bottom-up” approach, building on what the research at the microscale reveals about soil processes. Nevertheless, because it may assist in upscaling efforts, it is argued that some room should be preserved for work to continue on the search for empirical models applicable at large spatial scales.&lt;/p&gt;
+
+&lt;h3 id=&quot;molecular-complexity-and-diversity-of-persistent-soil-organic-matter&quot;&gt;Molecular complexity and diversity of persistent soil organic matter&lt;/h3&gt;
+
+&lt;p&gt;Managing and increasing organic matter in soil requires greater understanding of the mechanisms driving its persistence through resistance to microbial decomposition. Conflicting evidence exists for whether persistent soil organic matter (SOM) is molecularly complex and diverse. As such, this study used a novel application of graph networks with pyrolysis-gas chromatography-mass spectrometry to quantify the complexity and diversity of persistent SOM, defined as SOM that persists through time (soil radiocarbon age) and soil depth. We analyzed soils from the Cooloola giant podzol chronosequence across a large gradient of soil depths (0–15 m) and SOM radiocarbon ages (modern to 19,000 years BP). We found that the most persistent SOM on this gradient was highly aromatic and had the lowest molecular complexity and diversity. By contrast, fresh surface SOM had higher molecular complexity and diversity, with high contributions of plant-derived lignins and polysaccharides. These findings indicate that persisting SOM declines in molecular complexity and diversity over geological timescales and soil depths, with aromatic SOM compounds persisting longer with mineral association.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2023/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 15, 2023.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1043,128 +1214,6 @@
 
 
     &lt;p&gt;&lt;a href=&quot;/2022/12/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on December 07, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/12/journalDigest" />
-  <id>/2022/12/journalDigest</id>
-  <updated>2022-12-05T00:00:00-00:00</updated>
-  <published>2022-12-05T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-23&quot;&gt;Journal Paper Digests 2022 #23&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The radiometric accuracy of the 8-band multi-spectral surface reflectance from the planet SuperDove constellation&lt;/li&gt;
-  &lt;li&gt;Modeling carbon storage in urban vegetation: Progress, challenges, and opportunities&lt;/li&gt;
-  &lt;li&gt;Enigmatic annular landform on a Miocene planar karst surface, Nullarbor Plain, Australia&lt;/li&gt;
-  &lt;li&gt;Integrating scientific knowledge into machine learning using interactive decision trees&lt;/li&gt;
-  &lt;li&gt;Soil microbiome signatures are associated with pesticide residues in arable landscapes&lt;/li&gt;
-  &lt;li&gt;The driving factors and buffering mechanism regulating cropland soil acidification across the Sichuan Basin of China&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;the-driving-factors-and-buffering-mechanism-regulating-cropland-soil-acidification-across-the-sichuan-basin-of-china&quot;&gt;The driving factors and buffering mechanism regulating cropland soil acidification across the Sichuan Basin of China&lt;/h3&gt;
-
-&lt;p&gt;Cropland soil has a higher acidification risk, with the driving factors and the soil buffering capacity controlling the degree of soil acidification. However, the relative importance of the main driving factors at broad geographic scales remains unclear, and the evidence on the acid-buffering process is rarely examined by large-scale observations. Using 4101 soil samples obtained in 1980s and 4348 soil samples collected in 2010s, this study explored topsoil pH changes of cropland across the Sichuan Basin of China and identified the relative importance of the main affecting factors. The results showed that topsoil pH (20 cm) has decreased by an average of 0.30 units (p &amp;lt; 0.001). Spatially, soil pH decline mainly occurred in the periphery of the Sichuan Basin where the initial pH (1980s) were less than 7.5. The magnitudes of soil pH decline were positively correlated with precipitation, base cation removal by crops and nitrogen fertilizer rates. Precipitation was identified as the most important factor in driving soil acidification. Moreover, the soil pH decrease was primarily buffered by soil carbonates and secondarily by soil CEC, and this study identified a critical level of 36.76 g kg(-1) for soil carbonates, above which the acid-buffering capacity was mainly provided by soil carbonates, otherwise by soil CEC. These findings emphasize the importance of formulating precipitation-based optimizing agronomic management practices for preventing or mitigating cropland soil acidification, and also provide a regional observation-dependent evidence for the changing acid-buffering process during the soil acidification process.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-microbiome-signatures-are-associated-with-pesticide-residues-in-arable-landscapes&quot;&gt;Soil microbiome signatures are associated with pesticide residues in arable landscapes&lt;/h3&gt;
-
-&lt;p&gt;Pesticides are widely applied in agriculture to combat disease, pests, and weeds, leading to long-lasting contamination of agricultural soils with pesticide residues. While classical risk assessment experiments have repeatedly addressed immediate pesticide effects, we employ an ecological approach to investigate how pesticide residues persisting in soils influence the soil microbiome under realistic agricultural conditions. We assessed a wide range of soil characteristics, including the occurrence of 48 widely-used pesticides in 60 fields under conventional, no-tillage and organic management. We then tested which factors best explain soil microbiome traits. Environmental factors, including climate, geography, and soil characteristics, were the soil microbiome’s leading drivers. Remarkably, of all management factors, pesticide residues showed the strongest associations with soil microbiome traits, which were even more pronounced than the effects of cropping systems. Pesticide residues were almost exclusively positively associated with the relative abundance of 113 bacterial and 130 fungal taxa, many of them being assigned to taxa of known pesticide degraders. While fungal diversity and abundance were primarily positively associated with pesticide residues, bacterial diversity and abundance of the gene nifH -essential for biological nitrogen fixation -were negatively linked to the concentration of individual pesticide residues. Our results suggest that pesticide residues alter the soil microbiome, with potential long-term implications for the functioning of agricultural soils.&lt;/p&gt;
-
-&lt;h3 id=&quot;integrating-scientific-knowledge-into-machine-learning-using-interactive-decision-trees&quot;&gt;Integrating scientific knowledge into machine learning using interactive decision trees&lt;/h3&gt;
-
-&lt;p&gt;Decision Trees (DT) describe a type of machine learning method that has been widely used in the geosciences to automatically extract patterns from complex and high dimensional data. However, like any data-based method, the application of DT is hindered by data limitations, such as significant biases, leading to potentially physically unrealistic results. We develop interactive DT (iDT) that put humans in the loop to integrate the power of experts’ scientific knowledge with the power of the algorithms to automatically learn patterns from large datasets. We created an open-source Python toolbox that implements the iDT framework. Users can interactively create new composite variables, change the variable and threshold to split, prune and group variables based on their physical meaning. We demonstrate with three case studies how iDT overcomes problems with current DT thus achieving higher interpretability and robustness of the result.&lt;/p&gt;
-
-&lt;h3 id=&quot;enigmatic-annular-landform-on-a-miocene-planar-karst-surface-nullarbor-plain-australia&quot;&gt;Enigmatic annular landform on a Miocene planar karst surface, Nullarbor Plain, Australia&lt;/h3&gt;
-
-&lt;p&gt;The Nullarbor Plain is a similar to 200,000 km(2) planar karst surface in southern Australia, underlain by Cenozoic shallow-water limestones. During the Miocene the area was uplifted, and although the plain is generally considered extremely flat, locally, the geomorphology of the Nullarbor Plain retains evidence of earth surface processes across a long, middle Miocene-to-present time span. The accessibility of the recent 0.4 arc-second TanDEM-X digital elevation model (DEM) by the German Aerospace Centre motivated the search for other possible fine-scale landforms that would previously have been unresolvable. The analysis of DEM images revealed an enigmatic annular landform with an outer diameter between 1200 m and 1300 m. It consists of a circular elevated rim and a central dome. Its morphology is distinct from other landforms observed on the plain, and cannot be readily explained as a part of known active or inferred/expected processes on the plain (e.g., fluvial, aeolian, karst, tectonic or extra-terrestrial impact processes).&lt;/p&gt;
-
-&lt;p&gt;More recent karst processes (dayas formation) overprinting the landform indicates the presence of the annular structure prior to dayas formation. A unique microbial boundstone facies sampled from the bed-rock of the annular structure supports an interpretation of long-lived, at least partial retention of a primary depositional structure. Differential carbonate deposition, especially bioherm growth, was a likely origin of the annular topographical expression of the present-day landform and is comparable to biogenic structures in the modern day deeper Great Barrier Reef.&lt;/p&gt;
-
-&lt;h3 id=&quot;modeling-carbon-storage-in-urban-vegetation-progress-challenges-and-opportunities&quot;&gt;Modeling carbon storage in urban vegetation: Progress, challenges, and opportunities&lt;/h3&gt;
-
-&lt;p&gt;Urban vegetation (UV) and its carbon storage capacity are critical for terrestrial carbon cycling and global sustainable development goals (SDGs). With complex spatial distribution, composition and ecological functions, UV is essential for global carbon cycling and climate change. Therefore, improving UV carbon storage capacity modeling is a research hotspot that deserves extensive investigation. However, the uniqueness of UV lead to great challenges in carbon storage modeling, including (1) limitations in data and algorithms due to complex and sensitive urban environments; (2) the severe scarcity of in-city field observation data (e.g., EC towers and field surveys); (3) difficulty in parameter inversion (e.g., canopy height, LAI, etc.); (4) poor transferability when migrating estimation models from natural vegetation to urban scenarios. The progress in carbon storage modeling in urban settings is reviewed, with detailed discussions on carbon storage modeling methods and major challenges. We then propose strategies to overcome existing challenges, including (1) implementing novel and improved remote sensing (RS) techniques (e.g., hyper-spectral, LiDAR, carbon satellites, etc.) to obtain enhanced structural and functional information on UV; (2) improving critical nodes of the earth observation sensor network, especially the distribution of EC towers in urban settings; (3) leveraging “Model-Data Fusion” tech-nology by integrating big earth data with carbon estimation models to reduce the uncertainty in UV carbon storage estimations. This review provides new insights for modeling UV carbon storage and is expected to help the research community to achieve a better understanding of UV towards carbon neutrality.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-radiometric-accuracy-of-the-8-band-multi-spectral-surface-reflectance-from-the-planet-superdove-constellation&quot;&gt;The radiometric accuracy of the 8-band multi-spectral surface reflectance from the planet SuperDove constellation&lt;/h3&gt;
-
-&lt;p&gt;Advances in the capabilities of commercial CubeSat constellations have enabled the retrieval of multi-spectral surface reflectance data over the Earth’s terrestrial surfaces on an almost daily basis. For example, while the earliest versions of Planet’s CubeSats provided tri-band and then quad-band optical image data, the most recent iterations deliver imaging capabilities with eight unique spectral bands for Earth system monitoring. To determine the utility of these rich geospatial data collections for a range of applications, it is necessary to characterise their radiometric accuracy. Leveraging on-ground spectroradiometer measurements of radiometrically pseudoinvariant features, we assess the absolute accuracy of an annual sequence of Planet SuperDove surface reflectance data. Date-coincident and spectrally overlapping Sentinel-2 image data were also used to assess the relative radiometric accuracy of the CubeSat reflectance data. Additionally, confidence levels for acquiring consistent SuperDove surface reflectance data were calculated, and the multi-temporal patterns of surface reflectance between the SuperDove and Sentinel-2 surface reflectance products were evaluated by examining their rank correlation. Our findings demonstrate that (1) the average accuracy of the Coastal-Blue, Blue, Green I, and Green II SuperDove surface reflectance bands was 5% higher than for the Yellow, Red, Red-Edge, and Near-Infrared bands; (2) the SuperDove surface reflectance data was on average almost identical to the surface reflectance derived from the coincident Sentinel-2 data; and (3) the radiometric accuracies (i.e., mean errors) can be improved by using band combinations (e.g. normalised difference vegetation index). However, due to the different radiometric performance between the spectral bands, some vegetation indices (e.g. the Yellowness Index) did not provide a linear relationship between the SuperDove and reference data. The probability of acquiring surface reflectance data with less than 5% reflectance variation was approximately 90% for the annual multi-satellite dataset. On average, 68% of the data derived from a single satellite had at least 95% probability of acquiring surface reflectance with less than 5% variation. The time series patterns of the SuperDove reflectance data had an average rank correlation coefficient of 0.67 for all types of surface units and 0.77 for vegetated surfaces when compared with the spectrally overlapping bands of the Sentinel-2 surface reflectance data. In addition to providing confidence levels for users to directly assess the radiometric accuracies of SuperDove surface reflectance products, we also provide suggestions to improve the data quality from an end-user’s perspective.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2022/12/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on December 05, 2022.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2022/11/journalDigest" />
-  <id>/2022/11/journalDigest</id>
-  <updated>2022-11-17T00:00:00-00:00</updated>
-  <published>2022-11-17T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2022-22&quot;&gt;Journal Paper Digests 2022 #22&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How well do recently reconstructed solar-induced fluorescence datasets model gross primary productivity?&lt;/li&gt;
-  &lt;li&gt;ConstraintID: An online software tool to assist grain growers in Australia identify areas affected by soil constraints&lt;/li&gt;
-  &lt;li&gt;Role of fertilization regime on soil carbon sequestration and crop yield in a maize-cowpea intercropping system on low fertility soils&lt;/li&gt;
-  &lt;li&gt;Using Bayesian compressed sensing and sparse dictionaries to interpolate soil properties&lt;/li&gt;
-  &lt;li&gt;An overview of natural soil amendments in agriculture&lt;/li&gt;
-  &lt;li&gt;The nature of spatial variability of four soil chemical properties and the implications for soil sampling&lt;/li&gt;
-  &lt;li&gt;Improving the fusion of global soil moisture datasets from SMAP, SMOS, ASCAT, and MERRA2 by considering the non-zero error covariance&lt;/li&gt;
-  &lt;li&gt;A Conceptual Framework to Integrate Biodiversity, Ecosystem Function, and Ecosystem Service Models&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;a-conceptual-framework-to-integrate-biodiversity-ecosystem-function-and-ecosystem-service-models&quot;&gt;A Conceptual Framework to Integrate Biodiversity, Ecosystem Function, and Ecosystem Service Models&lt;/h3&gt;
-
-&lt;p&gt;Global biodiversity and ecosystem service models typically operate independently. Ecosystem service projections may therefore be overly optimistic because they do not always account for the role of biodiversity in maintaining ecological functions. We review models used in recent global model intercomparison projects and develop a novel model integration framework to more fully account for the role of biodiversity in ecosystem function, a key gap for linking biodiversity changes to ecosystem services. We propose two integration pathways. The first uses empirical data on biodiversity-ecosystem function relationships to bridge biodiversity and ecosystem function models and could currently be implemented globally for systems and taxa with sufficient data. We also propose a trait-based approach involving greater incorporation of biodiversity into ecosystem function models. Pursuing both approaches will provide greater insight into biodiversity and ecosystem services projections. Integrating biodiversity, ecosystem function, and ecosystem service modeling will enhance policy development to meet global sustainability goals.&lt;/p&gt;
-
-&lt;h3 id=&quot;improving-the-fusion-of-global-soil-moisture-datasets-from-smap-smos-ascat-and-merra2-by-considering-the-non-zero-error-covariance&quot;&gt;Improving the fusion of global soil moisture datasets from SMAP, SMOS, ASCAT, and MERRA2 by considering the non-zero error covariance&lt;/h3&gt;
-
-&lt;p&gt;Surface soil moisture (SSM) estimates from different sources have distinct error characteristics. Multi-source data combination is an efficient way to obtain improved SSM data with reduced uncertainties. Previous data merging studies based on the linear weight averaging scheme rarely considered the impacts of data error covariance (EC) and usually needed a reference dataset, which can lead to suboptimal merging weights. This study applied the quadruple collocation (QC) to estimate EC and combine four SSM datasets simultaneously without the need for a reference. Specifically, two passive microwave satellite datasets (the L3 Soil Moisture Active Passive (SMAP)-V7 and the L3 Soil Moisture and Ocean Salinity-INRA-CESBIO (SMOS-IC)-V2), one active microwave dataset from the Advanced Scatterometer (ASCAT), and one model dataset from the Modern-Era Retrospective analysis for Research and Application, Version 2 (MERRA2) were combined. Generally, QC-based data combination reduced SSM data uncertainties with significantly reduced unbiased Root Mean Square Error (ubRMSE) scores against in situ observations and globally decreased fMSE scores. Moreover, in situ evaluation showed that the QC-based fusion products exhibited better skills than the Tripe Collocation (TC)-based products without considering EC. There were statistically significant differences in Pearson correlation coefficients and ubRMSE metric between the QC and TC-based products. Ignoring the EC between SMAPV7 and SMOS-ICV2 caused overestimations in their relative contributions to fusion data and degraded fusion accuracy. Specifically, the QC-based merging weight was reduced averagely by 0.27 (0.28) for SMAP (IC) when their error cross-correlation increased roughly from-0.42 to 0.9. This study can provide guidance for the generation of improved merged datasets at a global scale.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-nature-of-spatial-variability-of-four-soil-chemical-properties-and-the-implications-for-soil-sampling&quot;&gt;The nature of spatial variability of four soil chemical properties and the implications for soil sampling&lt;/h3&gt;
-
-&lt;p&gt;Purpose A poor understanding of the nature of variation of soil properties within a field can lead to management decisions that reduce productivity or increase off-site environmental risks. Methods The variability in total C%, total N%, plant-available (Colwell) P, and pH in CaCl2 at multiple depths is examined from two sites near Wagga Wagga and Yerong Creek in the mixed farming zone of southern New South Wales, Australia. The minimum number of cores required to estimate the mean for each soil property with a given level of precision (1%, 5%, and 10%) was determined and the distribution of the sample data was described by calculating the skewness and kurtosis. Results The number of cores (42 mm diameter) required to estimate the mean was least for soil pH (3 cores) at both sites and greatest for Colwell P (25 and 58 cores) at a 10% precision in the surface 0.1 m of soil at the Wagga Wagga and Yerong Creek sites, respectively. The distributions of soil chemical properties were greatly varied with skewness and kurtosis both influencing the data. The mean value of the pH distributions sometimes exceeded the mode, leading to an underestimation of the extent of soil acidity. The mean value for Colwell P also often exceeded the mode, indicating an overestimate of the P status of the soil from a productivity perspective but concurrently underestimating the risk of off-site losses, associated with high P values at some locations. There was also an overestimation of the organic C fractions at these sites. Noteworthy in our data was a broad distribution across a large range in all soil parameters at the soil surface which, despite a generally normal distribution at that depth, gave a mean value that represents a relatively constrained approximation of the true fertility status of the soil. Conclusion This study highlights the importance of understanding the nature of the variability in soil properties for interpreting soil test results appropriately for agronomic and environmental purposes. Due to its highly variable nature, Colwell P could not be reliably measured within the level of precision assumed under existing soil sampling guidelines used in Australia.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-overview-of-natural-soil-amendments-in-agriculture&quot;&gt;An overview of natural soil amendments in agriculture&lt;/h3&gt;
-
-&lt;p&gt;This manuscript describes the natural soil amendments used in agriculture, which are divided into three groups: organic, organic-mineral, and mineral amendments. It also describes less popular agents, such as clay minerals, sewage sludge, and amendments based on slaughterhouse wastes. A specific group of organic amendments are algae-base amendments which are becoming more and more popular. The soils most improved with natural amendments include sandy loam and clay soils. Natural organic amendments are best used on light soils that are poor in organic matter and nutrients (NPK). Whereas mineral amendments can be used as fertilizers (provide mainly Si, Ca and Al) or to restore degraded soils. Based on the analyzed literature, natural soil amendments may well be considered as an alternative to synthetic agricultural agents.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-bayesian-compressed-sensing-and-sparse-dictionaries-to-interpolate-soil-properties&quot;&gt;Using Bayesian compressed sensing and sparse dictionaries to interpolate soil properties&lt;/h3&gt;
-
-&lt;p&gt;Capturing the spatial variations of soil properties through interpolation is an important aspect of soil mapping, usually conducted via geostatistics. Compressed sensing (CS) is an advanced signal processing theory that has been introduced in recent years for interpolating spatial data. Existing CS interpolation methods based on pre -constructed bases require regularization parameters and can produce only smooth interpolation results. To avoid the influence of artificially regularization parameters and to obtain more realistic maps of soil properties, an interpolation method based on Bayesian compressed sensing and sparse dictionaries (BCS-D) is proposed. The results of applications to two examples confirm its feasibility for mapping soil properties and show that BCS-D can provide kriging-like maps with global and local variability, reducing the risk of over-or under-estimation of soil properties over large areas. The greater prediction accuracy of BCS-D over geostatistical simulation is another advantage. A strategy for employing small and multisource training datasets is also developed for dic-tionary learning. Generally, BCS-D can be adopted as an interpolation method to meet the demand for realistic and accurate soil maps.&lt;/p&gt;
-
-&lt;h3 id=&quot;role-of-fertilization-regime-on-soil-carbon-sequestration-and-crop-yield-in-a-maize-cowpea-intercropping-system-on-low-fertility-soils&quot;&gt;Role of fertilization regime on soil carbon sequestration and crop yield in a maize-cowpea intercropping system on low fertility soils&lt;/h3&gt;
-
-&lt;p&gt;Achieving food security through intensive agricultural practices on low fertility soils is challenging as crop productivity is increasingly curtailed by the loss of soil structural stability and rapid depletion of soil organic carbon (SOC). As such, the conversion from traditional mono-cropping to legume-cereal intercropping, especially with integrated fertilization, may increase crop yields with the least ecological footprint. We set up a 2-year field experiment in a split-plot design with cowpea-maize monoculture and intercropping under different organic-inorganic fertilization regimes, including no fertilization (control), organic input only (compost), chemical input only (NPK), and multi-nutrient enriched compost (NPKEC). We observed that intercropped maize had a significantly higher biomass yield compared to the corresponding monoculture when fertilized with NPKEC fertilizer. However, cowpea biomass yield differences between monoculture and intercropped plots were comparable under all fertilization regimes. In contrast, the grain yield advantage of both maize and cowpea was significantly enhanced under the intercropping system compared to monoculture, with NPKEC showing the most significant effect among all fertilization regimes. When comparing the relative contribution of the fertilization regime to SOC, the NPKEC fertilizer provided the highest SOC-sequestration (0.30 Mg C/ha yr(-1)). At the same time, the effect of the cropping system on C-sequestration showed that intercropping provided the highest C-sequestration (0.17 Mg C/ha yr(-1)) compared to monocultures of both crops. Although compost application significantly increased mineral associated (MAOC) and particulate associated organic carbon (PAOC) concentrations compared to unfertilized control plots, NPKEC fertilization with intercropping system was the most effective combination causing the greatest increase of both soil C pools over time. Based on redundancy analysis (RDA), the positive association of MAOC and PAOC with C-sequestration suggests the importance of both organic fractions as primary C reservoirs conducting SOC storage. Importantly, although compost alone in association with intercropping had a lower C-sequestration, it was associated to a better soil structure as confirmed by its positive relationship with macro-and micro-aggregation, water stable aggregates (WSA), and mean weight diameter (MDA). Overall, our results indicate the importance of restoring soil structure in degraded soils through appropriate land management solutions, such as stoichiometrically balanced fertilization practices (NPKEC) and crop diversification (intercropping), in order to achieve significant gains in SOC storage and, ultimately, improve crop productivity.&lt;/p&gt;
-
-&lt;h3 id=&quot;constraintid-an-online-software-tool-to-assist-grain-growers-in-australia-identify-areas-affected-by-soil-constraints&quot;&gt;ConstraintID: An online software tool to assist grain growers in Australia identify areas affected by soil constraints&lt;/h3&gt;
-
-&lt;p&gt;Soil constraints, such as soil sodicity, salinity and acidity, are one cause of yield loss for grain growers globally. A first step towards reducing the associated yield gap is the identification of the area affected and the soil constraint/s responsible for the yield loss. Within a single field, persistent spatial variation of crop growth that repeats year after year is likely due to some form of soil constraint. Vegetation indices derived from satellite imagery can provide a valuable alternative to yield maps for assessing these persistent patterns. The variation identified from remote-sensing data can be compared with soil data from the field to help identify which soil constraints are potentially causing yield differences. This application note describes ConstraintID (www. constraintid.com.au), a web-based software tool that makes it easy for growers to use and interact with remote-sensing data to (1) reveal the persistent long-term variation of crop growth within their fields, (2) devise targeted soil sampling plans and (3) interpret the resulting soil data in view of critical values for certain soil constraints.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-well-do-recently-reconstructed-solar-induced-fluorescence-datasets-model-gross-primary-productivity&quot;&gt;How well do recently reconstructed solar-induced fluorescence datasets model gross primary productivity?&lt;/h3&gt;
-
-&lt;p&gt;The collection of various long-term reconstructed solar-induced fluorescence (SIF) datasets derived at a range of spatio-temporal scales provides new opportunities for modelling vegetation dynamics, in particular, gross pri-mary productivity (GPP). Information about the proximity of the reconstructed SIF (SIFr) datasets to GPP across land cover types and climatic conditions provides important support for a better application of these products for modelling applications. We conducted a multiscale analysis of four different long-term (12 years, 2007-2018) high-resolution global SIFr datasets (0.05 degrees x 0.05 degrees), namely - CSIF (Contiguous SIF), GOSIF (Global OCO-2 SIF), LUE-SIF (Light Use Efficiency SIF), and HSIF (Harmonized SIF) -at 4-day, 8-day, and monthly time scales and found that for the majority of sites, the SIFr is linearly related to ground-based GPP measurements with the eddy covariance method. While the relationship between SIFr and GPP (i.e., the slope -GPP/SIFr) varied significantly across the SIFr datasets, sites, and land cover types, all four SIFr datasets were unequivocally a better predictor of GPP compared to remotely sensed vegetation indices - NDVI (normalized difference vegetation index) and EVI (enhanced vegetation index), sensed by the MODIS satellite. Furthermore, we also analyzed SIF-GPP relation-ships during drought vs non-drought conditions and found that for about 30% of the sites, comprising mostly non-forests site, the SIF-GPP relationship became weaker (decreased R2) with a lower slope during drought conditions compared to non-drought conditions. Among the four different products, the CSIF (at 4-day timescale) and GOSIF (at 8-day timescale) predicted GPP better compared to LUE-SIF and HSIF across all land cover types. Owing to their long-term availability (since 2000 for CSIF and GOSIF), these SIFr datasets combined with proxies of ecosystem properties can be used to appropriately capture vegetation dynamics and the interannual vari-abilities across a wide range of climatic conditions.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2022/11/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on November 17, 2022.&lt;/p&gt;
   </content>
 </entry>
 

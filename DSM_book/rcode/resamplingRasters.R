@@ -1,104 +1,95 @@
-## R for GIS
+### Using R for Digital Soil Mapping
+# Reprojections, resampling and rasterisation
+# URL: http://smartdigiag.com/DSM_book/pages/r_gis/reprojs/
+# Author: Brendan Malone
+# Email: brendan.malone@csiro.au
+# Date Created: 22.8.23
+# Date Modified: 22.8.23
 
-#Raster resampling and reprojection
 
-library(raster);library(rgdal);library(sp)
+## load packages
+library(terra);library(sf)
 
 
-## Raster resampling
-
-#Nowley Grids
-list.files("/home/brendo1001/Downloads/reproj/",  pattern="tif$", full.names=FALSE)
-files<- list.files("/home/brendo1001/Downloads/reproj/",  pattern="tif$",full.names=T)
+## Path to files. This will be different for you
+files<- list.files("/home/brendo1001/mystuff/muddles/reproj/", pattern="tif$",full.names=T)
 files
 
-b.grid<- raster(files[3]) #base grid to be resampled too
-b.grid
-crs(b.grid)
-plot(b.grid)
+# RASTER 1: remote sensing data
+rs.raster<- rast(files[1])
+rs.raster
 
-r.grid<- raster(files[2])
-r.grid
-crs(r.grid)
-plot(r.grid)
+# RASTER 2: digital elevation model
+elev.raster<- rast(files[2])
+elev.raster
 
-#resample
-rs.grid<- resample(r.grid, b.grid, method='bilinear')
+# RASTER 3: Very granular gamma radiometrics data
+gamma.raster<- rast(files[3])
+gamma.raster
+
+
+# resample
+rs.grid<- terra::resample(x = elev.raster, y = gamma.raster, method='bilinear')
 rs.grid
 
-r3<- stack(rs.grid, b.grid)
+# stack 
+r3<- c(rs.grid, gamma.raster)
+r3
 
-### Reprojection and resampling
 
-#landsat raster
-l.grid<- raster(files[1])
-crs(l.grid)
-l.grid
-plot(l.grid)
+#reproject remote sensing grid
+pl.grid <- terra::project(x =rs.raster, y = elev.raster , method="near")
 
-#elevation raster
-e.grid<- raster(files[3])
-crs(e.grid)
-e.grid
-plot(e.grid)
-
-#reproject landsat grid
-pl.grid <- projectRaster(from =l.grid, to = e.grid ,method="ngb")
-pl.grid
-plot(pl.grid)
+# stack
+r4<- c(pl.grid, elev.raster)
+r4
 
 
 #reproject and resample (50m pixels)
-newProj<- crs(e.grid)
-pl.grid10 <- projectRaster(l.grid, crs=newProj,method="ngb", res=50)
-pl.grid10
+pl.grid50 <- terra::project(x = rs.raster, y = crs(elev.raster), method="near", res=50)
+pl.grid50
 
 
-##reprojection and rasterisation of polygon data
-
-#get polygon
-poly.dat <- readOGR(dsn = "/home/brendo1001/Downloads/reproj/soilMap/Soils_Curlewis_GDA94.shp", "Soils_Curlewis_GDA94")
+## Read in shapefile of soil mapping units [path will be different for you]
+poly.dat <- st_read("/home/brendo1001/mystuff/muddles/reproj/soilMap/Soils_Curlewis_GDA94.shp")
 poly.dat
 
-# Attribute table
-head(poly.dat@data)
-summary(poly.dat@data$CODE)
-summary(as.factor(as.numeric(poly.dat@data$CODE))) # numeric factor
 
-#Basic plot
+## Explore the data
+# Attribute table
+head(poly.dat)
+
+# soil type code and frequency
+summary(poly.dat)
+summary(as.factor(poly.dat$CODE)) # numeric factor
+
+#Basic plot 
 plot(poly.dat) 
-invisible(text(getSpPPolygonsLabptSlots(poly.dat), labels = as.character(poly.dat@data$CODE), cex = 0.4))
 
 # coordinate reference system
-crs(poly.dat)
+st_crs(poly.dat)
+
 
 ## Reproject to new projection (newProj)
-poly.dat.T <- spTransform(poly.dat, CRSobj= newProj) 
-class(poly.dat.T)
+newProj<- st_crs(pl.grid)
+poly.dat.T <- st_transform(poly.dat, crs= newProj) 
+poly.dat.T
 
-#plot
+
+## Plot raster and overlay with shape
 plot(pl.grid)
-plot(poly.dat.T, add=T)
-invisible(text(getSpPPolygonsLabptSlots(poly.dat.T), labels = as.character(poly.dat.T@data$CODE), cex = 1.2))
+plot(poly.dat.T["LANDSCAPE"], add = T, col = sf.colors(categorical = TRUE, alpha = 0.2))
 
 
-#rasterise polygon
-r2 <- rasterize(poly.dat.T, pl.grid, field="CODE")
+## Rasterise polygon
+# convert sf to vect
+poly.dat.V<- terra::vect(poly.dat.T)
 
-#plot rasterised polygon
-r2 <- as.factor(r2)
-rat <- levels(r2)[[1]] 
+# rasterise
+poly.raster <- terra::rasterize(x = poly.dat.V, y = pl.grid50, field="CODE")
+names(poly.raster)<- "soil_map_CODE"
 
-# Match raster levels to polygon code
-m1<- c(as.matrix(levels(r2)[[1]]))
-m2<- levels(poly.dat@data$CODE)[m1]
-rat[["code"]] <- c(m2)
-levels(r2) <- rat
-
-# plot
-levelplot(r2, xlab = "", ylab = "")
-
-
-
-
+#stack
+r5<- c(pl.grid50,poly.raster)
+r5
 

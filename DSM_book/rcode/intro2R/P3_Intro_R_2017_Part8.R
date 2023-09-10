@@ -191,6 +191,7 @@ nr<-nrow(topo_dem)# no. rows in a DEM
 nc<-ncol(topo_dem)# no. cols in a DEM
 
 # start with a random pixel as seed point
+set.seed(555)
 row_z1<-sample.int(nr,1)
 col_z1<-sample.int(nc,1)
 

@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~3 minutes
+          Reading time ~2 minutes
         </p>
         
       </div>
@@ -190,11 +190,8 @@
     <p><code class="highlighter-rouge">ithir</code>: Soil data and functions. <a href="/DSM_book/pages/ithir/">A necessary <code class="highlighter-rouge">R</code> package</a> to have for following the R workflows throughout these pages dedicated to doing digital soil mapping with <code class="highlighter-rouge">R</code>.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">aqp</code>: <a href="http://cran.r-project.org/web/packages/aqp/index.html">Algorithms for quantitative pedology</a>. A collection of
+    <p><code class="highlighter-rouge">aqp</code>: <a href="https://cran.r-project.org/web/packages/aqp/index.html">Algorithms for quantitative pedology</a>. A collection of
 algorithms related to modeling of soil resources, soil classification, soil profile aggregation, and visualization.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">GSIF</code>: <a href="http://cran.r-project.org/web/packages/GSIF/index.html">Global soil information facility</a>. Tools, functions and sample datasets for digital soil mapping.</p>
   </li>
 </ul>
 
@@ -204,16 +201,10 @@ algorithms related to modeling of soil resources, soil classification, soil prof
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">sp</code> is a highly useful <a href="http://cran.r-project.org/web/packages/sp/index.html">package</a> that provides classes and methods for spatial data. The classes document where the spatial location information resides, for 2D or 3D data. Utility functions are provided, e.g. for plotting data as maps, spatial selection, as well as methods for retrieving coordinates, for sub-setting, print, summary, etc.</p>
+    <p><a href="https://cran.r-project.org/web/packages/RSAGA/index.html"><code class="highlighter-rouge">RSAGA</code></a> provides access to geocomputing and terrain analysis functions of <a href="https://saga-gis.sourceforge.io/en/index.html">SAGA GIS</a> from within <code class="highlighter-rouge">R</code> by running the command line version of SAGA. <code class="highlighter-rouge">RSAGA</code> furthermore provides several <code class="highlighter-rouge">R</code> functions for handling ASCII grids, including a flexible framework for applying local functions (including predict methods of fitted models) and focal functions to multiple grids.</p>
   </li>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/raster/index.html"><code class="highlighter-rouge">raster</code></a>. Reading, writing, manipulating, analyzing and modeling of gridded spatial data. The package implements basic and high-level functions and processing of very large files is supported.</p>
-  </li>
-  <li>
-    <p><a href="http://cran.r-project.org/web/packages/rgdal/index.html"><code class="highlighter-rouge">rgdal</code></a> provides bindings to Frank Warmerdam’s Geospatial Data Abstraction Library (GDAL) (&gt;= 1.6.3) and access to projection/transformation operations from the PROJ.4 library. Both GDAL raster and OGR vector map data can be imported into <code class="highlighter-rouge">R</code>, and GDAL raster data and OGR vector data exported. Use is made of classes defined in the <code class="highlighter-rouge">sp</code> package.</p>
-  </li>
-  <li>
-    <p><a href="http://cran.r-project.org/web/packages/RSAGA/index.html"><code class="highlighter-rouge">RSAGA</code></a> provides access to geocomputing and terrain analysis functions of <a href="http://www.saga-gis.org/en/index.html">SAGA GIS</a> from within <code class="highlighter-rouge">R</code> by running the command line version of SAGA. <code class="highlighter-rouge">RSAGA</code> furthermore provides several <code class="highlighter-rouge">R</code> functions for handling ASCII grids, including a flexible framework for applying local functions (including predict methods of fitted models) and focal functions to multiple grids.</p>
+    <p><a href="https://github.com/r-spatial/qgisprocess"><code class="highlighter-rouge">qgisprocess</code></a> provide an <code class="highlighter-rouge">R</code> interface to the geoprocessing algorithms of <a href="https://qgis.org/en/site/">QGIS</a>, a popular and open source desktop geographic information system (GIS) program.</p>
   </li>
 </ul>
 
@@ -223,22 +214,22 @@ algorithms related to modeling of soil resources, soil classification, soil prof
 
 <ul>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/caret/index.html"><code class="highlighter-rouge">caret</code></a> has an extensive range of functions for training and plotting classification and regression models. See the <a href="http://topepo.github.io/caret/index.html">caret website</a> for more detailed information.</p>
+    <p><a href="https://cran.r-project.org/web/packages/caret/index.html"><code class="highlighter-rouge">caret</code></a> has an extensive range of functions for training and plotting classification and regression models. See the <a href="https://topepo.github.io/caret/index.html">caret website</a> for more detailed information.</p>
   </li>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/Cubist/index.html"><code class="highlighter-rouge">Cubist</code></a> does regression modeling using rules with added instance-based corrections. Cubist models were developed by Ross Quinlan. Further information can be found at <a href="https://www.rulequest.com/">Rulequest</a></p>
+    <p><a href="https://cran.r-project.org/web/packages/Cubist/index.html"><code class="highlighter-rouge">Cubist</code></a> does regression modeling using rules with added instance-based corrections. Cubist models were developed by Ross Quinlan. Further information can be found at <a href="https://www.rulequest.com/">Rulequest</a></p>
   </li>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/C50/index.html"><code class="highlighter-rouge">C5.0</code></a> does C5.0 decision trees and rule-based models for pattern recognition. Another model structure developed by Ross Quinlan.</p>
+    <p><a href="https://cran.r-project.org/web/packages/C50/index.html"><code class="highlighter-rouge">C5.0</code></a> does C5.0 decision trees and rule-based models for pattern recognition. Another model structure developed by Ross Quinlan.</p>
   </li>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/gam/index.html"><code class="highlighter-rouge">gam</code></a> has functions for fitting and working with generalized additive models.</p>
+    <p><a href="https://cran.r-project.org/web/packages/gam/index.html"><code class="highlighter-rouge">gam</code></a> has functions for fitting and working with generalized additive models.</p>
   </li>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/nnet/index.html"><code class="highlighter-rouge">nnet</code></a> is software for feed-forward neural networks with a single hidden layer, and for multinomial log-linear models.</p>
+    <p><a href="https://cran.r-project.org/web/packages/nnet/index.html"><code class="highlighter-rouge">nnet</code></a> is software for feed-forward neural networks with a single hidden layer, and for multinomial log-linear models.</p>
   </li>
   <li>
-    <p><a href="http://cran.r-project.org/web/packages/gstat/"><code class="highlighter-rouge">gstat</code></a> is for doing geostatistics. Variogram modelling, simple, ordinary and universal point or block (co)kriging, sequential Gaussian or indicator (co)simulation; variogram and variogram map plotting utility functions. A related and useful package is <a href="http://cran.r-project.org/web/packages/automap/index.html"><code class="highlighter-rouge">automap</code></a>, which performs an automatic interpolation by automatically estimating the variogram and then calling <code class="highlighter-rouge">gstat</code>.</p>
+    <p><a href="https://cran.r-project.org/web/packages/gstat/"><code class="highlighter-rouge">gstat</code></a> is for doing geostatistics. Variogram modelling, simple, ordinary and universal point or block (co)kriging, sequential Gaussian or indicator (co)simulation; variogram and variogram map plotting utility functions. A related and useful package is <a href="https://cran.r-project.org/web/packages/automap/index.html"><code class="highlighter-rouge">automap</code></a>, which performs an automatic interpolation by automatically estimating the variogram and then calling <code class="highlighter-rouge">gstat</code>.</p>
   </li>
 </ul>
 
@@ -247,13 +238,13 @@ algorithms related to modeling of soil resources, soil classification, soil prof
 <h3 id="mapping-and-plotting-">Mapping and plotting <a id="s-4"></a></h3>
 
 <ul>
-  <li>Both <code class="highlighter-rouge">raster</code> and <code class="highlighter-rouge">sp</code> have handy functions for plotting spatial data. Besides using the base plotting functionality, another useful plotting package is <a href="http://cran.r-project.org/web/packages/ggplot2/index.html"><code class="highlighter-rouge">ggplot2</code></a>. This package is an implementation of the grammar of graphics in <code class="highlighter-rouge">R</code>. It combines the advantages of both base and lattice graphics: conditioning and shared axes are handled automatically, and you can still build up a plot step by step from multiple data sources. It also implements a sophisticated multidimensional conditioning system and a consistent interface to map data to aesthetic attributes. See the <a href="http://ggplot2.org/">ggplot2 website</a> for more information, documentation and examples.</li>
+  <li>Besides using the base plotting functionality, another useful plotting package is <a href="https://cran.r-project.org/web/packages/ggplot2/index.html"><code class="highlighter-rouge">ggplot2</code></a>. This package is an implementation of the grammar of graphics in <code class="highlighter-rouge">R</code>. It combines the advantages of both base and lattice graphics: conditioning and shared axes are handled automatically, and you can still build up a plot step by step from multiple data sources. It also implements a sophisticated multidimensional conditioning system and a consistent interface to map data to aesthetic attributes. See the <a href="https://ggplot2.tidyverse.org/">ggplot2 website</a> for more information, documentation and examples.</li>
 </ul>
 
 <p><a href="#top">Back to top</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-05-24">May 24, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-08-21">August 21, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
