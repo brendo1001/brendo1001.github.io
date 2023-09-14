@@ -3,11 +3,11 @@
 
 #install rdsmart
 library(devtools)
-install_bitbucket("brendo1001/dsmart/rPackage/dsmart/pkg")
+devtools::install_bitbucket("brendo1001/dsmart")
 library(rdsmart)
 
-library(sp)
-library(raster)
+library(sf)
+library(terra)
 library(rasterVis)
 
 #Polygons
@@ -26,19 +26,16 @@ head(dalrymple_composition)
 #covariates
 data("dalrymple_covariates")
 class(dalrymple_covariates)
-nlayers(dalrymple_covariates)
+raster::nlayers(dalrymple_covariates)
 res(dalrymple_covariates)
 
 #run dsmart
 library(parallel)
 # Run disaggregate without adding observations
-test.dsmart<- rdsmart::disaggregate(covariates = dalrymple_covariates, 
+test.dsmart<- rdsmart::dsmart(covariates = dalrymple_covariates, 
              polygons = dalrymple_polygons, 
              composition = dalrymple_composition,
              rate = 15, reals = 10, cpus = 3)
-
-
-
 
 #run dsmart summarise
 #run function getting most probable and creating probability rasters using 4 compute cores.
@@ -54,11 +51,11 @@ sum1<- summarise(realisations = dalrymple_realisations, dalrymple_lookup, nprob 
 
 ## PLOTTING
 #plot most probable soil class
-ml.map<- raster("C:/Users/bmalone/Documents/output/mostprobable/mostprob_01_class.tif")
+ml.map<- terra::rast("/home/brendo1001/output/mostprobable/mostprob_01_class.tif")
 ml.map
 ml.map <- as.factor(ml.map)
 rat <- levels(ml.map)[[1]]
-rat[["class"]] <- c("BL","BU","BW","CE","CG","CK","CO","CP","DA","DO","EW","FL","FR","GA","GR","HG","PA","PI","RA","SC")
+rat[["class"]] <- c("BL","BU","BW","CE","CG","CK","CO","DO","FL","FR","GA","GR","HG","LL","MY","PA","PI","PN")
 levels(ml.map) <- rat
  
 #Randomly selected HEX colors
@@ -66,7 +63,7 @@ area_colors <- c("#9a10a8", "#cf68a0", "#e7cc15", "#4f043a", "#1129a3", "#a2d0a7
 levelplot(ml.map, col.regions=area_colors, xlab="", ylab="", main="Most probable soil class")
 
 #Confusion Index
-CI.map<- raster("C:/Users/bmalone/Documents/output/mostprobable/confusion.tif")
+CI.map<- rast("/home/brendo1001/output/mostprobable/confusion.tif")
 plot(CI.map)
 
 

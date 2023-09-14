@@ -5,21 +5,21 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Preparatory and exploratory analysis for digital soil mapping &#8211; Smart Digital Agriculture</title>
+<title>Preparatory and exploratory data analysis for digital soil mapping &#8211; Smart Digital Agriculture</title>
 <meta name="description" content="">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
-<meta name="twitter:title" content="Preparatory and exploratory analysis for digital soil mapping">
+<meta name="twitter:title" content="Preparatory and exploratory data analysis for digital soil mapping">
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@soilmalone">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Preparatory and exploratory analysis for digital soil mapping">
+<meta property="og:title" content="Preparatory and exploratory data analysis for digital soil mapping">
 <meta property="og:description" content="">
 <meta property="og:url" content="/DSM_book/pages/dsm_prep/splines/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
@@ -133,7 +133,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Preparatory and exploratory analysis for digital soil mapping</h1>
+                    <h1>Preparatory and exploratory data analysis for digital soil mapping</h1>
                     
                         <hr class="small">
                         <span class="subheading"></span>
@@ -153,7 +153,7 @@
     <!--
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title">Preparatory and exploratory analysis for digital soil mapping</h1>
+        <h1 class="entry-title">Preparatory and exploratory data analysis for digital soil mapping</h1>
         
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
@@ -165,120 +165,108 @@
     </header>
     -->
     <div class="entry-content">
-      <h2 id="soil-depth-functions">Soil depth functions</h2>
+      <h4 id="code-">CODE: <a id="s-1"></a></h4>
+<p><a href="/DSM_book/rcode/P4_DSM_prep.R">Get the code used in the sections about preparatory and exploratory data analysis</a></p>
 
-<p>The traditional method of sampling soil involves dividing a soil profile into horizons. The number of horizons and the position of each are generally based on attributes easily observed in the field, such as morphological soil properties (Bishop, McBratney, and Laslett 1999). From each horizon, a bulk sample is taken and it is assumed to represent the average value for a soil attribute over the depth interval from which it is sampled. There are some issues with this approach, particularly from a pedological perspective and secondly from the difficulty in using this legacy data within a Digital Soil Mapping (DSM) framework where we wish to know the continuous variability of a soil both in the lateral and vertical dimensions. From the pedological perspective soil generally varies continuously with depth; however, representing the soil attribute value as the average over the depth interval of horizons leads to discontinuous or stepped profile representations. Difficulties can arise in situations where one wants to know the value of an attribute at a specified depth. The second issue is regarding DSM and is where we use a database of soil profiles to generate a model of soil variability in the area in which they exist. Because observations at each horizon for each profile will rarely be the same between any two profiles, it then becomes difficult to build a
-model where predictions are made at a set depth or at standardized depth intervals. Exceptions to this include so-called one-step models such as those described in Orton, Pringle, and Bishop (2016) and Poggio and Gimona (2014), but to date have not been widely used despite their reported advantages (in terms of predictive skill and efficiency) over the approach described below and then in subsequent pages which has been described as a two-step approach.</p>
+<h3 id="soil-depth-functions">Soil depth functions</h3>
 
-<p>Legacy soil data is too valuable to do away with and thus needs to be molded to suit the purposes of the map producer, such that one needs to be able to derive a continuous function using the available horizon data as some input. This can be done with many methods including polynomials and exponential decay type depth functions. A more general continuous depth function is the equal-area quadratic spline function. The usage and mathematical expression of this function have been detailed in Ponce-Hernandez, Marriott, and Beckett (1986), Bishop, McBratney, and Laslett (1999), and Malone et al. (2009). A useful feature of the spline function is that it is mass preserving (hence the name eual area), or in other words the original data is preserved and can be retrieved again via integration of the continuous spline. Compared to exponential decay functions where the goal is in defining the actual parameters of the decay function, the spline parameters are the values of the soil attribute at the standard depths that are specified by the user. This is a useful feature, because firstly, one can harmonize a whole collection of soil profile data and then explicitly model the soil for a specified depth. For example the GlobalSoilMap.net project (Arrouays et al. 2014) has a specification that digital soil maps be created for each target soil variable for the 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm depth intervals. In this case, the mass-preserving splines can be fitted to the observed data, then values can be extracted from them at the required depths, and are then ready for exploratory analysis and spatial modelling.</p>
+<p><a href="#s-3">Skip to fitting splines to multiple soil profiles</a></p>
+
+<p>The traditional method of sampling soil involves dividing a soil profile into horizons. The number of horizons and the position of each are generally based on attributes easily observed in the field, such as morphological soil properties (Bishop et al. 1999). From each horizon, a bulk sample is taken and it is assumed to represent the average value for a soil attribute over the depth interval from which it is sampled.</p>
+
+<p>There are some issues with this approach, particularly from a pedological perspective and secondly from the difficulty in using this legacy data within a Digital Soil Mapping (DSM) framework where we wish to know the continuous variability of a soil both in the lateral and vertical dimensions. From the pedological perspective soil generally varies continuously with depth; however, representing the soil attribute value as the average over the depth interval of horizons leads to discontinuous or stepped profile representations.</p>
+
+<p>Difficulties can arise in situations where one wants to know the value of an attribute at a specified depth. The second issue is regarding DSM and is where we use a database of soil profiles to generate a model of soil variability in the area in which they exist. Because observations at each horizon for each profile will rarely be the same between any two profiles, it then becomes difficult to build a model where predictions are made at a set depth or at standardized depth intervals.</p>
+
+<p>Exceptions to this include so-called one-step models such as those described in Orton et al. (2016) and Poggio and Gimona (2014), but to date have not been widely used despite their reported advantages (in terms of predictive skill and efficiency) over the approach described below and then in subsequent pages which has been described as a two-step approach.</p>
+
+<p>Legacy soil data is too valuable to do away with, and thus needs to be shaped to suit the purposes of the map producer, such that one needs to be able to derive a continuous function using the available horizon data as some input.</p>
+
+<p>This can be done with many methods including polynomials and exponential decay type depth functions. A more general continuous depth function is the equal-area quadratic spline function. The usage and mathematical expression of this function have been detailed in Ponce-Hernandez et al. (1986), Bishop et al. (1999), and Malone et al. (2009).</p>
+
+<p>A useful feature of the spline function is that it is mass preserving (hence the name equal area), or in other words the original data is preserved and can be retrieved again via integration of the continuous spline.</p>
+
+<p>Compared to exponential decay functions where the goal is in defining the actual parameters of the decay function, the spline parameters are the values of the soil attribute at the standard depths that are specified by the user. This is a useful feature, because firstly, one can harmonize a whole collection of soil profile data and then explicitly model the soil for a specified depth. For example the GlobalSoilMap.net project (Arrouays et al. 2014) has a specification that digital soil maps be created for each target soil variable for the 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm depth intervals. In this case, the mass-preserving splines can be fitted to the observed data, then values can be extracted from them at the required depths, and are then ready for exploratory analysis and spatial modelling.</p>
 
 <p>In the following, we will use legacy soil data and the spline function to prepare data to be used in a DSM framework. This will specifically entail fitting splines to all the available soil profiles and then through a process of harmonization, integrate the splines to generate harmonized depths of each observation.</p>
+
+<p><a href="#top">Back to top</a></p>
 
 <h3 id="fit-mass-preserving-splines-with-r">Fit mass preserving splines with <code class="highlighter-rouge">R</code></h3>
 
 <p><a href="#s-3">Skip to fitting splines to multiple soil profiles</a></p>
 
-<p>We will demonstrate the mass-preserving spline fitting using a single soil profile example for which there are measurements of soil carbon density to a given maximum depth. We can fit a spline to the maximum soil depth, or alternatively any depth that does not exceed the maximum soil depth. The function used for fitting splines is called <code class="highlighter-rouge">ea_spline</code> and is from the <code class="highlighter-rouge">ithir</code> package. Look at the help file for further information on this function. For example, there is further information about how the <code class="highlighter-rouge">ea_spline</code> function can also accept data of class <code class="highlighter-rouge">SoilProfileCollection</code> from the <code class="highlighter-rouge">aqp</code> package in addition to data of the generic <code class="highlighter-rouge">data.frame</code> class.</p>
+<p>The following demonstrates mass-preserving spline fitting using a single soil profile example for which there are measurements of soil carbon density to a given maximum depth.</p>
+
+<p>We can fit a spline to the maximum soil depth, or alternatively any depth that does not exceed the maximum soil depth. The function used for fitting splines is called <code class="highlighter-rouge">ea_spline</code> and is from the <code class="highlighter-rouge">ithir</code> package.</p>
+
+<p>Look at the help file for further information on this function. For example, there is further information about how the <code class="highlighter-rouge">ea_spline</code> function can also accept data of class <code class="highlighter-rouge">SoilProfileCollection</code> from the <code class="highlighter-rouge">aqp</code> package in addition to data of the generic <code class="highlighter-rouge">data.frame</code> class.</p>
 
 <p>In the example below the input data is of class <code class="highlighter-rouge">data.frame</code>. The data we need, <code class="highlighter-rouge">oneProfile</code> is in the <code class="highlighter-rouge">ithir</code> package. Lets also load a few of the other important <code class="highlighter-rouge">R</code> packages that will be encountered in this section too.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load in libraries</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Load ithir library</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># ithir dataset</span><span class="w">
+</span><span class="c1">#ithir dataset</span><span class="w">
 </span><span class="n">data</span><span class="p">(</span><span class="n">oneProfile</span><span class="p">)</span><span class="w">
 </span><span class="n">str</span><span class="p">(</span><span class="n">oneProfile</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## Loading required package: sp</span><span class="w">
-
-</span><span class="c1">## Loading required package: timeDate</span><span class="w">
-
-</span><span class="c1">## Loading required package: timeSeries</span><span class="w">
-
 </span><span class="c1">## 'data.frame':    8 obs. of  4 variables:</span><span class="w">
-</span><span class="c1">##  $ Soil.ID       : num  1 1 1 1 1 1 1 1</span><span class="w">
-</span><span class="c1">##  $ Upper.Boundary: num  0 10 30 50 70 120 250 350</span><span class="w">
-</span><span class="c1">##  $ Lower.Boundary: num  10 20 40 60 80 130 260 360</span><span class="w">
-</span><span class="c1">##  $ C.kg.m3.      : num  20.7 11.7 8.2 6.3 2.4 2 0.7 1.2</span><span class="w">
+</span><span class="c1">##  $ Soil.ID       : int  1 1 1 1 1 1 1 1</span><span class="w">
+</span><span class="c1">##  $ Upper.Boundary: int  0 10 30 50 70 120 250 350</span><span class="w">
+</span><span class="c1">##  $ Lower.Boundary: int  10 20 40 60 80 130 260 360</span><span class="w">
+</span><span class="c1">##  $ C.kg.m3.      : num  20.72 11.71 8.23 6.3 2.4 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>As you can see above, the data table shows the soil depth information
-and carbon density values for a single soil profile. Note the
-discontinuity of the observed depth intervals which can also be observed
-in the figure below.</p>
+<p>As you can see above, the data table shows the soil depth information and carbon density values for a single soil profile. Note the discontinuity of the observed depth intervals which can also be observed in the figure below.</p>
 
 <figure>
     <img src="/images/dsm_book/splinePlot1.png" alt="rconsole" />
     <figcaption> oil profile plot of the `oneProfile` data. Note this figure was produced using the `plot_soilProfile` function from `ithir`.</figcaption>
 </figure>
 
-<p>The <code class="highlighter-rouge">ea_spline</code> function will predict a continuous function from the top
-of the soil profile to the maximum soil depth, such that it will
-interpolate values both within the observed depths and between the
-depths where there is no observation.</p>
+<p>The <code class="highlighter-rouge">ea_spline</code> function will predict a continuous function from the top of the soil profile to the maximum soil depth, such that it will interpolate values both within the observed depths and between the depths where there is no observation.</p>
 
-<p>To parametize the <code class="highlighter-rouge">ea_spline</code> function, we could accept the defaults,
-however it might be suitable to change the <code class="highlighter-rouge">lam</code> and <code class="highlighter-rouge">d</code> parameters to
-suit the objective of the analysis being undertaken. <code class="highlighter-rouge">lam</code> is the lambda
-parameter which controls the smoothness or fidelity of the spline.
-Increasing this value will make the spline more rigid. Decreasing it
-towards zero will make the spline more flexible such that it will follow
-near directly the observed data. A sensitivity analysis is generally
-recommended in order to optimize this parameter. From experience a <code class="highlighter-rouge">lam</code>
-value of 0.1 works well generally for most soil properties, and is the
-default value for the function.</p>
+<p>To parametize the <code class="highlighter-rouge">ea_spline</code> function, we could accept the defaults, however it might be suitable to change the <code class="highlighter-rouge">lam</code> and <code class="highlighter-rouge">d</code> parameters to suit the objective of the analysis being undertaken. <code class="highlighter-rouge">lam</code> is the lambda parameter which controls the smoothness or fidelity of the spline. Increasing this value will make the spline more rigid. Decreasing it towards zero will make the spline more flexible such that it will follow near directly the observed data.</p>
 
-<p>The <code class="highlighter-rouge">d</code> parameter represents the depth intervals at which we want to get
-soil values for. This is a harmonization process where regardless of
-which depths soil was observed at, we can derive the soil values for
-regularized and standard depths. In practice, the continuous spline
-function is first fitted to the data, then we get the integrals of this
-function to determine the values of the soil at the standard depths. <code class="highlighter-rouge">d</code>
-is a matrix, but on the basis of the default values, what it is
-indicating is that we want the values of soil at the following depth
-intervals: 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm.
-These depths are specified depths determined for the GlobalSoilMap.net
-project (Arrouays et al. 2014). Naturally, one can alter these values to
-suit there own particular requirements. To fit a spline to the carbon
-density values of the <code class="highlighter-rouge">oneProfile</code> data, the following script could be
-used:</p>
+<p>A sensitivity analysis is generally recommended in order to optimize this parameter. From experience a <code class="highlighter-rouge">lam</code> value of 0.1 works well generally for most soil properties, and is the default value for the function.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eaFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ea_spline</span><span class="p">(</span><span class="n">oneProfile</span><span class="p">,</span><span class="w"> </span><span class="n">var.name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C.kg.m3."</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w">  </span><span class="m">200</span><span class="p">)),</span><span class="w"> </span><span class="n">lam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">vlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">show.progress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+<p>The <code class="highlighter-rouge">d</code> parameter represents the depth intervals at which we want to get soil values for. This is a harmonization process where regardless of which depths soil was observed at, we can derive the soil values for regularized and standard depths.</p>
+
+<p>In practice, the continuous spline function is first fitted to the data, then we get the integrals of this function to determine the values of the soil at the standard depths. <code class="highlighter-rouge">d</code> is a matrix, but on the basis of the default values, what it is indicating is that we want the values of soil at the following depth
+intervals: 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm.</p>
+
+<p>These depths are specified depths determined for the GlobalSoilMap.net project (Arrouays et al. 2014). Naturally, one can alter these values to suit there own particular requirements. To fit a spline to the carbon density values of the <code class="highlighter-rouge">oneProfile</code> data, the following script could be used:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eaFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ithir</span><span class="o">::</span><span class="n">ea_spline</span><span class="p">(</span><span class="n">oneProfile</span><span class="p">,</span><span class="w"> </span><span class="n">var.name</span><span class="o">=</span><span class="s2">"C.kg.m3."</span><span class="p">,</span><span class="w">
+        </span><span class="n">d</span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">15</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">60</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">200</span><span class="p">)),</span><span class="n">lam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">vlow</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> 
+        </span><span class="n">show.progress</span><span class="o">=</span><span class="kc">FALSE</span><span class="w"> </span><span class="p">)</span><span class="w">
 </span><span class="n">str</span><span class="p">(</span><span class="n">eaFit</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## List of 4</span><span class="w">
 </span><span class="c1">##  $ harmonised    :'data.frame':  1 obs. of  8 variables:</span><span class="w">
 </span><span class="c1">##   ..$ id        : num 1</span><span class="w">
-</span><span class="c1">##   ..$ 0-5 cm    : num 21</span><span class="w">
+</span><span class="c1">##   ..$ 0-5 cm    : num 21.1</span><span class="w">
 </span><span class="c1">##   ..$ 5-15 cm   : num 15.8</span><span class="w">
-</span><span class="c1">##   ..$ 15-30 cm  : num 9.89</span><span class="w">
-</span><span class="c1">##   ..$ 30-60 cm  : num 7.18</span><span class="w">
-</span><span class="c1">##   ..$ 60-100 cm : num 2.76</span><span class="w">
-</span><span class="c1">##   ..$ 100-200 cm: num 1.73</span><span class="w">
+</span><span class="c1">##   ..$ 15-30 cm  : num 9.91</span><span class="w">
+</span><span class="c1">##   ..$ 30-60 cm  : num 7.2</span><span class="w">
+</span><span class="c1">##   ..$ 60-100 cm : num 2.75</span><span class="w">
+</span><span class="c1">##   ..$ 100-200 cm: num 1.72</span><span class="w">
 </span><span class="c1">##   ..$ soil depth: num 360</span><span class="w">
 </span><span class="c1">##  $ obs.preds     :'data.frame':  8 obs. of  6 variables:</span><span class="w">
 </span><span class="c1">##   ..$ Soil.ID       : num [1:8] 1 1 1 1 1 1 1 1</span><span class="w">
 </span><span class="c1">##   ..$ Upper.Boundary: num [1:8] 0 10 30 50 70 120 250 350</span><span class="w">
 </span><span class="c1">##   ..$ Lower.Boundary: num [1:8] 10 20 40 60 80 130 260 360</span><span class="w">
-</span><span class="c1">##   ..$ C.kg.m3.      : num [1:8] 20.7 11.7 8.2 6.3 2.4 2 0.7 1.2</span><span class="w">
-</span><span class="c1">##   ..$ predicted     : num [1:8] 19.84 12.45 8.24 6.2 2.56 ...</span><span class="w">
+</span><span class="c1">##   ..$ C.kg.m3.      : num [1:8] 20.72 11.71 8.23 6.3 2.4 ...</span><span class="w">
+</span><span class="c1">##   ..$ predicted     : num [1:8] 19.86 12.46 8.27 6.2 2.56 ...</span><span class="w">
 </span><span class="c1">##   ..$ FID           : num [1:8] 1 1 1 1 1 1 1 1</span><span class="w">
 </span><span class="c1">##  $ splineFitError:'data.frame':  1 obs. of  2 variables:</span><span class="w">
-</span><span class="c1">##   ..$ rmse   : num 0.409</span><span class="w">
-</span><span class="c1">##   ..$ rmseiqr: num 0.0563</span><span class="w">
-</span><span class="c1">##  $ var.1cm       : num [1:200, 1] 21.6 21.4 21.1 20.8 20.3 ...</span><span class="w">
+</span><span class="c1">##   ..$ rmse   : num 0.41</span><span class="w">
+</span><span class="c1">##   ..$ rmseiqr: num 0.0561</span><span class="w">
+</span><span class="c1">##  $ var.1cm       : num [1:200, 1] 21.6 21.4 21.2 20.8 20.3 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The output of the function is a <code class="highlighter-rouge">list</code>, where the first element is a
-<code class="highlighter-rouge">data.frame</code> (<code class="highlighter-rouge">harmonized</code>) which are the predicted spline estimates at
-the specified depth intervals. The second element (<code class="highlighter-rouge">obs.preds</code>) is
-another <code class="highlighter-rouge">data.frame</code> but contains the observed soil data together with
-spline predictions for the actual depths of observation for each soil
-profile. The third element (<code class="highlighter-rouge">splineFitError</code>) is a <code class="highlighter-rouge">data.frame</code> that
-stores a the profile root mean square error (RMSE) estimate and the
-normalized root-mean-square (nRMSE) deviation. The interquartile range
+<p>The output of the function is a <code class="highlighter-rouge">list</code>, where the first element is a <code class="highlighter-rouge">data.frame</code> (<code class="highlighter-rouge">harmonized</code>) which are the predicted spline estimates at the specified depth intervals. The second element (<code class="highlighter-rouge">obs.preds</code>) is another <code class="highlighter-rouge">data.frame</code> but contains the observed soil data together with spline predictions for the actual depths of observation for each soil profile. The third element (<code class="highlighter-rouge">splineFitError</code>) is a <code class="highlighter-rouge">data.frame</code> that stores the profile root mean square error (RMSE) estimate and the normalized root-mean-square (nRMSE) deviation. The interquartile range
 is used as the denominator in the nRMSE. This value is an estimate of
 the magnitude of difference between observed values and associated
 predicted values with each profile. The fourth element, (<code class="highlighter-rouge">var.1cm</code>) is a
@@ -293,10 +281,11 @@ fitting. Subsequently, plotting the outputs of <code class="highlighter-rouge">e
 possible by the associated <code class="highlighter-rouge">plot_ea_spline</code> function (see help file for
 use of this function):</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">plot_ea_spline</span><span class="p">(</span><span class="n">splineOuts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eaFit</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">)),</span><span class="w"> </span><span class="n">maxd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">200</span><span class="p">,</span><span class="w">  </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">plot.which</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"carbon density"</span><span class="p">)</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">))</span><span class="w"> 
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">){</span><span class="w">
+  </span><span class="n">ithir</span><span class="o">::</span><span class="n">plot_ea_spline</span><span class="p">(</span><span class="n">splineOuts</span><span class="o">=</span><span class="n">eaFit</span><span class="p">,</span><span class="w"> 
+  </span><span class="n">d</span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">15</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">60</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">200</span><span class="p">)),</span><span class="w"> </span><span class="n">maxd</span><span class="o">=</span><span class="m">200</span><span class="p">,</span><span class="w"> 
+  </span><span class="n">type</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">plot.which</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s2">"carbon density"</span><span class="p">)}</span><span class="w">
 </span></code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">plot_ea_spline</code> function is a basic function without too much
@@ -318,30 +307,31 @@ possible plots, and is shown on the figure below.</p>
 
 <p>The above example is just a demonstration of the <code class="highlighter-rouge">ea_spline</code> function
 with the very unlikely scenario of a single soil profile. A normal use
-case is the fit splines for a collection of soil profiles. The
-implementation is exactly the same. All the work happens with the
-function in terms of processing sequentially each given profile. The
-input data is also the same, but you need to be mindful that each
-profile is given a unique identifier so that the processing goes without
+case is to fit splines for a collection of soil profiles.</p>
+
+<p>The implementation is exactly the same.</p>
+
+<p>All the work happens within the function in terms of processing sequentially each given profile. The input data is also the same, but you need to be mindful that each profile is given a unique identifier so that the processing goes without
 a hitch. This unique profile can either be numerical or character type
 or a combination of both.</p>
 
-<p>The data for this example is called
-<a href="/DSM_book/data/Carbon_10sites.csv">Carbon_10sites</a>.
-Download the file and it is called <code class="highlighter-rouge">Carbon_10sites.csv</code>. It is 10 soil
-profiles with measured soil carbon stocks. Note that the <code class="highlighter-rouge">ea_spline</code>
-function is very fast despite no re-factoring improvements. This is
-because the internal computations are relatively simple with no
-overheads or other package dependencies. The size of the profiles to
+<p>The data for this example is called <a href="/DSM_book/data/Carbon_10sites.csv">Carbon_10sites</a>.</p>
+
+<p>Download the file and it is called <code class="highlighter-rouge">Carbon_10sites.csv</code>. It is 10 soil
+profiles with measured soil carbon stocks.</p>
+
+<p>Note that the <code class="highlighter-rouge">ea_spline</code> function is very fast despite no re-factoring improvements. This is because the internal computations are relatively simple with no overheads or other package dependencies. The size of the profiles to
 process is basically the only impediment to time, but experience has
 demonstrated that the current function can process tens of thousands in
 soil profiles in a few minutes.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load data</span><span class="w">
-</span><span class="n">Carbon_10sites</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"Carbon_10sites.csv"</span><span class="p">)</span><span class="w">
+</span><span class="n">Carbon_10sites</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"~/Carbon_10sites.csv"</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># fit splines to each profile</span><span class="w">
-</span><span class="n">eaFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ea_spline</span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Carbon_10sites</span><span class="p">,</span><span class="w"> </span><span class="n">var.name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C.kg.m3."</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="p">)),</span><span class="w"> </span><span class="n">lam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">vlow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">show.progress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span><span class="c1"># fit spline to each profile</span><span class="w">
+</span><span class="n">eaFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ithir</span><span class="o">::</span><span class="n">ea_spline</span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Carbon_10sites</span><span class="p">,</span><span class="w">
+</span><span class="n">var.name</span><span class="o">=</span><span class="s2">"C.kg.m3."</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">15</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">60</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">200</span><span class="p">)),</span><span class="n">lam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">vlow</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">show.progress</span><span class="o">=</span><span class="kc">FALSE</span><span class="w"> </span><span class="p">)</span><span class="w">
+
 </span><span class="n">str</span><span class="p">(</span><span class="n">eaFit</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## List of 4</span><span class="w">
@@ -367,7 +357,7 @@ soil profiles in a few minutes.</p>
 </span><span class="c1">##  $ var.1cm       : num [1:200, 1:10] 29.9 29.6 29 28.2 27.2 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now with more than one soil profile it is perhaps easier to make sense
+<p>Now with more than one soil profile, it is perhaps easier to make sense
 of the function outputs, in particular the <code class="highlighter-rouge">eaFit$harmonised</code> element
 which stores on each line the fitted values at the specified soil
 depths. The <code class="highlighter-rouge">soil.depth</code> column is also helpful too in helping interpret
@@ -402,7 +392,7 @@ Improved Method for Reconstructing a Soil Profile from Analysis of a
 Small Number of Samples.” <em>Journal of Soil Science</em> 37: 455–67.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-06-18">June 18, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-12">September 12, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">

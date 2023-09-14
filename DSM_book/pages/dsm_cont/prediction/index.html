@@ -158,55 +158,39 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~12 minutes
+          Reading time ~10 minutes
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <h2 id="applying-models-spatially">Applying models spatially</h2>
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P5_SSPF_cont_model_apply.R">Get the code used for this section here</a></p>
 
-<p>Here we will provide a brief overview of how applying models to unseen
-data. The general idea is that one has fitted a model to predict some
-soil phenomena using a suite of environmental covariates. Now you need
-to use that model to apply to a the same covariates, but now these
-covariates have continuous coverage across the area. Essentially you
-want to create a soil map. There are a couple of ways to go about this.
+<h3 id="applying-models-spatially">Applying models spatially</h3>
+
+<p>Here we will provide a brief overview of the process of applying models to unseen
+data. The general idea is that one has fitted a model to predict some soil feature using a suite of environmental covariates. Now you need to use that model to apply to a the same covariates, but now these covariates have continuous coverage across the area.</p>
+
+<p>Essentially you want to create a soil map. There are a couple of ways to go about this.
 First things first we need to prepare some data and fit a simple model.</p>
 
 <ul>
   <li><a href="#s-1">Data preparation</a></li>
   <li><a href="#s-2">Model fitting</a></li>
   <li><a href="#s-3">Apply model: Covariate data frame</a></li>
-  <li><a href="#s-4">Apply model: raster <code class="highlighter-rouge">predict</code> function</a></li>
-  <li><a href="#s-5">Apply model: Parallel processing</a></li>
+  <li><a href="#s-4">Apply model: <code class="highlighter-rouge">terra::predict</code> function</a></li>
 </ul>
 
 <h3 id="data-preparation-">Data preparation <a id="s-1"></a></h3>
 
-<p>Recall from before in the data preparatory exercises that we were
-working with the soil point data and environmental covariates for the
-Hunter Valley area. These data are stored in the <code class="highlighter-rouge">HV_subsoilpH</code> and
-<code class="highlighter-rouge">hunterCovariates_sub</code> objects from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="highlighter-rouge">HV_subsoilpH</code> point data and <code class="highlighter-rouge">hunterCovariates_sub</code> raster files from the <code class="highlighter-rouge">ithir</code> package.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## Loading required package: sp</span><span class="w">
-
-</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## rgdal: version: 1.4-8, (SVN revision 845)</span><span class="w">
-</span><span class="c1">##  Geospatial Data Abstraction Library extensions to R successfully loaded</span><span class="w">
-</span><span class="c1">##  Loaded GDAL runtime: GDAL 2.2.3, released 2017/11/20</span><span class="w">
-</span><span class="c1">##  Path to GDAL shared files: /usr/share/gdal/2.2</span><span class="w">
-</span><span class="c1">##  GDAL binary built with GEOS: TRUE </span><span class="w">
-</span><span class="c1">##  Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]</span><span class="w">
-</span><span class="c1">##  Path to PROJ.4 shared files: (autodetected)</span><span class="w">
-</span><span class="c1">##  Linking to sp version: 1.3-2</span><span class="w">
-
-</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># point data</span><span class="w">
 </span><span class="n">data</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
@@ -225,45 +209,33 @@ Hunter Valley area. These data are stored in the <code class="highlighter-rouge"
 
 </span><span class="c1"># Change names of coordinate columns</span><span class="w">
 </span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
+</span><span class="c1"># save a copy of coordinates</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
 
-</span><span class="c1"># grids (covariate raster)</span><span class="w">
-</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
+</span><span class="c1"># convert data to sf object</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># grids (covariate rasters from ithir package)</span><span class="w">
+</span><span class="n">hv.sub.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hunterCovariates_sub"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">hv.sub.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Perform the covariate intersection.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">coordinates</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
-
-</span><span class="c1"># extract</span><span class="w">
-</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
-</span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## 'data.frame':    506 obs. of  15 variables:</span><span class="w">
-</span><span class="c1">##  $ id                      : num  1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
-</span><span class="c1">##  $ x                       : num  340386 340345 340559 340483 340734 ...</span><span class="w">
-</span><span class="c1">##  $ y                       : num  6368690 6368491 6369168 6368740 6368964 ...</span><span class="w">
-</span><span class="c1">##  $ pH60_100cm              : num  4.47 5.42 6.26 8.03 8.86 7.28 4.95 5.61 5.39 3.44 ...</span><span class="w">
-</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  1.34 1.42 1.64 1.04 1.27 ...</span><span class="w">
-</span><span class="c1">##  $ AACN                    : num  1.619 0.281 2.301 1.74 3.114 ...</span><span class="w">
-</span><span class="c1">##  $ Landsat_Band1           : num  57 47 59 52 62 53 47 52 53 63 ...</span><span class="w">
-</span><span class="c1">##  $ Elevation               : num  103.1 103.7 99.9 101.9 99.8 ...</span><span class="w">
-</span><span class="c1">##  $ Hillshading             : num  1.849 1.428 0.934 1.517 1.652 ...</span><span class="w">
-</span><span class="c1">##  $ Light_insolation        : num  1689 1701 1722 1688 1735 ...</span><span class="w">
-</span><span class="c1">##  $ Mid_Slope_Positon       : num  0.876 0.914 0.844 0.848 0.833 ...</span><span class="w">
-</span><span class="c1">##  $ MRVBF                   : num  3.85 3.31 3.66 3.92 3.89 ...</span><span class="w">
-</span><span class="c1">##  $ NDVI                    : num  -0.143 -0.386 -0.197 -0.14 -0.15 ...</span><span class="w">
-</span><span class="c1">##  $ TWI                     : num  17.5 18.2 18.8 18 17.8 ...</span><span class="w">
-</span><span class="c1">##  $ Slope                   : num  1.79 1.42 1.01 1.49 1.83 ...</span><span class="w">
 </span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="model-fitting-">Model fitting <a id="s-2"></a></h3>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hv.MLR.Full</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">+</span><span class="n">Terrain_Ruggedness_Index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Landsat_Band1</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-    </span><span class="n">Elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Light_insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Mid_Slope_Positon</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NDVI</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-    </span><span class="n">TWI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Slope</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hv.MLR.Full</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">+</span><span class="n">Terrain_Ruggedness_Index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Landsat_Band1</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span><span class="n">Elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Light_insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Mid_Slope_Positon</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NDVI</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span><span class="n">TWI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Slope</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span><span class="n">summary</span><span class="p">(</span><span class="n">hv.MLR.Full</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## </span><span class="w">
@@ -278,7 +250,7 @@ Hunter Valley area. These data are stored in the <code class="highlighter-rouge"
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## Coefficients:</span><span class="w">
 </span><span class="c1">##                           Estimate Std. Error t value Pr(&gt;|t|)    </span><span class="w">
-</span><span class="c1">## (Intercept)               5.372452   2.147673   2.502 0.012689 *  </span><span class="w">
+</span><span class="c1">## (Intercept)               5.372451   2.147673   2.502 0.012689 *  </span><span class="w">
 </span><span class="c1">## Terrain_Ruggedness_Index  0.075084   0.054893   1.368 0.171991    </span><span class="w">
 </span><span class="c1">## AACN                      0.034747   0.007241   4.798 2.12e-06 ***</span><span class="w">
 </span><span class="c1">## Landsat_Band1            -0.037712   0.009355  -4.031 6.42e-05 ***</span><span class="w">
@@ -302,22 +274,14 @@ Hunter Valley area. These data are stored in the <code class="highlighter-rouge"
 
 <h3 id="applying-the-model-spatially-using-data-frames-">Applying the model spatially using data frames <a id="s-3"></a></h3>
 
-<p>The traditional approach has been to collate a grid table where there
-would be two columns for the coordinates followed by other columns for
-each of the available covariates that were sourced. This was seen as an
-efficient way to organize all the covariate data as it ensured that a
-common grid was used which also meant that all the covariates are of the
-same scale in terms of resolution and extent. We can simulate the
-covariate table approach using the <code class="highlighter-rouge">hunterCovariates_sub</code> object as
-below.</p>
+<p>The traditional approach has been to collate a grid table where there would be two columns for the coordinates followed by other columns for each of the available covariates that were sourced. This was seen as an efficient way to organize all the covariate data as it ensured that a common grid was used which also meant that all the covariates are of the same scale in terms of resolution and extent. We can simulate the covariate table approach using the stack of collated covariate data.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
-</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cellNos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="n">ncell</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)))</span><span class="w">
-</span><span class="n">vals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">getValues</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cellNos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="n">terra</span><span class="o">::</span><span class="n">ncell</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">)))</span><span class="w">
+</span><span class="n">vals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">terra</span><span class="o">::</span><span class="n">values</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">))</span><span class="w">
 </span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">tempD</span><span class="p">,</span><span class="w"> </span><span class="n">vals</span><span class="p">)</span><span class="w">
 </span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tempD</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">tempD</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span><span class="n">cellNos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">tempD</span><span class="o">$</span><span class="n">cellNos</span><span class="p">)</span><span class="w">
-</span><span class="n">gXY</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">xyFromCell</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">cellNos</span><span class="p">,</span><span class="w"> </span><span class="n">spatial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w">
+</span><span class="n">gXY</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">terra</span><span class="o">::</span><span class="n">xyFromCell</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">cellNos</span><span class="p">))</span><span class="w">
 </span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">gXY</span><span class="p">,</span><span class="w"> </span><span class="n">tempD</span><span class="p">)</span><span class="w">
 </span><span class="n">str</span><span class="p">(</span><span class="n">tempD</span><span class="p">)</span><span class="w">
 
@@ -325,44 +289,42 @@ below.</p>
 </span><span class="c1">##  $ x                       : num  340935 340960 340985 341010 341035 ...</span><span class="w">
 </span><span class="c1">##  $ y                       : num  6370416 6370416 6370416 6370416 6370416 ...</span><span class="w">
 </span><span class="c1">##  $ cellNos                 : int  101 102 103 104 105 106 107 108 109 110 ...</span><span class="w">
-</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  0.745 0.632 0.535 0.472 0.486 ...</span><span class="w">
 </span><span class="c1">##  $ AACN                    : num  9.78 9.86 10.04 10.27 10.53 ...</span><span class="w">
-</span><span class="c1">##  $ Landsat_Band1           : num  68 63 59 62 56 54 59 62 54 56 ...</span><span class="w">
 </span><span class="c1">##  $ Elevation               : num  103 103 102 102 102 ...</span><span class="w">
 </span><span class="c1">##  $ Hillshading             : num  0.94 0.572 0.491 0.515 0.568 ...</span><span class="w">
+</span><span class="c1">##  $ Landsat_Band1           : num  68 63 59 62 56 54 59 62 54 56 ...</span><span class="w">
 </span><span class="c1">##  $ Light_insolation        : num  1712 1706 1701 1699 1697 ...</span><span class="w">
 </span><span class="c1">##  $ Mid_Slope_Positon       : num  0.389 0.387 0.386 0.386 0.386 ...</span><span class="w">
 </span><span class="c1">##  $ MRVBF                   : num  0.376 0.765 1.092 1.54 1.625 ...</span><span class="w">
 </span><span class="c1">##  $ NDVI                    : num  -0.178 -0.18 -0.164 -0.169 -0.172 ...</span><span class="w">
-</span><span class="c1">##  $ TWI                     : num  16.9 17.2 17.2 17.2 17.2 ...</span><span class="w">
 </span><span class="c1">##  $ Slope                   : num  0.968 0.588 0.503 0.527 0.581 ...</span><span class="w">
+</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  0.745 0.632 0.535 0.472 0.486 ...</span><span class="w">
+</span><span class="c1">##  $ TWI                     : num  16.9 17.2 17.2 17.2 17.2 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The result shown above is that the covariate table contains 33252 rows
-and has 14 variables. It is always necessary to have the coordinate
-columns, but some saving of memory could be earned if only the required
-covariates are appended to the table. It will quickly become obvious
-however that the covariate table approach could be limiting when mapping
-extents get very large or the grid resolution of mapping becomes more
-fine-grained, or both.</p>
+<p>The result shown above is that the covariate table contains 33252 rows and has 14 variables. It is always necessary to have the coordinate columns, but some saving of memory could be earned if only the required covariates are appended to the table.</p>
+
+<p>It will quickly become obvious however that the covariate table approach could be limiting when mapping extents get very large or the grid resolution of mapping becomes more fine-grained, or both.</p>
 
 <p>With the covariate table arranged it then becomes a matter of using the
 MLR <code class="highlighter-rouge">predict</code> function.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map.MLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MLR.Full</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempD</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Model predict</span><span class="w">
+</span><span class="n">map.MLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MLR.Full</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempD</span><span class="p">)</span><span class="w">
+</span><span class="c1"># append coordinates</span><span class="w">
 </span><span class="n">map.MLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">data.frame</span><span class="p">(</span><span class="n">tempD</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)]),</span><span class="w"> </span><span class="n">map.MLR</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now we can rasterise the predictions for mapping and grid export. In the
-example below we set the CRS to WGS84 Zone 56 before exporting the
-raster file out as a Geotiff file.</p>
+<p>Now we can rasterise the predictions for mapping and grid export. In the example below we set the CRS to WGS84 Zone 56 before exporting the raster file out as a Geotiff file.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map.MLR.r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rasterFromXYZ</span><span class="p">(</span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">map.MLR</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create raster</span><span class="w">
+</span><span class="n">map.MLR.r</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map.MLR</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"xyz"</span><span class="p">)</span><span class="w">
 </span><span class="n">plot</span><span class="p">(</span><span class="n">map.MLR.r</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"MLR predicted soil pH (60-100cm)"</span><span class="p">)</span><span class="w">
+
 </span><span class="c1"># set the projection</span><span class="w">
-</span><span class="n">crs</span><span class="p">(</span><span class="n">map.MLR.r</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"+proj=utm +zone=56 + south + ellps=WGS84 +datum=WGS84 +units=m +no_defs"</span><span class="w">
-</span><span class="n">writeRaster</span><span class="p">(</span><span class="n">map.MLR.r</span><span class="p">,</span><span class="w"> </span><span class="s2">"soilpH_60_100_MLR.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">crs</span><span class="p">(</span><span class="n">map.MLR.r</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"+init=epsg:32756"</span><span class="w">
+</span><span class="c1"># write to file</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeRaster</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map.MLR.r</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"soilpH_60_100_MLR.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span><span class="c1"># check working directory for presence of raster</span><span class="w">
 </span></code></pre></div></div>
 
@@ -371,78 +333,22 @@ raster file out as a Geotiff file.</p>
     <figcaption> MLR predicted soil pH 60-100cm across the Hunter Valley.</figcaption>
 </figure>
 
-<p>Some of the parameters used within the <code class="highlighter-rouge">writeRaster</code> function that are
-worth noting include: <code class="highlighter-rouge">format</code>, which is the raster format that we want
-to write to. Here <code class="highlighter-rouge">GTiff</code> is being specified — use the <code class="highlighter-rouge">writeFormats</code>
-function to look at what other raster formats can be used. the parameter
-<code class="highlighter-rouge">datatype</code> is specified as <code class="highlighter-rouge">FLT4S</code> which indicates that a 4 byte, signed
-floating point values are to be written to file. Look at the function
-<code class="highlighter-rouge">dataType</code> to look at other alternatives, for example for categorical
-data where we may be interested in logical or integer values.</p>
+<p>Some of the parameters used within the <code class="highlighter-rouge">writeRaster</code> function that are worth noting. The parameter <code class="highlighter-rouge">datatype</code> is specified as <code class="highlighter-rouge">FLT4S</code> which indicates that a 4 byte, signed floating point values are to be written to file. Look at the function <code class="highlighter-rouge">dataType</code> to look at other alternatives, for example for categorical data where we may be interested in logical or integer values.</p>
 
 <h3 id="applying-the-model-spatially-using-raster-predict-">Applying the model spatially using <code class="highlighter-rouge">raster predict</code> <a id="s-4"></a></h3>
 
-<p>Probably a more efficient way of applying the fitted model is to apply
-it directly to the rasters themselves. This avoids the step of arranging
-all covariates into table format. If multiple rasters are being used, it
-is necessary to have them arranged as a <code class="highlighter-rouge">rasterStack</code> object. This is
-useful as it also ensures all the rasters are of the same extent and
-resolution. Here we can use the <code class="highlighter-rouge">raster</code> <code class="highlighter-rouge">predict</code> function such as
-below using the <code class="highlighter-rouge">covStack</code> raster stack as input.</p>
+<p>Probably a more efficient way of applying the fitted model is to apply it directly to the rasters themselves. This avoids the step of arranging all covariates into table format. If multiple rasters are being used, it is necessary to have them arranged as a stacked <code class="highlighter-rouge">SpatRaster</code> object. This is useful as it also ensures all the rasters are of the same extent and resolution. Here we can use the <code class="highlighter-rouge">terra::predict</code> function such as below using the <code class="highlighter-rouge">hv.sub.rasters</code> as input.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map.MLR.r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">hv.MLR.Full</span><span class="p">,</span><span class="w"> </span><span class="s2">"soilpH_60_100_MLR.tif"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># apply model to rasters directly</span><span class="w">
+</span><span class="n">map.MLR.r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MLR.Full</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"soilpH_60_100_MLR.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span><span class="c1"># check working directory for presence of raster</span><span class="w">
 </span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="applying-the-model-spatially-using-parallel-processing-">Applying the model spatially using parallel processing <a id="s-5"></a></h3>
-
-<p>An extension of using the raster <code class="highlighter-rouge">predict</code> function is to apply the
-model again to the rasters, but to do it across multiple computer nodes.
-This is akin to breaking a job up into smaller pieces then processing
-the jobs in parallel rather than sequentially. The parallel component
-here is that the smaller pieces are passed to more than 1 compute nodes.
-Most desktop computers these days can have up to 8 compute nodes which
-can result in some excellent gains in efficiency when applying models
-across massive extents and or at fine resolutions. The <code class="highlighter-rouge">raster</code> package
-has some built in dependencies with other <code class="highlighter-rouge">R</code> packages that facilitate
-parallel processing options. For example the <code class="highlighter-rouge">raster</code> package ports with
-the <code class="highlighter-rouge">parallel</code> package for setting up and controlling the compute node
-processes. The script below is an example of using 4 compute nodes to
-apply the <code class="highlighter-rouge">hv.MLR.Full</code> model to the <code class="highlighter-rouge">hunterCovariates_sub</code> raster
-stack.</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">parallel</span><span class="p">)</span><span class="w">
-</span><span class="n">beginCluster</span><span class="p">(</span><span class="m">4</span><span class="p">)</span><span class="w">
-</span><span class="n">cluserMLR.pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">clusterR</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="n">predict</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">hv.MLR.Full</span><span class="p">),</span><span class="w"> 
-    </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"soilpH_60_100_MLR_pred.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">progress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="n">endCluster</span><span class="p">()</span><span class="w">
-</span></code></pre></div></div>
-
-<p>To set up the compute nodes, you use the <code class="highlighter-rouge">beginCluster</code> function and
-inside it, specify how many compute nodes you want to use. If empty
-brackets are used, the function will use 100% of the compute resources.
-The <code class="highlighter-rouge">clusterR</code> function is the work horse function that then applies the
-model in parallel to the rasters. The parameters and subsequent options
-are similar to the raster <code class="highlighter-rouge">predict</code> function, although it would help to
-look at the help files on this function for more detailed explanations.
-It is always important after the prediction is completed to shutdown the
-nodes using the <code class="highlighter-rouge">endCluster</code> function.</p>
-
-<p>The relative ease in setting up the parallel processing for our mapping
-needs has really opened up the potential for performing DSM using very
-large data sets and rasters. Moreover, using the parallel processing
-together with the file pointing ability (that was discussed earlier)
-<code class="highlighter-rouge">raster</code> has made the possibility of big DSM a reality, and importantly-
-practicable.</p>
-
-<p><a href="#top">Back to top</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-26">July 26, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-12">September 12, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
