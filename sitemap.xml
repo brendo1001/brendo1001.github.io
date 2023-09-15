@@ -769,10 +769,13 @@
 <lastmod>2023-09-10T00:00:00+10:00</lastmod>
 </url>
 <url>
-<loc>/muddles/dsm_book/RNW_files/P10_digitalSoilAssessment</loc>
+<loc>/muddles/dsm_book/P10_digitalSoilAssessment</loc>
 </url>
 <url>
 <loc>/muddles/dsm_book/RNW_files/P10_digitalSoilAssessment_homosoil</loc>
+</url>
+<url>
+<loc>/muddles/dsm_book/RNW_files/P10_digitalSoilAssessment_test</loc>
 </url>
 <url>
 <loc>/muddles/dsm_book/P7_uncerts_UK</loc>
@@ -926,6 +929,12 @@
 </url>
 <url>
 <loc>/DSM_book/pages/introduction/</loc>
+</url>
+<url>
+<loc>/DSM_book/pages/dsa/suitability/</loc>
+</url>
+<url>
+<loc>/DSM_book/pages/dsa/</loc>
 </url>
 <url>
 <loc>/DSM_book/pages/packages/</loc>

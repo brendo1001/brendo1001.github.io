@@ -1,4 +1,4 @@
-## -Digital soil assessment: Homosoil
+## Digital soil assessment: Homosoil
 
 
 ## HOMOSOIL FUNCTION
@@ -51,7 +51,7 @@ hclim.topo <- grid.topo[iclim,]
 
 world.grid$homologue[iclim]<- 1  #append homoclime info to grid  
 world.grid$homoclim[iclim]<- 1  #append homoclime info to grid  
-#plot(rasterFromXYZ(world.grid[,c(1,2,4)]))
+#plot(rast(x = world.grid[,c(1,2,4)], type = "xyz"))
 
                             
 
@@ -63,7 +63,7 @@ clim.match<- which(world.grid$homologue == 1)
 climlith.match<- clim.match[clim.match %in% ilith]
 world.grid$homologue[climlith.match]<- 2  
 world.grid$homolith[climlith.match]<- 1  
-#plot(rasterFromXYZ(world.grid[,c(1,2,4)]))
+#plot(rast(x = world.grid[,c(1,2,4)], type = "xyz"))
 
 
 # homotop
@@ -79,10 +79,10 @@ top.match<- which(world.grid$homologue == 2)
 lithtop.match<- top.match[top.match %in% itopo]
 world.grid$homologue[lithtop.match]<- 3  
 world.grid$homotop[lithtop.match]<- 1  
-#plot(rasterFromXYZ(world.grid[,c(1,2,4)]))
+#plot(rast(x = world.grid[,c(1,2,4)], type = "xyz"))
 
 #homologue raster object
-r1<- rasterFromXYZ(world.grid[,c(1,2,4)])
+r1<- terra::rast(x = world.grid[,c(1,2,4)], type = "xyz")
 r1 <- as.factor(r1)
 rat <- levels(r1)[[1]]
 rat[["homologue"]] <- c("", "homocline", "homolith", "homotop")
@@ -94,23 +94,29 @@ levels(r1) <- rat
 retval <- list(r1, world.grid)
 return(retval)}
 
-## GET THE DATA
-library(ithir)
-data(homosoil_globeDat)
 
+
+## GET THE DATA
+library(ithir);library(terra)
+data(homosoil_globeDat)
 
 
 ## SITE LOCATION (Jakarta, Indonesia)
 recipient.lat=-(6+10/60)
 recipient.lon=106+ 49/60
 
+
 ## RUN FUNCTION
 result<- homosoil(grid_data = homosoil_globeDat, recipient.lon = recipient.lon, recipient.lat = recipient.lat)
 
+# get the map
+map.out<- result[[1]]
+crs(map.out) <- "+init=epsg:4326"
 # plot
-library(rasterVis)
+pt1 = sf::st_point(c(recipient.lon,recipient.lat))
+as(st_geometry(pt1), Class="Spatial")
 area_colors <- c("#EFEFEF", "#666666", "#FFDAD4", "#FF0000")
-levelplot(result[[1]], col.regions = area_colors, xlab = "", ylab = "" ) + layer(sp.points(dats, col = 'green',pch=20, cex=2))
-
+t1<- rasterVis::levelplot(map.out, col.regions = area_colors, xlab = "", ylab = "" ) 
+t1 
 
 ## END

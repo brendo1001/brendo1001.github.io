@@ -1,0 +1,728 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Digital Soil Assessment &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="digital land suitability analysis">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Digital Soil Assessment">
+<meta name="twitter:description" content="digital land suitability analysis">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digital Soil Assessment">
+<meta property="og:description" content="digital land suitability analysis">
+<meta property="og:url" content="/DSM_book/pages/dsa/suitability/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsa/suitability/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Digital Soil Assessment</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">digital land suitability analysis</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Digital Soil Assessment</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~32 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P10_digitalSoilAssessment.R">Get the code used for this section here</a></p>
+
+<h3 id="digital-land-suitability-assessment">Digital Land Suitability Assessment</h3>
+
+<ul>
+  <li><a href="#s-1">Introduction</a></li>
+  <li><a href="#s-2">Coding an enterprise suitability assessment</a></li>
+  <li><a href="#s-3">Getting started with some data</a></li>
+  <li><a href="#s-4">First run of the suitability assessment</a></li>
+  <li><a href="#s-5">Stepping it up some. Mapping enterprise suitability</a></li>
+</ul>
+
+<h3 id="introduction-">Introduction <a id="s-1"></a></h3>
+
+<p>If we consider what digital soil assessment (DSA) is as described in Carre et al. (2007), an obvious candidate application is land suitability evaluation for a specified land use type, which Diepen et al. (1991) define as all methods to explain or predict the use potential of land.</p>
+
+<p>Land evaluation in some sense has been in practice at least since the earliest known human civilizations. The shift to sedentary agriculture from nomadic lifestyles is at least indicative of a concerted effort of human investment to evaluate the potential and capacity of land and its soils to support some form of agriculture like cropping (Brevik and Hartemink 2010).</p>
+
+<p>In the modern times there is a well-documented history of land evaluation practice and programs throughout the world, many of which are described in Mueller et al. (2010). Much of the current thinking around land evaluation for agriculture are well documented within the land evaluation guidelines prepared by the Food and Agriculture Organization of the United Nations (FAO) in 1976 (FAO 1976).</p>
+
+<p>These guidelines have strongly influenced and continue to guide land evaluation projects throughout the world. The FAO framework is a crop specific LSA system with a 5-class ranking of suitability (FAO Land Suitability Classes) from 1: Highly Suitable to 5: Permanently Not Suitable. Given a suite of biophysical information from a site, each attribute is evaluated against some expert-defined thresholds for each suitability class. The final evaluation of suitability for the site is the one in which is most limiting.</p>
+
+<p>Digital soil mapping complementing land evaluation assessment is being more regularly observed. Examples (in Australia) include (Kidd et al. 2012) in Tasmania and (Harms et al. 2015) in Queensland. Perhaps an obvious reason is that one can derive with digital soil and climate modeling, very attribute specific mapping which can be targeted specifically to a particular agricultural land use or even to a specific enterprise (Kidd et al. 2012).</p>
+
+<p>In this section, an example is given of a DSA where enterprise suitability is assessed. The specific example is a digital land suitability assessment (LSA) for hazelnuts across an area of northern Tasmania, Australia (Meander Valley) which has been previously described in Malone et al. (2015).</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="coding-an-enterprise-suitability-assessment-">Coding an enterprise suitability assessment <a id="s-2"></a></h3>
+
+<p>The example considered below is just to give an overview of how to perform a DSA in what could be considered as a relatively simple example.</p>
+
+<p>Using the most-limiting factor approach of land suitability assessment, the procedure requires a pixel-by-pixel assessment of a number of input variables which have been expertly defined as being important for the establishment and growth of hazelnuts. Malone et al. (2015) describes the digital mapping processes that went into creating the input variables for this example.</p>
+
+<p>The approach also assumes that the predicted maps of the input variables are also error free. The figure below shows an example of the input variable requirements and the suitability thresholds for hazelnuts. You will notice the biophysical variables include both soil and climatic variables, and the suitability classification has four levels of grading.</p>
+
+<figure>
+    <img src="/images/dsm_book/lsa2.png" alt="rconsole" />
+    <figcaption> Suitability parameters and thresholds for hazelnuts. Acknowledgments to the Tasmanian Institute of Agriculture for the development of this ruleset and others.</figcaption>
+</figure>
+
+<p>Probably the first thing to consider for enabling the DSA in this example is to codify the information above into an <code class="highlighter-rouge">R</code> function. It would look like something similar to the following script.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># HAZELNUT SUITABILITY ASSESSMENT FUNCTION</span><span class="w">
+</span><span class="n">hazelnutSuits</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">out.matrix</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">  </span><span class="c1">#ten selection variable for hazelnuts</span><span class="w">
+
+</span><span class="c1"># Chill Hours</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1200</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">1200</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">600</span><span class="p">),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># Clay content</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">50</span><span class="p">),</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># Soil Drainage</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">3.5</span><span class="p">),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">3.5</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">2.5</span><span class="p">),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">2.5</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1.5</span><span class="p">),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">1.5</span><span class="p">),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+
+</span><span class="c1"># EC (transformed variable)</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0.15</span><span class="p">),</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.15</span><span class="p">),</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># Frost</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">80</span><span class="p">),</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w">
+</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">60</span><span class="p">),</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w">
+</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">40</span><span class="p">),</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">40</span><span class="p">),</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+
+</span><span class="c1"># pH</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">6.5</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">5.5</span><span class="p">),</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">6.5</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">7.1</span><span class="p">),</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5.5</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">7.1</span><span class="p">),</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># rainfall</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">50</span><span class="p">),</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">50</span><span class="p">),</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># soil depth</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">50</span><span class="p">),</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w">
+</span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">40</span><span class="p">),</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w">
+</span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># temperature</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">33</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w">
+</span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">18</span><span class="p">),</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">33</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">35</span><span class="p">),</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">35</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">11</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">18</span><span class="p">),</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="c1"># rocks</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">12</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">12</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">13</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">12</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">13</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">12</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">13</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span><span class="n">out.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">12</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">samp.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">13</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">
+
+</span><span class="nf">return</span><span class="p">(</span><span class="n">out.matrix</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Essentially the function takes in a matrix of <em>n</em> number of rows by 13 columns. The number of columns is fixed as each coincides with one of the biophysical variables. There are some variables where there is relevant information contained in two columns. Soil depth is one of these variables. The reason is that soil depth is modeled via a two-stage process (as is exemplified in the <a href="/DSM_book/pages/dsm_bespoke/two_step_dsm/">section regarding two-stage modeling for DSM</a>), such that a model is used to predict the presence/absence of a certain condition - which for soil depth is whether lithic contact is achieved less than 1.5 m from the soil surface - followed by a secondary model which predicts soil depth (where soil is expected to be less than 1.5m). Subsequently the secondary model is only invoked if there is a positive condition found for the first model.</p>
+
+<p>The above <code class="highlighter-rouge">R</code> function provides a good example of the use of sub-setting and applying conditional queries within <code class="highlighter-rouge">R</code> applied in <a href="/DSM_book/pages/r_literacy/part5/">the introduction to <code class="highlighter-rouge">R</code> part of the course</a>.</p>
+
+<p>The function <code class="highlighter-rouge">hazelnutSuits</code> will return a new matrix with <em>n</em> rows and 10 columns (as there are 10 assessment criteria). The entries for each column and row will be the suitability assessment for each biophysical variable. It is then just a matter of determining what the maximum value is on each row in order to give an overall suitability valuation (as this is the most limiting factor approach). This can be achieved using the <code class="highlighter-rouge">rowMaxs</code> function from the <code class="highlighter-rouge">matrixStats</code> package.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="getting-started-with-some-data-">Getting started with some data <a id="s-3"></a></h3>
+
+<p>Assuming there are digital soil and climate maps already created for use in the hazelnut land suitability assessment, it is relatively straightforward to run the LSA. Keep in mind that the creation of the biophysical variable maps were created via a number of means which included continuous attribute modeling, binomial and ordinal logistic regression, and a combination of both i.e. through the two-stage mapping process. So let’s get some sense of the LSA input variables we have to work with.</p>
+
+<p>Sourcing of the input variables for this exercise comes from the <code class="highlighter-rouge">ithir</code>package.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">matrixStats</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Data for the exercise grids (lsa rasters from ithir package)</span><span class="w">
+</span><span class="n">lsa.variables</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/dsa/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w">
+</span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".tif"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">lsa.variables</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Take a look at the supplied data and perhaps perform your own checks and investigations. Some checks to get started include:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Print out general raster metadata</span><span class="w">
+</span><span class="n">lsa.variables</span><span class="w">
+
+</span><span class="c1">## class       : SpatRaster </span><span class="w">
+</span><span class="c1">## dimensions  : 1081, 1685, 13  (nrow, ncol, nlyr)</span><span class="w">
+</span><span class="c1">## resolution  : 30, 30  (x, y)</span><span class="w">
+</span><span class="c1">## extent      : 452246.4, 502796.4, 5387368, 5419798  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## coord. ref. :  </span><span class="w">
+
+
+</span><span class="c1"># LSA names and class</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##  [1] "X1_chill_HAZEL_FINAL_meandertif"      </span><span class="w">
+</span><span class="c1">##  [2] "X10_rocks_binaryClass_meandertif"     </span><span class="w">
+</span><span class="c1">##  [3] "X11_rocks_ordinalClass_meandertif"    </span><span class="w">
+</span><span class="c1">##  [4] "X2_clay_FINAL_meandertif"             </span><span class="w">
+</span><span class="c1">##  [5] "X3_drain_FINAL_meandertif"            </span><span class="w">
+</span><span class="c1">##  [6] "X4_EC_cubist_meandertif"              </span><span class="w">
+</span><span class="c1">##  [7] "X5_Frost_HAZEL_binaryClass_meandertif"</span><span class="w">
+</span><span class="c1">##  [8] "X5_Frost_HAZEL_FINAL_meandertif"      </span><span class="w">
+</span><span class="c1">##  [9] "X6_pH_FINAL_meandertif"               </span><span class="w">
+</span><span class="c1">## [10] "X7_rain_HAZEL_FINAL_meandertif"       </span><span class="w">
+</span><span class="c1">## [11] "X8_soilDepth_binaryClass_meandertif"  </span><span class="w">
+</span><span class="c1">## [12] "X8_soilDepth_FINAL_meandertif"        </span><span class="w">
+</span><span class="c1">## [13] "X9_temp_HAZEL_FINAL_meandertif"</span><span class="w">
+
+</span><span class="nf">class</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] "SpatRaster"</span><span class="w">
+</span><span class="c1">## attr(,"package")</span><span class="w">
+</span><span class="c1">## [1] "terra"</span><span class="w">
+
+</span><span class="c1"># Raster stack dimensions: layers, row num, col num</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">nlyr</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 13</span><span class="w">
+
+</span><span class="n">terra</span><span class="o">::</span><span class="n">nrow</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 1081</span><span class="w">
+
+</span><span class="n">terra</span><span class="o">::</span><span class="n">ncol</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 1685</span><span class="w">
+
+</span><span class="c1"># Raster resolution</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">res</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 30 30</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="first-run-of-the-suitability-assessment-">First run of the suitability assessment <a id="s-4"></a></h3>
+
+<p>There are 13 rasters of data, which you will note coincide with the inputs required for the <code class="highlighter-rouge">hazelnutSuits</code> function. Now all that is required is to go pixel by pixel and apply the LSA function. In <code class="highlighter-rouge">R</code> the implementation may take the following form:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## EXAMPLE ON ONE ROW OF A RASTER Retrieve values of from all rasters for a</span><span class="w">
+</span><span class="c1">## given row Here it is the 100th row of the raster</span><span class="w">
+</span><span class="c1"># get all soil and climate data for selected row</span><span class="w">
+</span><span class="n">cov.Frame</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lsa.variables</span><span class="p">[</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">nrow</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 1685</span><span class="w">
+
+</span><span class="c1"># Remove the pixels where there is NA or no data present</span><span class="w">
+</span><span class="n">sub.frame</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cov.Frame</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">nrow</span><span class="p">(</span><span class="n">sub.frame</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 120</span><span class="w">
+
+</span><span class="nf">names</span><span class="p">(</span><span class="n">sub.frame</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##  [1] "X1_chill_HAZEL_FINAL_meandertif"      </span><span class="w">
+</span><span class="c1">##  [2] "X10_rocks_binaryClass_meandertif"     </span><span class="w">
+</span><span class="c1">##  [3] "X11_rocks_ordinalClass_meandertif"    </span><span class="w">
+</span><span class="c1">##  [4] "X2_clay_FINAL_meandertif"             </span><span class="w">
+</span><span class="c1">##  [5] "X3_drain_FINAL_meandertif"            </span><span class="w">
+</span><span class="c1">##  [6] "X4_EC_cubist_meandertif"              </span><span class="w">
+</span><span class="c1">##  [7] "X5_Frost_HAZEL_binaryClass_meandertif"</span><span class="w">
+</span><span class="c1">##  [8] "X5_Frost_HAZEL_FINAL_meandertif"      </span><span class="w">
+</span><span class="c1">##  [9] "X6_pH_FINAL_meandertif"               </span><span class="w">
+</span><span class="c1">## [10] "X7_rain_HAZEL_FINAL_meandertif"       </span><span class="w">
+</span><span class="c1">## [11] "X8_soilDepth_binaryClass_meandertif"  </span><span class="w">
+</span><span class="c1">## [12] "X8_soilDepth_FINAL_meandertif"        </span><span class="w">
+</span><span class="c1">## [13] "X9_temp_HAZEL_FINAL_meandertif"</span><span class="w">
+
+</span><span class="c1"># run hazelnutSuits function </span><span class="w">
+</span><span class="c1"># first, order the data frame so columns match to assessment criteria in the function</span><span class="w">
+</span><span class="n">sub.frame</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sub.frame</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="o">:</span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)]</span><span class="w">
+</span><span class="n">hazel.lsa</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">hazelnutSuits</span><span class="p">(</span><span class="n">sub.frame</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Assess for suitability</span><span class="w">
+</span><span class="n">matrixStats</span><span class="o">::</span><span class="n">rowMaxs</span><span class="p">(</span><span class="n">hazel.lsa</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##   [1] 2 2 2 2 4 4 4 4 4 4 4 4 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</span><span class="w">
+</span><span class="c1">##  [38] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4</span><span class="w">
+</span><span class="c1">##  [75] 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 2 2 2 2 2 2 2 2 2 2 2 2</span><span class="w">
+</span><span class="c1">## [112] 2 2 4 4 4 4 4 4 4</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The above script has just performed the hazelnut LSA upon the entire selected row of the input variable rasters where there was available data after excluding all the <code class="highlighter-rouge">NA</code> values.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="stepping-it-up-some-mapping-enterprise-suitability-">Stepping it up some. Mapping enterprise suitability <a id="s-5"></a></h3>
+
+<p>To do the LSA for the entire mapping extent we could effectively run the script above for each row of the input rasters. Naturally, this would take an age to do manually, so it might be more appropriate to use the script above inside a <code class="highlighter-rouge">for</code> loop where the row index changes for each loop. <a href="/DSM_book/pages/r_literacy/part8/">Refer to previous exercises on the use of <code class="highlighter-rouge">for</code> loops</a>.</p>
+
+<p>Alternatively, the custom <code class="highlighter-rouge">hazelnutSuits</code> function could be used as an input argument for the <code class="highlighter-rouge">terra</code> package <code class="highlighter-rouge">app</code> function.</p>
+
+<p>Given the available options, we will demonstrate the mapping process using the looping approach. While it may be computationally slower, it imprints the concept of applying the LSA spatially.</p>
+
+<p>From the above script and resulting output, we essentially returned a vector of integers. We effectively lost all links to the fact that the inputs and resulting outputs are spatial data. Subsequently there is a need to link the suitability assessment back to the mapping.</p>
+
+<p>Fortunately we know the column positions of the instances where there was the full suite of input data. So once we have set up a raster object to which data can be written to (which has the same raster properties of the input data), it is just a matter of placing the LSA outputs into the row and column positions as those of the input data.</p>
+
+<p>A full example is given below, but for the present purpose, the LSA output data placement into a raster would look something like the following:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A one column matrix with number of rows equal to number of columns in raster inputs</span><span class="w">
+</span><span class="n">a.matrix</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="o">=</span><span class="n">nrow</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Place LSA outputs into correct row positions</span><span class="w">
+</span><span class="n">a.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="m">1</span><span class="p">]</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrixStats</span><span class="o">::</span><span class="n">rowMaxs</span><span class="p">(</span><span class="n">hazel.lsa</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Write LSA outputs to raster object (here the 100th row)</span><span class="w">
+</span><span class="n">LSA.raster</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LSA.raster</span><span class="p">,</span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a.matrix</span><span class="p">[,</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Naturally the above few lines of script would also be embedded into the looping process as described above. Below is an example of putting all these operations together to ultimately produce a map of the suitability assessment.</p>
+
+<p>To add a slight layer of complexity, we may also want to produce maps of the suitability assessment for each of the input variables. This helps in determining which factors are causing the greatest limitations and where they occur. First, we need to create a number of rasters to which we can write the outputs of the LSA to.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Create a suite of rasters with same raster properties is LSA input variables</span><span class="w">
+
+</span><span class="c1"># general file path where raster are to be saved</span><span class="w">
+</span><span class="n">loc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"/home/tempfiles/"</span><span class="w">
+
+</span><span class="c1"># Overall suitability classification</span><span class="w">
+</span><span class="n">LSA.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="c1"># Write outputs of LSA directly to file</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_MLcat.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Individual LSA input suitability rasters</span><span class="w">
+</span><span class="n">mlf1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf6</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf7</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf8</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf9</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+</span><span class="n">mlf10</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rast</span><span class="p">(</span><span class="n">lsa.variables</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span><span class="w">
+
+</span><span class="c1"># Also write individual LSA outputs directly to file.</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf1</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf1_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf2</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf2_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf3</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf3_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf4</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf4_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf5</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf5_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf6</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf6_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf7</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf7_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf8</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf8_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf9</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf9_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">writeStart</span><span class="p">(</span><span class="n">mlf10</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="s2">"meander_Haz_mlf10_CAT.tif"</span><span class="p">),</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now we can implement the <code class="highlighter-rouge">for</code> loop procedure and do the LSA for the entire mapping extent.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Run the suitability model row by row:</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="c1"># get raster values</span><span class="w">
+  </span><span class="n">cov.Frame</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lsa.variables</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="c1"># get the complete cases</span><span class="w">
+  </span><span class="n">sub.frame</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cov.Frame</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+  </span><span class="c1"># re-order the data frame</span><span class="w">
+  </span><span class="n">sub.frame</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sub.frame</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="o">:</span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)]</span><span class="w">
+
+  </span><span class="c1"># Run hazelnut LSA function</span><span class="w">
+  </span><span class="n">t</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">hazelnutSuits</span><span class="p">(</span><span class="n">sub.frame</span><span class="p">)</span><span class="w">
+
+  </span><span class="c1"># Save results to raster</span><span class="w">
+  </span><span class="n">a.matrix</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">a.matrix</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrixStats</span><span class="o">::</span><span class="n">rowMaxs</span><span class="p">(</span><span class="n">t</span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">,</span><span class="w"> </span><span class="n">a.matrix</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+  </span><span class="c1"># Also save the single input variable assessment outputs</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">4</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">6</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">]</span><span class="w">
+  </span><span class="n">mlf.out</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">cov.Frame</span><span class="p">)),</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="m">1</span><span class="p">[,</span><span class="w"> </span><span class="m">10</span><span class="p">]</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf1</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf2</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf3</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf4</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">4</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf5</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">5</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf6</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">6</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf7</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf8</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">8</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf9</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">9</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">terra</span><span class="o">::</span><span class="n">writeValues</span><span class="p">(</span><span class="n">mlf10</span><span class="p">,</span><span class="w"> </span><span class="n">mlf.out</span><span class="p">[,</span><span class="w"> </span><span class="m">10</span><span class="p">],</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nrows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+  </span><span class="n">print</span><span class="p">((</span><span class="n">nrow</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w">
+  </span><span class="p">}</span><span class="w">  </span><span class="c1">#END OF LOOP</span><span class="w">
+
+</span><span class="c1"># complete writing rasters to file</span><span class="w">
+</span><span class="n">LSA.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf1</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf2</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf3</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf4</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf5</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf6</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf6</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf7</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf7</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf8</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf8</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf9</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf9</span><span class="p">)</span><span class="w">
+</span><span class="n">mlf10</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeStop</span><span class="p">(</span><span class="n">mlf10</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>As you may encounter, the above script can take quite a while to complete, but ultimately you should be able to produce a number of mapping products. The figure below shows the map of the overall suitability classification and the script to produce it is below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">names</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Hazelnut suitability"</span><span class="w">
+</span><span class="n">LSA.raster</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Well Suited"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Suited"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Moderately Suited"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Unsuited"</span><span class="p">))</span><span class="w">
+</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FFFF00"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1D0BE0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1CEB15"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#C91601"</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">LSA.raster</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">plg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bottomright"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+    <img src="/images/dsm_book/lsa2.png" alt="rconsole" />
+    <figcaption> Digital suitability assessment for hazelnuts across the Meander Valley, Tasmania (assuming all LSA input variables are error free).</figcaption>
+</figure>
+
+<p>Similarly the above plotting procedure can be repeated to look at single input variable limitations too.</p>
+
+<p>The approaches detailed in this chapter are described in greater detail in Malone et al. (2015) within the context of taking account of uncertainties within LSA. Taking account of the input variable uncertainties adds an additional level of complexity to what was achieved above, but is an important consideration nonetheless, as the resulting outputs can be assessed for reliability in an objective manner.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="references">References</h3>
+
+<p>Brevik, Eric C., and Alfred E. Hartemink. 2010. “Early Soil Knowledge
+and the Birth and Development of Soil Science.” <em>Catena</em> 83 (1): 23–33.
+https://doi.org/<a href="http://dx.doi.org/10.1016/j.catena.2010.06.011">http://dx.doi.org/10.1016/j.catena.2010.06.011</a>.</p>
+
+<p>Carre, F., Alex B. McBratney, Thomas Mayr, and Luca Montanarella. 2007.
+“Digital Soil Assessments: Beyond DSM.” <em>Geoderma</em> 142 (1-2): 69–79.
+https://doi.org/<a href="http://dx.doi.org/10.1016/j.geoderma.2007.08.015">http://dx.doi.org/10.1016/j.geoderma.2007.08.015</a>.</p>
+
+<p>Diepen, C. A. van, H. van Keulen, J. Wolf, and J. A. A. Berkhout. 1991.
+“Land Evaluation: From Intuition to Quantification.” In <em>Advances in
+Soil Science</em>, edited by B. A. Stewart, 15:139–204. Advances in Soil
+Science. Springer New York.
+<a href="https://doi.org/10.1007/978-1-4612-3030-4_4">https://doi.org/10.1007/978-1-4612-3030-4_4</a>.</p>
+
+<p>FAO. 1976. <em>A Framework for Land Evaluation. Soils Bulletin 32</em>. Rome:
+Food; Agriculture Organisation of the United Nations.</p>
+
+<p>Harms, B., D. Brough, S. Philip, R. Bartley, D. Clifford, M. Thomas, R.
+Willis, and L. Gregory. 2015. “Digital Soil Assessment for Regional
+Agricultural Land Evaluation.” <em>Global Food Security</em> 5: 25–36.
+https://doi.org/<a href="http://dx.doi.org/10.1016/j.gfs.2015.04.001">http://dx.doi.org/10.1016/j.gfs.2015.04.001</a>.</p>
+
+<p>Kidd, Darren B., M. A. Webb, C. J. Grose, R. M. Moreton, Brendan P.
+Malone, Alex B. McBratney, Budiman Minasny, Raphael Viscarra-Rossel, L.
+A. Sparrow, and R. Smith. 2012. “Digital Soil Assessment: Guiding
+Irrigation Expansion in Tasmania, Australia.” Edited by Budiman Minasny,
+Brendan P. Malone, and Alex B. McBratney. Boca Raton: CRC.</p>
+
+<p>Kidd, Darren, Mathew Webb, Brendan Malone, Budiman Minasny, and Alex
+McBratney. 2015. “Digital Soil Assessment of Agricultural Suitability,
+Versatility and Capital in Tasmania, Australia.” <em>Geoderma Regional</em> 6:
+7–21. https://doi.org/<a href="http://dx.doi.org/10.1016/j.geodrs.2015.08.005">http://dx.doi.org/10.1016/j.geodrs.2015.08.005</a>.</p>
+
+<p>Malone, Brendan P., Darren B. Kidd, Budiman Minasny, and Alex B.
+McBratney. 2015. “Taking Account of Uncertainties in Digital Land
+Suitability Assessment.” <em>PeerJ</em>, 3:e1366.</p>
+
+<p>McBratney, Alex B., Budiman Minasny, Ischani Wheeler, Brendan P. Malone,
+and David Van Der Linden. 2012. “Frameworks for Digital Soil
+Assessment.” Edited by Budiman Minasny, Brendan P. Malone, and Alex B.
+McBratney. London, UK: CRC Press.</p>
+
+<p>Mueller, Lothar, Uwe Schindler, Wilfried Mirschel, T.Graham Shepherd,
+BruceC. Ball, Katharina Helming, Jutta Rogasik, Frank Eulenstein, and
+Hubert Wiggering. 2010. “Assessing the Productivity Function of Soils. A
+Review.” <em>Agronomy for Sustainable Development</em> 30 (3): 601–14.
+<a href="https://doi.org/10.1051/agro/2009057">https://doi.org/10.1051/agro/2009057</a>.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-14">September 14, 2023</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsa/suitability/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsa/suitability/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsa/suitability/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2023 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2023, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>
