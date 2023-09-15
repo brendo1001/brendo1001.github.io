@@ -33,6 +33,13 @@
 # *   Using R for Digital Soil Mapping, Cham, Switzerland: Springer International Publishing. 
 # *   https://doi.org/10.1007/978-3-319-44327-0#
 #
+#     Kidd, Darren B., M. A. Webb, C. J. Grose, R. M. Moreton, 
+#     Brendan P. Malone, Alex B. McBratney, Budiman Minasny, 
+#     Raphael Viscarra-Rossel, L. A. Sparrow, and R. Smith. 
+#     2012. “Digital Soil Assessment: Guiding Irrigation Expansion in 
+#     Tasmania, Australia.” Edited by Budiman Minasny, 
+#     Brendan P. Malone, and Alex B. McBratney. Boca Raton: CRC.
+#
 # *  The Data is provided "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    
 # *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
 # *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL    

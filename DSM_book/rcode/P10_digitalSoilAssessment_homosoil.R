@@ -1,4 +1,53 @@
-## Digital soil assessment: Homosoil
+
+# ******************************************************************************
+# *                                                                            
+# *                           [igital soil assessment: Homosoil]                                
+# *                                                                            
+# *  Description:                                                              
+##    
+#
+# * 
+# *       
+# *       
+# *       
+# *                                                                            
+# *  Created By:                                                               
+# *  Budiman Minansy; Brendan Malone                                                
+# *                                                                            
+# *  Last Modified:                                                            
+# *  2023-09-15             
+# *                                                                            
+# *  License:   
+# *     Data Usage License (Data-UL)                                             
+# *                                                                            
+# *   Permission is hereby granted, free of charge, to any person obtaining a    
+# *   copy of this data and associated code files (the "Data"), to use the Data  
+# *   for any lawful purpose, including but not limited to analysis, research,   
+# *   and reporting, without modification of the original Data or sharing any   
+# *   modified versions of the Data.      
+#
+# *   Users of the Data must provide proper attribution to the original source   
+# *   of the Data in any publication, research, or derivative works by including 
+# *   the following attribution:  
+# *
+# *   1. Malone, B. P., Minasny, B. & McBratney, A. B. (2017). 
+# *   Using R for Digital Soil Mapping, Cham, Switzerland: Springer International Publishing. 
+# *   https://doi.org/10.1007/978-3-319-44327-0#
+# *   
+# *   2. Mallavan, B P, B Minansy, and A B. McBratney. 2010. 
+# *   “Digital Soil Mapping: Bridging Reseach, Environmental 
+# *   Application, and Operation.” In, edited by J L Boettinger,
+# *   D W Howell, A C Moore, and S. Hartemink A E Kienast-Brown, 
+# *   137–49. New York: Springer.
+# *
+# *  The Data is provided "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    
+# *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+# *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL    
+# *  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR      
+# *  OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,      
+# *  ARISING FROM, OUT OF OR IN CONNECTION WITH THE DATA OR THE USE OR OTHER   
+# *  DEALINGS IN THE DATA                                                                       
+# ******************************************************************************
 
 
 ## HOMOSOIL FUNCTION
@@ -81,7 +130,7 @@ world.grid$homologue[lithtop.match]<- 3
 world.grid$homotop[lithtop.match]<- 1  
 #plot(rast(x = world.grid[,c(1,2,4)], type = "xyz"))
 
-#homologue raster object
+# homologue raster object
 r1<- terra::rast(x = world.grid[,c(1,2,4)], type = "xyz")
 r1 <- as.factor(r1)
 rat <- levels(r1)[[1]]
@@ -101,9 +150,9 @@ library(ithir);library(terra)
 data(homosoil_globeDat)
 
 
-## SITE LOCATION (Jakarta, Indonesia)
-recipient.lat=-(6+10/60)
-recipient.lon=106+ 49/60
+## SITE LOCATION (Canberra, Australia)
+recipient.lat=-35.2809
+recipient.lon= 149.1300
 
 
 ## RUN FUNCTION
@@ -113,10 +162,14 @@ result<- homosoil(grid_data = homosoil_globeDat, recipient.lon = recipient.lon, 
 map.out<- result[[1]]
 crs(map.out) <- "+init=epsg:4326"
 # plot
+levels(map.out) = data.frame(value = 0:3, desc = c("no homologue", "homocline", "homolith", "homotop"))
+
+area_colors <- c("#f4f4f4", "#969895", "#1CEB15", "#C91601")
+terra::plot(map.out, col = area_colors,
+            plg=list(legend=c("no homologue", "homocline", "homolith", "homotop"), x="bottomleft", cex=0.8))
+
+# plot point
 pt1 = sf::st_point(c(recipient.lon,recipient.lat))
-as(st_geometry(pt1), Class="Spatial")
-area_colors <- c("#EFEFEF", "#666666", "#FFDAD4", "#FF0000")
-t1<- rasterVis::levelplot(map.out, col.regions = area_colors, xlab = "", ylab = "" ) 
-t1 
+plot(pt1, add = T, col = "#040404", pch = 16, cex = 0.8)
 
 ## END
