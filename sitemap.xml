@@ -787,6 +787,9 @@
 <loc>/muddles/dsm_book/RNW_files/P7_uncerts_partition</loc>
 </url>
 <url>
+<loc>/muddles/dsm_book/P9_soilHorizons</loc>
+</url>
+<url>
 <loc>/posts/</loc>
 </url>
 <url>
@@ -931,9 +934,6 @@
 <loc>/DSM_book/pages/introduction/</loc>
 </url>
 <url>
-<loc>/DSM_book/pages/dsa/homosoil/</loc>
-</url>
-<url>
 <loc>/DSM_book/pages/dsa/suitability/</loc>
 </url>
 <url>
@@ -971,6 +971,15 @@
 </url>
 <url>
 <loc>/DSM_book/pages/dsm_prep/</loc>
+</url>
+<url>
+<loc>/DSM_book/pages/dsm_bespoke/homosoil/</loc>
+</url>
+<url>
+<loc>/DSM_book/pages/dsm_bespoke/two_step_dsm/</loc>
+</url>
+<url>
+<loc>/DSM_book/pages/dsm_bespoke/</loc>
 </url>
 <url>
 <loc>/DSM_book/pages/dsm_cont/cv/</loc>

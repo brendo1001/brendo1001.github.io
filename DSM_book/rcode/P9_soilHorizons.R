@@ -3,109 +3,119 @@
 
 #library
 library(ithir)
-library(sp);library(raster);library(aqp)
+library(sf);library(terra);library(aqp)
+library(nnet);library(MASS);library(quantregForest)
 
 #data (download from wesite)
-load("HV_horizons.rda")
+load("/home/brendo1001/mystuff/devs/site_source/DSM_book/data/twoStep/HV_horizons.rda")
+dat$A1<- as.factor(dat$A1)
+summary(dat$A1)
 str(dat)
-#convert data to spatial object
-coordinates(dat)<- ~ e + n
+dat$A1[dat$A1d <= 15] <- 0
+
+
+#convert point to spatial object
+dat<- sf::st_as_sf(x = dat,coords = c("e", "n"))
 
 #covariates
-data(hunterCovariates)
-names(hunterCovariates)
-#resolution
-res(hunterCovariates)
-#raster properties
-dim(hunterCovariates)
+# grids (covariate rasters from ithir package)
+hv.rasters <- list.files(path = system.file("extdata/", package = "ithir"), pattern = "hunterCovariates_A", full.names = T)
+hv.rasters
+
+# read them into R as SpatRaster objects
+hv.rasters <- terra::rast(hv.rasters)
+## raster properties
+hv.rasters
+plot(hv.rasters)
+names(hv.rasters)
 
 ## Overlay points onto raster
-plot(hunterCovariates[["AACN"]])
+plot(hv.rasters[[2]])
 points(dat,pch=20)
 
 #Covariate extract for points
-ext<- extract(hunterCovariates, dat, df=T, method="simple")
-w.dat<- cbind(as.data.frame(dat), ext)
+ext<- terra::extract(x = hv.rasters, y = dat, bind = T, method = "simple")
+dsm.dat<- as.data.frame(ext)
 
 #remove sites with missing covariates
-x.dat<- w.dat[complete.cases(w.dat[,27:31]),]
+names(dsm.dat)
+dsm.dat<- dsm.dat[complete.cases(dsm.dat[,24:31]),]
 
 ## Set target variable and subset data for validation
 #A1 Horizon
-x.dat$A1<- as.factor(x.dat$A1)
+dsm.dat$A1<- as.factor(dsm.dat$A1)
 #random subset
 set.seed(123)
-training <- sample( nrow(x.dat), 0.75 *nrow(x.dat)) 
+training <- sample( nrow(dsm.dat), 0.75 *nrow(dsm.dat)) 
 #calibration dataset
-dat.C<- x.dat[training,] 
+dsm.cal<- dsm.dat[training,] 
 #validation dataset
-dat.V<- x.dat[-training,] 
+dsm.val<- dsm.dat[-training,] 
 
 ## Presence/absence model
-library(nnet)
-library(MASS)
- # A1 presence or absence model
-mn1<- multinom(formula = A1 ~ AACN + Drainage.Index + Light.Insolation + TWI + Gamma.Total.Count,
-                data = dat.C)
+# A1 presence or absence model
+mn1<- multinom(formula = A1 ~ hunterCovariates_A_AACN + hunterCovariates_A_elevation + hunterCovariates_A_Hillshading +   
+               hunterCovariates_A_light_insolation + hunterCovariates_A_MRVBF +          
+               hunterCovariates_A_Slope + hunterCovariates_A_TRI + hunterCovariates_A_TWI ,
+                data = dsm.cal)
 #stepwise variable selection
 mn2<- stepAIC(mn1,direction="both", trace=FALSE)
 summary(mn2)
 
 ## Goodness of fit
 #calibration
-mod.pred<-predict(mn2, newdata = dat.C,type="class")
-goofcat(observed = dat.C$A1,predicted = mod.pred)
+mod.pred<-predict(mn2, newdata = dsm.cal,type="class")
+goofcat(observed = dsm.cal$A1,predicted = mod.pred)
 
 #validation
-val.pred<-predict(mn2, newdata = dat.V,type="class")
-goofcat(observed = dat.V$A1,predicted = val.pred)
+val.pred<-predict(mn2, newdata = dsm.val,type="class")
+goofcat(observed = dsm.val$A1,predicted = val.pred)
 
 ## Model of horizon depth
 #Remove missing values
 #calibration
-mod.dat <- dat.C[!is.na(dat.C$A1d),]  
+mod.dat <- dsm.cal[!is.na(dsm.cal$A1d),]  
 
 #validation
-val.dat <- dat.V[!is.na(dat.V$A1d),] 
+val.dat <- dsm.val[!is.na(dsm.val$A1d),] 
 
 #Fit quantile regression forest
-library(quantregForest)
-qrf <- quantregForest(x=mod.dat[,27:31], y=mod.dat$A1d, importance=TRUE)
+qrf <- quantregForest(x=mod.dat[,24:31], y=mod.dat$A1d, importance=TRUE)
 
 ## Goodness of fit
 ## Calibration
-quant.cal  <- predict(qrf, newdata= mod.dat[,27:31], all=T)
-goof(observed = mod.dat$A1d, predicted = quant.cal[,2])
+quant.cal  <- predict(qrf, newdata= mod.dat[,24:31], all=T)
+goof(observed = mod.dat$A1d, predicted = quant.cal[,2], plot.it = T)
 
 #Validation
-quant.val  <- predict(qrf, newdata= val.dat[,27:31], all=T)
-goof(observed = val.dat$A1d, predicted = quant.val[,2])
+quant.val  <- predict(qrf, newdata= val.dat[,24:31], all=T)
+goof(observed = val.dat$A1d, predicted = quant.val[,2], plot.it = T)
 
 #PICP
 sum(quant.val[,1]<=val.dat$A1d & quant.val[,2]>=val.dat$A1d)/nrow(val.dat)
 
 
 ## Plotting
-vv.dat<- read.table(file="validation_outs.txt", sep = ",",header = T)
-dat.V<- read.table(file="validation_obs.txt", sep = ",",header= T)
+pred.profs<- read.table(file="/home/brendo1001/mystuff/devs/site_source/DSM_book/data/twoStep/validation_outs.txt", sep = ",",header = T)
+obs.profs<- read.table(file="/home/brendo1001/mystuff/devs/site_source/DSM_book/data/twoStep/validation_obs.txt", sep = ",",header= T)
 
 
 #Validation data horizon observations (1st 3 rows)
-dat.V[1:3,c(1,4:14)]
+obs.profs[1:3,c(1,4:14)]
 
 #Associated model predictions (1st 3 rows)
-vv.dat[1:3,1:12]
+pred.profs[1:3,1:12]
 
 #matched soil profiles
-sum(dat.V$A1==vv.dat$a1 & dat.V$A2==vv.dat$a2 & dat.V$AP==vv.dat$ap & dat.V$B1==vv.dat$b1 &
-  dat.V$B21==vv.dat$b21 & dat.V$B22==vv.dat$b22 & dat.V$B23==vv.dat$b23 & dat.V$B24==vv.dat$b24 &
-  dat.V$B3==vv.dat$b3 & dat.V$BC==vv.dat$bc & dat.V$C==vv.dat$c)/nrow(dat.V)
+sum(obs.profs$A1==pred.profs$a1 & obs.profs$A2==pred.profs$a2 & obs.profs$AP==pred.profs$ap & obs.profs$B1==pred.profs$b1 &
+  obs.profs$B21==pred.profs$b21 & obs.profs$B22==pred.profs$b22 & obs.profs$B23==pred.profs$b23 & obs.profs$B24==pred.profs$b24 &
+  obs.profs$B3==pred.profs$b3 & obs.profs$BC==pred.profs$bc & obs.profs$C==pred.profs$c)/nrow(obs.profs)
 
 #Subset of matching data (observations)
-match.dat<- dat.V[which(dat.V$A1==vv.dat$a1 & dat.V$A2==vv.dat$a2 & dat.V$AP==vv.dat$ap & dat.V$B1==vv.dat$b1 & dat.V$B21==vv.dat$b21 & dat.V$B22==vv.dat$b22 & dat.V$B23==vv.dat$b23 & dat.V$B24==vv.dat$b24 & dat.V$B3==vv.dat$b3 & dat.V$BC==vv.dat$bc & dat.V$C==vv.dat$c),]
+match.dat<- obs.profs[which(obs.profs$A1==pred.profs$a1 & obs.profs$A2==pred.profs$a2 & obs.profs$AP==pred.profs$ap & obs.profs$B1==pred.profs$b1 & obs.profs$B21==pred.profs$b21 & obs.profs$B22==pred.profs$b22 & obs.profs$B23==pred.profs$b23 & obs.profs$B24==pred.profs$b24 & obs.profs$B3==pred.profs$b3 & obs.profs$BC==pred.profs$bc & obs.profs$C==pred.profs$c),]
 
 #Subset of matching data (predictions)
-match.dat.P<- vv.dat[which(dat.V$A1==vv.dat$a1 & dat.V$A2==vv.dat$a2 & dat.V$AP==vv.dat$ap & dat.V$B1==vv.dat$b1 & dat.V$B21==vv.dat$b21 & dat.V$B22==vv.dat$b22 & dat.V$B23==vv.dat$b23 & dat.V$B24==vv.dat$b24 & dat.V$B3==vv.dat$b3 & dat.V$BC==vv.dat$bc & dat.V$C==vv.dat$c),]
+match.dat.P<- pred.profs[which(obs.profs$A1==pred.profs$a1 & obs.profs$A2==pred.profs$a2 & obs.profs$AP==pred.profs$ap & obs.profs$B1==pred.profs$b1 & obs.profs$B21==pred.profs$b21 & obs.profs$B22==pred.profs$b22 & obs.profs$B23==pred.profs$b23 & obs.profs$B24==pred.profs$b24 & obs.profs$B3==pred.profs$b3 & obs.profs$BC==pred.profs$bc & obs.profs$C==pred.profs$c),]
 
 match.dat[49,] #observation
 match.dat.P[49,] #prediction
@@ -151,20 +161,34 @@ title('Selected soil with AP horizon', cex.main=0.75)
 
 
 ## MAPPING
-## #Apply A1 horizon presence/absence model spatially
-## #Using the raster multi-core facility
-beginCluster(4)
-A1.class<-clusterR(hunterCovariates, predict, args=list(mn2, type="class"),filename="class_A1.tif",format="GTiff",progress="text",overwrite=T)
+## Apply A1 horizon presence/absence model spatially
+A1.class<-terra::predict(object = hv.rasters, model = mn2)
+A1.class
+plot(A1.class, main = "A1-horizon occurence")
 
 #Apply A1 horizon depth model spatially
-#Using the raster multi-core facility
-A1.depth<-clusterR(hunterCovariates, predict, args=list(qrf, index=2),filename="depth_A1.tif",format="GTiff",progress="text",overwrite=T)
-endCluster()
+# get covariates into a table
+tempD <- data.frame(cellNos = seq(1:terra::ncell(hv.rasters)))
+vals <- as.data.frame(terra::values(hv.rasters))
+tempD <- cbind(tempD, vals)
+tempD <- tempD[complete.cases(tempD), ]
+cellNos <- c(tempD$cellNos)
+gXY <- data.frame(terra::xyFromCell(hv.rasters, cellNos))
+tempD <- cbind(gXY, tempD)
+str(tempD)
+
+# extend model to covariates
+A1.depth<-predict(newdata= tempD, object = qrf)
+# append coordinates
+A1.depth.map<- cbind(data.frame(tempD[, c("x", "y")]), A1.depth)
+# create raster
+A1.depth.map <- terra::rast(x = A1.depth.map[,c(1,2,4)], type = "xyz")
+plot(A1.depth.map, main = "A1-horizon thickness (unmasked)")
 
 #Mask out areas where horizon is absent
-A1.class[A1.class == 0] <- NA
-mr <- mask(A1.depth, A1.class)
-writeRaster(mr,filename = "depth_A1_mask.tif",format="GTiff",overwrite=T)
-
+msk <- terra::ifel(A1.class != 1, NA, 1)
+plot(msk)
+A1.depth.masked <- terra::mask(A1.depth.map, msk, inverse =T)
+plot(A1.depth.masked, main = "A1-horizon thickness (masked)")
 ##END
 

@@ -1,0 +1,945 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Digital Soil Mapping &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="The two-step dance approach">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Digital Soil Mapping">
+<meta name="twitter:description" content="The two-step dance approach">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Digital Soil Mapping">
+<meta property="og:description" content="The two-step dance approach">
+<meta property="og:url" content="/DSM_book/pages/dsm_bespoke/two_step_dsm/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_bespoke/two_step_dsm/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Digital Soil Mapping</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">The two-step dance approach</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Digital Soil Mapping</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~33 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P9_soilHorizons.R">Get the code used for this section here</a></p>
+
+<h3 id="example-of-two-step-digital-soil-mapping">Example of two-step digital soil mapping</h3>
+
+<ul>
+  <li><a href="#s-1">Pre-reading background</a></li>
+  <li><a href="#s-2">Data preparation</a></li>
+  <li><a href="#s-3">Two-stage model fitting and evaluation</a></li>
+  <li><a href="#s-4">Model for predicting horizon occurence</a></li>
+  <li><a href="#s-5">Soil profile reconstructions</a></li>
+  <li><a href="#s-6">Spatial extension of the two-stage soil horizon occurrence and depth model</a></li>
+</ul>
+
+<h3 id="pre-reading-background-">Pre-reading background <a id="s-1"></a></h3>
+
+<p>The motivation for this section is to gain some insights into a digital
+soil mapping approach that uses a combination of both continuous and
+categorical attribute modeling. Subsequently, we will build on the
+efforts of the training materials that dealt with each of these type of
+modeling approaches separately.</p>
+
+<p>There are some situations where, a combinatorial modeling approach might
+be suitable in a digital soil mapping work flow. An example of such a
+workflow is in Malone et al. (2015) in regards to the prediction of soil
+thickness. The context behind that approach was that often lithic
+contact was not achieved during the soil survey activities, effectively
+indicating soil depth was greater than the soil probing depth (which was
+1.5 m). Where lithic contact was found, the resulting depth was
+recorded. The difficulty in using this data in the raw form was that
+there were many sites where soil depth was greater than 1.5 m together
+with actual recorded soil depth measurements. The nature of this type of
+data is likened to a zero-inflated distribution, where many zero
+observations are recorded among actual measurements (Sileshi 2008).</p>
+
+<p>In Malone et al. (2015) the zero observations were attributed to soil
+depth being greater than 1.5m. They therefore performed the modeling in
+two stages. First modeling involved a categorical or binomial model of
+soil depth being greater than 1.5 m or not. This was followed by
+continuous attribute modeling of soil depth using the observations where
+lithic contact was recorded. While the approach was a reasonable
+solution, it may be the case that the frequency of recorded measurements
+is low, meaning that the spatial modeling of the continuous attribute is
+made under considerable uncertainty, as was the case in Malone et al.
+(2015) with soil depth and other environmental variables spatially
+modeled in that study; for example, the frequency of winter frosts.</p>
+
+<p>Another interesting example of a combinatorial DSM work flow was
+described in Gastaldi et al. (2012) for the mapping of
+occurrence and thickness of soil horizons. There they used a multinomial
+logistic model to predict the presence or absence of the given soil
+horizon class, followed by continuous attribute modeling of the horizon
+depths. For the purposes a demonstrating the work flow of this
+combinatorial or two-stage DSM, we will re-visit the approach that is
+described by Gastaldi et al. (2012) and work through
+the various steps needed to perform it within <code class="highlighter-rouge">R</code>.</p>
+
+<p>The data we will use comes from 1342 soil profile and core descriptions
+from the Lower Hunter Valley, NSW Australia. These data have been
+collected on an annual basis since 2001 to present. These data are
+distributed across the 220km<sup>2</sup> area as shown in Figure
+below. The intention is to use these data first to predict the
+occurrence of given soil horizon classes (following the nomenclature of
+the Australian Soil Classification (Isbell 2002). Specifically we want
+to prediction the spatial distribution of the occurrence of A1, A2, AP,
+B1, B21, B22, B23, B24, BC, and C horizons, and then where those
+horizons occur, predict their depth.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="data-preparation-">Data preparation <a id="s-2"></a></h3>
+
+<p>First lets perform some data discovery both in terms of the soil profile
+data and spatial covariates to be used as predictor variables and to
+inform the spatial mapping.</p>
+
+<p><a href="/DSM_book/data/twoStep/HV_horizons.rda">The point data used for this exercise can be downloaded from here</a>
+and then loaded into the <code class="highlighter-rouge">R</code> environment as below.</p>
+
+<p>You will notice the soil profile data <code class="highlighter-rouge">dat</code>is arranged in a flat file
+where each row is a soil profile. There are many columns of information
+which include profile identifier and spatial coordinates. Then there are
+11 further columns that are binary indicators of whether a horizon class
+is present or not (indicated as <code class="highlighter-rouge">1</code> and <code class="highlighter-rouge">0</code> respectively). The following
+11 columns after the binary columns indicate the horizon depth for the
+given horizon class.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load libraries that are used in this exercise</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">aqp</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">nnet</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">quantregForest</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># data</span><span class="w">
+</span><span class="n">load</span><span class="p">(</span><span class="s2">"HV_horizons.rda"</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## 'data.frame':    1342 obs. of  25 variables:</span><span class="w">
+</span><span class="c1">##  $ FID : Factor w/ 1342 levels "1","10","100",..: 1 2 3 4 5 6 7 8 9 10 ...</span><span class="w">
+</span><span class="c1">##  $ e   : num  338014 338183 341609 341352 339736 ...</span><span class="w">
+</span><span class="c1">##  $ n   : num  6370646 6370550 6370437 6370447 6370439 ...</span><span class="w">
+</span><span class="c1">##  $ A1  : int  1 0 1 1 1 1 1 0 1 1 ...</span><span class="w">
+</span><span class="c1">##  $ A2  : int  1 0 0 0 0 1 1 0 0 0 ...</span><span class="w">
+</span><span class="c1">##  $ AP  : int  0 1 0 0 0 0 0 1 0 0 ...</span><span class="w">
+</span><span class="c1">##  $ B1  : int  0 0 1 1 1 0 0 0 1 0 ...</span><span class="w">
+</span><span class="c1">##  $ B21 : int  1 1 1 1 1 1 1 1 1 1 ...</span><span class="w">
+</span><span class="c1">##  $ B22 : int  1 0 1 0 1 1 1 1 1 1 ...</span><span class="w">
+</span><span class="c1">##  $ B23 : int  0 0 0 0 0 0 0 0 0 0 ...</span><span class="w">
+</span><span class="c1">##  $ B24 : int  0 0 0 0 0 0 0 0 0 0 ...</span><span class="w">
+</span><span class="c1">##  $ B3  : int  0 0 0 0 0 0 0 0 0 0 ...</span><span class="w">
+</span><span class="c1">##  $ BC  : int  0 0 0 0 0 0 0 0 1 1 ...</span><span class="w">
+</span><span class="c1">##  $ C   : int  0 0 0 0 0 0 0 0 0 0 ...</span><span class="w">
+</span><span class="c1">##  $ A1d : num  21 NA 17 45 20 25 13 NA 10 44 ...</span><span class="w">
+</span><span class="c1">##  $ A2d : num  27 NA NA NA NA 15 13 NA NA NA ...</span><span class="w">
+</span><span class="c1">##  $ APd : num  NA 40 NA NA NA NA NA 35 NA NA ...</span><span class="w">
+</span><span class="c1">##  $ B1d : num  NA NA 25 25 30 NA NA NA 30 NA ...</span><span class="w">
+</span><span class="c1">##  $ B21d: num  26 60 26 30 30 25 58 40 20 38 ...</span><span class="w">
+</span><span class="c1">##  $ B22d: num  26 NA 32 NA 20 20 16 25 25 18 ...</span><span class="w">
+</span><span class="c1">##  $ B23d: int  NA NA NA NA NA NA NA NA NA NA ...</span><span class="w">
+</span><span class="c1">##  $ B24d: int  NA NA NA NA NA NA NA NA NA NA ...</span><span class="w">
+</span><span class="c1">##  $ B3d : int  NA NA NA NA NA NA NA NA NA NA ...</span><span class="w">
+</span><span class="c1">##  $ BCd : int  NA NA NA NA NA NA NA NA 15 NA ...</span><span class="w">
+</span><span class="c1">##  $ Cd  : int  NA NA NA NA NA NA NA NA NA NA ...</span><span class="w">
+
+</span><span class="c1"># Change cases of very thin A1 horizons to having no A1 horizon needed for</span><span class="w">
+</span><span class="c1"># purposes of demonstrating workflow rather than advancing scientific inquiry</span><span class="w">
+</span><span class="n">dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="p">[</span><span class="n">dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">15</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+
+</span><span class="c1"># convert point to spatial object</span><span class="w">
+</span><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dat</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"e"</span><span class="p">,</span><span class="w"> </span><span class="s2">"n"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>At our disposal are several covariates that have been derived entirely
+from a digital elevation model. These data are available from the
+<code class="highlighter-rouge">ithir</code> package and can be loaded as below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># grids (covariate rasters from ithir package)</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hunterCovariates_A"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)</span><span class="w">
+</span><span class="c1">## raster properties</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w">
+
+</span><span class="c1">## class       : SpatRaster </span><span class="w">
+</span><span class="c1">## dimensions  : 860, 675, 8  (nrow, ncol, nlyr)</span><span class="w">
+</span><span class="c1">## resolution  : 25, 25  (x, y)</span><span class="w">
+</span><span class="c1">## extent      : 334497.3, 351372.3, 6362628, 6384128  (xmin, xmax, ymin, ymax)</span><span class="w">
+</span><span class="c1">## coord. ref. :  </span><span class="w">
+</span><span class="c1">## sources     : hunterCovariates_A_AACN.tif  </span><span class="w">
+</span><span class="c1">##               hunterCovariates_A_elevation.tif  </span><span class="w">
+</span><span class="c1">##               hunterCovariates_A_Hillshading.tif  </span><span class="w">
+</span><span class="c1">##               ... and 5 more source(s)</span><span class="w">
+</span><span class="c1">## names       : hunte~_AACN, hunte~ation, hunte~ading, hunte~ation, hunte~MRVBF, hunte~Slope, ... </span><span class="w">
+</span><span class="c1">## min values  :      0.0000,     27.3035,      0.0000,    988.5308,    0.000000,     0.00100, ... </span><span class="w">
+</span><span class="c1">## max values  :    211.1496,    322.1442,     62.6977,   1969.7966,    6.975086,    36.21008, ...</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For a quick check, lets overlay the soil profile points onto the DEM.
+You will notice on the Figure below the area of concentrated soil survey
+(which represents locations of annual survey) within the extent of a
+regional scale soil survey across the whole study area.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Overlay points onto raster</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">[[</span><span class="m">2</span><span class="p">]])</span><span class="w">
+</span><span class="n">points</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+<img src="/images/dsm_book/twostage1.png" alt="rconsole" />
+<figcaption>
+Hunter Valley soil profiles locations overlaying digital elevation
+model.
+</figcaption>
+</figure>
+
+<p>The last preparatory step we need to take is the covariate intersection
+of the soil profile data, and remove any sites that are outside the
+mapping extent or simply do not have the full complement of covariate
+data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Covariate extract for points</span><span class="w">
+</span><span class="n">ext</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dat</span><span class="p">,</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span><span class="n">dsm.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># remove sites with missing covariates</span><span class="w">
+</span><span class="n">dsm.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dsm.dat</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">dsm.dat</span><span class="p">[,</span><span class="w"> </span><span class="m">24</span><span class="o">:</span><span class="m">31</span><span class="p">]),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="two-stage-model-fitting-and-evaluation-">Two-stage model fitting and evaluation <a id="s-3"></a></h3>
+
+<p>The two-stage modeling work flow for the A1 horizon modelling is stepped
+through below. This process would be repeated for the other horizon
+occurrences and their thicknesses. Some model evaluations and model
+outcomes will be provided below to advance the general discussion and
+assess how outputs might be combined to look at full soil profiles and
+their horizon compositions. Moreover, the applicability the estimated
+soil profile compositions can also be compared against their observed
+counterparts for the purposes of evaluation.</p>
+
+<p>First we want to subset 75% of the data for calibrating models, and
+keeping the rest aside for out-of-bag model evaluation.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Set target variable and subset data for validation A1 Horizon</span><span class="w">
+</span><span class="n">dsm.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">dsm.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">dsm.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##   0   1 </span><span class="w">
+</span><span class="c1">## 712 619</span><span class="w">
+
+</span><span class="c1"># random subset</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w">
+</span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">dsm.dat</span><span class="p">),</span><span class="w"> </span><span class="m">0.75</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">dsm.dat</span><span class="p">))</span><span class="w">
+</span><span class="c1"># calibration dataset</span><span class="w">
+</span><span class="n">dsm.cal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dsm.dat</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="c1"># out-of-bag model evaluation data</span><span class="w">
+</span><span class="n">dsm.val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dsm.dat</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-for-predicting-horizon-occurence-">Model for predicting horizon occurence <a id="s-4"></a></h3>
+
+<p>We first want to model the presence/absence in this case of the A1
+horizon. We will use a multinomial model, followed up with a stepwise
+regression procedure in order to remove potentially redundant predictor
+variables.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A1 presence or absence model</span><span class="w">
+</span><span class="n">mn1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nnet</span><span class="o">::</span><span class="n">multinom</span><span class="p">(</span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="m">1</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">hunterCovariates_A_AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_light_insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Slope</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TRI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TWI</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dsm.cal</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># stepwise variable selection</span><span class="w">
+</span><span class="n">mn2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stepAIC</span><span class="p">(</span><span class="n">mn1</span><span class="p">,</span><span class="w"> </span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"both"</span><span class="p">,</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+
+</span><span class="n">summary</span><span class="p">(</span><span class="n">mn2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## Call:</span><span class="w">
+</span><span class="c1">## nnet::multinom(formula = A1 ~ hunterCovariates_A_elevation + </span><span class="w">
+</span><span class="c1">##     hunterCovariates_A_MRVBF, data = dsm.cal)</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Coefficients:</span><span class="w">
+</span><span class="c1">##                                    Values   Std. Err.</span><span class="w">
+</span><span class="c1">## (Intercept)                  -0.880315066 0.308536659</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_elevation  0.004513106 0.002350626</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_MRVBF      0.175753835 0.054693734</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Residual Deviance: 1366.553 </span><span class="w">
+</span><span class="c1">## AIC: 1372.553</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We use the <code class="highlighter-rouge">goofcat</code> function from <code class="highlighter-rouge">ithir</code> to evaluate the model quality
+both in terms of the calibration and out-of-bag data.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## model Goodness of fit calibration</span><span class="w">
+</span><span class="n">mod.pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">mn2</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dsm.cal</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">)</span><span class="w">
+</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dsm.cal</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.pred</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## $confusion_matrix</span><span class="w">
+</span><span class="c1">##     0   1</span><span class="w">
+</span><span class="c1">## 0 441 347</span><span class="w">
+</span><span class="c1">## 1  98 112</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $overall_accuracy</span><span class="w">
+</span><span class="c1">## [1] 56</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $producers_accuracy</span><span class="w">
+</span><span class="c1">##  0  1 </span><span class="w">
+</span><span class="c1">## 82 25 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $users_accuracy</span><span class="w">
+</span><span class="c1">##  0  1 </span><span class="w">
+</span><span class="c1">## 56 54 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $kappa</span><span class="w">
+</span><span class="c1">## [1] 0.06479926</span><span class="w">
+
+</span><span class="c1"># validation</span><span class="w">
+</span><span class="n">val.pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">mn2</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dsm.val</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">)</span><span class="w">
+</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dsm.val</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val.pred</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## $confusion_matrix</span><span class="w">
+</span><span class="c1">##     0   1</span><span class="w">
+</span><span class="c1">## 0 143 117</span><span class="w">
+</span><span class="c1">## 1  30  43</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $overall_accuracy</span><span class="w">
+</span><span class="c1">## [1] 56</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $producers_accuracy</span><span class="w">
+</span><span class="c1">##  0  1 </span><span class="w">
+</span><span class="c1">## 83 27 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $users_accuracy</span><span class="w">
+</span><span class="c1">##  0  1 </span><span class="w">
+</span><span class="c1">## 56 59 </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## $kappa</span><span class="w">
+</span><span class="c1">## [1] 0.097328</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is clear that the <code class="highlighter-rouge">mn2</code> model appears to be moderately effective to
+distinguish sites where the A1 horizon is absent with the given data and
+predictive covariates.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="model-for-predicting-horizon-thickness-">Model for predicting horizon thickness <a id="s-5"></a></h3>
+
+<p>What we want to do now is to model the A1 horizon depth.</p>
+
+<p>We will be using an alternative model to those that have been examined
+in this book so far. The is a quantile regression forest, which is a
+generalized implementation of the random forest model from Breiman
+(2001).</p>
+
+<p>The algorithm is available via the <code class="highlighter-rouge">quantregForest</code> package, and further
+details about the model can be found at Meinshausen (2006). The <code class="highlighter-rouge">caret</code>
+package also interfaces with this model too.</p>
+
+<p>Fundamentally, random forests are integral to the quantile regression
+algorithm. However, the useful feature and advancement from normal
+random forests is the ability to infer the full conditional distribution
+of a response variable. This facility is useful for building
+non-parametric prediction intervals for any given level of confidence
+information and also the ability to detect outliers in the data easily.</p>
+
+<p>Quantile regression used via the <code class="highlighter-rouge">quanregForest</code> algorithm is
+implemented in the chapter simply to demonstrate the wide availability
+of prediction models and machine learning methods that can be used in
+digital soil mapping.</p>
+
+<p>Getting the model initiated we first need to perform some preparatory
+tasks. Namely the removal of missing data from the available data set
+i.e those cases where no A1 horizon exists as the horizon thickness data
+is currently give the value <code class="highlighter-rouge">NA</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Remove missing values calibration</span><span class="w">
+</span><span class="n">mod.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dsm.cal</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dsm.cal</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># out of bag cases</span><span class="w">
+</span><span class="n">val.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">dsm.val</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dsm.val</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It is useful to check the inputs required for the quantile regression
+forests (using the help file); however its parameterization is largely
+similar to other models that have been used already in this book,
+particularly those for the random forest models.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Fit quantile regression forest model</span><span class="w">
+</span><span class="n">qrf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">quantregForest</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.dat</span><span class="p">[,</span><span class="w"> </span><span class="m">24</span><span class="o">:</span><span class="m">31</span><span class="p">],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">importance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">qrf</span><span class="w">
+
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##  Call:</span><span class="w">
+</span><span class="c1">##  quantregForest(x = mod.dat[, 24:31], y = mod.dat$A1d, importance = TRUE) </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##                      Number of trees: 500</span><span class="w">
+</span><span class="c1">## No. of variables tried at each split: 2</span><span class="w">
+
+</span><span class="c1"># variable importances</span><span class="w">
+</span><span class="n">importance</span><span class="p">(</span><span class="n">qrf</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##                                       %IncMSE IncNodePurity</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_AACN              6.626844      12234.84</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_elevation        14.208151      12891.47</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_Hillshading      15.045393      10780.55</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_light_insolation  8.411560      12251.45</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_MRVBF            16.520712      13731.85</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_Slope            13.848516      10840.27</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_TRI              17.047087      11984.96</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_TWI               7.802111      11952.38</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Naturally, the best test of the model is to evaluate it against
+out-of-bag cases. In addition to our normal validation procedure we can
+also derive the PICP for the validation data too.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## model Goodness of fit Calibration</span><span class="w">
+</span><span class="n">quant.cal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">qrf</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.dat</span><span class="p">[,</span><span class="w"> </span><span class="m">24</span><span class="o">:</span><span class="m">31</span><span class="p">],</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quant.cal</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">plot.it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##          R2 concordance      MSE     RMSE       bias</span><span class="w">
+</span><span class="c1">## 1 0.8969432   0.9040645 18.42857 4.292851 -0.7730415</span><span class="w">
+
+</span><span class="c1"># out of bag cases</span><span class="w">
+</span><span class="n">quant.val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">qrf</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val.dat</span><span class="p">[,</span><span class="w"> </span><span class="m">24</span><span class="o">:</span><span class="m">31</span><span class="p">],</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quant.val</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">plot.it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##           R2 concordance     MSE     RMSE      bias</span><span class="w">
+</span><span class="c1">## 1 0.03717959  0.08385013 156.605 12.51419 -3.398577</span><span class="w">
+
+</span><span class="c1"># Prediction interval coverage probability</span><span class="w">
+</span><span class="nf">sum</span><span class="p">(</span><span class="n">quant.val</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">val.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">quant.val</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">val.dat</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">val.dat</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 0.366548</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Based on the outputs above, the calibration model seems a reasonable
+outcome for the model, but is proven to be considerably overfitted when
+it is evaluated aginst the out-of-bag cases. We should also be expecting
+a PICP close to 90%, but this is clearly not the case above.</p>
+
+<p>What has been covered above for the two-stage modeling is repeated for
+all the other soil horizons, with the main results displayed in the
+Table below. These statistics are reported based on the out-of-bag data.</p>
+
+<p>It clear that there is a considerable amount of uncertainty overall in
+the various soil horizon models. For some horizons the results are a
+little encouraging; for example the model to predict the presence of a
+BC horizon is quite good. It is clear however that distinguishing
+between different B2 horizons is challenging. However predicting the
+presence or absence of a B22 horizons seems acceptable.</p>
+
+<figure>
+<img src="/images/dsm_book/eval_table_two_step.png" alt="rconsole" />
+<figcaption>
+Selected model validation diagnostics returned for each horizon class and associated depth model.
+</figcaption>
+</figure>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="soil-profile-reconstructions-">Soil profile reconstructions <a id="s-1"></a></h3>
+
+<p>Another way to assess the quality of the two-stage modeling is to assess
+first the number of soil profile that have matching sequences of soil
+horizon types. The following are two associated data sets. <a href="/DSM_book/data/twoStep/validation_obs.txt">The firstare out-of-bag observed soil profiles</a>
+with their horizon designations and associated thicknesses. The other are <a href="/DSM_book/data/twoStep/validation_outs.txt">the corresponding profiles that have been predicted</a> using the above two-step modeling processes.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># observed soil profiles</span><span class="w">
+</span><span class="n">obs.profs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"validation_obs.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># associated predicted soil profiles</span><span class="w">
+</span><span class="n">pred.profs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"validation_outs.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Below we can compare row for row the observed vs. the predicted in very
+much a manual way. Using the <code class="highlighter-rouge">match</code> function we can quantify horizon
+and horizon matches, or as below full sol profile soil horizon sequence
+matching.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Validation data horizon observations (1st 3 rows)</span><span class="w">
+</span><span class="n">obs.profs</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="o">:</span><span class="m">14</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1">##    FID A1 A2 AP B1 B21 B22 B23 B24 B3 BC C</span><span class="w">
+</span><span class="c1">## 1  101  1  0  0  1   1   0   0   0  0  0 0</span><span class="w">
+</span><span class="c1">## 2 1022  0  0  1  0   1   1   0   0  0  0 0</span><span class="w">
+</span><span class="c1">## 3 1026  1  0  0  0   1   1   0   0  0  0 0</span><span class="w">
+
+</span><span class="c1"># Associated model predictions (1st 3 rows)</span><span class="w">
+</span><span class="n">pred.profs</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">12</span><span class="p">]</span><span class="w">
+
+</span><span class="c1">##   dat.V.FID a1 a2 ap b1 b21 b22 b23 b24 b3 bc c</span><span class="w">
+</span><span class="c1">## 1       101  1  0  0  0   1   1   0   0  0  0 0</span><span class="w">
+</span><span class="c1">## 2      1022  1  0  0  0   1   1   0   0  0  0 0</span><span class="w">
+</span><span class="c1">## 3      1026  1  0  0  0   1   1   0   0  0  0 0</span><span class="w">
+
+</span><span class="c1"># matched soil profiles</span><span class="w">
+</span><span class="nf">sum</span><span class="p">(</span><span class="n">obs.profs</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">a</span><span class="m">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">A</span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">a</span><span class="m">2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">AP</span><span class="w"> </span><span class="o">==</span><span class="w">
+</span><span class="n">pred.profs</span><span class="o">$</span><span class="n">ap</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">21</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">21</span><span class="w"> </span><span class="o">&amp;</span><span class="w">
+</span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">22</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">22</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">23</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">23</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">24</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">24</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">BC</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">bc</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">C</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">obs.profs</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 0.2222222</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The result above indicates that just over 20% of soil profiles have
+matched sequences of horizons. We can examine visually a few of these
+matched profiles to examine whether there is much coherence in terms of
+observed and associated predicted horizon depths. We will select out two
+soil profiles: One with an AP horizon, and the other with an A1 horizon.
+We can demonstrate this using the <code class="highlighter-rouge">aqp</code> package, which is a dedicated
+<code class="highlighter-rouge">R</code> package for handling soil profile data collections.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Subset of matching data (observations)</span><span class="w">
+</span><span class="n">match.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">obs.profs</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">obs.profs</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">a</span><span class="m">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">A</span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">a</span><span class="m">2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">AP</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">ap</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">21</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">21</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">22</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">22</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">23</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">23</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">24</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">24</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">BC</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">bc</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">C</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">c</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+
+</span><span class="c1"># Subset of matching data (predictions)</span><span class="w">
+</span><span class="n">match.dat.P</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pred.profs</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">obs.profs</span><span class="o">$</span><span class="n">A</span><span class="m">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">a</span><span class="m">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">A</span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">a</span><span class="m">2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">AP</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">ap</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">21</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">21</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">22</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">22</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">23</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">23</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">24</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">24</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">B</span><span class="m">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">b</span><span class="m">3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">BC</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">bc</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">obs.profs</span><span class="o">$</span><span class="n">C</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pred.profs</span><span class="o">$</span><span class="n">c</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now we just select any row where we know there is and AP horizon</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">match.dat</span><span class="p">[</span><span class="m">49</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1">#observation</span><span class="w">
+
+</span><span class="c1">##     FID      e       n A1 A2 AP B1 B21 B22 B23 B24 B3 BC C A1d A2d APd B1d B21d</span><span class="w">
+</span><span class="c1">## 195 642 338096 6372259  0  0  1  0   1   1   0   0  0  1 0  NA  NA  10  NA   30</span><span class="w">
+</span><span class="c1">##     B22d B23d B24d B3d BCd </span><span class="w">
+
+</span><span class="n">match.dat.P</span><span class="p">[</span><span class="m">49</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1">#prediction</span><span class="w">
+
+</span><span class="c1">##     dat.V.FID a1 a2 ap b1 b21 b22 b23 b24 b3 bc c a1d a2d      apd b1.1 b21d</span><span class="w">
+</span><span class="c1">## 195       642  0  0  1  0   1   1   0   0  0  1 0  18  16 21.92308   18   31</span><span class="w">
+</span><span class="c1">##     b22d b23d     b24d b3d bcd cd</span><span class="w">
+</span><span class="c1">## 195   27   20 15.41176  NA  32 NA</span><span class="w">
+</span></code></pre></div></div>
+
+<p>We can see in these two profiles, the sequence of horizons is AP, B21,
+B22, BC. Now we just need to upgrade the data to a soil profile
+collection.</p>
+
+<p>Using the horizon classes together with the associated depths, we want
+to plot both soil profiles for comparison. First we need to create a
+data frame of the relevant data then upgrade to a
+<code class="highlighter-rouge">soilProfileCollection</code>, then finally plot.</p>
+
+<p>The script below demonstrates this for the soil profile with the AP
+horizon. The same can be done with the associated soil profile with the
+A1 horizon. The plot of the is shown in the Figure below.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Horizon classes</span><span class="w">
+</span><span class="n">H</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"AP"</span><span class="p">,</span><span class="w"> </span><span class="s2">"B21"</span><span class="p">,</span><span class="w"> </span><span class="s2">"B22"</span><span class="p">,</span><span class="w"> </span><span class="s2">"BC"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Extract horizon depths then combine to create soil profiles</span><span class="w">
+</span><span class="n">p</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">22</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="p">,</span><span class="w"> </span><span class="m">27</span><span class="p">,</span><span class="w"> </span><span class="m">32</span><span class="p">)</span><span class="w">
+</span><span class="n">p</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">45</span><span class="p">)</span><span class="w">
+</span><span class="n">p</span><span class="m">1</span><span class="n">u</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">2</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">3</span><span class="p">]))</span><span class="w">
+</span><span class="n">p</span><span class="m">1</span><span class="n">l</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">2</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">3</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">1</span><span class="p">[</span><span class="m">4</span><span class="p">]))</span><span class="w">
+</span><span class="n">p</span><span class="m">2</span><span class="n">u</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">2</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="o">+</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">3</span><span class="p">]))</span><span class="w">
+</span><span class="n">p</span><span class="m">2</span><span class="n">l</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">2</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">3</span><span class="p">]),</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span><span class="n">p</span><span class="m">2</span><span class="p">[</span><span class="m">4</span><span class="p">]))</span><span class="w">
+
+</span><span class="c1"># Upper depths</span><span class="w">
+</span><span class="n">U</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">p</span><span class="m">1</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="n">u</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Lower depths</span><span class="w">
+</span><span class="n">L</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">p</span><span class="m">1</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="m">2</span><span class="n">l</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Soil profile names</span><span class="w">
+</span><span class="n">S</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"predicted profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"predicted profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"predicted profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"predicted profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"observed profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"observed profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"observed profile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"observed profile"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Random soil colors selected to distinguish between horizons</span><span class="w">
+</span><span class="n">hue</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"10YR"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10YR"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10R"</span><span class="p">)</span><span class="w">
+</span><span class="n">val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">chr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Combine all the data</span><span class="w">
+</span><span class="n">TT1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">S</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">H</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">hue</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">chr</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Convert munsell colors to rgb</span><span class="w">
+</span><span class="n">TT1</span><span class="o">$</span><span class="n">soil_color</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">TT1</span><span class="p">,</span><span class="w"> </span><span class="n">munsell2rgb</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">chr</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Upgrade to soil profile collection</span><span class="w">
+</span><span class="n">aqp</span><span class="o">::</span><span class="n">depths</span><span class="p">(</span><span class="n">TT1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">S</span><span class="m">1</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">U</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">L</span><span class="m">1</span><span class="w">
+
+</span><span class="c1"># Plot observed and associated predicted soil profiles</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">TT1</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"H1"</span><span class="p">,</span><span class="w"> </span><span class="n">colors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"soil_color"</span><span class="p">)</span><span class="w">
+</span><span class="n">title</span><span class="p">(</span><span class="s2">"Selected soil with AP horizon"</span><span class="p">,</span><span class="w"> </span><span class="n">cex.main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.75</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+<img src="/images/dsm_book/aqp_plot.png" alt="rconsole" />
+<figcaption>
+Examples of observed soil profiles with associated predicted profiles
+from the two-stage horizon class and horizon depth model.
+</figcaption>
+</figure>
+
+<p>Soil is very complex, and while there is a general agreement between
+observed and associated predicted soil profiles, the power of the models
+used in this two-stage example has certainly been challenged. Recreating
+the arrangement of soil horizons together with maintenance of their
+depth properties is an interesting problem for pedometric studies and
+one that is likely to be pursued with vigor as better methods become
+available.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="spatial-extension-of-the-two-stage-soil-horizon-occurrence-and-depth-model-">Spatial extension of the two-stage soil horizon occurrence and depth model <a id="s-6"></a></h3>
+
+<p>We will recall from previous chapters the process for applying
+prediction models across a mapping extent.</p>
+
+<p>In the case of the two-stage model the mapping work flow if first
+creating the map of horizon presence/occurrence.</p>
+
+<p>Then we apply the horizon depth model.</p>
+
+<p>In order to ensure that the depth model is not applied to the areas
+where a particular soil horizon is predicted as being absent, those
+areas are masked out.</p>
+
+<p>Maps for the presence of the A1 and AP horizons and their respective
+depths are displayed in the Figure below. The following scripts show the
+process of applying the two-stage model for the A1 horizon.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## MAPPING Apply A1 horizon presence/absence model spatially</span><span class="w">
+</span><span class="n">A</span><span class="m">1</span><span class="n">.class</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mn2</span><span class="p">)</span><span class="w">
+</span><span class="n">A</span><span class="m">1</span><span class="n">.class</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">A</span><span class="m">1</span><span class="n">.class</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"A1-horizon occurence"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Apply A1 horizon depth model spatially get covariates into a table</span><span class="w">
+</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cellNos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="n">terra</span><span class="o">::</span><span class="n">ncell</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)))</span><span class="w">
+</span><span class="n">vals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">terra</span><span class="o">::</span><span class="n">values</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">))</span><span class="w">
+</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">tempD</span><span class="p">,</span><span class="w"> </span><span class="n">vals</span><span class="p">)</span><span class="w">
+</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tempD</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">tempD</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">cellNos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">tempD</span><span class="o">$</span><span class="n">cellNos</span><span class="p">)</span><span class="w">
+</span><span class="n">gXY</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">terra</span><span class="o">::</span><span class="n">xyFromCell</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">cellNos</span><span class="p">))</span><span class="w">
+</span><span class="n">tempD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">gXY</span><span class="p">,</span><span class="w"> </span><span class="n">tempD</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">tempD</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># extend model to covariates</span><span class="w">
+</span><span class="n">A</span><span class="m">1</span><span class="n">.depth</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempD</span><span class="p">,</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qrf</span><span class="p">)</span><span class="w">
+</span><span class="c1"># append coordinates</span><span class="w">
+</span><span class="n">A</span><span class="m">1</span><span class="n">.depth.map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">data.frame</span><span class="p">(</span><span class="n">tempD</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)]),</span><span class="w"> </span><span class="n">A</span><span class="m">1</span><span class="n">.depth</span><span class="p">)</span><span class="w">
+</span><span class="c1"># create raster</span><span class="w">
+</span><span class="n">A</span><span class="m">1</span><span class="n">.depth.map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="m">1</span><span class="n">.depth.map</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)],</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"xyz"</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">A</span><span class="m">1</span><span class="n">.depth.map</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"A1-horizon thickness (unmasked)"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Mask out areas where horizon is absent</span><span class="w">
+</span><span class="n">msk</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">ifel</span><span class="p">(</span><span class="n">A</span><span class="m">1</span><span class="n">.class</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">msk</span><span class="p">)</span><span class="w">
+</span><span class="n">A</span><span class="m">1</span><span class="n">.depth.masked</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">mask</span><span class="p">(</span><span class="n">A</span><span class="m">1</span><span class="n">.depth.map</span><span class="p">,</span><span class="w"> </span><span class="n">msk</span><span class="p">,</span><span class="w"> </span><span class="n">inverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">A</span><span class="m">1</span><span class="n">.depth.masked</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"A1-horizon thickness (masked)"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+<img src="/images/dsm_book/twostage3.png" alt="rconsole" />
+<figcaption>
+Predicted occurrence of AP and A1 horizons, and their respective depths
+in the Lower Hunter Valley, NSW..
+</figcaption>
+</figure>
+
+<p>This figure displays an interesting pattern whereby AP horizons occur
+where A1 horizons do not. This makes reasonable sense. The spatial
+pattern of the AP horizon coincides generally with the distribution of
+vineyards across the study area, where soils are often cultivated and
+consequently removing the presence of the A1 horizon. Increased depth of
+A1 horizons also appears to be the case too in lower lying and stream
+channel catchments of the study area.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="references">References</h3>
+
+<p>Breiman, L. 2001. “Random Forests.” <em>Machine Learning</em> 41: 5–32.</p>
+
+<p>Gastaldi, G., Budiman Minasny, and Alex B. McBratney. 2012. “Mapping the
+Occurrence and Thickness of Soil Horizons.” Edited by Budiman Minasny,
+Brendan P. Malone, and Alex B. McBratney. London: Taylor &amp; Francis.</p>
+
+<p>Isbell, R. F. 2002. <em>The Australian Soil Classification: Revised
+Edition</em>. Collingwood, VIC: CSIRO Publishing.</p>
+
+<p>Malone, Brendan P., Darren B. Kidd, Budiman Minasny, and Alex B.
+McBratney. 2015. “Taking Account of Uncertainties in Digital Land
+Suitability Assessment.” <em>PeerJ</em>, 3:e1366.</p>
+
+<p>Meinshausen, Nicolai. 2006. “Quantile Regression Forests.” <em>Journal of
+Machine Learning Research</em> 7: 983–99.</p>
+
+<p>Sileshi, Gudeta. 2008. “The Excess-Zero Problem in Soil Animal Count
+Data and Choice of Appropriate Models for Statistical Inference.”
+<em>Pedobiologia</em> 52 (1): 1–17. https://doi.org/<a href="http://dx.doi.org/10.1016/j.pedobi.2007.11.003">http://dx.doi.org/10.1016/j.pedobi.2007.11.003</a>.</p>
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-18">September 18, 2023</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_bespoke/two_step_dsm/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_bespoke/two_step_dsm/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_bespoke/two_step_dsm/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2023 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2023, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>

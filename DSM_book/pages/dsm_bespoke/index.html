@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Using R for Digital Soil Mapping &#8211; Smart Digital Agriculture</title>
-<meta name="description" content="A course of exercises">
+<title>Digital Soil Mapping &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="deviating from the usual things">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
-<meta name="twitter:title" content="Using R for Digital Soil Mapping">
-<meta name="twitter:description" content="A course of exercises">
+<meta name="twitter:title" content="Digital Soil Mapping">
+<meta name="twitter:description" content="deviating from the usual things">
 <meta name="twitter:creator" content="@soilmalone">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Using R for Digital Soil Mapping">
-<meta property="og:description" content="A course of exercises">
-<meta property="og:url" content="/DSM_book/">
+<meta property="og:title" content="Digital Soil Mapping">
+<meta property="og:description" content="deviating from the usual things">
+<meta property="og:url" content="/DSM_book/pages/dsm_bespoke/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
 <meta name="google-site-verification" content="googledd99b1430269a639.html">
 
 
 
-<link rel="canonical" href="/DSM_book/">
+<link rel="canonical" href="/DSM_book/pages/dsm_bespoke/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -133,10 +133,10 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Using R for Digital Soil Mapping</h1>
+                    <h1>Digital Soil Mapping</h1>
                     
                         <hr class="small">
-                        <span class="subheading">A course of exercises</span>
+                        <span class="subheading">deviating from the usual things</span>
                     
                 </div>
             </div>
@@ -153,7 +153,7 @@
     <!--
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title">Using R for Digital Soil Mapping</h1>
+        <h1 class="entry-title">Digital Soil Mapping</h1>
         
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
@@ -165,42 +165,27 @@
     </header>
     -->
     <div class="entry-content">
-      <h2 id="introduction">Introduction</h2>
+      <h3 id="doing-digital-soil-mapping-a-bit-different">Doing digital soil mapping a bit different</h3>
 
-<p>This course describes and provides many detailed examples of implementing Digital Soil Mapping (DSM) using <code class="highlighter-rouge">R</code>. The work adheres to Digital Soil Mapping theory, and presents a strong focus on how to apply it. DSM exercises are also included and cover procedures for handling and manipulating soil and spatial data in <code class="highlighter-rouge">R</code>. The course also introduces the basic concepts and practices for building spatial soil prediction functions, and then ultimately producing digital soil maps.</p>
+<p>You may recall from the <a href="/DSM_book/pages/introduction/">digital soil mapping fundamentals page</a> that there are several forms of the ‘doing’ of mapping. The most common approach is the point based approaches that can either be focused on <a href="/DSM_book/pages/dsm_cont/">continuous</a> or <a href="/DSM_book/pages/dsm_cat/">categorical</a> target variables. This page however is dedicated toward other instances of doing DSM in different data contexts. For example legacy soil map dis-aggregation, or figuring out soil analogues.</p>
 
-<p>The materials for this course follow closely with the materials found in the <a href="https://link.springer.com/book/10.1007/978-3-319-44327-0">Using R for Digital Soil Mapping</a> book. Depending on what resources you have available, you may either purchase the hard copy or the electronic version, in entirety or selected chapters. Of course most public and university libraries will also have a copy of the book for loan.</p>
-
-<p>In addition to what is covered in that book, this course provides additional examples and easier navigation around the different content too. Importantly these pages will be updated with new materials when the opportunity allows, such as when new methods become available or existing examples need modification.</p>
-
-<p>Topics covered in this course include:</p>
+<p>The following pages provides a flavor of some other contexts for doing DSM that vary from the well trodden point-based approaches.</p>
 
 <ul>
-  <li><a href="/DSM_book/pages/introduction/">Digital soil mapping: The fundamentals</a></li>
-  <li><a href="/DSM_book/pages/r_literacy/">R Literacy for digital soil mapping</a></li>
-  <li><a href="/DSM_book/pages/packages/">An incomplete list of <code class="highlighter-rouge">R</code> packages useful to doing digital soil mapping</a></li>
-  <li><a href="/DSM_book/pages/r_gis/">Getting spatial in R</a></li>
-  <li><a href="/DSM_book/pages/dsm_prep/">Preparatory and exploratory analysis for digital soil mapping</a></li>
-  <li><a href="/DSM_book/pages/dsm_cont/">Continuous soil attribute modelling and mapping</a></li>
-  <li><a href="/DSM_book/pages/dsm_cat/">Categorical soil attribute modelling and mapping</a></li>
-  <li><a href="/DSM_book/pages/uncerts/">Some methods for uncertainty quantification relevant for digital soil mapping</a></li>
-  <li><a href="/DSM_book/pages/dsm_bespoke/">Other forms of digital soil mapping</a></li>
-  <li><a href="/DSM_book/pages/dsa/">Digital soil assessments</a></li>
+  <li><a href="/DSM_book/pages/dsm_bespoke/homosoil/">Homosoil</a></li>
+  <li><a href="/DSM_book/pages/dsm_bespoke/two_step_dsm/">Two-step digital soil mapping</a></li>
+  <li><a href="">Disaggregation of soil maps using DSMART</a></li>
 </ul>
-
-<p>To explore and follow the exercises in most of the the pages above you will need to have the <code class="highlighter-rouge">R</code> package <code class="highlighter-rouge">ithir</code> installed. <a href="/DSM_book/pages/ithir/">Instructions for getting <code class="highlighter-rouge">ithir</code> installed are here</a></p>
-
-<p><a href="/DSM_book/pages/sesh_info/"><code class="highlighter-rouge">R</code> session</a> information that describes the configurations used for running <code class="highlighter-rouge">R</code> code successfully in the various pages of this course.</p>
 
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-08-21">August 21, 2023</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-18">September 18, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_bespoke/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_bespoke/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_bespoke/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div><!-- /.social-share -->
       </footer>
