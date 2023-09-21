@@ -1,8 +1,5 @@
 
-This is a website for
-**Smart Digital Agriculture**
-It has stuff about agriculture, soils and science
-URL: http://smartdigiag.com/
+This is a website for **Smart Digital Agriculture**
 
 
 Brendan Malone is the copyright holder to all the contents published on this website except the underlying theme. If you wish to use any copyright material on this website, please contact me via [Email](malone.brendan1001@gmail.com) 
