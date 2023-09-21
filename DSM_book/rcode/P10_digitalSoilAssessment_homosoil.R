@@ -1,7 +1,6 @@
-
 # ******************************************************************************
 # *                                                                            
-# *                           [igital soil assessment: Homosoil]                                
+# *                           [Digital soil assessment: Homosoil]                                
 # *                                                                            
 # *  Description:                                                              
 ##    

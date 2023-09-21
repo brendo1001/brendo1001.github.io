@@ -165,7 +165,12 @@
     </header>
     -->
     <div class="entry-content">
-      <ul>
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P6_SSPF_cate_2017_C5.R">Get the code used for this section here</a></p>
+
+<h3 id="c5-decision-trees">C5 decision trees</h3>
+
+<ul>
   <li><a href="#s-1">Introduction</a></li>
   <li><a href="#s-2">Data preparation</a></li>
   <li><a href="#s-3">Model fitting</a></li>
@@ -175,95 +180,67 @@
 
 <h3 id="introduction-">Introduction <a id="s-1"></a></h3>
 
-<p>The C5 decision tree model is available in the <code class="highlighter-rouge">C50</code> package. The
-function <code class="highlighter-rouge">C5.0</code> fits classification tree models or rule-based models
-using Quinlans’s C5.0 algorithm (Quinlan 1993).</p>
+<p>The C5 decision tree model is available in the <code class="highlighter-rouge">C50</code> package. The function <code class="highlighter-rouge">C5.0</code> fits classification tree models or rule-based models using Quinlans’s C5.0 algorithm (Quinlan 1993).</p>
 
-<p>Essentially we will go through the same process as we did for the
-<a href="/DSM_book/pages/dsm_cat/mlr/">multinomial logistic regression</a>. The
-<code class="highlighter-rouge">C5.0</code> function and its internal parameters are similar in nature to
-that of the <a href="/DSM_book/pages/dsm_cont/sspfs/cubist/"><code class="highlighter-rouge">Cubist</code> function for predicting continuous variables</a>.
-The <code class="highlighter-rouge">trials</code> parameter lets you implement a boosted classification tree
-process, with the results aggregated at the end. There are also many
-other useful model tuning parameters in the <code class="highlighter-rouge">C5.0Control</code> parameter set
-too that are worth a look. Just see the help files for more information.</p>
+<p>Essentially we will go through the same process as we did for the <a href="/DSM_book/pages/dsm_cat/mlr/">multinomial logistic regression</a>.</p>
+
+<p>The <code class="highlighter-rouge">C5.0</code> function and its internal parameters are similar in nature to that of the <a href="/DSM_book/pages/dsm_cont/sspfs/cubist/"><code class="highlighter-rouge">Cubist</code> function for predicting continuous variables</a>. The <code class="highlighter-rouge">trials</code> parameter lets you implement a boosted classification tree process, with the results aggregated at the end. There are also many other useful model tuning parameters in the <code class="highlighter-rouge">C5.0Control</code> parameter set too that are worth a look. Just see the help files for more information.</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="data-preparation-">Data Preparation <a id="s-2"></a></h3>
 
-<p>The data to be used for the following modelling exercises are Terron
-classes as sampled from the map presented in Malone et al. (2014) .The
-sample data contains 1000 entries of which there are 12 different Terron
-classes. Before getting into the modeling, we first load in the data and
-then perform the covariate layer intersection using the suite of
-environmental variables contained in the <code class="highlighter-rouge">hunterCovariates</code> data object
-in the <code class="highlighter-rouge">ithir</code> package. The small selection of covariates cover an area
-of approximately 220<em>k**m</em><sup>2</sup> at a spatial resolution of 25m.
-They include those derived from a DEM: altitude above channel network
-(AACN), solar light insolation and terrain wetness index (TWI). Gamma
-radiometric data (total count) is also included together with a surface
-that depicts soil drainage in form of a continuous index (ranging from 0
-to 5). These 5 different covariate layers are stacked together via a
-<code class="highlighter-rouge">rasterStack</code>.</p>
+<p>The data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. (2014). The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="highlighter-rouge">ithir</code> package.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># libraries</span><span class="w">
+<p>The small selection of covariates cover an area of approximately 220km<sup>2</sup> at a spatial resolution of 25m. All these variables are derived primarily from an available digital elevation model.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## load libraries</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">C</span><span class="m">50</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># load data</span><span class="w">
+</span><span class="c1"># point data of terron classifications</span><span class="w">
 </span><span class="n">data</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
-</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
-<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">SpatialPointsDataFrame</code>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">names</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
+</span><span class="c1"># environmental covariates grids (covariate rasters from ithir package)</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hunterCovariates_A"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w">
 
-</span><span class="c1">## [1] "x"      "y"      "terron"</span><span class="w">
-
-</span><span class="n">coordinates</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>As these data are of the same spatial projection as the
-<code class="highlighter-rouge">hunterCovariates</code>, there is no need to perform a coordinate
-transformation. So we can perform the intersection immediately.</p>
+<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to take place.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">,</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## coerce point data to spatial object</span><span class="w">
+</span><span class="n">hvTerronDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<p>As these data are of the same spatial projection as the raster data, there is no need to perform a coordinate transformation. So we can perform the intersection immediately.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Covariate data extraction</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## 'data.frame':    1000 obs. of  8 variables:</span><span class="w">
-</span><span class="c1">##  $ x                : num  346535 334760 340910 336460 344510 ...</span><span class="w">
-</span><span class="c1">##  $ y                : num  6371940 6375840 6377690 6382040 6378116 ...</span><span class="w">
-</span><span class="c1">##  $ terron           : Factor w/ 12 levels "1","2","3","4",..: 3 4 12 5 6 11 3 10 3 5 ...</span><span class="w">
-</span><span class="c1">##  $ AACN             : num  37.544 25.564 32.865 0.605 9.516 ...</span><span class="w">
-</span><span class="c1">##  $ Drainage.Index   : num  4.72 4.78 2 4.19 4.68 ...</span><span class="w">
-</span><span class="c1">##  $ Light.Insolation : num  1690 1736 1712 1712 1677 ...</span><span class="w">
-</span><span class="c1">##  $ TWI              : num  11.5 13.8 13.4 18.6 19.8 ...</span><span class="w">
-</span><span class="c1">##  $ Gamma.Total.Count: num  380 407 384 388 454 ...</span><span class="w">
+</span><span class="c1">## 'data.frame':    1000 obs. of  9 variables:</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It is always good practice to check to see if any of the observational
-data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is
-<code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the
-extent of the covariate layers. It is best to remove these observations
-from the data set.</p>
+<p>It is always good practice to check to see if any of the observational data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## remove missing data</span><span class="w">
+</span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 
 </span><span class="c1">## integer(0)</span><span class="w">
 
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We will also subset the data for an external validation i.e. random hold
-back validation. Here 70% of the data for model calibration, leaving the
-other 30% for validation.</p>
+<p>We will also subset the data for an external validation i.e. random hold back validation. Here 70% of the data for model calibration, leaving the other 30% for validation.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">655</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># create calibration/validation datasets</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Random holdback</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">655</span><span class="p">)</span><span class="w">
 </span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
@@ -271,198 +248,158 @@ other 30% for validation.</p>
 
 <h3 id="model-fitting-">Model fitting <a id="s-3"></a></h3>
 
-<p>With the calibration data prepared, we will fit the C5 model as in the
-script below.</p>
+<p>With the calibration data prepared, we will fit the C5 model as in the script below.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">C</span><span class="m">50</span><span class="p">)</span><span class="w">
-</span><span class="n">hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">C</span><span class="m">5.0</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"AACN"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Drainage.Index"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Light.Insolation"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"TWI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Gamma.Total.Count"</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C</span><span class="m">5.0</span><span class="n">Control</span><span class="p">(</span><span class="n">CF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="n">minCases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">earlyStopping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">C</span><span class="m">5.0</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">9</span><span class="p">],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">trials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C</span><span class="m">5.0</span><span class="n">Control</span><span class="p">(</span><span class="n">CF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="n">minCases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">earlyStopping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
-<p>By calling the <code class="highlighter-rouge">summary</code> function, some useful model fit diagnostics are
-given. These include the tree structure, together with the covariates
-used and mis-classification error of the model, as well as a rudimentary
-confusion matrix. A useful feature of the C5 model is that it can omit
-in an automated fashion, unnecessary covariates.</p>
+<p>By calling the <code class="highlighter-rouge">summary</code> function, some useful model fit diagnostics are given. These include the tree structure, together with the covariates used and mis-classification error of the model, as well as a rudimentary confusion matrix. A useful feature of the C5 model is that it can omit in an automated fashion, unnecessary covariates.</p>
 
-<p>The <code class="highlighter-rouge">predict</code> function can either return the predicted class or the
-confidence of the predictions (which is controlled using the
-<code class="highlighter-rouge">type= prob</code> parameter. The probabilities are quantified such that if an
-observation is classified by a single leaf of a decision tree, the
-confidence value is the proportion of training cases at that leaf that
-belong to the predicted class. If more than one leaf is involved (i.e.,
-one or more of the attributes on the path has missing values), the value
-is a weighted sum of the individual leaves’ confidences. For
-rule-classifiers, each applicable rule votes for a class with the voting
-weight being the rule’s confidence value. If the sum of the votes for
-class C is W(C), then the predicted class P is chosen so that W(P) is
-maximal, and the confidence is the greater of (1), the voting weight of
-the most specific applicable rule for predicted class P; or (2) the
-average vote for class P (so, W(P) divided by the number of applicable
-rules for class P).Boosted classifiers are similar, but individual
-classifiers vote for a class with weight equal to their confidence
-value. Overall, the confidence associated with each class for every
-observation are made to sum to 1.</p>
+<p>The <code class="highlighter-rouge">predict</code> function can either return the predicted class or the confidence of the predictions (which is controlled using the <code class="highlighter-rouge">type= prob</code> parameter. The probabilities are quantified such that if an observation is classified by a single leaf of a decision tree, the confidence value is the proportion of training cases at that leaf that belong to the predicted class. If more than one leaf is involved (i.e. one or more of the attributes on the path has missing values), the value is a weighted sum of the individual leaves’ confidences.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># return the class predictions [first 10 cases]</span><span class="w">
+<p>For rule-classifiers, each applicable rule votes for a class with the voting weight being the rule’s confidence value. If the sum of the votes for class C is W(C), then the predicted class P is chosen so that W(P) is maximal, and the confidence is the greater of (1), the voting weight of the most specific applicable rule for predicted class P; or (2) the average vote for class P (so, W(P) divided by the number of applicable
+rules for class P).Boosted classifiers are similar, but individual classifiers vote for a class with weight equal to their confidence value. Overall, the confidence associated with each class for every observation are made to sum to 1.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># return the class predictions</span><span class="w">
 </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span><span class="w">
 
-</span><span class="c1">##  [1] 3  8  8  5  3  5  8  6  8  12</span><span class="w">
+</span><span class="c1">##  [1] 3 8 8 5 7 5 5 6 8 5</span><span class="w">
 </span><span class="c1">## Levels: 1 2 3 4 5 6 7 8 9 10 11 12</span><span class="w">
 
-</span><span class="c1"># return the class probabilities [first 10 cases]</span><span class="w">
-</span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"prob"</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="c1"># return the class probabilities (Terron classes 1 to 3, first 10 cases)</span><span class="w">
+</span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"prob"</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
 
-</span><span class="c1">##                1            2            3            4           5           6</span><span class="w">
-</span><span class="c1">## 366 0.0003479853 1.648352e-04 0.4500366339 0.0520695959 0.001684982 0.001227106</span><span class="w">
-</span><span class="c1">## 79  0.0001833977 8.687259e-05 0.0006949807 0.0274420842 0.122509653 0.047944016</span><span class="w">
-</span><span class="c1">## 946 0.0001833977 8.687259e-05 0.0006949807 0.0274420842 0.122509653 0.047944016</span><span class="w">
-</span><span class="c1">## 148 0.0003525046 1.669759e-04 0.0013358070 0.0007977737 0.573135431 0.027217069</span><span class="w">
-</span><span class="c1">## 710 0.0003479853 1.648352e-04 0.4500366339 0.0520695959 0.001684982 0.001227106</span><span class="w">
-</span><span class="c1">## 729 0.0007539682 3.571428e-04 0.0028571428 0.0017063492 0.503650805 0.419325387</span><span class="w">
-</span><span class="c1">## 848 0.0012925170 6.122449e-04 0.0048979592 0.0029251702 0.149115652 0.052176872</span><span class="w">
-</span><span class="c1">## 20  0.0005219780 2.472527e-04 0.0019780219 0.0011813187 0.060219780 0.809532966</span><span class="w">
-</span><span class="c1">## 923 0.0001833977 8.687259e-05 0.0006949807 0.0274420842 0.122509653 0.047944016</span><span class="w">
-</span><span class="c1">## 397 0.0354187203 4.433497e-04 0.0725123176 0.0366009864 0.039014779 0.003300493</span><span class="w">
-</span><span class="c1">##               7           8           9          10           11           12</span><span class="w">
-</span><span class="c1">## 366 0.168901096 0.014816850 0.077765564 0.000989011 0.1416300399 0.0903663012</span><span class="w">
-</span><span class="c1">## 79  0.176853281 0.426727801 0.020714285 0.095115831 0.0813996118 0.0003281853</span><span class="w">
-</span><span class="c1">## 946 0.176853281 0.426727801 0.020714285 0.095115831 0.0813996118 0.0003281853</span><span class="w">
-</span><span class="c1">## 148 0.002263451 0.053970316 0.169684604 0.169833027 0.0006122449 0.0006307978</span><span class="w">
-</span><span class="c1">## 710 0.168901096 0.014816850 0.077765564 0.000989011 0.1416300399 0.0903663012</span><span class="w">
-</span><span class="c1">## 729 0.004841270 0.004325397 0.029603174 0.029920634 0.0013095237 0.0013492063</span><span class="w">
-</span><span class="c1">## 848 0.008299320 0.340748295 0.050748300 0.337006798 0.0022448979 0.0499319738</span><span class="w">
-</span><span class="c1">## 20  0.003351648 0.079917584 0.001263736 0.020714286 0.0201373630 0.0009340660</span><span class="w">
-</span><span class="c1">## 923 0.176853281 0.426727801 0.020714285 0.095115831 0.0813996118 0.0003281853</span><span class="w">
-</span><span class="c1">## 397 0.074975372 0.005369458 0.002266010 0.347487689 0.0016256157 0.3809852094</span><span class="w">
+</span><span class="c1">##                1            2            3</span><span class="w">
+</span><span class="c1">## 366 0.0002918587 1.382488e-04 0.4742242759</span><span class="w">
+</span><span class="c1">## 79  0.0001675485 7.936508e-05 0.0006349206</span><span class="w">
+</span><span class="c1">## 946 0.0001675485 7.936508e-05 0.0006349206</span><span class="w">
+</span><span class="c1">## 148 0.0007983193 3.781512e-04 0.0030252100</span><span class="w">
+</span><span class="c1">## 710 0.0006031746 2.857143e-04 0.3133968224</span><span class="w">
+</span><span class="c1">## 729 0.0011309523 5.357143e-04 0.0042857142</span><span class="w">
+</span><span class="c1">## 848 0.0003270224 1.549053e-04 0.0012392427</span><span class="w">
+</span><span class="c1">## 20  0.0010052910 4.761905e-04 0.0038095239</span><span class="w">
+</span><span class="c1">## 923 0.0001675485 7.936508e-05 0.0006349206</span><span class="w">
+</span><span class="c1">## 397 0.0003270224 1.549053e-04 0.0012392427</span><span class="w">
 </span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="model-goodness-of-fit-">Model goodness of fit <a id="s-4"></a></h3>
 
-<p>So lets look at the calibration and validation statistics. First, the
-calibration statistics:</p>
+<p>So lets look at the calibration and out-of-bag model goodness of fit evaluations. First, the calibration statistics:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C.pred.hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Goodness of fit calibration data</span><span class="w">
+</span><span class="n">C.pred.hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
 </span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C.pred.hv.C5</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## $confusion_matrix</span><span class="w">
 </span><span class="c1">##     1 2  3  4  5  6  7  8  9 10 11 12</span><span class="w">
-</span><span class="c1">## 1  10 5  1  4  0  0  0  0  2  0  0  0</span><span class="w">
+</span><span class="c1">## 1  16 3  0  5  0  0  0  0  2  1  0  0</span><span class="w">
 </span><span class="c1">## 2   0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
-</span><span class="c1">## 3   5 3 43  5  0  0 14  1  6  1 11  8</span><span class="w">
-</span><span class="c1">## 4   3 0 11 23  0  0  3  3 12  0  5  1</span><span class="w">
-</span><span class="c1">## 5   0 0  0  0 62 17  0  4 14 14  0  0</span><span class="w">
-</span><span class="c1">## 6   0 0  0  0  3 42  0  4  0  1  1  0</span><span class="w">
-</span><span class="c1">## 7   0 1 15  6  0  0 77 15  7  6  4 12</span><span class="w">
-</span><span class="c1">## 8   0 0  0  4 26  8 26 82  5 22 12  2</span><span class="w">
-</span><span class="c1">## 9   0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
-</span><span class="c1">## 10  0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 3   0 6 54  1  0  0 16  2  0  2 14 17</span><span class="w">
+</span><span class="c1">## 4   0 0  1 12  0  0  3  1  3  1  0  0</span><span class="w">
+</span><span class="c1">## 5   0 0  0  2 82  9  9  1 12 18  3  2</span><span class="w">
+</span><span class="c1">## 6   0 0  0  0  4 46  0  0  0  1  0  0</span><span class="w">
+</span><span class="c1">## 7   0 0 17 10  0  0 70 12  6 10  3 14</span><span class="w">
+</span><span class="c1">## 8   0 0  0  4  4  9 24 89  8 12 11  0</span><span class="w">
+</span><span class="c1">## 9   3 0  0  9  0  0  0  0 15  0  0  0</span><span class="w">
+</span><span class="c1">## 10  0 0  0  0  2  3  0  4  0  9  2  1</span><span class="w">
 </span><span class="c1">## 11  0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
-</span><span class="c1">## 12  1 0  2  1  1  0  2  0  0 10  0 11</span><span class="w">
+</span><span class="c1">## 12  0 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $overall_accuracy</span><span class="w">
-</span><span class="c1">## [1] 50</span><span class="w">
+</span><span class="c1">## [1] 57</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $producers_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 53  0 60 54 68 63 64 76  0  0  0 33 </span><span class="w">
+</span><span class="c1">## 85  0 75 28 90 69 58 82 33 17  0  0 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $users_accuracy</span><span class="w">
 </span><span class="c1">##   1   2   3   4   5   6   7   8   9  10  11  12 </span><span class="w">
-</span><span class="c1">##  46 NaN  45  38  56  83  54  44 NaN NaN NaN  40 </span><span class="w">
+</span><span class="c1">##  60 NaN  49  58  60  91  50  56  56  43 NaN NaN </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $kappa</span><span class="w">
-</span><span class="c1">## [1] 0.4269877</span><span class="w">
+</span><span class="c1">## [1] 0.4969075</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It will be noticed that some of the Terron classes failed to be
-predicted by the fitted model. For example Terron classes 2, 9, 11, and
-12 were all predicted as being a different class. All observations of
-Terron class 2 were predicted as Terron class 1. Doing the external
-validation we return the following:</p>
+<p>It will be noticed that some of the Terron classes failed to be predicted by the fitted model. For example Terron classes 2, 11, and 12 were all predicted as being a different class. All observations of Terron class 2 were predicted as Terron class 1. Doing the out-of-bag model evaluation we return the following:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">V.pred.hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
-</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V.pred.hv.C5</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Goodness of fit out-of-bag data</span><span class="w">
+</span><span class="n">V.pred.hv.C5</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w"> </span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V.pred.hv.C5</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## $confusion_matrix</span><span class="w">
-</span><span class="c1">##    1 2  3  4  5  6  7  8 9 10 11 12</span><span class="w">
-</span><span class="c1">## 1  7 2  0  0  0  0  0  0 1  0  0  0</span><span class="w">
-</span><span class="c1">## 2  0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 3  1 1 15  3  0  0  3  0 3  1  4  3</span><span class="w">
-</span><span class="c1">## 4  0 1  3 19  0  1  1  2 4  0  2  0</span><span class="w">
-</span><span class="c1">## 5  0 0  0  0 23  6  1  2 4  1  0  0</span><span class="w">
-</span><span class="c1">## 6  0 0  0  0  5 15  0  4 1  0  0  0</span><span class="w">
-</span><span class="c1">## 7  0 0  7  5  1  0 36 11 2  4  4  4</span><span class="w">
-</span><span class="c1">## 8  0 0  0  5 11  3 11 22 5 13  5  2</span><span class="w">
-</span><span class="c1">## 9  0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 10 0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 11 0 0  0  0  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 12 0 0  2  0  0  0  1  0 0  5  0  2</span><span class="w">
+</span><span class="c1">##    1 2  3 4  5  6  7  8 9 10 11 12</span><span class="w">
+</span><span class="c1">## 1  8 0  0 0  0  0  0  0 1  0  0  0</span><span class="w">
+</span><span class="c1">## 2  0 0  0 0  0  0  0  0 0  0  0  0</span><span class="w">
+</span><span class="c1">## 3  0 3 18 4  0  0  5  6 0  2  7  4</span><span class="w">
+</span><span class="c1">## 4  0 0  1 7  0  1  0  1 0  0  0  1</span><span class="w">
+</span><span class="c1">## 5  0 0  0 7 32  2  3  0 5 11  1  2</span><span class="w">
+</span><span class="c1">## 6  0 0  0 0  3 16  0  1 1  0  0  0</span><span class="w">
+</span><span class="c1">## 7  0 1  8 8  1  0 31  4 4  5  2  2</span><span class="w">
+</span><span class="c1">## 8  0 0  0 3  2  4 13 27 4  5  4  2</span><span class="w">
+</span><span class="c1">## 9  0 0  0 3  0  0  1  0 5  0  0  0</span><span class="w">
+</span><span class="c1">## 10 0 0  0 0  2  2  0  2 0  1  1  0</span><span class="w">
+</span><span class="c1">## 11 0 0  0 0  0  0  0  0 0  0  0  0</span><span class="w">
+</span><span class="c1">## 12 0 0  0 0  0  0  0  0 0  0  0  0</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $overall_accuracy</span><span class="w">
-</span><span class="c1">## [1] 47</span><span class="w">
+</span><span class="c1">## [1] 49</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $producers_accuracy</span><span class="w">
-</span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 88  0 56 60 58 60 68 54  0  0  0 19 </span><span class="w">
+</span><span class="c1">##   1   2   3   4   5   6   7   8   9  10  11  12 </span><span class="w">
+</span><span class="c1">## 100   0  67  22  80  64  59  66  25   5   0   0 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $users_accuracy</span><span class="w">
 </span><span class="c1">##   1   2   3   4   5   6   7   8   9  10  11  12 </span><span class="w">
-</span><span class="c1">##  70 NaN  45  58  63  60  49  29 NaN NaN NaN  20 </span><span class="w">
+</span><span class="c1">##  89 NaN  37  64  51  77  47  43  56  13 NaN NaN </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $kappa</span><span class="w">
-</span><span class="c1">## [1] 0.3859025</span><span class="w">
+</span><span class="c1">## [1] 0.4092538</span><span class="w">
 </span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="apply-model-spatially-">Apply model spatially <a id="s-5"></a></h3>
 
-<p>And finally, creating the map derived from the <code class="highlighter-rouge">hv.C5</code> model using the
-raster <code class="highlighter-rouge">predict</code> function. Note that the C5 model returned 0% producer’s
-accuracy for Terron classes 2, 9, 11 and 12. These data account for only
-a small proportion of the data set, and/or, they may be similar to other
-existing Terron classes (based on the available predictive covariates).
-Consequently, they did not feature in the <code class="highlighter-rouge">hv.C5</code> model and ultimately,
-the final map.</p>
+<p>And finally, creating the map derived from the <code class="highlighter-rouge">hv.C5</code> model using the <code class="highlighter-rouge">terra::predict</code> function. Note that the C5 model returned 0% producer’s accuracy for Terron classes 2, 11 and 12. These data account for only a small proportion of the data set, and/or, they may be similar to other existing Terron classes (based on the available predictive covariates). Consequently, they did not feature in the <code class="highlighter-rouge">hv.C5</code> model and ultimately, the final map.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># class prediction</span><span class="w">
-</span><span class="n">map.C5.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">covStack</span><span class="p">,</span><span class="w"> </span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hv_C5_class.tif"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">)</span><span class="w">
+<p>Another curiosity is that the model predictions also extends  beyond the normal mapping boundary which does not mean much but one would want to remove these predictions as it causes the map product to look strange and potentially misleading. First we create a mask, <code class="highlighter-rouge">msk</code> and then use the <code class="highlighter-rouge">mask</code> function to blot out the areas where we do not need to have model predictions.</p>
 
-</span><span class="n">map.C5.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">)</span><span class="w">
-</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
-</span><span class="n">rat</span><span class="p">[[</span><span class="s2">"terron"</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">)</span><span class="w">
-</span><span class="n">levels</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Applying model spatially class prediction</span><span class="w">
+</span><span class="n">map.C5.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.C5</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># plot</span><span class="w">
-</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">)</span><span class="w">
-</span><span class="n">rasterVis</span><span class="o">::</span><span class="n">levelplot</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">,</span><span class="w"> </span><span class="n">col.regions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span><span class="c1"># mask [the C5 model extends to outside the mapping area]</span><span class="w">
+</span><span class="n">msk</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">ifel</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">[[</span><span class="m">1</span><span class="p">]]),</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">map.C5.c.masked</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">mask</span><span class="p">(</span><span class="n">map.C5.c</span><span class="p">,</span><span class="w"> </span><span class="n">msk</span><span class="p">,</span><span class="w"> </span><span class="n">inverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># plot map</span><span class="w">
+</span><span class="n">map.C5.c.masked</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">map.C5.c.masked</span><span class="p">)</span><span class="w">
+</span><span class="c1"># some classes were dropped out !!</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">map.C5.c.masked</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+
+</span><span class="c1">## HEX colors</span><span class="w">
+</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w">  </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D7B09E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">terra</span><span class="o">::</span><span class="n">plot</span><span class="p">(</span><span class="n">map.C5.c.masked</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">plg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_009"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Terron Class"</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/c5.png" alt="rconsole" />
-    <figcaption> Hunter Valley Terron class map created using C5 decision tree model.</figcaption>
+<img src="/images/dsm_book/P6_c5_map.png" alt="rconsole" />
+<figcaption>
+Hunter Valley Terron class map created using C5 decision tree model</figcaption>
 </figure>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="references">References</h3>
 
-<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for
-the Identification of Terrons in the Lower Hunter Valley, Australia.”
-<em>Geoderma Regional</em> 1: 31–47.</p>
+<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for the Identification of Terrons in the Lower Hunter Valley, Australia.” <em>Geoderma Regional</em> 1: 31–47.</p>
 
-<p>Quinlan, J R. 1993. <em>C4.5: Programs for Machine Learning</em>. Morgan
-Kaufmann, San Mateo, California.</p>
+<p>Quinlan, J R. 1993. <em>C4.5: Programs for Machine Learning</em>. Morgan Kaufmann, San Mateo, California.</p>
+
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-09-13">September 13, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-19">September 19, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">

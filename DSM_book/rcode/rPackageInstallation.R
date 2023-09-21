@@ -1,5 +1,4 @@
-##R Package Install
-##University of Sydney Exercises
+## R Package Install
 install.packages("ctv")
 library(ctv)
 available.views()
@@ -11,6 +10,6 @@ install.views("Spatial"); install.views("SpatioTemporal"); install.views("Graphi
 
 install.packages("devtools") 
 library(devtools)
-install_bitbucket("brendo1001/ithir/pkg") #ithir
+install_github("brendo1001/ithir_github/pkg") #ithir
 install_bitbucket("brendo1001/dsmart/rPackage/dsmart/pkg") #dsmart
 install_bitbucket("brendo1001/fuzme/rPackage/fuzme") #fuzme

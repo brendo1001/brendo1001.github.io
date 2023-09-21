@@ -6,21 +6,21 @@
 <head>
 <meta charset="utf-8">
 <title>Quantification of prediction uncertainties &#8211; Smart Digital Agriculture</title>
-<meta name="description" content="Bootstrapping.">
+<meta name="description" content="local errors and data partitioning">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
 <meta name="twitter:title" content="Quantification of prediction uncertainties">
-<meta name="twitter:description" content="Bootstrapping.">
+<meta name="twitter:description" content="local errors and data partitioning">
 <meta name="twitter:creator" content="@soilmalone">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quantification of prediction uncertainties">
-<meta property="og:description" content="Bootstrapping.">
+<meta property="og:description" content="local errors and data partitioning">
 <meta property="og:url" content="/DSM_book/pages/uncerts/partition/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
@@ -136,7 +136,7 @@
                     <h1>Quantification of prediction uncertainties</h1>
                     
                         <hr class="small">
-                        <span class="subheading">Bootstrapping.</span>
+                        <span class="subheading">local errors and data partitioning</span>
                     
                 </div>
             </div>
@@ -158,473 +158,393 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~25 minutes
+          Reading time ~22 minutes
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <ul>
-  <li><a href="#s-1">Introduction</a></li>
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P7_uncerts_partition.R">Get the code used for this section here</a></p>
+
+<h3 id="uncertainty-estimation-based-on-local-errors-and-data-partitioning">Uncertainty estimation based on local errors and data partitioning</h3>
+
+<ul>
+  <li><a href="#s-1">Pre-work reading</a></li>
   <li><a href="#s-2">Defining the model parameters</a></li>
-  <li><a href="#s-3">Spatial mapping </a></li>
-  <li><a href="#s-4">Validating the quantification of uncertainty</a></li>
-  <li><a href="#s-5">References</a></li>
+  <li><a href="#s-3">Within ruleset prediction limits</a></li>
+  <li><a href="#s-4">Mapping predictions and model uncertainties</a></li>
+  <li><a href="#s-5">Evaluating the quantification of uncertainties</a></li>
 </ul>
 
-<h3 id="introduction-">Introduction <a id="s-1"></a></h3>
+<h3 id="pre-work-reading-">Pre-work reading <a id="s-1"></a></h3>
 
-<p>Bootstrapping is a non-parametric approach for quantifying prediction
-uncertainties (Efron and Tibshirani 1993). Bootstrapping involves
-repeated random sampling with replacement of the available data. With
-the bootstrap sample, a model is fitted, and can then be applied to
-generate a digital soil map. By repeating the process of random sampling
-and applying the model, we are able to generate probability
-distributions of the prediction realizations from each model at each
-pixel. A robust estimate may be determined by taking the average of all
-the simulated predictions at each pixel. By being able to obtain
-probability distributions of the outcomes, one is also able to quantify
-the uncertainty of the modeling by computing a prediction interval given
-a specified level of confidence. While the bootstrapping approach is
-relatively straightforward, there is a requirement to generate <em>x</em>
-number of maps, where <em>x</em> is the number of bootstrap samples. This
-obviously could be prohibitive from a computational and data storage
-point of view, but not altogether impossible (given parallel processing
-capabilities etc.) as was demonstrated by both Viscarra Rossel et al.
-(2015) and Liddicoat et al. (2015) whom both performed bootstrapping for
-quantification of uncertainties across very large mapping extents. In
-the case of Viscarra Rossel et al. (2015) this for for the entire
-Australian continent at 100m resolution.</p>
+<p>The approach for uncertainty quantification described here and <a href="/DSM_book/pages/uncerts/fuzzy/">in further section</a> are empirical methods whereby the prediction intervals are defined from the distribution of underlying model errors i.e. the deviation between observation and model predictions.</p>
 
-<p>In the example below, the bootstrap method is demonstrated. We will be
-using Cubist modeling for the model structure and perform 50 bootstrap
-samples. We will do the bootstrap model using 70% of the available data.
-The remaining 30% will be used for an external validation and therefore
-independent of any model calibration function (although that a
-completely independent design-based sample).</p>
+<p>In other types of uncertainty quantification, the prediction limits are not spatially uniform as they are for <a href="/DSM_book/pages/uncerts/boot/">bootstrap uncertainty quantification</a>. Rather they are a function of the landscape. For example, in some areas of the landscape, or in some particular landscape situations, the prediction is going to be more accurate than in other situations.</p>
+
+<p>For the immediate approach, an explicit landscape partition is used to define likely areas where the quantification of uncertainty may differ. This approach uses the <a href="/DSM_book/pages/dsm_cont/sspfs/cubist/">Cubist data mining algorithm</a> for prediction and partitioning of the landscape. Within each partitioned area, we can then define the distribution of model errors.</p>
+
+<p>This approach for uncertainty quantification was used by Malone et al. (2014) where soil pH was predicted using a Cubist model and residual kriging spatial model.</p>
+
+<p>This approach and the <a href="/DSM_book/pages/uncerts/fuzzy/">fuzzy clustering approach</a> are useful from the viewpoint that complex models  in terms of parameterisation) are able to be used within a digital soil mapping framework where there is a necessity to define a stated level of prediction confidence.</p>
+
+<p>With universal kriging, this is the restriction of the linear model (which in many situations could be the best model). For empirical approaches to uncertainty quantification, this restriction does not exist. Further to this, the localized allocation of prediction limits i.e. in given landscape situations provides a means to identify areas where mapping is accurate and where it is not so much. Often this is a function of the sampling density. This explicit allocation of prediction intervals may assist with the future design of soil sampling programs.</p>
+
+<p>In the approach to be described, the partitioning is a “hard” partition as opposed to <a href="/DSM_book/pages/uncerts/fuzzy/">a ‘soft’ or ‘fuzzy’ partition approach</a>.</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="defining-the-model-parameters-">Defining the model parameters <a id="s-2"></a></h3>
 
-<p>For the first step, we do the random partitioning of the data into
-calibration and validation data sets. Again we are using the
-<code class="highlighter-rouge">HV_subsoilpH</code> data from the <code class="highlighter-rouge">ithir</code> package and the associated
-<code class="highlighter-rouge">hunterCovariates_sub</code> raster data stack.</p>
+<p>In this example we will use the Cubist model regression model, and then define the subsequent prediction intervals.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span><span class="w">
-</span><span class="c1">## DATA Point data</span><span class="w">
+<p>First we load libraries, data and then prepare it for analysis.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Libraries</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">Cubist</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># point data</span><span class="w">
 </span><span class="n">data</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
-</span><span class="n">str</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## 'data.frame':    506 obs. of  14 variables:</span><span class="w">
-</span><span class="c1">##  $ X                       : num  340386 340345 340559 340483 340734 ...</span><span class="w">
-</span><span class="c1">##  $ Y                       : num  6368690 6368491 6369168 6368740 6368964 ...</span><span class="w">
-</span><span class="c1">##  $ pH60_100cm              : num  4.47 5.42 6.26 8.03 8.86 ...</span><span class="w">
-</span><span class="c1">##  $ Terrain_Ruggedness_Index: num  1.34 1.42 1.64 1.04 1.27 ...</span><span class="w">
-</span><span class="c1">##  $ AACN                    : num  1.619 0.281 2.301 1.74 3.114 ...</span><span class="w">
-</span><span class="c1">##  $ Landsat_Band1           : int  57 47 59 52 62 53 47 52 53 63 ...</span><span class="w">
-</span><span class="c1">##  $ Elevation               : num  103.1 103.7 99.9 101.9 99.8 ...</span><span class="w">
-</span><span class="c1">##  $ Hillshading             : num  1.849 1.428 0.934 1.517 1.652 ...</span><span class="w">
-</span><span class="c1">##  $ Light_insolation        : num  1689 1701 1722 1688 1735 ...</span><span class="w">
-</span><span class="c1">##  $ Mid_Slope_Positon       : num  0.876 0.914 0.844 0.848 0.833 ...</span><span class="w">
-</span><span class="c1">##  $ MRVBF                   : num  3.85 3.31 3.66 3.92 3.89 ...</span><span class="w">
-</span><span class="c1">##  $ NDVI                    : num  -0.143 -0.386 -0.197 -0.14 -0.15 ...</span><span class="w">
-</span><span class="c1">##  $ TWI                     : num  17.5 18.2 18.8 18 17.8 ...</span><span class="w">
-</span><span class="c1">##  $ Slope                   : num  1.79 1.42 1.01 1.49 1.83 ...</span><span class="w">
+</span><span class="c1"># Start afresh round pH data to 2 decimal places</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># Raster data</span><span class="w">
-</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">)</span><span class="w">
-</span><span class="n">hunterCovariates_sub</span><span class="w">
+</span><span class="c1"># remove already intersected data</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
 
-</span><span class="c1">## class      : RasterStack </span><span class="w">
-</span><span class="c1">## dimensions : 249, 210, 52290, 11  (nrow, ncol, ncell, nlayers)</span><span class="w">
-</span><span class="c1">## resolution : 25, 25  (x, y)</span><span class="w">
-</span><span class="c1">## extent     : 338422.3, 343672.3, 6364203, 6370428  (xmin, xmax, ymin, ymax)</span><span class="w">
-</span><span class="c1">## crs        : +proj=utm +zone=56 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs </span><span class="w">
-</span><span class="c1">## names      : Terrain_Ruggedness_Index,        AACN, Landsat_Band1,   Elevation, Hillshading, Light_insolation, Mid_Slope_Positon,       MRVBF,        NDVI,         TWI,       Slope </span><span class="w">
-</span><span class="c1">## min values :                 0.194371,    0.000000,     26.000000,   72.217499,    0.000677,      1236.662840,          0.000009,    0.000002,   -0.573034,    8.224325,    0.001708 </span><span class="w">
-</span><span class="c1">## max values :                15.945321,  106.665482,    140.000000,  212.632507,   32.440960,      1934.199950,          0.956529,    4.581594,    0.466667,   20.393652,   21.809752</span><span class="w">
+</span><span class="c1"># add an id column</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">),</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># re-arrange order of columns</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)]</span><span class="w">
+
+</span><span class="c1"># Change names of coordinate columns</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
+</span><span class="c1"># save a copy of coordinates</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
+
+</span><span class="c1"># convert data to sf object</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># grids (covariate rasters from ithir package)</span><span class="w">
+</span><span class="n">hv.sub.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hunterCovariates_sub"</span><span class="p">,</span><span class="w">
+</span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">hv.sub.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># extract covariate data</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># check for NA values</span><span class="w">
+</span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+
+</span><span class="c1">## integer(0)</span><span class="w">
+
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 
 </span><span class="c1"># subset data for modeling</span><span class="w">
-</span><span class="n">set.seed</span><span class="p">(</span><span class="m">667</span><span class="p">)</span><span class="w">
-</span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">))</span><span class="w">
-</span><span class="n">cDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
-</span><span class="n">vDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span><span class="w">
+</span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+</span><span class="n">DSM_data_cal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1"># calibration</span><span class="w">
+</span><span class="n">DSM_data_val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1"># validation</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">nbag</code> variable below holds the value for the number of bootstrap
-models we want to fit. Here it is 50. Essentially the bootstrap can can
-be contained within a <code class="highlighter-rouge">for</code> loop, where upon each loop a sample of the
-available data is taken of <em>n</em> size where the <em>n</em> is the same number of
-cases in the model frame. This sampling is done with replacment however,
-which works out to be about 66% of the model frame in terms of unique
-cases. The other 34% of the data are used to assess the model goodness
-of fit for each bootstrap iteration in terms of out-of-bag assessment,
-which just means data not included in the model. Note below the use of
-the <code class="highlighter-rouge">replace</code> parameter to indicate we want random sample with
-replacement. After a model is fitted, we save the model to file and will
-come back to it later. The <code class="highlighter-rouge">modelFile</code> variable shows the extensive use
-of the <code class="highlighter-rouge">paste0</code> function in order to provide the pathway and file name
-for the model that we want to save on each loop iteration. The <code class="highlighter-rouge">saveRDS</code>
-function allows us to save each of the model objects as rds files to the
-location specified. An alternative to save the models individually to
-file is to save them to elements within a <code class="highlighter-rouge">list</code>. When dealing with very
-large numbers of models and additionally are complex in terms of their
-parameterizations, the save to <code class="highlighter-rouge">list</code> elements alternative could run
-into computer memory limitation issues. The last section of the script
-below just demonstrates the use of the <code class="highlighter-rouge">list.files</code> functions to confirm
-that we have saved those models to file and they are ready to use.</p>
+<p>Note that the nature of the data sometimes make demonstration of an example a little difficult. Subsequently, some prior analysis was performed of the model fitting in order to ensure that at least one data partition was formed. Therefore using the below data configuration as defined through the <code class="highlighter-rouge">set.seed(1000)</code> randomisation setting and specific covariate data selections should yield two cubist model partitions or rulesets.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Number of bootstraps</span><span class="w">
-</span><span class="n">nbag</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">50</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Cubist model</span><span class="w">
+</span><span class="n">hv.cub.Exp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cubist</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_cal</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w">
+</span><span class="n">cubistControl</span><span class="p">(</span><span class="n">unbiased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">extrapolation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"outcome"</span><span class="p">),</span><span class="w"> </span><span class="n">committees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># Fit cubist models for each bootstrap</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">Cubist</span><span class="p">)</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nbag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="c1"># sample with replacement</span><span class="w">
-    </span><span class="n">trainingREP</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample.int</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">cDat</span><span class="p">),</span><span class="w"> </span><span class="n">replace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-    
-    </span><span class="c1"># unique cases</span><span class="w">
-    </span><span class="n">trainingREP</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">unique</span><span class="p">(</span><span class="n">trainingREP</span><span class="p">)</span><span class="w">
-    
-    </span><span class="n">fit_cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cubist</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cDat</span><span class="p">[</span><span class="n">trainingREP</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Terrain_Ruggedness_Index"</span><span class="p">,</span><span class="w"> </span><span class="s2">"AACN"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Landsat_Band1"</span><span class="p">,</span><span class="w"> 
-        </span><span class="s2">"Elevation"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Hillshading"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Light_insolation"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mid_Slope_Positon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"MRVBF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"NDVI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TWI"</span><span class="p">,</span><span class="w"> 
-        </span><span class="s2">"Slope"</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cDat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="n">trainingREP</span><span class="p">],</span><span class="w"> </span><span class="n">cubistControl</span><span class="p">(</span><span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">extrapolation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">committees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
-    
-    </span><span class="c1">### Note you will likely have different file path names ###</span><span class="w">
-    </span><span class="n">modelFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"models/bootMod_"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">".rds"</span><span class="p">)</span><span class="w">
-    
-    </span><span class="n">saveRDS</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">modelFile</span><span class="p">)</span><span class="w">
-</span><span class="p">}</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">hv.cub.Exp</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># list all files in directory Note you will likely have different file path names ###</span><span class="w">
-</span><span class="n">c.models</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"models/"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\\.rds$"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span><span class="n">head</span><span class="p">(</span><span class="n">c.models</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## [1] "~/uncertaintyanalysis/bootstrap/models//bootMod_1.rds" </span><span class="w">
-</span><span class="c1">## [2] "~/uncertaintyanalysis/bootstrap/models//bootMod_10.rds"</span><span class="w">
-</span><span class="c1">## [3] "~/uncertaintyanalysis/bootstrap/models//bootMod_11.rds"</span><span class="w">
-</span><span class="c1">## [4] "~/uncertaintyanalysis/bootstrap/models//bootMod_12.rds"</span><span class="w">
-</span><span class="c1">## [5] "~/uncertaintyanalysis/bootstrap/models//bootMod_13.rds"</span><span class="w">
-</span><span class="c1">## [6] "~/uncertaintyanalysis/bootstrap/models//bootMod_14.rds"</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Call:</span><span class="w">
+</span><span class="c1">## cubist.default(x = DSM_data_cal[, c(5, 11, 13, 15)], y</span><span class="w">
+</span><span class="c1">##  = DSM_data_cal$pH60_100cm, committees = 1, control = cubistControl(unbiased</span><span class="w">
+</span><span class="c1">##  = TRUE, rules = 10, extrapolation = 5, sample = 0, label = "outcome"))</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Cubist [Release 2.07 GPL Edition]  Wed Sep 20 22:20:07 2023</span><span class="w">
+</span><span class="c1">## ---------------------------------</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##     Target attribute `outcome'</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Read 354 cases (5 attributes) from undefined.data</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Model:</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##   Rule 1: [336 cases, mean 6.443, range 3.44 to 9.74, est err 1.025]</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##     if</span><span class="w">
+</span><span class="c1">##  MRVBF &gt; 0.004846</span><span class="w">
+</span><span class="c1">##     then</span><span class="w">
+</span><span class="c1">##  outcome = 3.978 + 0.028 AACN + 0.38 MRVBF + 0.082 TWI + 0.04 Slope</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##   Rule 2: [18 cases, mean 8.018, range 6.26 to 9.45, est err 0.434]</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##     if</span><span class="w">
+</span><span class="c1">##  MRVBF &lt;= 0.004846</span><span class="w">
+</span><span class="c1">##     then</span><span class="w">
+</span><span class="c1">##  outcome = 8.686 + 471.23 MRVBF - 0.0236 AACN</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Evaluation on training data (354 cases):</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##     Average  |error|              1.222</span><span class="w">
+</span><span class="c1">##     Relative |error|               1.08</span><span class="w">
+</span><span class="c1">##     Correlation coefficient        0.22</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##  Attribute usage:</span><span class="w">
+</span><span class="c1">##    Conds  Model</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">##    100%   100%    MRVBF</span><span class="w">
+</span><span class="c1">##           100%    AACN</span><span class="w">
+</span><span class="c1">##            95%    Slope</span><span class="w">
+</span><span class="c1">##            95%    TWI</span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## </span><span class="w">
+</span><span class="c1">## Time: 0.0 secs</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We can then assess the goodness of fit and validation statistics of the
-bootstrap models. This is done using the <code class="highlighter-rouge">goof</code> function as in previous
-examples. This time we incorporate that function within a <code class="highlighter-rouge">for</code> loop.
-For each loop, we read in the model via the <code class="highlighter-rouge">radRDS</code> function and then
-save the diagnostics to the <code class="highlighter-rouge">cubiMat</code> matrix object. After the
-iterations are completed, we use the <code class="highlighter-rouge">colMeans</code> function to calculate
-the means of the diagnostics over the 50 model iterations. You could
-also assess the variance of those means by a command such as
-<code class="highlighter-rouge">var(cubiDat[,1])</code>, which would return the variance of the
-<em>R</em><sup>2</sup> values.</p>
+<p>Assessing the goodness of fit of this model, we use the <code class="highlighter-rouge">goof</code> function.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># calibration data</span><span class="w">
-</span><span class="n">cubiMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nbag</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nbag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">fit_cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readRDS</span><span class="p">(</span><span class="n">c.models</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
-    </span><span class="n">cubiMat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.matrix</span><span class="p">(</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cDat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cDat</span><span class="p">)))</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span><span class="n">cubiDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">cubiMat</span><span class="p">)</span><span class="w">
-</span><span class="nf">names</span><span class="p">(</span><span class="n">cubiDat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"R2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"concordance"</span><span class="p">,</span><span class="w"> </span><span class="s2">"MSE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"RMSE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bias"</span><span class="p">)</span><span class="w">
-</span><span class="n">colMeans</span><span class="p">(</span><span class="n">cubiDat</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## goodness of fit (calibration)</span><span class="w">
+</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.cub.Exp</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_cal</span><span class="p">))</span><span class="w">
 
-</span><span class="c1">##          R2 concordance         MSE        RMSE        bias </span><span class="w">
-</span><span class="c1">##   0.2317208   0.3966600   1.4491123   1.2036320  -0.1056484</span><span class="w">
-
-</span><span class="c1"># Validation data</span><span class="w">
-</span><span class="n">cubPred.V</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nbag</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">vDat</span><span class="p">))</span><span class="w">
-</span><span class="n">cubiMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nbag</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nbag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">fit_cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readRDS</span><span class="p">(</span><span class="n">c.models</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
-    </span><span class="n">cubPred.V</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vDat</span><span class="p">)</span><span class="w">
-    </span><span class="n">cubiMat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.matrix</span><span class="p">(</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vDat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vDat</span><span class="p">)))</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span><span class="n">cubPred.V_mean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rowMeans</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">)</span><span class="w">
-
-</span><span class="n">cubiDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">cubiMat</span><span class="p">)</span><span class="w">
-</span><span class="nf">names</span><span class="p">(</span><span class="n">cubiDat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"R2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"concordance"</span><span class="p">,</span><span class="w"> </span><span class="s2">"MSE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"RMSE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bias"</span><span class="p">)</span><span class="w">
-</span><span class="n">colMeans</span><span class="p">(</span><span class="n">cubiDat</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">##          R2 concordance         MSE        RMSE        bias </span><span class="w">
-</span><span class="c1">##  0.13384917  0.35375158  1.37133056  1.17048402  0.06049847</span><span class="w">
-
-</span><span class="c1"># Average validation MSE</span><span class="w">
-</span><span class="n">avGMSE</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">cubiDat</span><span class="p">[,</span><span class="w"> </span><span class="m">3</span><span class="p">])</span><span class="w">
-</span><span class="n">avGMSE</span><span class="w">
-
-</span><span class="c1">## [1] 1.371331</span><span class="w">
+</span><span class="c1">##          R2 concordance      MSE     RMSE         bias</span><span class="w">
+</span><span class="c1">## 1 0.2088674   0.3432409 1.458209 1.207563 0.0001963093</span><span class="w">
 </span></code></pre></div></div>
 
-<p>For the validation data, in addition to deriving the model diagnostic
-statistics, we are also saving the actual model predictions for these
-data for each iteration to the <code class="highlighter-rouge">cubPred.V</code> object. These will be used
-further on for validating the prediction uncertainties.</p>
+<p>Two things we want to save from this process are the model residuals and the expression for each data case as to which partition or ruleset it belongs to. To do this second step we need to take note of the partitioning variables and their threshold values and use indexing to attribute each case to its ruleset.</p>
 
-<p>The last line of the script above saves the mean of the mean square
-error (MSE) estimates from the validation data. The independent MSE
-estimator, accounts for both systematic and random errors in the
-modeling. This estimate of the MSE is needed for quantifying the
-uncertainties, as this error is in addition to that which are accounted
-for by the bootstrap model, which are specifically those associated with
-the deterministic model component i.e. the model relationship between
-target variable and the covariates. Subsequently an overall prediction
-variance (at each point or pixel) will be the sum of the random error
-component (MSE) and the bootstrap prediction variance (as estimated from
-the mean of the realisations from the bootstrap modeling).</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># append rule specification to data</span><span class="w">
+</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span><span class="w">
+</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">MRVBF</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.004846</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">MRVBF</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0.004846</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+
+</span><span class="c1">## Model residuals</span><span class="w">
+</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">residual</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.cub.Exp</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_cal</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="spatial-mapping-">Spatial mapping <a id="s-3"></a></h3>
+<h3 id="within-ruleset-prediction-limits-">Within ruleset prediction limits <a id="s-3"></a></h3>
 
-<p>Our initial purpose here is to derive the mean and the variance of the
-predictions from each bootstrap sample. This requires loading in each
-bootstrap model, applying into the covariate data, then saving the
-predicted map to file or R memory. In the case below the predictions are
-saved to file. This is illustrated in the following script:</p>
+<p>With a model defined, it is now necessary to estimate the within partition prediction limits. While we may only want to map the lower 5<sup>th</sup> and upper 95<sup>th</sup> prediction limits, we also want to get at the sensitivity of the uncertainty quantifications which calls for the evaluation of quantiles for a range of confidence levels (in this case sequentially from 5% to 99%) for calculation of the PICP. This is done using the <code class="highlighter-rouge">quantile</code> function and is performed for each ruleset.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### Note you will likely have different file path names ###</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nbag</span><span class="p">){</span><span class="w">
-  </span><span class="n">fit_cubist</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readRDS</span><span class="p">(</span><span class="n">c.models</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
-  </span><span class="n">mapFile</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="s2">"maps/bootMap_"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">".tif"</span><span class="p">)</span><span class="w">
-  
-  </span><span class="n">predict</span><span class="p">(</span><span class="n">hunterCovariates_sub</span><span class="p">,</span><span class="w"> </span><span class="c1"># raster stack </span><span class="w">
-          </span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="c1"># model</span><span class="w">
-          </span><span class="n">filename</span><span class="o">=</span><span class="n">mapFile</span><span class="p">,</span><span class="w"> </span><span class="c1"># export file</span><span class="w">
-          </span><span class="n">format</span><span class="o">=</span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="c1"># file format</span><span class="w">
-          </span><span class="n">overwrite</span><span class="o">=</span><span class="nb">T</span><span class="p">)}</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># distribution of residuals in each rule set</span><span class="w">
+</span><span class="n">hist</span><span class="p">(</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">residual</span><span class="p">[</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Residuals ruleset 1"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">hist</span><span class="p">(</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">residual</span><span class="p">[</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Residuals ruleset 2"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Quantiles of residual distribution within each ruleset Rule 1</span><span class="w">
+</span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">quantile</span><span class="p">(</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">residual</span><span class="p">[</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">probs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.005</span><span class="p">,</span><span class="w"> </span><span class="m">0.995</span><span class="p">,</span><span class="w"> </span><span class="m">0.0125</span><span class="p">,</span><span class="w"> </span><span class="m">0.9875</span><span class="p">,</span><span class="w"> </span><span class="m">0.025</span><span class="p">,</span><span class="w"> </span><span class="m">0.975</span><span class="p">,</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="m">0.9</span><span class="p">,</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="m">0.4</span><span class="p">,</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="m">0.45</span><span class="p">,</span><span class="w"> </span><span class="m">0.55</span><span class="p">,</span><span class="w"> </span><span class="m">0.475</span><span class="p">,</span><span class="w"> </span><span class="m">0.525</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">)</span><span class="w">
+</span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="w">
+
+</span><span class="c1">##        0.5%       99.5%       1.25%      98.75%        2.5%       97.5% </span><span class="w">
+</span><span class="c1">## -2.35907828  3.18669415 -2.11623531  3.10336920 -1.90018377  2.91098968 </span><span class="w">
+</span><span class="c1">##          5%         95%         10%         90%         20%         80% </span><span class="w">
+</span><span class="c1">## -1.69229583  2.44896853 -1.39467810  1.77711057 -1.05917666  1.03383651 </span><span class="w">
+</span><span class="c1">##         30%         70%         40%         60%         45%         55% </span><span class="w">
+</span><span class="c1">## -0.79152037  0.59774065 -0.56821804  0.15932105 -0.35169148 -0.01512939 </span><span class="w">
+</span><span class="c1">##       47.5%       52.5% </span><span class="w">
+</span><span class="c1">## -0.29393916 -0.12533224</span><span class="w">
+
+</span><span class="c1"># Rule 2</span><span class="w">
+</span><span class="n">r</span><span class="m">2</span><span class="n">.q</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">quantile</span><span class="p">(</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">residual</span><span class="p">[</span><span class="n">DSM_data_cal</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">probs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.005</span><span class="p">,</span><span class="w"> </span><span class="m">0.995</span><span class="p">,</span><span class="w"> </span><span class="m">0.0125</span><span class="p">,</span><span class="w"> </span><span class="m">0.9875</span><span class="p">,</span><span class="w"> </span><span class="m">0.025</span><span class="p">,</span><span class="w"> </span><span class="m">0.975</span><span class="p">,</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="m">0.9</span><span class="p">,</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="m">0.4</span><span class="p">,</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="m">0.45</span><span class="p">,</span><span class="w"> </span><span class="m">0.55</span><span class="p">,</span><span class="w"> </span><span class="m">0.475</span><span class="p">,</span><span class="w"> </span><span class="m">0.525</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">)</span><span class="w">
+</span><span class="n">r</span><span class="m">2</span><span class="n">.q</span><span class="w">
+
+</span><span class="c1">##        0.5%       99.5%       1.25%      98.75%        2.5%       97.5% </span><span class="w">
+</span><span class="c1">## -0.91812929  0.78924818 -0.85184640  0.73841167 -0.74137491  0.65368415 </span><span class="w">
+</span><span class="c1">##          5%         95%         10%         90%         20%         80% </span><span class="w">
+</span><span class="c1">## -0.52043193  0.48422911 -0.37243120  0.36673757 -0.29524641  0.17231533 </span><span class="w">
+</span><span class="c1">##         30%         70%         40%         60%         45%         55% </span><span class="w">
+</span><span class="c1">## -0.16111519  0.13421975 -0.05547775  0.10625404  0.05552533  0.09982510 </span><span class="w">
+</span><span class="c1">##       47.5%       52.5% </span><span class="w">
+</span><span class="c1">##  0.09317083  0.09703764</span><span class="w">
 </span></code></pre></div></div>
 
-<p>To evaluate the mean at each pixel from each of the created maps, the
-base function <code class="highlighter-rouge">mean</code> can be applied to a given stack of rasters. First
-we need to get the path location of the rasters. Notice from the
-<code class="highlighter-rouge">list.files</code> function and the <code class="highlighter-rouge">pattern</code> parameter, we are restricting
-the search of rasters that contain the string “bootMap”. Next we make a
-stack of those rasters, followed by the calculation of the mean, which
-is also written directly to file.</p>
+<p>Despite many more cases belong to one ruleset compared to the other, the prediction limits for each partition of the data are quite different from each other. This goes some way to understanding that prediction uncertainty ranges are certainly not spatially uniform. In some areas of the landscape we might expect to predict some soil attribute rather accurately, but in other landscape positions the relationships are more complex.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Pathway to rasters Note you will likely have different file path names ###</span><span class="w">
-</span><span class="n">files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bootMap"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+<p><a href="#top">Back to top</a></p>
 
-</span><span class="c1"># Raster stack</span><span class="w">
-</span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">files</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">files</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<h3 id="mapping-predictions-and-model-uncertainties-">Mapping predictions and model uncertainties <a id="s-4"></a></h3>
 
-</span><span class="c1"># Calculate mean</span><span class="w">
-</span><span class="n">meanFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/meanPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.mean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meanFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+<p>The creation of the model prediction map brings no new surprises in approach. For the mapping of prediction limits however, we basically need to partition the map area based on the given variables and their thresholds, and then within each area, apply the specific model error ranges for the 90% confidence level. The <code class="highlighter-rouge">terra::ifel</code> function is particularly helpful in advancing this process.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## MAPPING cubist model prediction</span><span class="w">
+</span><span class="n">map.cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.cub.Exp</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># note there is a need to mask are the area outside soil mapping boundary</span><span class="w">
+</span><span class="n">msk</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">ifel</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">[[</span><span class="m">1</span><span class="p">]]),</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">map.cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">mask</span><span class="p">(</span><span class="n">map.cubist</span><span class="p">,</span><span class="w"> </span><span class="n">msk</span><span class="p">,</span><span class="w"> </span><span class="n">inverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># map the rule set distribution</span><span class="w">
+</span><span class="n">mapped.ruleset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ifel</span><span class="p">(</span><span class="n">hv.sub.rasters</span><span class="p">[[</span><span class="s2">"MRVBF"</span><span class="p">]]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.004846</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># upper and lower prediction intervals upper</span><span class="w">
+</span><span class="n">map.cubist.upl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">ifel</span><span class="p">(</span><span class="n">mapped.ruleset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">map.cubist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="p">[</span><span class="m">8</span><span class="p">],</span><span class="w"> </span><span class="n">map.cubist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="m">2</span><span class="n">.q</span><span class="p">[</span><span class="m">8</span><span class="p">])</span><span class="w">
+
+</span><span class="c1"># lower</span><span class="w">
+</span><span class="n">map.cubist.lpl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">ifel</span><span class="p">(</span><span class="n">mapped.ruleset</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">map.cubist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="p">[</span><span class="m">7</span><span class="p">],</span><span class="w"> </span><span class="n">map.cubist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="m">2</span><span class="n">.q</span><span class="p">[</span><span class="m">7</span><span class="p">])</span><span class="w">
+
+</span><span class="c1"># Prediction interval range</span><span class="w">
+</span><span class="n">map.cubist.pir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">map.cubist.upl</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">map.cubist.lpl</span><span class="w">
 </span></code></pre></div></div>
 
-<p>There is not a simple <code class="highlighter-rouge">R</code> function to use in order to estimate the
-variance at each pixel from the prediction maps. Therefore we resort to
-estimating it directly from the standard equation:</p>
+<p>Plotting each of the maps.</p>
 
-<p>$Var(X) = \frac{1}{1-n}\sum_{i=1}^{n}(x_{i}-\mu)^{2}$</p>
-
-<p>The symbol <em>μ</em> in this case is the mean bootstrap prediction, and
-<em>x</em><sub><em>i</em></sub> is the <em>ith</em> bootstrap map. In the first step below,
-we estimate the square differences and save the maps to file. Then we
-calculate the sum of those squared differences, before deriving the
-variance prediction. The last step is to add the variance of the
-bootstrap predictions to the averaged MSE estimated from the validation
-data.</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Square differences</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">files</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
-    </span><span class="n">diffFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/bootAbsDif_"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="s2">".tif"</span><span class="p">)</span><span class="w">
-    </span><span class="n">jj</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bootMap.mean</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="w">
-    </span><span class="n">writeRaster</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diffFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span><span class="c1"># calculate the sum of square differences Look for files with the bootAbsDif character string in file</span><span class="w">
-</span><span class="c1"># name</span><span class="w">
-</span><span class="n">files2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bootAbsDif"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span><span class="c1"># stack</span><span class="w">
-</span><span class="n">r</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">files2</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">files2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">r</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">files2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span><span class="n">sqDiffFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/sqDiffPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.sqDiff</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">r</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqDiffFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-
-
-</span><span class="c1"># Variance</span><span class="w">
-</span><span class="n">varFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/varPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">(((</span><span class="m">1</span><span class="o">/</span><span class="p">(</span><span class="n">nbag</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bootMap.sqDiff</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Overall prediction variance</span><span class="w">
-</span><span class="n">varFile2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/varPredF.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.varF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">((</span><span class="n">bootMap.var</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">avGMSE</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
-
-<p>To derive to 90% prediction interval we take the square root of the
-variance estimate and multiply that value by the quantile function value
-that corresponds to a 90% probability. The <em>z</em> value is obtained using
-the <code class="highlighter-rouge">qnorm</code> function. The result is then either added or subtracted to
-the mean prediction in order to generate the upper and lower prediction
-limits respectively.</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Standard deviation</span><span class="w">
-</span><span class="n">sdFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/sdPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.sd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">bootMap.varF</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># standard error</span><span class="w">
-</span><span class="n">seFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/sePred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.se</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">((</span><span class="n">bootMap.sd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">qnorm</span><span class="p">(</span><span class="m">0.95</span><span class="p">)),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-
-
-</span><span class="c1"># upper prediction limit</span><span class="w">
-</span><span class="n">uplFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/uplPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.upl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">((</span><span class="n">bootMap.mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bootMap.se</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uplFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># lower prediction limit</span><span class="w">
-</span><span class="n">lplFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/lplPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.lpl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">((</span><span class="n">bootMap.mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bootMap.se</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lplFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># prediction interval range</span><span class="w">
-</span><span class="n">pirFile</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="s2">"maps/pirPred.tif"</span><span class="p">)</span><span class="w">
-</span><span class="n">bootMap.pir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">writeRaster</span><span class="p">((</span><span class="n">bootMap.upl</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bootMap.lpl</span><span class="p">),</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pirFile</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
-</span></code></pre></div></div>
-
-<p>As for the Universal kriging example, we can plot the associated maps of
-the predictions and quantified uncertainties (Figure below)</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">phCramp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#d53e4f"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#f46d43"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#fdae61"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#fee08b"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#ffffbf"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#e6f598"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#abdda4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#66c2a5"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"#3288bd"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#5e4fa2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#542788"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2d004b"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## color ramp</span><span class="w">
+</span><span class="n">phCramp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#d53e4f"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#f46d43"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#fdae61"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#fee08b"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#ffffbf"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#e6f598"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#abdda4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#66c2a5"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#3288bd"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#5e4fa2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#542788"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2d004b"</span><span class="p">)</span><span class="w">
 </span><span class="n">brk</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">14</span><span class="p">)</span><span class="w">
 </span><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
-</span><span class="n">plot</span><span class="p">(</span><span class="n">bootMap.lpl</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"90% Lower prediction limit"</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brk</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phCramp</span><span class="p">)</span><span class="w">
-</span><span class="n">plot</span><span class="p">(</span><span class="n">bootMap.mean</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Prediction"</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brk</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phCramp</span><span class="p">)</span><span class="w">
-</span><span class="n">plot</span><span class="p">(</span><span class="n">bootMap.upl</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"90% Upper prediction limit"</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brk</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phCramp</span><span class="p">)</span><span class="w">
-</span><span class="n">plot</span><span class="p">(</span><span class="n">bootMap.pir</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Prediction limit range"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> 
-    </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">axes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+
+</span><span class="n">plot</span><span class="p">(</span><span class="n">map.cubist.lpl</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"90% Lower prediction limit"</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brk</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phCramp</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">map.cubist</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Prediction"</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brk</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phCramp</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">map.cubist.upl</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"90% Upper prediction limit"</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brk</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phCramp</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">map.cubist.pir</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Prediction limit range"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">axes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/uncert_bootmaps.png" alt="rconsole" />
-    <figcaption> Soil pH predictions and prediction limits derived using bootstrapping.</figcaption>
+<img src="/images/dsm_book/P7_mapping_partition.png" alt="rconsole" />
+<figcaption>
+Soil pH predictions, prediction limits and prediction interval range
+derived using cubist model and empirical data partition approach.
+</figcaption>
+</figure>
+
+<p>For interests sake the map of the spatial distribution of each ruleset
+is shown below. Only a relatively small area is attributed to ruleset 2.</p>
+
+<figure>
+<img src="/images/dsm_book/P7_partition_map_ruleset.png" alt="rconsole" />
+<figcaption>
+Spatial distributions of fitted cubist model rulesets.
+</figcaption>
 </figure>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="validating-the-quantification-of-uncertainty-">Validating the quantification of uncertainty <a id="s-4"></a></h3>
+<h3 id="evaluating-the-quantification-of-uncertainties-">Evaluating the quantification of uncertainties <a id="s-1"></a></h3>
 
-<p>You will recall the bootstrap model predictions on the validation data
-were saved to the <code class="highlighter-rouge">cubPred.V</code> object. We want estimate the standard
-deviation of those predictions for each point. Also recall that the
-prediction variance is the sum of the MSE and the bootstrap models
-prediction variance. Taking the square root of that summation results in
-standard deviation estimate.</p>
+<p>For out-of-bag model evaluation we assess both the quality of the predictions and the quantification of uncertainty. Below we assess the validation of the cubist model.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">val.sd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">))</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">val.sd</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">avGMSE</span><span class="p">)}</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Model evaluation with out-of-bag cases Cubist model prediction</span><span class="w">
+</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">model_pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.cub.Exp</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Evaluation</span><span class="w">
+</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">model_pred</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##          R2 concordance      MSE    RMSE       bias</span><span class="w">
+</span><span class="c1">## 1 0.1387573    0.274822 1.494898 1.22266 0.09989099</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We then need to multiply the standard deviation by the corresponding
-percentile of the standard normal distribution in order to express the
-prediction limits at each level of confidence. Note the use of the <code class="highlighter-rouge">for</code>
-loop and the associated cycling through of the different percentile
-values.</p>
+<p>The first step in estimating the uncertainty about the validation points
+is to evaluate which ruleset each case belongs to.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Percentiles of normal distribution</span><span class="w">
-</span><span class="n">qp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">qnorm</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0.995</span><span class="p">,</span><span class="w"> </span><span class="m">0.9875</span><span class="p">,</span><span class="w"> </span><span class="m">0.975</span><span class="p">,</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="m">0.9</span><span class="p">,</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="m">0.55</span><span class="p">,</span><span class="w"> </span><span class="m">0.525</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># append rule specification to data</span><span class="w">
+</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span><span class="w">
+</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">MRVBF</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.004846</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">MRVBF</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0.004846</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">as.factor</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="p">))</span><span class="w">
 
-</span><span class="c1"># zfactor multiplication</span><span class="w">
-</span><span class="n">vMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">vMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">val.sd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">qp</span><span class="p">[</span><span class="n">i</span><span class="p">]}</span><span class="w">
+</span><span class="c1">##   1   2 </span><span class="w">
+</span><span class="c1">## 145   7</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now we add or subtract the limits to/from the averaged model predictions
-to derive to prediction limits for each level of confidence.</p>
+<p>Then we can define the prediction interval that corresponds to each
+observation for each level of confidence.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># upper prediction limit</span><span class="w">
-</span><span class="n">uMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">uMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cubPred.V_mean</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]}</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># upper and lower prediction limits upper</span><span class="w">
+</span><span class="n">ulMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="p">))</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">ulMat</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w">
+</span><span class="n">ulMat</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">r</span><span class="m">2</span><span class="n">.q</span><span class="p">[</span><span class="n">i</span><span class="p">]}</span><span class="w">
 
-</span><span class="c1"># lower prediction limit</span><span class="w">
-</span><span class="n">lMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">lMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cubPred.V_mean</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]}</span><span class="w">
+</span><span class="c1"># lower</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">ulMat</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w">
+</span><span class="n">ulMat</span><span class="p">[</span><span class="n">which</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">r</span><span class="m">2</span><span class="n">.q</span><span class="p">[</span><span class="n">i</span><span class="p">]}</span><span class="w">
+
+</span><span class="c1"># upper and lower prediction limits</span><span class="w">
+</span><span class="n">ULpreds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ulMat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">model_pred</span><span class="w">
+</span><span class="n">ULpreds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">ULpreds</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">ULpreds</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="n">.q</span><span class="p">)</span><span class="w">
+</span><span class="n">DSM_data_val</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="p">,</span><span class="w"> </span><span class="n">ULpreds</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now we assess the PICP for each level confidence. Recalling that we are
-simply assessing whether the observed value is encapsulated by the
-corresponding prediction limits, then calculating the proportion of
-agreement to total number of observations.</p>
+<p>The PICP estimates appear to correspond quite well with the respective
+confidence levels. This can be observed from the plot on Figure below
+too.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">cubPred.V</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">qp</span><span class="p">))</span><span class="w">
-</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">ncol</span><span class="p">(</span><span class="n">bMat</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="n">bMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">vDat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">uMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">vDat</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">lMat</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">])</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># PICP</span><span class="w">
+</span><span class="n">bMat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">ULpreds</span><span class="p">),</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ncol</span><span class="p">(</span><span class="n">ULpreds</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="n">cnt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="n">bMat</span><span class="p">[,</span><span class="w"> </span><span class="n">cnt</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">ULpreds</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">ULpreds</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">])</span><span class="w">
+</span><span class="n">cnt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">}</span><span class="w">
 
-</span><span class="n">colSums</span><span class="p">(</span><span class="n">bMat</span><span class="p">)</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">bMat</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">##  [1] 0.98684211 0.97368421 0.96710526 0.92105263 0.84868421 0.63157895 0.43421053 0.20394737</span><span class="w">
-</span><span class="c1">##  [9] 0.10526316 0.05263158</span><span class="w">
-</span></code></pre></div></div>
-
-<p>As can be seen on the Figure below that there is an indication that the
-prediction uncertainties could be a little too liberally defined, where
-particularly at the higher level of confidence the associated PICP is
-higher.</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># make plot</span><span class="w">
-</span><span class="n">cs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">99</span><span class="p">,</span><span class="w"> </span><span class="m">97.5</span><span class="p">,</span><span class="w"> </span><span class="m">95</span><span class="p">,</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">  </span><span class="c1"># confidence level</span><span class="w">
-</span><span class="n">plot</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="n">colSums</span><span class="p">(</span><span class="n">bMat</span><span class="p">)</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">bMat</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">))</span><span class="w">
+</span><span class="c1"># plotting</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+</span><span class="n">cs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">99</span><span class="p">,</span><span class="w"> </span><span class="m">97.5</span><span class="p">,</span><span class="w"> </span><span class="m">95</span><span class="p">,</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="w"> </span><span class="p">((</span><span class="n">colSums</span><span class="p">(</span><span class="n">bMat</span><span class="p">)</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">bMat</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">),</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"PICP"</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"confidence level"</span><span class="p">)</span><span class="w">
+</span><span class="c1"># draw 1:1 line</span><span class="w">
+</span><span class="n">abline</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/PICP_boot.png" alt="rconsole" />
-    <figcaption> Plot of PICP and confidence level based on validation of bootstrapping model.</figcaption>
+<img src="/images/dsm_book/PICP_partition.png" alt="rconsole" />
+<figcaption>
+Plot of PICP and confidence level based on cubist model and data
+partition uncertainty approach.
+</figcaption>
 </figure>
 
-<p>Quantiles of the distribution of the prediction limit range are express
-below for the validation data (in terms of the 90% level of confidence).
-Compared to the universal kriging approach, the uncertainties quantified
-from the bootstrapping approach are higher in general.</p>
+<p>Looking at the quantiles of the prediction interval ranges we can see the effect that data partitioning has which is distinct grouping of the uncertainty.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">99</span><span class="p">,</span><span class="w"> </span><span class="m">97.5</span><span class="p">,</span><span class="w"> </span><span class="m">95</span><span class="p">,</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">  </span><span class="c1"># confidence level</span><span class="w">
-</span><span class="n">colnames</span><span class="p">(</span><span class="n">lMat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cs</span><span class="w">
-</span><span class="n">colnames</span><span class="p">(</span><span class="n">uMat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cs</span><span class="w">
-</span><span class="n">quantile</span><span class="p">(</span><span class="n">uMat</span><span class="p">[,</span><span class="w"> </span><span class="s2">"90"</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lMat</span><span class="p">[,</span><span class="w"> </span><span class="s2">"90"</span><span class="p">])</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">quantile</span><span class="p">(</span><span class="n">ULpreds</span><span class="p">[,</span><span class="w"> </span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ULpreds</span><span class="p">[,</span><span class="w"> </span><span class="m">7</span><span class="p">])</span><span class="w">
 
 </span><span class="c1">##       0%      25%      50%      75%     100% </span><span class="w">
-</span><span class="c1">## 3.871776 3.905907 3.930499 3.985198 4.300110</span><span class="w">
+</span><span class="c1">## 1.004661 4.141264 4.141264 4.141264 4.141264</span><span class="w">
 </span></code></pre></div></div>
+
+<p>The demonstration of this method may not be too helpful with the data at hand, and this example should only be used for illustration of concept rather than as a promotion or demotion of the method. Due to the relatively small number of cases in ruleset 2 compared with ruleset 1, we might expect to observe clear differences in the confidence in the uncertainty quantification between the different rulesets.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># PICP by rule set for 90% confidence rule 1</span><span class="w">
+</span><span class="nf">sum</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">`95%`</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">`5%`</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+
+</span><span class="c1">## [1] 0.9241379</span><span class="w">
+
+</span><span class="c1"># rule 2</span><span class="w">
+</span><span class="nf">sum</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">`95%`</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">`5%`</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">])</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data_val</span><span class="p">[</span><span class="n">DSM_data_val</span><span class="o">$</span><span class="n">rule_spec</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+
+</span><span class="c1">## [1] 0.4285714</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Despite the small number of cases in ruleset two, we can still be encouraged that just under half the cases fit within their relatively narrow prediction envelopes for the 90% confidence level.</p>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="references-">References <a id="s-5"></a></h3>
+<h3 id="references">References</h3>
 
-<p>Efron, B., and R. Tibshirani. 1993. <em>An Introduction to the Bootstrap</em>.
-London: Chapman; Hall.</p>
-
-<p>Liddicoat, C., D. Maschmedt, D. Clifford, R. Searle, T. Herrmann, L.M.
-Macdonald, and J. Baldock. 2015. “Predictive Mapping of Soil Organic
-Carbon Stocks in South Australia’s Agricultural Zone.” <em>Soil Research</em>
-53: 956–73.</p>
-
-<p>Viscarra Rossel, R. A., C. Chen, M. J. Grundy, R. Searle, D. Clifford,
-and P. H. Campbell. 2015. “The Australian Three-Dimensional Soil Grid:
-Australia’s Contribution to the Globalsoilmap Project.” <em>Soil Research</em>
-53: 845–64.</p>
+<p>Malone, B P, B Minasny, N P Odgers, and A B McBratney. 2014. “Using
+Model Averaging to Combine Soil Property Rasters from Legacy Soil Maps
+and from Point Data.” <em>Geoderma</em> 232-234: 34–44.</p>
 
 <p><a href="#top">Back to top</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-11-24">November 24, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-20">September 20, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">

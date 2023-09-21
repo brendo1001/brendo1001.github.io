@@ -165,7 +165,13 @@
     </header>
     -->
     <div class="entry-content">
-      <ul>
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P6_SSPF_cate_2017_RF.R">Get the code used for this section
+here</a></p>
+
+<h2 id="random-forest-modelling">Random Forest modelling</h2>
+
+<ul>
   <li><a href="#s-1">Introduction</a></li>
   <li><a href="#s-2">Data preparation</a></li>
   <li><a href="#s-3">Model fitting</a></li>
@@ -175,89 +181,64 @@
 
 <h3 id="introduction-">Introduction <a id="s-1"></a></h3>
 
-<p>Here we will take another look at the Random Forest, which you may be
-familiar with now as this model type was examined during <a href="/DSM_book/pages/dsm_cont/sspfs/rf/">the continuous variable prediction methods section</a>.
-It can also be used for categorical variables. Some useful extractor
-functions like <code class="highlighter-rouge">print</code> and <code class="highlighter-rouge">importance</code> give some useful information
-about the model performance.</p>
+<p>Here we will take another look at the Random Forest, which you may be familiar with now as this model type was examined during <a href="/DSM_book/pages/dsm_cont/sspfs/rf/">the continuous variable prediction methods section</a>.</p>
+
+<p>This model type can also be used for categorical variables. Some useful extractor functions like <code class="highlighter-rouge">print</code> and <code class="highlighter-rouge">importance</code> give some useful information about the model performance.</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="data-preparation-">Data Preparation <a id="s-2"></a></h3>
 
-<p>The data to be used for the following modelling exercises are Terron
-classes as sampled from the map presented in Malone et al. (2014) .The
-sample data contains 1000 entries of which there are 12 different Terron
-classes. Before getting into the modeling, we first load in the data and
-then perform the covariate layer intersection using the suite of
-environmental variables contained in the <code class="highlighter-rouge">hunterCovariates</code> data object
-in the <code class="highlighter-rouge">ithir</code> package. The small selection of covariates cover an area
-of approximately 220<em>k**m</em><sup>2</sup> at a spatial resolution of 25m.
-They include those derived from a DEM: altitude above channel network
-(AACN), solar light insolation and terrain wetness index (TWI). Gamma
-radiometric data (total count) is also included together with a surface
-that depicts soil drainage in form of a continuous index (ranging from 0
-to 5). These 5 different covariate layers are stacked together via a
-<code class="highlighter-rouge">rasterStack</code>.</p>
+<p>As described earlier, the data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. 2014.The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="highlighter-rouge">ithir</code> package.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># libraries</span><span class="w">
+<p>The small selection of covariates cover an area of approximately 220km<sup>2</sup> at a spatial resolution of 25m. All these variables are derived primarily from an available digital elevation model.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Load R libraries</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">randomForest</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># load data</span><span class="w">
+</span><span class="c1"># point data of terron classifications</span><span class="w">
 </span><span class="n">data</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
-</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># environmental covariates grids (covariate rasters from ithir package)</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hunterCovariates_A"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w">
+
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">SpatialPointsDataFrame</code>.</p>
+<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to take place.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">names</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## [1] "x"      "y"      "terron"</span><span class="w">
-
-</span><span class="n">coordinates</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## coerce point data to spatial object</span><span class="w">
+</span><span class="n">hvTerronDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
-<p>As these data are of the same spatial projection as the
-<code class="highlighter-rouge">hunterCovariates</code>, there is no need to perform a coordinate
-transformation. So we can perform the intersection immediately.</p>
+<p>As these data are of the same spatial projection as the raster data, there is no need to perform a coordinate transformation. So we can perform the intersection immediately.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">,</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Covariate data extraction</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## 'data.frame':    1000 obs. of  8 variables:</span><span class="w">
-</span><span class="c1">##  $ x                : num  346535 334760 340910 336460 344510 ...</span><span class="w">
-</span><span class="c1">##  $ y                : num  6371940 6375840 6377690 6382040 6378116 ...</span><span class="w">
-</span><span class="c1">##  $ terron           : Factor w/ 12 levels "1","2","3","4",..: 3 4 12 5 6 11 3 10 3 5 ...</span><span class="w">
-</span><span class="c1">##  $ AACN             : num  37.544 25.564 32.865 0.605 9.516 ...</span><span class="w">
-</span><span class="c1">##  $ Drainage.Index   : num  4.72 4.78 2 4.19 4.68 ...</span><span class="w">
-</span><span class="c1">##  $ Light.Insolation : num  1690 1736 1712 1712 1677 ...</span><span class="w">
-</span><span class="c1">##  $ TWI              : num  11.5 13.8 13.4 18.6 19.8 ...</span><span class="w">
-</span><span class="c1">##  $ Gamma.Total.Count: num  380 407 384 388 454 ...</span><span class="w">
+</span><span class="c1">## 'data.frame':    1000 obs. of  9 variables:</span><span class="w">
 </span></code></pre></div></div>
+<p>It is always good practice to check to see if any of the observational data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
 
-<p>It is always good practice to check to see if any of the observational
-data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is
-<code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the
-extent of the covariate layers. It is best to remove these observations
-from the data set.</p>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## remove missing data</span><span class="w">
+</span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 
 </span><span class="c1">## integer(0)</span><span class="w">
 
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We will also subset the data for an external validation i.e. random hold
-back validation. Here 70% of the data for model calibration, leaving the
-other 30% for validation.</p>
+<p>We will also subset the data for an out-of-bag model evaluation using the random hold back strategy. Here 70% of the data for model calibration, leaving the other 30% for validation.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">655</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># create calibration/validation datasets</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Random holdback</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">655</span><span class="p">)</span><span class="w">
 </span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
@@ -265,60 +246,52 @@ other 30% for validation.</p>
 
 <h3 id="model-fitting-">Model fitting <a id="s-3"></a></h3>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">randomForest</span><span class="p">)</span><span class="w">
-
-</span><span class="c1">## randomForest 4.6-14</span><span class="w">
-
-</span><span class="c1">## Type rfNews() to see new features/changes/bug fixes.</span><span class="w">
-
-</span><span class="n">hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">randomForest</span><span class="p">(</span><span class="n">terron</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Drainage.Index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Light.Insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TWI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Gamma.Total.Count</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">ntree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="n">mtry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">randomForest</span><span class="p">(</span><span class="n">terron</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">hunterCovariates_A_AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_light_insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Slope</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TRI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TWI</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">ntree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="n">mtry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Some model summary diagnostics</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Output random forest model diognostics</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Output random forest model diagnostics</span><span class="w">
 </span><span class="n">print</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## Call:</span><span class="w">
-</span><span class="c1">##  randomForest(formula = terron ~ AACN + Drainage.Index + Light.Insolation +      TWI + Gamma.Total.Count, data = DSM_data[training, ], ntree = 500,      mtry = 5) </span><span class="w">
+
 </span><span class="c1">##                Type of random forest: classification</span><span class="w">
 </span><span class="c1">##                      Number of trees: 500</span><span class="w">
 </span><span class="c1">## No. of variables tried at each split: 5</span><span class="w">
 </span><span class="c1">## </span><span class="w">
-</span><span class="c1">##         OOB estimate of  error rate: 51.29%</span><span class="w">
+</span><span class="c1">##         OOB estimate of  error rate: 44.86%</span><span class="w">
 </span><span class="c1">## Confusion matrix:</span><span class="w">
-</span><span class="c1">##    1 2  3  4  5  6  7  8 9 10 11 12 class.error</span><span class="w">
-</span><span class="c1">## 1  4 3  2  7  0  0  0  0 3  0  0  0   0.7894737</span><span class="w">
-</span><span class="c1">## 2  4 1  2  1  0  0  0  0 1  0  0  0   0.8888889</span><span class="w">
-</span><span class="c1">## 3  1 0 39  7  0  0 17  0 0  0  3  5   0.4583333</span><span class="w">
-</span><span class="c1">## 4  6 1  6 16  0  0  6  2 4  0  1  1   0.6279070</span><span class="w">
-</span><span class="c1">## 5  0 0  1  1 56 14  3 11 0  4  2  0   0.3913043</span><span class="w">
-</span><span class="c1">## 6  0 0  0  0 10 48  0  8 0  1  0  0   0.2835821</span><span class="w">
-</span><span class="c1">## 7  0 0 15  3  3  0 75 16 1  3  2  4   0.3852459</span><span class="w">
-</span><span class="c1">## 8  0 0  0  4  8  5 18 63 1  5  5  0   0.4220183</span><span class="w">
-</span><span class="c1">## 9  2 0  4  5  9  0  7  4 7  3  5  0   0.8478261</span><span class="w">
-</span><span class="c1">## 10 1 0  0  0 11  2  7  9 0 19  2  3   0.6481481</span><span class="w">
-</span><span class="c1">## 11 0 0 12  1  2  1  3  8 2  1  1  2   0.9696970</span><span class="w">
-</span><span class="c1">## 12 0 0  3  0  1  0 14  0 0  3  1 12   0.6470588</span><span class="w">
+</span><span class="c1">##     1 2  3  4  5  6  7  8  9 10 11 12 class.error</span><span class="w">
+</span><span class="c1">## 1  11 1  0  3  0  0  1  0  3  0  0  0   0.4210526</span><span class="w">
+</span><span class="c1">## 2   1 5  3  0  0  0  0  0  0  0  0  0   0.4444444</span><span class="w">
+</span><span class="c1">## 3   0 1 50  4  0  0 11  1  0  0  3  2   0.3055556</span><span class="w">
+</span><span class="c1">## 4   4 1  8 15  0  0  6  2  7  0  0  0   0.6511628</span><span class="w">
+</span><span class="c1">## 5   0 0  0  0 66 10  1  4  4  7  0  0   0.2826087</span><span class="w">
+</span><span class="c1">## 6   0 0  0  0  9 50  0  6  0  2  0  0   0.2537313</span><span class="w">
+</span><span class="c1">## 7   0 0 11  1  5  0 68 21  3  6  2  5   0.4426230</span><span class="w">
+</span><span class="c1">## 8   0 0  2  2  2  5 16 74  1  2  5  0   0.3211009</span><span class="w">
+</span><span class="c1">## 9   3 0  0  3  5  0  4  3 28  0  0  0   0.3913043</span><span class="w">
+</span><span class="c1">## 10  1 0  0  1 16  3 11 12  0  9  0  1   0.8333333</span><span class="w">
+</span><span class="c1">## 11  0 0 14  0  1  0  4 11  0  2  1  0   0.9696970</span><span class="w">
+</span><span class="c1">## 12  0 0  7  0  1  0 14  1  0  2  0  9   0.7352941</span><span class="w">
 
 </span><span class="c1"># output relative importance of each covariate</span><span class="w">
 </span><span class="n">importance</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">##                   MeanDecreaseGini</span><span class="w">
-</span><span class="c1">## AACN                     116.97555</span><span class="w">
-</span><span class="c1">## Drainage.Index           127.87488</span><span class="w">
-</span><span class="c1">## Light.Insolation          85.14123</span><span class="w">
-</span><span class="c1">## TWI                      186.51138</span><span class="w">
-</span><span class="c1">## Gamma.Total.Count        104.81717</span><span class="w">
+</span><span class="c1">##                                     MeanDecreaseGini</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_AACN                     91.14576</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_elevation               123.87784</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_Hillshading              39.86235</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_light_insolation         48.61020</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_MRVBF                   101.80381</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_Slope                    38.30739</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_TRI                      49.58451</span><span class="w">
+</span><span class="c1">## hunterCovariates_A_TWI                     128.08997</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Three types of prediction outputs can be generated from Random Forest
-models, and are specified via the <code class="highlighter-rouge">type</code> parameter of the <code class="highlighter-rouge">predict</code>
-extractor functions. The different <code class="highlighter-rouge">types</code> are the <code class="highlighter-rouge">response</code> (predicted
-class), <code class="highlighter-rouge">prob</code> (class probabilities) or <code class="highlighter-rouge">vote</code> (vote count, which really
-just appears to return the probabilities).</p>
+<p>Three types of prediction outputs can be generated from Random Forest models, and are specified via the <code class="highlighter-rouge">type</code> parameter of the <code class="highlighter-rouge">predict</code> extractor functions. The different <code class="highlighter-rouge">types</code> are the <code class="highlighter-rouge">response</code> (predicted class), <code class="highlighter-rouge">prob</code> (class probabilities) or <code class="highlighter-rouge">vote</code> (vote count, which really just appears to return the probabilities).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prediction of classes [first 10 cases]</span><span class="w">
 </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"response"</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span><span class="w">
@@ -330,32 +303,27 @@ just appears to return the probabilities).</p>
 </span><span class="c1"># Class probabilities [first 10 cases]</span><span class="w">
 </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"prob"</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
 
-</span><span class="c1">##         1     2     3     4     5     6     7     8     9    10    11    12</span><span class="w">
-</span><span class="c1">## 366 0.006 0.000 0.094 0.010 0.000 0.000 0.024 0.000 0.004 0.002 0.020 0.840</span><span class="w">
-</span><span class="c1">## 79  0.000 0.000 0.000 0.002 0.058 0.000 0.140 0.778 0.000 0.012 0.010 0.000</span><span class="w">
-</span><span class="c1">## 946 0.000 0.000 0.000 0.018 0.060 0.008 0.614 0.128 0.016 0.112 0.044 0.000</span><span class="w">
-</span><span class="c1">## 148 0.000 0.000 0.000 0.000 0.820 0.010 0.000 0.082 0.064 0.022 0.000 0.002</span><span class="w">
-</span><span class="c1">## 710 0.002 0.004 0.904 0.012 0.000 0.000 0.048 0.000 0.014 0.000 0.014 0.002</span><span class="w">
-</span><span class="c1">## 729 0.000 0.000 0.000 0.000 0.294 0.698 0.000 0.006 0.000 0.002 0.000 0.000</span><span class="w">
-</span><span class="c1">## 848 0.000 0.000 0.000 0.000 0.886 0.028 0.000 0.000 0.006 0.080 0.000 0.000</span><span class="w">
-</span><span class="c1">## 20  0.000 0.000 0.000 0.000 0.058 0.856 0.000 0.074 0.000 0.002 0.010 0.000</span><span class="w">
-</span><span class="c1">## 923 0.000 0.000 0.002 0.040 0.032 0.038 0.040 0.122 0.008 0.040 0.678 0.000</span><span class="w">
-</span><span class="c1">## 397 0.004 0.000 0.112 0.008 0.618 0.000 0.030 0.008 0.022 0.074 0.044 0.080</span><span class="w">
+</span><span class="c1">##     1     2     3     4     5     6     7     8     9    10    11    12</span><span class="w">
+</span><span class="c1">## 366 0 0.000 0.102 0.000 0.000 0.000 0.042 0.004 0.000 0.006 0.022 0.824</span><span class="w">
+</span><span class="c1">## 79  0 0.000 0.000 0.028 0.002 0.000 0.086 0.786 0.002 0.078 0.014 0.004</span><span class="w">
+</span><span class="c1">## 946 0 0.000 0.000 0.014 0.052 0.000 0.704 0.168 0.004 0.044 0.008 0.006</span><span class="w">
+</span><span class="c1">## 148 0 0.000 0.000 0.000 0.800 0.012 0.002 0.002 0.176 0.006 0.000 0.002</span><span class="w">
+</span><span class="c1">## 710 0 0.002 0.842 0.042 0.000 0.000 0.070 0.002 0.002 0.000 0.024 0.016</span><span class="w">
+</span><span class="c1">## 729 0 0.000 0.000 0.000 0.290 0.686 0.000 0.004 0.002 0.018 0.000 0.000</span><span class="w">
+</span><span class="c1">## 848 0 0.000 0.000 0.000 0.946 0.002 0.000 0.002 0.002 0.048 0.000 0.000</span><span class="w">
+</span><span class="c1">## 20  0 0.000 0.000 0.000 0.098 0.894 0.000 0.000 0.000 0.004 0.004 0.000</span><span class="w">
+</span><span class="c1">## 923 0 0.000 0.004 0.022 0.006 0.002 0.052 0.190 0.000 0.020 0.700 0.004</span><span class="w">
+</span><span class="c1">## 397 0 0.000 0.026 0.020 0.664 0.002 0.066 0.020 0.000 0.156 0.026 0.020</span><span class="w">
 </span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="model-goodness-of-fit">Model goodness of fit<a id="s-4"></a></h3>
+<h3 id="model-goodness-of-fit-evaluation">Model goodness of fit evaluation<a id="s-4"></a></h3>
 
-<p>From the diagnostics output of the <code class="highlighter-rouge">hv.RF</code> model the confusion matrix is
-automatically generated, except it was a different orientation to what
-we have been looking for previous examples. This confusion matrix was
-performed on what is called the OOB or out-of-bag data i.e. it validates
-the model/s dynamically with observations withheld from the model fit.
-So lets just evaluate the model as we have done for the previous models.
-For calibration:</p>
+<p>From the diagnostics output of the <code class="highlighter-rouge">hv.RF</code> model the confusion matrix is automatically generated, except it was a different orientation to what we have been looking for previous examples. This confusion matrix was performed on what is called the OOB or out-of-bag data i.e. it validates the model/s dynamically with observations withheld from the model fit. So lets just evaluate the model as we have done for the previous models. For calibration:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">C.pred.hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Goodness of fit calibration</span><span class="w">
+</span><span class="n">C.pred.hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
 </span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C.pred.hv.RF</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## $confusion_matrix</span><span class="w">
@@ -388,86 +356,77 @@ For calibration:</p>
 </span><span class="c1">## [1] 1</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It seems quite incredible that this particular model is indicating a
-100% accuracy. Here it pays to look at the out-of-bag error of the
-<code class="highlighter-rouge">hv.RF</code> model for a better indication of the model goodness of fit. For
-the random holdback validation:</p>
+<p>It seems quite incredible that this particular model is indicating a 100% accuracy. Here it pays to look at the out-of-bag error of the <code class="highlighter-rouge">hv.RF</code> model for a better indication of the model goodness of fit. For the random holdback evaluation:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">V.pred.hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Goodness of fit out-of-bag</span><span class="w">
+</span><span class="n">V.pred.hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
 </span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V.pred.hv.RF</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## $confusion_matrix</span><span class="w">
-</span><span class="c1">##    1 2  3 4  5  6  7  8 9 10 11 12</span><span class="w">
-</span><span class="c1">## 1  5 1  0 1  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 2  1 0  0 0  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 3  0 1 18 7  0  0  5  1 4  0  2  1</span><span class="w">
-</span><span class="c1">## 4  2 1  0 9  0  1  1  2 1  0  0  0</span><span class="w">
-</span><span class="c1">## 5  0 0  0 0 23  3  1  3 5  0  2  0</span><span class="w">
-</span><span class="c1">## 6  0 0  0 1  5 18  0  3 1  0  0  0</span><span class="w">
-</span><span class="c1">## 7  0 0  4 5  3  0 34  7 2  7  6  4</span><span class="w">
-</span><span class="c1">## 8  0 0  0 2  6  2  8 19 2  3  2  2</span><span class="w">
-</span><span class="c1">## 9  0 1  0 3  0  0  0  1 4  0  0  0</span><span class="w">
-</span><span class="c1">## 10 0 0  1 0  3  1  1  2 0 11  0  1</span><span class="w">
-</span><span class="c1">## 11 0 0  2 4  0  0  1  3 1  1  3  0</span><span class="w">
-</span><span class="c1">## 12 0 0  2 0  0  0  2  0 0  2  0  3</span><span class="w">
+</span><span class="c1">##    1 2  3 4  5  6  7  8  9 10 11 12</span><span class="w">
+</span><span class="c1">## 1  5 0  0 1  0  0  0  0  1  0  0  0</span><span class="w">
+</span><span class="c1">## 2  1 0  0 0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 3  0 4 22 6  0  0  4  4  0  1  1  1</span><span class="w">
+</span><span class="c1">## 4  2 0  2 7  0  1  2  0  1  0  0  0</span><span class="w">
+</span><span class="c1">## 5  0 0  0 2 29  2  1  0  1  9  2  0</span><span class="w">
+</span><span class="c1">## 6  0 0  0 0  5 20  0  0  1  1  0  0</span><span class="w">
+</span><span class="c1">## 7  0 0  2 8  0  0 38  8  1  7  8  5</span><span class="w">
+</span><span class="c1">## 8  0 0  0 2  2  2  3 29  1  4  2  2</span><span class="w">
+</span><span class="c1">## 9  0 0  1 5  1  0  3  0 14  0  0  0</span><span class="w">
+</span><span class="c1">## 10 0 0  0 0  3  0  2  0  0  1  0  0</span><span class="w">
+</span><span class="c1">## 11 0 0  0 1  0  0  0  0  0  0  2  0</span><span class="w">
+</span><span class="c1">## 12 0 0  0 0  0  0  0  0  0  1  0  3</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $overall_accuracy</span><span class="w">
-</span><span class="c1">## [1] 49</span><span class="w">
+</span><span class="c1">## [1] 57</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $producers_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 63  0 67 29 58 72 65 47 20 46 20 28 </span><span class="w">
+</span><span class="c1">## 63  0 82 22 73 80 72 71 70  5 14 28 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $users_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 72  0 47 53 63 65 48 42 45 56 20 34 </span><span class="w">
+</span><span class="c1">## 72  0 52 47 64 75 50 62 59 17 67 75 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $kappa</span><span class="w">
-</span><span class="c1">## [1] 0.4224744</span><span class="w">
+</span><span class="c1">## [1] 0.5067225</span><span class="w">
 </span></code></pre></div></div>
 
-<p>So based on the model validation, the Random Forest performs quite
-similarly to the other models that were used before, despite a <em>perfect</em>
-performance based on the diagnostics of the calibration model.</p>
+<p>So based on the model validation, the Random Forest performs quite similarly to the other models that were used before, despite a <em>perfect</em> performance based on the diagnostics of the calibration model.</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="apply-model-spatially-">Apply model spatially <a id="s-5"></a></h3>
 
-<p>And finally the map that results from applying the <code class="highlighter-rouge">hv.RF</code> model to the
-covariate rasters.</p>
+<p>And finally the map that results from applying the <code class="highlighter-rouge">hv.RF</code> model to the covariate rasters.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># class prediction</span><span class="w">
-</span><span class="n">map.RF.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">covStack</span><span class="p">,</span><span class="w"> </span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hv_RF_class.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Apply model spatially class prediction</span><span class="w">
+</span><span class="n">map.RF.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.RF</span><span class="p">)</span><span class="w">
 
+</span><span class="c1">## plotting</span><span class="w">
 </span><span class="n">map.RF.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">map.RF.c</span><span class="p">)</span><span class="w">
-</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">map.RF.c</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
-</span><span class="n">rat</span><span class="p">[[</span><span class="s2">"terron"</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_002"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_009"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_011"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_012"</span><span class="p">)</span><span class="w">
-</span><span class="n">levels</span><span class="p">(</span><span class="n">map.RF.c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
 
-</span><span class="c1"># plot</span><span class="w">
-</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#38A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D7B09E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#B4D79E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFFF00"</span><span class="p">)</span><span class="w">
-</span><span class="n">rasterVis</span><span class="o">::</span><span class="n">levelplot</span><span class="p">(</span><span class="n">map.RF.c</span><span class="p">,</span><span class="w"> </span><span class="n">col.regions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span><span class="c1">## HEX colors</span><span class="w">
+</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#38A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D7B09E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#B4D79E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFFF00"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">terra</span><span class="o">::</span><span class="n">plot</span><span class="p">(</span><span class="n">map.RF.c</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">plg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_002"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_009"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_011"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_012"</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Terron Class"</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/CATrf.png" alt="rconsole" />
-    <figcaption> Hunter Valley Terron class map created using random forest model.</figcaption>
+<img src="/images/dsm_book/P6_rf_map.png" alt="rconsole" />
+<figcaption>
+Hunter Valley Terron class map created using random forest model.
+</figcaption>
 </figure>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="references">References</h3>
 
-<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for
-the Identification of Terrons in the Lower Hunter Valley, Australia.”
-<em>Geoderma Regional</em> 1: 31–47.</p>
+<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for the Identification of Terrons in the Lower Hunter Valley, Australia.” <em>Geoderma Regional</em> 1: 31–47.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-09-13">September 13, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-19">September 19, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">

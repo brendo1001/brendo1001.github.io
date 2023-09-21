@@ -167,23 +167,17 @@
     <div class="entry-content">
       <h3 id="model-validation-of-categorical-prediction-models">Model validation of categorical prediction models</h3>
 
-<p>The special characteristic of categorical data and its prediction within
-models, is that a class is either predicted or it is not. For binary
-variables. the prediction is either a <strong>yes</strong> or <strong>no</strong>, <strong>black</strong> or
-<strong>white</strong>, <strong>present</strong> or <strong>absent</strong> etc. For multinomial variables,
-there are more than 2 classes, for example either <strong>black</strong>, <strong>grey</strong>,
-or <strong>white</strong> etc. (which could actually be an ordinal categorical
-classification, rather than nominal).</p>
+<p><a href="#s-1">jump to the <code class="highlighter-rouge">R</code> stuff</a></p>
 
-<p>There is no in between; rather discrete entities. Exceptions are that
-some models do estimate the probability of the existence of a particular
-class, which will be touched on later. Additionally, there are methods
-of fuzzy classification which are common in the soil sciences (McBratney
-and Odeh 1997), but will not be covered till a bit later in the course.
-Discrete categories and models for their prediction require other
-measures of validation than those that were used for continuous
-variables. The most important quality measures are described in
-Congalton (1991) and include:</p>
+<p>The special characteristic of categorical data and its prediction within models, is that a class is either predicted or it is not. For binary variables. the prediction is either a <strong>yes</strong> or <strong>no</strong>, <strong>black</strong> or <strong>white</strong>, <strong>present</strong> or <strong>absent</strong> etc.</p>
+
+<p>For multinomial variables, there are more than 2 classes, for example either <strong>black</strong>, <strong>grey</strong>, or <strong>white</strong> etc. (which could actually be an ordinal categorical classification, rather than nominal).</p>
+
+<p>There is no in between; rather discrete entities. Exceptions are that some models do estimate the probability of the existence of a particular class, which will be touched on later.</p>
+
+<p>Additionally, there are methods of fuzzy classification which are common in the soil sciences (McBratney and Odeh 1997), but will not be covered till a bit later in the course.</p>
+
+<p>Discrete categories and models for their prediction require other measures of validation than those that were used for continuous variables. The most important quality measures are described in Congalton (1991) and include:</p>
 
 <ul>
   <li>Overall accuracy</li>
@@ -192,15 +186,12 @@ Congalton (1991) and include:</p>
   <li>Kappa coefficient of agreement</li>
 </ul>
 
-<p>Using a contrived example, each of these quality measures will be
-illustrated. We will make a 4 × 4 matrix, and call it <code class="highlighter-rouge">con.mat</code>, and
-append some column and row names — in this case <a href="https://www.clw.csiro.au/aclep/asc/index.htm">Australian Soil
-Classification</a> Order
-codes. We then populate the matrix with some more-or-less random
-integers.</p>
+<p>Using a contrived example, each of these quality measures will be illustrated. We will make a 4 × 4 matrix, and call it <code class="highlighter-rouge">con.mat</code>, and append some column and row names — in this case <a href="https://www.clw.csiro.au/aclep/asc/index.htm">Australian Soil Classification</a>  Order codes. We then populate the matrix with some more-or-less random integers.<a id="s-1"></a></p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">con.mat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create a confusion matrix of fake soil classifcation data </span><span class="w">
+</span><span class="n">con.mat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># append ASC Order classes</span><span class="w">
 </span><span class="n">rownames</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"DE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"VE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"KU"</span><span class="p">)</span><span class="w">
 </span><span class="n">colnames</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"DE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"VE"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CH"</span><span class="p">,</span><span class="w"> </span><span class="s2">"KU"</span><span class="p">)</span><span class="w">
 </span><span class="n">con.mat</span><span class="w">
@@ -212,12 +203,9 @@ integers.</p>
 </span><span class="c1">## KU  2  5  0 11</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">con.mat</code> takes the form of a confusion matrix, and ones such as this
-are often the output of a classification model. If we summed each of the
-columns (using the <code class="highlighter-rouge">colSums</code> function), we would obtain the total number
-of observations for each soil class. Having column sums reflecting the
-number of observations is a widely used convention in classification
-studies.</p>
+<p><code class="highlighter-rouge">con.mat</code> takes the form of a confusion matrix, and ones such as this are often the output of a classification model.</p>
+
+<p>If we summed each of the columns (using the <code class="highlighter-rouge">colSums</code> function), we would obtain the total number of observations for each soil class. Having column sums reflecting the number of observations is a widely used convention in classification studies.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w">
 
@@ -225,9 +213,7 @@ studies.</p>
 </span><span class="c1">##  8 20 32 23</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Similarly, if we summed each of the rows we would retrieve the total
-number of predictions of each soil class. The predictions could have
-been made through any sort of model or classification process.</p>
+<p>Similarly, if we summed each of the rows we would retrieve the total number of predictions of each soil class. The predictions could have been made through any sort of model or classification process.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rowSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w">
 
@@ -235,79 +221,54 @@ been made through any sort of model or classification process.</p>
 </span><span class="c1">##  5 26 34 18</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Therefore, the numbers on the diagonal of the matrix will indicate
-fidelity between the observed class and the subsequent prediction.
-Numbers on the off-diagonals indicate a mis-classification or error.
-Overall accuracy is therefore computed by dividing the total correct
-(i.e., the sum of the diagonal) by the total number of observations (sum
-of the column sums).</p>
+<p>Therefore, the numbers on the diagonal of the matrix will indicate fidelity between the observed class and the subsequent prediction. Numbers on the off-diagonals indicate a mis-classification or error. Overall accuracy is therefore computed by dividing the total correct (i.e., the sum of the diagonal) by the total number of observations (sum of the column sums).</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">ceiling</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">))</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Overall accuracy</span><span class="w">
+</span><span class="nf">ceiling</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">))</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## [1] 75</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Accuracy of individual classes can be computed in a similar manner.
-However, there is a choice of dividing the number of correct predictions
-for each class by either the totals (observations or predictions) in the
-corresponding columns or rows respectively. Traditionally, the total
-number of correct predictions of a class is divided by the total number
-of observations of that class (i.e. the column sum). This accuracy
-measure indicates the probability of an observation being correctly
-classified and is really a measure of omission error, or the <em>producer’s
-accuracy</em>. This is because the producer of the model is interested in
-how well a certain class can be predicted.</p>
+<p>Accuracy of individual classes can be computed in a similar manner. However, there is a choice of dividing the number of correct predictions for each class by either the totals (observations or predictions) in the corresponding columns or rows respectively.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">ceiling</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="o">/</span><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+<p>Traditionally, the total number of correct predictions of a class is divided by the total number of observations of that class (i.e. the column sum). This accuracy measure indicates the probability of an observation being correctly classified and is really a measure of omission error, or the <em>producer’s accuracy</em>. This is because the producer of the model is interested in how well a certain class can be predicted.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Producer's accuracy</span><span class="w">
+</span><span class="nf">ceiling</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="o">/</span><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## DE VE CH KU </span><span class="w">
 </span><span class="c1">## 63 75 97 48</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Alternatively, if the total number of correct predictions of a class is
-divided by the total number of predictions that were predicted in that
-category, then this result is a measure of commission error, or <em>user’s
-accuracy</em>. This measure is indicative of the probability that a
-prediction on the map actually represents that particular category on
-the ground or in the field.</p>
+<p>Alternatively, if the total number of correct predictions of a class is divided by the total number of predictions that were predicted in that category, then this result is a measure of commission error, or <em>user’s accuracy</em>. This measure is indicative of the probability that a prediction on the map actually represents that particular category on the ground or in the field.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">ceiling</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="o">/</span><span class="n">rowSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># User's accuracy</span><span class="w">
+</span><span class="nf">ceiling</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="o">/</span><span class="n">rowSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">##  DE  VE  CH  KU </span><span class="w">
 </span><span class="c1">## 100  58  92  62</span><span class="w">
 </span></code></pre></div></div>
 
-<p>So if we use the <code class="highlighter-rouge">DE</code> category as an example, the <em>model</em> predicts this
-class correctly 63% of the time, but when it is actually predicted it is
-correct 100% of the time.</p>
+<p>So if we use the <code class="highlighter-rouge">DE</code> category as an example, the <em>model</em> predicts this class correctly 63% of the time, but when it is actually predicted it is correct 100% of the time.</p>
 
-<p>The Kappa coefficient is another statistical measure of the fidelity
-between observations and predictions of a classification. The
-calculation is based on the difference between how much agreement is
-actually present (<em>observed</em> agreement) compared to how much agreement
-would be expected to be present by chance alone (<em>expected</em> agreement).
-The observed agreement is simply the overall accuracy percentage. We may
-also want to know how different the observed agreement is from the
-expected agreement. The Kappa coefficient is a measure of this
-difference, standardized to lie on a -1 to 1 scale, where 1 is perfect
-agreement, 0 is exactly what would be expected by chance, and negative
-values indicate agreement less than chance, i.e., potential systematic
-disagreement between observations and predictions. The Kappa coefficient
-is defined as:</p>
+<p>The Kappa coefficient is another statistical measure of the fidelity between observations and predictions of a classification.</p>
 
-<p><img src="https://latex.codecogs.com/svg.latex?K=%20\frac{p_{o}-p_{e}}{1-P_{e}}" alt="K= \frac{p_{o}-p_{e}}{1-P_{e}}" /></p>
+<p>The calculation is based on the difference between how much agreement is actually present (<em>observed</em> agreement) compared to how much agreement would be expected to be present by chance alone (<em>expected</em> agreement).</p>
 
-<p>where <em>p</em><sub><em>o</em></sub> is the overall or observed accuracy, and
-<em>p</em><sub><em>e</em></sub> is the expected accuracy, where:</p>
+<p>The observed agreement is simply the overall accuracy percentage. We may also want to know how different the observed agreement is from the expected agreement.</p>
 
-<p><img src="https://latex.codecogs.com/svg.latex?p_{e}=%20\sum_{i=1}^n(\frac{colSum_{i}}{TO})\times(\frac{rowSum_{i}}{TO})" alt="p_{e}= \sum_{i=1}^n(\frac{colSum_{i}}{TO})\times(\frac{rowSum_{i}}{TO})" /></p>
+<p>The Kappa coefficient is a measure of this difference, standardized to lie on a -1 to 1 scale, where 1 is perfect
+agreement, 0 is exactly what would be expected by chance, and negative values indicate agreement less than chance, i.e., potential systematic disagreement between observations and predictions. The Kappa coefficient is defined as:</p>
 
-<p><em>TO</em> is the total number of observations and <em>n</em> is the number of
-classes. Rather than scripting the above equations, the kappa
-coefficient together with the other accuracy measures are contained in a
-function called <code class="highlighter-rouge">goofcat</code> in the <code class="highlighter-rouge">ithir</code> package. As we already have a
-confusion matrix prepared, we can enter it directly into the function as
-in the script below.</p>
+<p><img src="https://latex.codecogs.com/svg.latex?K=%20\frac{p_{o}-p_{e}}{1-P_{e}}" alt="kappa coefficent" /></p>
+
+<p>where <em>p</em><sub><em>o</em></sub> is the overall or observed accuracy, and <em>p</em><sub><em>e</em></sub> is the expected accuracy, where:</p>
+
+<p><img src="https://latex.codecogs.com/svg.latex?p_{e}=%20\sum_{i=1}^n(\frac{colSum_{i}}{TO})\times(\frac{rowSum_{i}}{TO})" alt="Expected accuracy" /></p>
+
+<p><em>TO</em> is the total number of observations and <em>n</em> is the number of classes.</p>
+
+<p>Rather than scripting the above equations, the kappa coefficient together with the other accuracy measures are contained in a function called <code class="highlighter-rouge">goofcat</code> in the <code class="highlighter-rouge">ithir</code> package. As we already have a confusion matrix prepared, we can enter it directly into the function as in the script below.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ithir</span><span class="o">::</span><span class="n">goofcat</span><span class="p">(</span><span class="n">conf.mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con.mat</span><span class="p">,</span><span class="w"> </span><span class="n">imp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 
@@ -333,10 +294,7 @@ in the script below.</p>
 </span><span class="c1">## [1] 0.6389062</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Some people have derived rules of thumb for the interpretation of kappa
-coefficients e.g. Landis and Koch (1977). Some might find these useful
-or a guide in assessing the quality of a model, but it is best to
-interpret the Kappa alongside other metrics rather than independently.</p>
+<p>Some people have derived rules of thumb for the interpretation of kappa coefficients e.g. Landis and Koch (1977). Some might find these useful or a guide in assessing the quality of a model, but it is best to interpret the Kappa alongside other metrics rather than independently.</p>
 
 <h3 id="references">References</h3>
 
@@ -344,15 +302,12 @@ interpret the Kappa alongside other metrics rather than independently.</p>
 Classifcations of Remotely Sensed Data.” <em>Remote Sensing of the
 Environment</em> 37: 35–46.</p>
 
-<p>Landis, R.J., and G. G Koch. 1977. “The Measurment of Observer Agreement
-for Categorical Data.” <em>Biometrics</em> 33: 159–74.</p>
+<p>Landis, R.J., and G. G Koch. 1977. “The Measurement of Observer Agreement for Categorical Data.” <em>Biometrics</em> 33: 159–74.</p>
 
-<p>McBratney, A. B, and I. O. A Odeh. 1997. “Application of Fuzzy Sets in
-Soil Science: Fuzzy Logic, Fuzzy Measurments and Fuzzy Decisions.”
-<em>Geoderma</em> 77: 85–113.</p>
+<p>McBratney, A. B, and I. O. A Odeh. 1997. “Application of Fuzzy Sets in Soil Science: Fuzzy Logic, Fuzzy Measurements and Fuzzy Decisions.” <em>Geoderma</em> 77: 85–113.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-07-26">July 26, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-19">September 19, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">

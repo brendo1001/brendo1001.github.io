@@ -158,14 +158,20 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~16 minutes
+          Reading time ~13 minutes
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <ul>
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P6_SSPF_cate_2017_MNLR.R">Get the code used for this section
+here</a></p>
+
+<h3 id="multinomial-logistic-regression">Multinomial logistic regression</h3>
+
+<ul>
   <li><a href="#s-1">Introduction</a></li>
   <li><a href="#s-2">Data preparation</a></li>
   <li><a href="#s-3">Model fitting</a></li>
@@ -175,93 +181,61 @@
 
 <h3 id="introduction-">Introduction <a id="s-1"></a></h3>
 
-<p>Multinomial logistic regression is used to model nominal outcome
-variables, in which the log odds of the outcomes are modeled as a linear
-combination of the predictor variables. Because we are dealing with
-categorical variables, it is necessary that logistic regression take the
-natural logarithm of the odds (log-odds) to create a continuous
-criterion. The logit of success is then fit to the predictors using
-regression analysis. The results of the logit, however are not
-intuitive, so the logit is converted back to the odds via the inverse of
-the natural logarithm, namely the exponential function. Therefore,
-although the observed variables in logistic regression are categorical,
-the predicted scores are modeled as a continuous variable (the logit).
-The logit is referred to as the link function in logistic regression. As
-such, although the output in logistic regression will be binomial or
-multinomial, the logit is an underlying continuous criterion upon which
-linear regression is conducted. This means that for logistic regression
-we are able to return the most likely or probable prediction (class) as
-well as the probabilities of occurrence for all the other classes
-considered. Some discussion of the theoretical underpinnings of
-multinomial logistic regression, and importantly its application in DSM
+<p>Multinomial logistic regression is used to model nominal outcome variables, in which the log odds of the outcomes are modeled as a linear combination of the predictor variables.</p>
+
+<p>Because we are dealing with categorical variables, it is necessary that logistic regression take the natural logarithm of the odds (log-odds) to create a continuous criterion. The logit of success is then fit to the predictors using regression analysis.</p>
+
+<p>The results of the logit, however are not intuitive, so the logit is converted back to the odds via the inverse of the natural logarithm, namely the exponential function. Therefore, although the observed variables in logistic regression are categorical, the predicted scores are modeled as a continuous variable (the logit). The logit is referred to as the link function in logistic regression.</p>
+
+<p>Although the output in logistic regression will be binomial or
+multinomial, the logit is an underlying continuous criterion upon which linear regression is conducted. This means that for logistic regression we are able to return the most likely or probable prediction (class) as well as the probabilities of occurrence for all the other classes considered. Some discussion of the theoretical underpinnings of multinomial logistic regression, and importantly its application in DSM
 is given in Kempen et al. (2009).</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="data-preparation-">Data Preparation <a id="s-2"></a></h3>
 
-<p>In <code class="highlighter-rouge">R</code> we can use the <code class="highlighter-rouge">multinom</code> function from the package to perform
-logistic regression. The are other implementations of this model in <code class="highlighter-rouge">R</code>,
-so it is worth a look to compare and contrast them. Fitting <code class="highlighter-rouge">multinom</code>
-is just like fitting a linear model as seen below.</p>
+<p>In <code class="highlighter-rouge">R</code> we can use the <code class="highlighter-rouge">multinom</code> function from the <code class="highlighter-rouge">nnet</code> package to perform logistic regression. The are other implementations of this model in <code class="highlighter-rouge">R</code>, so it is worth a look to compare and contrast them. Fitting <code class="highlighter-rouge">multinom</code> is just like fitting a linear model as seen below.</p>
 
-<p>As described earlier, the data to be used for the following modelling
-exercises are Terron classes as sampled from the map presented in Malone et al. (2014). The sample data contains 1000 entries of which there are 12 different Terron
-classes. Before getting into the modeling, we first load in the data and
-then perform the covariate layer intersection using the suite of
-environmental variables contained in the <code class="highlighter-rouge">hunterCovariates</code> data object
-in the <code class="highlighter-rouge">ithir</code> package. The small selection of covariates cover an area
-of approximately 220<em>k**m</em><sup>2</sup> at a spatial resolution of 25m.
-They include those derived from a DEM: altitude above channel network
-(AACN), solar light insolation and terrain wetness index (TWI). Gamma
-radiometric data (total count) is also included together with a surface
-that depicts soil drainage in form of a continuous index (ranging from 0
-to 5). These 5 different covariate layers are stacked together via a
-<code class="highlighter-rouge">rasterStack</code>.</p>
+<p>As described earlier, the data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. 2014.The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="highlighter-rouge">ithir</code> package.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># libraries</span><span class="w">
+<p>The small selection of covariates cover an area of approximately 220km<sup>2</sup> at a spatial resolution of 25m. All these variables are derived primarily from an available digital elevation model.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## load libraries</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">nnet</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># load data</span><span class="w">
+</span><span class="c1"># point data of terron classifications</span><span class="w">
 </span><span class="n">data</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
-</span><span class="n">data</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># environmental covariates grids (covariate rasters from ithir package)</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system.file</span><span class="p">(</span><span class="s2">"extdata/"</span><span class="p">,</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ithir"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hunterCovariates_A"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># read them into R as SpatRaster objects</span><span class="w">
+</span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
-<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">SpatialPointsDataFrame</code>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">names</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w">
+<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to tak place.</p>
 
-</span><span class="c1">## [1] "x"      "y"      "terron"</span><span class="w">
-
-</span><span class="n">coordinates</span><span class="p">(</span><span class="n">hvTerronDat</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="o">~</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hvTerronDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
-<p>As these data are of the same spatial projection as the
-<code class="highlighter-rouge">hunterCovariates</code>, there is no need to perform a coordinate
-transformation. So we can perform the intersection immediately.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">extract</span><span class="p">(</span><span class="n">hunterCovariates</span><span class="p">,</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
+<p>As these data are of the same spatial projection as the raster data, there is no need to perform a coordinate transformation. So we can perform the intersection immediately.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Covariate data extraction</span><span class="w">
+</span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">bind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"simple"</span><span class="p">)</span><span class="w">
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span><span class="n">str</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## 'data.frame':    1000 obs. of  8 variables:</span><span class="w">
-</span><span class="c1">##  $ x                : num  346535 334760 340910 336460 344510 ...</span><span class="w">
-</span><span class="c1">##  $ y                : num  6371940 6375840 6377690 6382040 6378116 ...</span><span class="w">
-</span><span class="c1">##  $ terron           : Factor w/ 12 levels "1","2","3","4",..: 3 4 12 5 6 11 3 10 3 5 ...</span><span class="w">
-</span><span class="c1">##  $ AACN             : num  37.544 25.564 32.865 0.605 9.516 ...</span><span class="w">
-</span><span class="c1">##  $ Drainage.Index   : num  4.72 4.78 2 4.19 4.68 ...</span><span class="w">
-</span><span class="c1">##  $ Light.Insolation : num  1690 1736 1712 1712 1677 ...</span><span class="w">
-</span><span class="c1">##  $ TWI              : num  11.5 13.8 13.4 18.6 19.8 ...</span><span class="w">
-</span><span class="c1">##  $ Gamma.Total.Count: num  380 407 384 388 454 ...</span><span class="w">
+</span><span class="c1">## 'data.frame':    1000 obs. of  9 variables:</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It is always good practice to check to see if any of the observational
-data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is
-<code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the
-extent of the covariate layers. It is best to remove these observations
-from the data set.</p>
+<p>It is always good practice to check to see if any of the observational data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## remove missing data</span><span class="w">
+</span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 
 </span><span class="c1">## integer(0)</span><span class="w">
 
@@ -272,296 +246,180 @@ from the data set.</p>
 
 <h3 id="model-fitting-">Model Fitting <a id="s-3"></a></h3>
 
-<p>Now for model fitting. The target variable is <code class="highlighter-rouge">terron</code>. So lets just use
-all the available covariates in the model. We will also subset the data
-for an external validation i.e. random hold back validation.</p>
+<p>Now for model fitting. The target variable is <code class="highlighter-rouge">terron</code>. So lets just use all the available covariates in the model. We will also subset the data for an out-of-bag model evaluation using the random hold back sampling method.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">nnet</span><span class="p">)</span><span class="w">
-
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Multinomial logistic regression model establish calibration and out-of-bag</span><span class="w">
+</span><span class="c1"># data sets</span><span class="w">
 </span><span class="n">set.seed</span><span class="p">(</span><span class="m">655</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># create calibration/validation datasets</span><span class="w">
 </span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 
-</span><span class="c1"># fit model</span><span class="w">
-</span><span class="n">hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">multinom</span><span class="p">(</span><span class="n">terron</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Drainage.Index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Light.Insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">TWI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Gamma.Total.Count</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
-
-</span><span class="c1">## # weights:  84 (66 variable)</span><span class="w">
-</span><span class="c1">## initial  value 1739.434655 </span><span class="w">
-</span><span class="c1">## iter  10 value 1531.379550</span><span class="w">
-</span><span class="c1">## iter  20 value 1318.727793</span><span class="w">
-</span><span class="c1">## iter  30 value 1169.187982</span><span class="w">
-</span><span class="c1">## iter  40 value 1123.401146</span><span class="w">
-</span><span class="c1">## iter  50 value 1064.839291</span><span class="w">
-</span><span class="c1">## iter  60 value 1014.089905</span><span class="w">
-</span><span class="c1">## iter  70 value 1000.822814</span><span class="w">
-</span><span class="c1">## iter  80 value 998.380342</span><span class="w">
-</span><span class="c1">## iter  90 value 998.152674</span><span class="w">
-</span><span class="c1">## iter 100 value 998.091135</span><span class="w">
-</span><span class="c1">## final  value 998.091135 </span><span class="w">
-</span><span class="c1">## stopped after 100 iterations</span><span class="w">
+</span><span class="c1"># Multinomial logistic regression model</span><span class="w">
+</span><span class="n">hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nnet</span><span class="o">::</span><span class="n">multinom</span><span class="p">(</span><span class="n">terron</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">hunterCovariates_A_AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_light_insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Slope</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TRI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TWI</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Using the <code class="highlighter-rouge">summary</code> function allows us to see the linear models for each
-Terron class, which are the result of the log-odds of each soil class
-modeled as a linear combination of the covariates. We can also see the
-probabilities of occurrence for each Terron class at each observation
-location by using the <code class="highlighter-rouge">fitted</code> function.</p>
+<p>Using the <code class="highlighter-rouge">summary</code> function allows us to see the linear models for each Terron class, which are the result of the log-odds of each soil class modeled as a linear combination of the covariates. We can also see the probabilities of occurrence for each Terron class at each observation location by using the <code class="highlighter-rouge">fitted</code> function.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">summary</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Model summary</span><span class="w">
+</span><span class="n">summary</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## Call:</span><span class="w">
-</span><span class="c1">## multinom(formula = terron ~ AACN + Drainage.Index + Light.Insolation + </span><span class="w">
-</span><span class="c1">##     TWI + Gamma.Total.Count, data = DSM_data[training, ])</span><span class="w">
+</span><span class="c1">## nnet::multinom(formula = terron ~ hunterCovariates_A_AACN + hunterCovariates_A_elevation + </span><span class="w">
+</span><span class="c1">##     hunterCovariates_A_Hillshading + hunterCovariates_A_light_insolation + </span><span class="w">
+</span><span class="c1">##     hunterCovariates_A_MRVBF + hunterCovariates_A_Slope + hunterCovariates_A_TRI + </span><span class="w">
+</span><span class="c1">##     hunterCovariates_A_TWI, data = DSM_data[training, ])</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## Coefficients:</span><span class="w">
-</span><span class="c1">##    (Intercept)          AACN Drainage.Index Light.Insolation        TWI</span><span class="w">
-</span><span class="c1">## 2    11.669249 -4.402383e-05     -0.1488482    -0.0031018687 -0.8238904</span><span class="w">
-</span><span class="c1">## 3    -9.411251  1.710763e-02     -1.1871127    -0.0014710974  1.4325870</span><span class="w">
-</span><span class="c1">## 4    -9.555444  4.395081e-02     -0.1447566    -0.0089310555  2.2511475</span><span class="w">
-</span><span class="c1">## 5    -7.588070 -1.581112e-01     -1.1950854    -0.0083953051  2.9494259</span><span class="w">
-</span><span class="c1">## 6    -4.098643 -1.471366e-03     -1.7886604    -0.0223878916  4.2491592</span><span class="w">
-</span><span class="c1">## 7   -11.260912 -7.417858e-02     -0.6580254    -0.0026478809  1.7317132</span><span class="w">
-</span><span class="c1">## 8    -3.446144 -7.091427e-02     -0.8835113    -0.0137537508  2.8020175</span><span class="w">
-</span><span class="c1">## 9    11.563466 -1.360664e-01     -1.0174030    -0.0123097556  2.3863682</span><span class="w">
-</span><span class="c1">## 10    5.358026 -1.945736e-01     -2.5210132    -0.0090684586  2.2443137</span><span class="w">
-</span><span class="c1">## 11   -9.500032  9.593433e-04     -1.3959474    -0.0073965218  2.5385508</span><span class="w">
-</span><span class="c1">## 12   -2.288478 -1.484163e-01     -2.3056330    -0.0008614319  1.4221890</span><span class="w">
-</span><span class="c1">##    Gamma.Total.Count</span><span class="w">
-</span><span class="c1">## 2       6.830734e-03</span><span class="w">
-</span><span class="c1">## 3       9.959415e-03</span><span class="w">
-</span><span class="c1">## 4      -8.281095e-05</span><span class="w">
-</span><span class="c1">## 5      -1.028384e-02</span><span class="w">
-</span><span class="c1">## 6      -1.801399e-02</span><span class="w">
-</span><span class="c1">## 7       1.260509e-02</span><span class="w">
-</span><span class="c1">## 8       3.094369e-03</span><span class="w">
-</span><span class="c1">## 9      -2.288428e-02</span><span class="w">
-</span><span class="c1">## 10      2.271286e-03</span><span class="w">
-</span><span class="c1">## 11      1.803500e-04</span><span class="w">
-</span><span class="c1">## 12      1.048366e-02</span><span class="w">
+</span><span class="c1">#</span><span class="w">
 </span><span class="c1">## </span><span class="w">
-</span><span class="c1">## Std. Errors:</span><span class="w">
-</span><span class="c1">##     (Intercept)       AACN Drainage.Index Light.Insolation        TWI</span><span class="w">
-</span><span class="c1">## 2  0.0230014052 0.02737008      0.3502874      0.002154792 0.27516811</span><span class="w">
-</span><span class="c1">## 3  0.0019499214 0.02594060      0.1651929      0.001423865 0.12219279</span><span class="w">
-</span><span class="c1">## 4  0.0062391081 0.02540618      0.2849183      0.001711660 0.13477836</span><span class="w">
-</span><span class="c1">## 5  0.0014165140 0.03815983      0.2062900      0.002185650 0.10932725</span><span class="w">
-</span><span class="c1">## 6  0.0011020125 0.04250974      0.2735444      0.003346034 0.20085200</span><span class="w">
-</span><span class="c1">## 7  0.0018355164 0.03139042      0.1742066      0.001691151 0.09259951</span><span class="w">
-</span><span class="c1">## 8  0.0015169457 0.03324136      0.1811058      0.001961972 0.09167912</span><span class="w">
-</span><span class="c1">## 9  0.0059906322 0.02988414      0.2262947      0.001674441 0.10598892</span><span class="w">
-</span><span class="c1">## 10 0.0011730168 0.03959290      0.1780016      0.002102444 0.11480475</span><span class="w">
-</span><span class="c1">## 11 0.0008357622 0.03592314      0.2088213      0.002129659 0.12492035</span><span class="w">
-</span><span class="c1">## 12 0.0014626930 0.03982625      0.2041660      0.002081958 0.15271225</span><span class="w">
-</span><span class="c1">##    Gamma.Total.Count</span><span class="w">
-</span><span class="c1">## 2        0.006510157</span><span class="w">
-</span><span class="c1">## 3        0.004727097</span><span class="w">
-</span><span class="c1">## 4        0.005196532</span><span class="w">
-</span><span class="c1">## 5        0.006399191</span><span class="w">
-</span><span class="c1">## 6        0.006855861</span><span class="w">
-</span><span class="c1">## 7        0.005422967</span><span class="w">
-</span><span class="c1">## 8        0.005821308</span><span class="w">
-</span><span class="c1">## 9        0.005104764</span><span class="w">
-</span><span class="c1">## 10       0.006551655</span><span class="w">
-</span><span class="c1">## 11       0.006130347</span><span class="w">
-</span><span class="c1">## 12       0.006608973</span><span class="w">
-</span><span class="c1">## </span><span class="w">
-</span><span class="c1">## Residual Deviance: 1996.182 </span><span class="w">
-</span><span class="c1">## AIC: 2128.182</span><span class="w">
+</span><span class="c1">## Residual Deviance: 1565.641 </span><span class="w">
+</span><span class="c1">## AIC: 1763.641</span><span class="w">
 
 </span><span class="c1"># Estimate class probabilities</span><span class="w">
 </span><span class="n">probs.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">fitted</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># return top of data frame of probabilites</span><span class="w">
+</span><span class="c1"># return top of data frame of probabilities</span><span class="w">
 </span><span class="n">head</span><span class="p">(</span><span class="n">probs.hv.MNLR</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">##                1            2            3           4            5</span><span class="w">
-</span><span class="c1">## 366 9.911578e-04 1.696907e-04 2.683064e-01 0.010060748 0.0042395682</span><span class="w">
-</span><span class="c1">## 79  1.991212e-06 4.378883e-08 1.857817e-02 0.034326492 0.0596735637</span><span class="w">
-</span><span class="c1">## 946 2.510423e-06 5.430068e-08 9.617759e-03 0.009881164 0.1406014006</span><span class="w">
-</span><span class="c1">## 148 7.962345e-11 9.274241e-14 5.488134e-05 0.001206554 0.4698120445</span><span class="w">
-</span><span class="c1">## 710 6.385443e-02 2.163694e-02 5.425491e-01 0.134304447 0.0002349476</span><span class="w">
-</span><span class="c1">## 729 3.926345e-12 2.428915e-15 1.068927e-05 0.000366097 0.4077434585</span><span class="w">
-</span><span class="c1">##                6           7           8          9           10          11</span><span class="w">
-</span><span class="c1">## 366 2.046389e-05 0.129056979 0.008636167 0.05272048 0.0736465603 0.051726811</span><span class="w">
-</span><span class="c1">## 79  9.467371e-04 0.366029678 0.366723926 0.03168955 0.0464104632 0.054306315</span><span class="w">
-</span><span class="c1">## 946 3.518185e-04 0.290060050 0.203745840 0.10754525 0.1534405545 0.027082347</span><span class="w">
-</span><span class="c1">## 148 8.424421e-02 0.008192209 0.339027028 0.04156585 0.0451892210 0.010102488</span><span class="w">
-</span><span class="c1">## 710 1.182175e-06 0.189834681 0.004335628 0.01035719 0.0003921219 0.022439213</span><span class="w">
-</span><span class="c1">## 729 3.231160e-01 0.001542456 0.200775080 0.02854113 0.0317291180 0.006003031</span><span class="w">
-</span><span class="c1">##               12</span><span class="w">
-</span><span class="c1">## 366 0.4004249213</span><span class="w">
-</span><span class="c1">## 79  0.0213130685</span><span class="w">
-</span><span class="c1">## 946 0.0576712560</span><span class="w">
-</span><span class="c1">## 148 0.0006055193</span><span class="w">
-</span><span class="c1">## 710 0.0100601340</span><span class="w">
-</span><span class="c1">## 729 0.0001729464</span><span class="w">
+</span><span class="c1">##                1            2            3            4            5</span><span class="w">
+</span><span class="c1">## 366 3.180013e-07 6.777814e-03 4.903625e-01 0.0001686759 0.0001705747</span><span class="w">
+</span><span class="c1">## 79  1.494619e-06 8.747864e-07 3.335882e-03 0.0358131506 0.0226158580</span><span class="w">
+</span><span class="c1">## 946 7.747219e-07 1.390212e-05 3.110918e-03 0.0063934663 0.0814475628</span><span class="w">
+</span><span class="c1">## 148 8.990125e-09 6.399129e-10 2.020176e-07 0.0116442200 0.5644019303</span><span class="w">
+</span><span class="c1">## 710 5.758595e-04 3.707932e-03 6.952536e-01 0.0103778544 0.0001168495</span><span class="w">
+</span><span class="c1">## 729 1.232164e-11 8.209651e-10 4.582702e-08 0.0003529924 0.4953536210</span><span class="w">
+</span><span class="c1">##    </span><span class="w">
 </span></code></pre></div></div>
 
-<p>Subsequently, we can also determine the most probable Terron class using
-the <code class="highlighter-rouge">predict</code> function.</p>
+<p>Subsequently, we can also determine the most probable Terron class using the <code class="highlighter-rouge">predict</code> function.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pred.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## model prediction</span><span class="w">
+</span><span class="n">pred.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
 </span><span class="n">summary</span><span class="p">(</span><span class="n">pred.hv.MNLR</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">##   1   2   3   4   5   6   7   8   9  10  11  12 </span><span class="w">
-</span><span class="c1">##  20   4  79  39 105  71 174 117  23  37   5  26</span><span class="w">
+</span><span class="c1">##  20   6  82  42 111  61 143 122  47  28  24  14</span><span class="w">
 </span></code></pre></div></div>
+
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="model-goodness-of-fit-">Model goodness of fit <a id="s-4"></a></h3>
+<h3 id="model-goodness-of-fit-evaluation-">Model goodness of fit evaluation <a id="s-4"></a></h3>
 
-<p>Lets now perform an internal validation of the model to assess its
-general performance. Here we use the <code class="highlighter-rouge">goofcat</code> function that was
-<a href="%7B%7B%20site.url%20%7D%7D/DSM_book/pages/dsm_cat/val/">introduced
-earlier</a>, but
-this time we import the two vectors into the function which correspond
-to the observations and predictions respectively.</p>
+<p>Lets now perform an internal validation of the model to assess its general performance. Here we use the <code class="highlighter-rouge">goofcat</code> function that was <a href="/DSM_book/pages/dsm_cat/val/">introduced earlier</a>, but this time we import the two vectors into the function which correspond to the observations and predictions respectively.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pred.hv.MNLR</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## goodness of fit (calibration)</span><span class="w">
+</span><span class="n">ithir</span><span class="o">::</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pred.hv.MNLR</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## $confusion_matrix</span><span class="w">
 </span><span class="c1">##     1 2  3  4  5  6  7  8  9 10 11 12</span><span class="w">
-</span><span class="c1">## 1  10 4  2  3  0  0  0  0  1  0  0  0</span><span class="w">
-</span><span class="c1">## 2   2 0  0  0  0  0  0  0  1  1  0  0</span><span class="w">
-</span><span class="c1">## 3   2 4 41  5  0  0 12  0  3  0  8  4</span><span class="w">
-</span><span class="c1">## 4   4 1  7 17  0  0  2  1  5  0  2  0</span><span class="w">
-</span><span class="c1">## 5   0 0  0  0 53 13  0 11 10 15  1  2</span><span class="w">
-</span><span class="c1">## 6   0 0  0  0 15 47  0  8  0  1  0  0</span><span class="w">
-</span><span class="c1">## 7   0 0 20  9  3  0 87 20  7  9  6 13</span><span class="w">
-</span><span class="c1">## 8   0 0  0  2 15  6 14 59  4  7 10  0</span><span class="w">
-</span><span class="c1">## 9   0 0  1  5  1  0  1  4  9  0  2  0</span><span class="w">
-</span><span class="c1">## 10  0 0  0  0  5  1  4  4  6 15  2  0</span><span class="w">
-</span><span class="c1">## 11  0 0  0  1  0  0  0  2  0  0  2  0</span><span class="w">
-</span><span class="c1">## 12  1 0  1  1  0  0  2  0  0  6  0 15</span><span class="w">
+</span><span class="c1">## 1  14 0  0  2  0  0  0  0  3  1  0  0</span><span class="w">
+</span><span class="c1">## 2   0 5  1  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 3   0 4 43  2  0  0 12  0  0  0  8 13</span><span class="w">
+</span><span class="c1">## 4   4 0  3 22  2  1  3  1  5  0  1  0</span><span class="w">
+</span><span class="c1">## 5   0 0  0  0 60 17  3  0  7 19  3  2</span><span class="w">
+</span><span class="c1">## 6   0 0  0  0 13 42  0  4  0  2  0  0</span><span class="w">
+</span><span class="c1">## 7   1 0 12  7  2  0 72 18  2 13  3 13</span><span class="w">
+</span><span class="c1">## 8   0 0  0  1  1  6 19 80  0  7  8  0</span><span class="w">
+</span><span class="c1">## 9   0 0  0  8  3  0  5  1 29  0  0  1</span><span class="w">
+</span><span class="c1">## 10  0 0  0  1  9  0  4  1  0 12  1  0</span><span class="w">
+</span><span class="c1">## 11  0 0  9  0  1  1  0  4  0  0  9  0</span><span class="w">
+</span><span class="c1">## 12  0 0  4  0  1  0  4  0  0  0  0  5</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $overall_accuracy</span><span class="w">
-</span><span class="c1">## [1] 51</span><span class="w">
+</span><span class="c1">## [1] 57</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $producers_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 53  0 57 40 58 71 72 55 20 28  7 45 </span><span class="w">
+</span><span class="c1">## 74 56 60 52 66 63 60 74 64 23 28 15 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $users_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 50  0 52 44 51 67 50 51 40 41 40 58 </span><span class="w">
+</span><span class="c1">## 70 84 53 53 55 69 51 66 62 43 38 36 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $kappa</span><span class="w">
-</span><span class="c1">## [1] 0.4380009</span><span class="w">
+</span><span class="c1">## [1] 0.5023977</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Similarly, performing the external validation requires first using the
-<code class="highlighter-rouge">pred.hv.MNLR</code> model to predict on the withheld points.</p>
+<p>Similarly, performing the out-of-bag evaluation requires first using the <code class="highlighter-rouge">pred.hv.MNLR</code> model to predict on the out-of-bag cases.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">V.pred.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
-</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V.pred.hv.MNLR</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## goodness of fit (out-of-bag)</span><span class="w">
+</span><span class="n">V.pred.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+
+</span><span class="n">ithir</span><span class="o">::</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">V.pred.hv.MNLR</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## $confusion_matrix</span><span class="w">
-</span><span class="c1">##    1 2  3 4  5  6  7  8 9 10 11 12</span><span class="w">
-</span><span class="c1">## 1  5 1  0 0  0  0  0  0 1  0  0  0</span><span class="w">
-</span><span class="c1">## 2  1 0  0 0  0  0  0  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 3  0 1 17 6  0  0  3  0 1  2  1  1</span><span class="w">
-</span><span class="c1">## 4  2 2  0 9  0  1  0  2 3  0  2  0</span><span class="w">
-</span><span class="c1">## 5  0 0  0 0 21  3  2  3 7  1  0  1</span><span class="w">
-</span><span class="c1">## 6  0 0  0 2  9 19  0  3 1  1  0  0</span><span class="w">
-</span><span class="c1">## 7  0 0  5 8  1  0 43 10 4  6  7  5</span><span class="w">
-</span><span class="c1">## 8  0 0  1 2  6  2  3 18 1  5  5  1</span><span class="w">
-</span><span class="c1">## 9  0 0  0 3  1  0  0  0 2  0  0  0</span><span class="w">
-</span><span class="c1">## 10 0 0  0 0  2  0  1  5 0  8  0  0</span><span class="w">
-</span><span class="c1">## 11 0 0  3 2  0  0  1  0 0  0  0  0</span><span class="w">
-</span><span class="c1">## 12 0 0  1 0  0  0  0  0 0  1  0  3</span><span class="w">
+</span><span class="c1">##    1 2  3  4  5  6  7  8  9 10 11 12</span><span class="w">
+</span><span class="c1">## 1  5 0  0  1  0  0  1  0  1  0  0  0</span><span class="w">
+</span><span class="c1">## 2  1 0  0  0  0  0  0  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 3  0 4 15  5  0  0  3  0  0  2  2  3</span><span class="w">
+</span><span class="c1">## 4  2 0  1 11  0  1  1  0  0  0  0  0</span><span class="w">
+</span><span class="c1">## 5  0 0  0  3 24  4  0  2  2  2  2  0</span><span class="w">
+</span><span class="c1">## 6  0 0  0  0  7 17  0  2  1  0  0  0</span><span class="w">
+</span><span class="c1">## 7  0 0  6  7  2  0 33  8  3  4  8  3</span><span class="w">
+</span><span class="c1">## 8  0 0  0  1  1  3  6 26  1  5  0  1</span><span class="w">
+</span><span class="c1">## 9  0 0  1  2  1  0  3  0 12  0  0  0</span><span class="w">
+</span><span class="c1">## 10 0 0  0  0  5  0  1  0  0 10  0  3</span><span class="w">
+</span><span class="c1">## 11 0 0  3  2  0  0  0  3  0  0  3  0</span><span class="w">
+</span><span class="c1">## 12 0 0  1  0  0  0  5  0  0  1  0  1</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $overall_accuracy</span><span class="w">
-</span><span class="c1">## [1] 49</span><span class="w">
+</span><span class="c1">## [1] 53</span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $producers_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 63  0 63 29 53 76 82 44 10 34  0 28 </span><span class="w">
+</span><span class="c1">## 63  0 56 35 60 68 63 64 60 42 20 10 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $users_accuracy</span><span class="w">
 </span><span class="c1">##  1  2  3  4  5  6  7  8  9 10 11 12 </span><span class="w">
-</span><span class="c1">## 72  0 54 43 56 55 49 41 34 50  0 60 </span><span class="w">
+</span><span class="c1">## 63  0 45 69 62 63 45 60 64 53 28 13 </span><span class="w">
 </span><span class="c1">## </span><span class="w">
 </span><span class="c1">## $kappa</span><span class="w">
-</span><span class="c1">## [1] 0.4101904</span><span class="w">
+</span><span class="c1">## [1] 0.4600514</span><span class="w">
 </span></code></pre></div></div>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="apply-model-spatially-">Apply model spatially <a id="s-5"></a></h3>
 
-<p>Using the raster <code class="highlighter-rouge">predict</code> function is the method for applying the
-<code class="highlighter-rouge">hv.MNLR</code> model across the whole area. Note that the <code class="highlighter-rouge">clusterR</code> function
-can also be used here too if there is a requirement to perform the
-spatial prediction across multiple compute nodes. Note also that it is
-also possible for multinomial logistic regression to create the map of
-the most probable class, as well as the probabilities for all classes.
-The first script example below is for mapping the most probable class
-which is specified by setting the <code class="highlighter-rouge">type</code> parameter to <code class="highlighter-rouge">class</code>. If
-probabilities are required <code class="highlighter-rouge">probs</code> would be used for the <code class="highlighter-rouge">type</code>
-parameter, together with specifying an <code class="highlighter-rouge">index</code> integer to indicate which
-class probabilities you wish to map. The second script example below
-shows the parametisation for predicting the probabilities for Terron
-class 1.</p>
+<p>Using the <code class="highlighter-rouge">terra::predict</code> function is the method for applying the <code class="highlighter-rouge">hv.MNLR</code> model across the whole area. Model extension can take a couple of forms for MNLR. It is possible for multinomial logistic regression to create the map of the most probable class, as well as the probabilities for all classes. The first script example below is for mapping the most probable class which is specified by setting the <code class="highlighter-rouge">type</code> parameter to
+<code class="highlighter-rouge">class</code>. If probabilities are required <code class="highlighter-rouge">probs</code> would be used for the <code class="highlighter-rouge">type</code> parameter, together with specifying an <code class="highlighter-rouge">index</code> integer to indicate which class probabilities you wish to map.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># class prediction</span><span class="w">
-</span><span class="n">map.MNLR.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">covStack</span><span class="p">,</span><span class="w"> </span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hv_MNLR_class.tif"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"INT2S"</span><span class="p">)</span><span class="w">
+<p>The second script example below shows the parametisation for predicting the probabilities for Terron class 1.</p>
 
-</span><span class="c1"># class probabilities</span><span class="w">
-</span><span class="n">map.MNLR.p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">covStack</span><span class="p">,</span><span class="w"> </span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"probs"</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"edge_MNLR_probs1.tif"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"GTiff"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Apply model spatially class prediction</span><span class="w">
+</span><span class="n">map.MNLR.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"class"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># class probabilities (for estimation of Terron 1)</span><span class="w">
+</span><span class="n">map.MNLR.p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"probs"</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Plotting the resulting class map is not as straightforward as for
-mapping continuous variables. A solution is scripted below which uses an
-associated package to <code class="highlighter-rouge">raster</code> called <code class="highlighter-rouge">rasterVis</code>. You will also note
-the use of explicit colors for each Terron class as they were the same
-colors used in the Terron map presented by Malone et al. (2014). The
-colors are defined in terms of HEX color codes. A very good resource for
-selecting colors or deciding on color ramps for maps is
-<a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3"><code class="highlighter-rouge">colorbrewer</code></a>.</p>
+<p>Plotting the final map is done as below. You will also note the use of explicit colors for each Terron class as they were the same colors used in the Terron map presented by Malone et al. (2014). The colors are defined in terms of HEX color codes. A very good resource for selecting colors or deciding on color ramps for maps is <a href="https://colorbrewer2.org/#type=sequential&amp;sche e=BuGn&amp;n=3"><code class="highlighter-rouge">colorbrewer</code></a>.</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">rasterVis</span><span class="p">)</span><span class="w">
-
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Plotting</span><span class="w">
 </span><span class="n">map.MNLR.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">map.MNLR.c</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## Add a land class column to the Raster Attribute Table</span><span class="w">
-</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">map.MNLR.c</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
-</span><span class="n">rat</span><span class="p">[[</span><span class="s2">"terron"</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_002"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_009"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_011"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_012"</span><span class="p">)</span><span class="w">
-</span><span class="n">levels</span><span class="p">(</span><span class="n">map.MNLR.c</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
-
 </span><span class="c1">## HEX colors</span><span class="w">
-</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#38A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D7B09E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#B4D79E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFFF00"</span><span class="p">)</span><span class="w">
+</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#38A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#73DFFF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFEBAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#A8A800"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#0070FF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFA77F"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7AF5CA"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D7B09E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#CCCCCC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#B4D79E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FFFF00"</span><span class="p">)</span><span class="w">
 
-</span><span class="c1"># plot</span><span class="w">
-</span><span class="n">levelplot</span><span class="p">(</span><span class="n">map.MNLR.c</span><span class="p">,</span><span class="w"> </span><span class="n">col.regions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">plot</span><span class="p">(</span><span class="n">map.MNLR.c</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">plg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"HVT_001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_002"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_004"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_005"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_006"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_007"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_008"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_009"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_010"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_011"</span><span class="p">,</span><span class="w"> </span><span class="s2">"HVT_012"</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Terron Class"</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
 
 <figure>
-    <img src="/images/dsm_book/mnlr.png" alt="rconsole" />
-    <figcaption> Hunter Valley most probable Terron class map created using multinomial logistic regression model.</figcaption>
+<img src="/images/dsm_book/P6_mnlr_map.png" alt="rconsole" />
+<figcaption>
+Hunter Valley most probable Terron class map created using multinomial logistic regression model.
+</figcaption>
 </figure>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="references">References</h3>
 
-<p>Kempen, B, D. J Brus, G. B. M Heuvelink, and J. J Stoorvogel. 2009.
-“Updating the 1:50,000 Dutch Soil Map Using Legacy Soil Data: A
-Multinomial Logistic Regression Approach.” <em>Geoderma</em> 151: 311–26.</p>
+<p>Kempen, B, D. J Brus, G. B. M Heuvelink, and J. J Stoorvogel. 2009. “Updating the 1:50,000 Dutch Soil Map Using Legacy Soil Data: A Multinomial Logistic Regression Approach.” <em>Geoderma</em> 151: 311–26.</p>
 
-<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for
-the Identification of Terrons in the Lower Hunter Valley, Australia.”
-<em>Geoderma Regional</em> 1: 31–47.</p>
-
-<p><a href="#top">Back to top</a></p>
+<p>Malone, B P, P Hughes, A B McBratney, and B Minsany. 2014. “A Model for the Identification of Terrons in the Lower Hunter Valley, Australia.” <em>Geoderma Regional</em> 1: 31–47.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2020-09-06">September 06, 2020</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-19">September 19, 2023</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
