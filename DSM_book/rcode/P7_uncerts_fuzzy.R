@@ -266,7 +266,6 @@ row.names(quanMat2)<- c(99,97.5,95,90,80,60,40,20,10,5) #
 
 
 ## Evaluation of predictions and uncertainties with out of bag data
-
 # covariates of the out-of-bag data
 vCovs<- DSM_data_val[,5:15]
 
