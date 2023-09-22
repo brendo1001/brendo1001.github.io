@@ -1,0 +1,772 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Mapping Unit Disaggregation &#8211; Smart Digital Agriculture</title>
+<meta name="description" content="DSMART: A digital soil mapping method to  update, harmonize and disaggregate legacy soil maps">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Mapping Unit Disaggregation">
+<meta name="twitter:description" content="DSMART: A digital soil mapping method to  update, harmonize and disaggregate legacy soil maps">
+<meta name="twitter:creator" content="@soilmalone">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mapping Unit Disaggregation">
+<meta property="og:description" content="DSMART: A digital soil mapping method to  update, harmonize and disaggregate legacy soil maps">
+<meta property="og:url" content="/DSM_book/pages/dsm_bespoke/disagg/">
+<meta property="og:site_name" content="Smart Digital Agriculture">
+
+<meta name="google-site-verification" content="googledd99b1430269a639.html">
+
+
+
+<link rel="canonical" href="/DSM_book/pages/dsm_bespoke/disagg/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Smart Digital Agriculture Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<!-- Clean Blog CSS -->
+<link rel="stylesheet" href="/assets/css/clean-blog.css">
+<!-- HPSTR main CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Custom Fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Viga|Ubuntu:700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body id="page" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Smart Digital Agriculture</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                    <li><a href="/" >Home</a></li>
+                
+                    
+                    <li><a href="/publications/" >Publications</a></li>
+                
+                    
+                    <li><a href="/software/" >Software</a></li>
+                
+                    
+                    <li><a href="/blog/" >Journal Digests</a></li>
+                
+                    
+                    <li><a href="/UseCases/" >Blog</a></li>
+                
+                    
+                    <li><a href="/DSM_book/" >Using R for Digital Soil Mapping</a></li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('/images/pedometric2017.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Mapping Unit Disaggregation</h1>
+                    
+                        <hr class="small">
+                        <span class="subheading">DSMART: A digital soil mapping method to  update, harmonize and disaggregate legacy soil maps</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--
+
+-->
+
+<div id="main" role="main">
+  <article class="hentry">
+    <!--
+    <header class="header-title">
+      <div class="header-title-wrap">
+        <h1 class="entry-title">Mapping Unit Disaggregation</h1>
+        
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~20 minutes
+        </p>
+        
+      </div>
+    </header>
+    -->
+    <div class="entry-content">
+      <h4 id="code">CODE:</h4>
+<p><a href="/DSM_book/rcode/P8_dsmart.R">Get the code used for this section here</a></p>
+
+<h3 id="using-digital-soil-mapping-to-update-harmonize-and-disaggregate-legacy-soil-maps">Using digital soil mapping to update, harmonize and disaggregate legacy soil maps.</h3>
+
+<ul>
+  <li><a href="#s-1">Pre-reading background</a></li>
+  <li><a href="#s-2">DSMART: an overview</a></li>
+  <li><a href="#s-3">Implementation of DSMART</a></li>
+</ul>
+
+<h3 id="pre-reading-background-">Pre-reading background <a id="s-1"></a></h3>
+
+<p><a href="#s-11">skip the general overview</a></p>
+
+<p>Digital soil maps are contrasted from legacy soil maps mainly in terms of the underlying spatial data model. Digital soil maps are based on the pixel data model, while legacy soil maps will typically consist of a tessellation of polygons.</p>
+
+<p>The advantage of the pixel model is that the information is spatially explicit. The soil map polygons are delineations of soil mapping units
+which consist of a defined assemblage of soil classes assumed to exist
+in more-or-less fixed proportions. There is great value in legacy soil
+mapping because a huge amount of expertise and resources went into their
+creation.</p>
+
+<p>Digital soil mapping will be the richer by using this existing
+knowledge-base to derive detailed and high resolution digital soil
+products. However the digitization of legacy soil maps is not digital
+soil mapping. Rather, the incorporation of legacy soil maps into a
+digital soil mapping workflow involves some method (usually
+quantitative) of data mining, to appoint spatially explicit soil
+information — usually a soil class or even a measurable soil attribute —
+upon a grid the covers the extent of the existing (legacy) mapping.</p>
+
+<p>In some ways, this process is akin to downscaling because there is a
+need to extract soil class or attribute information from aggregated soil
+mapping units. A better term therefore is soil map disaggregation.</p>
+
+<p>There is an underlying spatial explicitness in digital soil mapping that
+makes it a powerful medium to portray spatial information. Legacy soil
+maps also have an underlying spatial model in terms of the delineation
+of geographical space. However, there is often some subjectivity in the
+actual arrangement and final shapes of the mapping unit polygons. Yet
+that is a matter of discussion for another time.</p>
+
+<p>For disaggregation studies the biggest impediment to overcome in a
+quantitative manner is to determine the spatial configuration of the
+soil classes within each map unit. It is often known which soil classes
+are in each mapping unit, and sometimes there is information regarding
+the relative proportions of each too. What is unknown is the spatial
+explicitness and configuration of said soil classes within the unit.
+This is the common issue faced in studies seeking the renewal and
+updating of legacy soil mapping.</p>
+
+<p>Some examples of soil map disaggregation studies from the literature
+include Thompson et al. (2010) who recovered soil-landscape rules from a
+soil map report in order to map individual soil classes. This together
+with a supervised classification approach described by Nauman et
+al. (2012) represent manually-based approaches to soil map
+disaggregation. Both of these studies were successfully applied, but
+because of their manual nature, could also be seen as time-inefficient
+and susceptible to subjectivity.</p>
+
+<p>The flip side to these studies is those using quantitative models.
+Usually the modeling involves some form of data mining algorithm where
+knowledge is learned and subsequently optimized based on some model
+error minimization criteria. Extrapolation of the fitted model is then
+executed in order to map the disaggregated soil mapping units. Such
+model-based or data mining procedures for soil map disaggregation
+include that by Bui and Moran (2001) in Australia, Haring et al. (2012)
+in Germany and Nauman and Thompson (2014) in the USA. Some
+fundamental ideas of soil map disaggregation framed in a deeper
+discussion of scaling of soil information are presented in McBratney
+(1998).</p>
+
+<p>This section seeks to describe a soil map disaggregation method that was
+first described in Wei et al. (2010) for digital harmonization of
+adjacent soil surveys in southern Iowa, USA. The concept of
+harmonization has particular relevance in the USA because it has been
+long established that the underlying soil mapping concepts across
+geopolitical boundaries (i.e. counties and states) don’t always match.
+This issue is obviously not a phenomenon exclusive to the USA but is a
+common worldwide issue. This mismatch may include the line drawings and
+named map units. Of course, soils in the field do not change at these
+political boundaries. These soil-to-soil mismatches are the result of
+the past structuring of the soil survey program. For example, soil
+surveys in the US were conducted on a soil survey area basis. Most times
+the soil surveys areas were based on county boundaries. Often adjacent
+counties were mapped years apart. Different personnel, different
+philosophies of soil survey science, new concepts of mapping and the
+availability of various technologies all have played a part in why these
+differences occur. These differences maybe even more exaggerated at
+state lines as each state was administratively and technically
+responsible for the soil survey program within a given state.</p>
+
+<p>The algorithm developed by Wei et al. (2010) addressed this issue, where
+soil mapping units were disaggregated into soil series. Instead of
+mapping the prediction of a single soil series, a probability
+distribution of all potential soil series was estimated. The outcome of
+this was the dual disaggregation and harmonization of existing legacy
+soil information into raster-based digital soil mapping product/s.</p>
+
+<p>Odgers et al. (2014) using legacy soil mapping from an area in
+Queensland, Australia refined the algorithm to which they called DSMART
+or, Disaggregation and Harmonization of Soil Map Units Through
+Re-sampled Classification Trees*.</p>
+
+<p>Besides the work of Odgers et al. (2014), The DSMART algorithm has been
+used in other projects throughout the world, with Chaney et al. (2014)
+using it to disaggregate the entire gridded USA Soil Survey Geographic
+(gSSURGO) database. The resulting POLARIS data set (Probabilistic
+Remapping of SSURGO) provides the 50 most probable soil series
+predictions at each 30-meter grid cell over the contiguous USA.</p>
+
+<p>The DSMART algorithm has been pivotal, together with the associated
+PROPR algorithm (Digital Soil Property Mapping Using Soil Class
+Probability Rasters (Odgers et al. (2015)) in deriving
+high resolution digital soil maps where point-based DSM approaches
+cannot be undertaken, particularly where soil point data is sparse.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="dsmart-an-overview-">DSMART: an overview <a id="s-2"></a></h3>
+
+<p>Odgers et al. (2014) provide a detailed explanation of the DSMART
+algorithm. The aim of DSMART is to predict the spatial distribution of
+soil classes by disaggregating the soil map units of a soil polygon map.
+Here soil map units soil map are entities consisting of a defined set of
+soil classes which occur together in a certain spatial pattern and in an
+assumed set of proportions.</p>
+
+<p>The DSMART method of representing the disaggregated soil class
+distribution is as a set of numerical raster surfaces, with one raster
+per soil class. The data representation for each soil class is given as
+the probability of occurrence. In order to generate the probability
+surfaces, a re-sampling approach is used to generate <em>n</em> realizations of
+the potential soil class distribution within each map unit. Then at each
+grid cell, the probability of occurrence of each soil class is estimated
+by the proportion of times the grid cell is predicted as each soil class
+across the set of realizations. <a id="s-11"></a></p>
+
+<p>The procedure of the DSMART algorithm can be summarized in 6 main steps:</p>
+
+<ol>
+  <li>Draw <em>n</em> random samples from each soil map polygon. This could be
+the same number of samples per polygon or area weighted.</li>
+  <li>
+    <p>Assign soil class to each sampling point.</p>
+
+    <ul>
+      <li>Weighted random allocation from soil classes in relevant map unit</li>
+      <li>Relative proportions of soil classes within map units are used as the weights</li>
+    </ul>
+  </li>
+  <li>Use sampling points and intersected covariate values to build a
+decision tree to prediction spatial distribution of soil classes.}</li>
+  <li>Apply decision tree across mapping extent using covariate layers.</li>
+  <li>Steps 1-4 repeated <em>i</em> times to produce <em>i</em> realizations of soil
+class distribution.</li>
+  <li>Using <em>i</em> realizations generate probability surfaces for each soil
+class.</li>
+</ol>
+
+<p>The model type that Odgers et al. (2014) used was the C4.5 decision tree
+algorithm which was developed by Quinlan (1993). The type of data mining
+algorithm implemented in DSMART is not prescriptive; as long as it is
+robust and importantly, computationally efficient. For example Chaney et
+al. (2014) used Random Forest models Breiman (2001) in their own
+implementation.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="implementation-of-dsmart-">Implementation of DSMART <a id="s-3"></a></h3>
+
+<p>The DSMART algorithm has previously been written in the <code class="highlighter-rouge">C++</code> and
+<code class="highlighter-rouge">Python</code> computing languages. It is also available in an <code class="highlighter-rouge">R</code> package.
+Regardless of computing language preference, DSMART requires three chief
+sources of data</p>
+
+<ol>
+  <li>The soil map unit polygons that will be disaggregated.</li>
+  <li>Information about the soil class composition of the soil map unit
+polygons.</li>
+  <li>Geo-referenced raster covariates representing the <em>scorpan</em> factors
+of which have complete and continuous coverage of the mapping
+extent. There is no restriction in terms of the data type
+i.e. continuous, categorical, ordinal etc.</li>
+</ol>
+
+<p>The DSMART algorithm is packaged up in <code class="highlighter-rouge">rdsmart</code> and contains two
+working functions: <code class="highlighter-rouge">disaggregate</code> and <code class="highlighter-rouge">summarise</code>. More will be
+discussed about these shortly.</p>
+
+<p>The other items in the package are various inputs required to run the
+function. In essence these data provide some indication of the structure
+and nature of the information that is required to run the DSMART
+algorithm so that it can be easily adapted to other projects.</p>
+
+<p>First is the soil map to be disaggregated. This is saved to the
+<code class="highlighter-rouge">dalrymple_polygons</code> object. In this example the small polygon map is a
+clipped area of the much larger soil map that Odgers et al. (2014)
+disaggregated, which was the 1:250,000 soil map of the Dalrymple Shire
+in Queensland Australia by Rogers, Cannon, and Barry (1999).</p>
+
+<p>In this example data set, there are 11 soil mapping units.the polygon
+object is of class <code class="highlighter-rouge">SpatialPolygonsDataFrame</code>, which is what would be
+created if you were to read in a shapefile of the polygons into <code class="highlighter-rouge">R</code>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># install rdsmart library(devtools)</span><span class="w">
+</span><span class="c1"># devtools::install_bitbucket('brendo1001/dsmart')</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">rdsmart</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Note rdsmart is yet to migrate functionality to the sf and terra</span><span class="w">
+</span><span class="c1"># R packages, there the example currently runs using the now legacy</span><span class="w">
+</span><span class="c1"># sp and raster R packages.</span><span class="w">
+
+</span><span class="c1"># Polygons</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="s2">"dalrymple_polygons"</span><span class="p">)</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">dalrymple_polygons</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] "SpatialPolygonsDataFrame"</span><span class="w">
+</span><span class="c1">## attr(,"package")</span><span class="w">
+</span><span class="c1">## [1] "sp"</span><span class="w">
+
+</span><span class="n">summary</span><span class="p">(</span><span class="n">dalrymple_polygons</span><span class="o">$</span><span class="n">MAP_CODE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## BUGA1t CGCO3t   DO3n   FL3d   HG2g   MI6t   MM5g   MS4g   PA1f </span><span class="w">
+</span><span class="c1">##      1      1      1      1      1      1      1      1      1 </span><span class="w">
+</span><span class="c1">##   RA3t SCFL3g </span><span class="w">
+</span><span class="c1">##      1      1</span><span class="w">
+
+</span><span class="c1">## Plot polygons</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">dalrymple_polygons</span><span class="p">)</span><span class="w">
+</span><span class="nf">invisible</span><span class="p">(</span><span class="n">text</span><span class="p">(</span><span class="n">getSpPPolygonsLabptSlots</span><span class="p">(</span><span class="n">dalrymple_polygons</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.character</span><span class="p">(</span><span class="n">dalrymple_polygons</span><span class="o">$</span><span class="n">MAP_CODE</span><span class="p">),</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+<img src="/images/dsm_book/dsmart_polygon.png" alt="rconsole" />
+<figcaption>
+Subset of the polygon soil map from the Dalrymple Shire, Queensland
+Australia which was disaggregated by Odgers et al. (2014).
+</figcaption>
+</figure>
+
+<p>The next inputs are the soil map unit compositions which is saved to the
+<code class="highlighter-rouge">dalrymple_composition</code> object. This is a <code class="highlighter-rouge">data.frame</code> that simply
+indicates in respective columns the map unit name, and corresponding
+numerical identifier label. Then there is the soil classes that are
+contained in the respective mapping unit, followed by the relative
+proportion that each soil class contributes to the map unit. The
+relative proportions will and probably should sum to 100.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Map unit compositions</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="s2">"dalrymple_composition"</span><span class="p">)</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">dalrymple_composition</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##   poly mapunit soil_class proportion</span><span class="w">
+</span><span class="c1">## 1  304    MM5g         RA         70</span><span class="w">
+</span><span class="c1">## 2  304    MM5g         EW         20</span><span class="w">
+</span><span class="c1">## 3  304    MM5g         PI         10</span><span class="w">
+</span><span class="c1">## 4  440  CGCO3t         CG         50</span><span class="w">
+</span><span class="c1">## 5  440  CGCO3t         CO         20</span><span class="w">
+</span><span class="c1">## 6  440  CGCO3t         DA         10</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The last required inputs are the environmental covariates. This use used
+to inform the model fitting for each DSMART iteration, and ultimately be
+used for the spatial mapping. There are actually 20 different covariate
+rasters of which have been derived from a digital elevation model and
+gamma radiometric data. These rasters are organized into a <code class="highlighter-rouge">RasterStack</code>
+and are of 30m grid resolution.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">(</span><span class="s2">"dalrymple_covariates"</span><span class="p">)</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">dalrymple_covariates</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] "RasterStack"</span><span class="w">
+</span><span class="c1">## attr(,"package")</span><span class="w">
+</span><span class="c1">## [1] "raster"</span><span class="w">
+
+</span><span class="n">raster</span><span class="o">::</span><span class="n">nlayers</span><span class="p">(</span><span class="n">dalrymple_covariates</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 20</span><span class="w">
+
+</span><span class="n">raster</span><span class="o">::</span><span class="n">res</span><span class="p">(</span><span class="n">dalrymple_covariates</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## [1] 30 30</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now it is time to run the DSMART algorithm. The implementation is spread
+across two companion functions already mentioned: <code class="highlighter-rouge">disaggregate</code> and
+<code class="highlighter-rouge">summarise</code>. The <code class="highlighter-rouge">disaggregate</code> function is the workhorse of the two
+because it performs the sample/resampling, model fitting and iteration
+parts of DSMART.</p>
+
+<p>The <code class="highlighter-rouge">summarise</code> function works on the outputs of <code class="highlighter-rouge">disaggregate</code> to
+estimate the probabilities of classes, and derives some other useful
+outputs such as the most probable soil class and or <em>n</em>-most probable
+soil classes.</p>
+
+<p>Using the <code class="highlighter-rouge">disaggregate</code> function, we provide it with the inputs
+described above. Additional inputs include the parameters <code class="highlighter-rouge">rate</code>, which
+is a numeric value for the number of samples to take from each soil
+mapping polygon; <code class="highlighter-rouge">reals</code> is the number of model realizations to fit; and
+<code class="highlighter-rouge">cpus</code> is the number of compute nodes to use for the analysis. The
+default is to run the algorithm in sequential mode, however it does have
+the capability to be scaled up substantially in parallel mode, which
+helps to eliminate some computation time.</p>
+
+<p>In the example below we set <code class="highlighter-rouge">rate</code> to 15, <code class="highlighter-rouge">reals</code> to 10, and <code class="highlighter-rouge">cpus</code>
+to 1. An unusual yet helpful feature of this function is that none of
+the output is saved to the <code class="highlighter-rouge">R</code> memory, but instead, directly to file, or
+specifically the current working directory into a folder called
+<code class="highlighter-rouge">outputs</code>.</p>
+
+<p>After the <code class="highlighter-rouge">disaggregate</code> function has terminated, you will find in the
+<code class="highlighter-rouge">outputs</code> folder a few other folders which contain rasters of the soil
+class prediction from each iteration. You will also encounter another
+folder contain text file outputs from each iteration of the C5 model
+structure plus information on the quality of the fit.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test.dsmart</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rdsmart</span><span class="o">::</span><span class="n">disaggregate</span><span class="p">(</span><span class="w">
+</span><span class="n">covariates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dalrymple_covariates</span><span class="p">,</span><span class="w"> 
+</span><span class="n">polygons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dalrymple_polygons</span><span class="p">,</span><span class="w"> 
+</span><span class="n">composition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dalrymple_composition</span><span class="p">,</span><span class="w"> 
+</span><span class="n">rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="n">reals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">cpus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">outputdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getwd</span><span class="p">())</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">disaggregate</code> function has some added functionality that is not
+used in the above example. The help file for the function describes the
+added functionality which includes the allowance of observed data into
+the algorithm through the <code class="highlighter-rouge">observations</code> parameter. The is also
+provision of different methods for sampling polygons. There is also an
+ability to include additional environmental variables by way of <code class="highlighter-rouge">strata</code>
+which constrains the occurrences of soil classes to certain areas and or
+positions within the landscape.</p>
+
+<p>Of particular interest is to derive the soil class probabilities, and
+even the most probable soil class at each pixel, and even an estimate of
+the uncertainty, which is given in terms of the confusion index that was
+used earlier during the fuzzy classification of data for derivation of
+digital soil map uncertainties.</p>
+
+<p>The confusion index essentially measure how similar to classification is
+between (in most cases) most probable and second-most probable soil
+class predictions at a pixel.</p>
+
+<p>To derive the probability rasters we need the rasters that were
+generated from the <code class="highlighter-rouge">disaggregate</code> function. This can be done via the use
+of the <code class="highlighter-rouge">list.files</code> function and the <code class="highlighter-rouge">raster</code> package to read in the
+rasters and stack them into a <code class="highlighter-rouge">rasterStack</code>.</p>
+
+<p>Rather than doing this we can use pre-prepared outputs namely in the
+form of the <code class="highlighter-rouge">dalrymple_realisations</code> (raster outputs from
+<code class="highlighter-rouge">disaggregate</code>) and <code class="highlighter-rouge">dalrymple_lookup</code> (lookup table of soil class names
+and numeric counterparts which is an output from <code class="highlighter-rouge">disaggregate</code>)
+objects. As with <code class="highlighter-rouge">disaggregate</code>, <code class="highlighter-rouge">summarise</code> can be run in parallel mode
+via control of the <code class="highlighter-rouge">cpus</code> variable.</p>
+
+<p>The <em>n</em>-most probable rasters are also created by <code class="highlighter-rouge">summarise</code>, and are
+important for the follow on procedure of soil attribute mapping, of
+which is the focus of the study by Odgers et al (2015)
+and integral to the associated PROPR algorithm.</p>
+
+<p>In many cases the user may just be interested in deriving the most
+probable soil class, or sometimes the n-most probable soil class maps.
+The <code class="highlighter-rouge">nprob</code> parameter provides user control on the number of
+<em>n</em>-probable outputs.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load pre existing outputs</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">dalrymple_lookup</span><span class="p">)</span><span class="w">
+</span><span class="n">data</span><span class="p">(</span><span class="n">dalrymple_realisations</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># run summarise function</span><span class="w">
+</span><span class="n">test.dsmart_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">summarise</span><span class="p">(</span><span class="n">realisations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dalrymple_realisations</span><span class="p">,</span><span class="w"> </span><span class="n">lookup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dalrymple_lookup</span><span class="p">,</span><span class="w"> </span><span class="n">nprob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">cpus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A few folders are automatically generated to the working directory which
+contain various outputs from the <code class="highlighter-rouge">summarise</code> function. These are:
+<code class="highlighter-rouge">mostprobable</code> and <code class="highlighter-rouge">probabilities</code>. The folder <code class="highlighter-rouge">mostprobable</code> contains
+the <em>n</em>-most probable soil class maps. The folder: <code class="highlighter-rouge">probabilities</code>
+contains the probability rasters for each candidate soil class.</p>
+
+<p>A confusion index (Burrough et al. 1997) raster may also be returned using the post processing <code class="highlighter-rouge">confusion_index</code> function on the stack of the probability rasters that are returned from the <code class="highlighter-rouge">summarise</code> function.</p>
+
+<p>Finally lets produce a map of the most probable soil class and the
+associated map of the confusion index.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## calculate confusion index find the probability rasters</span><span class="w">
+</span><span class="n">in.dir</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"SOME_DIRECTORY"</span><span class="w">
+</span><span class="n">prob.files</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">list.files</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="n">in.dir</span><span class="p">,</span><span class="w"> </span><span class="s2">"output/probabilities/"</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".tif"</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">recursive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="c1"># stack</span><span class="w">
+</span><span class="n">prob.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raster</span><span class="o">::</span><span class="n">stack</span><span class="p">(</span><span class="n">prob.files</span><span class="p">)</span><span class="w">
+</span><span class="n">conf.ind</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rdsmart</span><span class="o">::</span><span class="n">confusion_index</span><span class="p">(</span><span class="n">prob.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">cpus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">conf.ind</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># plot most probable soil class</span><span class="w">
+</span><span class="n">ml.map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">in.dir</span><span class="p">,</span><span class="w"> </span><span class="s2">"output/mostprobable/mostprob_01_class.tif"</span><span class="p">))</span><span class="w">
+</span><span class="n">ml.map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">ml.map</span><span class="p">)</span><span class="w">
+</span><span class="c1"># some classes have been dropped from map</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">ml.map</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w">
+</span><span class="c1"># find which ones have not been dropped</span><span class="w">
+</span><span class="n">rms</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">test.lookup</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">ml.map</span><span class="p">)[[</span><span class="m">1</span><span class="p">]][,</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w">
+</span><span class="c1"># new look up table for plotting</span><span class="w">
+</span><span class="n">new.lookup</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">test.lookup</span><span class="p">[</span><span class="n">rms</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">ml.map</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new.lookup</span><span class="p">[,</span><span class="w"> </span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="n">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new.lookup</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w">
+
+</span><span class="c1"># Randomly selected HEX colors</span><span class="w">
+</span><span class="n">area_colors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#9a10a8"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#cf68a0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#e7cc15"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#4f043a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1129a3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#a2d0a7"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7b0687"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#3e28d1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2c8c04"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#d39014"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#66a5ed"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#978279"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#db6f1f"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#4070fc"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#fde864"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#acdb0a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#d95a28"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#94561f"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#162972"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#8342e1"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># plot</span><span class="w">
+</span><span class="n">terra</span><span class="o">::</span><span class="n">plot</span><span class="p">(</span><span class="n">ml.map</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_colors</span><span class="p">,</span><span class="w"> </span><span class="n">plg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new.lookup</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+
+<figure>
+<img src="/images/dsm_book/dsmart_mostProb.png" alt="rconsole" />
+<figcaption>
+Map of the most probable soil class from DSMART.
+</figcaption>
+</figure>
+
+<figure>
+<img src="/images/dsm_book/dsmart_CI.png" alt="rconsole" />
+<figcaption>
+Confusion index of soil class predictions from DSMART.
+</figcaption>
+</figure>
+
+<p>DSMART can be quite a powerful algorithm for disaggregating legacy soil
+mapping as demonstrated by Chaney et al. (2014) in the USA. While the
+computational effort to generate disaggregated predictions could be a
+burden, the DSMART algorithm is relatively easy to parallelize, which
+was also demonstrated in Chaney et al. (2014), and with the
+implementation of the current <code class="highlighter-rouge">R</code> version of this algorithm.</p>
+
+<p>One other restrictive feature of the DSMART algorithm is the need for
+specific inputs, particularly in regards to the soil class compositions
+and their relative proportions within mapping units. Sometimes this
+information is not easily available, and needs to be approximated by
+some means.</p>
+
+<p>Besides to advantage of generating detailed maps of soil classes, which
+will have their own use for some applications, the DSMART algorithm
+provides a pathway to first update and harmonize legacy soil maps, and
+then to realize soil property information from existing polygon soil
+maps, such as through the use and coupling of soil class probability
+rasters and modal soil class profiles as demonstrated in Odgers,
+McBratney, and Minasny (2015). It is this detailed soil attribute
+information that is required in land system modeling frameworks, and for
+ongoing assessment and monitoring of the soil resource.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h3 id="references">References</h3>
+
+<p>Breiman, L. 2001. “Random Forests.” <em>Machine Learning</em> 41: 5–32.</p>
+
+<p>Bui, E. N., and C. J. Moran. 2001. “Disaggregation of Polygons of Surficial Geology and Soil Maps Using Spatial Modelling and Legacy Data.” <em>Geoderma</em> 103: 79–94. https://doi.org/<a href="http://dx.doi.org/10.1016/S0016-7061(01)00070-2">http://dx.doi.org/10.1016/S0016-7061(01)00070-2</a>.</p>
+
+<p>Burrough, P. A, P. F. M van Gaans, and R Hootsmans. 1997. “Continuous Classifcation in Soil Survey: Spatial Correlation, Confusion and Boundaries.” <em>Geoderma</em> 77: 115–35.</p>
+
+<p>Chaney, Nathaniel, Jonathan W. Hempel, Nathan P. Odgers, Alex B. McBratney, and Eric F. Wood. 2014. “Spatial Disaggregation and Harmonization of gSSURGO.” Long Beach, CA: ASA, CSSA; SSSA.</p>
+
+<p>Haring, T., E. Dietz, S. Osenstetter, T. Koschitzki, and B. Schroder. 2012. “Spatial Disaggregation of Complex Soil Map Units: A Decision-Tree Based Approach in Bavarian Forest Soils.” <em>Geoderma</em> Geoderma 185?186, 37?47.: 37–47. https://doi.org/<a href="http://dx.doi.org/10.1016/j.geoderma.2012.04.001.">http://dx.doi.org/10.1016/j.geoderma.2012.04.001.</a></p>
+
+<p>McBratney, Alex.B. 1998. “Some Considerations on Methods for Spatially Aggregating and Disaggregating Soil Information.” In <em>Soil and Water Quality at Different Scales</em>, edited by PeterA. Finke, Johan Bouma, and MarcelR. Hoosbeek, 80:51–62. Developments in Plant and Soil Sciences. Springer Netherlands. <a href="https://doi.org/10.1007/978-94-017-3021-1_5">https://doi.org/10.1007/978-94-017-3021-1_5</a>.</p>
+
+<p>Nauman, T W, J A Thompson, N P Odgers, and Z Libohova. 2012. “Digital Soil Assessments and Beyond: Proceedings of the Fifth Global Workshop on Digital Soil Mapping.” In, edited by B Minasny, B. P Malone, and A B McBratney, 203–7. CRC Press, London, UK.</p>
+
+<p>Nauman, Travis W., and James A. Thompson. 2014. “Semi-Automated Disaggregation of Conventional Soil Maps Using Knowledge Driven Data Mining and Classification Trees.” <em>Geoderma</em> 213: 385–99. https://doi.org/<a href="http://dx.doi.org/10.1016/j.geoderma.2013.08.024">http://dx.doi.org/10.1016/j.geoderma.2013.08.024</a>.</p>
+
+<p>Odgers, N P, A B McBratney, and B Minasny. 2015. “Digital Soil Property Mapping and Uncertainty Estimation Using Soil Class Probability Rasters.” <em>Geoderma</em> 237-238: 190–98.</p>
+
+<p>Odgers, N P, W Sun, A B McBratney, B Minasny, and D Clifford. 2014. “Disaggregating and Harmonising Soil Map Units Through Resampled Classification Trees.” <em>Geoderma</em> 214-215: 91–100.</p>
+
+<p>Quinlan, J R. 1993. <em>C4.5: Programs for Machine Learning</em>. Morgan Kaufmann, San Mateo, California.</p>
+
+<p>Rogers, L. G., M. G. Cannon, and E. V. Barry. 1999. <em>Land Resources of the Dalrymple Shire, 1. Land Resources Bulletin DNRQ980090.</em> Brisbane, Australia: Queensland Department of Natural Resources.</p>
+
+<p>Thompson, J A, T Prescott, A C Moore, J Bell, D R Kautz, J W Hempel, S W Waltman, and C. H. Perry. 2010. “Regional Approach to Soil Property Mapping Using Legacy Data and Spatial Disaggregation Techniques.” Brisbane Australia: IUSS.</p>
+
+<p>Wei, Sun, Alex McBratney, Jon Hempel, Budiman Minasny, Brendan Malone, Tom D’Avello, Lee Burras, and Jim Thompson. 2010. “Digital Harmonisation of Adjacent Analogue Soil Survey Areas - 4 Iowa Counties.” Brisbane, Australia: IUSS.</p>
+
+<p><a href="#top">Back to top</a></p>
+
+
+      <footer class="entry-meta">
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-21">September 21, 2023</time></span></span>
+        <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/DSM_book/pages/dsm_bespoke/disagg/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/DSM_book/pages/dsm_bespoke/disagg/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/DSM_book/pages/dsm_bespoke/disagg/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+    <!--<span>&copy; 2023 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="mailto:malone.brendan1001@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/brendo1001">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/soilmalone">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2023, All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div><!-- /.footer-wrapper -->
+
+<!-- JQuery JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/js/vendor/bootstrap.min.js"></script>
+
+<!-- Clean Blog JavaScript -->
+<script src="/assets/js/clean-blog.min.js"></script>
+
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87285093-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Math equation support by MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+            equationNumbers: { autoNumber: "all" },
+            inlineMath: [['$','$'],['\\(','\\)']],
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            preferredFont: "TeX",
+        },
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+
+
+
+</body>
+</html>
