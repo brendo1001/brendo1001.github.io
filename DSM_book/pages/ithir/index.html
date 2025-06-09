@@ -165,20 +165,41 @@
     </header>
     -->
     <div class="entry-content">
-      <h2 id="the-ithir-r-package">The <code class="highlighter-rouge">ithir</code> R package</h2>
+      <h2 id="the-ithir-r-package">The <code class="highlighter-rouge">ithir</code> R Package</h2>
 
-<p>The <code class="highlighter-rouge">ithir</code> <code class="highlighter-rouge">R</code> package is a necessary installation for being able to use the various <code class="highlighter-rouge">R</code> for digital soil mapping examples on this site. This is because it has all the required data sets and some of the required R functions. Some further information about <code class="highlighter-rouge">ithir</code> can be found <a href="/software/#s-1/">here</a></p>
+<p>The <a href="https://github.com/brendo1001/ithir_github"><code class="highlighter-rouge">ithir</code></a> R package is required for running many of the Digital Soil Mapping examples on this site. It provides key datasets as well as several useful functions.</p>
 
-<p>One you have installed a version of <code class="highlighter-rouge">R</code> onto your computer (see <a href="/DSM_book/pages/r_literacy/part1/">part 1 of <code class="highlighter-rouge">R</code> literacy for digital soil mapping</a> page for instructions on how to do this if needed), you will need to use the following lines of <code class="highlighter-rouge">R</code> code:</p>
+<p>The package is openly available via GitHub at:<br />
+👉 <strong><a href="https://github.com/brendo1001/ithir_github">github.com/brendo1001/ithir_github</a></strong></p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w"> 
-</span><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
-</span><span class="o">&gt;</span><span class="w"> </span><span class="n">install_github</span><span class="p">(</span><span class="s2">"brendo1001/ithir_github/pkg"</span><span class="p">)</span><span class="w"> </span><span class="c1">#ithir package</span><span class="w">
+<p>Additional information about <code class="highlighter-rouge">ithir</code> is also available <a href="/software/#s-1/">here</a>.</p>
+
+<hr />
+
+<h2 id="-how-to-install">📦 How to Install</h2>
+
+<p>Before installing <code class="highlighter-rouge">ithir</code>, make sure you have R installed on your system.<br />
+If you’re not sure how, see <a href="/DSM_book/pages/r_literacy/part1/">Part 1 of R Literacy for Digital Soil Mapping</a>.</p>
+
+<p>Once R is ready, run the following commands in your R console:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"devtools"</span><span class="p">)</span><span class="w"> 
+</span><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
+</span><span class="n">install_github</span><span class="p">(</span><span class="s2">"brendo1001/ithir_github/pkg"</span><span class="p">)</span><span class="w">  </span><span class="c1"># install ithir package from GitHub</span><span class="w">
 </span></code></pre></div></div>
-<p>An example script can also be downloaded from <a href="/DSM_book/rcode/rPackageInstallation_ithir.R">here</a></p>
+
+<p>You can verify the installation by loading the package:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>📝 Download Example Script</p>
+
+<p>You can download an installation script here:
+👉 <a href="/DSM_book/rcode/rPackageInstallation_ithir.R">rPackageInstallation_ithir.R</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-10-04">October 04, 2023</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2025-05-21">May 21, 2025</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
@@ -194,7 +215,7 @@
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
-    <!--<span>&copy; 2024 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+    <!--<span>&copy; 2025 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
 
 <footer role="contentinfo">
     <div class="container">
@@ -242,7 +263,7 @@
                     
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2024, All Rights Reserved.</p>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2025, All Rights Reserved.</p>
             </div>
         </div>
     </div>

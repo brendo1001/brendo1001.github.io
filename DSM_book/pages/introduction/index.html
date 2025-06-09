@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~10 minutes
+          Reading time ~5 minutes
         </p>
         
       </div>
@@ -167,198 +167,110 @@
     <div class="entry-content">
       <h3 id="introduction">Introduction</h3>
 
-<p>In recent times we have bared witness to the advancement of the computer
-and information technology ages. With such advances, there have come
-vast amounts of data and tools in all fields of endeavor. This has
-motivated numerous initiatives around the world to build spatial data
-infrastructures aiming to facilitate the collection, maintenance,
-dissemination and use of spatial information.</p>
+<p>Advances in computing and information technologies have ushered in the age of big data and powerful tools across all fields — including environmental and spatial sciences. These developments have sparked global efforts to build spatial data infrastructures that support the collection, management, and use of spatial information.</p>
 
-<p>Soil science potentially contributes to the development of such generic
-spatial data infrastructure through the ongoing creation of regional,
-continental and worldwide soil databases, and which are now operational
-for some uses e.g. land resource assessment and risk evaluation
-(Lagacherie and McBratney 2006).</p>
+<p>Soil science contributes to this through the development of regional, continental, and global soil databases. Some of these are now operational and used in applications such as land resource assessment and risk evaluation (Lagacherie &amp; McBratney, 2006).</p>
 
-<p>Unfortunately the existing soil databases are neither exhaustive enough
-nor precise enough for promoting an extensive and credible use of the
-soil information within the spatial data infrastructure that is being
-developed worldwide. The main reason is that their present capacities
-only allow the storage of data from conventional soil surveys which are
-scarce and sporadically available (Lagacherie and McBratney 2006).</p>
+<p>However, these databases are often incomplete and insufficiently detailed. Most rely on digitised conventional soil surveys, which are expensive, slow to produce, and increasingly rare due to reduced funding since the 1980s (Hartemink &amp; McBratney, 2008). As a result, large gaps remain in the spatial coverage and quality of available soil data.</p>
 
-<p>The main reason for this lack of soil spatial data is simply that
-conventional soil survey methods are relatively slow and expensive.
-Furthermore, we have also witnessed a global reduction in soil science
-funding that started in the 1980s (Hartemink and McBratney 2008), which
-has meant a significant scaling back in wide scale soil spatial data
-collection and/or conventional soil surveying.</p>
+<p>To overcome this, spatial soil information systems need to evolve — from storing only digitised legacy maps to producing new soil maps <em>ab initio</em>. This is the central aim of <strong>Digital Soil Mapping (DSM)</strong>.</p>
 
-<p>To face this situation, it is necessary for the current spatial soil
-information systems to extend their functionality from the storage and
-use of digitized (existing) soil maps, to the production of soil maps
-<em>ab initio</em> (Lagacherie and McBratney 2006). This is precisely the aim
-of Digital Soil Mapping (DSM) which can be defined as:</p>
+<blockquote>
+  <p><strong>Digital Soil Mapping (DSM)</strong> is the creation and population of spatial soil information systems using numerical models that infer the spatial and temporal variation of soil types and properties from soil observations and related environmental variables.</p>
+</blockquote>
 
-<p><em>The creation and population of spatial soil information systems by
-numerical models inferring the spatial and temporal variations of soil
-types and soil properties from soil observation and knowledge from
-related environmental variables</em></p>
+<hr />
 
-<p>The concepts and methodologies for DSM were formalized in an extensive
-review by McBratney, Mendonca Santos, and Minasny (2003). In the
-McBratney, Mendonca Santos, and Minasny (2003) paper, the <em>scorpan</em>
-approach for predictive modelling (and mapping) of soil was introduced,
-which in itself is rooted in earlier works by Jenny (1941) and Russian
-soil scientist Dokuchaev. <em>scorpan</em> is a mnemonic for factors for
-prediction of soil attributes: soil, climate, organisms, relief, parent
-materials, age, and spatial position. The <em>scorpan</em> approach is
-formulated by the equation:</p>
+<h3 id="the-scorpan-model">The <em>scorpan</em> Model</h3>
 
-<p><em>S</em> = <em>f</em>(<em>s</em>, <em>c</em>, <em>o</em>, <em>r</em>, <em>r</em>, <em>p</em>, <em>a</em>, <em>n</em>) + <em>ϵ</em></p>
+<p>The concepts and methodologies for DSM were formalised by McBratney, Mendonça Santos, and Minasny (2003). They introduced the <strong>scorpan</strong> approach — a framework for predicting soil attributes based on environmental variables. This was influenced by earlier works by Jenny (1941) and Dokuchaev.</p>
 
-<p>or</p>
+<p><strong>scorpan</strong> is a mnemonic for the environmental factors influencing soil:</p>
+<ul>
+  <li><strong>s</strong>: soil (existing properties)</li>
+  <li><strong>c</strong>: climate</li>
+  <li><strong>o</strong>: organisms (vegetation, fauna)</li>
+  <li><strong>r</strong>: relief (topography)</li>
+  <li><strong>p</strong>: parent material</li>
+  <li><strong>a</strong>: age</li>
+  <li><strong>n</strong>: spatial location</li>
+</ul>
 
-<p><em>S</em> = <em>f</em>(<em>Q</em>) + <em>ϵ</em></p>
+<p>The model is expressed as:</p>
 
-<p>Long-handed, the equation states that the soil type or attribute at an
-unvisited site (<em>S</em>) can be predicted from a numerical function or model
-(<em>f</em>) given the factors just described plus the locally varying, spatial
-dependent residuals (<em>ϵ</em>). The <em>f</em>(<em>Q</em>) part of the formulation is the
-deterministic component or in other words, the empirical quantitative
-function linking <em>S</em> to the <em>scorpan</em> factors (Lagacherie and McBratney
-2006). The <em>scorpan</em> factors or environmental covariates come in the
-form of spatially populated digitally available data, for instance from
-digital elevation models and the indices derived from them which
-include, slope, aspect, MRVBF etc. Landsat data, and other remote
-sensing images, radiometric data, geological survey maps, legacy soil
-maps and data, just to name a few. For the residuals (<em>ϵ</em>) part of the
-formulation, we assume there to be some spatial structure. This is for a
-number of reasons which include that the attributes used in the
-deterministic component were inadequate, interactions between attributes
-were not taken into account, or the form of <em>f()</em> was mis-specified.
-Overall this general formulation is called the <em>scorpan</em>-kriging method,
-where the kriging component is the process of defining the spatial trend
-of the residuals (with variograms) and using kriging to estimate the
-residuals at the non-visited sites.</p>
+<blockquote>
+  <p><em>S</em> = <em>f</em>(s, c, o, r, p, a, n) + <em>ϵ</em><br />
+or more generally: <em>S</em> = <em>f(Q)</em> + <em>ϵ</em></p>
+</blockquote>
 
-<p>Without getting into detail with regards to some of the statistical
-nuances such as bias issues, which can be prevalent when using legacy
-soil point data for DSM, the application of <em>scorpan</em>-kriging can only
-be done in extents where there is available soil point data. The
-challenge therefore is: what to do in situations where this type of data
-is not available? In the context of the global soil mapping key soil
-attributes, this is a problem, but can be overcome with the usage of
-other sources of legacy soil data such as existing soil maps. It is even
-more of a problem when this information is not available either.
-However, in the context of global soil mapping, Minasny and McBratney
-(2010) proposed a decision tree structure for actioning DSM on the basis
-of the nature of available legacy soil data. This is summarized in
-figure below. But bear in mind that this decision tree is not
-constrained only to DSM at a global scale but at any mapping extent
-where the user wishes to perform DSM given the availability of soil data
-for their particular area.</p>
+<p>Where <em>S</em> is the soil property or class at a location, <em>f(Q)</em> is a deterministic model using the scorpan factors, and <em>ϵ</em> is the spatially dependent residual (unexplained variation).</p>
+
+<p>This formulation is known as <strong>scorpan-kriging</strong>, where the deterministic model <em>f(Q)</em> is complemented by kriging of residuals to capture spatial dependence.</p>
+
+<p>Covariates used in <em>f(Q)</em> may include:</p>
+<ul>
+  <li>Digital elevation models (e.g. slope, aspect, MRVBF)</li>
+  <li>Remote sensing (e.g. Landsat, radiometrics)</li>
+  <li>Geological and soil survey maps</li>
+  <li>Legacy soil profile data</li>
+</ul>
+
+<p>Residuals (<em>ϵ</em>) are modelled via geostatistical methods (e.g. variograms and kriging), assuming spatial structure exists due to unmeasured interactions or model limitations.</p>
+
+<hr />
+
+<h3 id="what-if-no-point-data-exists">What if No Point Data Exists?</h3>
+
+<p>The scorpan-kriging approach requires point observations. But what if they’re not available?</p>
+
+<p>Minasny &amp; McBratney (2010) proposed a decision tree to guide DSM based on available legacy data. This framework also applies beyond global mapping — it’s useful at any scale.</p>
 
 <figure>
-    <img src="/images/dsm_book/globDSMmeths.png" alt="rconsole" />
-    <figcaption> A decision tree for digital soil mapping based on legacy soil data. Adapted from Minasny and McBratney (2010).</figcaption>
+  <img src="/images/dsm_book/globDSMmeths.png" alt="DSM methods decision tree" />
+  <figcaption>A decision tree for digital soil mapping based on legacy data (Minasny &amp; McBratney, 2010).</figcaption>
 </figure>
 
-<p>As can be seen from the above figure, once you have defined an area of
-interest, and assembled a suite of environmental covariates for that
-area, then determined the availability of the soil data there, you
-follow the respective pathway. <em>scorpan</em>-kriging is performed
-exclusively when there is only point data, but can be used also when
-there is both point and map data available, e.g. Malone et al. (2014).</p>
+<hr />
 
-<p>The work flow is quite different when there is only soil map information
-available. Bear in mind that the quality of the soil map depends on the
-scale and subsequently variation of soil cover; such that smaller scaled
-maps e.g. 1:100 000 would be considered better and more detailed than
-large scaled maps e.g. 1:500 000. The elemental basis for extracting
-soil properties from legacy soil maps comes from the central and
-distributional concepts of soil mapping units. For example, modal soil
-profile data of soil classes can be used to quickly build soil property
-maps. Where mapping units consist of more than one component, we can use
-a spatially weighted means type method i.e. estimation of the soil
-properties is based on the modal profile of the components and the
-proportional area of the mapping unit each component covers, e.g.
-Odgers, Libohova, and Thompson (2012). As a pre-processing step prior to
-creating soil attribute maps, it may be necessary to harmonize soil
-mapping units (in the case of adjacent soil maps) and/or perform some
-type of disaggregation technique in order to retrieve the map unit
-component information. Some approaches for doing so have been described
-in Bui and Moran (2003). More recently soil map disaggregation has been
-a target of DSM interest with a sound contribution from Odgers et al.
-(2014) for extracting individual soil series or soil class information
-from convolved soil map units by way of the DSMART algorithm. The DSMART
-algorithm can best be explained as a data mining with repeated
-re-sampling algorithm. Furthering the DSMART algorithm, Odgers,
-McBratney, and Minasny (2015) then introduced the PROPR algorithm which
-takes probability outputs from DSMART together with modal soil profile
-data of given soil classes, to estimate soil attribute quantities (with
-estimates of uncertainty).</p>
+<h3 id="mapping-scenarios-based-on-available-data">Mapping Scenarios Based on Available Data</h3>
 
-<p>What is the process when there is no soil data available at all? This is
-obviously quite a difficult situation to confront, but a real one at
-that. The central concept that was discussed by Minasny and McBratney
-(2010) for addressing these situations is based on the assumed homology
-of soil forming factors between a reference area and the region of
-interest for mapping. Malone, Jha, and Minasny (2016) provides a further
-overview of the topic together with a real world application which
-compared different extrapolating functions. Overall, the soil homologue
-concept or Homosoil, relative to other areas of DSM research is still in
-its development. But considering from a global perspective, the
-sparseness of soil data and limited research funds for new soil survey,
-application of the Homosoil approach or other analogues will become
-increasingly important for the operational advancement of DSM.</p>
+<p><strong>1. Point data only</strong><br />
+→ Use scorpan-kriging.</p>
 
-<h3 id="what-is-the-intention-behind-of-this-dsm-course">What is the intention behind of this DSM course?</h3>
+<p><strong>2. Soil maps and point data</strong><br />
+→ Combine approaches (e.g. Malone et al., 2014).</p>
 
-<p>These pages cover some of the territory that is described in the figure
-above, particularly the <em>scorpan</em>-kriging type approach of DSM; as this
-is probably most commonly undertaken. Also covered is spatial
-disagregation of polygonal maps. This is framed in the context of
-updating digital soil maps and downscaling in terms of deriving soil
-class or attribute information from aggregated soil mapping units.
-Importantly there is a theme of implementation about these pages; a sort
-of how-to-guide. So there are some examples of how to create digital
-soil maps of both continuous and categorical target variable data, given
-available points and a portfolio of available covariates. The procedural
-detail is explained and implemented using the <code class="highlighter-rouge">R</code> computing language.
-Subsequently, some effort is required to become literate in this
-programming language, both for general purpose usage and for DSM and
-other related soil studies.</p>
+<p><strong>3. Only soil maps</strong><br />
+→ Estimate soil properties using mapping unit information, such as modal profile data.<br />
+Approaches include spatially weighted means based on map unit composition (e.g. Odgers, Libohova &amp; Thompson, 2012).</p>
 
-<p>The motivation of this course then shifts to operational concerns and
-based around real case-studies. For example, the book looks at how we
-might statistically validate a digital soil map. Another operational
-study is that of digital soil assessment (Carre et al. 2007). Digital
-soil assessment (DSA) is akin to the translation of digital soil maps
-into decision making aids. These could be risk-based assessments, or
-assessing threats to soil (erosion, decline of organic matter etc.), and
-assessing soil functions. These type of assessments can not be easily
-derived from a digital soil map alone, but require some form of
-post-processing inference. This could be done with quantitative modeling
-and or a deep mechanistic understanding of the assessment that needs to
-be made. A natural candidate in this realm of DSM is land capability or
-agricultural enterprise suitability. A case study of this type of DSA is
-demonstrated in this course. Specific topics of this course include:</p>
+<p><strong>4. Disaggregation of complex map units</strong><br />
+→ Apply algorithms like DSMART (Odgers et al., 2014) to decompose and assign probabilities to soil classes.<br />
+→ Use PROPR (Odgers, McBratney &amp; Minasny, 2015) to convert class probabilities and modal profiles into soil property estimates.</p>
+
+<p><strong>5. No data at all</strong><br />
+→ Use analogue approaches based on soil homology between a reference area and a target region.<br />
+See Malone, Jha &amp; Minasny (2016) for examples of extrapolating from similar environments.</p>
+
+<hr />
+
+<h3 id="purpose-of-this-course">Purpose of This Course</h3>
+
+<p>This course focuses on practical DSM implementation, with particular emphasis on scorpan-kriging and disaggregation of polygonal soil maps. The goal is to help you:</p>
 
 <ul>
-  <li>Attainment of <code class="highlighter-rouge">R</code> literacy in general and for DSM.</li>
-  <li>Algorithmic development for soil science.</li>
-  <li>General GIS operations relevant to DSM.</li>
-  <li>Soil data preparation, examination and harmonization for DSM.</li>
-  <li>Quantitative functions for continuous and categorical (and
-combinations of both) soil attribute modeling and mapping.</li>
-  <li>Quantifying digital soil map uncertainty.</li>
-  <li>Assessing the quality of digital soil maps.</li>
-  <li>Updating, harmonizing and disaggregating legacy soil mapping.</li>
-  <li>Digital soil assessment in terms of land suitability for
-agricultural enterprises.</li>
-  <li>Digital identification of soil homologues.</li>
+  <li>Apply DSM theory using <code class="highlighter-rouge">R</code></li>
+  <li>Work with both continuous and categorical soil data</li>
+  <li>Understand soil covariates and preprocessing</li>
+  <li>Produce, evaluate, and update digital soil maps</li>
+  <li>Explore digital soil assessment for land use and suitability</li>
+  <li>Understand uncertainty and validation in DSM</li>
+  <li>Learn about analogues like Homosoil for data-sparse regions</li>
 </ul>
+
+<p>The course is hands-on — with a “how-to” spirit — and leans heavily on worked examples using R. It also explores operational applications such as validation of soil maps and decision-support tools like digital soil assessment (DSA) (Carré et al., 2007).</p>
+
+<hr />
 
 <h3 id="references">References</h3>
 
@@ -409,7 +321,7 @@ Rasters.” <em>Geoderma</em> 237-238: 190–98.</p>
 Classification Trees.” <em>Geoderma</em> 214-215: 91–100.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-08-21">August 21, 2023</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2025-05-21">May 21, 2025</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
@@ -425,7 +337,7 @@ Classification Trees.” <em>Geoderma</em> 214-215: 91–100.</p>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
-    <!--<span>&copy; 2024 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+    <!--<span>&copy; 2025 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
 
 <footer role="contentinfo">
     <div class="container">
@@ -473,7 +385,7 @@ Classification Trees.” <em>Geoderma</em> 214-215: 91–100.</p>
                     
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2024, All Rights Reserved.</p>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2025, All Rights Reserved.</p>
             </div>
         </div>
     </div>

@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~14 minutes
+          Reading time ~11 minutes
         </p>
         
       </div>
@@ -172,23 +172,32 @@
 
 <p><a href="#s-3">Skip to fitting splines to multiple soil profiles</a></p>
 
-<p>The traditional method of sampling soil involves dividing a soil profile into horizons. The number of horizons and the position of each are generally based on attributes easily observed in the field, such as morphological soil properties (Bishop et al. 1999). From each horizon, a bulk sample is taken and it is assumed to represent the average value for a soil attribute over the depth interval from which it is sampled.</p>
+<h3 id="soil-depth-functions-1">Soil depth functions</h3>
 
-<p>There are some issues with this approach, particularly from a pedological perspective and secondly from the difficulty in using this legacy data within a Digital Soil Mapping (DSM) framework where we wish to know the continuous variability of a soil both in the lateral and vertical dimensions. From the pedological perspective soil generally varies continuously with depth; however, representing the soil attribute value as the average over the depth interval of horizons leads to discontinuous or stepped profile representations.</p>
+<p>The traditional horizon-based sampling method divides a soil profile into discrete layers based on easily observed field properties (e.g., color, texture; Bishop et al. 1999). Each horizon’s bulk sample is assumed to represent the average value of a soil attribute over that depth interval.</p>
 
-<p>Difficulties can arise in situations where one wants to know the value of an attribute at a specified depth. The second issue is regarding DSM and is where we use a database of soil profiles to generate a model of soil variability in the area in which they exist. Because observations at each horizon for each profile will rarely be the same between any two profiles, it then becomes difficult to build a model where predictions are made at a set depth or at standardized depth intervals.</p>
+<p>However, this approach has two main drawbacks:</p>
 
-<p>Exceptions to this include so-called one-step models such as those described in Orton et al. (2016) and Poggio and Gimona (2014), but to date have not been widely used despite their reported advantages (in terms of predictive skill and efficiency) over the approach described below and then in subsequent pages which has been described as a two-step approach.</p>
+<ol>
+  <li><strong>Stepped profiles.</strong> Soils vary continuously with depth, but horizon-averaging produces a discontinuous, “stepped” representation.</li>
+  <li><strong>Inconsistent depths.</strong> Horizon boundaries differ from profile to profile, making it hard to obtain harmonized observations at fixed depths for modelling.</li>
+</ol>
 
-<p>Legacy soil data is too valuable to do away with, and thus needs to be shaped to suit the purposes of the map producer, such that one needs to be able to derive a continuous function using the available horizon data as some input.</p>
+<p>Some one-step models (Orton et al. 2016; Poggio &amp; Gimona 2014) interpolate directly, but most practitioners use a two-step approach:</p>
 
-<p>This can be done with many methods including polynomials and exponential decay type depth functions. A more general continuous depth function is the equal-area quadratic spline function. The usage and mathematical expression of this function have been detailed in Ponce-Hernandez et al. (1986), Bishop et al. (1999), and Malone et al. (2009).</p>
+<ol>
+  <li><strong>Fit a continuous, mass-preserving spline</strong> (equal-area quadratic spline) to each profile.</li>
+  <li><strong>Extract harmonized values</strong> at user-defined depth intervals (e.g. 0–5 cm, 5–15 cm, …, 100–200 cm; GlobalSoilMap.net specification, Arrouays et al. 2014).</li>
+</ol>
 
-<p>A useful feature of the spline function is that it is mass preserving (hence the name equal area), or in other words the original data is preserved and can be retrieved again via integration of the continuous spline.</p>
+<p>A mass-preserving spline has two advantages:</p>
 
-<p>Compared to exponential decay functions where the goal is in defining the actual parameters of the decay function, the spline parameters are the values of the soil attribute at the standard depths that are specified by the user. This is a useful feature, because firstly, one can harmonize a whole collection of soil profile data and then explicitly model the soil for a specified depth. For example the GlobalSoilMap.net project (Arrouays et al. 2014) has a specification that digital soil maps be created for each target soil variable for the 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm depth intervals. In this case, the mass-preserving splines can be fitted to the observed data, then values can be extracted from them at the required depths, and are then ready for exploratory analysis and spatial modelling.</p>
+<ul>
+  <li><strong>Data integrity.</strong> Total “mass” (integral) over the profile is preserved and recoverable by integration.</li>
+  <li><strong>User-defined depths.</strong> Spline parameters correspond directly to the soil attribute values at standard depths, enabling easy harmonization across many profiles.</li>
+</ul>
 
-<p>In the following, we will use legacy soil data and the spline function to prepare data to be used in a DSM framework. This will specifically entail fitting splines to all the available soil profiles and then through a process of harmonization, integrate the splines to generate harmonized depths of each observation.</p>
+<p>Below, we’ll apply this method to legacy horizon data: fitting splines to each profile and then extracting harmonized values for downstream DSM modelling.</p>
 
 <p><a href="#top">Back to top</a></p>
 
@@ -196,13 +205,13 @@
 
 <p><a href="#s-3">Skip to fitting splines to multiple soil profiles</a></p>
 
-<p>The following demonstrates mass-preserving spline fitting using a single soil profile example for which there are measurements of soil carbon density to a given maximum depth.</p>
+<p>The following example shows how to fit a mass-preserving spline to a single soil profile’s carbon-density measurements, from the surface down to its maximum observed depth.</p>
 
-<p>We can fit a spline to the maximum soil depth, or alternatively any depth that does not exceed the maximum soil depth. The function used for fitting splines is called <code class="highlighter-rouge">ea_spline</code> and is from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>You can choose to fit the spline all the way to the profile’s deepest measurement or to any shallower depth. We use the <code class="highlighter-rouge">ea_spline</code> function from the <strong>ithir</strong> package to perform this fitting.</p>
 
-<p>Look at the help file for further information on this function. For example, there is further information about how the <code class="highlighter-rouge">ea_spline</code> function can also accept data of class <code class="highlighter-rouge">SoilProfileCollection</code> from the <code class="highlighter-rouge">aqp</code> package in addition to data of the generic <code class="highlighter-rouge">data.frame</code> class.</p>
+<p>For details on additional arguments and input types, consult the help file (<code class="highlighter-rouge">?ea_spline</code>). Besides <code class="highlighter-rouge">data.frame</code>, <code class="highlighter-rouge">ea_spline</code> also accepts <strong>aqp</strong>’s <code class="highlighter-rouge">SoilProfileCollection</code> objects when you need more complex profile structures.</p>
 
-<p>In the example below the input data is of class <code class="highlighter-rouge">data.frame</code>. The data we need, <code class="highlighter-rouge">oneProfile</code> is in the <code class="highlighter-rouge">ithir</code> package. Lets also load a few of the other important <code class="highlighter-rouge">R</code> packages that will be encountered in this section too.</p>
+<p>In this section, we’ll work with the <code class="highlighter-rouge">data.frame</code> called <code class="highlighter-rouge">oneProfile</code> (included in <strong>ithir</strong>). Before running the spline, load <strong>ithir</strong> and any other supporting packages you’ll need:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Load ithir library</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
@@ -222,21 +231,38 @@
 
 <figure>
     <img src="/images/dsm_book/splinePlot1.png" alt="rconsole" />
-    <figcaption> oil profile plot of the `oneProfile` data. Note this figure was produced using the `plot_soilProfile` function from `ithir`.</figcaption>
+    <figcaption> Soil profile plot of the `oneProfile` data. Note this figure was produced using the `plot_soilProfile` function from `ithir`.</figcaption>
 </figure>
 
-<p>The <code class="highlighter-rouge">ea_spline</code> function will predict a continuous function from the top of the soil profile to the maximum soil depth, such that it will interpolate values both within the observed depths and between the depths where there is no observation.</p>
+<p>The <code class="highlighter-rouge">ea_spline</code> function fits a continuous, mass-preserving spline from the soil surface down to your chosen maximum depth. It interpolates smoothly both within observed horizons and across gaps where no measurements exist.</p>
 
-<p>To parametize the <code class="highlighter-rouge">ea_spline</code> function, we could accept the defaults, however it might be suitable to change the <code class="highlighter-rouge">lam</code> and <code class="highlighter-rouge">d</code> parameters to suit the objective of the analysis being undertaken. <code class="highlighter-rouge">lam</code> is the lambda parameter which controls the smoothness or fidelity of the spline. Increasing this value will make the spline more rigid. Decreasing it towards zero will make the spline more flexible such that it will follow near directly the observed data.</p>
+<h4 id="key-parameters">Key parameters</h4>
 
-<p>A sensitivity analysis is generally recommended in order to optimize this parameter. From experience a <code class="highlighter-rouge">lam</code> value of 0.1 works well generally for most soil properties, and is the default value for the function.</p>
+<ul>
+  <li><strong><code class="highlighter-rouge">lam</code></strong> (λ): Controls spline smoothness.
+    <ul>
+      <li>Larger values → more rigid (smoother) curves</li>
+      <li>Smaller values → more flexible curves that follow observations closely</li>
+      <li><em>Default:</em> 0.1 (a good starting point for most soil attributes)</li>
+      <li><strong>Tip:</strong> Perform a simple sensitivity analysis to select an optimal λ for your data.</li>
+    </ul>
+  </li>
+  <li><strong><code class="highlighter-rouge">d</code></strong>: Defines the target depth intervals for harmonized outputs.
+    <ul>
+      <li>Specified as a matrix or vector of breakpoints</li>
+      <li><em>Default intervals (GlobalSoilMap.net):</em> 0–5 cm, 5–15 cm, 15–30 cm, 30–60 cm, 60–100 cm, 100–200 cm</li>
+      <li><strong>Tip:</strong> Customize these to match your project’s depth requirements.</li>
+    </ul>
+  </li>
+</ul>
 
-<p>The <code class="highlighter-rouge">d</code> parameter represents the depth intervals at which we want to get soil values for. This is a harmonization process where regardless of which depths soil was observed at, we can derive the soil values for regularized and standard depths.</p>
+<p><strong>Workflow:</strong></p>
+<ol>
+  <li>Fit the spline to your horizon data.</li>
+  <li>Integrate the spline over each interval in <code class="highlighter-rouge">d</code> to obtain harmonized, interval-averaged values.</li>
+</ol>
 
-<p>In practice, the continuous spline function is first fitted to the data, then we get the integrals of this function to determine the values of the soil at the standard depths. <code class="highlighter-rouge">d</code> is a matrix, but on the basis of the default values, what it is indicating is that we want the values of soil at the following depth
-intervals: 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm.</p>
-
-<p>These depths are specified depths determined for the GlobalSoilMap.net project (Arrouays et al. 2014). Naturally, one can alter these values to suit there own particular requirements. To fit a spline to the carbon density values of the <code class="highlighter-rouge">oneProfile</code> data, the following script could be used:</p>
+<p>Below is an example script applying these defaults to the <code class="highlighter-rouge">oneProfile</code> data:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eaFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ithir</span><span class="o">::</span><span class="n">ea_spline</span><span class="p">(</span><span class="n">oneProfile</span><span class="p">,</span><span class="w"> </span><span class="n">var.name</span><span class="o">=</span><span class="s2">"C.kg.m3."</span><span class="p">,</span><span class="w">
         </span><span class="n">d</span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">15</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">60</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">200</span><span class="p">)),</span><span class="n">lam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">vlow</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> 
@@ -266,20 +292,36 @@ intervals: 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm, and 100-200cm.</p>
 </span><span class="c1">##  $ var.1cm       : num [1:200, 1] 21.6 21.4 21.2 20.8 20.3 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The output of the function is a <code class="highlighter-rouge">list</code>, where the first element is a <code class="highlighter-rouge">data.frame</code> (<code class="highlighter-rouge">harmonized</code>) which are the predicted spline estimates at the specified depth intervals. The second element (<code class="highlighter-rouge">obs.preds</code>) is another <code class="highlighter-rouge">data.frame</code> but contains the observed soil data together with spline predictions for the actual depths of observation for each soil profile. The third element (<code class="highlighter-rouge">splineFitError</code>) is a <code class="highlighter-rouge">data.frame</code> that stores the profile root mean square error (RMSE) estimate and the normalized root-mean-square (nRMSE) deviation. The interquartile range
-is used as the denominator in the nRMSE. This value is an estimate of
-the magnitude of difference between observed values and associated
-predicted values with each profile. The fourth element, (<code class="highlighter-rouge">var.1cm</code>) is a
-matrix which stores the spline predictions of the depth function at (in
-this case) 1cm resolution. Each column represents a given soil profile
-and each row represents an incremental 1cm depth increment to the
-maximum depth we wish to extract values for, or to the maximum observed
-soil depth (which ever is smallest).</p>
+<p>The <code class="highlighter-rouge">ea_spline</code> function returns a <strong>list</strong> with four elements:</p>
 
-<p>It is often more amenable to visualize the performance of the spline
-fitting. Subsequently, plotting the outputs of <code class="highlighter-rouge">ea_spline</code> is made
-possible by the associated <code class="highlighter-rouge">plot_ea_spline</code> function (see help file for
-use of this function):</p>
+<ol>
+  <li>
+    <p><strong><code class="highlighter-rouge">harmonised</code></strong> (<code class="highlighter-rouge">data.frame</code>):<br />
+Predicted spline estimates averaged over your specified depth intervals.</p>
+  </li>
+  <li>
+    <p><strong><code class="highlighter-rouge">obs.preds</code></strong> (<code class="highlighter-rouge">data.frame</code>):<br />
+The original horizon measurements combined with spline-predicted values at those exact depths.</p>
+  </li>
+  <li><strong><code class="highlighter-rouge">splineFitError</code></strong> (<code class="highlighter-rouge">data.frame</code>):
+    <ul>
+      <li><strong><code class="highlighter-rouge">rmse</code></strong>: root-mean-square error between observations and predictions</li>
+      <li><strong><code class="highlighter-rouge">nrmse</code></strong>: RMSE normalized by the interquartile range (IQR), providing a scale-independent error metric</li>
+    </ul>
+  </li>
+  <li><strong><code class="highlighter-rouge">var.1cm</code></strong> (<code class="highlighter-rouge">matrix</code>):<br />
+High-resolution predictions at 1 cm increments down to the maximum depth. Rows correspond to depth (cm), columns to individual profiles.</li>
+</ol>
+
+<hr />
+
+<p>To visualize spline performance, use the accompanying <strong><code class="highlighter-rouge">plot_ea_spline</code></strong> function. It offers three plot types:</p>
+
+<ul>
+  <li><strong>Type 1</strong>: observed data + continuous spline</li>
+  <li><strong>Type 2</strong>: observed data + interval means</li>
+  <li><strong>Type 3</strong>: combined view (continuous spline + interval means)</li>
+</ul>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">))</span><span class="w"> 
 </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">){</span><span class="w">
@@ -288,42 +330,53 @@ use of this function):</p>
   </span><span class="n">type</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">plot.which</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s2">"carbon density"</span><span class="p">)}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">plot_ea_spline</code> function is a basic function without too much
-control over the plotting parameters, except there are three possible
-themes of plot output that one can select. This is controlled by the
-<code class="highlighter-rouge">type</code> parameter. <code class="highlighter-rouge">Type = 1</code> is to return the observed soil data plus
-the continuous spline (default). <code class="highlighter-rouge">Type = 2</code> is to return the observed
-data plus the averages of the spline at the specified depth intervals.
-<code class="highlighter-rouge">Type = 3</code> is to return the observed data, spline averages and
-continuous spline. The script above results in producing all three
-possible plots, and is shown on the figure below.</p>
+<p>The <code class="highlighter-rouge">plot_ea_spline</code> function provides three visualization modes, controlled by the <code class="highlighter-rouge">type</code> argument:</p>
+
+<ul>
+  <li><strong>Type 1</strong>: Observed horizon data with the continuous spline curve (default).</li>
+  <li><strong>Type 2</strong>: Observed data with interval-averaged spline values at your specified depths.</li>
+  <li><strong>Type 3</strong>: A combined view showing both the continuous spline and the interval averages.</li>
+</ul>
+
+<p>While <code class="highlighter-rouge">plot_ea_spline</code> offers limited customization of axes, labels, or colors, these three themes cover the most common diagnostic needs. The example above loops through all three types, producing a stack of plots like the one shown below.</p>
 
 <figure>
     <img src="/images/dsm_book/splinePlot2.png" alt="rconsole" />
     <figcaption> Soil profile plot of the three type variants from `plot_ea_spline`. Plot 1 is type 1, plot 2 is type 2 and plot 3 is type 3.</figcaption>
 </figure>
 
+<p><a href="#top">Back to top</a></p>
+
 <h3 id="fitting-spline-to-multiple-soil-profiles-">Fitting spline to multiple soil profiles. <a id="s-3"></a></h3>
 
-<p>The above example is just a demonstration of the <code class="highlighter-rouge">ea_spline</code> function
-with the very unlikely scenario of a single soil profile. A normal use
-case is to fit splines for a collection of soil profiles.</p>
+<p>The single-profile example was just a proof of concept. In a typical DSM workflow, you’ll fit splines to many profiles at once. The steps are identical:</p>
 
-<p>The implementation is exactly the same.</p>
+<ol>
+  <li><strong>Prepare your data</strong>
+    <ul>
+      <li>Combine all profiles into one <code class="highlighter-rouge">data.frame</code> or <code class="highlighter-rouge">SoilProfileCollection</code>.</li>
+      <li>Include a unique ID column (numeric, character, or mixed) so each profile is processed separately.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Run the spline fitting</strong><br />
+Call <code class="highlighter-rouge">ea_spline()</code> on your assembled dataset, specifying the object (<code class="highlighter-rouge">obj</code>), the target variable (<code class="highlighter-rouge">var.name</code>), depth intervals (<code class="highlighter-rouge">d</code>), smoothing parameter (<code class="highlighter-rouge">lam</code>), minimum value (<code class="highlighter-rouge">vlow</code>), and set <code class="highlighter-rouge">show.progress = TRUE</code> to track progress.</p>
+  </li>
+  <li><strong>Inspect results</strong>
+    <ul>
+      <li><code class="highlighter-rouge">eaFit$harmonised</code>: harmonized values per profile &amp; depth</li>
+      <li><code class="highlighter-rouge">eaFit$obs.preds</code>: observed vs. predicted per horizon</li>
+      <li><code class="highlighter-rouge">eaFit$splineFitError</code>: RMSE &amp; nRMSE for each profile</li>
+      <li><code class="highlighter-rouge">eaFit$var.1cm</code>: high-resolution spline curves</li>
+    </ul>
+  </li>
+</ol>
 
-<p>All the work happens within the function in terms of processing sequentially each given profile. The input data is also the same, but you need to be mindful that each profile is given a unique identifier so that the processing goes without
-a hitch. This unique profile can either be numerical or character type
-or a combination of both.</p>
+<p>For this demo, download <a href="/DSM_book/data/Carbon_10sites.csv">Carbon_10sites.csv</a>, which contains 10 profiles of soil carbon measurements.</p>
 
-<p>The data for this example is called <a href="/DSM_book/data/Carbon_10sites.csv">Carbon_10sites</a>.</p>
-
-<p>Download the file and it is called <code class="highlighter-rouge">Carbon_10sites.csv</code>. It is 10 soil
-profiles with measured soil carbon stocks.</p>
-
-<p>Note that the <code class="highlighter-rouge">ea_spline</code> function is very fast despite no re-factoring improvements. This is because the internal computations are relatively simple with no overheads or other package dependencies. The size of the profiles to
-process is basically the only impediment to time, but experience has
-demonstrated that the current function can process tens of thousands in
-soil profiles in a few minutes.</p>
+<blockquote>
+  <p><strong>Performance note:</strong> Because <code class="highlighter-rouge">ea_spline</code> uses efficient internal calculations and minimal external dependencies, you can process tens of thousands of profiles in a few minutes. The primary runtime driver is simply the total number of profiles and depth intervals.</p>
+</blockquote>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load data</span><span class="w">
 </span><span class="n">Carbon_10sites</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="s2">"~/Carbon_10sites.csv"</span><span class="p">)</span><span class="w">
@@ -357,42 +410,28 @@ soil profiles in a few minutes.</p>
 </span><span class="c1">##  $ var.1cm       : num [1:200, 1:10] 29.9 29.6 29 28.2 27.2 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now with more than one soil profile, it is perhaps easier to make sense
-of the function outputs, in particular the <code class="highlighter-rouge">eaFit$harmonised</code> element
-which stores on each line the fitted values at the specified soil
-depths. The <code class="highlighter-rouge">soil.depth</code> column is also helpful too in helping interpret
-the fitted outputs.</p>
+<p>With multiple profiles, the output becomes more intuitive. In particular, the <strong><code class="highlighter-rouge">eaFit$harmonised</code></strong> data frame lists one row per profile, with each column representing the predicted value at a user-specified depth. The <strong><code class="highlighter-rouge">soil.depth</code></strong> column gives each profile’s maximum depth, helping you verify that the harmonized estimates cover the full observed range.</p>
+
+<p><a href="#top">Back to top</a></p>
 
 <h3 id="references">References</h3>
 
-<p>Arrouays, D, N McKenzie, J Hempel, A Richer de Forges, and A McBratney,
-eds. 2014. <em>GlobalSoilMap: Basis of the Global Spatial Soil Information
-System</em>. CRC Press.</p>
+<p>Arrouays, D., McKenzie, N., Hempel, J., Richer de Forges, A., &amp; McBratney, A. (2014). <em>GlobalSoilMap: Basis of the Global Spatial Soil Information System</em>. CRC Press.</p>
 
-<p>Bishop, T F A, A B McBratney, and G M Laslett. 1999. “Modelling Soil
-Attribute Depth Functions with Equal-Area Quadratic Smoothing Splines.”
-<em>Geoderma</em> 91: 27–45.</p>
+<p>Bishop, T. F. A., McBratney, A. B., &amp; Laslett, G. M. (1999). Modelling soil attribute depth functions with equal-area quadratic smoothing splines. <em>Geoderma</em>, 91, 27–45.</p>
 
-<p>Malone, B P, A B McBratney, B Minasny, and G M Laslett. 2009. “Mapping
-Continuous Depth Functions of Soil Carbon Storage and Available Water
-Capacity.” <em>Geoderma</em> 154: 138–52.</p>
+<p>Malone, B. P., McBratney, A. B., Minasny, B., &amp; Laslett, G. M. (2009). Mapping continuous depth functions of soil carbon storage and available water capacity. <em>Geoderma</em>, 154, 138–152.</p>
 
-<p>Orton, T. G., M. J. Pringle, and T. F. A. Bishop. 2016. “A One-Step
-Approach for Modelling and Mapping Soil Properties Based on Profile Data
-Sampled over Varying Depth Intervals.” <em>Geoderma</em> 262: 174–86.
-<a href="http://www.sciencedirect.com/science/article/pii/S0016706115300422">http://www.sciencedirect.com/science/article/pii/S0016706115300422</a>.</p>
+<p>Orton, T. G., Pringle, M. J., &amp; Bishop, T. F. A. (2016). A one-step approach for modelling and mapping soil properties based on profile data sampled over varying depth intervals. <em>Geoderma</em>, 262, 174–186.</p>
 
-<p>Poggio, Laura, and Alessandro Gimona. 2014. “National Scale 3D Modelling
-of Soil Organic Carbon Stocks with Uncertainty Propagation – an Example
-from Scotland.” <em>Geoderma</em> 232-234: 284–99.
-<a href="http://www.sciencedirect.com/science/article/pii/S0016706114002006">http://www.sciencedirect.com/science/article/pii/S0016706114002006</a>.</p>
+<p>Poggio, L., &amp; Gimona, A. (2014). National-scale 3D modelling of soil organic carbon stocks with uncertainty propagation: an example from Scotland. <em>Geoderma</em>, 232–234, 284–299.</p>
 
-<p>Ponce-Hernandez, R, F H C Marriott, and P H T Beckett. 1986. “An
-Improved Method for Reconstructing a Soil Profile from Analysis of a
-Small Number of Samples.” <em>Journal of Soil Science</em> 37: 455–67.</p>
+<p>Ponce-Hernandez, R., Marriott, F. H. C., &amp; Beckett, P. H. T. (1986). An improved method for reconstructing a soil profile from analysis of a small number of samples. <em>Journal of Soil Science</em>, 37, 455–467.</p>
+
+<p><a href="#top">Back to top</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-12">September 12, 2023</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2025-05-22">May 22, 2025</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
@@ -408,7 +447,7 @@ Small Number of Samples.” <em>Journal of Soil Science</em> 37: 455–67.</p>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
-    <!--<span>&copy; 2024 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+    <!--<span>&copy; 2025 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
 
 <footer role="contentinfo">
     <div class="container">
@@ -456,7 +495,7 @@ Small Number of Samples.” <em>Journal of Soil Science</em> 37: 455–67.</p>
                     
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2024, All Rights Reserved.</p>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2025, All Rights Reserved.</p>
             </div>
         </div>
     </div>

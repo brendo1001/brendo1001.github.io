@@ -158,50 +158,62 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~2 minutes
+          Reading time ~1 minute
         </p>
         
       </div>
     </header>
     -->
     <div class="entry-content">
-      <h3 id="time-to-do-some-work">Time to do some work</h3>
+      <nav class="toc">
+- [Time to do some work](#time-to-do-some-work)
+- [What are you in for?](#what-are-you-in-for)
+- [References](#references)
+</nav>
 
-<p>In the <a href="/DSM_book/pages/introduction/">course fundamentals</a>, some of the history and theoretical underpinnings of digital soil mapping was discussed. Now with a solid foundation in <code class="highlighter-rouge">R</code>, it is time to put this all into practice i.e. do DSM with <code class="highlighter-rouge">R</code>. The following topics are not necessarily devoted to soil mapping, but are nonetheless key steps in the process. In the following pages the following topics will be explored.</p>
+<h3 id="time-to-do-some-work">Time to do some work</h3>
+
+<p>In the <a href="/DSM_book/pages/introduction/">course fundamentals</a>, we covered the history and theory behind digital soil mapping. Now, with a solid foundation in <code class="highlighter-rouge">R</code>, it’s time to apply this knowledge—i.e., perform DSM with <code class="highlighter-rouge">R</code>.<br />
+The following pages explore key preparatory steps (not all strictly “mapping”) that streamline a DSM workflow:</p>
 
 <ul>
   <li><a href="/DSM_book/pages/dsm_prep/splines/">Soil depth functions</a></li>
-  <li><a href="/DSM_book/pages/dsm_prep/intersection/">Intersecting soil point observations with environmental covariates</a></li>
-  <li><a href="/DSM_book/pages/dsm_prep/processes/">Some exploratory soil data analyses as a preparatory step to model fitting</a></li>
+  <li><a href="/DSM_book/pages/dsm_prep/intersection/">Intersecting point observations with environmental covariates</a></li>
+  <li><a href="/DSM_book/pages/dsm_prep/processes/">Exploratory soil data analyses before model fitting</a></li>
 </ul>
 
 <h3 id="what-are-you-in-for">What are you in for?</h3>
 
-<p>In the above pages some common methods for soil data preparation and exploration are covered.</p>
+<p>These pages present common methods for preparing and exploring soil data.</p>
 
-<p>Soil point databases are inherently heterogeneous because soils are measured non uniformly from site to site. However one more-or-less commonality is that soil point observations will generally have some sort of label, together with some spatial coordinate information that indicates where the sample was collected from.</p>
+<p>Soil point databases are inherently heterogeneous because sampling protocols vary by site. However, most records share a label and spatial coordinates for each sample.</p>
 
-<p>Then things begin to vary from site to site. Probably the most interesting thing is that all soils are not measured universally at the same depths. Some soils are sampled per horizon or at regular depths. Some soil studies examine only the topsoil, while others sample to the bedrock depth.</p>
+<p>Depth‐wise, observations also differ: some studies sample per horizon, others at fixed intervals, some only the topsoil, and others down to bedrock. Attributes measured (e.g., carbon, texture, pH) may appear in some profiles but not others.</p>
 
-<p>Then different soil attributes are measured at some locations and depths, but not at others. Overall, it becomes quickly apparent when one begins working with soil data that a number of preprocessing steps are needed to fulfill the requirements of a particular analysis.</p>
+<p>As you work with these data, you’ll see that several preprocessing steps are needed to meet your analysis goals.</p>
 
-<p>In order to prepare a collection of data for use in a DSM project as described in Minasny and McBratney (2010) one needs to examine what data are available, what is the soil attribute or class to be modeled? What is the support of the data? This includes whether observations represent soil point observations or some integral over a defined area (for now we just consider observations to be point observations).</p>
+<p>When preparing data for a DSM project (sensu Minasny &amp; McBratney 2010), ask:</p>
 
-<p>However, we may also assume the support to be also a function of depth in that we may be interested in only mapping soil for the top 10cm, or to 1m, or any depth in between or to the depth to bedrock.</p>
+<ol>
+  <li><strong>What is the target attribute or class?</strong></li>
+  <li><strong>What is the support of observations?</strong>
+    <ul>
+      <li>Are they point samples or aggregated over areas?</li>
+      <li>Over what depth interval (e.g., 0–10 cm, 0–1 m, full profile)?</li>
+    </ul>
+  </li>
+</ol>
 
-<p>The depth interval could be a single value (such as one value for the 0-1m depth interval as an example), or we may wish to map simultaneously the depth variation of the target soil attribute with the lateral or spatial variation. These questions add complexity to the soil mapping project, but are an important consideration when planning a project and assessing what the objectives are.</p>
+<p>You may map a single depth interval (e.g., 0–1 m) or model depth variation alongside lateral variation (3-D mapping). Planning these objectives up front guides your choice of depth functions, covariate extraction, and modelling approach.</p>
 
-<p>More recent digital soil mapping research has examined the the combination of soil depths functions with spatial mapping in order to create soil maps with a near 3-D support.</p>
-
-<p>In the following page some approaches for doing this are discussed with emphasis and instruction on a particular method, namely the use of a mass-preserving soil depth function. This is followed by a page that will examine the important DSM step of linking observed soil information with available environmental covariates and the subsequent preparation of covariates for spatial modelling.</p>
+<p>Recent DSM research combines depth functions with spatial models to produce near-3D soil maps. The next page dives into one such method: a mass-preserving soil depth function. Then you’ll link your processed soil observations to environmental covariates and prepare those covariates for spatial modelling.</p>
 
 <h3 id="references">References</h3>
 
-<p>Minasny, B, and A B McBratney. 2010. “Digital Soil Mapping: Bridging Research, Environmental Application, and Operation.” In, edited by J L Boettinger, D W Howell, A C Moore, A E Hartemink, and Kienast-Brown S, 429–25. Dordrecht: Springer.</p>
-
+<p>Minasny, B., &amp; McBratney, A. B. (2010). Digital Soil Mapping: Bridging Research, Environmental Application, and Operation. In J. L. Boettinger et al. (Eds.), <em>Digital Soil Mapping</em> (pp. 429–425). Dordrecht: Springer.</p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-09-12">September 12, 2023</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2025-05-22">May 22, 2025</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
@@ -217,7 +229,7 @@
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
-    <!--<span>&copy; 2024 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+    <!--<span>&copy; 2025 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
 
 <footer role="contentinfo">
     <div class="container">
@@ -265,7 +277,7 @@
                     
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2024, All Rights Reserved.</p>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2025, All Rights Reserved.</p>
             </div>
         </div>
     </div>

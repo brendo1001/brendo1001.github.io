@@ -6,21 +6,21 @@
 <head>
 <meta charset="utf-8">
 <title>R packages &#8211; Smart Digital Agriculture</title>
-<meta name="description" content="another list">
+<meta name="description" content="Another list">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
 <meta name="twitter:title" content="R packages">
-<meta name="twitter:description" content="another list">
+<meta name="twitter:description" content="Another list">
 <meta name="twitter:creator" content="@soilmalone">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="R packages">
-<meta property="og:description" content="another list">
+<meta property="og:description" content="Another list">
 <meta property="og:url" content="/DSM_book/pages/packages/">
 <meta property="og:site_name" content="Smart Digital Agriculture">
 
@@ -136,7 +136,7 @@
                     <h1>R packages</h1>
                     
                         <hr class="small">
-                        <span class="subheading">another list</span>
+                        <span class="subheading">Another list</span>
                     
                 </div>
             </div>
@@ -165,86 +165,168 @@
     </header>
     -->
     <div class="entry-content">
-      <h2 id="some-r-packages-that-are-useful-for-digital-soil-mapping">Some <code class="highlighter-rouge">R</code> packages that are useful for digital soil mapping</h2>
+      <h2 id="useful-r-packages-for-digital-soil-mapping">Useful R Packages for Digital Soil Mapping</h2>
 
-<p>Notwithstanding to the rich statistical and analytical resource provide through the <code class="highlighter-rouge">R</code> base functionality, the following <code class="highlighter-rouge">R</code> packages (and their contained functions) are what I think are an invaluable resource for doing digital soil mapping.</p>
+<p>In addition to base R, a wide range of contributed packages are essential for implementing Digital Soil Mapping (DSM). Below, packages are grouped by key tasks:</p>
 
-<p>There are four main groups of tasks that are critical for implementing DSM in general. These are:</p>
+<p>📌 <strong>Note</strong>: This list is not exhaustive. It highlights packages that are commonly useful for DSM, spatial analysis, and soil modelling — but many others exist and continue to emerge.</p>
 
 <ol>
-  <li><a href="#s-1">Soil science and pedometric type tasks</a></li>
-  <li><a href="#s-2">Using GIS tools and related GIS tasks</a></li>
-  <li><a href="#s-3">Calibrating models</a></li>
-  <li><a href="#s-4">Making maps, plotting etc.</a></li>
+  <li><a href="#s-1">Soil science and pedometrics</a></li>
+  <li><a href="#s-2">GIS integration and spatial processing</a></li>
+  <li><a href="#s-3">Model calibration and prediction</a></li>
+  <li><a href="#s-4">Mapping and visualisation</a></li>
 </ol>
 
-<p>The following are short introductions about those packages that fall into these categories.</p>
+<hr />
 
-<h3 id="soil-science-and-pedometrics-">Soil science and pedometrics <a id="s-1"></a></h3>
+<h3 id="1-soil-science-and-pedometrics-">1. Soil Science and Pedometrics <a id="s-1"></a></h3>
 
 <ul>
   <li>
-    <p>Various <code class="highlighter-rouge">R</code> packages and <code class="highlighter-rouge">R</code> functions that i have had a hand in developing can be found on the <a href="/software/">software page of this website</a>.</p>
+    <p><strong><a href="/DSM_book/pages/ithir/">ithir</a></strong><br />
+Core datasets and functions used throughout this course for soil data handling and modelling.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">ithir</code>: Soil data and functions. <a href="/DSM_book/pages/ithir/">A necessary <code class="highlighter-rouge">R</code> package</a> to have for following the R workflows throughout these pages dedicated to doing digital soil mapping with <code class="highlighter-rouge">R</code>.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/aqp/">aqp</a></strong><br />
+Algorithms for Quantitative Pedology — soil profile analysis, aggregation, and visualisation.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">aqp</code>: <a href="https://cran.r-project.org/web/packages/aqp/index.html">Algorithms for quantitative pedology</a>. A collection of
-algorithms related to modeling of soil resources, soil classification, soil profile aggregation, and visualization.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/soilDB/">soilDB</a></strong><br />
+Interfaces with USDA soil data sources (SSURGO, NASIS, SoilWeb) — useful for U.S.-based DSM work.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/sharpshootR/">sharpshootR</a></strong><br />
+Companion to <code class="highlighter-rouge">aqp</code> — utilities for soil classification and interpretation, including taxonomy and land capability.</p>
+  </li>
+  <li>
+    <p>Additional packages authored or used by the developer are listed on the <a href="/software/">software page</a>.</p>
   </li>
 </ul>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="gis-stuff-">GIS stuff <a id="s-2"></a></h3>
+<hr />
+
+<h3 id="2-gis-tools-and-spatial-processing-">2. GIS Tools and Spatial Processing <a id="s-2"></a></h3>
 
 <ul>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/RSAGA/index.html"><code class="highlighter-rouge">RSAGA</code></a> provides access to geocomputing and terrain analysis functions of <a href="https://saga-gis.sourceforge.io/en/index.html">SAGA GIS</a> from within <code class="highlighter-rouge">R</code> by running the command line version of SAGA. <code class="highlighter-rouge">RSAGA</code> furthermore provides several <code class="highlighter-rouge">R</code> functions for handling ASCII grids, including a flexible framework for applying local functions (including predict methods of fitted models) and focal functions to multiple grids.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/terra/">terra</a></strong><br />
+Modern raster handling and spatial analysis — fast, memory-efficient replacement for <code class="highlighter-rouge">raster</code>.</p>
   </li>
   <li>
-    <p><a href="https://github.com/r-spatial/qgisprocess"><code class="highlighter-rouge">qgisprocess</code></a> provide an <code class="highlighter-rouge">R</code> interface to the geoprocessing algorithms of <a href="https://qgis.org/en/site/">QGIS</a>, a popular and open source desktop geographic information system (GIS) program.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/sf/">sf</a></strong><br />
+Simple Features for vector data — tidyverse-compatible spatial dataframes.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/spdep/">spdep</a></strong><br />
+Tools for analysing spatial autocorrelation, neighbourhoods, and dependencies — important for diagnostics and spatial structure.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/whitebox/">whitebox</a></strong><br />
+Access to <a href="https://www.whiteboxgeo.com/">WhiteboxTools</a>, a rich set of terrain and hydrological analysis functions.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/RSAGA/">RSAGA</a></strong><br />
+Interface to <a href="https://saga-gis.sourceforge.io">SAGA GIS</a> — for DEM processing, hydrology, and terrain metrics.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/r-spatial/qgisprocess">qgisprocess</a></strong><br />
+Use QGIS processing algorithms directly from R.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/geodata/">geodata</a></strong><br />
+Download and prepare global raster datasets (climate, elevation, landcover) for spatial modelling.</p>
   </li>
 </ul>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="modelling-">Modelling <a id="s-3"></a></h3>
+<hr />
+
+<h3 id="3-model-calibration-and-prediction-">3. Model Calibration and Prediction <a id="s-3"></a></h3>
 
 <ul>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/caret/index.html"><code class="highlighter-rouge">caret</code></a> has an extensive range of functions for training and plotting classification and regression models. See the <a href="https://topepo.github.io/caret/index.html">caret website</a> for more detailed information.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/caret/">caret</a></strong><br />
+Unified interface for model training, tuning, and validation — supports dozens of algorithms.</p>
   </li>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/Cubist/index.html"><code class="highlighter-rouge">Cubist</code></a> does regression modeling using rules with added instance-based corrections. Cubist models were developed by Ross Quinlan. Further information can be found at <a href="https://www.rulequest.com/">Rulequest</a></p>
+    <p><strong><a href="https://mlr3.mlr-org.com/">mlr3</a></strong><br />
+Modern, modular machine learning framework with resampling, benchmarking, and workflow pipelines.</p>
   </li>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/C50/index.html"><code class="highlighter-rouge">C5.0</code></a> does C5.0 decision trees and rule-based models for pattern recognition. Another model structure developed by Ross Quinlan.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/Cubist/">Cubist</a></strong><br />
+Rule-based regression models with instance-based corrections.</p>
   </li>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/gam/index.html"><code class="highlighter-rouge">gam</code></a> has functions for fitting and working with generalized additive models.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/C50/">C50</a></strong><br />
+Classification trees and rule-based learners (C5.0) for pattern recognition.</p>
   </li>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/nnet/index.html"><code class="highlighter-rouge">nnet</code></a> is software for feed-forward neural networks with a single hidden layer, and for multinomial log-linear models.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/gam/">gam</a></strong><br />
+Generalised Additive Models — good for flexible trend modelling.</p>
   </li>
   <li>
-    <p><a href="https://cran.r-project.org/web/packages/gstat/"><code class="highlighter-rouge">gstat</code></a> is for doing geostatistics. Variogram modelling, simple, ordinary and universal point or block (co)kriging, sequential Gaussian or indicator (co)simulation; variogram and variogram map plotting utility functions. A related and useful package is <a href="https://cran.r-project.org/web/packages/automap/index.html"><code class="highlighter-rouge">automap</code></a>, which performs an automatic interpolation by automatically estimating the variogram and then calling <code class="highlighter-rouge">gstat</code>.</p>
+    <p><strong><a href="https://cran.r-project.org/web/packages/nnet/">nnet</a></strong><br />
+Single-layer neural networks and multinomial regression.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/gstat/">gstat</a></strong><br />
+Geostatistics — kriging, variogram modelling, and conditional simulation.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/automap/">automap</a></strong><br />
+Automatic variogram fitting and kriging using <code class="highlighter-rouge">gstat</code>.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/randomForest/">randomForest</a></strong><br />
+Ensemble learning via Breiman’s random forest algorithm.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/xgboost/">xgboost</a></strong><br />
+Fast and scalable gradient boosting — popular for predictive soil modelling.</p>
   </li>
 </ul>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="mapping-and-plotting-">Mapping and plotting <a id="s-4"></a></h3>
+<hr />
+
+<h3 id="4-mapping-and-visualisation-">4. Mapping and Visualisation <a id="s-4"></a></h3>
 
 <ul>
-  <li>Besides using the base plotting functionality, another useful plotting package is <a href="https://cran.r-project.org/web/packages/ggplot2/index.html"><code class="highlighter-rouge">ggplot2</code></a>. This package is an implementation of the grammar of graphics in <code class="highlighter-rouge">R</code>. It combines the advantages of both base and lattice graphics: conditioning and shared axes are handled automatically, and you can still build up a plot step by step from multiple data sources. It also implements a sophisticated multidimensional conditioning system and a consistent interface to map data to aesthetic attributes. See the <a href="https://ggplot2.tidyverse.org/">ggplot2 website</a> for more information, documentation and examples.</li>
+  <li>
+    <p><strong><a href="https://ggplot2.tidyverse.org/">ggplot2</a></strong><br />
+Flexible, layered graphics system — ideal for publication-ready visualisation.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/viridis/">viridis</a></strong><br />
+Colourblind-friendly and perceptually uniform palettes for mapping.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/tmap/">tmap</a></strong><br />
+Thematic map creation using a grammar of graphics — supports both static and interactive maps.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/leaflet/">leaflet</a></strong><br />
+Create interactive web maps directly from R.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/mapview/">mapview</a></strong><br />
+Quick, exploratory spatial visualisation — supports raster, <code class="highlighter-rouge">sf</code>, and <code class="highlighter-rouge">SpatRaster</code>.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://cran.r-project.org/web/packages/ggspatial/">ggspatial</a></strong><br />
+Adds scale bars, north arrows, and coordinate reference system annotations to <code class="highlighter-rouge">ggplot2</code> maps.</p>
+  </li>
 </ul>
 
 <p><a href="#top">Back to top</a></p>
 
       <footer class="entry-meta">
-        <span>Updated on <span class="entry-date date published updated"><time datetime="2023-08-21">August 21, 2023</time></span></span>
+        <span>Updated on <span class="entry-date date published updated"><time datetime="2025-05-21">May 21, 2025</time></span></span>
         <span class="author vcard"><span class="fn">Smart Digital Agriculture</span></span>
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
@@ -260,7 +342,7 @@ algorithms related to modeling of soil resources, soil classification, soil prof
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
-    <!--<span>&copy; 2024 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
+    <!--<span>&copy; 2025 Smart Digital Agriculture. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/hpstr/" rel="notfollow">HPSTR Theme</a>.</span>-->
 
 <footer role="contentinfo">
     <div class="container">
@@ -308,7 +390,7 @@ algorithms related to modeling of soil resources, soil classification, soil prof
                     
                     
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2024, All Rights Reserved.</p>
+                <p class="copyright text-muted">Copyright &copy; Smart Digital Agriculture 2025, All Rights Reserved.</p>
             </div>
         </div>
     </div>
