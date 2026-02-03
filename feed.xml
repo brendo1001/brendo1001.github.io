@@ -4,13 +4,64 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-01-27T14:04:24+11:00</updated>
+<updated>2026-02-04T10:46:45+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/02/journalDigest" />
+  <id>/2026/02/journalDigest</id>
+  <updated>2026-02-02T00:00:00-00:00</updated>
+  <published>2026-02-02T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-3&quot;&gt;Journal Paper Digests 2026 #3&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Federated earth-observation models for collaborative farm-scale soil mapping&lt;/li&gt;
+  &lt;li&gt;Ensuring accuracy and reliability in spectroscopic diagnostics: the role of quality control systems&lt;/li&gt;
+  &lt;li&gt;Prediction of potentially toxic trace elements (PTEs) in soil and sediments using vis-NIR spectroscopy: a review&lt;/li&gt;
+  &lt;li&gt;Air-drying of soil preserves microbial and faunal eDNA abundance and diversity regardless of land-use type or management intensity&lt;/li&gt;
+  &lt;li&gt;Analysis of soil thermal property measurements in double-layered soils with the heat pulse sensor vertically crossing a soil horizon interface&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;analysis-of-soil-thermal-property-measurements-in-double-layered-soils-with-the-heat-pulse-sensor-vertically-crossing-a-soil-horizon-interface&quot;&gt;Analysis of soil thermal property measurements in double-layered soils with the heat pulse sensor vertically crossing a soil horizon interface&lt;/h3&gt;
+
+&lt;p&gt;The growing demand for studying coupled hydrothermal transport processes in layered soils comes with a need for accurate estimations of thermal properties using the heat pulse (HP) sensor. In the case where a HP sensor is installed vertically in a double-layered soil with the sensor crossing a soil horizon interface, its measurements are affected by different upper and lower layered properties. This study combined laboratory and numerical experiments to quantify the effect of the soil horizon interface on HP measurements, and to develop a parameterized cylindrical perfect conductor (PCPC) model that accounts for the interface position and layered properties. Results indicated that the effect of the layered soil properties on HP measurements depended on the soil horizon interface position, specifically when the soil horizon interface was within 15 mm vertically above or below the thermocouples in the HP sensor. A sigmoid function was used to quantify the effects of soil layer properties and soil horizon interface position on HP measurements. The developed PCPC model, based on the sigmoid function, exhibited strong agreement with the numerical simulations, yielding soil thermal property estimates all within a maximum relative error of −3.1%. The PCPC model effectively captured the combined effects of soil horizon interface and thermal properties of soil layers on the HP measurements in a double-layered soil system. This model provides a theoretical basis for the inversion of soil thermal property in such a double-layered soil environments with a HP sensor vertically crossing a soil horizon interface.&lt;/p&gt;
+
+&lt;h3 id=&quot;air-drying-of-soil-preserves-microbial-and-faunal-edna-abundance-and-diversity-regardless-of-land-use-type-or-management-intensity&quot;&gt;Air-drying of soil preserves microbial and faunal eDNA abundance and diversity regardless of land-use type or management intensity&lt;/h3&gt;
+
+&lt;p&gt;Soil biodiversity monitoring requires standardized and practical sample storage methods, particularly for large-scale surveys. Yet, the influence of the soil storage conditions on eDNA-based assessments of microbial and faunal communities remains a key concern. Here, we assessed whether air-drying of soils at room temperature alters microbial (prokaryotes, fungi, micro-eukaryotes) and faunal (nematodes, annelids, micro-arthropods) abundance and diversity compared to freezing at −20 °C across different land-use types and management intensities through quantitative polymerase chain reaction (qPCR) and multi-marker DNA metabarcoding. We sampled topsoil (0–10 cm) from 42 sites of the Swiss Central Plateau spanning forests, grasslands, arable lands, orchards, wetlands, and urban areas. Forests, grasslands and arable lands were sampled in sites varying in management intensities. Across land-use types and management intensities, air-drying of soil followed by four to eight weeks of storage at room temperature or at −20 °C and freezing soil directly yielded comparable gene abundances, alpha-diversity, and community structure for all microbial and faunal groups. Moreover, microbial and faunal community structure were consistently shaped by land-use types and soil physicochemical variables regardless of the soil storage method used. These findings demonstrate that air-drying is a cost-effective and reliable method for short-term storing soil samples in large-scale biodiversity monitoring without compromising data quality.&lt;/p&gt;
+
+&lt;h3 id=&quot;prediction-of-potentially-toxic-trace-elements-ptes-in-soil-and-sediments-using-vis-nir-spectroscopy-a-review&quot;&gt;Prediction of potentially toxic trace elements (PTEs) in soil and sediments using vis-NIR spectroscopy: a review&lt;/h3&gt;
+
+&lt;p&gt;The potentially toxic trace elements (PTEs) in soil/sediments are a severe environmental problem. It is necessary to better understand and evaluate the distribution of PTEs in soil/sediments. Visible-near infrared (Vis-NIR) spectroscopy has great advantages of being green, rapid, and highly operational for large-scale monitoring, to be an efficient alternative of traditional methods in the inversion of PTEs in soil/sediments. This article reviews the progress on the application of VIS-NIR technology in predicting PTEs content in soil/sediments, including the prediction mechanism, the main factors affecting prediction accuracy, spectral data processing and modeling methods and the present shortcomings or challenges. Also, this article points out the future research directions to improve the application of Vis-NIR in predicting PTEs content, including modeling of PTEs in different forms, spectral feature selection, prediction model optimization, interdisciplinary cooperation and communication, and the spectral data accessibility and standardization. The purpose is to provide an overview and outlook on the application of Vis-NIR technology in predicting PTEs content in soil/sediments, promoting the scientific research and practical applications.&lt;/p&gt;
+
+&lt;h3 id=&quot;ensuring-accuracy-and-reliability-in-spectroscopic-diagnostics-the-role-of-quality-control-systems&quot;&gt;Ensuring accuracy and reliability in spectroscopic diagnostics: the role of quality control systems&lt;/h3&gt;
+
+&lt;p&gt;Spectroscopic diagnostics have great potential in clinical applications, enabling the assessment of biological tissues and fluids through their spectral signatures. The accuracy and reliability of these techniques are paramount for their integration into routine clinical workflows. Several challenges—such as instrumental drift, environmental fluctuations, and operator-related variability—can compromise spectral consistency. Quality control (QC) systems serve as essential safeguards against these challenges, ensuring that instruments operate within predefined performance parameters through calibration, validation, standardized protocols, and contamination detection. This paper explores the fundamental role of QC frameworks in spectroscopic diagnostics, where maintaining measurement integrity is critical for patient safety and regulatory compliance. The practical implementation of QC principles is demonstrated through a case study on a noninvasive NIR system designed for glycation assessment in nail keratin as a screening tool for diabetes risk. The study highlights the importance of automated error detection, real-time calibration verification, and robust statistical quality assurance in ensuring diagnostic reliability. Aligning spectroscopic QC measures with the unmet needs of healthcare professionals and tested individuals is crucial for fostering trust in these technologies. By addressing real-world clinical challenges and advancing regulatory oversight, spectroscopy-based diagnostics can improve accessibility to timely and cost-effective medical assessments, particularly in resource-limited settings.&lt;/p&gt;
+
+&lt;h3 id=&quot;federated-earth-observation-models-for-collaborative-farm-scale-soil-mapping&quot;&gt;Federated earth-observation models for collaborative farm-scale soil mapping&lt;/h3&gt;
+
+&lt;p&gt;Accurate, privacy-respecting soil information is essential for site-specific nutrient management and carbon accounting, yet the cost of laboratory analyses limits many farms to relatively sparse sampling grids. We propose a collaborative framework that couples a national Sentinel-2 bare-soil composite with FL to produce high-resolution clay and soil organic carbon (SOC) maps while keeping all local data on-premise. A one-dimensional convolutional neural network was first pre-trained on a 53,570-sample Brazilian archive and then fine-tuned across 50 farms through synchronous Federated Averaging. We benchmarked this hybrid configuration against (i) a purely centralized model trained on the same archive and (ii) a fully decentralized FL model initialized at random.
+Across farm-level validation sets, pre-trained FL lowered median RMSE by 42% for clay and 31% for SOC relative to the centralized baseline, while increasing median RPIQ by 33% and 25%, respectively. On farms with 
+ samples, the gains remained substantial, confirming that the approach remains effective when local datasets are modest compared with national archives. Error distributions differed significantly between scenarios (Friedman and Wilcoxon tests), and the pre-trained FL maps removed most spatial artefacts observed in the centralized outputs while preserving fine-scale gradients. Because only encrypted weight updates are exchanged, sensitive information never leaves the farm, satisfying GDPR/LGPD-style constraints and allowing late-joining clients to inherit an increasingly mature global model. Taken together, these results indicate that continental pre-training followed by federated fine-tuning reconciles global generality with local specificity and offers a scalable blueprint for privacy-preserving, high-resolution soil mapping in settings where sample densities are often substantially lower than in experimental setups, without compromising data sovereignty.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 02, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1239,41 +1290,6 @@ A method to define a wide range of non-Gaussian spatial dependence is presented&
 &lt;p&gt;The deterioration of soil health (SH) in agricultural lands is a global challenge that poses a threat to food and resource security. We developed a practical framework to facilitate the large-scale SH assessment in agricultural fields of northwestern Iran. A total of 350 soil samples were collected and soil properties were determined. Eight linear and non-linear Soil Health Indexes (SHIs) were developed. Digital Elevation Model (DEM) and multiple remote sensing indexes were obtained from satellite images. SHI prediction models were developed using an integrated approach and through a model selection procedure, the most relevant indexes were identified. The results showed significant (P &amp;lt; 0.05) positive correlation between the IHI-LT and elevation (r = 0.56), Vegetation Health Index (VHI) (r = 0.69), and Surface Water Condition Index (SWCI) (r = 0.79). The multiple regression model including the above indexes strongly explained the spatial variability of the Integrated Soil Health Index (IHI) with both total (LT) and minimum (LM) dataset approaches (R2 = 0.72; AIC =-1607.27; RMSE = 0.03; rho c = 0.65). The developed models can be utilized for large-scale assessment of soil health conditions, reducing the cost and effort of conventional ground-truth soil sampling and analysis. Furthermore, this approach may aid in monitoring and mitigating the soil degradation in agricultural lands.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2023/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 20, 2023.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2023/06/journalDigest" />
-  <id>/2023/06/journalDigest</id>
-  <updated>2023-06-11T00:00:00-00:00</updated>
-  <published>2023-06-11T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2023-10&quot;&gt;Journal Paper Digests 2023 #10&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Complex systems modelling of UK winter wheat yield&lt;/li&gt;
-  &lt;li&gt;Twenty-four years of contrasting cropping systems on a brown chernozem in Southern Alberta: crop yields, soil carbon, and subsoil salinity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;twenty-four-years-of-contrasting-cropping-systems-on-a-brown-chernozem-in-southern-alberta-crop-yields-soil-carbon-and-subsoil-salinity&quot;&gt;Twenty-four years of contrasting cropping systems on a brown chernozem in Southern Alberta: crop yields, soil carbon, and subsoil salinity&lt;/h3&gt;
-
-&lt;p&gt;Cropping systems with perennial forages and reduced fallow frequency generally increase soil organic carbon and thus sub-sequent soil health and crop yield. We evaluated the impact of prior cropping systems on subsequent yields and soil properties in a semiarid region by using crop yields as a bioassay of soil health following the termination of a 24-year crop rotation study in the Brown soil zone in Alberta. During 24 growing seasons from 1992 to 2015, the study included three fallow-containing rotations, two annual crop rotations that were cropped continuously, and perennial grass hay, each with two to six fertilizer treatments. During the bioassay period from 2016 through 2020, all plots in the study were uniformly cropped. Compared to unfertilized fallow wheat, soil organic C in the fall of 2015 was 54% higher after 24 years of fertilized grass and up to 14% higher following annual crops in rotations without fallow. The most notable impact of the previous cropping system on yield during the bioassay years was low yield following perennial grass in 2016 and 2018. Soil electrical conductivity measurements showed that subsoil salinity was elevated following perennial grass, demonstrating the importance of subsoil characteristics for healthy soils. Crop yields in the fifth year of the crop bioassay were 10%-20% greater due to reduced fallow frequency or increased crop diversity. The long-term impact of the cropping system on crop yield in this study depended on drought intensity due to counteracting changes in soil organic matter and subsoil salinity.&lt;/p&gt;
-
-&lt;h3 id=&quot;complex-systems-modelling-of-uk-winter-wheat-yield&quot;&gt;Complex systems modelling of UK winter wheat yield&lt;/h3&gt;
-
-&lt;p&gt;Wheat is one of the most important global crops, understanding the drivers of wheat yield has significant societal benefits. Climate variables are particularly important in determining interannual variations in wheat yield, either as primary factors which directly influence the stages of wheat growth, or as secondary factors through their influence on pests, diseases and soil conditions. Here we present a new approach to model wheat yield; an empirical method based on nonlinear complex systems identification, known as NARMAX (Nonlinear AutoRegressive Moving Average with eXogenous inputs model). We deploy the NARMAX analytical approach for a specific site, Rothamsted, UK, where detailed meteorological variables are available, together with specific information on site conditions and crop growth stages. NARMAX yield forecasts are compared with those from the WOFOST crop model and nine state-of-the-art machine learning (ML) models; experimental results show that NARMAX outperforms all the compared methods in both prediction accuracy and model interpretability. We also develop regional wheat yield forecasts derived from a new gridded meteorological data product. The NARMAX approach produces skillful forecasts (r = 0.78) of Rothamsted wheat yield for a validation period, with small errors. The NARMAX regional forecasts, based on less specific information than WOFOST, also show a high degree of skill (r = 0.73). In addition, the predictor terms chosen for the model are identifiable and can help to give insight into potential key processes involved in the determination of wheat yield at a specific location. This approach can be extended in principle to other crop types and locations. It is straightforward and inexpensive to implement, using a limited number of meteorological predictor variables, which can be taken from site-based observations, or from gridded meteorological datasets. The method is a new tool to understand the environmental drivers of wheat yields on an annual basis.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2023/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 11, 2023.&lt;/p&gt;
   </content>
 </entry>
 
