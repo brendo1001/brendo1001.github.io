@@ -4,13 +4,73 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-02-04T10:46:45+11:00</updated>
+<updated>2026-02-10T11:28:22+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/02/journalDigest" />
+  <id>/2026/02/journalDigest</id>
+  <updated>2026-02-10T00:00:00-00:00</updated>
+  <published>2026-02-10T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-4&quot;&gt;Journal Paper Digests 2026 #4&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unearthing historical pedology: An analysis of soil science concepts in 1200 years of Persian poetry&lt;/li&gt;
+  &lt;li&gt;The economics of conservation agriculture within a conceptual and methodological assessment framework&lt;/li&gt;
+  &lt;li&gt;Pasture management in Ferralsols drives mineral-associated organic matter storage, exceeding native soil carbon stocks and enhancing cation exchange capacity&lt;/li&gt;
+  &lt;li&gt;Release of potassium from soils under different cultivations using wood vinegar: emphasis on clay mineralogy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;release-of-potassium-from-soils-under-different-cultivations-using-wood-vinegar-emphasis-on-clay-mineralogy&quot;&gt;Release of potassium from soils under different cultivations using wood vinegar: emphasis on clay mineralogy&lt;/h3&gt;
+
+&lt;p&gt;Context
+The release of potassium (K) from K-bearing minerals in the soils of arid and semi-arid regions is crucial.&lt;/p&gt;
+
+&lt;p&gt;Aims
+This study aims to investigate the role of wood vinegar in K release from soils under various land uses and to compare its effectiveness with other extractants.&lt;/p&gt;
+
+&lt;p&gt;Methods
+The experimental treatments included three different land use types (grape, wheat, and rangeland) and four extractants [hydrochloric acid (HCl), calcium chloride (CaCl2), oxalic acid, and wood vinegar] at a concentration of 0.01 M over 10 consecutive half-hour periods. The experimental release data were fitted to various kinetic equations.&lt;/p&gt;
+
+&lt;p&gt;Results
+Analysis of variance revealed that both the extractant and land use significantly affected the amount of released K (P &amp;lt; 0.01). The wood vinegar extractant had the highest release rate (3794 mg kg−1), while CaCl2 had the lowest release rate (156.1 mg kg−1). Power function and parabolic diffusion equations provided the best fit for the data (r2 = 0.99). The results indicate that the ‘b’ coefficient across all applications adheres to the following sequence: wood vinegar &amp;gt; HCl &amp;gt; oxalic acid &amp;gt; CaCl2. The highest release rate was for grape cultivation, followed by rangeland and wheat cultivation, as described by the parabolic diffusion equation. The clay mineralogy analysis indicated a transformation of vermiculite clay to smectite–illite and illite–vermiculite mixed clays when using the oxalic acid extractant, and completely into illite or dissolution in the soil sample using the wood vinegar extractant.&lt;/p&gt;
+
+&lt;p&gt;Conclusions
+It is recommended that wood vinegar be used to supply K in K-depleted soils containing K-bearing minerals.&lt;/p&gt;
+
+&lt;p&gt;Implications
+Wood vinegar is introduced as sustainable strategy for releasing potassium from soil mineral sources.&lt;/p&gt;
+
+&lt;h3 id=&quot;pasture-management-in-ferralsols-drives-mineral-associated-organic-matter-storage-exceeding-native-soil-carbon-stocks-and-enhancing-cation-exchange-capacity&quot;&gt;Pasture management in Ferralsols drives mineral-associated organic matter storage, exceeding native soil carbon stocks and enhancing cation exchange capacity&lt;/h3&gt;
+
+&lt;p&gt;Pasture management is pivotal for enhancing soil organic carbon (SOC) storage in tropical grasslands, yet SOC recovery is often considered merely as the replenishment of historical losses following land-use change. It remains unclear whether managed Ferralsols can surpass the SOC stocks of native vegetation (NV) and which mechanisms drive such gains. We evaluated SOC pools, chemical composition, and nutrient-holding capacity after 24 years under unmanaged degraded pasture (DP) and fertilized managed pasture (MP), relative to NV. SOC storage in these systems was primarily mediated by the mineral-associated organic matter (MAOM) pool. Compared to NV, DP soils exhibited reduced MAOM stocks (119 vs. 92 Mg C ha−1), whereas MP soils stored 148  Mg C ha−1. In DP, soil acidity, low nutrient availability, and poor forage inputs induced microbial stress (as revealed by phospholipid fatty acid profiles), likely constraining MAOM formation and yielding MAOM enriched in carbohydrates with fewer carbonyl groups. In contrast, liming and fertilization in MP alleviated the Ferralsol’s low pH and nutrient deficiencies, enhancing forage yields and reducing microbial stress, likely promoting MAOM with more microbially processed signatures. NanoSIMS analyses revealed microscale organic matter patches sparsely covering clay-sized particles, indicating that SOC storage is decoupled from mineral surface area and highlighting the role of organic inputs and microbial activity in MAOM formation. Higher MAOM under MP not only increased SOC stocks but also enhanced cation exchange capacity, demonstrating that targeted pasture management can exceed native SOC stocks while improving nutrient retention.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-economics-of-conservation-agriculture-within-a-conceptual-and-methodological-assessment-framework&quot;&gt;The economics of conservation agriculture within a conceptual and methodological assessment framework&lt;/h3&gt;
+
+&lt;p&gt;Conservation agriculture (CA) involves the simultaneous adoption of three agroecological practices: no-tillage or reduced tillage, maintenance of soil organic cover, and crop diversification. This paper develops a conceptual and methodological framework for assessing the economic benefits of CA. More than 150 studies were reviewed to create a conceptual diagram that identifies and links the key economic and environmental effects of adopting CA. The review reveals contradictory impacts of CA on production costs. Labor and machinery costs are significantly reduced, but these savings may be offset by increased pesticide costs due to greater weed pressure. Evidence is also mixed regarding whether CA adoption increases or decreases crop yields and water pollution. However, implementing CA is likely to promote biodiversity, reduce soil erosion, mitigate global warming, and improve soil quality in the long term. These effects vary depending on the CA practices adopted, experiment duration, climatic conditions, soil textures, and crop types. Adopting no-tillage alone may be ineffective at controlling soil erosion and is likely to result in yield losses or insignificant yield gains. CA impacts extend from individual farms to national and global levels and involve various risks and uncertainties. In light of these findings, a methodological approach is proposed to assess the probability distributions of the private and public benefits that CA generates. Assessing these benefits will help farmers and policymakers make informed decisions, thereby ensuring successful transitions to CA practices.&lt;/p&gt;
+
+&lt;h3 id=&quot;unearthing-historical-pedology-an-analysis-of-soil-science-concepts-in-1200-years-of-persian-poetry&quot;&gt;Unearthing historical pedology: An analysis of soil science concepts in 1200 years of Persian poetry&lt;/h3&gt;
+
+&lt;p&gt;Literature serves as a cultural repository for enduring knowledge, offering unique insights into the historical evolution of scientific and philosophical thought. This study investigates the semantic understanding of soil, from the perspective of pedology, across 1200 years of Persian poetry. The word khāk (soil) was analyzed in the works of major Persian poets from the third to the fourteenth century SH. Poems demonstrating a strong thematic relevance with soil science principles were selected and systematically categorized according to the discipline’s specialized subfields. The results yielded ten distinct thematic categories, encompassing soil’s agricultural functions (e.g., soil-water-plant relationships), ecological challenges (e.g., salinity, erosion), physical and biological properties, and its role in human health. The analysis of poetic themes reveals a significant focus on soil erosion, and the soil-water-plant relationship was the next most significant theme. Conversely, topics such as soil quality and land capability and modern humanity and soil were minimally represented. The findings reveal that soil holds a dual status in Persian poetry: it is simultaneously a tangible, natural element and a profound symbolic concept. On one hand, it is recognized as the substrate for life, reflecting practical agricultural knowledge and principles of sustainable resource management. On the other, its physical and chemical properties inspire rich metaphors for life, death, humility, and other core ontological themes. This long-standing integration of scientific observation and artistic expression demonstrates a deep-rooted connection between humanity and the environment. It also provides a valuable historical framework for contemporary interdisciplinary fields such as ecopoetry and offers a model for bridging the humanities and the natural sciences.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 10, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1245,51 +1305,6 @@ A method to define a wide range of non-Gaussian spatial dependence is presented&
 &lt;p&gt;The deterioration of soil health (SH) in agricultural lands is a global challenge that poses a threat to food and resource security. We developed a practical framework to facilitate the large-scale SH assessment in agricultural fields of northwestern Iran. A total of 350 soil samples were collected and soil properties were determined. Eight linear and non-linear Soil Health Indexes (SHIs) were developed. Digital Elevation Model (DEM) and multiple remote sensing indexes were obtained from satellite images. SHI prediction models were developed using an integrated approach and through a model selection procedure, the most relevant indexes were identified. The results showed significant (P &amp;lt; 0.05) positive correlation between the IHI-LT and elevation (r = 0.56), Vegetation Health Index (VHI) (r = 0.69), and Surface Water Condition Index (SWCI) (r = 0.79). The multiple regression model including the above indexes strongly explained the spatial variability of the Integrated Soil Health Index (IHI) with both total (LT) and minimum (LM) dataset approaches (R2 = 0.72; AIC =-1607.27; RMSE = 0.03; rho c = 0.65). The developed models can be utilized for large-scale assessment of soil health conditions, reducing the cost and effort of conventional ground-truth soil sampling and analysis. Furthermore, this approach may aid in monitoring and mitigating the soil degradation in agricultural lands.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2023/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 05, 2023.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2023/06/journalDigest" />
-  <id>/2023/06/journalDigest</id>
-  <updated>2023-06-20T00:00:00-00:00</updated>
-  <published>2023-06-20T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2023-11&quot;&gt;Journal Paper Digests 2023 #11&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;An integrated approach for estimating soil health: Incorporating digital elevation models and remote sensing of vegetation&lt;/li&gt;
-  &lt;li&gt;Mapping Landslide Susceptibility Over Large Regions With Limited Data&lt;/li&gt;
-  &lt;li&gt;An Unsaturated Hydraulic Conductivity Model Based on the Capillary Bundle Model, the Brooks-Corey Model and Waxman-Smits Model&lt;/li&gt;
-  &lt;li&gt;Conceptualising the drivers of ultra-processed food production and consumption and their environmental impacts: A group model-building exercise&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;conceptualising-the-drivers-of-ultra-processed-food-production-and-consumption-and-their-environmental-impacts-a-group-model-building-exercise&quot;&gt;Conceptualising the drivers of ultra-processed food production and consumption and their environmental impacts: A group model-building exercise&lt;/h3&gt;
-
-&lt;p&gt;Using group model building we developed a series of causal loop diagrams identifying the environmental impacts of ultra-processed food (UPF) systems, and underlying system drivers, which was subsequently validated against the peer-reviewed literature. The final conceptual model displays the commercial, biological and social drivers of the UPF system, and the impacts on environmental sub-systems including climate, land, water and waste. It displays complex interactions between various environmental impacts, demonstrating how changes to one component of the system could have flow-on effects on other components. Trade-offs and uncertainties are discussed. The model has a wide range of applications including informing the design of quantitative analyses, identifying research gaps and potential policy trade-offs resulting from a reduction of ultra-processed food production and consumption.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-unsaturated-hydraulic-conductivity-model-based-on-the-capillary-bundle-model-the-brooks-corey-model-and-waxman-smits-model&quot;&gt;An Unsaturated Hydraulic Conductivity Model Based on the Capillary Bundle Model, the Brooks-Corey Model and Waxman-Smits Model&lt;/h3&gt;
-
-&lt;p&gt;Soil unsaturated hydraulic conductivity (K), which depends on water content (?) and matric potential (?), exhibits a high degree of variability at the field scale. Here we first develop a theoretical hydraulic-electrical conductivity (s) relationship under low and high salinity cases based on the capillary bundle model and Waxman and Smits model which can account for the non-linear behavior of s at low salinities. Then the K-s relationship is converted into a K(?, ?) model using the Brooks-Corey model. The model includes two parameters c and ?. Parameter c accounts for the variation of the term (? + 2)/(? + 4) where ? is the pore size distribution parameter in the Brooks-Corey model, and the term m-n where m and n are Archie’s saturation and cementation exponents, respectively. Parameter ? is the sum of the tortuosity factor accounting for the differences between hydraulic and electrical tortuosity and Archie’s saturation exponent. Based on a calibration data set of 150 soils selected from the UNSODA database, the best fitting log(c) and ? values were determined as -2.53 and 1.92, -4.39 and -0.14, -5.01 and -1.34, and -5.79 and -2.27 for four textural groups. The estimated log(10)(K) values with the new K(?, ?) model compared well to the measured values from an independent data set of 49 soils selected from the UNSODA database, with mean error (ME), relative error (RE), root mean square error (RMSE) and coefficient of determination (R-2) values of 0.02, 8.8%, 0.80 and 0.73, respectively. A second test of the new K(?, ?) model using a data set representing 23 soils reported in the literature also showed good agreement between estimated and measured log(10)(K) values with ME of -0.01, RE of 9.5%, RMSE of 0.77 and R-2 of 0.85. The new K(?, ?) model outperformed the Mualem-van Genuchten model and two recently published pedo-transfer functions. The new K(?, ?) model can be applied for estimating K under field conditions and for hydrologic modeling without need for soil water retention curve data fitting to derive a K function.&lt;/p&gt;
-
-&lt;h3 id=&quot;mapping-landslide-susceptibility-over-large-regions-with-limited-data&quot;&gt;Mapping Landslide Susceptibility Over Large Regions With Limited Data&lt;/h3&gt;
-
-&lt;p&gt;Landslide susceptibility maps indicate the spatial distribution of landslide likelihood. Modeling susceptibility over large or diverse terrains remains a challenge due to the sparsity of landslide data (mapped extent of known landslides) and the variability in triggering conditions. Several different data sampling strategies of landslide locations used to train a susceptibility model are used to mitigate this challenge. However, to our knowledge, no study has systematically evaluated how different sampling strategies alter a model’s predictor effects (i.e., how a predictor value influences the susceptibility output) critical to explaining differences in model outputs. Here, we introduce a statistical framework that examines the variation in predictor effects and the model accuracy (measured using receiver operator characteristics) to highlight why certain sampling strategies are more effective than others. Specifically, we apply our framework to an array of logistic regression models trained on landslide inventories collected at sub-regional scales over four terrains across the United States. Results show significant variations in predictor effects depending on the inventory used to train the models. The inconsistent predictor effects cause low accuracies when testing models on inventories outside the domain of the training data. Grouping test and training sets according to physiographic and ecological characteristics, which are thought to share similar triggering mechanisms, does not improve model accuracy. We also show that using limited landslide data distributed uniformly over the entire modeling domain is better than using dense but spatially isolated data to train a model for applications over large regions.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-integrated-approach-for-estimating-soil-health-incorporating-digital-elevation-models-and-remote-sensing-of-vegetation&quot;&gt;An integrated approach for estimating soil health: Incorporating digital elevation models and remote sensing of vegetation&lt;/h3&gt;
-
-&lt;p&gt;The deterioration of soil health (SH) in agricultural lands is a global challenge that poses a threat to food and resource security. We developed a practical framework to facilitate the large-scale SH assessment in agricultural fields of northwestern Iran. A total of 350 soil samples were collected and soil properties were determined. Eight linear and non-linear Soil Health Indexes (SHIs) were developed. Digital Elevation Model (DEM) and multiple remote sensing indexes were obtained from satellite images. SHI prediction models were developed using an integrated approach and through a model selection procedure, the most relevant indexes were identified. The results showed significant (P &amp;lt; 0.05) positive correlation between the IHI-LT and elevation (r = 0.56), Vegetation Health Index (VHI) (r = 0.69), and Surface Water Condition Index (SWCI) (r = 0.79). The multiple regression model including the above indexes strongly explained the spatial variability of the Integrated Soil Health Index (IHI) with both total (LT) and minimum (LM) dataset approaches (R2 = 0.72; AIC =-1607.27; RMSE = 0.03; rho c = 0.65). The developed models can be utilized for large-scale assessment of soil health conditions, reducing the cost and effort of conventional ground-truth soil sampling and analysis. Furthermore, this approach may aid in monitoring and mitigating the soil degradation in agricultural lands.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2023/06/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on June 20, 2023.&lt;/p&gt;
   </content>
 </entry>
 
