@@ -4,13 +4,65 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-02-10T11:28:22+11:00</updated>
+<updated>2026-02-18T07:41:06+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/02/journalDigest" />
+  <id>/2026/02/journalDigest</id>
+  <updated>2026-02-17T00:00:00-00:00</updated>
+  <published>2026-02-17T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-5&quot;&gt;Journal Paper Digests 2026 #5&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Future societal developments provide a challenge for pedology as an integrative activity within soil science&lt;/li&gt;
+  &lt;li&gt;Observation-Driven Forecast of Global Terrestrial Water Storage and Evaluation for 2010–2024&lt;/li&gt;
+  &lt;li&gt;Multi-link network modeling of water resource systems: identifying critical linkages driving resilience dynamics&lt;/li&gt;
+  &lt;li&gt;alidation of high-resolution surface soil moisture time series retrieved by means of SAR interferometry&lt;/li&gt;
+  &lt;li&gt;Airborne and spaceborne imaging spectroscopy capture belowground microbial communities and physicochemical characteristics in invaded grasslands&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;airborne-and-spaceborne-imaging-spectroscopy-capture-belowground-microbial-communities-and-physicochemical-characteristics-in-invaded-grasslands&quot;&gt;Airborne and spaceborne imaging spectroscopy capture belowground microbial communities and physicochemical characteristics in invaded grasslands&lt;/h3&gt;
+
+&lt;p&gt;Belowground properties, including belowground microbial communities and physicochemical characteristics, play a crucial role in ecosystem functioning. Developing scalable approaches to map these properties across large spatial domains is essential for advancing our understanding of ecosystem functioning. However, large-scale approaches for mapping belowground properties, particularly in vegetated ecosystems, have yet to be developed. In this study, we aimed to develop approaches to map belowground microbial communities (bacterial and fungal) and physicochemical characteristics in an extensive grassland ecosystem affected by invasive plants using airborne and spaceborne imaging spectroscopy (hyperspectral remote sensing). We focused on Lespedeza cuneata (L. cuneata), an invasive plant threatening grasslands of the U.S. Southern Great Plains. We developed structural equation models to determine aboveground-belowground linkages. We used airborne hyperspectral data to estimate aboveground characteristics from partial least squares regression and then mapped belowground properties using aboveground characteristics through generalized joint attribute models. We also assessed the capability of spaceborne data in mapping the spatial distribution of belowground properties through fusing coarse spatial resolution DLR’s DESIS hyperspectral data with fine spatial resolution PlanetScope multispectral data. Our findings showed that there are linkages between percent cover of L. cuneata, aboveground characteristics, and belowground properties. Large-scale analysis using airborne hyperspectral data showed that belowground properties varied across increasing percent cover of L. cuneata. Similar results were observed when using fused spaceborne data. Our findings indicated that (1) spectral information can reveal belowground properties and (2) fusing spaceborne data can be an effective approach to mapping belowground properties in grassland ecosystems.&lt;/p&gt;
+
+&lt;h3 id=&quot;validation-of-high-resolution-surface-soil-moisture-time-series-retrieved-by-means-of-sar-interferometry&quot;&gt;Validation of high-resolution surface soil moisture time series retrieved by means of SAR interferometry&lt;/h3&gt;
+
+&lt;p&gt;This paper presents a novel algorithm for high-resolution soil moisture retrieval based on Synthetic Aperture Radar (SAR) interferometry and closure phases. The proposed method efficiently processes long SAR time series with minimal computational cost, generating a soil moisture measurement for each acquisition.
+Soil moisture data were derived from Sentinel-1 SAR imagery and validated across seven different test sites. Retrieval results were compared with modeled soil moisture data from land surface models, alternative remote-sensing products, and in situ measurements.
+The algorithm demonstrates strong correlations with modeled soil moisture, particularly in areas characterized by high interferometric coherence. However, performance was expectedly limited in regions with low interferometric coherence due to factors such as vegetation cover or snow cover.
+Looking ahead, this study identifies some relevant directions for future research, including the integration of backscatter information alongside phase data and the adaptation of the algorithm for SAR missions operating at different frequencies (e.g., L-band) or with very dense acquisition schedules (e.g., geosynchronous platforms). These advancements would further enhance the applicability and accuracy of soil moisture retrieval using SAR-based techniques.&lt;/p&gt;
+
+&lt;h3 id=&quot;multi-link-network-modeling-of-water-resource-systems-identifying-critical-linkages-driving-resilience-dynamics&quot;&gt;Multi-link network modeling of water resource systems: identifying critical linkages driving resilience dynamics&lt;/h3&gt;
+
+&lt;p&gt;Under changing environmental conditions, river basins face increasing water scarcity and heightened ecological vulnerability, posing greater challenges to water security. The resilience of water resource systems is recognized as offering a novel research perspective and analytical approach for addressing water security issues. The resilience of water resource systems is affected by numerous factors with significant cascading effects. Multi-link network approaches quantitatively capture the complex interrelationships among these factors, offering a scientific basis for effective management and improved water security. In this study, the Fenhe River Basin is selected as the study area to construct a multi-link network centered on hydrometeorological, socioeconomic, and engineering regulation links. The PCMCI algorithm is employed to quantify causal strengths among indicators within this complex network across different time lags, revealing the intertwined interactions, dynamic transmission patterns, and complex nonlinear relationships of the system. Based on the principle of multivariate transfer entropy, key links and critical transmission pathways underlying the evolution of water resource system resilience are identified. The role and effect of these key links on system resilience are analyzed, providing a quantitative assessment of their influence on the overall resilience of the water resource system. The results indicated that: (1) Total water resources, the proportion of secondary industry, and domestic water use indicators have the highest causal connection strengths among the links in the multi-link network of the water resources system; (2) The normalized transfer entropy values of hydrometeorological and socioeconomic links were found to be essentially comparable, whereas the engineering regulation link exhibited the highest normalized transfer entropy value for water resource system resilience. This indicates that the engineered regulation link constitutes the key link driving the evolution of water resource system resilience.&lt;/p&gt;
+
+&lt;h3 id=&quot;observation-driven-forecast-of-global-terrestrial-water-storage-and-evaluation-for-20102024&quot;&gt;Observation-Driven Forecast of Global Terrestrial Water Storage and Evaluation for 2010–2024&lt;/h3&gt;
+
+&lt;p&gt;Since 2002, the Gravity Recovery and Climate Experiment (GRACE) and GRACE Follow-On (GRACE/-FO) satellite missions have provided unprecedented measurements of terrestrial water storage changes (TWSC). These data are essential for monitoring the global water cycle, supporting drought and flood risk management, and informing water-related decision-making. However, GRACE products are typically released with a latency of several months, limiting their utility for real-time and operational forecasting applications. In this study, we use machine learning to forecast GRACE-like TWSC up to 12 months ahead, relying solely on observational and reanalysis-based inputs. The observation-driven forecast approach is evaluated over the period 2010–2024 and benchmarked against seasonal forecasts from the European Centre for Medium-Range Weather Forecasts (ECMWF)’s new long-range forecasting system (SEAS5). Our results show that the developed method offers improved accuracy and robustness compared to the ECMWF forecasts, providing a viable data-driven alternative for operational TWSC forecasting. We generate global forecast data sets at 1° resolution, creating a robust, publicly available resource that extends GRACE-like insights into the near future. The study addresses the latency of GRACE/-FO products by offering real-time TWSC forecasts to support applications such as drought early warning, sea level prediction, hydrological model validation, and geodetic applications such as forecasting Earth orientation parameters via hydrological angular momentum excitation or estimating loading corrections in GNSS and altimetry data analysis. The hindcast data set (2010–2024) evaluated in this study and the regularly updated semi-operational forecast data set (from 2024 onward) are publicly available at: https://doi.pangaea.de/10.1594/PANGAEA.973113 and https://www.igg.uni-bonn.de/apmg/de/data-and-models/grace-fo-forecasting.&lt;/p&gt;
+
+&lt;h3 id=&quot;future-societal-developments-provide-a-challenge-for-pedology-as-an-integrative-activity-within-soil-science&quot;&gt;Future societal developments provide a challenge for pedology as an integrative activity within soil science&lt;/h3&gt;
+
+&lt;p&gt;In contrast to earlier periods, the soil science profession receives major attention from the policy arena in Europe as evidenced by recent major financial research support (e.g. EC, 2023). Writing research proposals and running research programs, sometimes with participants from many countries, is highly time consuming, also because legal requirements are increasingly imposed. In addition, scientific activities are affected by elaborate internal procedures, adopted from the business community, focused on financial and human resource management. As a result, not enough time, it seems, is left for reflection as to desirable future developments of the soil science profession in a rapidly changing world. This discussion paper has therefore the objective to contribute to a discussion about the future role of soil science in society and sketch possible future scenarios. A 5-level scheme will be followed in the discussion, which relates research in general and soil science and pedology in particular to governmental and various stakeholder group actions (Fig. 1), emphasizing the need to consider developments in the outside world when assessing the future role of soil science in a societal context. Any discussion about future activities of the soil science discipline should preferably be framed in such a broad societal context, avoiding a too limited, self-centered approach.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 17, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1260,51 +1312,6 @@ A method to define a wide range of non-Gaussian spatial dependence is presented&
 &lt;p&gt;In South Africa, there is a growing demand for large scale detailed hydrological soil maps for modelling and management purposes. However, imbalanced legacy soil information often impedes the accurate creation of such maps by not being representative of the environmental complexity of large-scale catchments and containing imbalanced soil class distributions, often resulting in the loss of minority soil classes, which are often of great hydrological importance (e.g., wetland and riparian soils). In this study, we proposed a new downscaling approach to handle spatially localised legacy soil data within a larger low resolution legacy soil dataset to create an accurate hydrological soil map of the macro-scale (5790 km2) Sabie-Sand catchment using multinomial logistic regression (MNLR). The spatially localised legacy data was downscaled using k-means clustering and added to the broader legacy dataset. Five levels of legacy soil data were analysed in their representation of environmental covariates using QQ-plots and a Welsh’s t-test and their mapping accuracy using confusion matrix’s and Kappa coefficient statistics. However, MNLR also requires balanced soil classes. The value of the best performing legacy soil dataset was also compared to using all available soil information after both had their soil class distributions fully balanced using Synthetic Minority Oversampling Technique (SMOTE). The 500 ha/observation-SMOTE dataset resulted in the most accurate hydrological soil map with a validation point accuracy of 73% and a Kappa coefficient of 0.60, substantially outperforming the other downscaled soil maps as well as the SMOTE balanced dataset using all available soil information. This was due to the decreased variation between observations and catchment means, where the 500 ha/observation dataset yielded the least variation between soil observation and catchment datasets and well as reducing the class imbalance within the legacy soil data. Downscaling spatially localised legacy soil data for environmental representation is an effective tool to improve digital soil mapping accuracy using MNLR.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2023/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 23, 2023.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2023/07/journalDigest" />
-  <id>/2023/07/journalDigest</id>
-  <updated>2023-07-05T00:00:00-00:00</updated>
-  <published>2023-07-05T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2023-12&quot;&gt;Journal Paper Digests 2023 #12&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;An integrated approach for estimating soil health: Incorporating digital elevation models and remote sensing of vegetation&lt;/li&gt;
-  &lt;li&gt;Mapping Landslide Susceptibility Over Large Regions With Limited Data&lt;/li&gt;
-  &lt;li&gt;An Unsaturated Hydraulic Conductivity Model Based on the Capillary Bundle Model, the Brooks-Corey Model and Waxman-Smits Model&lt;/li&gt;
-  &lt;li&gt;Conceptualising the drivers of ultra-processed food production and consumption and their environmental impacts: A group model-building exercise&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;conceptualising-the-drivers-of-ultra-processed-food-production-and-consumption-and-their-environmental-impacts-a-group-model-building-exercise&quot;&gt;Conceptualising the drivers of ultra-processed food production and consumption and their environmental impacts: A group model-building exercise&lt;/h3&gt;
-
-&lt;p&gt;Using group model building we developed a series of causal loop diagrams identifying the environmental impacts of ultra-processed food (UPF) systems, and underlying system drivers, which was subsequently validated against the peer-reviewed literature. The final conceptual model displays the commercial, biological and social drivers of the UPF system, and the impacts on environmental sub-systems including climate, land, water and waste. It displays complex interactions between various environmental impacts, demonstrating how changes to one component of the system could have flow-on effects on other components. Trade-offs and uncertainties are discussed. The model has a wide range of applications including informing the design of quantitative analyses, identifying research gaps and potential policy trade-offs resulting from a reduction of ultra-processed food production and consumption.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-unsaturated-hydraulic-conductivity-model-based-on-the-capillary-bundle-model-the-brooks-corey-model-and-waxman-smits-model&quot;&gt;An Unsaturated Hydraulic Conductivity Model Based on the Capillary Bundle Model, the Brooks-Corey Model and Waxman-Smits Model&lt;/h3&gt;
-
-&lt;p&gt;Soil unsaturated hydraulic conductivity (K), which depends on water content (?) and matric potential (?), exhibits a high degree of variability at the field scale. Here we first develop a theoretical hydraulic-electrical conductivity (s) relationship under low and high salinity cases based on the capillary bundle model and Waxman and Smits model which can account for the non-linear behavior of s at low salinities. Then the K-s relationship is converted into a K(?, ?) model using the Brooks-Corey model. The model includes two parameters c and ?. Parameter c accounts for the variation of the term (? + 2)/(? + 4) where ? is the pore size distribution parameter in the Brooks-Corey model, and the term m-n where m and n are Archie’s saturation and cementation exponents, respectively. Parameter ? is the sum of the tortuosity factor accounting for the differences between hydraulic and electrical tortuosity and Archie’s saturation exponent. Based on a calibration data set of 150 soils selected from the UNSODA database, the best fitting log(c) and ? values were determined as -2.53 and 1.92, -4.39 and -0.14, -5.01 and -1.34, and -5.79 and -2.27 for four textural groups. The estimated log(10)(K) values with the new K(?, ?) model compared well to the measured values from an independent data set of 49 soils selected from the UNSODA database, with mean error (ME), relative error (RE), root mean square error (RMSE) and coefficient of determination (R-2) values of 0.02, 8.8%, 0.80 and 0.73, respectively. A second test of the new K(?, ?) model using a data set representing 23 soils reported in the literature also showed good agreement between estimated and measured log(10)(K) values with ME of -0.01, RE of 9.5%, RMSE of 0.77 and R-2 of 0.85. The new K(?, ?) model outperformed the Mualem-van Genuchten model and two recently published pedo-transfer functions. The new K(?, ?) model can be applied for estimating K under field conditions and for hydrologic modeling without need for soil water retention curve data fitting to derive a K function.&lt;/p&gt;
-
-&lt;h3 id=&quot;mapping-landslide-susceptibility-over-large-regions-with-limited-data&quot;&gt;Mapping Landslide Susceptibility Over Large Regions With Limited Data&lt;/h3&gt;
-
-&lt;p&gt;Landslide susceptibility maps indicate the spatial distribution of landslide likelihood. Modeling susceptibility over large or diverse terrains remains a challenge due to the sparsity of landslide data (mapped extent of known landslides) and the variability in triggering conditions. Several different data sampling strategies of landslide locations used to train a susceptibility model are used to mitigate this challenge. However, to our knowledge, no study has systematically evaluated how different sampling strategies alter a model’s predictor effects (i.e., how a predictor value influences the susceptibility output) critical to explaining differences in model outputs. Here, we introduce a statistical framework that examines the variation in predictor effects and the model accuracy (measured using receiver operator characteristics) to highlight why certain sampling strategies are more effective than others. Specifically, we apply our framework to an array of logistic regression models trained on landslide inventories collected at sub-regional scales over four terrains across the United States. Results show significant variations in predictor effects depending on the inventory used to train the models. The inconsistent predictor effects cause low accuracies when testing models on inventories outside the domain of the training data. Grouping test and training sets according to physiographic and ecological characteristics, which are thought to share similar triggering mechanisms, does not improve model accuracy. We also show that using limited landslide data distributed uniformly over the entire modeling domain is better than using dense but spatially isolated data to train a model for applications over large regions.&lt;/p&gt;
-
-&lt;h3 id=&quot;an-integrated-approach-for-estimating-soil-health-incorporating-digital-elevation-models-and-remote-sensing-of-vegetation&quot;&gt;An integrated approach for estimating soil health: Incorporating digital elevation models and remote sensing of vegetation&lt;/h3&gt;
-
-&lt;p&gt;The deterioration of soil health (SH) in agricultural lands is a global challenge that poses a threat to food and resource security. We developed a practical framework to facilitate the large-scale SH assessment in agricultural fields of northwestern Iran. A total of 350 soil samples were collected and soil properties were determined. Eight linear and non-linear Soil Health Indexes (SHIs) were developed. Digital Elevation Model (DEM) and multiple remote sensing indexes were obtained from satellite images. SHI prediction models were developed using an integrated approach and through a model selection procedure, the most relevant indexes were identified. The results showed significant (P &amp;lt; 0.05) positive correlation between the IHI-LT and elevation (r = 0.56), Vegetation Health Index (VHI) (r = 0.69), and Surface Water Condition Index (SWCI) (r = 0.79). The multiple regression model including the above indexes strongly explained the spatial variability of the Integrated Soil Health Index (IHI) with both total (LT) and minimum (LM) dataset approaches (R2 = 0.72; AIC =-1607.27; RMSE = 0.03; rho c = 0.65). The developed models can be utilized for large-scale assessment of soil health conditions, reducing the cost and effort of conventional ground-truth soil sampling and analysis. Furthermore, this approach may aid in monitoring and mitigating the soil degradation in agricultural lands.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2023/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 05, 2023.&lt;/p&gt;
   </content>
 </entry>
 
