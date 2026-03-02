@@ -4,13 +4,57 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-02-25T09:43:17+11:00</updated>
+<updated>2026-03-03T10:47:29+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/03/journalDigest" />
+  <id>/2026/03/journalDigest</id>
+  <updated>2026-03-03T00:00:00-00:00</updated>
+  <published>2026-03-03T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-7&quot;&gt;Journal Paper Digests 2026 #7&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A Mineral Protection Paradigm for Soil Organic Carbon Fractionation: Iron and Calcium as a Geochemical Bridge in Arid and Semi-Arid Grasslands&lt;/li&gt;
+  &lt;li&gt;Soil Carbon Modeling at Crossroads: Building Reliable Methods for Policy and Practice&lt;/li&gt;
+  &lt;li&gt;An innovative mapping framework for soil erodibility integrating spatial association dimensions and machine learning&lt;/li&gt;
+  &lt;li&gt;Uncertainties of enhanced rock weathering for climate-change mitigation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;uncertainties-of-enhanced-rock-weathering-for-climate-change-mitigation&quot;&gt;Uncertainties of enhanced rock weathering for climate-change mitigation&lt;/h3&gt;
+
+&lt;p&gt;Enhanced rock weathering (ERW) on agricultural soils is under consideration as a long-term carbon dioxide removal (CDR) strategy. In this Perspective, we evaluate uncertainties related to ERW around feedstock availability, plant–soil system impacts, CDR efficiency along the land–ocean continuum and socio-economic considerations. The composition of (ultra)mafic rocks places constraints on the availability of suitable feedstock when considering their potential for CDR and toxic element contents. For ERW application at scale, dedicated mining for suitable feedstock seems unavoidable. ERW can positively and negatively affect soil structure, hydrology, and overall carbon and nutrient cycles, and so optimal ERW will require site-specific assessment of effective CDR and mitigation of potential negative impacts. Additionally, the fate of weathering products along the land–ocean continuum in rivers remains poorly constrained, which is a challenge for verifying successful CDR. The socio-economic effects and constraints of ERW regarding financing and risk responsibility are also uncertain. Ultimately, large-scale ERW deployment seems limited by substantial challenges throughout its application, from its initial set-up to final CDR. Future research prioritizing site-specific assessments, long-term monitoring along the land–ocean continuum, and system modelling to constrain uncertainties and address socio-economic factors is needed to ensure that ERW deployment is effective, equitable, and sustainable.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-innovative-mapping-framework-for-soil-erodibility-integrating-spatial-association-dimensions-and-machine-learning&quot;&gt;An innovative mapping framework for soil erodibility integrating spatial association dimensions and machine learning&lt;/h3&gt;
+
+&lt;p&gt;Accurate spatial mapping of soil erodibility (K) is essential for assessing erosion risks and formulating conservation strategies. However, existing empirical models and spatial prediction face challenges, including underestimating spatial variability, static local environmental associations, and limited regional adaptability. This study proposed an innovative framework integrating empirical models, the second dimension of spatial association (SDA, incorporating multi-scale neighborhood features), and machine learning to select the optimal K values mapping. First, based on soil surveys and laboratory analyses in the Northeast China Black Soil (Mollisols) Region, three empirical models: the erosion-productivity impact calculator (K_EPIC), the Shirazi (K_Shirazi), and the Torri (K_Torri), were used to calculate K values. Second, SDA reconstructed environmental covariates by extracting quantile features (0−1) within radius-defined neighborhoods (100–3000 m), capturing multi-scale spatial dynamics. Third, Random Forest (RF) and Gradient Boosting Decision Tree (GBDT) were employed for digital mapping, while per configuration generated 40 ensemble models (10 random seeds × 4-fold cross-validation) to enhance model robustness. Results demonstrated that SDA-based models improved R2 by 12–89 % compared to conventional static local association models. Considering data distribution, model accuracy, and spatial prediction, K_Shirazi demonstrated optimal regional representation (R2=0.4562, in SDA-GBDT). Moreover, climate and landscape are important driving factors for K_EPIC and K_Shirazi, while topography additionally influences K_Torri. The proposed framework offers a scientific and effective method to create the optimal pathway for soil erodibility mapping through multi-scale environmental feature extraction and integrated machine learning modeling, which could be transferred to other regions or fields.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-carbon-modeling-at-crossroads-building-reliable-methods-for-policy-and-practice&quot;&gt;Soil Carbon Modeling at Crossroads: Building Reliable Methods for Policy and Practice&lt;/h3&gt;
+
+&lt;p&gt;Soil carbon mapping (SCM) is rapidly becoming a cornerstone of soil science and environmental decision-making, from precisionagriculture to national carbon inventories. Yet SCM is at a crossroads: the methods that often promise high-accuracy metrics canmask structural weaknesses that limit generalization and undermine policy relevance. Similar problems apply to larger DigitalSoil Mapping (DSM). In this article, using soil organic carbon (SOC) as an illustrative example, we highlight three systematicsources of error that consistently inflate SCM performance: depth, bulk density, and spatial autocorrelation. Soil profile depth isoften mishandled when profile increments are split between training and test sets, leading to inflated accuracy estimates. Bulkdensity (BD), essential for converting concentrations to stocks, is inconsistently applied and rarely accompanied by uncertaintyestimates. SOC stocks at sampling locations are often derived using BD, and when BD is reintroduced as a predictor in machinelearning models, it inflates reported accuracy and the model’s predictive skill. Spatial autocorrelation further exaggerates accu-racy when conventional random splits are used, while spatial blocking reveals much lower and more realistic predictive skill.Drawing on recent literature and our own analysis, we argue that SCM must adopt more rigorous practices, including profile-level validation, spatially aware blocking, standardized reporting of assumptions, and alignment with policy-relevant depth in-tervals. These steps will enhance comparability across studies and ensure that SCM outputs are credible for carbon accounting,climate mitigation, and land management purposes. The future of SCM and DSM depends on both new algorithms and method-ological rigor and transparency&lt;/p&gt;
+
+&lt;h3 id=&quot;a-mineral-protection-paradigm-for-soil-organic-carbon-fractionation-iron-and-calcium-as-a-geochemical-bridge-in-arid-and-semi-arid-grasslands&quot;&gt;A Mineral Protection Paradigm for Soil Organic Carbon Fractionation: Iron and Calcium as a Geochemical Bridge in Arid and Semi-Arid Grasslands&lt;/h3&gt;
+
+&lt;p&gt;Mineral association is widely recognized as a fundamental mechanism of soil organic carbon (SOC) stabilization; however, its relative importance versus climatic and vegetation drivers, and the key controlling geochemical factors remain poorly quantified in arid and semi-arid grasslands (mean annual precipitation, MAP &amp;lt; 400 mm). Combining a regional survey across the Mongolian Plateau (n = 260) with a global data synthesis (n = 2,097), we quantified the overwhelming dominance of mineral-associated organic carbon (MAOC), which constituted 79.8 ± 0.6% of SOC and established a benchmark for Eurasian drylands. More critically, we establish a hierarchical framework for MAOC accumulation: macro-scale environmental parameters (C:P ratio, pH) set the stabilization capacity, whereas localized geochemical actors (Fe, Ca) actuate this capacity via direct physiochemical interactions. In contrast, POC (particulate organic carbon) and CPOC (coarse particulate organic carbon) fractions were predominantly regulated by the C:P ratio, mean annual precipitation minus potential evapotranspiration (MAP-PET), and aboveground plus belowground biomass (AGB + BGB), suggesting a stronger dependence on recent carbon inputs and decomposition. Effective moisture (MAP-PET) served as the principal indirect control modulating both carbon inputs and mineral weathering. We thus propose a “mineral protection paradigm” for these ecosystems, wherein Fe and Ca directly enhance SOC sequestration through adsorption and cation bridging, forming a geochemically driven core process that is indirectly amplified by climate (MAP-PET) through its influence on vegetation drivers (AGB + BGB). This study establishes a synergistic Climate-Geochemistry-Vegetation framework that provides a scientific basis for SOC management in arid grassland ecosystems.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 03, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1279,46 +1323,6 @@ A method to define a wide range of non-Gaussian spatial dependence is presented&
 &lt;p&gt;This paper introduces three ways to quantify the pairwise dissimilarity of varietal data&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2023/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 30, 2023.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2023/07/journalDigest" />
-  <id>/2023/07/journalDigest</id>
-  <updated>2023-07-24T00:00:00-00:00</updated>
-  <published>2023-07-24T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2023-16&quot;&gt;Journal Paper Digests 2023 #16&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A novel method incorporating large rock fragments for improved soil bulk density and carbon stock estimation&lt;/li&gt;
-  &lt;li&gt;Into the Pedocene – Pedology of a changing world&lt;/li&gt;
-  &lt;li&gt;Empirical equations for estimating field capacity in dryland cropping soils of southeastern Australia&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;empirical-equations-for-estimating-field-capacity-in-dryland-cropping-soils-of-southeastern-australia&quot;&gt;Empirical equations for estimating field capacity in dryland cropping soils of southeastern Australia&lt;/h3&gt;
-
-&lt;p&gt;The root zone soil water content at field capacity, θFC, is often crucial for irrigation scheduling and soil-plant-atmosphere modelling. Although θFC is traditionally determined using methodologies based on matric head or when water flux at the bottom of the root-zone equal to a prescribed negligible flux, these approaches can be problematic for some soils and applications. In this study, a novel water storage approach was used to estimate θFC for 11 soil texture classes in southeastern Australia (northwest Victoria) by employing the Soil-Water-Atmosphere-Plant (SWAP) model to simulate gravity drainage from saturation in the active root zone (top 60 cm). Field capacity was specified as the average root zone water content corresponding to a 1% relative change in daily soil water storage. We have also estimated flux-based θFC when prescribed flux at the bottom of the root-zone was 0.1 cm d-1. Three new empirical equations were developed to estimate storage-based θFC as a function of SWAP-simulated drainage flux out of the root zone, the n parameter of the van Genuchten function, and the saturated soil hydraulic conductivity, Ks, or the soil water content at − 100 cm matric head. We have evaluated these three new equations in addition to nine published equations for estimating θFC. The three new equations were found to be better predictors of θFC than most of the nine popular equations reported in the literature when compared to flux-based θFC values. Based on findings from this study the new equations are considered to be effective for irrigation scheduling and crop/climate modelling on the dryland soils of Victoria. Future studies will assess the applicability of the new equations to other parts of Australia.&lt;/p&gt;
-
-&lt;h3 id=&quot;into-the-pedocene--pedology-of-a-changing-world&quot;&gt;Into the Pedocene – Pedology of a changing world&lt;/h3&gt;
-
-&lt;p&gt;Pedology, or the study of soil, is often viewed focusing on soil formation, morphology, mapping and classification. But the study of soil has largely expanded beyond those four areas and now includes quantitative studies using soil legacy data combined with technological advances in data collection, soil sampling and computation. We now have global availability of soil information and can retrieve pedological information for any location including some indication of its accuracy. Scientific and technological developments in pedology have been led by the rise of several subdisciplines including pedometrics, digital soil mapping, spectral pedology, digital soil morphometrics, hydropedology, microbial pedology, astropedology, and the development of pedotransfer functions. With the expansion of pedology and its relevance for understanding the earth system and tackling global change, it is postulated that soil science has now entered the ‘Pedocene’ – a soil epoch equivalent to the Anthropocene. The Pedocene is characterized by the quantitative understanding and evaluation of the global soil system, and the effects of human-induced changes brought to soil.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-novel-method-incorporating-large-rock-fragments-for-improved-soil-bulk-density-and-carbon-stock-estimation&quot;&gt;A novel method incorporating large rock fragments for improved soil bulk density and carbon stock estimation&lt;/h3&gt;
-
-&lt;p&gt;Soil bulk density (BD) is a principal component in estimating the density of soil nutrients and elements including carbon (C). Current literature states that in soils with rock fragment (RF) content ≥3% of the total sample volume, substantial differences in estimated soil organic carbon density (SOCD) are found, depending on the soil BD calculation method chosen, potentially affecting the accuracy of soil nutrient and C inventories. In many soil surveys, soil BD is not measured directly, or the core method is used as the sole determinant of soil BD, potentially neglecting the soil volume dilution effect of RFs larger than the diameter of the cores used. This study uses the core and quantitative pit methods at 10 forest sites in Ireland to determine the BD and RF mass and volume to a depth of 40 cm. The authors examine how large RFs impact BD and subsequently affect the estimated SOCD values by comparing against reference values from established soil sampling and BD calculation methods. The analysis reveals significant variations in the estimated SOCD values when the RF volume in the soil sample exceeds 8% of the total sample volume. A novel method, hereafter named “core-scaling,” combines core and pit sampling methods to account for large RF mass and volume in BD calculations. This study suggests that using the core-scaling method provides results that are strongly correlated with the pit method, thus offering an alternative that can also provide accurate SOCD estimates in soils with a high RF content.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2023/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 24, 2023.&lt;/p&gt;
   </content>
 </entry>
 
