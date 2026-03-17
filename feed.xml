@@ -4,13 +4,71 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-03-03T10:47:29+11:00</updated>
+<updated>2026-03-17T17:37:33+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/03/journalDigest" />
+  <id>/2026/03/journalDigest</id>
+  <updated>2026-03-16T00:00:00-00:00</updated>
+  <published>2026-03-16T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-8&quot;&gt;Journal Paper Digests 2026 #8&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Field-Scale Soil Moisture Predictions in Real Time Using In Situ Sensor Measurements in an Inverse Modeling Framework: SWIM2&lt;/li&gt;
+  &lt;li&gt;Soil Organic Carbon Changes in Agricultural Areas of Europe—Synthesis of Repeated Regional Soil Surveys&lt;/li&gt;
+  &lt;li&gt;A RothC-based spatiotemporal analysis of soil organic carbon stocks in agricultural soils of the Netherlands (1986–2022)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;drivers-of-organic-carbon-dynamics-in-surface-and-subsurface-agricultural-soils-of-new-south-wales-australia-open-access&quot;&gt;Drivers of organic carbon dynamics in surface and subsurface agricultural soils of New South Wales, Australia Open Access&lt;/h3&gt;
+
+&lt;p&gt;Understanding of organic carbon (OC) stock in surface (0–30 cm) and subsurface (30–60 cm) soils and its determinants are crucial for managing OC in agricultural lands.&lt;/p&gt;
+
+&lt;p&gt;Aim
+Our aim was to examine how land use, soil type, and environmental drivers influence OC stocks in the 0–60 cm soil layers of agricultural regions in New South Wales (NSW), Australia.&lt;/p&gt;
+
+&lt;p&gt;Method
+Soil OC (SOC) and nitrogen (N) stocks were measured across diverse soil types from 49 farms representing pastures and cropping in NSW. The dominant drivers of SOC stocks were identified using random forest and structural equation modelling frameworks.&lt;/p&gt;
+
+&lt;p&gt;Key results
+Overall, cropping and pasture soils carried similar SOC stocks in the 0–60 cm soil layer (80 ± 7 and 91 ± 7 Mg C ha−1, respectively). However, pasture soils had a significantly greater SOC stock in the 0–10 cm soil layer (28 ± 1 Mg C ha−1) than soils from the same layer under cropping (21 ± 2 Mg C ha−1). Ferrosols contained more than twice the SOC stock (158 ± 19 Mg C ha−1) in the 0–60 cm soil layer than Vertosols (73 ± 5 Mg C ha−1) and Chromosols (67 ± 6 Mg C ha−1). The SOC stocks within different layers decreased with increasing depth at variable rates in different soils.&lt;/p&gt;
+
+&lt;p&gt;Conclusions
+The increased SOC stock in surface soils was mainly driven by climate factors (i.e. precipitation and evapotranspiration), while subsurface SOC stocks depended more on soil properties (i.e., pH and total iron and manganese contents).&lt;/p&gt;
+
+&lt;p&gt;Implications
+Pasture cultivation in iron/aluminium mineral-rich soils may favour SOC build-up in surface soil but not in subsurface soil.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-rothc-based-spatiotemporal-analysis-of-soil-organic-carbon-stocks-in-agricultural-soils-of-the-netherlands-19862022&quot;&gt;A RothC-based spatiotemporal analysis of soil organic carbon stocks in agricultural soils of the Netherlands (1986–2022)&lt;/h3&gt;
+
+&lt;p&gt;Soils are the largest terrestrial carbon reservoir, with soil organic carbon (SOC) playing a critical role in maintaining soil quality and associated ecosystem services. Accurately estimating SOC stocks at high spatial and temporal resolution over large scales remains challenging, particularly in agricultural systems where carbon inputs are often uncertain or unavailable. In this study, we used the RothC model to simulate SOC stocks in Dutch agricultural mineral soils from 1986 to 2022, at 25 m × 25 m resolution. We examined the temporal and spatial variation of the total SOC stock and its distribution over RothC carbon pools and unravelled how livestock manure inputs and land use affect the observed trends. Averaged SOC stocks in the topsoil (0 – 30 cm) increased by 13.2% under grassland, decreased by 10.4% under cropland, and decreased by 3.9% in areas with changing land use. Carbon gains in grassland were linked to systematically higher manure inputs and accumulation in stable pools, whereas lower manure inputs and more intensive management led to declining labile SOC pools. Independent validation on three spatial datasets showed the highest model performance for point-based field data (model efficiency coefficient MEC = 0.32 in 1986 and 0.37 in 2022). Observed changes in SOC over time could be less well reproduced (MEC ≈ 0) across all datasets, but simulated spatiotemporal patterns were consistent with previous observational studies. The study illustrates the potential of RothC for national-scale SOC stock assessment and monitoring, while highlighting the need for improved input data and temporal validation data. Importantly, this modelling approach effectively captures SOC stock dynamics, which remains challenging for purely empirical, statistical models. Future work could benefit from hybrid modelling approaches that integrate RothC with machine learning, enhancing the ability to capture currently unexplained variability and improve simulation performance.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-organic-carbon-changes-in-agricultural-areas-of-europesynthesis-of-repeated-regional-soil-surveys&quot;&gt;Soil Organic Carbon Changes in Agricultural Areas of Europe—Synthesis of Repeated Regional Soil Surveys&lt;/h3&gt;
+
+&lt;p&gt;Across Europe, increasingly more soil-related data is being collected. Soil organic carbon (SOC) is one of the most frequently collected parameters from soil monitoring networks due to the connections between SOC and many soil health indicators and ecosystem functions. Furthermore, SOC changes are also related to CO2 emissions and sinks, thus influencing climate change. SOC-related data is therefore also fundamental for greenhouse gas emission reporting in the sector land use, land use change and forestry. Much of the SOC data at continent-, country-, and regional-level scale in Europe come from soil monitoring networks (SMNs) that are highly diverse and scattered. In this review, we gather results from European SMNs covering agricultural land with more than one completed sampling campaign in order to compare changes in SOC content and stock from SMNs across Europe. Sixteen countries and regions are represented in the review, representing 24% of the agricultural land (cropland and grassland) of the European Union, United Kingdom and Switzerland. The results and data included in this review were collected between 1955 and 2024. While both gains and losses in SOC are found from European croplands and grasslands, a loss of SOC was found for 56% of the agricultural area covered by the included studies. In cropland areas and general agricultural land, SOC loss and gain were found equally frequently, while SOC loss was found for the majority of the grassland areas surveyed. Given the prevalence of SOC loss, soil health appears under pressure, and improved and harmonized soil monitoring data are needed to quantify SOC changes and their consequences for soil health at the continental scale.&lt;/p&gt;
+
+&lt;h3 id=&quot;field-scale-soil-moisture-predictions-in-real-time-using-in-situ-sensor-measurements-in-an-inverse-modeling-framework-swim2&quot;&gt;Field-Scale Soil Moisture Predictions in Real Time Using In Situ Sensor Measurements in an Inverse Modeling Framework: SWIM2&lt;/h3&gt;
+
+&lt;p&gt;Affordable autonomous soil sensors and IoT technology enable real-time soil moisture monitoring, which offers opportunities for real-time model calibration and irrigation optimization. We introduce an irrigation decision support system SWIM2 (Sensor Wielded Inverse Modeling of a Soil Water Irrigation Model), a digital twin that integrates continuous sensor data and unbiased, periodic soil samples with an FAO-based soil water balance model using a Bayesian inverse modeling algorithm, DREAM(ZS) (DiffeRential Evolution Adaptive Metropolis). SWIM2 estimates 12 soil and crop parameters and their associated probability distributions and correlations, providing soil moisture predictions with uncertainty estimates. The SWIM2 framework is illustrated and validated in a real-time setup for 18 vegetable cropping cycles on agricultural fields in Flanders, Belgium, with in situ precipitation data. Although using minimal prior knowledge and despite sensor bias, SWIM2 achieves robust soil moisture predictions for a 7-day horizon, with accuracies comparable to sensor measurements. Predictions improve substantially in precision within the first 20 calibration days and maintain high predictive power throughout the growing season. The impact of in situ measurements and temporal covariance of the observational errors (“error covariance”) was assessed, indicating that good knowledge of the error covariance and independent soil moisture samples are essential to correct for sensor bias and ensure accurate model calibration, while continuous sensor data ensure accurate and precise estimates of the dynamics. This study demonstrates the use of soil moisture sensor data in a Bayesian inverse modeling framework, offering practical solutions for real-time soil moisture prediction and irrigation decision-making, enhancing water management across agricultural fields.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 16, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1233,96 +1291,6 @@ A method to define a wide range of non-Gaussian spatial dependence is presented&
 &lt;p&gt;Managing and increasing organic matter in soil requires greater understanding of the mechanisms driving its persistence through resistance to microbial decomposition. Conflicting evidence exists for whether persistent soil organic matter (SOM) is molecularly complex and diverse. As such, this study used a novel application of graph networks with pyrolysis-gas chromatography-mass spectrometry to quantify the complexity and diversity of persistent SOM, defined as SOM that persists through time (soil radiocarbon age) and soil depth. We analyzed soils from the Cooloola giant podzol chronosequence across a large gradient of soil depths (0–15 m) and SOM radiocarbon ages (modern to 19,000 years BP). We found that the most persistent SOM on this gradient was highly aromatic and had the lowest molecular complexity and diversity. By contrast, fresh surface SOM had higher molecular complexity and diversity, with high contributions of plant-derived lignins and polysaccharides. These findings indicate that persisting SOM declines in molecular complexity and diversity over geological timescales and soil depths, with aromatic SOM compounds persisting longer with mineral association.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2023/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 15, 2023.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2023/07/journalDigest" />
-  <id>/2023/07/journalDigest</id>
-  <updated>2023-07-30T00:00:00-00:00</updated>
-  <published>2023-07-30T00:00:00+10:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2023-17&quot;&gt;Journal Paper Digests 2023 #17&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Multidimensional Scaling of Varietal Data in Sedimentary Provenance Analysis&lt;/li&gt;
-  &lt;li&gt;The ECO framework: advancing evidence-based science engagement within environmental research programs and organizations&lt;/li&gt;
-  &lt;li&gt;Soil moisture retrieval from Sentinel-1 using a first-order radiative transfer model—A case-study over the Po-Valley&lt;/li&gt;
-  &lt;li&gt;Mapping global soil acidification under N deposition&lt;/li&gt;
-  &lt;li&gt;No detectable upper limit of mineral-associated organic carbon in temperate agricultural soils&lt;/li&gt;
-  &lt;li&gt;Limitations of farm management data in analyses of decadal changes in SOC stocks in the Danish soil-monitoring network&lt;/li&gt;
-  &lt;li&gt;Characterization by X-ray μCT of the air-filled porosity of an agricultural soil at different matric potentials&lt;/li&gt;
-  &lt;li&gt;Surrogate-Model Assisted Plausibility-Check, Calibration, and Posterior-Distribution Evaluation of&lt;/li&gt;
-  &lt;li&gt;Do cover crops impact labile C more than total C?&lt;/li&gt;
-  &lt;li&gt;A simple soil organic carbon level metric beyond the organic carbon-to-clay ratio&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h3 id=&quot;a-simple-soil-organic-carbon-level-metric-beyond-the-organic-carbon-to-clay-ratio&quot;&gt;A simple soil organic carbon level metric beyond the organic carbon-to-clay ratio&lt;/h3&gt;
-
-&lt;p&gt;Soil is a precious and non-renewable resource that is under increasing pressure and the development of indicators to monitor its state is pivotal. Soil organic carbon (SOC) is important for key physical, chemical and biological soil properties and thus a central indicator of soil quality and soil health. The content of SOC is driven by many abiotic factors, such as texture and climate, and is therefore strongly site-specific, which complicates, for example, the search for appropriate threshold values to differentiate healthy from less healthy soils. The SOC:clay ratio has been introduced as a normalized SOC level metric to indicate soils’ structural condition, with classes ranging from degraded (&amp;lt;1:13) to very good (&amp;gt;1:8). This study applied the ratio to 2958 topsoils (0–30 cm) in the German Agricultural Soil Inventory and showed that it is not a suitable SOC level metric since strongly biased, misleading and partly insensitive to SOC changes. The proportion of soils with SOC levels classified as degraded increased exponentially with clay content, indicating the indicator’s overly strong clay dependence. Thus, 94% of all Chernozems, which are known to have elevated SOC contents and a favourable soil structure, were found to have either degraded (61%) or moderate (33%) normalized SOC levels. The ratio between actual and expected SOC (SOC:SOCexp) is proposed as an easy-to-use alternative where expected SOC is derived from a regression between SOC and clay content. This ratio allows a simple but unbiased estimate of the clay-normalized SOC level. The quartiles of this ratio were used to derive threshold values to divide the dataset into the classes degraded, moderate, good and very good. These classes were clearly linked to bulk volume (inverse of bulk density) as an important structural parameter, which was not the case for classes based on the SOC:clay ratio. Therefore, SOC:SOCexp and its temporal dynamic are proposed for limited areas such as regions, states or pedoclimatic zones, for example, in a soil health monitoring context; further testing is, however, recommended.&lt;/p&gt;
-
-&lt;h3 id=&quot;do-cover-crops-impact-labile-c-more-than-total-c&quot;&gt;Do cover crops impact labile C more than total C?&lt;/h3&gt;
-
-&lt;p&gt;The potential of cover crops (CC) to increase total soil organic C (SOC) concentration can be inconsistent, but labile SOC is considered to be more sensitive to management than total SOC. This leads to two questions: Do CCs impact labile SOC more than total SOC? Do CCs increase labile SOC more rapidly than total SOC? This review compares CC impacts on labile and total SOC based on CC studies reporting both parameters up to 31 Dec 2022. Labile and total SOC concentrations were measured in 31 CC study locations. Cover crops increased labile SOC concentration in 58% (18 of 31) and had no effect in 42% (13 of 31) of locations, suggesting CCs do not increase labile SOC in all cases. Within the 18 locations, CCs increased labile SOC without increasing total SOC in only 19% (6 of 31 locations), while in the rest (12 of 31) of locations, CCs increased both labile and total SOC. Thus, CCs increased labile SOC more rapidly than total SOC in only one-fifth of cases. Also, the few studies that monitored changes in labile SOC with time found CCs do not always increase labile more rapidly than total SOC. In the 12 locations where CCs increased both labile and total SOC, CCs increased labile SOC by 54 ± 30% and total SOC by 23 ± 10%, indicating CCs can increase labile SOC by about two times compared with total SOC in some locations. Increased CC biomass production and reduced residue decomposition can increase labile SOC. Overall, CCs increase labile SOC in most cases but may not always increase labile SOC more rapidly than total SOC although more CC studies monitoring changes in SOC pools with time are needed to better understand CC impacts on SOC fractions under different CC management scenarios and climatic conditions.&lt;/p&gt;
-
-&lt;h3 id=&quot;surrogate-model-assisted-plausibility-check-calibration-and-posterior-distribution-evaluation-of&quot;&gt;Surrogate-Model Assisted Plausibility-Check, Calibration, and Posterior-Distribution Evaluation of&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;We use Gaussian Process Regression as proxy models to expedite the calibration of an expensive process-based hydrogeological model&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We estimate the full posterior parameter distribution by Markov-Chain Monte Carlo sampling using the proxy models&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;We compare this distribution to results obtained by Neural Posterior Estimation&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;characterization-by-x-ray-μct-of-the-air-filled-porosity-of-an-agricultural-soil-at-different-matric-potentials&quot;&gt;Characterization by X-ray μCT of the air-filled porosity of an agricultural soil at different matric potentials&lt;/h3&gt;
-
-&lt;p&gt;To describe various important soil processes like the release of greenhouse gases or the proliferation of microorganisms, it is necessary to assess quantitatively how the geometry and in particular the connectivity of the air-filled pore space of a soil evolves as it is progressively dried. The availability of X-ray computed microtomography (μCT) images of soil samples now allows this information to be obtained directly, without having to rely on the interpretation of macroscopic measurements using capillary theory, as used to be the case. In this general context, we present different methods to describe quantitatively the configuration of the air-filled pore space in 3D μCT images of 20 separate samples of a loamy soil equilibrated at different matric potentials. Even though measures using μCT on such multi-scale materials strongly depend on image resolution, our results show that in general, soil samples most often behave as expected, for example, connectivity increases with higher negative matric potential, while tortuosity decreases. However, simple correlations could not be found between the evolution of quantitative descriptors of the pore space at the different matric potentials and routinely measured macroscopic soil parameters. A statistical analysis of all soil samples concurrently confirmed this lack of correspondence.&lt;/p&gt;
-
-&lt;h3 id=&quot;limitations-of-farm-management-data-in-analyses-of-decadal-changes-in-soc-stocks-in-the-danish-soil-monitoring-network&quot;&gt;Limitations of farm management data in analyses of decadal changes in SOC stocks in the Danish soil-monitoring network&lt;/h3&gt;
-
-&lt;p&gt;Changes in soil organic carbon (SOC) storage in agricultural land are an important part of the Land Use, Land-Use Change and Forestry component of national greenhouse gas emission inventories. Furthermore, as climate mitigation strategies and incentives for carbon farming are being developed, accurate estimates of SOC stocks are essential to verify any management-induced changes in SOC. Based on agricultural mineral soils in the Danish soil-monitoring network, we analysed management effects on SOC stocks using data from the two most recent surveys (2009 and 2019). Between 2009 and 2019, the average increase in SOC stock was 1.2 Mg C ha−1 for 0–50 cm despite a loss of 1.2 Mg C ha−1 from the topsoil (0–25 cm), stressing the importance of including deeper soil layers in soil-monitoring networks. Comparing all four national surveys (1986, 1997, 2009, 2019), the mean SOC stock of mineral soils in Denmark appears stable. The change in SOC stock between 2009 and 2019 was analysed in detail in relation to management practices as reported by farmers. We found that the effects of single management factors were difficult to isolate from co-varying factors including soil parameters and that the use of farm management data to explain changes in SOC stocks observed in soil-monitoring networks appears limited. Uncertainty in SOC stock estimates also arises from low sampling frequency and statistical challenges related to regression to the mean. However, repeated stock measurements at decadal intervals still represent a benchmark for the overall development in regional and national SOC storage, as affected by actual farm management.&lt;/p&gt;
-
-&lt;h3 id=&quot;no-detectable-upper-limit-of-mineral-associated-organic-carbon-in-temperate-agricultural-soils&quot;&gt;No detectable upper limit of mineral-associated organic carbon in temperate agricultural soils&lt;/h3&gt;
-
-&lt;p&gt;Mineral-associated organic carbon (MAOC) is the stabilised fraction of soil organic carbon (SOC). Its accrual in the soil can help mitigating climate change. So far, the capacity of soils to store MAOC was believed to be limited by the amount of mineral surfaces available. Here, we provide evidence that up to a total SOC content of about 12%, MAOC is a surprisingly constant fraction of total SOC. This questions the notion of a maximum capacity of soils to store MAOC, at least for temperate soil within the tested range of SOC contents.&lt;/p&gt;
-
-&lt;h3 id=&quot;mapping-global-soil-acidification-under-n-deposition&quot;&gt;Mapping global soil acidification under N deposition&lt;/h3&gt;
-
-&lt;p&gt;The N deposition effects on soil pH across global terrestrial ecosystems remain poorly understood. By conducting a global meta-analysis with paired observations of soil pH under N addition and control from 634 studies spanning major types of terrestrial ecosystems, we showed that soil acidification increased rapidly with N addition amount and was most severe in neutral-pH soils. Grassland soil pH decreased most strongly under high N addition while wetlands were the least acidified. We extrapolated these relationships to global mapping and highlighted the hotspots of soil acidification under current and future atmospheric N deposition.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-moisture-retrieval-from-sentinel-1-using-a-first-order-radiative-transfer-modela-case-study-over-the-po-valley&quot;&gt;Soil moisture retrieval from Sentinel-1 using a first-order radiative transfer model—A case-study over the Po-Valley&lt;/h3&gt;
-
-&lt;p&gt;Soil moisture is an important variable controlling many land surface processes and is used to quantify precipitation, drought, flooding, irrigation and other factors that influence decision making and risk-assessment. This paper presents the retrieval of high resolution (
-1 km) soil moisture data from Sentinel-1 C-band Synthetic Aperture Radar (SAR) backscatter measurements using a new bistatic radiative transfer modeling framework (RT1) previously only tested for scatterometer data. The model is applied over a diverse set of landcover types across the entire Po-Valley in Italy over a 4-year time-period from 2016 to 2019. The performance of the soil moisture retrievals is analyzed with respect to the ERA5-Land reanalysis dataset. The model parameterisation and retrieval method are chosen such as to constitute a trade-off between a physically plausible and a computationally feasible modeling approach. The results demonstrate the potential of RT1 for the retrieval of high-resolution soil moisture data from SAR time series.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-eco-framework-advancing-evidence-based-science-engagement-within-environmental-research-programs-and-organizations&quot;&gt;The ECO framework: advancing evidence-based science engagement within environmental research programs and organizations&lt;/h3&gt;
-
-&lt;p&gt;Despite widespread interest in science communication, public engagement with science, and engaged research, a large gap exists between the theories behind science engagement and how it is practiced within the scientific community. The scholarship of science engagement is also fractured, with knowledge and insights fragmented across discourses related to science communication, informal science learning, participatory research, and sustainability science. In the present article, we share a planning tool for integrating evidence and theory from these discourses into effective programs and projects. The ECO framework promotes three distinct and interacting modes of science engagement practice: formative engagement (listening and relationship building), codesign and coproduction (action-oriented partnerships), and broader outreach (expanding networks and dissemination). By planning engagement activities with attention to these three modes of engagement, scientists and scientific research organizations will be better poised to address urgent needs for stronger connections between science and society and increased use of scientific research in decision-making.&lt;/p&gt;
-
-&lt;h3 id=&quot;multidimensional-scaling-of-varietal-data-in-sedimentary-provenance-analysis&quot;&gt;Multidimensional Scaling of Varietal Data in Sedimentary Provenance Analysis&lt;/h3&gt;
-
-&lt;p&gt;Varietal data are defined as lists of compositional tables&lt;/p&gt;
-
-&lt;p&gt;Given an appropriate dissimilarity measure, varietal data can be subjected to multidimensional scaling&lt;/p&gt;
-
-&lt;p&gt;This paper introduces three ways to quantify the pairwise dissimilarity of varietal data&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2023/07/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on July 30, 2023.&lt;/p&gt;
   </content>
 </entry>
 
