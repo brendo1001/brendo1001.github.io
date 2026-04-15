@@ -201,17 +201,17 @@
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="fit-mass-preserving-splines-with-r">Fit mass preserving splines with <code class="highlighter-rouge">R</code></h3>
+<h3 id="fit-mass-preserving-splines-with-r">Fit mass preserving splines with <code class="language-plaintext highlighter-rouge">R</code></h3>
 
 <p><a href="#s-3">Skip to fitting splines to multiple soil profiles</a></p>
 
 <p>The following example shows how to fit a mass-preserving spline to a single soil profile’s carbon-density measurements, from the surface down to its maximum observed depth.</p>
 
-<p>You can choose to fit the spline all the way to the profile’s deepest measurement or to any shallower depth. We use the <code class="highlighter-rouge">ea_spline</code> function from the <strong>ithir</strong> package to perform this fitting.</p>
+<p>You can choose to fit the spline all the way to the profile’s deepest measurement or to any shallower depth. We use the <code class="language-plaintext highlighter-rouge">ea_spline</code> function from the <strong>ithir</strong> package to perform this fitting.</p>
 
-<p>For details on additional arguments and input types, consult the help file (<code class="highlighter-rouge">?ea_spline</code>). Besides <code class="highlighter-rouge">data.frame</code>, <code class="highlighter-rouge">ea_spline</code> also accepts <strong>aqp</strong>’s <code class="highlighter-rouge">SoilProfileCollection</code> objects when you need more complex profile structures.</p>
+<p>For details on additional arguments and input types, consult the help file (<code class="language-plaintext highlighter-rouge">?ea_spline</code>). Besides <code class="language-plaintext highlighter-rouge">data.frame</code>, <code class="language-plaintext highlighter-rouge">ea_spline</code> also accepts <strong>aqp</strong>’s <code class="language-plaintext highlighter-rouge">SoilProfileCollection</code> objects when you need more complex profile structures.</p>
 
-<p>In this section, we’ll work with the <code class="highlighter-rouge">data.frame</code> called <code class="highlighter-rouge">oneProfile</code> (included in <strong>ithir</strong>). Before running the spline, load <strong>ithir</strong> and any other supporting packages you’ll need:</p>
+<p>In this section, we’ll work with the <code class="language-plaintext highlighter-rouge">data.frame</code> called <code class="language-plaintext highlighter-rouge">oneProfile</code> (included in <strong>ithir</strong>). Before running the spline, load <strong>ithir</strong> and any other supporting packages you’ll need:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Load ithir library</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
@@ -234,12 +234,12 @@
     <figcaption> Soil profile plot of the `oneProfile` data. Note this figure was produced using the `plot_soilProfile` function from `ithir`.</figcaption>
 </figure>
 
-<p>The <code class="highlighter-rouge">ea_spline</code> function fits a continuous, mass-preserving spline from the soil surface down to your chosen maximum depth. It interpolates smoothly both within observed horizons and across gaps where no measurements exist.</p>
+<p>The <code class="language-plaintext highlighter-rouge">ea_spline</code> function fits a continuous, mass-preserving spline from the soil surface down to your chosen maximum depth. It interpolates smoothly both within observed horizons and across gaps where no measurements exist.</p>
 
 <h4 id="key-parameters">Key parameters</h4>
 
 <ul>
-  <li><strong><code class="highlighter-rouge">lam</code></strong> (λ): Controls spline smoothness.
+  <li><strong><code class="language-plaintext highlighter-rouge">lam</code></strong> (λ): Controls spline smoothness.
     <ul>
       <li>Larger values → more rigid (smoother) curves</li>
       <li>Smaller values → more flexible curves that follow observations closely</li>
@@ -247,7 +247,7 @@
       <li><strong>Tip:</strong> Perform a simple sensitivity analysis to select an optimal λ for your data.</li>
     </ul>
   </li>
-  <li><strong><code class="highlighter-rouge">d</code></strong>: Defines the target depth intervals for harmonized outputs.
+  <li><strong><code class="language-plaintext highlighter-rouge">d</code></strong>: Defines the target depth intervals for harmonized outputs.
     <ul>
       <li>Specified as a matrix or vector of breakpoints</li>
       <li><em>Default intervals (GlobalSoilMap.net):</em> 0–5 cm, 5–15 cm, 15–30 cm, 30–60 cm, 60–100 cm, 100–200 cm</li>
@@ -259,10 +259,10 @@
 <p><strong>Workflow:</strong></p>
 <ol>
   <li>Fit the spline to your horizon data.</li>
-  <li>Integrate the spline over each interval in <code class="highlighter-rouge">d</code> to obtain harmonized, interval-averaged values.</li>
+  <li>Integrate the spline over each interval in <code class="language-plaintext highlighter-rouge">d</code> to obtain harmonized, interval-averaged values.</li>
 </ol>
 
-<p>Below is an example script applying these defaults to the <code class="highlighter-rouge">oneProfile</code> data:</p>
+<p>Below is an example script applying these defaults to the <code class="language-plaintext highlighter-rouge">oneProfile</code> data:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">eaFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ithir</span><span class="o">::</span><span class="n">ea_spline</span><span class="p">(</span><span class="n">oneProfile</span><span class="p">,</span><span class="w"> </span><span class="n">var.name</span><span class="o">=</span><span class="s2">"C.kg.m3."</span><span class="p">,</span><span class="w">
         </span><span class="n">d</span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">15</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">60</span><span class="p">,</span><span class="m">100</span><span class="p">,</span><span class="m">200</span><span class="p">)),</span><span class="n">lam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">vlow</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> 
@@ -292,30 +292,30 @@
 </span><span class="c1">##  $ var.1cm       : num [1:200, 1] 21.6 21.4 21.2 20.8 20.3 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">ea_spline</code> function returns a <strong>list</strong> with four elements:</p>
+<p>The <code class="language-plaintext highlighter-rouge">ea_spline</code> function returns a <strong>list</strong> with four elements:</p>
 
 <ol>
   <li>
-    <p><strong><code class="highlighter-rouge">harmonised</code></strong> (<code class="highlighter-rouge">data.frame</code>):<br />
+    <p><strong><code class="language-plaintext highlighter-rouge">harmonised</code></strong> (<code class="language-plaintext highlighter-rouge">data.frame</code>):<br />
 Predicted spline estimates averaged over your specified depth intervals.</p>
   </li>
   <li>
-    <p><strong><code class="highlighter-rouge">obs.preds</code></strong> (<code class="highlighter-rouge">data.frame</code>):<br />
+    <p><strong><code class="language-plaintext highlighter-rouge">obs.preds</code></strong> (<code class="language-plaintext highlighter-rouge">data.frame</code>):<br />
 The original horizon measurements combined with spline-predicted values at those exact depths.</p>
   </li>
-  <li><strong><code class="highlighter-rouge">splineFitError</code></strong> (<code class="highlighter-rouge">data.frame</code>):
+  <li><strong><code class="language-plaintext highlighter-rouge">splineFitError</code></strong> (<code class="language-plaintext highlighter-rouge">data.frame</code>):
     <ul>
-      <li><strong><code class="highlighter-rouge">rmse</code></strong>: root-mean-square error between observations and predictions</li>
-      <li><strong><code class="highlighter-rouge">nrmse</code></strong>: RMSE normalized by the interquartile range (IQR), providing a scale-independent error metric</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">rmse</code></strong>: root-mean-square error between observations and predictions</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">nrmse</code></strong>: RMSE normalized by the interquartile range (IQR), providing a scale-independent error metric</li>
     </ul>
   </li>
-  <li><strong><code class="highlighter-rouge">var.1cm</code></strong> (<code class="highlighter-rouge">matrix</code>):<br />
+  <li><strong><code class="language-plaintext highlighter-rouge">var.1cm</code></strong> (<code class="language-plaintext highlighter-rouge">matrix</code>):<br />
 High-resolution predictions at 1 cm increments down to the maximum depth. Rows correspond to depth (cm), columns to individual profiles.</li>
 </ol>
 
 <hr />
 
-<p>To visualize spline performance, use the accompanying <strong><code class="highlighter-rouge">plot_ea_spline</code></strong> function. It offers three plot types:</p>
+<p>To visualize spline performance, use the accompanying <strong><code class="language-plaintext highlighter-rouge">plot_ea_spline</code></strong> function. It offers three plot types:</p>
 
 <ul>
   <li><strong>Type 1</strong>: observed data + continuous spline</li>
@@ -330,7 +330,7 @@ High-resolution predictions at 1 cm increments down to the maximum depth. Rows c
   </span><span class="n">type</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">plot.which</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="s2">"carbon density"</span><span class="p">)}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">plot_ea_spline</code> function provides three visualization modes, controlled by the <code class="highlighter-rouge">type</code> argument:</p>
+<p>The <code class="language-plaintext highlighter-rouge">plot_ea_spline</code> function provides three visualization modes, controlled by the <code class="language-plaintext highlighter-rouge">type</code> argument:</p>
 
 <ul>
   <li><strong>Type 1</strong>: Observed horizon data with the continuous spline curve (default).</li>
@@ -338,7 +338,7 @@ High-resolution predictions at 1 cm increments down to the maximum depth. Rows c
   <li><strong>Type 3</strong>: A combined view showing both the continuous spline and the interval averages.</li>
 </ul>
 
-<p>While <code class="highlighter-rouge">plot_ea_spline</code> offers limited customization of axes, labels, or colors, these three themes cover the most common diagnostic needs. The example above loops through all three types, producing a stack of plots like the one shown below.</p>
+<p>While <code class="language-plaintext highlighter-rouge">plot_ea_spline</code> offers limited customization of axes, labels, or colors, these three themes cover the most common diagnostic needs. The example above loops through all three types, producing a stack of plots like the one shown below.</p>
 
 <figure>
     <img src="/images/dsm_book/splinePlot2.png" alt="rconsole" />
@@ -354,20 +354,20 @@ High-resolution predictions at 1 cm increments down to the maximum depth. Rows c
 <ol>
   <li><strong>Prepare your data</strong>
     <ul>
-      <li>Combine all profiles into one <code class="highlighter-rouge">data.frame</code> or <code class="highlighter-rouge">SoilProfileCollection</code>.</li>
+      <li>Combine all profiles into one <code class="language-plaintext highlighter-rouge">data.frame</code> or <code class="language-plaintext highlighter-rouge">SoilProfileCollection</code>.</li>
       <li>Include a unique ID column (numeric, character, or mixed) so each profile is processed separately.</li>
     </ul>
   </li>
   <li>
     <p><strong>Run the spline fitting</strong><br />
-Call <code class="highlighter-rouge">ea_spline()</code> on your assembled dataset, specifying the object (<code class="highlighter-rouge">obj</code>), the target variable (<code class="highlighter-rouge">var.name</code>), depth intervals (<code class="highlighter-rouge">d</code>), smoothing parameter (<code class="highlighter-rouge">lam</code>), minimum value (<code class="highlighter-rouge">vlow</code>), and set <code class="highlighter-rouge">show.progress = TRUE</code> to track progress.</p>
+Call <code class="language-plaintext highlighter-rouge">ea_spline()</code> on your assembled dataset, specifying the object (<code class="language-plaintext highlighter-rouge">obj</code>), the target variable (<code class="language-plaintext highlighter-rouge">var.name</code>), depth intervals (<code class="language-plaintext highlighter-rouge">d</code>), smoothing parameter (<code class="language-plaintext highlighter-rouge">lam</code>), minimum value (<code class="language-plaintext highlighter-rouge">vlow</code>), and set <code class="language-plaintext highlighter-rouge">show.progress = TRUE</code> to track progress.</p>
   </li>
   <li><strong>Inspect results</strong>
     <ul>
-      <li><code class="highlighter-rouge">eaFit$harmonised</code>: harmonized values per profile &amp; depth</li>
-      <li><code class="highlighter-rouge">eaFit$obs.preds</code>: observed vs. predicted per horizon</li>
-      <li><code class="highlighter-rouge">eaFit$splineFitError</code>: RMSE &amp; nRMSE for each profile</li>
-      <li><code class="highlighter-rouge">eaFit$var.1cm</code>: high-resolution spline curves</li>
+      <li><code class="language-plaintext highlighter-rouge">eaFit$harmonised</code>: harmonized values per profile &amp; depth</li>
+      <li><code class="language-plaintext highlighter-rouge">eaFit$obs.preds</code>: observed vs. predicted per horizon</li>
+      <li><code class="language-plaintext highlighter-rouge">eaFit$splineFitError</code>: RMSE &amp; nRMSE for each profile</li>
+      <li><code class="language-plaintext highlighter-rouge">eaFit$var.1cm</code>: high-resolution spline curves</li>
     </ul>
   </li>
 </ol>
@@ -375,7 +375,7 @@ Call <code class="highlighter-rouge">ea_spline()</code> on your assembled datase
 <p>For this demo, download <a href="/DSM_book/data/Carbon_10sites.csv">Carbon_10sites.csv</a>, which contains 10 profiles of soil carbon measurements.</p>
 
 <blockquote>
-  <p><strong>Performance note:</strong> Because <code class="highlighter-rouge">ea_spline</code> uses efficient internal calculations and minimal external dependencies, you can process tens of thousands of profiles in a few minutes. The primary runtime driver is simply the total number of profiles and depth intervals.</p>
+  <p><strong>Performance note:</strong> Because <code class="language-plaintext highlighter-rouge">ea_spline</code> uses efficient internal calculations and minimal external dependencies, you can process tens of thousands of profiles in a few minutes. The primary runtime driver is simply the total number of profiles and depth intervals.</p>
 </blockquote>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load data</span><span class="w">
@@ -410,7 +410,7 @@ Call <code class="highlighter-rouge">ea_spline()</code> on your assembled datase
 </span><span class="c1">##  $ var.1cm       : num [1:200, 1:10] 29.9 29.6 29 28.2 27.2 ...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>With multiple profiles, the output becomes more intuitive. In particular, the <strong><code class="highlighter-rouge">eaFit$harmonised</code></strong> data frame lists one row per profile, with each column representing the predicted value at a user-specified depth. The <strong><code class="highlighter-rouge">soil.depth</code></strong> column gives each profile’s maximum depth, helping you verify that the harmonized estimates cover the full observed range.</p>
+<p>With multiple profiles, the output becomes more intuitive. In particular, the <strong><code class="language-plaintext highlighter-rouge">eaFit$harmonised</code></strong> data frame lists one row per profile, with each column representing the predicted value at a user-specified depth. The <strong><code class="language-plaintext highlighter-rouge">soil.depth</code></strong> column gives each profile’s maximum depth, helping you verify that the harmonized estimates cover the full observed range.</p>
 
 <p><a href="#top">Back to top</a></p>
 

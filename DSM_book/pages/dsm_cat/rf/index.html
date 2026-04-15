@@ -183,13 +183,13 @@ here</a></p>
 
 <p>Here we will take another look at the Random Forest, which you may be familiar with now as this model type was examined during <a href="/DSM_book/pages/dsm_cont/sspfs/rf/">the continuous variable prediction methods section</a>.</p>
 
-<p>This model type can also be used for categorical variables. Some useful extractor functions like <code class="highlighter-rouge">print</code> and <code class="highlighter-rouge">importance</code> give some useful information about the model performance.</p>
+<p>This model type can also be used for categorical variables. Some useful extractor functions like <code class="language-plaintext highlighter-rouge">print</code> and <code class="language-plaintext highlighter-rouge">importance</code> give some useful information about the model performance.</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="data-preparation-">Data Preparation <a id="s-2"></a></h3>
 
-<p>As described earlier, the data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. 2014.The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>As described earlier, the data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. 2014.The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <p>The small selection of covariates cover an area of approximately 220km<sup>2</sup> at a spatial resolution of 25m. All these variables are derived primarily from an available digital elevation model.</p>
 
@@ -210,7 +210,7 @@ here</a></p>
 </span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to take place.</p>
+<p>Transform the <code class="language-plaintext highlighter-rouge">hvTerronDat</code> data to a <code class="language-plaintext highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to take place.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## coerce point data to spatial object</span><span class="w">
 </span><span class="n">hvTerronDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
@@ -225,7 +225,7 @@ here</a></p>
 
 </span><span class="c1">## 'data.frame':    1000 obs. of  9 variables:</span><span class="w">
 </span></code></pre></div></div>
-<p>It is always good practice to check to see if any of the observational data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
+<p>It is always good practice to check to see if any of the observational data returned any <code class="language-plaintext highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="language-plaintext highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## remove missing data</span><span class="w">
 </span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
@@ -291,7 +291,7 @@ here</a></p>
 </span><span class="c1">## hunterCovariates_A_TWI                     128.08997</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Three types of prediction outputs can be generated from Random Forest models, and are specified via the <code class="highlighter-rouge">type</code> parameter of the <code class="highlighter-rouge">predict</code> extractor functions. The different <code class="highlighter-rouge">types</code> are the <code class="highlighter-rouge">response</code> (predicted class), <code class="highlighter-rouge">prob</code> (class probabilities) or <code class="highlighter-rouge">vote</code> (vote count, which really just appears to return the probabilities).</p>
+<p>Three types of prediction outputs can be generated from Random Forest models, and are specified via the <code class="language-plaintext highlighter-rouge">type</code> parameter of the <code class="language-plaintext highlighter-rouge">predict</code> extractor functions. The different <code class="language-plaintext highlighter-rouge">types</code> are the <code class="language-plaintext highlighter-rouge">response</code> (predicted class), <code class="language-plaintext highlighter-rouge">prob</code> (class probabilities) or <code class="language-plaintext highlighter-rouge">vote</code> (vote count, which really just appears to return the probabilities).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Prediction of classes [first 10 cases]</span><span class="w">
 </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"response"</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">]</span><span class="w">
@@ -320,7 +320,7 @@ here</a></p>
 
 <h3 id="model-goodness-of-fit-evaluation">Model goodness of fit evaluation<a id="s-4"></a></h3>
 
-<p>From the diagnostics output of the <code class="highlighter-rouge">hv.RF</code> model the confusion matrix is automatically generated, except it was a different orientation to what we have been looking for previous examples. This confusion matrix was performed on what is called the OOB or out-of-bag data i.e. it validates the model/s dynamically with observations withheld from the model fit. So lets just evaluate the model as we have done for the previous models. For calibration:</p>
+<p>From the diagnostics output of the <code class="language-plaintext highlighter-rouge">hv.RF</code> model the confusion matrix is automatically generated, except it was a different orientation to what we have been looking for previous examples. This confusion matrix was performed on what is called the OOB or out-of-bag data i.e. it validates the model/s dynamically with observations withheld from the model fit. So lets just evaluate the model as we have done for the previous models. For calibration:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Goodness of fit calibration</span><span class="w">
 </span><span class="n">C.pred.hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
@@ -356,7 +356,7 @@ here</a></p>
 </span><span class="c1">## [1] 1</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It seems quite incredible that this particular model is indicating a 100% accuracy. Here it pays to look at the out-of-bag error of the <code class="highlighter-rouge">hv.RF</code> model for a better indication of the model goodness of fit. For the random holdback evaluation:</p>
+<p>It seems quite incredible that this particular model is indicating a 100% accuracy. Here it pays to look at the out-of-bag error of the <code class="language-plaintext highlighter-rouge">hv.RF</code> model for a better indication of the model goodness of fit. For the random holdback evaluation:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Goodness of fit out-of-bag</span><span class="w">
 </span><span class="n">V.pred.hv.RF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.RF</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
@@ -398,7 +398,7 @@ here</a></p>
 
 <h3 id="apply-model-spatially-">Apply model spatially <a id="s-5"></a></h3>
 
-<p>And finally the map that results from applying the <code class="highlighter-rouge">hv.RF</code> model to the covariate rasters.</p>
+<p>And finally the map that results from applying the <code class="language-plaintext highlighter-rouge">hv.RF</code> model to the covariate rasters.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Apply model spatially class prediction</span><span class="w">
 </span><span class="n">map.RF.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.RF</span><span class="p">)</span><span class="w">

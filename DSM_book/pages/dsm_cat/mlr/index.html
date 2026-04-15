@@ -195,9 +195,9 @@ is given in Kempen et al. (2009).</p>
 
 <h3 id="data-preparation-">Data Preparation <a id="s-2"></a></h3>
 
-<p>In <code class="highlighter-rouge">R</code> we can use the <code class="highlighter-rouge">multinom</code> function from the <code class="highlighter-rouge">nnet</code> package to perform logistic regression. The are other implementations of this model in <code class="highlighter-rouge">R</code>, so it is worth a look to compare and contrast them. Fitting <code class="highlighter-rouge">multinom</code> is just like fitting a linear model as seen below.</p>
+<p>In <code class="language-plaintext highlighter-rouge">R</code> we can use the <code class="language-plaintext highlighter-rouge">multinom</code> function from the <code class="language-plaintext highlighter-rouge">nnet</code> package to perform logistic regression. The are other implementations of this model in <code class="language-plaintext highlighter-rouge">R</code>, so it is worth a look to compare and contrast them. Fitting <code class="language-plaintext highlighter-rouge">multinom</code> is just like fitting a linear model as seen below.</p>
 
-<p>As described earlier, the data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. 2014.The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>As described earlier, the data to be used for the following modelling exercises are Terron classes as sampled from the map presented in Malone et al. 2014.The sample data contains 1000 cases of which there are 12 different Terron classes. Before getting into the modeling, we first load in the data and then perform the covariate layer intersection using the suite of environmental variables sourced from the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <p>The small selection of covariates cover an area of approximately 220km<sup>2</sup> at a spatial resolution of 25m. All these variables are derived primarily from an available digital elevation model.</p>
 
@@ -217,7 +217,7 @@ is given in Kempen et al. (2009).</p>
 </span><span class="n">hv.rasters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">hv.rasters</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Transform the <code class="highlighter-rouge">hvTerronDat</code> data to a <code class="highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to tak place.</p>
+<p>Transform the <code class="language-plaintext highlighter-rouge">hvTerronDat</code> data to a <code class="language-plaintext highlighter-rouge">sf</code> object or simple feature collection which will permit spatial analysis to tak place.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hvTerronDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hvTerronDat</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
@@ -232,7 +232,7 @@ is given in Kempen et al. (2009).</p>
 </span><span class="c1">## 'data.frame':    1000 obs. of  9 variables:</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It is always good practice to check to see if any of the observational data returned any <code class="highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
+<p>It is always good practice to check to see if any of the observational data returned any <code class="language-plaintext highlighter-rouge">NA</code> values for any one of the covariates. If there is <code class="language-plaintext highlighter-rouge">NA</code> values, it indicates that the observational data is outside the extent of the covariate layers. It is best to remove these observations from the data set.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## remove missing data</span><span class="w">
 </span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
@@ -246,7 +246,7 @@ is given in Kempen et al. (2009).</p>
 
 <h3 id="model-fitting-">Model Fitting <a id="s-3"></a></h3>
 
-<p>Now for model fitting. The target variable is <code class="highlighter-rouge">terron</code>. So lets just use all the available covariates in the model. We will also subset the data for an out-of-bag model evaluation using the random hold back sampling method.</p>
+<p>Now for model fitting. The target variable is <code class="language-plaintext highlighter-rouge">terron</code>. So lets just use all the available covariates in the model. We will also subset the data for an out-of-bag model evaluation using the random hold back sampling method.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Multinomial logistic regression model establish calibration and out-of-bag</span><span class="w">
 </span><span class="c1"># data sets</span><span class="w">
@@ -257,7 +257,7 @@ is given in Kempen et al. (2009).</p>
 </span><span class="n">hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nnet</span><span class="o">::</span><span class="n">multinom</span><span class="p">(</span><span class="n">terron</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">hunterCovariates_A_AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_light_insolation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_MRVBF</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_Slope</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TRI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hunterCovariates_A_TWI</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Using the <code class="highlighter-rouge">summary</code> function allows us to see the linear models for each Terron class, which are the result of the log-odds of each soil class modeled as a linear combination of the covariates. We can also see the probabilities of occurrence for each Terron class at each observation location by using the <code class="highlighter-rouge">fitted</code> function.</p>
+<p>Using the <code class="language-plaintext highlighter-rouge">summary</code> function allows us to see the linear models for each Terron class, which are the result of the log-odds of each soil class modeled as a linear combination of the covariates. We can also see the probabilities of occurrence for each Terron class at each observation location by using the <code class="language-plaintext highlighter-rouge">fitted</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Model summary</span><span class="w">
 </span><span class="n">summary</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
@@ -290,7 +290,7 @@ is given in Kempen et al. (2009).</p>
 </span><span class="c1">##    </span><span class="w">
 </span></code></pre></div></div>
 
-<p>Subsequently, we can also determine the most probable Terron class using the <code class="highlighter-rouge">predict</code> function.</p>
+<p>Subsequently, we can also determine the most probable Terron class using the <code class="language-plaintext highlighter-rouge">predict</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## model prediction</span><span class="w">
 </span><span class="n">pred.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">)</span><span class="w">
@@ -304,7 +304,7 @@ is given in Kempen et al. (2009).</p>
 
 <h3 id="model-goodness-of-fit-evaluation-">Model goodness of fit evaluation <a id="s-4"></a></h3>
 
-<p>Lets now perform an internal validation of the model to assess its general performance. Here we use the <code class="highlighter-rouge">goofcat</code> function that was <a href="/DSM_book/pages/dsm_cat/val/">introduced earlier</a>, but this time we import the two vectors into the function which correspond to the observations and predictions respectively.</p>
+<p>Lets now perform an internal validation of the model to assess its general performance. Here we use the <code class="language-plaintext highlighter-rouge">goofcat</code> function that was <a href="/DSM_book/pages/dsm_cat/val/">introduced earlier</a>, but this time we import the two vectors into the function which correspond to the observations and predictions respectively.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## goodness of fit (calibration)</span><span class="w">
 </span><span class="n">ithir</span><span class="o">::</span><span class="n">goofcat</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">terron</span><span class="p">[</span><span class="n">training</span><span class="p">],</span><span class="w"> </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pred.hv.MNLR</span><span class="p">)</span><span class="w">
@@ -339,7 +339,7 @@ is given in Kempen et al. (2009).</p>
 </span><span class="c1">## [1] 0.5023977</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Similarly, performing the out-of-bag evaluation requires first using the <code class="highlighter-rouge">pred.hv.MNLR</code> model to predict on the out-of-bag cases.</p>
+<p>Similarly, performing the out-of-bag evaluation requires first using the <code class="language-plaintext highlighter-rouge">pred.hv.MNLR</code> model to predict on the out-of-bag cases.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## goodness of fit (out-of-bag)</span><span class="w">
 </span><span class="n">V.pred.hv.MNLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
@@ -380,8 +380,8 @@ is given in Kempen et al. (2009).</p>
 
 <h3 id="apply-model-spatially-">Apply model spatially <a id="s-5"></a></h3>
 
-<p>Using the <code class="highlighter-rouge">terra::predict</code> function is the method for applying the <code class="highlighter-rouge">hv.MNLR</code> model across the whole area. Model extension can take a couple of forms for MNLR. It is possible for multinomial logistic regression to create the map of the most probable class, as well as the probabilities for all classes. The first script example below is for mapping the most probable class which is specified by setting the <code class="highlighter-rouge">type</code> parameter to
-<code class="highlighter-rouge">class</code>. If probabilities are required <code class="highlighter-rouge">probs</code> would be used for the <code class="highlighter-rouge">type</code> parameter, together with specifying an <code class="highlighter-rouge">index</code> integer to indicate which class probabilities you wish to map.</p>
+<p>Using the <code class="language-plaintext highlighter-rouge">terra::predict</code> function is the method for applying the <code class="language-plaintext highlighter-rouge">hv.MNLR</code> model across the whole area. Model extension can take a couple of forms for MNLR. It is possible for multinomial logistic regression to create the map of the most probable class, as well as the probabilities for all classes. The first script example below is for mapping the most probable class which is specified by setting the <code class="language-plaintext highlighter-rouge">type</code> parameter to
+<code class="language-plaintext highlighter-rouge">class</code>. If probabilities are required <code class="language-plaintext highlighter-rouge">probs</code> would be used for the <code class="language-plaintext highlighter-rouge">type</code> parameter, together with specifying an <code class="language-plaintext highlighter-rouge">index</code> integer to indicate which class probabilities you wish to map.</p>
 
 <p>The second script example below shows the parametisation for predicting the probabilities for Terron class 1.</p>
 
@@ -392,7 +392,7 @@ is given in Kempen et al. (2009).</p>
 </span><span class="n">map.MNLR.p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MNLR</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"probs"</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Plotting the final map is done as below. You will also note the use of explicit colors for each Terron class as they were the same colors used in the Terron map presented by Malone et al. (2014). The colors are defined in terms of HEX color codes. A very good resource for selecting colors or deciding on color ramps for maps is <a href="https://colorbrewer2.org/#type=sequential&amp;sche e=BuGn&amp;n=3"><code class="highlighter-rouge">colorbrewer</code></a>.</p>
+<p>Plotting the final map is done as below. You will also note the use of explicit colors for each Terron class as they were the same colors used in the Terron map presented by Malone et al. (2014). The colors are defined in terms of HEX color codes. A very good resource for selecting colors or deciding on color ramps for maps is <a href="https://colorbrewer2.org/#type=sequential&amp;sche e=BuGn&amp;n=3"><code class="language-plaintext highlighter-rouge">colorbrewer</code></a>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Plotting</span><span class="w">
 </span><span class="n">map.MNLR.c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">map.MNLR.c</span><span class="p">)</span><span class="w">

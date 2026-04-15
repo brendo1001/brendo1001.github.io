@@ -170,7 +170,7 @@
 
 <h3 id="model-validation-of-categorical-prediction-models">Model validation of categorical prediction models</h3>
 
-<p><a href="#s-1">jump to the <code class="highlighter-rouge">R</code> stuff</a></p>
+<p><a href="#s-1">jump to the <code class="language-plaintext highlighter-rouge">R</code> stuff</a></p>
 
 <p>The special characteristic of categorical data and its prediction within models, is that a class is either predicted or it is not. For binary variables. the prediction is either a <strong>yes</strong> or <strong>no</strong>, <strong>black</strong> or <strong>white</strong>, <strong>present</strong> or <strong>absent</strong> etc.</p>
 
@@ -189,7 +189,7 @@
   <li>Kappa coefficient of agreement</li>
 </ul>
 
-<p>Using a contrived example, each of these quality measures will be illustrated. We will make a 4 × 4 matrix, and call it <code class="highlighter-rouge">con.mat</code>, and append some column and row names — in this case <a href="https://www.clw.csiro.au/aclep/asc/index.htm">Australian Soil Classification</a>  Order codes. We then populate the matrix with some more-or-less random integers.<a id="s-1"></a></p>
+<p>Using a contrived example, each of these quality measures will be illustrated. We will make a 4 × 4 matrix, and call it <code class="language-plaintext highlighter-rouge">con.mat</code>, and append some column and row names — in this case <a href="https://www.clw.csiro.au/aclep/asc/index.htm">Australian Soil Classification</a>  Order codes. We then populate the matrix with some more-or-less random integers.<a id="s-1"></a></p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create a confusion matrix of fake soil classifcation data </span><span class="w">
 </span><span class="n">con.mat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">
@@ -206,9 +206,9 @@
 </span><span class="c1">## KU  2  5  0 11</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">con.mat</code> takes the form of a confusion matrix, and ones such as this are often the output of a classification model.</p>
+<p><code class="language-plaintext highlighter-rouge">con.mat</code> takes the form of a confusion matrix, and ones such as this are often the output of a classification model.</p>
 
-<p>If we summed each of the columns (using the <code class="highlighter-rouge">colSums</code> function), we would obtain the total number of observations for each soil class. Having column sums reflecting the number of observations is a widely used convention in classification studies.</p>
+<p>If we summed each of the columns (using the <code class="language-plaintext highlighter-rouge">colSums</code> function), we would obtain the total number of observations for each soil class. Having column sums reflecting the number of observations is a widely used convention in classification studies.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colSums</span><span class="p">(</span><span class="n">con.mat</span><span class="p">)</span><span class="w">
 
@@ -252,7 +252,7 @@
 </span><span class="c1">## 100  58  92  62</span><span class="w">
 </span></code></pre></div></div>
 
-<p>So if we use the <code class="highlighter-rouge">DE</code> category as an example, the <em>model</em> predicts this class correctly 63% of the time, but when it is actually predicted it is correct 100% of the time.</p>
+<p>So if we use the <code class="language-plaintext highlighter-rouge">DE</code> category as an example, the <em>model</em> predicts this class correctly 63% of the time, but when it is actually predicted it is correct 100% of the time.</p>
 
 <p>The Kappa coefficient is another statistical measure of the fidelity between observations and predictions of a classification.</p>
 
@@ -271,7 +271,7 @@ agreement, 0 is exactly what would be expected by chance, and negative values in
 
 <p><em>TO</em> is the total number of observations and <em>n</em> is the number of classes.</p>
 
-<p>Rather than scripting the above equations, the kappa coefficient together with the other accuracy measures are contained in a function called <code class="highlighter-rouge">goofcat</code> in the <code class="highlighter-rouge">ithir</code> package. As we already have a confusion matrix prepared, we can enter it directly into the function as in the script below.</p>
+<p>Rather than scripting the above equations, the kappa coefficient together with the other accuracy measures are contained in a function called <code class="language-plaintext highlighter-rouge">goofcat</code> in the <code class="language-plaintext highlighter-rouge">ithir</code> package. As we already have a confusion matrix prepared, we can enter it directly into the function as in the script below.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ithir</span><span class="o">::</span><span class="n">goofcat</span><span class="p">(</span><span class="n">conf.mat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con.mat</span><span class="p">,</span><span class="w"> </span><span class="n">imp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 

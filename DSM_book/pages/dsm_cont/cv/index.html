@@ -170,7 +170,7 @@
 
 <h3 id="cross-validation-strategies">Cross-validation strategies</h3>
 
-<p>On the <a href="/DSM_book/pages/dsm_cont/goof/">goodness of fit</a> page we performed an evaluation of the <code class="highlighter-rouge">mod.1</code> model which was a regression to predict soil CEC from clay content.</p>
+<p>On the <a href="/DSM_book/pages/dsm_cont/goof/">goodness of fit</a> page we performed an evaluation of the <code class="language-plaintext highlighter-rouge">mod.1</code> model which was a regression to predict soil CEC from clay content.</p>
 
 <p>Usually it is more appropriate to evaluate a model using data
 that was not included for model fitting. Model evaluation has a few
@@ -231,12 +231,12 @@ approaches <a id="s-5"></a>.</p>
 
 <h3 id="leave-one-out-cross-validation-">Leave-One-Out Cross Validation <a id="s-1"></a></h3>
 
-<p>LOCV follows the logic that if we had <code class="highlighter-rouge">n</code> number of data, we would subset <code class="highlighter-rouge">n-1</code> of these data, and fit a model with these data. Using this model we would make a prediction for the single data that was left out of the model (and save the residual). This is repeated for all <code class="highlighter-rouge">n</code>.</p>
+<p>LOCV follows the logic that if we had <code class="language-plaintext highlighter-rouge">n</code> number of data, we would subset <code class="language-plaintext highlighter-rouge">n-1</code> of these data, and fit a model with these data. Using this model we would make a prediction for the single data that was left out of the model (and save the residual). This is repeated for all <code class="language-plaintext highlighter-rouge">n</code>.</p>
 
 <p>LOCV would be undertaken when there are very few data to work with. 
 When we can sacrifice a few data points, the random-hold back or k-fold cross-validation or a bootstapping procedure would be acceptable.</p>
 
-<p>At the most basic level, LOCV involves the use of a looping function or <code class="highlighter-rouge">for</code> loop. Essentially they can be used to great effect when we want to perform a particular analysis over-and-over. For example with LOCV, for each iteration or loop we take a subset of <code class="highlighter-rouge">n-1</code> rows and fit a model to them, then use that model to predict for the point left out of the calibration. Computationally it will look something like below.</p>
+<p>At the most basic level, LOCV involves the use of a looping function or <code class="language-plaintext highlighter-rouge">for</code> loop. Essentially they can be used to great effect when we want to perform a particular analysis over-and-over. For example with LOCV, for each iteration or loop we take a subset of <code class="language-plaintext highlighter-rouge">n-1</code> rows and fit a model to them, then use that model to predict for the point left out of the calibration. Computationally it will look something like below.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">looPred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">numeric</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">mod.data</span><span class="p">))</span><span class="w">
 </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">mod.data</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -244,11 +244,11 @@ When we can sacrifice a few data points, the random-hold back or k-fold cross-va
   </span><span class="n">looPred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">looModel</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">])}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">i</code> here is the counter, so for each loop it increases by 1 until we get to the end of the data set.</p>
+<p>The <code class="language-plaintext highlighter-rouge">i</code> here is the counter, so for each loop it increases by 1 until we get to the end of the data set.</p>
 
-<p>As you can see, we can index the <code class="highlighter-rouge">mod.data</code> using the <code class="highlighter-rouge">i</code>, meaning that for each loop we will have selected a different calibration set.</p>
+<p>As you can see, we can index the <code class="language-plaintext highlighter-rouge">mod.data</code> using the <code class="language-plaintext highlighter-rouge">i</code>, meaning that for each loop we will have selected a different calibration set.</p>
 
-<p>On each loop, the prediction on the point left out of the calibration is made onto the corresponding row position of the <code class="highlighter-rouge">looPred</code> object. We can assess the performance of the LOCV using the <code class="highlighter-rouge">goof</code> function from <code class="highlighter-rouge">ithir</code>.</p>
+<p>On each loop, the prediction on the point left out of the calibration is made onto the corresponding row position of the <code class="language-plaintext highlighter-rouge">looPred</code> object. We can assess the performance of the LOCV using the <code class="language-plaintext highlighter-rouge">goof</code> function from <code class="language-plaintext highlighter-rouge">ithir</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ithir</span><span class="o">::</span><span class="n">goof</span><span class="p">(</span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">looPred</span><span class="p">,</span><span class="w"> </span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">)</span><span class="w">
 
@@ -264,18 +264,18 @@ external valuations are not too different to those when we performed the interna
 <h3 id="random-holdback-subsetting-">Random holdback subsetting <a id="s-2"></a></h3>
 
 <p>We will do the random-back validation using 70% of the data for
-calibration. A random sample of the data will be performed using the <code class="highlighter-rouge">sample</code> function.</p>
+calibration. A random sample of the data will be performed using the <code class="language-plaintext highlighter-rouge">sample</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w">
 </span><span class="n">training</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">mod.data</span><span class="p">),</span><span class="w"> </span><span class="m">0.7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">mod.data</span><span class="p">),</span><span class="w"> </span><span class="n">replace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>These values correspond to row numbers which will correspond to the row which we will use for the calibration data. We subset these rows out of <code class="highlighter-rouge">mod.data</code> and fit a new linear model.</p>
+<p>These values correspond to row numbers which will correspond to the row which we will use for the calibration data. We subset these rows out of <code class="language-plaintext highlighter-rouge">mod.data</code> and fit a new linear model.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mod.rh</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">CEC</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="p">[</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>So lets evaluate the calibration model with <code class="highlighter-rouge">goof</code>:</p>
+<p>So lets evaluate the calibration model with <code class="language-plaintext highlighter-rouge">goof</code>:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ithir</span><span class="o">::</span><span class="n">goof</span><span class="p">(</span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.rh</span><span class="o">$</span><span class="n">fitted.values</span><span class="p">,</span><span class="w"> </span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">[</span><span class="n">training</span><span class="p">])</span><span class="w">
 
@@ -283,7 +283,7 @@ calibration. A random sample of the data will be performed using the <code class
 </span><span class="c1">## 1 0.3658025   0.5304079 15.55893 3.94448    0</span><span class="w">
 </span></code></pre></div></div>
 
-<p>But we are more interested in how this model performs when we use the validation data. Here we use the <code class="highlighter-rouge">predict</code> function to predict upon this data.</p>
+<p>But we are more interested in how this model performs when we use the validation data. Here we use the <code class="language-plaintext highlighter-rouge">predict</code> function to predict upon this data.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mod.rh.V</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">mod.rh</span><span class="p">,</span><span class="w"> </span><span class="n">mod.data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
 </span><span class="n">goof</span><span class="p">(</span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.rh.V</span><span class="p">,</span><span class="w"> </span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">])</span><span class="w">
@@ -292,14 +292,14 @@ calibration. A random sample of the data will be performed using the <code class
 </span><span class="c1">## 1 0.5395843   0.6613833 10.83252 3.291279 -0.1277488</span><span class="w">
 </span></code></pre></div></div>
 
-<p>A good indicator of model generalisation is that the evaluations are near or better than that found for model calibration. Model over fitting is evident when there is a large discrepancy. Set the <code class="highlighter-rouge">plot.it</code> parameter to <code class="highlighter-rouge">TRUE</code> and re-run the script above and you will see a plot like the figure below.</p>
+<p>A good indicator of model generalisation is that the evaluations are near or better than that found for model calibration. Model over fitting is evident when there is a large discrepancy. Set the <code class="language-plaintext highlighter-rouge">plot.it</code> parameter to <code class="language-plaintext highlighter-rouge">TRUE</code> and re-run the script above and you will see a plot like the figure below.</p>
 
 <figure>
     <img src="/images/dsm_book/extVal.png" alt="rconsole" />
     <figcaption> Observed vs. predicted plot of CEC model (validation data set) with line of concordance (red line).</figcaption>
 </figure>
 
-<p>The <code class="highlighter-rouge">mod.rh</code> model does not appear to perform too bad after all. A few of the high observed values contribute greatly to the evaluation diagnostics. A couple of methods are available to assess the sensitivity of these results.</p>
+<p>The <code class="language-plaintext highlighter-rouge">mod.rh</code> model does not appear to perform too bad after all. A few of the high observed values contribute greatly to the evaluation diagnostics. A couple of methods are available to assess the sensitivity of these results.</p>
 
 <p>The first is to remove what could potentially be outliers from the data.</p>
 
@@ -307,7 +307,7 @@ calibration. A random sample of the data will be performed using the <code class
 
 <p>In the example below this is demonstrated by repeating the random subsetting 5 times. Note that you could do this many more times over.</p>
 
-<p>Note also the removal of the <code class="highlighter-rouge">set.seed</code> function as we need to take a new subset for each iteration. This will also mean that the final
+<p>Note also the removal of the <code class="language-plaintext highlighter-rouge">set.seed</code> function as we need to take a new subset for each iteration. This will also mean that the final
 results shown below and what you generate will be slightly different.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># repeated random subsetting place to store results</span><span class="w">

@@ -183,7 +183,7 @@
 
 <p><a href="#s-7">Jump to R work</a></p>
 
-<p>The Cubist model is a popular model algorithm used throughout the DSM community. Its popularity is due to its ability to <em>mine</em> non-linear relationships in data, but does not have the issues of finite predictions that occur for other decision and regression tree models. In similar vain to regression trees however, Cubist models also are a data partitioning algorithm. The Cubist model is based on the M5 algorithm of Quinlan (1992), and is implemented in the <code class="highlighter-rouge">R</code> Cubist package.</p>
+<p>The Cubist model is a popular model algorithm used throughout the DSM community. Its popularity is due to its ability to <em>mine</em> non-linear relationships in data, but does not have the issues of finite predictions that occur for other decision and regression tree models. In similar vain to regression trees however, Cubist models also are a data partitioning algorithm. The Cubist model is based on the M5 algorithm of Quinlan (1992), and is implemented in the <code class="language-plaintext highlighter-rouge">R</code> Cubist package.</p>
 
 <p>The Cubist model first partitions the data into subsets within which their characteristics are similar with respect to the target variable and the covariates. A series of rules (a decision tree structure may also be defined if requested) defines the partitions, and these rules are arranged in a hierarchy. Each rule takes the form:</p>
 
@@ -195,19 +195,19 @@
 
 <p>The condition may be a simple one based on one covariate or, more often, it comprises several covariates. If a condition results in being true then the next step is the prediction of the soil property of interest by ordinary least-squares regression from the covariates within that partition.</p>
 
-<p>If the condition is not true then the rule defines the next node in the tree, and the sequence of <em>if</em>, <em>then</em>, <em>else</em> is repeated. The result is that the regression equations, though general in form, are local to the partitions and their errors smaller than they would otherwise be. More details of the Cubist model can be found in the <code class="highlighter-rouge">Cubist</code> help files or Quinlan (1992).</p>
+<p>If the condition is not true then the rule defines the next node in the tree, and the sequence of <em>if</em>, <em>then</em>, <em>else</em> is repeated. The result is that the regression equations, though general in form, are local to the partitions and their errors smaller than they would otherwise be. More details of the Cubist model can be found in the <code class="language-plaintext highlighter-rouge">Cubist</code> help files or Quinlan (1992).</p>
 
-<p>Fitting a Cubist model in <code class="highlighter-rouge">R</code> is not very difficult. Although it will be useful to spend some time playing around with many of the controllable hyper-parameters the function has.</p>
+<p>Fitting a Cubist model in <code class="language-plaintext highlighter-rouge">R</code> is not very difficult. Although it will be useful to spend some time playing around with many of the controllable hyper-parameters the function has.</p>
 
-<p>In the example below we can control the number of potential rules that could potentially partition the data (note this limits the number of possible rules, and does not necessarily mean that those number of rules will actually be realized i.e. the outcome is internally optimized). We can also limit the extrapolation of the model predictions, which is a useful model constraint feature. These various control parameters plus others can be adjusted within the <code class="highlighter-rouge">cubistControl</code> parameter. 
+<p>In the example below we can control the number of potential rules that could potentially partition the data (note this limits the number of possible rules, and does not necessarily mean that those number of rules will actually be realized i.e. the outcome is internally optimized). We can also limit the extrapolation of the model predictions, which is a useful model constraint feature. These various control parameters plus others can be adjusted within the <code class="language-plaintext highlighter-rouge">cubistControl</code> parameter. 
 The committees parameter is specified as an integer of how many committee models (e.g.. boosting iterations) are required. Here we just set it to 1, but naturally it is possible to perform some sort of sensitivity analysis when this committee model option is set to greater than 1. In terms of specifying the target variable and covariates, we do not define a formula as we did earlier
-for the MLR model. Rather we specify the columns explicitly — those that are the target variable (<code class="highlighter-rouge">x</code>), and those that are the covariates (<code class="highlighter-rouge">y</code>).</p>
+for the MLR model. Rather we specify the columns explicitly — those that are the target variable (<code class="language-plaintext highlighter-rouge">x</code>), and those that are the covariates (<code class="language-plaintext highlighter-rouge">y</code>).</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="data-preparation-">Data preparation <a id="s-2"></a></h3>
 
-<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="highlighter-rouge">HV_subsoilpH</code> object and supplied rasters from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="language-plaintext highlighter-rouge">HV_subsoilpH</code> object and supplied rasters from the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <p>For the succession of models examined in these various pages, we will concentrate on modelling and mapping the soil pH for the 60-100cm depth interval. To refresh, lets load the data in, then intersect the data with the available covariates.</p>
 
@@ -234,8 +234,8 @@ for the MLR model. Rather we specify the columns explicitly — those that are t
 </span><span class="c1"># Change names of coordinate columns</span><span class="w">
 </span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
 </span><span class="c1"># save a copy of coordinates</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
 
 </span><span class="c1"># convert data to sf object</span><span class="w">
 </span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
@@ -255,7 +255,7 @@ for the MLR model. Rather we specify the columns explicitly — those that are t
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Often it is handy to check to see whether there are missing values both in the target variable and of the covariates. It is possible that a point location does not fit within the extent of the available covariates. In these cases the data should be excluded. A quick way to assess whether there are missing or <code class="highlighter-rouge">NA</code> values in the data is to use the <code class="highlighter-rouge">complete.cases</code> function.</p>
+<p>Often it is handy to check to see whether there are missing values both in the target variable and of the covariates. It is possible that a point location does not fit within the extent of the available covariates. In these cases the data should be excluded. A quick way to assess whether there are missing or <code class="language-plaintext highlighter-rouge">NA</code> values in the data is to use the <code class="language-plaintext highlighter-rouge">complete.cases</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># check for NA values</span><span class="w">
 </span><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
@@ -265,7 +265,7 @@ for the MLR model. Rather we specify the columns explicitly — those that are t
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>There do not appear to be any missing data as indicated by the <code class="highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing information.</p>
+<p>There do not appear to be any missing data as indicated by the <code class="language-plaintext highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing information.</p>
 
 <p><a href="#top">Back to top</a></p>
 
@@ -285,7 +285,7 @@ for the MLR model. Rather we specify the columns explicitly — those that are t
 </span><span class="n">extrapolation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">),</span><span class="w"> </span><span class="n">committees</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The output generated from fitting a Cubist model can be retrieved using the <code class="highlighter-rouge">summary</code> function. This provides information about the conditions for each rule, the regression models for each rule, and information about the diagnostics of the model fit, plus the frequency of which the covariates were used as conditions and/or within a model.</p>
+<p>The output generated from fitting a Cubist model can be retrieved using the <code class="language-plaintext highlighter-rouge">summary</code> function. This provides information about the conditions for each rule, the regression models for each rule, and information about the diagnostics of the model fit, plus the frequency of which the covariates were used as conditions and/or within a model.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">summary</span><span class="p">(</span><span class="n">hv.cub.Exp</span><span class="p">)</span><span class="w">
 
@@ -365,7 +365,7 @@ for the MLR model. Rather we specify the columns explicitly — those that are t
 
 <h3 id="spatial-prediction-">Spatial prediction <a id="s-6"></a></h3>
 
-<p>Creating the map resulting from the <code class="highlighter-rouge">hv.cub.Exp</code> model can be implemented as before using the <code class="highlighter-rouge">terra::predict</code> function.</p>
+<p>Creating the map resulting from the <code class="language-plaintext highlighter-rouge">hv.cub.Exp</code> model can be implemented as before using the <code class="language-plaintext highlighter-rouge">terra::predict</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Spatial prediction</span><span class="w">
 </span><span class="n">map.cubist.r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.cub.Exp</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"soilpH_60_100_cubist.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">

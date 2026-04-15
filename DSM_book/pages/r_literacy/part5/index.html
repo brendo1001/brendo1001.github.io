@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~28 minutes
+          Reading time ~29 minutes
         </p>
         
       </div>
@@ -173,7 +173,7 @@
 <h3 id="modes-classes-attributes-length-and-coercion">Modes, classes, attributes, length, and coercion</h3>
 
 <p>As described before, the mode of an object describes the type of data
-that it contains. In <code class="highlighter-rouge">R</code>, mode is an object attribute. All objects have
+that it contains. In <code class="language-plaintext highlighter-rouge">R</code>, mode is an object attribute. All objects have
 at least two attributes: mode and length, but may objects have more.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="w">
@@ -188,9 +188,9 @@ at least two attributes: mode and length, but may objects have more.</p>
 
 <p>It is often necessary to change the mode of a data structure, e.g., to
 have your data displayed differently, or to apply a function that only
-works with a particular type of data structure. In <code class="highlighter-rouge">R</code> this is called
-coercion. There are many functions in <code class="highlighter-rouge">R</code> that have the structure
-<code class="highlighter-rouge">as.something</code> that change the mode of a submitted object to
+works with a particular type of data structure. In <code class="language-plaintext highlighter-rouge">R</code> this is called
+coercion. There are many functions in <code class="language-plaintext highlighter-rouge">R</code> that have the structure
+<code class="language-plaintext highlighter-rouge">as.something</code> that change the mode of a submitted object to
 ‘something’. For example, say you want to treat numeric data as
 character data.</p>
 
@@ -212,21 +212,21 @@ character data.</p>
 </span></code></pre></div></div>
 
 <p>If you are unsure of whether or not a coercion function exists, give it
-a try—two other common examples are <code class="highlighter-rouge">as.numeric</code> and <code class="highlighter-rouge">as.vector</code>.</p>
+a try—two other common examples are <code class="language-plaintext highlighter-rouge">as.numeric</code> and <code class="language-plaintext highlighter-rouge">as.vector</code>.</p>
 
 <p>Attributes are important internally for determining how objects should
-be handled by various functions. In particular, the <code class="highlighter-rouge">class</code> attribute
+be handled by various functions. In particular, the <code class="language-plaintext highlighter-rouge">class</code> attribute
 determines how a particular object will be handled by a given function.
-For example, output from a linear regression has the class <code class="highlighter-rouge">lm</code> and will
-be handled differently by the <code class="highlighter-rouge">print</code> function than will a data frame,
-which has the class <code class="highlighter-rouge">data.frame</code>. The utility of this object-orientated
+For example, output from a linear regression has the class <code class="language-plaintext highlighter-rouge">lm</code> and will
+be handled differently by the <code class="language-plaintext highlighter-rouge">print</code> function than will a data frame,
+which has the class <code class="language-plaintext highlighter-rouge">data.frame</code>. The utility of this object-orientated
 approach will become more apparent later on.</p>
 
 <p>It is often necessary to know the length of an object. Of course, length
-can mean different things. Three useful functions for this are <code class="highlighter-rouge">nrow</code>,
-<code class="highlighter-rouge">NROW</code>, and <code class="highlighter-rouge">length</code>.</p>
+can mean different things. Three useful functions for this are <code class="language-plaintext highlighter-rouge">nrow</code>,
+<code class="language-plaintext highlighter-rouge">NROW</code>, and <code class="language-plaintext highlighter-rouge">length</code>.</p>
 
-<p>The function <code class="highlighter-rouge">nrow</code> will return the number of rows in a two-dimensional
+<p>The function <code class="language-plaintext highlighter-rouge">nrow</code> will return the number of rows in a two-dimensional
 data structure.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
@@ -242,21 +242,21 @@ data structure.</p>
     </span><span class="c1">## [1] 3</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The vertical analog is <code class="highlighter-rouge">ncol</code>.</p>
+<p>The vertical analog is <code class="language-plaintext highlighter-rouge">ncol</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">ncol</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
 
     </span><span class="c1">## [1] 10</span><span class="w">
 </span></code></pre></div></div>
 
-<p>You can get both of these at once with the <code class="highlighter-rouge">dim</code> function.</p>
+<p>You can get both of these at once with the <code class="language-plaintext highlighter-rouge">dim</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">dim</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w">
 
     </span><span class="c1">## [1]  3 10</span><span class="w">
 </span></code></pre></div></div>
 
-<p>For a vector, use the function <code class="highlighter-rouge">NROW</code> or <code class="highlighter-rouge">length</code>.</p>
+<p>For a vector, use the function <code class="language-plaintext highlighter-rouge">NROW</code> or <code class="language-plaintext highlighter-rouge">length</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="w">
     </span><span class="n">NROW</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
@@ -264,7 +264,7 @@ data structure.</p>
     </span><span class="c1">## [1] 10</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The value returned from the function <code class="highlighter-rouge">length</code> depends on the type of
+<p>The value returned from the function <code class="language-plaintext highlighter-rouge">length</code> depends on the type of
 data structure you submit, but for most data structures, it is the total
 number of elements.</p>
 
@@ -280,32 +280,32 @@ number of elements.</p>
 <h3 id="indexing-sub-setting-sorting-and-locating-data">Indexing, sub-setting, sorting, and locating data</h3>
 
 <p>Sub-setting and indexing are ways to select specific parts of the data
-structure (such as specific rows within a data frame) within <code class="highlighter-rouge">R</code>.
+structure (such as specific rows within a data frame) within <code class="language-plaintext highlighter-rouge">R</code>.
 Indexing (also know as sub-scripting) is done using the square braces in
-<code class="highlighter-rouge">R</code>:</p>
+<code class="language-plaintext highlighter-rouge">R</code>:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w">
-    </span><span class="n">v</span><span class="m">1</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w">
+    </span><span class="n">v1</span><span class="w">
 
     </span><span class="c1">## [1] 5 1 3 8</span><span class="w">
 
-    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w">
+    </span><span class="n">v1</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w">
 
     </span><span class="c1">## [1] 3</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">R</code> is very flexible in terms of what can be selected or excluded. For
+<p><code class="language-plaintext highlighter-rouge">R</code> is very flexible in terms of what can be selected or excluded. For
 example, the following returns the 1<sup><em>s**t</em></sup> through
 3<sup><em>r**d</em></sup> observation:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v1</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w">
 
     </span><span class="c1">## [1] 5 1 3</span><span class="w">
 </span></code></pre></div></div>
 
 <p>While this returns all but the 4<sup><em>t**h</em></sup> observation:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">-4</span><span class="p">]</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v1</span><span class="p">[</span><span class="m">-4</span><span class="p">]</span><span class="w">
 
     </span><span class="c1">## [1] 5 1 3</span><span class="w">
 </span></code></pre></div></div>
@@ -313,7 +313,7 @@ example, the following returns the 1<sup><em>s**t</em></sup> through
 <p>This bracket notation can also be used with relational constraints. For
 example, if we want only those observations that are less than 5:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v1</span><span class="p">[</span><span class="n">v1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5</span><span class="p">]</span><span class="w">
 
     </span><span class="c1">## [1] 1 3</span><span class="w">
 </span></code></pre></div></div>
@@ -321,31 +321,31 @@ example, if we want only those observations that are less than 5:</p>
 <p>This may seem confusing, but if we evaluate each piece separately, it
 becomes more clear:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">v1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5</span><span class="w">
 
     </span><span class="c1">## [1] FALSE  TRUE  TRUE FALSE</span><span class="w">
 
-    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)]</span><span class="w">
+    </span><span class="n">v1</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)]</span><span class="w">
 
     </span><span class="c1">## [1] 1 3</span><span class="w">
 </span></code></pre></div></div>
 
 <p>While we are on the topic of subscripts, we should note that, unlike
-some other programming languages, the size of a vector in <code class="highlighter-rouge">R</code> is not
+some other programming languages, the size of a vector in <code class="language-plaintext highlighter-rouge">R</code> is not
 limited by its initial assignment. This is true for other data
 structures as well. To increase the size of a vector, just assign a
 value to a position that does not currently exist:</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">length</span><span class="p">(</span><span class="n">v</span><span class="m">1</span><span class="p">)</span><span class="w">
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">length</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span><span class="w">
 
     </span><span class="c1">## [1] 4</span><span class="w">
 
-    </span><span class="n">v</span><span class="m">1</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w">
-    </span><span class="nf">length</span><span class="p">(</span><span class="n">v</span><span class="m">1</span><span class="p">)</span><span class="w">
+    </span><span class="n">v1</span><span class="p">[</span><span class="m">8</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w">
+    </span><span class="nf">length</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span><span class="w">
 
     </span><span class="c1">## [1] 8</span><span class="w">
 
-    </span><span class="n">v</span><span class="m">1</span><span class="w">
+    </span><span class="n">v1</span><span class="w">
 
     </span><span class="c1">## [1]  5  1  3  8 NA NA NA 10</span><span class="w">
 </span></code></pre></div></div>
@@ -353,7 +353,7 @@ value to a position that does not currently exist:</p>
 <p>Indexing can be applied to other data structures in a similar manner as
 shown above. For data frames and matrices, however, we are now working
 with two dimensions. In specifying indices, row numbers are given first.
-We will use our <code class="highlighter-rouge">soil.data</code> set to illustrate the following few
+We will use our <code class="language-plaintext highlighter-rouge">soil.data</code> set to illustrate the following few
 examples:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
@@ -396,7 +396,7 @@ examples:</p>
     </span><span class="c1">## 5       1 native pasture</span><span class="w">
 </span></code></pre></div></div>
 
-<p>If an index is left out, <code class="highlighter-rouge">R</code> returns all values in that dimension (you
+<p>If an index is left out, <code class="language-plaintext highlighter-rouge">R</code> returns all values in that dimension (you
 need to include the comma).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
@@ -418,7 +418,7 @@ of your code.</p>
     </span><span class="c1">## [1] 1.07 0.98 0.73 0.39 0.23</span><span class="w">
 </span></code></pre></div></div>
 
-<p>You can also specify multiple column names using the <code class="highlighter-rouge">c</code> function.</p>
+<p>You can also specify multiple column names using the <code class="language-plaintext highlighter-rouge">c</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Total_Carbon"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CEC"</span><span class="p">)]</span><span class="w">
 
@@ -456,7 +456,7 @@ soil observations that are extremely sodic i.e an ESP greater than 10%.</p>
 </span></code></pre></div></div>
 
 <p>While indexing can clearly be used to create a subset of data that meet
-certain criteria, the <code class="highlighter-rouge">subset</code> function is often easier and shorter to
+certain criteria, the <code class="language-plaintext highlighter-rouge">subset</code> function is often easier and shorter to
 use for data frames. Sub-setting is used to select a subset of a vector,
 data frame, or matrix that meets a certain criterion (or criteria). To
 return what was given in the last example.</p>
@@ -483,7 +483,7 @@ return what was given in the last example.</p>
     </span><span class="c1">## 148         0.84 0.820 16.4   4.93  0.91   7.52  16.72 23.34</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Note that the <code class="highlighter-rouge">$</code> notation does not need to be used in the <code class="highlighter-rouge">subset</code>
+<p>Note that the <code class="language-plaintext highlighter-rouge">$</code> notation does not need to be used in the <code class="language-plaintext highlighter-rouge">subset</code>
 function, As with indexing multiple constraints can also be used:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">subset</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">Lower.Depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span><span class="w">
@@ -524,8 +524,8 @@ where <em>Landclass</em> is <em>native pasture</em> or <em>forest</em>. We could
     </span><span class="c1">## You Get the Gist</span><span class="w">
 </span></code></pre></div></div>
 
-<p>But, this is an easier way (we are using the <code class="highlighter-rouge">head</code> function just to
-limit the number of outputted rows. So try it without the <code class="highlighter-rouge">head</code>
+<p>But, this is an easier way (we are using the <code class="language-plaintext highlighter-rouge">head</code> function just to
+limit the number of outputted rows. So try it without the <code class="language-plaintext highlighter-rouge">head</code>
 function).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">subset</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">Landclass</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Forest"</span><span class="p">,</span><span class="w"> </span><span class="s2">"native pasture"</span><span class="p">)))</span><span class="w">
@@ -575,7 +575,7 @@ example:</p>
 </span></code></pre></div></div>
 
 <p>Indexing is a little trickier for lists. You need to use double square
-braces, <code class="highlighter-rouge">[[i]]</code>, to specify an element within a list. Of course, if the
+braces, <code class="language-plaintext highlighter-rouge">[[i]]</code>, to specify an element within a list. Of course, if the
 element within the list has multiple elements, you could use indexing to
 select specific elements within it.</p>
 
@@ -586,35 +586,35 @@ select specific elements within it.</p>
 </span></code></pre></div></div>
 
 <p>It is also possible to use double, triple, etc. indexing with all types
-of data structures. <code class="highlighter-rouge">R</code> evaluates the expression from left to right. As
+of data structures. <code class="language-plaintext highlighter-rouge">R</code> evaluates the expression from left to right. As
 a simple example, lets extract the element on the third row of the
-second column of the second element of <code class="highlighter-rouge">list.1</code>:</p>
+second column of the second element of <code class="language-plaintext highlighter-rouge">list.1</code>:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">list.1</span><span class="p">[[</span><span class="m">2</span><span class="p">]][</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w">
 
     </span><span class="c1">## [1] 6</span><span class="w">
 </span></code></pre></div></div>
 
-<p>An easy way to divide data into groups is to use the <code class="highlighter-rouge">split</code> function.
+<p>An easy way to divide data into groups is to use the <code class="language-plaintext highlighter-rouge">split</code> function.
 This function will divide a data structure (typically a vector or a data
 frame) into one subset for each level of the variable you would like to
 split by. The subsets are stored together in a list. Here we split our
-<code class="highlighter-rouge">soil.data</code> set into the separate or individual soil profile (splitting
-by the <code class="highlighter-rouge">PROFILE</code> column. Note output is not shown here for sake of
+<code class="language-plaintext highlighter-rouge">soil.data</code> set into the separate or individual soil profile (splitting
+by the <code class="language-plaintext highlighter-rouge">PROFILE</code> column. Note output is not shown here for sake of
 brevity).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data.split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">PROFILE</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>If you apply <code class="highlighter-rouge">split</code> to individual vectors, the resulting list can be
+<p>If you apply <code class="language-plaintext highlighter-rouge">split</code> to individual vectors, the resulting list can be
 used directly in some plotting or summarizing functions to give you
 results for each separate group. (There are usually other ways to arrive
-at this type of result). The <code class="highlighter-rouge">split</code> function can also be handy for
+at this type of result). The <code class="language-plaintext highlighter-rouge">split</code> function can also be handy for
 manipulating and analyzing data by some grouping variable, as we will
 see later.</p>
 
 <p>It is often necessary to sort data. For a single vector, this is done
-with the function <code class="highlighter-rouge">sort</code>.</p>
+with the function <code class="language-plaintext highlighter-rouge">sort</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="w">
     </span><span class="n">x</span><span class="w">
@@ -628,7 +628,7 @@ with the function <code class="highlighter-rouge">sort</code>.</p>
 </span></code></pre></div></div>
 
 <p>But what if you want to sort an entire data frame by one column? In this
-case it is necessary to use the function <code class="highlighter-rouge">order</code>, in combination with
+case it is necessary to use the function <code class="language-plaintext highlighter-rouge">order</code>, in combination with
 indexing.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">soil.data</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">),</span><span class="w"> </span><span class="p">])</span><span class="w">
@@ -649,7 +649,7 @@ indexing.</p>
     </span><span class="c1">## 7           1.14 0.123 0.3   0.01  0.70   2.92   0.51 3.59</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The function <code class="highlighter-rouge">order</code> returns a vector that contains the row positions of
+<p>The function <code class="language-plaintext highlighter-rouge">order</code> returns a vector that contains the row positions of
 the ranked data:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">order</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">)</span><span class="w">
@@ -671,8 +671,8 @@ meet certain criteria from a data structure. But sometimes it is
 important to know where data resides in its original data structure. But
 sometimes it is important to know where data resides in its original
 data structure. To functions that are handy for locating data within an
-<code class="highlighter-rouge">R</code> data structure are <code class="highlighter-rouge">match</code> and <code class="highlighter-rouge">which</code>. The <code class="highlighter-rouge">match</code> function will
-tell you where specific values reside in a data structure. The <code class="highlighter-rouge">which</code>
+<code class="language-plaintext highlighter-rouge">R</code> data structure are <code class="language-plaintext highlighter-rouge">match</code> and <code class="language-plaintext highlighter-rouge">which</code>. The <code class="language-plaintext highlighter-rouge">match</code> function will
+tell you where specific values reside in a data structure. The <code class="language-plaintext highlighter-rouge">which</code>
 function will return the locations of values that meet certain criteria.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">match</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">25.85</span><span class="p">,</span><span class="w"> </span><span class="m">11.45</span><span class="p">,</span><span class="w"> </span><span class="m">9.23</span><span class="p">),</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">)</span><span class="w">
@@ -694,9 +694,9 @@ function will return the locations of values that meet certain criteria.</p>
     </span><span class="c1">## 18         0.17 0.088 0.7   0.06  0.33   6.15   2.35  9.23</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Note that the <code class="highlighter-rouge">match</code> function matches the first observation only (this
+<p>Note that the <code class="language-plaintext highlighter-rouge">match</code> function matches the first observation only (this
 makes it difficult to use when there are multiple observations of the
-same value). This function is vectorised. The <code class="highlighter-rouge">match</code> function is useful
+same value). This function is vectorised. The <code class="language-plaintext highlighter-rouge">match</code> function is useful
 for finding the location of the unique values, such as the maximum.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">match</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">)</span><span class="w">
@@ -704,16 +704,16 @@ for finding the location of the unique values, such as the maximum.</p>
     </span><span class="c1">## [1] 95</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Note the call to the <code class="highlighter-rouge">na.rm</code> argument in the <code class="highlighter-rouge">max</code> function as a means
-to overlook the presence of <code class="highlighter-rouge">NA</code> values. So what is the maximum CEC
-value in our <code class="highlighter-rouge">soil.data</code> set.</p>
+<p>Note the call to the <code class="language-plaintext highlighter-rouge">na.rm</code> argument in the <code class="language-plaintext highlighter-rouge">max</code> function as a means
+to overlook the presence of <code class="language-plaintext highlighter-rouge">NA</code> values. So what is the maximum CEC
+value in our <code class="language-plaintext highlighter-rouge">soil.data</code> set.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">[</span><span class="m">95</span><span class="p">]</span><span class="w">
 
     </span><span class="c1">## [1] 28.21</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">which</code> function, on the other hand, will return all locations that
+<p>The <code class="language-plaintext highlighter-rouge">which</code> function, on the other hand, will return all locations that
 meet the criteria.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
@@ -728,7 +728,7 @@ meet the criteria.</p>
     </span><span class="c1">## [1] 111 117 147 148 159</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">which</code> function can also be useful for locating missing values.</p>
+<p>The <code class="language-plaintext highlighter-rouge">which</code> function can also be useful for locating missing values.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">))</span><span class="w">
 
@@ -744,14 +744,14 @@ meet the criteria.</p>
 
 <p>For many analyses, it is important to distinguish between quantitative
 (i.e. continuous) and categorical (i.e. discrete) variables. Categorical
-data are called factors in <code class="highlighter-rouge">R</code>. Internally, factors are stored as
-numeric data (as a check with <code class="highlighter-rouge">mode</code> will tell you), but they are
+data are called factors in <code class="language-plaintext highlighter-rouge">R</code>. Internally, factors are stored as
+numeric data (as a check with <code class="language-plaintext highlighter-rouge">mode</code> will tell you), but they are
 handled as categorical data in statistical analyses. Factors are a class
-of data in <code class="highlighter-rouge">R</code>. <code class="highlighter-rouge">R</code> automatically recognizes non-numerical data as
+of data in <code class="language-plaintext highlighter-rouge">R</code>. <code class="language-plaintext highlighter-rouge">R</code> automatically recognizes non-numerical data as
 factors when the data are read in, but if numerical data are to be used
-as a factor (or if character data are generated within <code class="highlighter-rouge">R</code> and not read
-in, conversion to a factor must be specified explicitly. In <code class="highlighter-rouge">R</code>, the
-function <code class="highlighter-rouge">factor</code> does this.</p>
+as a factor (or if character data are generated within <code class="language-plaintext highlighter-rouge">R</code> and not read
+in, conversion to a factor must be specified explicitly. In <code class="language-plaintext highlighter-rouge">R</code>, the
+function <code class="language-plaintext highlighter-rouge">factor</code> does this.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))</span><span class="w">
     </span><span class="n">a</span><span class="w">
@@ -765,7 +765,7 @@ function <code class="highlighter-rouge">factor</code> does this.</p>
     </span><span class="c1">## Levels: 0 1</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The levels that <code class="highlighter-rouge">R</code> assigns to your factor are by default the unique
+<p>The levels that <code class="language-plaintext highlighter-rouge">R</code> assigns to your factor are by default the unique
 values given in your original vector. This is often fine, but you may
 want to assign more meaningful levels. For example, say you have a
 vector that contains soil drainage class categories.</p>
@@ -789,7 +789,7 @@ alphabetically.</p>
     </span><span class="c1">## [1] 3 1 2 2 3 2</span><span class="w">
 </span></code></pre></div></div>
 
-<p>If you specify <code class="highlighter-rouge">levels</code> as an argument of the <code class="highlighter-rouge">factor</code> function, you can
+<p>If you specify <code class="language-plaintext highlighter-rouge">levels</code> as an argument of the <code class="language-plaintext highlighter-rouge">factor</code> function, you can
 control the order of the levels.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.drainage2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">soil.drainage</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"well drained"</span><span class="p">,</span><span class="w"> </span><span class="s2">"imperfectly drained"</span><span class="p">,</span><span class="w"> 
@@ -805,8 +805,8 @@ or summaries.</p>
 <h3 id="combining-data">Combining data</h3>
 
 <p>Data frames (or vectors or matrices) often need to be combined for
-analysis or plotting. Three <code class="highlighter-rouge">R</code> functions that are very useful for
-combining data are <code class="highlighter-rouge">rbind</code> and <code class="highlighter-rouge">cbind</code>. The function <code class="highlighter-rouge">rbind</code> simply
+analysis or plotting. Three <code class="language-plaintext highlighter-rouge">R</code> functions that are very useful for
+combining data are <code class="language-plaintext highlighter-rouge">rbind</code> and <code class="language-plaintext highlighter-rouge">cbind</code>. The function <code class="language-plaintext highlighter-rouge">rbind</code> simply
 <em>stacks</em> objects on top of each other to make a new object. The function
 carries out an analogous operation with columns of data.</p>
 
@@ -853,13 +853,13 @@ carries out an analogous operation with columns of data.</p>
 <h3 id="exercises">Exercises</h3>
 
 <ol>
-  <li>Using the <code class="highlighter-rouge">soil.data</code> set, return the following:</li>
+  <li>Using the <code class="language-plaintext highlighter-rouge">soil.data</code> set, return the following:</li>
 </ol>
 
 <ul>
-  <li>The first 10 rows of the columns <code class="highlighter-rouge">clay</code>, <code class="highlighter-rouge">Total_Carbon</code>, and <code class="highlighter-rouge">ExchK</code></li>
-  <li>The column <code class="highlighter-rouge">CEC</code> for the <code class="highlighter-rouge">Forest</code> land class</li>
-  <li>Use the <code class="highlighter-rouge">subset</code> function to create a new data frame that has only
+  <li>The first 10 rows of the columns <code class="language-plaintext highlighter-rouge">clay</code>, <code class="language-plaintext highlighter-rouge">Total_Carbon</code>, and <code class="language-plaintext highlighter-rouge">ExchK</code></li>
+  <li>The column <code class="language-plaintext highlighter-rouge">CEC</code> for the <code class="language-plaintext highlighter-rouge">Forest</code> land class</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">subset</code> function to create a new data frame that has only
 data for the cropping land class</li>
   <li>How many soil profiles are there? Actually write some script to
 determine this rather than look at the data frame</li>
@@ -868,18 +868,18 @@ determine this rather than look at the data frame</li>
 <ol>
   <li>
     <p>Using the same data set, find the location and value of the maximum,
-minimum and median soil carbon (<code class="highlighter-rouge">Total_Carbon</code>)</p>
+minimum and median soil carbon (<code class="language-plaintext highlighter-rouge">Total_Carbon</code>)</p>
   </li>
   <li>
     <p>Make a new data frame which is sorted by the upper soil depth
-(<code class="highlighter-rouge">Upper.Depth</code>). Can you sort it in decreasing order (Hint: Check
+(<code class="language-plaintext highlighter-rouge">Upper.Depth</code>). Can you sort it in decreasing order (Hint: Check
 the help file).</p>
   </li>
   <li>
-    <p>Make a new data frame which contains the columns <code class="highlighter-rouge">PROFILE</code>,
-<code class="highlighter-rouge">Landclass</code>, <code class="highlighter-rouge">Upper.Depth</code>, and <code class="highlighter-rouge">Lower.Depth</code>. Make another data
+    <p>Make a new data frame which contains the columns <code class="language-plaintext highlighter-rouge">PROFILE</code>,
+<code class="language-plaintext highlighter-rouge">Landclass</code>, <code class="language-plaintext highlighter-rouge">Upper.Depth</code>, and <code class="language-plaintext highlighter-rouge">Lower.Depth</code>. Make another data
 frame which contains just the information regarding the exchangeable
-cations e.g. <code class="highlighter-rouge">ExchNa</code>, <code class="highlighter-rouge">ExchK</code>, <code class="highlighter-rouge">ExchCa</code>, and <code class="highlighter-rouge">ExchMg</code>. Make a new
+cations e.g. <code class="language-plaintext highlighter-rouge">ExchNa</code>, <code class="language-plaintext highlighter-rouge">ExchK</code>, <code class="language-plaintext highlighter-rouge">ExchCa</code>, and <code class="language-plaintext highlighter-rouge">ExchMg</code>. Make a new
 data frame which combines these two separate data frames together.</p>
   </li>
   <li>

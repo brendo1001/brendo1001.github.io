@@ -168,14 +168,14 @@
       <h4 id="code">CODE:</h4>
 <p><a href="/DSM_book/rcode/grid_splines/grid_splines_example.R">Get the code to run example</a></p>
 
-<p><a href="/DSM_book/rcode/grid_splines/ea_ras_func.R">Download the <code class="highlighter-rouge">ea_ras_func</code> function that works in conjuction with script</a></p>
+<p><a href="/DSM_book/rcode/grid_splines/ea_ras_func.R">Download the <code class="language-plaintext highlighter-rouge">ea_ras_func</code> function that works in conjuction with script</a></p>
 
 <h2 id="customising-public-digital-soil-mapping-products-with-mass-preserving-splines">Customising public digital soil mapping products with mass preserving splines</h2>
 
 <ul>
   <li><a href="#s-1">A background story of sorts about digital soil mapping and mass preserving splines</a></li>
   <li><a href="#s-2">Making use of publicly available digital soil maps and customizing them to suit your specific needs</a></li>
-  <li><a href="#s-3"><code class="highlighter-rouge">R</code> scripting example of applying spline depth function directly to digital soil maps</a></li>
+  <li><a href="#s-3"><code class="language-plaintext highlighter-rouge">R</code> scripting example of applying spline depth function directly to digital soil maps</a></li>
   <li><a href="#s-4">A final word</a></li>
 </ul>
 
@@ -303,7 +303,7 @@ products using some Version 2 SLGA digital soil maps.</p>
 
 <p>At the moment the code for doing this comes from a bespoke R function
 called
-<a href="/DSM_book/rcode/grid_splines/ea_ras_func.R"><code class="highlighter-rouge">ea_ras_func</code></a>.
+<a href="/DSM_book/rcode/grid_splines/ea_ras_func.R"><code class="language-plaintext highlighter-rouge">ea_ras_func</code></a>.
 For all intents and purposes, the function is the same as would be used
 to fit to soil profile data but is modified slightly for grid data.</p>
 
@@ -314,12 +314,12 @@ easier to adhere to.</p>
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="r-scripting-example-of-applying-spline-depth-function-directly-to-digital-soil-maps-"><code class="highlighter-rouge">R</code> scripting example of applying spline depth function directly to digital soil maps <a id="s-3"></a></h3>
+<h3 id="r-scripting-example-of-applying-spline-depth-function-directly-to-digital-soil-maps-"><code class="language-plaintext highlighter-rouge">R</code> scripting example of applying spline depth function directly to digital soil maps <a id="s-3"></a></h3>
 
-<p>For this example the only <code class="highlighter-rouge">R</code> package required is <code class="highlighter-rouge">terra</code>. Once you have
-downloaded the <code class="highlighter-rouge">ea_ras_func</code>, you load this into <code class="highlighter-rouge">R</code> using the <code class="highlighter-rouge">source</code>
+<p>For this example the only <code class="language-plaintext highlighter-rouge">R</code> package required is <code class="language-plaintext highlighter-rouge">terra</code>. Once you have
+downloaded the <code class="language-plaintext highlighter-rouge">ea_ras_func</code>, you load this into <code class="language-plaintext highlighter-rouge">R</code> using the <code class="language-plaintext highlighter-rouge">source</code>
 function. Note you will need to have the appropriate file paths when you
-do the <code class="highlighter-rouge">source</code>.<a id="s-10"></a></p>
+do the <code class="language-plaintext highlighter-rouge">source</code>.<a id="s-10"></a></p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">terra</span><span class="p">)</span><span class="w">
 
@@ -380,18 +380,18 @@ the Bass Strait off mainland Australia.</p>
     <figcaption>Figure 1. Digital soil maps of clay content for King Island. Depth support corresponds to GlobalSoilMap standard depths.</figcaption>
 </figure>
 
-<p>Using the <code class="highlighter-rouge">ea_rasSp</code> function is relatively straightforward. Basically
+<p>Using the <code class="language-plaintext highlighter-rouge">ea_rasSp</code> function is relatively straightforward. Basically
 it will only ingest a stacked set of rasters. The function automatically
 assumes each raster layer represents a given depth interval or slice,
 which could be GSM standard depths or some other representation. We
-specify this with the <code class="highlighter-rouge">dIn</code> parameter where
-<code class="highlighter-rouge">dIn = c(0,5,15,30,60,100,200)</code> corresponds to the GSM depths
-i.e. 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm and 100-200cm. <code class="highlighter-rouge">dOut</code> is
+specify this with the <code class="language-plaintext highlighter-rouge">dIn</code> parameter where
+<code class="language-plaintext highlighter-rouge">dIn = c(0,5,15,30,60,100,200)</code> corresponds to the GSM depths
+i.e. 0-5cm, 5-15cm, 15-30cm, 30-60cm, 60-100cm and 100-200cm. <code class="language-plaintext highlighter-rouge">dOut</code> is
 the parameter for the new depth intervals we want. Below we a signalling
 (just to be unusual) to get the 0-11cm, 11-25cm, 25-31cm, 21-50cm, and
-50-180cm depth intervals. The <code class="highlighter-rouge">vlow</code> and <code class="highlighter-rouge">vhigh</code> parameters are for
+50-180cm depth intervals. The <code class="language-plaintext highlighter-rouge">vlow</code> and <code class="language-plaintext highlighter-rouge">vhigh</code> parameters are for
 constraining the spline fit to be within normal ranges which for soil
-texture is between 0% and 100%. The other important parameter is <code class="highlighter-rouge">lam</code>
+texture is between 0% and 100%. The other important parameter is <code class="language-plaintext highlighter-rouge">lam</code>
 which determines the amount of flex in the fitted spline. The value 0.1
 is usually a acceptable choice, but one can select their own choice
 based on there own criteria. High values result in stiff splines while
@@ -466,7 +466,7 @@ low values result in flexible splines.</p>
 in digital soil mapping that adhere the GSM specifications have much
 greater utility than just the standard depth intervals.</p>
 
-<p>The <code class="highlighter-rouge">ea_rasSp</code> is very much a beta version at this stage and could do
+<p>The <code class="language-plaintext highlighter-rouge">ea_rasSp</code> is very much a beta version at this stage and could do
 with vectorization and optimization of compute. For now the workflow is
 a pixel-by-pixel routine.</p>
 

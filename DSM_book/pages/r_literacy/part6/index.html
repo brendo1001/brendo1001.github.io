@@ -172,7 +172,7 @@
 
 <h3 id="summary-statistics">Summary statistics</h3>
 
-<p>We will again use the <code class="highlighter-rouge">soil.data</code> set to demonstrate calculation of
+<p>We will again use the <code class="language-plaintext highlighter-rouge">soil.data</code> set to demonstrate calculation of
 summary statistics. Just for recall, lets see what is in this data
 frame.</p>
 
@@ -187,9 +187,9 @@ frame.</p>
     </span><span class="c1">## [16] "CEC"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Here are some useful functions (and note the usage of the <code class="highlighter-rouge">na.rm</code>
-argument) for calculation of means (<code class="highlighter-rouge">mean</code>), medians (<code class="highlighter-rouge">median</code>),
-standard deviations (<code class="highlighter-rouge">sd</code>) and variances (<code class="highlighter-rouge">var</code>):</p>
+<p>Here are some useful functions (and note the usage of the <code class="language-plaintext highlighter-rouge">na.rm</code>
+argument) for calculation of means (<code class="language-plaintext highlighter-rouge">mean</code>), medians (<code class="language-plaintext highlighter-rouge">median</code>),
+standard deviations (<code class="language-plaintext highlighter-rouge">sd</code>) and variances (<code class="language-plaintext highlighter-rouge">var</code>):</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mean</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 
@@ -208,10 +208,10 @@ standard deviations (<code class="highlighter-rouge">sd</code>) and variances (<
     </span><span class="c1">## [1] 246.4775</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">R</code> has a built-in function for summarizing vectors or data frames
-called <code class="highlighter-rouge">summary</code>. This function is a generic function—what it returns is
-dependent on the type of data set to it. Applying the <code class="highlighter-rouge">summary</code> function
-to the first 6 columns in the <code class="highlighter-rouge">soil.data</code> set results in the following
+<p><code class="language-plaintext highlighter-rouge">R</code> has a built-in function for summarizing vectors or data frames
+called <code class="language-plaintext highlighter-rouge">summary</code>. This function is a generic function—what it returns is
+dependent on the type of data set to it. Applying the <code class="language-plaintext highlighter-rouge">summary</code> function
+to the first 6 columns in the <code class="language-plaintext highlighter-rouge">soil.data</code> set results in the following
 output:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">soil.data</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">])</span><span class="w">
@@ -235,14 +235,14 @@ output:</p>
 </span></code></pre></div></div>
 
 <p>Notice the difference between numerical and categorical variables. The
-<code class="highlighter-rouge">summary</code> function should probably be your first stop after organizing
+<code class="language-plaintext highlighter-rouge">summary</code> function should probably be your first stop after organizing
 your data, and before analyzing it as it provides an easy way to check
 for wildly erroneous values.</p>
 
 <h3 id="histograms-and-box-plots">Histograms and box plots</h3>
 
 <p>Box plots and histograms are simple but useful ways of summarizing data.
-You can generate a histogram in <code class="highlighter-rouge">R</code> using the function <code class="highlighter-rouge">hist</code>.</p>
+You can generate a histogram in <code class="language-plaintext highlighter-rouge">R</code> using the function <code class="language-plaintext highlighter-rouge">hist</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">hist</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -253,12 +253,12 @@ You can generate a histogram in <code class="highlighter-rouge">R</code> using t
 
 <p>The histogram above can be made to look nicer, by applying some of the
 plotting parameters or arguments that were covered in Part 4 about the
-<code class="highlighter-rouge">plot</code> function. There are also some additional <em>plotting</em> arguments
-that can be sourced in the <code class="highlighter-rouge">hist</code> help file. One of these is the ability
+<code class="language-plaintext highlighter-rouge">plot</code> function. There are also some additional <em>plotting</em> arguments
+that can be sourced in the <code class="language-plaintext highlighter-rouge">hist</code> help file. One of these is the ability
 to specify the number or location of breaks in the histogram.</p>
 
 <p>Box plots are also a useful way to summarize data. We can use it simply,
-for example, summarize the clay content in the <code class="highlighter-rouge">soil.data</code>:</p>
+for example, summarize the clay content in the <code class="language-plaintext highlighter-rouge">soil.data</code>:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">clay</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -273,7 +273,7 @@ for example, summarize the clay content in the <code class="highlighter-rouge">s
 show the extreme values, and points show outliers beyond these.</p>
 
 <p>Another approach is to plot a single variable by some factor. Here we
-will plot <code class="highlighter-rouge">Total_Carbon</code> by <code class="highlighter-rouge">Landclass</code>:</p>
+will plot <code class="language-plaintext highlighter-rouge">Total_Carbon</code> by <code class="language-plaintext highlighter-rouge">Landclass</code>:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">Total_Carbon</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">Landclass</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soil.data</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -283,10 +283,10 @@ will plot <code class="highlighter-rouge">Total_Carbon</code> by <code class="hi
     <figcaption> Box plot of total carbon with respect to landclass.</figcaption>
 </figure>
 
-<p>Note the use of the tilde symbol <code class="highlighter-rouge">∼</code> in the above command. The code
-<code class="highlighter-rouge">Total_Carbon</code><code class="highlighter-rouge">∼</code><code class="highlighter-rouge">Landclass</code> is analogous to a model formula in this
-case, and simply indicates that <code class="highlighter-rouge">Total_Carbon</code> is described by
-<code class="highlighter-rouge">Landclass</code> and should be split up based on the category of this
+<p>Note the use of the tilde symbol <code class="language-plaintext highlighter-rouge">∼</code> in the above command. The code
+<code class="language-plaintext highlighter-rouge">Total_Carbon</code><code class="language-plaintext highlighter-rouge">∼</code><code class="language-plaintext highlighter-rouge">Landclass</code> is analogous to a model formula in this
+case, and simply indicates that <code class="language-plaintext highlighter-rouge">Total_Carbon</code> is described by
+<code class="language-plaintext highlighter-rouge">Landclass</code> and should be split up based on the category of this
 variable. We will see more of this character with the specification of
 soil spatial prediction functions later on.</p>
 
@@ -321,11 +321,11 @@ log transformation will be sutiable.</p>
 </figure>
 
 <p>Finally, another useful data exploratory tool is quantile calculations.
-<code class="highlighter-rouge">R</code> will return the quantiles of a given data set with the <code class="highlighter-rouge">quantile</code>
+<code class="language-plaintext highlighter-rouge">R</code> will return the quantiles of a given data set with the <code class="language-plaintext highlighter-rouge">quantile</code>
 function. Note that there are nine different algorithms available for
-doing this. You can find descriptions in the help file for <code class="highlighter-rouge">quantile</code>.
+doing this. You can find descriptions in the help file for <code class="language-plaintext highlighter-rouge">quantile</code>.
 By default, the quartiles of a data distribution are given when using
-this function, but any quantiles can be estimated using the <code class="highlighter-rouge">probs</code>
+this function, but any quantiles can be estimated using the <code class="language-plaintext highlighter-rouge">probs</code>
 function parameter.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">quantile</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">Total_Carbon</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
@@ -352,7 +352,7 @@ function parameter.</p>
 
 <ol>
   <li>
-    <p>Using the <code class="highlighter-rouge">soil.data</code> set firstly determine the summary statistics
+    <p>Using the <code class="language-plaintext highlighter-rouge">soil.data</code> set firstly determine the summary statistics
 for each of the numerical or quantitative variables. You want to
 calculate things like maximum, minimum, mean, median, standard
 deviation, and variance. There are a couple of ways to do this.

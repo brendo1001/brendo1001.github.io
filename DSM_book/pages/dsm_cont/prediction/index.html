@@ -180,12 +180,12 @@ First things first we need to prepare some data and fit a simple model.</p>
   <li><a href="#s-1">Data preparation</a></li>
   <li><a href="#s-2">Model fitting</a></li>
   <li><a href="#s-3">Apply model: Covariate data frame</a></li>
-  <li><a href="#s-4">Apply model: <code class="highlighter-rouge">terra::predict</code> function</a></li>
+  <li><a href="#s-4">Apply model: <code class="language-plaintext highlighter-rouge">terra::predict</code> function</a></li>
 </ul>
 
 <h3 id="data-preparation-">Data preparation <a id="s-1"></a></h3>
 
-<p>Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="highlighter-rouge">HV_subsoilpH</code> point data and <code class="highlighter-rouge">hunterCovariates_sub</code> raster files from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="language-plaintext highlighter-rouge">HV_subsoilpH</code> point data and <code class="language-plaintext highlighter-rouge">hunterCovariates_sub</code> raster files from the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load libraries</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
@@ -210,8 +210,8 @@ First things first we need to prepare some data and fit a simple model.</p>
 </span><span class="c1"># Change names of coordinate columns</span><span class="w">
 </span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
 </span><span class="c1"># save a copy of coordinates</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
 
 </span><span class="c1"># convert data to sf object</span><span class="w">
 </span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
@@ -307,7 +307,7 @@ First things first we need to prepare some data and fit a simple model.</p>
 <p>It will quickly become obvious however that the covariate table approach could be limiting when mapping extents get very large or the grid resolution of mapping becomes more fine-grained, or both.</p>
 
 <p>With the covariate table arranged it then becomes a matter of using the
-MLR <code class="highlighter-rouge">predict</code> function.</p>
+MLR <code class="language-plaintext highlighter-rouge">predict</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Model predict</span><span class="w">
 </span><span class="n">map.MLR</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MLR.Full</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempD</span><span class="p">)</span><span class="w">
@@ -333,11 +333,11 @@ MLR <code class="highlighter-rouge">predict</code> function.</p>
     <figcaption> MLR predicted soil pH 60-100cm across the Hunter Valley.</figcaption>
 </figure>
 
-<p>Some of the parameters used within the <code class="highlighter-rouge">writeRaster</code> function that are worth noting. The parameter <code class="highlighter-rouge">datatype</code> is specified as <code class="highlighter-rouge">FLT4S</code> which indicates that a 4 byte, signed floating point values are to be written to file. Look at the function <code class="highlighter-rouge">dataType</code> to look at other alternatives, for example for categorical data where we may be interested in logical or integer values.</p>
+<p>Some of the parameters used within the <code class="language-plaintext highlighter-rouge">writeRaster</code> function that are worth noting. The parameter <code class="language-plaintext highlighter-rouge">datatype</code> is specified as <code class="language-plaintext highlighter-rouge">FLT4S</code> which indicates that a 4 byte, signed floating point values are to be written to file. Look at the function <code class="language-plaintext highlighter-rouge">dataType</code> to look at other alternatives, for example for categorical data where we may be interested in logical or integer values.</p>
 
-<h3 id="applying-the-model-spatially-using-raster-predict-">Applying the model spatially using <code class="highlighter-rouge">raster predict</code> <a id="s-4"></a></h3>
+<h3 id="applying-the-model-spatially-using-raster-predict-">Applying the model spatially using <code class="language-plaintext highlighter-rouge">raster predict</code> <a id="s-4"></a></h3>
 
-<p>Probably a more efficient way of applying the fitted model is to apply it directly to the rasters themselves. This avoids the step of arranging all covariates into table format. If multiple rasters are being used, it is necessary to have them arranged as a stacked <code class="highlighter-rouge">SpatRaster</code> object. This is useful as it also ensures all the rasters are of the same extent and resolution. Here we can use the <code class="highlighter-rouge">terra::predict</code> function such as below using the <code class="highlighter-rouge">hv.sub.rasters</code> as input.</p>
+<p>Probably a more efficient way of applying the fitted model is to apply it directly to the rasters themselves. This avoids the step of arranging all covariates into table format. If multiple rasters are being used, it is necessary to have them arranged as a stacked <code class="language-plaintext highlighter-rouge">SpatRaster</code> object. This is useful as it also ensures all the rasters are of the same extent and resolution. Here we can use the <code class="language-plaintext highlighter-rouge">terra::predict</code> function such as below using the <code class="language-plaintext highlighter-rouge">hv.sub.rasters</code> as input.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># apply model to rasters directly</span><span class="w">
 </span><span class="n">map.MLR.r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">predict</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.sub.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hv.MLR.Full</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"soilpH_60_100_MLR.tif"</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FLT4S"</span><span class="p">,</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">

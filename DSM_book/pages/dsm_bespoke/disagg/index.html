@@ -337,8 +337,8 @@ implementation.</p>
 
 <h3 id="implementation-of-dsmart-">Implementation of DSMART <a id="s-3"></a></h3>
 
-<p>The DSMART algorithm has previously been written in the <code class="highlighter-rouge">C++</code> and
-<code class="highlighter-rouge">Python</code> computing languages. It is also available in an <code class="highlighter-rouge">R</code> package.
+<p>The DSMART algorithm has previously been written in the <code class="language-plaintext highlighter-rouge">C++</code> and
+<code class="language-plaintext highlighter-rouge">Python</code> computing languages. It is also available in an <code class="language-plaintext highlighter-rouge">R</code> package.
 Regardless of computing language preference, DSMART requires three chief
 sources of data</p>
 
@@ -352,8 +352,8 @@ extent. There is no restriction in terms of the data type
 i.e. continuous, categorical, ordinal etc.</li>
 </ol>
 
-<p>The DSMART algorithm is packaged up in <code class="highlighter-rouge">rdsmart</code> and contains two
-working functions: <code class="highlighter-rouge">disaggregate</code> and <code class="highlighter-rouge">summarise</code>. More will be
+<p>The DSMART algorithm is packaged up in <code class="language-plaintext highlighter-rouge">rdsmart</code> and contains two
+working functions: <code class="language-plaintext highlighter-rouge">disaggregate</code> and <code class="language-plaintext highlighter-rouge">summarise</code>. More will be
 discussed about these shortly.</p>
 
 <p>The other items in the package are various inputs required to run the
@@ -362,14 +362,14 @@ and nature of the information that is required to run the DSMART
 algorithm so that it can be easily adapted to other projects.</p>
 
 <p>First is the soil map to be disaggregated. This is saved to the
-<code class="highlighter-rouge">dalrymple_polygons</code> object. In this example the small polygon map is a
+<code class="language-plaintext highlighter-rouge">dalrymple_polygons</code> object. In this example the small polygon map is a
 clipped area of the much larger soil map that Odgers et al. (2014)
 disaggregated, which was the 1:250,000 soil map of the Dalrymple Shire
 in Queensland Australia by Rogers, Cannon, and Barry (1999).</p>
 
 <p>In this example data set, there are 11 soil mapping units.the polygon
-object is of class <code class="highlighter-rouge">SpatialPolygonsDataFrame</code>, which is what would be
-created if you were to read in a shapefile of the polygons into <code class="highlighter-rouge">R</code>.</p>
+object is of class <code class="language-plaintext highlighter-rouge">SpatialPolygonsDataFrame</code>, which is what would be
+created if you were to read in a shapefile of the polygons into <code class="language-plaintext highlighter-rouge">R</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># install rdsmart library(devtools)</span><span class="w">
 </span><span class="c1"># devtools::install_bitbucket('brendo1001/dsmart')</span><span class="w">
@@ -411,7 +411,7 @@ Australia which was disaggregated by Odgers et al. (2014).
 </figure>
 
 <p>The next inputs are the soil map unit compositions which is saved to the
-<code class="highlighter-rouge">dalrymple_composition</code> object. This is a <code class="highlighter-rouge">data.frame</code> that simply
+<code class="language-plaintext highlighter-rouge">dalrymple_composition</code> object. This is a <code class="language-plaintext highlighter-rouge">data.frame</code> that simply
 indicates in respective columns the map unit name, and corresponding
 numerical identifier label. Then there is the soil classes that are
 contained in the respective mapping unit, followed by the relative
@@ -435,7 +435,7 @@ relative proportions will and probably should sum to 100.</p>
 to inform the model fitting for each DSMART iteration, and ultimately be
 used for the spatial mapping. There are actually 20 different covariate
 rasters of which have been derived from a digital elevation model and
-gamma radiometric data. These rasters are organized into a <code class="highlighter-rouge">RasterStack</code>
+gamma radiometric data. These rasters are organized into a <code class="language-plaintext highlighter-rouge">RasterStack</code>
 and are of 30m grid resolution.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">(</span><span class="s2">"dalrymple_covariates"</span><span class="p">)</span><span class="w">
@@ -455,33 +455,33 @@ and are of 30m grid resolution.</p>
 </span></code></pre></div></div>
 
 <p>Now it is time to run the DSMART algorithm. The implementation is spread
-across two companion functions already mentioned: <code class="highlighter-rouge">disaggregate</code> and
-<code class="highlighter-rouge">summarise</code>. The <code class="highlighter-rouge">disaggregate</code> function is the workhorse of the two
+across two companion functions already mentioned: <code class="language-plaintext highlighter-rouge">disaggregate</code> and
+<code class="language-plaintext highlighter-rouge">summarise</code>. The <code class="language-plaintext highlighter-rouge">disaggregate</code> function is the workhorse of the two
 because it performs the sample/resampling, model fitting and iteration
 parts of DSMART.</p>
 
-<p>The <code class="highlighter-rouge">summarise</code> function works on the outputs of <code class="highlighter-rouge">disaggregate</code> to
+<p>The <code class="language-plaintext highlighter-rouge">summarise</code> function works on the outputs of <code class="language-plaintext highlighter-rouge">disaggregate</code> to
 estimate the probabilities of classes, and derives some other useful
 outputs such as the most probable soil class and or <em>n</em>-most probable
 soil classes.</p>
 
-<p>Using the <code class="highlighter-rouge">disaggregate</code> function, we provide it with the inputs
-described above. Additional inputs include the parameters <code class="highlighter-rouge">rate</code>, which
+<p>Using the <code class="language-plaintext highlighter-rouge">disaggregate</code> function, we provide it with the inputs
+described above. Additional inputs include the parameters <code class="language-plaintext highlighter-rouge">rate</code>, which
 is a numeric value for the number of samples to take from each soil
-mapping polygon; <code class="highlighter-rouge">reals</code> is the number of model realizations to fit; and
-<code class="highlighter-rouge">cpus</code> is the number of compute nodes to use for the analysis. The
+mapping polygon; <code class="language-plaintext highlighter-rouge">reals</code> is the number of model realizations to fit; and
+<code class="language-plaintext highlighter-rouge">cpus</code> is the number of compute nodes to use for the analysis. The
 default is to run the algorithm in sequential mode, however it does have
 the capability to be scaled up substantially in parallel mode, which
 helps to eliminate some computation time.</p>
 
-<p>In the example below we set <code class="highlighter-rouge">rate</code> to 15, <code class="highlighter-rouge">reals</code> to 10, and <code class="highlighter-rouge">cpus</code>
+<p>In the example below we set <code class="language-plaintext highlighter-rouge">rate</code> to 15, <code class="language-plaintext highlighter-rouge">reals</code> to 10, and <code class="language-plaintext highlighter-rouge">cpus</code>
 to 1. An unusual yet helpful feature of this function is that none of
-the output is saved to the <code class="highlighter-rouge">R</code> memory, but instead, directly to file, or
+the output is saved to the <code class="language-plaintext highlighter-rouge">R</code> memory, but instead, directly to file, or
 specifically the current working directory into a folder called
-<code class="highlighter-rouge">outputs</code>.</p>
+<code class="language-plaintext highlighter-rouge">outputs</code>.</p>
 
-<p>After the <code class="highlighter-rouge">disaggregate</code> function has terminated, you will find in the
-<code class="highlighter-rouge">outputs</code> folder a few other folders which contain rasters of the soil
+<p>After the <code class="language-plaintext highlighter-rouge">disaggregate</code> function has terminated, you will find in the
+<code class="language-plaintext highlighter-rouge">outputs</code> folder a few other folders which contain rasters of the soil
 class prediction from each iteration. You will also encounter another
 folder contain text file outputs from each iteration of the C5 model
 structure plus information on the quality of the fit.</p>
@@ -493,12 +493,12 @@ structure plus information on the quality of the fit.</p>
 </span><span class="n">rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="n">reals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">cpus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">outputdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getwd</span><span class="p">())</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">disaggregate</code> function has some added functionality that is not
+<p>The <code class="language-plaintext highlighter-rouge">disaggregate</code> function has some added functionality that is not
 used in the above example. The help file for the function describes the
 added functionality which includes the allowance of observed data into
-the algorithm through the <code class="highlighter-rouge">observations</code> parameter. The is also
+the algorithm through the <code class="language-plaintext highlighter-rouge">observations</code> parameter. The is also
 provision of different methods for sampling polygons. There is also an
-ability to include additional environmental variables by way of <code class="highlighter-rouge">strata</code>
+ability to include additional environmental variables by way of <code class="language-plaintext highlighter-rouge">strata</code>
 which constrains the occurrences of soil classes to certain areas and or
 positions within the landscape.</p>
 
@@ -513,25 +513,25 @@ between (in most cases) most probable and second-most probable soil
 class predictions at a pixel.</p>
 
 <p>To derive the probability rasters we need the rasters that were
-generated from the <code class="highlighter-rouge">disaggregate</code> function. This can be done via the use
-of the <code class="highlighter-rouge">list.files</code> function and the <code class="highlighter-rouge">raster</code> package to read in the
-rasters and stack them into a <code class="highlighter-rouge">rasterStack</code>.</p>
+generated from the <code class="language-plaintext highlighter-rouge">disaggregate</code> function. This can be done via the use
+of the <code class="language-plaintext highlighter-rouge">list.files</code> function and the <code class="language-plaintext highlighter-rouge">raster</code> package to read in the
+rasters and stack them into a <code class="language-plaintext highlighter-rouge">rasterStack</code>.</p>
 
 <p>Rather than doing this we can use pre-prepared outputs namely in the
-form of the <code class="highlighter-rouge">dalrymple_realisations</code> (raster outputs from
-<code class="highlighter-rouge">disaggregate</code>) and <code class="highlighter-rouge">dalrymple_lookup</code> (lookup table of soil class names
-and numeric counterparts which is an output from <code class="highlighter-rouge">disaggregate</code>)
-objects. As with <code class="highlighter-rouge">disaggregate</code>, <code class="highlighter-rouge">summarise</code> can be run in parallel mode
-via control of the <code class="highlighter-rouge">cpus</code> variable.</p>
+form of the <code class="language-plaintext highlighter-rouge">dalrymple_realisations</code> (raster outputs from
+<code class="language-plaintext highlighter-rouge">disaggregate</code>) and <code class="language-plaintext highlighter-rouge">dalrymple_lookup</code> (lookup table of soil class names
+and numeric counterparts which is an output from <code class="language-plaintext highlighter-rouge">disaggregate</code>)
+objects. As with <code class="language-plaintext highlighter-rouge">disaggregate</code>, <code class="language-plaintext highlighter-rouge">summarise</code> can be run in parallel mode
+via control of the <code class="language-plaintext highlighter-rouge">cpus</code> variable.</p>
 
-<p>The <em>n</em>-most probable rasters are also created by <code class="highlighter-rouge">summarise</code>, and are
+<p>The <em>n</em>-most probable rasters are also created by <code class="language-plaintext highlighter-rouge">summarise</code>, and are
 important for the follow on procedure of soil attribute mapping, of
 which is the focus of the study by Odgers et al (2015)
 and integral to the associated PROPR algorithm.</p>
 
 <p>In many cases the user may just be interested in deriving the most
 probable soil class, or sometimes the n-most probable soil class maps.
-The <code class="highlighter-rouge">nprob</code> parameter provides user control on the number of
+The <code class="language-plaintext highlighter-rouge">nprob</code> parameter provides user control on the number of
 <em>n</em>-probable outputs.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load pre existing outputs</span><span class="w">
@@ -543,12 +543,12 @@ The <code class="highlighter-rouge">nprob</code> parameter provides user control
 </span></code></pre></div></div>
 
 <p>A few folders are automatically generated to the working directory which
-contain various outputs from the <code class="highlighter-rouge">summarise</code> function. These are:
-<code class="highlighter-rouge">mostprobable</code> and <code class="highlighter-rouge">probabilities</code>. The folder <code class="highlighter-rouge">mostprobable</code> contains
-the <em>n</em>-most probable soil class maps. The folder: <code class="highlighter-rouge">probabilities</code>
+contain various outputs from the <code class="language-plaintext highlighter-rouge">summarise</code> function. These are:
+<code class="language-plaintext highlighter-rouge">mostprobable</code> and <code class="language-plaintext highlighter-rouge">probabilities</code>. The folder <code class="language-plaintext highlighter-rouge">mostprobable</code> contains
+the <em>n</em>-most probable soil class maps. The folder: <code class="language-plaintext highlighter-rouge">probabilities</code>
 contains the probability rasters for each candidate soil class.</p>
 
-<p>A confusion index (Burrough et al. 1997) raster may also be returned using the post processing <code class="highlighter-rouge">confusion_index</code> function on the stack of the probability rasters that are returned from the <code class="highlighter-rouge">summarise</code> function.</p>
+<p>A confusion index (Burrough et al. 1997) raster may also be returned using the post processing <code class="language-plaintext highlighter-rouge">confusion_index</code> function on the stack of the probability rasters that are returned from the <code class="language-plaintext highlighter-rouge">summarise</code> function.</p>
 
 <p>Finally lets produce a map of the most probable soil class and the
 associated map of the confusion index.</p>
@@ -598,7 +598,7 @@ mapping as demonstrated by Chaney et al. (2014) in the USA. While the
 computational effort to generate disaggregated predictions could be a
 burden, the DSMART algorithm is relatively easy to parallelize, which
 was also demonstrated in Chaney et al. (2014), and with the
-implementation of the current <code class="highlighter-rouge">R</code> version of this algorithm.</p>
+implementation of the current <code class="language-plaintext highlighter-rouge">R</code> version of this algorithm.</p>
 
 <p>One other restrictive feature of the DSMART algorithm is the need for
 specific inputs, particularly in regards to the soil class compositions

@@ -170,7 +170,7 @@
 
 <h2 id="reprojections-resampling-and-rasterisation">Reprojections, resampling and rasterisation</h2>
 
-<p>A useful thing to do in <code class="highlighter-rouge">R</code> in the GIS context are the procedures around
+<p>A useful thing to do in <code class="language-plaintext highlighter-rouge">R</code> in the GIS context are the procedures around
 resampling and reprojections. Such tasks are useful in the situation of
 aligning spatial data to common resolutions and extents. For digital
 soil mapping this is an important and regular task to perform. Similarly
@@ -265,21 +265,21 @@ and retrieve the metadata of each raster.</p>
 
 <h3 id="raster-resampling-">Raster resampling <a id="s-2"></a></h3>
 
-<p>The <code class="highlighter-rouge">terra</code> function to use here is <code class="highlighter-rouge">resample</code>. Here we want to get the
-<code class="highlighter-rouge">elev.raster</code> to be the same resolution and extent to the
-<code class="highlighter-rouge">gamma.raster</code>. Essentially going from a 100m grid cell to a 10m grid
+<p>The <code class="language-plaintext highlighter-rouge">terra</code> function to use here is <code class="language-plaintext highlighter-rouge">resample</code>. Here we want to get the
+<code class="language-plaintext highlighter-rouge">elev.raster</code> to be the same resolution and extent to the
+<code class="language-plaintext highlighter-rouge">gamma.raster</code>. Essentially going from a 100m grid cell to a 10m grid
 cell. The resampling method used in bi-linear interpolation. There a
-several alternative <code class="highlighter-rouge">method</code> including nearest neighbor interpolation
+several alternative <code class="language-plaintext highlighter-rouge">method</code> including nearest neighbor interpolation
 which is generally not appropriate for numerical data, dependent on the
 context and use-case of course.</p>
 
-<p>Stacking rasters is a nice feature of <code class="highlighter-rouge">terra</code> as it confirms to the user
+<p>Stacking rasters is a nice feature of <code class="language-plaintext highlighter-rouge">terra</code> as it confirms to the user
 that a collection of rasters all have the same resolution and extent.
 This is really important for doing digital soil mapping. It does not
 harmonise the CRS however (given the warning message below).</p>
 
 <p>When rasters don’t stack, it means there is a problem, and one will have
-difficulty in subsequent steps in the DSM workflow. The <code class="highlighter-rouge">c</code> function
+difficulty in subsequent steps in the DSM workflow. The <code class="language-plaintext highlighter-rouge">c</code> function
 (combine) is the tool that we need.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#resample</span><span class="w">
@@ -297,11 +297,11 @@ difficulty in subsequent steps in the DSM workflow. The <code class="highlighter
 </span><span class="c1">## max value   :  590.6609</span><span class="w">
 
 </span><span class="c1"># stack </span><span class="w">
-</span><span class="n">r</span><span class="m">3</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">rs.grid</span><span class="p">,</span><span class="w"> </span><span class="n">gamma.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r3</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">rs.grid</span><span class="p">,</span><span class="w"> </span><span class="n">gamma.raster</span><span class="p">)</span><span class="w">
 
 </span><span class="c1">## Warning: [rast] CRS do not match</span><span class="w">
 
-</span><span class="n">r</span><span class="m">3</span><span class="w">
+</span><span class="n">r3</span><span class="w">
 
 </span><span class="c1">## class       : SpatRaster </span><span class="w">
 </span><span class="c1">## dimensions  : 606, 865, 2  (nrow, ncol, nlyr)</span><span class="w">
@@ -319,7 +319,7 @@ difficulty in subsequent steps in the DSM workflow. The <code class="highlighter
 
 <h3 id="simultaneous-reprojection-and-resampling-">Simultaneous reprojection and resampling <a id="s-3"></a></h3>
 
-<p>The function <code class="highlighter-rouge">project</code> is an incredibly useful function from the <code class="highlighter-rouge">terra</code>
+<p>The function <code class="language-plaintext highlighter-rouge">project</code> is an incredibly useful function from the <code class="language-plaintext highlighter-rouge">terra</code>
 package. As the name suggests it is used for changing data from one
 projection system to another. This function also usefully does
 resampling to by default where the raster (or stack of rasters) to be
@@ -328,11 +328,11 @@ raster (or stack of rasters). First, the default use case in
 demonstrated, followed by a change to the target CRS but with a
 resolution change.</p>
 
-<p>If you recall from earlier, the <code class="highlighter-rouge">rs.raster</code> has the WGS1984 geographic
-CRS: <code class="highlighter-rouge">lon/lat WGS 84 (EPSG:4326)</code>, where the grid cell has a resolution
+<p>If you recall from earlier, the <code class="language-plaintext highlighter-rouge">rs.raster</code> has the WGS1984 geographic
+CRS: <code class="language-plaintext highlighter-rouge">lon/lat WGS 84 (EPSG:4326)</code>, where the grid cell has a resolution
 of approximately 22m, albeit expressed in decimal degrees. The target
-raster is the <code class="highlighter-rouge">elev.raster</code> which has the
-<code class="highlighter-rouge">GDA94/ Geoscience Australia Lambert</code> projection where the units are
+raster is the <code class="language-plaintext highlighter-rouge">elev.raster</code> which has the
+<code class="language-plaintext highlighter-rouge">GDA94/ Geoscience Australia Lambert</code> projection where the units are
 expressed in meters. The resolution of this raster is 100m. Therefore in
 this instance we do a reprojection and resample all in one step with the
 following code. Note the use of nearest neighbor interpolation.</p>
@@ -341,8 +341,8 @@ following code. Note the use of nearest neighbor interpolation.</p>
 </span><span class="n">pl.grid</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">project</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="n">rs.raster</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="o">=</span><span class="s2">"near"</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># stack</span><span class="w">
-</span><span class="n">r</span><span class="m">4</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">pl.grid</span><span class="p">,</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
-</span><span class="n">r</span><span class="m">4</span><span class="w">
+</span><span class="n">r4</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">pl.grid</span><span class="p">,</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r4</span><span class="w">
 
 </span><span class="c1">## class       : SpatRaster </span><span class="w">
 </span><span class="c1">## dimensions  : 54, 81, 2  (nrow, ncol, nlyr)</span><span class="w">
@@ -358,14 +358,14 @@ following code. Note the use of nearest neighbor interpolation.</p>
 
 <p>Although both rasters above stack together you will note by plotting
 each raster that the remote sensing raster appears has a rectangular
-extent, yet the <code class="highlighter-rouge">elev.raster</code> is clipped to some boundary. Both rasters
-actually have the same extent, but for the <code class="highlighter-rouge">elev.raster</code>, part of this
+extent, yet the <code class="language-plaintext highlighter-rouge">elev.raster</code> is clipped to some boundary. Both rasters
+actually have the same extent, but for the <code class="language-plaintext highlighter-rouge">elev.raster</code>, part of this
 data extent has no data. This is because this data is just concerned
 with a particular landholding and there is not any need to have the data
 surrounding it. In the exercise concerned with <a href="/DSM_book/pages/r_gis/clipping/">raster
 clipping</a>,
-one can, if there is a requirement, to clip the <code class="highlighter-rouge">pl.grid</code> to the bounds
-of the data in <code class="highlighter-rouge">elev.raster</code>.</p>
+one can, if there is a requirement, to clip the <code class="language-plaintext highlighter-rouge">pl.grid</code> to the bounds
+of the data in <code class="language-plaintext highlighter-rouge">elev.raster</code>.</p>
 
 <p><a href="#top">Back to top</a></p>
 
@@ -373,8 +373,8 @@ of the data in <code class="highlighter-rouge">elev.raster</code>.</p>
 
 <p>Rather than set the target raster to the same properties as a source
 raster, one can reproject to a common CRS, but set the resolution to
-what is desired. Below the <code class="highlighter-rouge">rs.raster</code> to reprojected to the the same
-CRS as the <code class="highlighter-rouge">elev.raster</code>, and outputted to 50m resolution (rather than
+what is desired. Below the <code class="language-plaintext highlighter-rouge">rs.raster</code> to reprojected to the the same
+CRS as the <code class="language-plaintext highlighter-rouge">elev.raster</code>, and outputted to 50m resolution (rather than
 100m as is the source raster).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#reproject and resample (50m pixels)</span><span class="w">
@@ -396,9 +396,9 @@ CRS as the <code class="highlighter-rouge">elev.raster</code>, and outputted to 
 
 <h3 id="polygon-reprojection-">Polygon reprojection <a id="s-5"></a></h3>
 
-<p>Back in the work with <a href="/DSM_book/pages/r_gis/pointpatterns/">point patterns data</a> you were shown how to change the CRS of <code class="highlighter-rouge">sf</code> objects. This type of transformation can also be readily extended to spatial lines and polygons too. Below, we will be working with a shapefile where the data is given as polygons, and is in fact a legacy soil map for the same geographic area as the raster data we were working with above. What we will do is load the data, do a reprojection, and a rasterisation procedure on this data. Ultimately for a digital soil mapping context we might want to use polygon data as a predictive covariate.</p>
+<p>Back in the work with <a href="/DSM_book/pages/r_gis/pointpatterns/">point patterns data</a> you were shown how to change the CRS of <code class="language-plaintext highlighter-rouge">sf</code> objects. This type of transformation can also be readily extended to spatial lines and polygons too. Below, we will be working with a shapefile where the data is given as polygons, and is in fact a legacy soil map for the same geographic area as the raster data we were working with above. What we will do is load the data, do a reprojection, and a rasterisation procedure on this data. Ultimately for a digital soil mapping context we might want to use polygon data as a predictive covariate.</p>
 
-<p>Now to load the data we use the <code class="highlighter-rouge">st_read</code> function from the <code class="highlighter-rouge">sf</code> package. You will note after import of the shapefile this data is encoded as a <code class="highlighter-rouge">MULTIPOLYGON</code> simple feature collection. The data frame elements of this polygon data contain the pertinent details of each polygon which in our case is descriptive information of the soil type and landscape of the area being investigated.</p>
+<p>Now to load the data we use the <code class="language-plaintext highlighter-rouge">st_read</code> function from the <code class="language-plaintext highlighter-rouge">sf</code> package. You will note after import of the shapefile this data is encoded as a <code class="language-plaintext highlighter-rouge">MULTIPOLYGON</code> simple feature collection. The data frame elements of this polygon data contain the pertinent details of each polygon which in our case is descriptive information of the soil type and landscape of the area being investigated.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># read in soil map</span><span class="w">
 </span><span class="n">poly.dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">st_read</span><span class="p">(</span><span class="s2">"/Soils_Curlewis_GDA94.shp"</span><span class="p">)</span><span class="w">
@@ -444,7 +444,7 @@ CRS as the <code class="highlighter-rouge">elev.raster</code>, and outputted to 
 </span><span class="c1">## 10 MULTIPOLYGON (((150.2659 -3...</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Lets find out a bit more information about the <code class="highlighter-rouge">poly.dat</code> object i.e. the soil map.</p>
+<p>Lets find out a bit more information about the <code class="language-plaintext highlighter-rouge">poly.dat</code> object i.e. the soil map.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Attribute table</span><span class="w">
 </span><span class="n">head</span><span class="p">(</span><span class="n">poly.dat</span><span class="p">)</span><span class="w">
@@ -504,7 +504,7 @@ CRS as the <code class="highlighter-rouge">elev.raster</code>, and outputted to 
 </span><span class="c1">##     DATUM["Geocentric Datum of Australia 1994",</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Currently the data is in GDA94 CRS: <code class="highlighter-rouge">Geocentric Datum of Australia 1994</code>, and we want to have it in the projected <code class="highlighter-rouge">GDA94 / Geoscience Australia Lambert</code> system as for the
+<p>Currently the data is in GDA94 CRS: <code class="language-plaintext highlighter-rouge">Geocentric Datum of Australia 1994</code>, and we want to have it in the projected <code class="language-plaintext highlighter-rouge">GDA94 / Geoscience Australia Lambert</code> system as for the
 rasters that were processed above.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Reproject to new projection (newProj)</span><span class="w">
@@ -519,7 +519,7 @@ rasters that were processed above.</p>
 </span><span class="c1">## Projected CRS: GDA94 / Geoscience Australia Lambert</span><span class="w">
 </span></code></pre></div></div>
 
-<p>To confirm this worked we can plot the remote sensing grid (<code class="highlighter-rouge">pl.grid50</code>)
+<p>To confirm this worked we can plot the remote sensing grid (<code class="language-plaintext highlighter-rouge">pl.grid50</code>)
 and overlay the polygon data.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">pl.grid</span><span class="p">)</span><span class="w">
@@ -536,10 +536,10 @@ and overlay the polygon data.</p>
 
 <h3 id="rasterisation-">Rasterisation <a id="s-6"></a></h3>
 
-<p>The function we need here is <code class="highlighter-rouge">rasterize</code> from the <code class="highlighter-rouge">terra</code> package. First
-the <code class="highlighter-rouge">sf</code> object need to be coherced to a <code class="highlighter-rouge">terra</code> data type which is a
-<code class="highlighter-rouge">SpatVector</code>. Here we will rasterise the <code class="highlighter-rouge">CODE</code> variable of the polygon
-data, and fit it to the same resolution and extent as the <code class="highlighter-rouge">pl.grid50</code>
+<p>The function we need here is <code class="language-plaintext highlighter-rouge">rasterize</code> from the <code class="language-plaintext highlighter-rouge">terra</code> package. First
+the <code class="language-plaintext highlighter-rouge">sf</code> object need to be coherced to a <code class="language-plaintext highlighter-rouge">terra</code> data type which is a
+<code class="language-plaintext highlighter-rouge">SpatVector</code>. Here we will rasterise the <code class="language-plaintext highlighter-rouge">CODE</code> variable of the polygon
+data, and fit it to the same resolution and extent as the <code class="language-plaintext highlighter-rouge">pl.grid50</code>
 remote sensing data.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># convert sf to vect</span><span class="w">
@@ -550,8 +550,8 @@ remote sensing data.</p>
 </span><span class="nf">names</span><span class="p">(</span><span class="n">poly.raster</span><span class="p">)</span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"soil_map_CODE"</span><span class="w">
 
 </span><span class="c1">#stack</span><span class="w">
-</span><span class="n">r</span><span class="m">5</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">pl.grid50</span><span class="p">,</span><span class="n">poly.raster</span><span class="p">)</span><span class="w">
-</span><span class="n">r</span><span class="m">5</span><span class="w">
+</span><span class="n">r5</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">pl.grid50</span><span class="p">,</span><span class="n">poly.raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r5</span><span class="w">
 
 </span><span class="c1">## class       : SpatRaster </span><span class="w">
 </span><span class="c1">## dimensions  : 1701, 1888, 2  (nrow, ncol, nlyr)</span><span class="w">

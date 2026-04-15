@@ -170,12 +170,12 @@
 
 <h2 id="logical-thinking-and-algorithm-development">Logical thinking and algorithm development</h2>
 
-<p>One of the advantages of using a scripting language such as <code class="highlighter-rouge">R</code> is that
+<p>One of the advantages of using a scripting language such as <code class="language-plaintext highlighter-rouge">R</code> is that
 we can develop algorithms or script a set of commands for
 problem-solving. We illustrate this by developing an algorithm for
 generating a catena, or more correctly, a digital toposequence from a
 digital elevation model (DEM). To make it more interesting, we will not
-use any function from external libraries other than basic <code class="highlighter-rouge">R</code> functions.
+use any function from external libraries other than basic <code class="language-plaintext highlighter-rouge">R</code> functions.
 Before scripting, it is best to write out the algorithm or sequence of
 routines to use.</p>
 
@@ -198,7 +198,7 @@ points?</li>
 and then repeat step 2. If no, the toposequence has ended.</li>
 </ol>
 
-<p>To facilitate the 3 x 3 neighbor search in <code class="highlighter-rouge">R</code>, we can code the
+<p>To facilitate the 3 x 3 neighbor search in <code class="language-plaintext highlighter-rouge">R</code>, we can code the
 neighbors using its relative coordinates. If the current cell is
 designated as [0,0], then its left neighbor is [−1,0], and so
 on. We can visualize it as follows in the below figure.</p>
@@ -208,12 +208,12 @@ on. We can visualize it as follows in the below figure.</p>
     <figcaption> Indexation of 3 x 3 neighborhood.</figcaption>
 </figure>
 
-<p>If we designate the current cell [0,0] as <code class="highlighter-rouge">z1</code>, the function below
-will look for the lowest neighbor for pixel <code class="highlighter-rouge">z1</code> in a DEM.</p>
+<p>If we designate the current cell [0,0] as <code class="language-plaintext highlighter-rouge">z1</code>, the function below
+will look for the lowest neighbor for pixel <code class="language-plaintext highlighter-rouge">z1</code> in a DEM.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># function to find the lowest 3 x 3 neighbor</span><span class="w">
     </span><span class="n">find_steepest</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">dem</span><span class="p">,</span><span class="w"> </span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">  </span><span class="c1">#elevation </span><span class="w">
+        </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">  </span><span class="c1">#elevation </span><span class="w">
         </span><span class="c1"># return the elevation of the neighboring values</span><span class="w">
         </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">  </span><span class="c1">#neighborhood index</span><span class="w">
         </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">dem</span><span class="p">)</span><span class="w">
@@ -231,7 +231,7 @@ will look for the lowest neighbor for pixel <code class="highlighter-rouge">z1</
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
         
-        </span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">  </span><span class="c1"># difference of neighbors from centre value</span><span class="w">
+        </span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z1</span><span class="w">  </span><span class="c1"># difference of neighbors from centre value</span><span class="w">
         </span><span class="c1"># find lowest value</span><span class="w">
         </span><span class="n">min_pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">pz</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">pz</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
         </span><span class="n">row_min</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">row_z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dir</span><span class="p">[</span><span class="n">min_pz</span><span class="p">[</span><span class="m">1</span><span class="p">]]</span><span class="w">
@@ -242,7 +242,7 @@ will look for the lowest neighbor for pixel <code class="highlighter-rouge">z1</
 </span></code></pre></div></div>
 
 <p>The principal toposequence code can be implemented as follows. First we
-load in a small dataset called <code class="highlighter-rouge">topo_dem</code> from the <code class="highlighter-rouge">ithir</code> package.</p>
+load in a small dataset called <code class="language-plaintext highlighter-rouge">topo_dem</code> from the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
     </span><span class="n">data</span><span class="p">(</span><span class="n">topo_dem</span><span class="p">)</span><span class="w">
@@ -256,7 +256,7 @@ load in a small dataset called <code class="highlighter-rouge">topo_dem</code> f
 
 <p>Now we want to create a data matrix to store the result of the
 toposequence i.e. the row, column, and elevation values that are
-selected using the <code class="highlighter-rouge">find_steepest</code> function.</p>
+selected using the <code class="language-plaintext highlighter-rouge">find_steepest</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">transect</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -267,24 +267,24 @@ its corresponding row and column position.</p>
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">max_elev</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">topo_dem</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">topo_dem</span><span class="p">),</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
     </span><span class="n">row_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_elev</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">  </span><span class="c1"># row of max_elev</span><span class="w">
     </span><span class="n">col_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_elev</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w">  </span><span class="c1"># col of max_elev</span><span class="w">
-    </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">  </span><span class="c1"># max elevation</span><span class="w">
+    </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">  </span><span class="c1"># max elevation</span><span class="w">
 
     </span><span class="c1"># Put values into the first entry of the transect object</span><span class="w">
     </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
     </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_z</span><span class="w">
     </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_z</span><span class="w">
-    </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">
+    </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z1</span><span class="w">
     </span><span class="n">lowest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Below we use the <code class="highlighter-rouge">find_steepest</code> function. It is embedded into a <code class="highlighter-rouge">while</code>
+<p>Below we use the <code class="language-plaintext highlighter-rouge">find_steepest</code> function. It is embedded into a <code class="language-plaintext highlighter-rouge">while</code>
 conditional loop, such that the routine will run until neither of the
-surrounding neighbors are less than the middle pixel or <code class="highlighter-rouge">z1</code>. We use the
-<code class="highlighter-rouge">break</code> function to stop the routine when this occurs. Essentially, upon
-each iteration, we use the selected <code class="highlighter-rouge">z1</code> to find the lowest value pixel
-from it, which in turn becomes the next selected <code class="highlighter-rouge">z1</code> and so on until
+surrounding neighbors are less than the middle pixel or <code class="language-plaintext highlighter-rouge">z1</code>. We use the
+<code class="language-plaintext highlighter-rouge">break</code> function to stop the routine when this occurs. Essentially, upon
+each iteration, we use the selected <code class="language-plaintext highlighter-rouge">z1</code> to find the lowest value pixel
+from it, which in turn becomes the next selected <code class="language-plaintext highlighter-rouge">z1</code> and so on until
 the values of the neighborhood are no longer smaller than the selected
-<code class="highlighter-rouge">z1</code>.</p>
+<code class="language-plaintext highlighter-rouge">z1</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># iterate down the hill until lowest point</span><span class="w">
     </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">lowest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -292,10 +292,10 @@ the values of the neighborhood are no longer smaller than the selected
         </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">
         </span><span class="n">row_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">
         </span><span class="n">col_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w">
-        </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
+        </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
         </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_z</span><span class="w">
         </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_z</span><span class="w">
-        </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">
+        </span><span class="n">transect</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z1</span><span class="w">
         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> 
             </span><span class="p">{</span><span class="w">
                 </span><span class="n">lowest</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
@@ -356,7 +356,7 @@ b. If yes, select randomly a lower point, add to the downhill sequence,
 <p>From this algorithm plan, we need to specify two functions, one that
 allows the transect to travel uphill and another which allows it to
 travel downhill. For the one to travel downhill, we could use the
-function from before <code class="highlighter-rouge">find_steepest</code>, but we want to build on that
+function from before <code class="language-plaintext highlighter-rouge">find_steepest</code>, but we want to build on that
 function by allowing the user to indicate whether they want a randomly
 selected smaller values, or whether they want to minimum every time.
 Subsequently the 2 new functions would take the following form:</p>
@@ -365,7 +365,7 @@ Subsequently the 2 new functions would take the following form:</p>
     </span><span class="c1"># column random: TRUE use random path, FALSE for steepest path return:</span><span class="w">
     </span><span class="c1"># row,col,z-z1 of lower neighbour</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
+        </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
         </span><span class="c1"># find its eight neighbour</span><span class="w">
         </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
         </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">dem</span><span class="p">)</span><span class="w">
@@ -381,7 +381,7 @@ Subsequently the 2 new functions would take the following form:</p>
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
         </span><span class="n">pz</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="w">
-        </span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">  </span><span class="c1"># difference with centre value</span><span class="w">
+        </span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z1</span><span class="w">  </span><span class="c1"># difference with centre value</span><span class="w">
         
         </span><span class="n">min_pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
         </span><span class="n">nlow</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">min_pz</span><span class="p">)</span><span class="w">
@@ -409,7 +409,7 @@ Subsequently the 2 new functions would take the following form:</p>
     </span><span class="c1"># random: TRUE use random path, FALSE for steepest path return: row,col,z-zi of</span><span class="w">
     </span><span class="c1"># higher neighbour</span><span class="w">
     </span><span class="p">{</span><span class="w">
-        </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
+        </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
         </span><span class="c1"># find its eight neighbour</span><span class="w">
         </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
         </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">dem</span><span class="p">)</span><span class="w">
@@ -425,7 +425,7 @@ Subsequently the 2 new functions would take the following form:</p>
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
         </span><span class="n">pz</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="w">
-        </span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">  </span><span class="c1"># difference with centre value</span><span class="w">
+        </span><span class="n">pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pz</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z1</span><span class="w">  </span><span class="c1"># difference with centre value</span><span class="w">
         
         </span><span class="n">max_pz</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">pz</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">  </span><span class="c1"># find higher pixel</span><span class="w">
         </span><span class="n">nhi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">max_pz</span><span class="p">)</span><span class="w">
@@ -449,8 +449,8 @@ Subsequently the 2 new functions would take the following form:</p>
 </span></code></pre></div></div>
 
 <p>Now we can generate a random toposequence. We will use the same
-<code class="highlighter-rouge">topo_dem</code> data as before. First we select a point at random using a
-random selection of a row and column value. We use <code class="highlighter-rouge">set.seed()</code> to ensure results are identical in terms of random selection of the seed point.</p>
+<code class="language-plaintext highlighter-rouge">topo_dem</code> data as before. First we select a point at random using a
+random selection of a row and column value. We use <code class="language-plaintext highlighter-rouge">set.seed()</code> to ensure results are identical in terms of random selection of the seed point.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">nr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nrow</span><span class="p">(</span><span class="n">topo_dem</span><span class="p">)</span><span class="w">  </span><span class="c1"># no. rows in a DEM</span><span class="w">
     </span><span class="n">nc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ncol</span><span class="p">(</span><span class="n">topo_dem</span><span class="p">)</span><span class="w">  </span><span class="c1"># no. cols in a DEM</span><span class="w">
@@ -461,7 +461,7 @@ random selection of a row and column value. We use <code class="highlighter-roug
     </span><span class="n">col_z1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sample.int</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We then can use the <code class="highlighter-rouge">travel_up</code> function to get our transect to go up
+<p>We then can use the <code class="language-plaintext highlighter-rouge">travel_up</code> function to get our transect to go up
 the slope.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># Travel uphill seed point as a starting point</span><span class="w">
@@ -469,10 +469,10 @@ the slope.</p>
     </span><span class="n">transect_up</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
     </span><span class="n">row_z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">row_z1</span><span class="w">
     </span><span class="n">col_z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">col_z1</span><span class="w">
-    </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
+    </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
     </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_z</span><span class="w">
     </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_z</span><span class="w">
-    </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">
+    </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z1</span><span class="w">
 
     </span><span class="n">highest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
     </span><span class="c1"># iterate up the hill until highest point</span><span class="w">
@@ -486,15 +486,15 @@ the slope.</p>
         </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">
         </span><span class="n">row_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">
         </span><span class="n">col_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w">
-        </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
+        </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
         </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_z</span><span class="w">
         </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_z</span><span class="w">
-        </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">
+        </span><span class="n">transect_up</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z1</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span><span class="n">transect_up</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na.omit</span><span class="p">(</span><span class="n">transect_up</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Next we then use the <code class="highlighter-rouge">travel_down</code> function to get our transect to go
+<p>Next we then use the <code class="language-plaintext highlighter-rouge">travel_down</code> function to get our transect to go
 down the slope from the seed point.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1"># travel downhill create a data matrix to store results</span><span class="w">
@@ -502,11 +502,11 @@ down the slope from the seed point.</p>
     </span><span class="c1"># starting point</span><span class="w">
     </span><span class="n">row_z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">row_z1</span><span class="w">
     </span><span class="n">col_z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">col_z1</span><span class="w">
-    </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">  </span><span class="c1"># a random pixel</span><span class="w">
+    </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">  </span><span class="c1"># a random pixel</span><span class="w">
     </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">
     </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_z</span><span class="w">
     </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_z</span><span class="w">
-    </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">
+    </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z1</span><span class="w">
     </span><span class="n">lowest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
 
     </span><span class="c1"># iterate down the hill until lowest point</span><span class="w">
@@ -520,17 +520,17 @@ down the slope from the seed point.</p>
         </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">
         </span><span class="n">row_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">
         </span><span class="n">col_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w">
-        </span><span class="n">z</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
+        </span><span class="n">z1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo_dem</span><span class="p">[</span><span class="n">row_z</span><span class="p">,</span><span class="w"> </span><span class="n">col_z</span><span class="p">]</span><span class="w">
         </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">row_z</span><span class="w">
         </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col_z</span><span class="w">
-        </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="m">1</span><span class="w">
+        </span><span class="n">transect_down</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z1</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span><span class="n">transect_down</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na.omit</span><span class="p">(</span><span class="n">transect_down</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>The idea then is to bind both uphill and downhill transects into a
-single one. Note we are using the <code class="highlighter-rouge">rbind</code> function for this.
-Furthermore, we are also using the <code class="highlighter-rouge">order</code> function here to re-arrange
+single one. Note we are using the <code class="language-plaintext highlighter-rouge">rbind</code> function for this.
+Furthermore, we are also using the <code class="language-plaintext highlighter-rouge">order</code> function here to re-arrange
 the uphill transect so that the resultant binding will be sequential
 from highest to lowest elevation. Finally, we then calculate the
 distance relative to the hilltop.</p>

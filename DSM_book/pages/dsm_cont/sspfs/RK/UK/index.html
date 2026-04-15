@@ -181,7 +181,7 @@
 
 <h3 id="introduction-">Introduction <a id="s-1"></a></h3>
 
-<p>The universal kriging function in <code class="highlighter-rouge">R</code> is found in the <code class="highlighter-rouge">gstat</code> package. It is useful from the view that both the regression model and variogram modeling of the residuals are handled in one modelling system.</p>
+<p>The universal kriging function in <code class="language-plaintext highlighter-rouge">R</code> is found in the <code class="language-plaintext highlighter-rouge">gstat</code> package. It is useful from the view that both the regression model and variogram modeling of the residuals are handled in one modelling system.</p>
 
 <p>Using universal kriging, one can efficiently derive prediction uncertainties by way of the
 kriging variance. A limitation of universal kriging in the true sense of the model parameter fitting is that the model is linear.</p>
@@ -192,7 +192,7 @@ kriging variance. A limitation of universal kriging in the true sense of the mod
 
 <h3 id="data-preparation-">Data preparation <a id="s-2"></a></h3>
 
-<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="highlighter-rouge">HV_subsoilpH</code> object together with associated rasters supplied with the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="language-plaintext highlighter-rouge">HV_subsoilpH</code> object together with associated rasters supplied with the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <p>For the succession of models examined in these various pages, we will concentrate on modelling and mapping the soil pH for the 60-100cm depth interval. To refresh, lets load the data in, then intersect the data with the available covariates.</p>
 
@@ -221,8 +221,8 @@ kriging variance. A limitation of universal kriging in the true sense of the mod
 </span><span class="c1"># Change names of coordinate columns</span><span class="w">
 </span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
 </span><span class="c1"># save a copy of coordinates</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
 
 </span><span class="c1"># convert data to sf object</span><span class="w">
 </span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
@@ -243,7 +243,7 @@ kriging variance. A limitation of universal kriging in the true sense of the mod
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Often it is handy to check to see whether there are missing values both in the target variable and of the covariates. It is possible that a point location does not fit within the extent of the available covariates. In these cases the data should be excluded. A quick way to assess whether there are missing or <code class="highlighter-rouge">NA</code> values in the data is to use the <code class="highlighter-rouge">complete.cases</code> function.</p>
+<p>Often it is handy to check to see whether there are missing values both in the target variable and of the covariates. It is possible that a point location does not fit within the extent of the available covariates. In these cases the data should be excluded. A quick way to assess whether there are missing or <code class="language-plaintext highlighter-rouge">NA</code> values in the data is to use the <code class="language-plaintext highlighter-rouge">complete.cases</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 
@@ -252,7 +252,7 @@ kriging variance. A limitation of universal kriging in the true sense of the mod
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>There do not appear to be any missing data as indicated by the <code class="highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing information.</p>
+<p>There do not appear to be any missing data as indicated by the <code class="language-plaintext highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing information.</p>
 
 <p><a href="#top">Back to top</a></p>
 
@@ -304,7 +304,7 @@ kriging variance. A limitation of universal kriging in the true sense of the mod
 
 <h3 id="external-validation-">External validation <a id="s-5"></a></h3>
 
-<p>Using the out-of-bag data we can evaluate the performance of universal kriging using the <code class="highlighter-rouge">ithir::goof</code> function.</p>
+<p>Using the out-of-bag data we can evaluate the performance of universal kriging using the <code class="language-plaintext highlighter-rouge">ithir::goof</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## out-of-bag data</span><span class="w">
 </span><span class="n">vDat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="o">-</span><span class="n">training</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
@@ -329,7 +329,7 @@ kriging variance. A limitation of universal kriging in the true sense of the mod
 
 <h3 id="interpolation-">Interpolation <a id="s-6"></a></h3>
 
-<p>Applying the universal kriging model spatially is facilitated through the <code class="highlighter-rouge">terra::interpolate</code> function.</p>
+<p>Applying the universal kriging model spatially is facilitated through the <code class="language-plaintext highlighter-rouge">terra::interpolate</code> function.</p>
 
 <p>Kriging results in two main outputs: the prediction and the prediction variance.</p>
 

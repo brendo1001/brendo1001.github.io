@@ -208,7 +208,7 @@ means of the predicted and observed values respectively. <em>σ</em><sub><em>pre
 
 <h3 id="example-usage">Example usage</h3>
 
-<p>So lets fit a simple linear model. We will use the <code class="highlighter-rouge">soil.data</code> set from the <code class="highlighter-rouge">ithir</code> package. First load the data in. We then want to regress CEC content on clay (also be sure to remove as NAs).</p>
+<p>So lets fit a simple linear model. We will use the <code class="language-plaintext highlighter-rouge">soil.data</code> set from the <code class="language-plaintext highlighter-rouge">ithir</code> package. First load the data in. We then want to regress CEC content on clay (also be sure to remove as NAs).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">MASS</span><span class="p">)</span><span class="w">
@@ -227,15 +227,15 @@ means of the predicted and observed values respectively. <em>σ</em><sub><em>pre
 </span><span class="c1">##      3.7791       0.2053</span><span class="w">
 </span></code></pre></div></div>
 
-<p>You may recall that this is the same model that was fitted during the <a href="/DSM_book/pages/r_literacy//part7/">introduction to <code class="highlighter-rouge">R</code> chapter</a>. What we now want to do is evaluate some of the model goodness of fit statistics that were described above.</p>
+<p>You may recall that this is the same model that was fitted during the <a href="/DSM_book/pages/r_literacy//part7/">introduction to <code class="language-plaintext highlighter-rouge">R</code> chapter</a>. What we now want to do is evaluate some of the model goodness of fit statistics that were described above.</p>
 
-<p>Conveniently, these are available in the <code class="highlighter-rouge">goof</code> function in the <code class="highlighter-rouge">ithir</code> package. We will use this function a lot when doing digital soil mapping, so it might be useful to describe it.</p>
+<p>Conveniently, these are available in the <code class="language-plaintext highlighter-rouge">goof</code> function in the <code class="language-plaintext highlighter-rouge">ithir</code> package. We will use this function a lot when doing digital soil mapping, so it might be useful to describe it.</p>
 
-<p><code class="highlighter-rouge">goof</code> takes four inputs. A vector of <code class="highlighter-rouge">observed</code> values, a vector of <code class="highlighter-rouge">predicted</code> values, a logical choice of whether an output plot is required, and a character input of what type of output is required.</p>
+<p><code class="language-plaintext highlighter-rouge">goof</code> takes four inputs. A vector of <code class="language-plaintext highlighter-rouge">observed</code> values, a vector of <code class="language-plaintext highlighter-rouge">predicted</code> values, a logical choice of whether an output plot is required, and a character input of what type of output is required.</p>
 
-<p>There are number of possible goodness of fit statistics that can be requested, with only some being used frequently in digital soil mapping projects. Therefore setting the <code class="highlighter-rouge">type</code> parameter to <code class="highlighter-rouge">DSM</code> will output only the <em>R</em><sup>2</sup>, RMSE, MSE, bias and concordance statistics as these are most most relevant to DSM.</p>
+<p>There are number of possible goodness of fit statistics that can be requested, with only some being used frequently in digital soil mapping projects. Therefore setting the <code class="language-plaintext highlighter-rouge">type</code> parameter to <code class="language-plaintext highlighter-rouge">DSM</code> will output only the <em>R</em><sup>2</sup>, RMSE, MSE, bias and concordance statistics as these are most most relevant to DSM.</p>
 
-<p>Additional statistics can be returned if <code class="highlighter-rouge">spec</code> is specified for the <code class="highlighter-rouge">type</code> parameter.</p>
+<p>Additional statistics can be returned if <code class="language-plaintext highlighter-rouge">spec</code> is specified for the <code class="language-plaintext highlighter-rouge">type</code> parameter.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ithir</span><span class="o">::</span><span class="n">goof</span><span class="p">(</span><span class="n">observed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">,</span><span class="w"> 
 </span><span class="n">predicted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mod.1</span><span class="o">$</span><span class="n">fitted.values</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"DSM"</span><span class="p">)</span><span class="w">
@@ -245,9 +245,9 @@ means of the predicted and observed values respectively. <em>σ</em><sub><em>pre
 </span></code></pre></div></div>
 
 <p>You may wish to generate a plot in which case you would set the
-<code class="highlighter-rouge">plot.it</code> logical to <code class="highlighter-rouge">TRUE</code>. Note that the <code class="highlighter-rouge">MASS</code> package also needs to be installed and loaded if you want to use the <code class="highlighter-rouge">plot.it</code> parameter.</p>
+<code class="language-plaintext highlighter-rouge">plot.it</code> logical to <code class="language-plaintext highlighter-rouge">TRUE</code>. Note that the <code class="language-plaintext highlighter-rouge">MASS</code> package also needs to be installed and loaded if you want to use the <code class="language-plaintext highlighter-rouge">plot.it</code> parameter.</p>
 
-<p>This model <code class="highlighter-rouge">mod.1</code> does not seem to be too bad. On average the predictions are 3.75 cmol (+)/<em>kg</em> off the true value. The model on average is neither over- or under-predictive, but we can see that a few high CEC values are influencing the concordance and <em>R</em><sup>2</sup>. This outcome may mean that there are other factors that influence the CEC, such as mineralogy type for example.</p>
+<p>This model <code class="language-plaintext highlighter-rouge">mod.1</code> does not seem to be too bad. On average the predictions are 3.75 cmol (+)/<em>kg</em> off the true value. The model on average is neither over- or under-predictive, but we can see that a few high CEC values are influencing the concordance and <em>R</em><sup>2</sup>. This outcome may mean that there are other factors that influence the CEC, such as mineralogy type for example.</p>
 
 <h3 id="references">References</h3>
 

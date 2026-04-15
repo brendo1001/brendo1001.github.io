@@ -170,35 +170,35 @@
 
 <h2 id="linear-models-the-basics">Linear models: the basics</h2>
 
-<h3 id="the-lm-function-model-formulas-and-statistical-output">The <code class="highlighter-rouge">lm</code> function, model formulas, and statistical output</h3>
+<h3 id="the-lm-function-model-formulas-and-statistical-output">The <code class="language-plaintext highlighter-rouge">lm</code> function, model formulas, and statistical output</h3>
 
-<p>In <code class="highlighter-rouge">R</code> several classical statistical models can be implemented using one
-function: <code class="highlighter-rouge">lm</code> (for linear model). The <code class="highlighter-rouge">lm</code> function can be used for
+<p>In <code class="language-plaintext highlighter-rouge">R</code> several classical statistical models can be implemented using one
+function: <code class="language-plaintext highlighter-rouge">lm</code> (for linear model). The <code class="language-plaintext highlighter-rouge">lm</code> function can be used for
 simple and multiple linear regression, analysis of variance (ANVOVA),
-and analysis of covariance (ANCOVA). The help file for <code class="highlighter-rouge">lm</code> lists the
+and analysis of covariance (ANCOVA). The help file for <code class="language-plaintext highlighter-rouge">lm</code> lists the
 following.</p>
 
-<p><code class="highlighter-rouge">lm(formula, data, subset, weights, na.action, method = ``qr'', model = TRUE, x = FALSE, y = FALSE, qr = TRUE, singular.ok = TRUE, contrasts = NULL, offset, ...)</code></p>
+<p><code class="language-plaintext highlighter-rouge">lm(formula, data, subset, weights, na.action, method = ``qr'', model = TRUE, x = FALSE, y = FALSE, qr = TRUE, singular.ok = TRUE, contrasts = NULL, offset, ...)</code></p>
 
-<p>The first argument in the <code class="highlighter-rouge">lm</code> function call (<code class="highlighter-rouge">formula</code>) is where you
+<p>The first argument in the <code class="language-plaintext highlighter-rouge">lm</code> function call (<code class="language-plaintext highlighter-rouge">formula</code>) is where you
 specify the structure of the statistical model. This approach is used in
-other <code class="highlighter-rouge">R</code> functions as well, such as <code class="highlighter-rouge">glm</code>, <code class="highlighter-rouge">gam</code>, and others, which we
+other <code class="language-plaintext highlighter-rouge">R</code> functions as well, such as <code class="language-plaintext highlighter-rouge">glm</code>, <code class="language-plaintext highlighter-rouge">gam</code>, and others, which we
 will later investigate. The most common structures of a statistical
 model are:</p>
 
-<p><code class="highlighter-rouge">y</code> <code class="highlighter-rouge">∼</code> <code class="highlighter-rouge">x</code> :Simple linear regression of y on x</p>
+<p><code class="language-plaintext highlighter-rouge">y</code> <code class="language-plaintext highlighter-rouge">∼</code> <code class="language-plaintext highlighter-rouge">x</code> :Simple linear regression of y on x</p>
 
-<p><code class="highlighter-rouge">y</code> <code class="highlighter-rouge">∼</code> <code class="highlighter-rouge">x</code> + <code class="highlighter-rouge">z</code> :Multiple regression of y on x and z</p>
+<p><code class="language-plaintext highlighter-rouge">y</code> <code class="language-plaintext highlighter-rouge">∼</code> <code class="language-plaintext highlighter-rouge">x</code> + <code class="language-plaintext highlighter-rouge">z</code> :Multiple regression of y on x and z</p>
 
 <p>There are many others, but it is these model structures that are used in
 one form or another for digital soil mapping.</p>
 
-<p>There is some similarity between the statistical output in <code class="highlighter-rouge">R</code> and in
-other statistical software programs. However, by default, <code class="highlighter-rouge">R</code> usually
+<p>There is some similarity between the statistical output in <code class="language-plaintext highlighter-rouge">R</code> and in
+other statistical software programs. However, by default, <code class="language-plaintext highlighter-rouge">R</code> usually
 gives only basic output. More detailed output can be retrieved with the
-<code class="highlighter-rouge">summary</code> function. For specific statistics, you can use <em>extractor</em>
-functions, such as <code class="highlighter-rouge">coef</code> or <code class="highlighter-rouge">deviance</code>. Output from the <code class="highlighter-rouge">lm</code> function
-is of the class <code class="highlighter-rouge">lm</code>, and both default output and specialized output
+<code class="language-plaintext highlighter-rouge">summary</code> function. For specific statistics, you can use <em>extractor</em>
+functions, such as <code class="language-plaintext highlighter-rouge">coef</code> or <code class="language-plaintext highlighter-rouge">deviance</code>. Output from the <code class="language-plaintext highlighter-rouge">lm</code> function
+is of the class <code class="language-plaintext highlighter-rouge">lm</code>, and both default output and specialized output
 from extractor functions can be assigned to objects (this is of course
 true for other model objects as well). This quality is very handy when
 writing code that uses the results of statistical models in further
@@ -206,8 +206,8 @@ calculations or in compiling summaries.</p>
 
 <h3 id="linear-regression">Linear regression</h3>
 
-<p>To demonstrate simple linear regression in <code class="highlighter-rouge">R</code>, we will again use the
-<code class="highlighter-rouge">soil.data</code> set. Here we will regress CEC content on clay.</p>
+<p>To demonstrate simple linear regression in <code class="language-plaintext highlighter-rouge">R</code>, we will again use the
+<code class="language-plaintext highlighter-rouge">soil.data</code> set. Here we will regress CEC content on clay.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
     </span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
@@ -237,7 +237,7 @@ like.</p>
 </figure>
 
 <p>There appears to be some meaningful relationship. To fit a linear model,
-we can use the <code class="highlighter-rouge">lm</code> function:</p>
+we can use the <code class="language-plaintext highlighter-rouge">lm</code> function:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mod.1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">lm</span><span class="p">(</span><span class="n">CEC</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">clay</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soil.data</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
     </span><span class="n">mod.1</span><span class="w">
@@ -251,8 +251,8 @@ we can use the <code class="highlighter-rouge">lm</code> function:</p>
     </span><span class="c1">##      3.7791       0.2053</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">R</code> returns only the call and coefficients by default. You can get more
-information using the <code class="highlighter-rouge">summary</code> function.</p>
+<p><code class="language-plaintext highlighter-rouge">R</code> returns only the call and coefficients by default. You can get more
+information using the <code class="language-plaintext highlighter-rouge">summary</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)</span><span class="w">
 
@@ -279,31 +279,31 @@ information using the <code class="highlighter-rouge">summary</code> function.</
 
 <p>Clay does appear to be a significant predictor of CEC as one would
 generally surmise when applying our soil science knowledge. As mentioned
-above, the output from the <code class="highlighter-rouge">lm</code> function is an object of class <code class="highlighter-rouge">lm</code>.
+above, the output from the <code class="language-plaintext highlighter-rouge">lm</code> function is an object of class <code class="language-plaintext highlighter-rouge">lm</code>.
 These objects are lists that contain at least the following elements
-(you can find this list in the help file for <code class="highlighter-rouge">lm</code>):</p>
+(you can find this list in the help file for <code class="language-plaintext highlighter-rouge">lm</code>):</p>
 
 <ul>
-  <li><code class="highlighter-rouge">coefficients</code>: a named vector of model coefficients</li>
-  <li><code class="highlighter-rouge">residuals</code>: model residuals (observed - predicted values)</li>
-  <li><code class="highlighter-rouge">fitted.value</code>: the fitted mean values</li>
-  <li><code class="highlighter-rouge">rank</code>: a numeric rank of the fitted linear model</li>
-  <li><code class="highlighter-rouge">weights</code>: (only for weighted fits) the specified weights</li>
-  <li><code class="highlighter-rouge">df.residual</code>: the residual degrees of freedom</li>
-  <li><code class="highlighter-rouge">call</code>: the matched call</li>
-  <li><code class="highlighter-rouge">terms</code>: the terms object used</li>
-  <li><code class="highlighter-rouge">contrasts</code>: (only where relevant) the contrasts used</li>
-  <li><code class="highlighter-rouge">xlevels</code>: (only where relevant) a record of the levels of the
+  <li><code class="language-plaintext highlighter-rouge">coefficients</code>: a named vector of model coefficients</li>
+  <li><code class="language-plaintext highlighter-rouge">residuals</code>: model residuals (observed - predicted values)</li>
+  <li><code class="language-plaintext highlighter-rouge">fitted.value</code>: the fitted mean values</li>
+  <li><code class="language-plaintext highlighter-rouge">rank</code>: a numeric rank of the fitted linear model</li>
+  <li><code class="language-plaintext highlighter-rouge">weights</code>: (only for weighted fits) the specified weights</li>
+  <li><code class="language-plaintext highlighter-rouge">df.residual</code>: the residual degrees of freedom</li>
+  <li><code class="language-plaintext highlighter-rouge">call</code>: the matched call</li>
+  <li><code class="language-plaintext highlighter-rouge">terms</code>: the terms object used</li>
+  <li><code class="language-plaintext highlighter-rouge">contrasts</code>: (only where relevant) the contrasts used</li>
+  <li><code class="language-plaintext highlighter-rouge">xlevels</code>: (only where relevant) a record of the levels of the
 factors used in fitting</li>
-  <li><code class="highlighter-rouge">offset</code>: the offset used (missing if none were used)</li>
-  <li><code class="highlighter-rouge">y</code>: if requested, the response used</li>
-  <li><code class="highlighter-rouge">x</code>: if requested, the model matrix used</li>
-  <li><code class="highlighter-rouge">model</code>: if requested (the default), the model frame used</li>
-  <li><code class="highlighter-rouge">na.action</code>: (where relevant) information returned by model frame on
-the handling of <code class="highlighter-rouge">NA</code>s</li>
+  <li><code class="language-plaintext highlighter-rouge">offset</code>: the offset used (missing if none were used)</li>
+  <li><code class="language-plaintext highlighter-rouge">y</code>: if requested, the response used</li>
+  <li><code class="language-plaintext highlighter-rouge">x</code>: if requested, the model matrix used</li>
+  <li><code class="language-plaintext highlighter-rouge">model</code>: if requested (the default), the model frame used</li>
+  <li><code class="language-plaintext highlighter-rouge">na.action</code>: (where relevant) information returned by model frame on
+the handling of <code class="language-plaintext highlighter-rouge">NA</code>s</li>
 </ul>
 
-<p>To get at the elements listed above, you can simply index the <code class="highlighter-rouge">lm</code>
+<p>To get at the elements listed above, you can simply index the <code class="language-plaintext highlighter-rouge">lm</code>
 object, i.e. call up part of the list.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mod.1</span><span class="o">$</span><span class="n">coefficients</span><span class="w">
@@ -312,11 +312,11 @@ object, i.e. call up part of the list.</p>
     </span><span class="c1">##   3.7791256   0.2053256</span><span class="w">
 </span></code></pre></div></div>
 
-<p>However, <code class="highlighter-rouge">R</code> has several extractor functions designed precisely for
+<p>However, <code class="language-plaintext highlighter-rouge">R</code> has several extractor functions designed precisely for
 pulling data out of statistical model output. Some of the most commonly
-used ones are: <code class="highlighter-rouge">add1</code>, <code class="highlighter-rouge">alias</code>, <code class="highlighter-rouge">anova</code>, <code class="highlighter-rouge">coef</code>, <code class="highlighter-rouge">deviance</code>, <code class="highlighter-rouge">drop1</code>,
-<code class="highlighter-rouge">effects</code>, <code class="highlighter-rouge">family</code>, <code class="highlighter-rouge">formula</code>, <code class="highlighter-rouge">kappa</code>, <code class="highlighter-rouge">labels</code>, <code class="highlighter-rouge">plot</code>, <code class="highlighter-rouge">predict</code>,
-<code class="highlighter-rouge">print</code>, <code class="highlighter-rouge">proj</code>, <code class="highlighter-rouge">residuals</code>, <code class="highlighter-rouge">step</code>, <code class="highlighter-rouge">summary</code>, and <code class="highlighter-rouge">vcov</code>. For
+used ones are: <code class="language-plaintext highlighter-rouge">add1</code>, <code class="language-plaintext highlighter-rouge">alias</code>, <code class="language-plaintext highlighter-rouge">anova</code>, <code class="language-plaintext highlighter-rouge">coef</code>, <code class="language-plaintext highlighter-rouge">deviance</code>, <code class="language-plaintext highlighter-rouge">drop1</code>,
+<code class="language-plaintext highlighter-rouge">effects</code>, <code class="language-plaintext highlighter-rouge">family</code>, <code class="language-plaintext highlighter-rouge">formula</code>, <code class="language-plaintext highlighter-rouge">kappa</code>, <code class="language-plaintext highlighter-rouge">labels</code>, <code class="language-plaintext highlighter-rouge">plot</code>, <code class="language-plaintext highlighter-rouge">predict</code>,
+<code class="language-plaintext highlighter-rouge">print</code>, <code class="language-plaintext highlighter-rouge">proj</code>, <code class="language-plaintext highlighter-rouge">residuals</code>, <code class="language-plaintext highlighter-rouge">step</code>, <code class="language-plaintext highlighter-rouge">summary</code>, and <code class="language-plaintext highlighter-rouge">vcov</code>. For
 example:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">coef</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)</span><span class="w">
@@ -330,9 +330,9 @@ example:</p>
     </span><span class="c1">## -0.1317300 -1.7217300 -2.5617300 -2.5017300 -0.5226822 -2.0370556</span><span class="w">
 </span></code></pre></div></div>
 
-<p>As mentioned before, the <code class="highlighter-rouge">summary</code> function is a generic function. What
+<p>As mentioned before, the <code class="language-plaintext highlighter-rouge">summary</code> function is a generic function. What
 it does and what it returns is dependent on the class of its first
-argument. Here is a list of what is available from the <code class="highlighter-rouge">summary</code>
+argument. Here is a list of what is available from the <code class="language-plaintext highlighter-rouge">summary</code>
 function for this model:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">))</span><span class="w">
@@ -342,7 +342,7 @@ function for this model:</p>
     </span><span class="c1">##  [9] "adj.r.squared" "fstatistic"    "cov.unscaled"  "na.action"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>To extract some of the information in the <code class="highlighter-rouge">summary</code> which is of a list
+<p>To extract some of the information in the <code class="language-plaintext highlighter-rouge">summary</code> which is of a list
 structure, we would use:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)[[</span><span class="m">4</span><span class="p">]]</span><span class="w">
@@ -353,23 +353,23 @@ structure, we would use:</p>
 </span></code></pre></div></div>
 
 <p>To look at the statistical summary. What is the <em>R</em><sup>2</sup> of
-<code class="highlighter-rouge">mod.1</code>? <strong>Answer</strong>:</p>
+<code class="language-plaintext highlighter-rouge">mod.1</code>? <strong>Answer</strong>:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">summary</span><span class="p">(</span><span class="n">mod.1</span><span class="p">)[[</span><span class="s2">"r.squared"</span><span class="p">]]</span><span class="w">
 
     </span><span class="c1">## [1] 0.4213764</span><span class="w">
 </span></code></pre></div></div>
 
-<p>This flexibility is useful, but makes for some redundancy in <code class="highlighter-rouge">R</code>. For
+<p>This flexibility is useful, but makes for some redundancy in <code class="language-plaintext highlighter-rouge">R</code>. For
 many model statistics, there are three ways to get your data: an
-extractor function (such as <code class="highlighter-rouge">coef</code>), indexing the <code class="highlighter-rouge">lm</code> object, and
-indexing the <code class="highlighter-rouge">summary</code> function. The best approach is to use an
-extractor function whenever you can. In some cases, the <code class="highlighter-rouge">summary</code>
+extractor function (such as <code class="language-plaintext highlighter-rouge">coef</code>), indexing the <code class="language-plaintext highlighter-rouge">lm</code> object, and
+indexing the <code class="language-plaintext highlighter-rouge">summary</code> function. The best approach is to use an
+extractor function whenever you can. In some cases, the <code class="language-plaintext highlighter-rouge">summary</code>
 function will return results that you can not get by indexing or using
 extractor functions.</p>
 
-<p>Once we have fit a model in <code class="highlighter-rouge">R</code>, we can generate predicted values using
-the <code class="highlighter-rouge">predict</code> function.</p>
+<p>Once we have fit a model in <code class="language-plaintext highlighter-rouge">R</code>, we can generate predicted values using
+the <code class="language-plaintext highlighter-rouge">predict</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">mod.1</span><span class="p">))</span><span class="w">
 
@@ -387,10 +387,10 @@ the <code class="highlighter-rouge">predict</code> function.</p>
     <figcaption> observed vs. predicted plot of CEC from `soil.data`.</figcaption>
 </figure>
 
-<p>As we will see later on, the <code class="highlighter-rouge">predict</code> function works for a whole range
-of statistical models in <code class="highlighter-rouge">R</code>. Not just <code class="highlighter-rouge">lm</code> objects. We can treat the
+<p>As we will see later on, the <code class="language-plaintext highlighter-rouge">predict</code> function works for a whole range
+of statistical models in <code class="language-plaintext highlighter-rouge">R</code>. Not just <code class="language-plaintext highlighter-rouge">lm</code> objects. We can treat the
 predictions as we would any vector. For example we can add them to the
-above plot or put them back in the original data frame. The <code class="highlighter-rouge">predict</code>
+above plot or put them back in the original data frame. The <code class="language-plaintext highlighter-rouge">predict</code>
 function can also give confidence and prediction intervals.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">head</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">mod.1</span><span class="p">,</span><span class="w"> </span><span class="n">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"conf"</span><span class="p">))</span><span class="w">
@@ -404,9 +404,9 @@ function can also give confidence and prediction intervals.</p>
     </span><span class="c1">## 7  5.627056  4.673657  6.580454</span><span class="w">
 </span></code></pre></div></div>
 
-<p>A quick way to demonstrate multiple linear regression in <code class="highlighter-rouge">R</code>, we will
-regress <code class="highlighter-rouge">CEC</code> on <code class="highlighter-rouge">clay</code> plus the exchangeable cations: <code class="highlighter-rouge">ExchNa</code> and
-<code class="highlighter-rouge">ExchCa</code>. First lets subset these data out, then get their summary
+<p>A quick way to demonstrate multiple linear regression in <code class="language-plaintext highlighter-rouge">R</code>, we will
+regress <code class="language-plaintext highlighter-rouge">CEC</code> on <code class="language-plaintext highlighter-rouge">clay</code> plus the exchangeable cations: <code class="language-plaintext highlighter-rouge">ExchNa</code> and
+<code class="language-plaintext highlighter-rouge">ExchCa</code>. First lets subset these data out, then get their summary
 statistics.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">subs.soil.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">soil.data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"clay"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CEC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ExchNa"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ExchCa"</span><span class="p">)]</span><span class="w">
@@ -423,7 +423,7 @@ statistics.</p>
 </span></code></pre></div></div>
 
 <p>A quick way to look for relationships between variables in a data frame
-is with the <code class="highlighter-rouge">cor</code> function. Note the use of the <code class="highlighter-rouge">na.omit</code> function.</p>
+is with the <code class="language-plaintext highlighter-rouge">cor</code> function. Note the use of the <code class="language-plaintext highlighter-rouge">na.omit</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">cor</span><span class="p">(</span><span class="n">na.omit</span><span class="p">(</span><span class="n">subs.soil.data</span><span class="p">))</span><span class="w">
 
@@ -434,7 +434,7 @@ is with the <code class="highlighter-rouge">cor</code> function. Note the use of
     </span><span class="c1">## ExchCa 0.5461578 0.8757003 -0.02055496  1.00000000</span><span class="w">
 </span></code></pre></div></div>
 
-<p>To visualize these relationships, we can use <code class="highlighter-rouge">pairs</code>.</p>
+<p>To visualize these relationships, we can use <code class="language-plaintext highlighter-rouge">pairs</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">pairs</span><span class="p">(</span><span class="n">na.omit</span><span class="p">(</span><span class="n">subs.soil.data</span><span class="p">))</span><span class="w">
 </span></code></pre></div></div>
@@ -476,13 +476,13 @@ model:</p>
 <p>For much of the remainder of the exercises, we will be investigating
 these regression type relationships using a variety of different model
 types for soil spatial prediction. These fundamental modelling concepts
-of the <code class="highlighter-rouge">lm</code> will become useful as we progress ahead.</p>
+of the <code class="language-plaintext highlighter-rouge">lm</code> will become useful as we progress ahead.</p>
 
 <h3 id="exercises">Exercises</h3>
 
 <ol>
   <li>
-    <p>Using the <code class="highlighter-rouge">soil.data</code> set firstly generate a correlation matrix of
+    <p>Using the <code class="language-plaintext highlighter-rouge">soil.data</code> set firstly generate a correlation matrix of
 all the soil variables.</p>
   </li>
   <li>
@@ -490,7 +490,7 @@ all the soil variables.</p>
 each other, and fit a model. Is the model any good? Can you plot the
 observed vs. predicted values? Can you draw a line of concordance
 (maybe want to consult an appropriate help file to do this). Something a bit trickier: Can you add the predictions to the data
-frame <code class="highlighter-rouge">soil.data</code> correctly.</p>
+frame <code class="language-plaintext highlighter-rouge">soil.data</code> correctly.</p>
   </li>
   <li>
     <p>Now repeat what you did for the previous question, except this time

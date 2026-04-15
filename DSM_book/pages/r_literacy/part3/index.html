@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~25 minutes
+          Reading time ~26 minutes
         </p>
         
       </div>
@@ -170,7 +170,7 @@
 
 <h2 id="data-frames-data-import-and-data-export">Data frames, data import, and data export</h2>
 
-<p>As described above, a data frame is a type of data structure in <code class="highlighter-rouge">R</code> with
+<p>As described above, a data frame is a type of data structure in <code class="language-plaintext highlighter-rouge">R</code> with
 rows and columns, where different columns contain data with different
 modes. A data frame is probably the most common data structure that you
 will use for storing soil information data sets. Recall from before the
@@ -188,7 +188,7 @@ data frame that we created.</p>
 </span></code></pre></div></div>
 
 <p>We can quickly assess the different modes of a data frame (or any other
-object for that matter) by using the <code class="highlighter-rouge">str</code> (structure) function.</p>
+object for that matter) by using the <code class="language-plaintext highlighter-rouge">str</code> (structure) function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">str</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span><span class="w">
 
@@ -200,21 +200,21 @@ object for that matter) by using the <code class="highlighter-rouge">str</code> 
     </span><span class="c1">##  $ visted    : logi  TRUE FALSE TRUE</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">str</code> is probably one of the most used <code class="highlighter-rouge">R</code> functions. It is great
+<p>The <code class="language-plaintext highlighter-rouge">str</code> is probably one of the most used <code class="language-plaintext highlighter-rouge">R</code> functions. It is great
 for exploring the format and contents of any object created or imported.</p>
 
 <h3 id="reading-data-from-files">reading data from files</h3>
 
 <p>The easiest way to create a data frame is to read in data from a file.
 This is done using the function , which works with ASCII text files. The
-function <code class="highlighter-rouge">read.csv</code> is also a utility function for reading in data files
+function <code class="language-plaintext highlighter-rouge">read.csv</code> is also a utility function for reading in data files
 with the stipulation that the data columns have a comma separation. Data
 can be read in from other files as well, using different functions, but
-<code class="highlighter-rouge">read.table</code> is the most commonly used approach. <code class="highlighter-rouge">R</code> is very flexible in
+<code class="language-plaintext highlighter-rouge">read.table</code> is the most commonly used approach. <code class="language-plaintext highlighter-rouge">R</code> is very flexible in
 how it reads in data from text files.</p>
 
 <p>Note that the column labels in the header have to be compatible with
-<code class="highlighter-rouge">R</code>’s variable naming convention, or else <code class="highlighter-rouge">R</code> will make some changes as
+<code class="language-plaintext highlighter-rouge">R</code>’s variable naming convention, or else <code class="language-plaintext highlighter-rouge">R</code> will make some changes as
 they are read in (or will not read in the data correctly). So lets
 import some real soil data. These soil data are some chemical and
 physical properties from a collection of soil profiles sampled at
@@ -229,7 +229,7 @@ various locations in New South Wales, Australia.</p>
 <p>However, you may find that an error occurs, saying something like that
 the file does not exist. This is true as it has not been provided to
 you. Rather, to use this data you will need to load up the previously
-installed <code class="highlighter-rouge">ithir</code> package. See <a href="/DSM_book/pages/ithir/">installation instructions</a> if you have not installed already.</p>
+installed <code class="language-plaintext highlighter-rouge">ithir</code> package. See <a href="/DSM_book/pages/ithir/">installation instructions</a> if you have not installed already.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">library</span><span class="p">(</span><span class="n">ithir</span><span class="p">)</span><span class="w">
     </span><span class="n">data</span><span class="p">(</span><span class="n">USYD_soil1</span><span class="p">)</span><span class="w">
@@ -272,48 +272,48 @@ installed <code class="highlighter-rouge">ithir</code> package. See <a href="/DS
     </span><span class="c1">## 6         0.35 0.059 0.3   0.04  0.46   9.13   5.02 14.96</span><span class="w">
 </span></code></pre></div></div>
 
-<p>When we import a file into <code class="highlighter-rouge">R</code>, it is good habit to look at its
-structure (<code class="highlighter-rouge">str</code>) to ensure the data is as it should be. As can be seen,
-this data set (frame) has 166 observations, and 15 columns. The <code class="highlighter-rouge">head</code>
+<p>When we import a file into <code class="language-plaintext highlighter-rouge">R</code>, it is good habit to look at its
+structure (<code class="language-plaintext highlighter-rouge">str</code>) to ensure the data is as it should be. As can be seen,
+this data set (frame) has 166 observations, and 15 columns. The <code class="language-plaintext highlighter-rouge">head</code>
 function is also a useful exploratory function, which simply allows us
 to print out the data frame, but only the first 6 rows of it (good for
 checking data frame integrity). Note that you must specify
-<code class="highlighter-rouge">header=TRUE</code>, or else <code class="highlighter-rouge">R</code> will interpret the row of labels as data. If
-the file you are loading is not in the directory that <code class="highlighter-rouge">R</code> is working in
-(the working directory, which can be checked with <code class="highlighter-rouge">getwd()</code> and changed
-with <code class="highlighter-rouge">setwd(file = ``filename'')</code>). When setting the working
-directory (<code class="highlighter-rouge">setwd()</code>), you can include the file path, but note that the
+<code class="language-plaintext highlighter-rouge">header=TRUE</code>, or else <code class="language-plaintext highlighter-rouge">R</code> will interpret the row of labels as data. If
+the file you are loading is not in the directory that <code class="language-plaintext highlighter-rouge">R</code> is working in
+(the working directory, which can be checked with <code class="language-plaintext highlighter-rouge">getwd()</code> and changed
+with <code class="language-plaintext highlighter-rouge">setwd(file = ``filename'')</code>). When setting the working
+directory (<code class="language-plaintext highlighter-rouge">setwd()</code>), you can include the file path, but note that the
 path should have forward, not backward slashes (or double backward
 slashes, if you prefer).</p>
 
-<p>The column separator function <code class="highlighter-rouge">sep</code> (an argument of <code class="highlighter-rouge">read.table</code>) lets
-you tell <code class="highlighter-rouge">R</code>, where the column breaks or delimiters occur. In the
-<code class="highlighter-rouge">soil.data</code> object, we specify that the data is comma separated. If you
-do not specify a field separator, <code class="highlighter-rouge">R</code> assumes that any spaces or tabs
+<p>The column separator function <code class="language-plaintext highlighter-rouge">sep</code> (an argument of <code class="language-plaintext highlighter-rouge">read.table</code>) lets
+you tell <code class="language-plaintext highlighter-rouge">R</code>, where the column breaks or delimiters occur. In the
+<code class="language-plaintext highlighter-rouge">soil.data</code> object, we specify that the data is comma separated. If you
+do not specify a field separator, <code class="language-plaintext highlighter-rouge">R</code> assumes that any spaces or tabs
 separate the data in your text file. However, any character data that
-contain spaces must be surrounded by quotes (otherwise, <code class="highlighter-rouge">R</code> interprets
+contain spaces must be surrounded by quotes (otherwise, <code class="language-plaintext highlighter-rouge">R</code> interprets
 the data on either side of the white spaces as different elements).</p>
 
-<p>Besides comma separators, tab separators are also common <code class="highlighter-rouge">sep= "\"</code>}, so
-is <code class="highlighter-rouge">sep="."</code>} (full stop separator). Two consecutive separators will be
+<p>Besides comma separators, tab separators are also common <code class="language-plaintext highlighter-rouge">sep= "\"</code>}, so
+is <code class="language-plaintext highlighter-rouge">sep="."</code>} (full stop separator). Two consecutive separators will be
 interpreted as a missing value. Conversely, with the default options,
 you need to explicitly identify missing values in your data file with
-<code class="highlighter-rouge">NA</code> (or any other character, as long as you tell <code class="highlighter-rouge">R</code> what it is with
-the <code class="highlighter-rouge">na.strings</code> argument).</p>
+<code class="language-plaintext highlighter-rouge">NA</code> (or any other character, as long as you tell <code class="language-plaintext highlighter-rouge">R</code> what it is with
+the <code class="language-plaintext highlighter-rouge">na.strings</code> argument).</p>
 
 <p>For some field separators, there are alternate functions that can be
-used with the default arguments, e.g. <code class="highlighter-rouge">read.csv</code>, which is identical to
-<code class="highlighter-rouge">read.table</code>, except default arguments differ. Also, <code class="highlighter-rouge">R</code> does not care
+used with the default arguments, e.g. <code class="language-plaintext highlighter-rouge">read.csv</code>, which is identical to
+<code class="language-plaintext highlighter-rouge">read.table</code>, except default arguments differ. Also, <code class="language-plaintext highlighter-rouge">R</code> does not care
 what the name of your file is, or what its extension is, as long as it
 is an ASCII text file. A few other handy bits of information for using
-<code class="highlighter-rouge">read.table</code> follow. You can include comments at the end of rows in your
-data file—just precede them with a <code class="highlighter-rouge">#</code>. Also <code class="highlighter-rouge">R</code> will recognize <code class="highlighter-rouge">NaN</code>,
-and <code class="highlighter-rouge">Inf</code>, and <code class="highlighter-rouge">-Inf</code> in input files.</p>
+<code class="language-plaintext highlighter-rouge">read.table</code> follow. You can include comments at the end of rows in your
+data file—just precede them with a <code class="language-plaintext highlighter-rouge">#</code>. Also <code class="language-plaintext highlighter-rouge">R</code> will recognize <code class="language-plaintext highlighter-rouge">NaN</code>,
+and <code class="language-plaintext highlighter-rouge">Inf</code>, and <code class="language-plaintext highlighter-rouge">-Inf</code> in input files.</p>
 
 <p>Probably the easiest approach to handling missing values is to indicate
-their presence with <code class="highlighter-rouge">NA</code> in the text file. <code class="highlighter-rouge">R</code> will automatically
+their presence with <code class="language-plaintext highlighter-rouge">NA</code> in the text file. <code class="language-plaintext highlighter-rouge">R</code> will automatically
 recognize these as missing values. Alternatively, just leave the missing
-values as they are (blank spaces), and let <code class="highlighter-rouge">R</code> do the rest.</p>
+values as they are (blank spaces), and let <code class="language-plaintext highlighter-rouge">R</code> do the rest.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">CEC</span><span class="p">))</span><span class="w">
 
@@ -334,16 +334,16 @@ values as they are (blank spaces), and let <code class="highlighter-rouge">R</co
 </span></code></pre></div></div>
 
 <p>In most cases, it makes sense to put your data into a text file for
-reading into <code class="highlighter-rouge">R</code>. This can be done in various ways. Data download from
+reading into <code class="language-plaintext highlighter-rouge">R</code>. This can be done in various ways. Data download from
 the internet are often in text files to begin with. Data can be entered
 directly into a text file using a text editor. For data that are in
 spreadsheet program such as Excel or JMP, there are facilities available
-for saving these tabular frames to text files for reading into <code class="highlighter-rouge">R</code>.</p>
+for saving these tabular frames to text files for reading into <code class="language-plaintext highlighter-rouge">R</code>.</p>
 
 <p>This all may seem confusing, but it is really not that bad. Your best
 bet is to play around with the different options, find one that you
 like, and stick with it. Lastly, data frames can also be edited
-interactively in <code class="highlighter-rouge">R</code> using the <code class="highlighter-rouge">edit</code> function. This is really only
+interactively in <code class="language-plaintext highlighter-rouge">R</code> using the <code class="language-plaintext highlighter-rouge">edit</code> function. This is really only
 useful for small data sets, and the function is not supported by RStudio
 (you could try with using Tinn-R instead if you want to explore using
 this function).</p>
@@ -353,7 +353,7 @@ this function).</p>
 
 <h3 id="creating-data-frames-manually">Creating data frames manually</h3>
 
-<p>Data frames can be made manually using the <code class="highlighter-rouge">data.frame</code> function:</p>
+<p>Data frames can be made manually using the <code class="language-plaintext highlighter-rouge">data.frame</code> function:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Chromosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Vertosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Organosol"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Anthroposol"</span><span class="p">)</span><span class="w">
     </span><span class="n">carbon</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2.1</span><span class="p">,</span><span class="w"> </span><span class="m">2.9</span><span class="p">,</span><span class="w"> </span><span class="m">5.5</span><span class="p">,</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w">
@@ -372,7 +372,7 @@ read in directly, it can be very handy for some applications, such as
 the creation of customized summary tables. Note that column names are
 specified using an equal sign. It is also possible to specify (or
 change, or check) column names for an existing data frame using the
-function <code class="highlighter-rouge">names</code>.</p>
+function <code class="language-plaintext highlighter-rouge">names</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"soil"</span><span class="p">,</span><span class="s2">"SOC"</span><span class="p">)</span><span class="w">
     </span><span class="n">dat</span><span class="w">
@@ -384,8 +384,8 @@ function <code class="highlighter-rouge">names</code>.</p>
     </span><span class="c1">## 4 Anthroposol 0.2</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Row names can be specified in the <code class="highlighter-rouge">data.frame</code> function with the
-<code class="highlighter-rouge">row.names</code> argument.</p>
+<p>Row names can be specified in the <code class="language-plaintext highlighter-rouge">data.frame</code> function with the
+<code class="language-plaintext highlighter-rouge">row.names</code> argument.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">dat</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">soil.type</span><span class="o">=</span><span class="n">soil</span><span class="p">,</span><span class="w"> </span><span class="n">soil.OC</span><span class="o">=</span><span class="n">carbon</span><span class="p">,</span><span class="w"> 
           </span><span class="n">row.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"Ch"</span><span class="p">,</span><span class="s2">"Ve"</span><span class="p">,</span><span class="s2">"Or"</span><span class="p">,</span><span class="s2">"An"</span><span class="p">))</span><span class="w">
@@ -400,18 +400,18 @@ function <code class="highlighter-rouge">names</code>.</p>
 
 <p>Specifying row names can be useful if you want to index data, which will
 be covered later. Row names can also be specified for an existing data
-frame with the <code class="highlighter-rouge">rownames</code> function (not to be confused with the
-<code class="highlighter-rouge">row.names</code> argument).</p>
+frame with the <code class="language-plaintext highlighter-rouge">rownames</code> function (not to be confused with the
+<code class="language-plaintext highlighter-rouge">row.names</code> argument).</p>
 
 <h3 id="working-with-data-frames">Working with data frames</h3>
 
-<p>So what do you do with data in <code class="highlighter-rouge">R</code> once it is in a data frame? Commonly,
+<p>So what do you do with data in <code class="language-plaintext highlighter-rouge">R</code> once it is in a data frame? Commonly,
 the data in a data frame will be used in some type of analysis or
 plotting procedure. It is usually necessary to be able to select and
 identify specific columns (i.e. vectors) within data frames. There are
 two ways to specify a given column of data within a data frame. The
-first is to use the <code class="highlighter-rouge">$</code> notation. To see what the column names are, we
-can use the <code class="highlighter-rouge">names</code> function. Using our <code class="highlighter-rouge">soil.data</code> set:</p>
+first is to use the <code class="language-plaintext highlighter-rouge">$</code> notation. To see what the column names are, we
+can use the <code class="language-plaintext highlighter-rouge">names</code> function. Using our <code class="language-plaintext highlighter-rouge">soil.data</code> set:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">names</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
 
@@ -421,8 +421,8 @@ can use the <code class="highlighter-rouge">names</code> function. Using our <co
     </span><span class="c1">## [16] "CEC"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">$</code> just uses a <code class="highlighter-rouge">$</code> between the data frame name and column name to
-specify a particular column. Say we want to look at the <code class="highlighter-rouge">ESP</code> column,
+<p>The <code class="language-plaintext highlighter-rouge">$</code> just uses a <code class="language-plaintext highlighter-rouge">$</code> between the data frame name and column name to
+specify a particular column. Say we want to look at the <code class="language-plaintext highlighter-rouge">ESP</code> column,
 which is the acronym for exchangeable sodium percentage.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w">
@@ -444,7 +444,7 @@ which is the acronym for exchangeable sodium percentage.</p>
 <p>Although it is handy to think of data frame columns to have a vertical
 orientation, this orientation is not present when they are printed
 individually—instead, elements are printed from left to right, and then
-top to bottom. The expression <code class="highlighter-rouge">soil.data$ESP</code> could be used just as you
+top to bottom. The expression <code class="language-plaintext highlighter-rouge">soil.data$ESP</code> could be used just as you
 would for any other vector. For example:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mean</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">)</span><span class="w">
@@ -452,8 +452,8 @@ would for any other vector. For example:</p>
     </span><span class="c1">## [1] NA</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">R</code> can not calculate the mean because of the <code class="highlighter-rouge">NA</code> values in the vector.
-Lets remove them first using the <code class="highlighter-rouge">na.omit</code> function.</p>
+<p><code class="language-plaintext highlighter-rouge">R</code> can not calculate the mean because of the <code class="language-plaintext highlighter-rouge">NA</code> values in the vector.
+Lets remove them first using the <code class="language-plaintext highlighter-rouge">na.omit</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">mean</span><span class="p">(</span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">))</span><span class="w">
 
@@ -461,10 +461,10 @@ Lets remove them first using the <code class="highlighter-rouge">na.omit</code> 
 </span></code></pre></div></div>
 
 <p>The second option for working with individual columns within a data
-frame is to use the commands <code class="highlighter-rouge">attach</code> and <code class="highlighter-rouge">detach</code>. Both of these
-functions take a data frame as an argument. <code class="highlighter-rouge">attach</code>ing a data frame
-puts all the columns within the that data frame into <code class="highlighter-rouge">R</code>’s search path,
-and they can be called by using their names alone without the <code class="highlighter-rouge">$</code>
+frame is to use the commands <code class="language-plaintext highlighter-rouge">attach</code> and <code class="language-plaintext highlighter-rouge">detach</code>. Both of these
+functions take a data frame as an argument. <code class="language-plaintext highlighter-rouge">attach</code>ing a data frame
+puts all the columns within the that data frame into <code class="language-plaintext highlighter-rouge">R</code>’s search path,
+and they can be called by using their names alone without the <code class="language-plaintext highlighter-rouge">$</code>
 notation.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">attach</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
@@ -485,8 +485,8 @@ notation.</p>
 </span></code></pre></div></div>
 
 <p>Note that when you are done using the individual columns, it is good
-practice to <code class="highlighter-rouge">detach</code> your data frame. Once the data frame is <code class="highlighter-rouge">detach</code>ed,
-<code class="highlighter-rouge">R</code> will no longer know what you mean when you specify the name of the
+practice to <code class="language-plaintext highlighter-rouge">detach</code> your data frame. Once the data frame is <code class="language-plaintext highlighter-rouge">detach</code>ed,
+<code class="language-plaintext highlighter-rouge">R</code> will no longer know what you mean when you specify the name of the
 column alone:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="c1">## This will throw an error</span><span class="w">
@@ -499,8 +499,8 @@ data within the data frame remain unchanged; you are actually working
 with a copy of the data frame.</p>
 
 <p>Another option (for selecting particular columns) is to use the square
-braces <code class="highlighter-rouge">[]</code> to specify the column you want. Using the square braces to
-select the <code class="highlighter-rouge">ESP</code> column from our data set you would use:</p>
+braces <code class="language-plaintext highlighter-rouge">[]</code> to specify the column you want. Using the square braces to
+select the <code class="language-plaintext highlighter-rouge">ESP</code> column from our data set you would use:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="p">[,</span><span class="m">10</span><span class="p">]</span><span class="w">
 
@@ -521,17 +521,17 @@ select the <code class="highlighter-rouge">ESP</code> column from our data set y
 </span></code></pre></div></div>
 
 <p>Here you are specifying the column in the tenth position, which as you
-should check is the <code class="highlighter-rouge">ESP</code> column. To use the square braces the row
+should check is the <code class="language-plaintext highlighter-rouge">ESP</code> column. To use the square braces the row
 position precedes to comma, and the column position proceeds to comma.
 By leaving a blank space in front of the comma, we are essentially
-instruction <code class="highlighter-rouge">R</code> to print out the whole column. You may be able to
+instruction <code class="language-plaintext highlighter-rouge">R</code> to print out the whole column. You may be able to
 surmise that it is also possible to subset a selection of columns quite
 efficiently with this square brace method. We will use the square braces
 more a little later on.</p>
 
-<p>The <code class="highlighter-rouge">$</code> notation can also be used to add columns to a data frame. For
-example, if we want to express our <code class="highlighter-rouge">Upper.Depth</code> and <code class="highlighter-rouge">Lower.Depth</code>
-columns in <code class="highlighter-rouge">cm</code> rather than <code class="highlighter-rouge">m</code> we could do the following.</p>
+<p>The <code class="language-plaintext highlighter-rouge">$</code> notation can also be used to add columns to a data frame. For
+example, if we want to express our <code class="language-plaintext highlighter-rouge">Upper.Depth</code> and <code class="language-plaintext highlighter-rouge">Lower.Depth</code>
+columns in <code class="language-plaintext highlighter-rouge">cm</code> rather than <code class="language-plaintext highlighter-rouge">m</code> we could do the following.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Upper</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Upper.Depth</span><span class="o">*</span><span class="m">100</span><span class="w">
     </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Lower</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">soil.data</span><span class="o">$</span><span class="n">Lower.Depth</span><span class="o">*</span><span class="m">100</span><span class="w">
@@ -554,9 +554,9 @@ columns in <code class="highlighter-rouge">cm</code> rather than <code class="hi
 </span></code></pre></div></div>
 
 <p>Many data frames that contain real data will have some missing
-observations. <code class="highlighter-rouge">R</code> has several tools for working with these observations.
-For starters, the <code class="highlighter-rouge">na.omit</code> function can be used for removing <code class="highlighter-rouge">NA</code>s from
-a vector. Working again with the <code class="highlighter-rouge">ESP</code> column of our <code class="highlighter-rouge">soil.data</code> set:</p>
+observations. <code class="language-plaintext highlighter-rouge">R</code> has several tools for working with these observations.
+For starters, the <code class="language-plaintext highlighter-rouge">na.omit</code> function can be used for removing <code class="language-plaintext highlighter-rouge">NA</code>s from
+a vector. Working again with the <code class="language-plaintext highlighter-rouge">ESP</code> column of our <code class="language-plaintext highlighter-rouge">soil.data</code> set:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="w">
 
@@ -592,18 +592,18 @@ a vector. Working again with the <code class="highlighter-rouge">ESP</code> colu
     </span><span class="c1">## [1] "omit"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Although the result does contain more than just the non-<code class="highlighter-rouge">NA</code> values,
-only the non-<code class="highlighter-rouge">NA</code> values will be used in subsequent operations. Note
-that the result of <code class="highlighter-rouge">na.omit</code> contains more information than just the
-non-<code class="highlighter-rouge">NA</code> values. This function can also be applied to complete data
-frames. In this case, any row with an <code class="highlighter-rouge">NA</code> is removed (so be careful
+<p>Although the result does contain more than just the non-<code class="language-plaintext highlighter-rouge">NA</code> values,
+only the non-<code class="language-plaintext highlighter-rouge">NA</code> values will be used in subsequent operations. Note
+that the result of <code class="language-plaintext highlighter-rouge">na.omit</code> contains more information than just the
+non-<code class="language-plaintext highlighter-rouge">NA</code> values. This function can also be applied to complete data
+frames. In this case, any row with an <code class="language-plaintext highlighter-rouge">NA</code> is removed (so be careful
 with its usage).</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="n">soil.data.cleaned</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na.omit</span><span class="p">(</span><span class="n">soil.data</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>It is often necessary to identify <code class="highlighter-rouge">NA</code>s present in a data structure. The
-<code class="highlighter-rouge">is.na</code> function can be used for this. It can also be negated using the
+<p>It is often necessary to identify <code class="language-plaintext highlighter-rouge">NA</code>s present in a data structure. The
+<code class="language-plaintext highlighter-rouge">is.na</code> function can be used for this. It can also be negated using the
 ``!’’ character.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nf">is.na</span><span class="p">(</span><span class="n">soil.data</span><span class="o">$</span><span class="n">ESP</span><span class="p">)</span><span class="w">
@@ -626,7 +626,7 @@ with its usage).</p>
 
 <h3 id="writing-data-to-files">Writing data to files</h3>
 
-<p>With <code class="highlighter-rouge">R</code>, it is easy to write data to files. The function <code class="highlighter-rouge">write.table</code>
+<p>With <code class="language-plaintext highlighter-rouge">R</code>, it is easy to write data to files. The function <code class="language-plaintext highlighter-rouge">write.table</code>
 is usually the best function for this purpose. Given only a data frame
 and a file name, this function will write the data contained in the data
 frame to a text file. There are a number of arguments that can be
@@ -637,9 +637,9 @@ file).</p>
 </span></code></pre></div></div>
 
 <p>The important ones (or most frequently used) are the column separator
-<code class="highlighter-rouge">sep</code> argument, and whether of not you want to keep the column and row
-names (<code class="highlighter-rouge">col.names</code> and <code class="highlighter-rouge">row.names</code> respectively). For example, if we
-want to write <code class="highlighter-rouge">soil.data</code> to text file (``file name.txt’’), retaining
+<code class="language-plaintext highlighter-rouge">sep</code> argument, and whether of not you want to keep the column and row
+names (<code class="language-plaintext highlighter-rouge">col.names</code> and <code class="language-plaintext highlighter-rouge">row.names</code> respectively). For example, if we
+want to write <code class="language-plaintext highlighter-rouge">soil.data</code> to text file (``file name.txt’’), retaining
 the column names, not retaining row names, and having a tab delimited
 column separator, we would use:</p>
 
@@ -647,21 +647,21 @@ column separator, we would use:</p>
                 </span><span class="n">col.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s2">"\t"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Setting the <code class="highlighter-rouge">append</code> argument to <code class="highlighter-rouge">TRUE</code> lets you add data to a file that
+<p>Setting the <code class="language-plaintext highlighter-rouge">append</code> argument to <code class="language-plaintext highlighter-rouge">TRUE</code> lets you add data to a file that
 already exists.</p>
 
-<p>The <code class="highlighter-rouge">write.table</code> function can not be used with all data structures in
-<code class="highlighter-rouge">R</code> (like lists for example). However, it can be used for such things as
+<p>The <code class="language-plaintext highlighter-rouge">write.table</code> function can not be used with all data structures in
+<code class="language-plaintext highlighter-rouge">R</code> (like lists for example). However, it can be used for such things as
 vectors and matrices.</p>
 
 <h2 id="exercises">Exercises</h2>
 
 <ol>
   <li>
-    <p>Using the <code class="highlighter-rouge">soil.data</code> object, determine the minimum and maximum soil
-pH (<code class="highlighter-rouge">PH_CaCl2</code>) in the data frame. Next add a new column to the data
+    <p>Using the <code class="language-plaintext highlighter-rouge">soil.data</code> object, determine the minimum and maximum soil
+pH (<code class="language-plaintext highlighter-rouge">PH_CaCl2</code>) in the data frame. Next add a new column to the data
 frame that contains the <em>l<strong>o</strong>g</em><sub>10</sub> of soil carbon
-<code class="highlighter-rouge">Total_Carbon</code>.</p>
+<code class="language-plaintext highlighter-rouge">Total_Carbon</code>.</p>
   </li>
   <li>
     <p>Create a new data frame that contains the mean SOC, pH, and clay of
@@ -670,9 +670,9 @@ options. Finally, try changing the separator to a tab and write to a
 new file.</p>
   </li>
   <li>
-    <p>There are a number of <code class="highlighter-rouge">NA</code> values in the data set. We want to remove
+    <p>There are a number of <code class="language-plaintext highlighter-rouge">NA</code> values in the data set. We want to remove
 them. Could this be done in one step i.e. delete every row that
-contains an <code class="highlighter-rouge">NA</code>? Is this appropriate? How would you go about
+contains an <code class="language-plaintext highlighter-rouge">NA</code>? Is this appropriate? How would you go about
 ensuring that no data is lost? Can you do this? or perhaps—do this!</p>
   </li>
 </ol>

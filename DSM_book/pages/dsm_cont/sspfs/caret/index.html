@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~12 minutes
+          Reading time ~13 minutes
         </p>
         
       </div>
@@ -168,7 +168,7 @@
       <h4 id="code">CODE:</h4>
 <p><a href="/DSM_book/rcode/P5_SSPF_cont_2017_caret.R">Get the code used for this section here</a></p>
 
-<h3 id="a-very-brief-introduction-to-caret-package-for-digital-soil-mapping">A very brief introduction to <code class="highlighter-rouge">caret</code> package for digital soil mapping</h3>
+<h3 id="a-very-brief-introduction-to-caret-package-for-digital-soil-mapping">A very brief introduction to <code class="language-plaintext highlighter-rouge">caret</code> package for digital soil mapping</h3>
 
 <ul>
   <li><a href="#s-1">Introduction</a></li>
@@ -187,15 +187,15 @@
 
 <p>Sometimes we might be confronted with many possible model structures to use, it is often difficult to make a choice what to use, and just default with a model we know well or have used often without considering alternatives.</p>
 
-<p>This is where the <a href="https://topepo.github.io/caret/index.html">caret R package</a> comes into its own in terms of efficiency and streamlining the workflow for fitting models and optimising some of those parameter variables. As the dedicated website indicates, the <code class="highlighter-rouge">caret</code> package (short for Classification And REgression Training) is a set of functions that attempt to streamline the process for creating predictive models.</p>
+<p>This is where the <a href="https://topepo.github.io/caret/index.html">caret R package</a> comes into its own in terms of efficiency and streamlining the workflow for fitting models and optimising some of those parameter variables. As the dedicated website indicates, the <code class="language-plaintext highlighter-rouge">caret</code> package (short for Classification And REgression Training) is a set of functions that attempt to streamline the process for creating predictive models.</p>
 
-<p>As we have seen, there are many different modeling functions in <code class="highlighter-rouge">R</code>. Some have different syntax for model training and/or prediction. The <code class="highlighter-rouge">caret</code> package provides a uniform interface to the various functions themselves, as well as a way to standardize common tasks (such parameter tuning and variable importance).</p>
+<p>As we have seen, there are many different modeling functions in <code class="language-plaintext highlighter-rouge">R</code>. Some have different syntax for model training and/or prediction. The <code class="language-plaintext highlighter-rouge">caret</code> package provides a uniform interface to the various functions themselves, as well as a way to standardize common tasks (such parameter tuning and variable importance).</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="data-preparation-">Data preparation <a id="s-2"></a></h3>
 
-<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="highlighter-rouge">HV_subsoilpH</code> object together with associated rasters supplied with the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>So lets firstly get the data organized. Recall from before in the <a href="/DSM_book/pages/dsm_prep/intersection/">data preparatory exercises</a> that we were working with the soil point data and environmental covariates for the Hunter Valley area. These data are stored in the <code class="language-plaintext highlighter-rouge">HV_subsoilpH</code> object together with associated rasters supplied with the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <p>For the succession of models examined in these various pages, we will concentrate on modelling and mapping the soil pH for the 60-100cm depth interval. To refresh, lets load the data in, then intersect the data with the available covariates.</p>
 
@@ -223,8 +223,8 @@
 </span><span class="c1"># Change names of coordinate columns</span><span class="w">
 </span><span class="nf">names</span><span class="p">(</span><span class="n">HV_subsoilpH</span><span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">)</span><span class="w">
 </span><span class="c1"># save a copy of coordinates</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
-</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="m">2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">x</span><span class="w">
+</span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="o">$</span><span class="n">y</span><span class="w">
 
 </span><span class="c1"># convert data to sf object</span><span class="w">
 </span><span class="n">HV_subsoilpH</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sf</span><span class="o">::</span><span class="n">st_as_sf</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HV_subsoilpH</span><span class="p">,</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="s2">"y"</span><span class="p">))</span><span class="w">
@@ -245,7 +245,7 @@
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Often it is handy to check to see whether there are missing values both in the target variable and of the covariates. It is possible that a point location does not fit within the extent of the available covariates. In these cases the data should be excluded. A quick way to assess whether there are missing or <code class="highlighter-rouge">NA</code> values in the data is to use the <code class="highlighter-rouge">complete.cases</code> function.</p>
+<p>Often it is handy to check to see whether there are missing values both in the target variable and of the covariates. It is possible that a point location does not fit within the extent of the available covariates. In these cases the data should be excluded. A quick way to assess whether there are missing or <code class="language-plaintext highlighter-rouge">NA</code> values in the data is to use the <code class="language-plaintext highlighter-rouge">complete.cases</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">))</span><span class="w">
 
@@ -254,13 +254,13 @@
 </span><span class="n">DSM_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[</span><span class="n">complete.cases</span><span class="p">(</span><span class="n">DSM_data</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>There do not appear to be any missing data as indicated by the <code class="highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing information.</p>
+<p>There do not appear to be any missing data as indicated by the <code class="language-plaintext highlighter-rouge">integer(0)</code> output above i.e there are zero rows with missing information.</p>
 
 <p><a href="#top">Back to top</a></p>
 
 <h3 id="model-fitting-multiple-linear-regression-">Model fitting: Multiple linear regression <a id="s-4"></a></h3>
 
-<p>The workhorse of the <code class="highlighter-rouge">caret</code> package is the <code class="highlighter-rouge">train</code> function. We can specify the model to be fitted in two ways:</p>
+<p>The workhorse of the <code class="language-plaintext highlighter-rouge">caret</code> package is the <code class="language-plaintext highlighter-rouge">train</code> function. We can specify the model to be fitted in two ways:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1.</span><span class="w">
 </span><span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pH60_100cm</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">AACN</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Landsat_Band1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Elevation</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Hillshading</span><span class="w"> </span><span class="o">+</span><span class="w"> 
@@ -271,13 +271,13 @@
     </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lm"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Using the <code class="highlighter-rouge">summary(fit)</code> command brings up the model parameter estimates, while the object <code class="highlighter-rouge">fit</code> also contains a summary of useful model goodness of fit diagnostics such as the RMSE and <em>R</em><sup>2</sup> statistics.</p>
+<p>Using the <code class="language-plaintext highlighter-rouge">summary(fit)</code> command brings up the model parameter estimates, while the object <code class="language-plaintext highlighter-rouge">fit</code> also contains a summary of useful model goodness of fit diagnostics such as the RMSE and <em>R</em><sup>2</sup> statistics.</p>
 
 <p>You can control how model evaluation is done where options include simple goodness of fit calibration, k-fold cross-validation, and leave-one-out cross-validation.</p>
 
 <p>As you might recall, these sorts of processes were examined during the <a href="/DSM_book/pages/dsm_cont/cv/">cross-validation page</a>.</p>
 
-<p>This option is controlled using the parameter <code class="highlighter-rouge">trControl</code> in the <code class="highlighter-rouge">train</code> function. The example below illustrates a 5-fold cross validation of a linear regression model with 10 repetitions.</p>
+<p>This option is controlled using the parameter <code class="language-plaintext highlighter-rouge">trControl</code> in the <code class="language-plaintext highlighter-rouge">train</code> function. The example below illustrates a 5-fold cross validation of a linear regression model with 10 repetitions.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">train</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">14</span><span class="p">)],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DSM_data</span><span class="o">$</span><span class="n">pH60_100cm</span><span class="p">,</span><span class="w"> 
     </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lm"</span><span class="p">,</span><span class="w"> </span><span class="n">trControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trainControl</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"repeatedcv"</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">repeats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">))</span><span class="w">
@@ -324,9 +324,9 @@
 </span><span class="c1">## [1] 511</span><span class="w">
 </span></code></pre></div></div>
 
-<p>You can choose which model to use in the <code class="highlighter-rouge">train</code> function with the <code class="highlighter-rouge">method</code> option. You will note that the fitting of the Cubist and Random Forest models below automatically attempt to optimise some of the fitting parameters, for example the <code class="highlighter-rouge">mtry</code> parameter for Random Forest.</p>
+<p>You can choose which model to use in the <code class="language-plaintext highlighter-rouge">train</code> function with the <code class="language-plaintext highlighter-rouge">method</code> option. You will note that the fitting of the Cubist and Random Forest models below automatically attempt to optimise some of the fitting parameters, for example the <code class="language-plaintext highlighter-rouge">mtry</code> parameter for Random Forest.</p>
 
-<p>To look at what parameters can optimised for each model in caret we can use the <code class="highlighter-rouge">modelLookup</code> function. By default a tuning grid is used to find the optimal model hyper-parameters, but this can be controlled manually by the creation of user defined tuning grids for customised grid search
+<p>To look at what parameters can optimised for each model in caret we can use the <code class="language-plaintext highlighter-rouge">modelLookup</code> function. By default a tuning grid is used to find the optimal model hyper-parameters, but this can be controlled manually by the creation of user defined tuning grids for customised grid search
 workflows. Below is an example of using the default grid search.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Cubist model</span><span class="w">
@@ -401,7 +401,7 @@ workflows. Below is an example of using the default grid search.</p>
 
 <h3 id="spatial-prediction-">Spatial prediction <a id="s-6"></a></h3>
 
-<p>Using the fitted model, predictions can be achieved with the native <code class="highlighter-rouge">predict</code> or <code class="highlighter-rouge">terra::predict</code> functions depending whether the prediction is extended to data table or directly to raster data.</p>
+<p>Using the fitted model, predictions can be achieved with the native <code class="language-plaintext highlighter-rouge">predict</code> or <code class="language-plaintext highlighter-rouge">terra::predict</code> functions depending whether the prediction is extended to data table or directly to raster data.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Extend model to data</span><span class="w">
 </span><span class="n">pred_cubist</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">predict</span><span class="p">(</span><span class="n">fit_cubist</span><span class="p">,</span><span class="w"> </span><span class="n">DSM_data</span><span class="p">)</span><span class="w">
@@ -411,9 +411,9 @@ workflows. Below is an example of using the default grid search.</p>
 </span><span class="n">plot</span><span class="p">(</span><span class="n">pred_cubistMap</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>There is plenty of other added functionality of the <code class="highlighter-rouge">caret</code> package. In addition to the detailed resources mentioned above, it always pays to look over the help files that are associated with each function.</p>
+<p>There is plenty of other added functionality of the <code class="language-plaintext highlighter-rouge">caret</code> package. In addition to the detailed resources mentioned above, it always pays to look over the help files that are associated with each function.</p>
 
-<p>It is a matter of personal choice whether you use the functionality of <code class="highlighter-rouge">caret</code> or take more control of the underlying processes via working directly with the model function directly. This also applies for handling cross-validation and external validation where you may wish to take greater control over the workflow rather than using the built-in functionality provide in <code class="highlighter-rouge">caret</code>.</p>
+<p>It is a matter of personal choice whether you use the functionality of <code class="language-plaintext highlighter-rouge">caret</code> or take more control of the underlying processes via working directly with the model function directly. This also applies for handling cross-validation and external validation where you may wish to take greater control over the workflow rather than using the built-in functionality provide in <code class="language-plaintext highlighter-rouge">caret</code>.</p>
 
 <p><a href="#top">Back to top</a></p>
 

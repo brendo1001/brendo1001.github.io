@@ -158,7 +158,7 @@
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-          Reading time ~30 minutes
+          Reading time ~31 minutes
         </p>
         
       </div>
@@ -172,65 +172,65 @@
 
 <h2 id="objective">Objective</h2>
 
-<p>The goal of this first module is to build your skills in data analysis and basic graphics using <code class="highlighter-rouge">R</code>. The scope of analysis and visualization possible in <code class="highlighter-rouge">R</code> is vast. In addition to the extensive functionality built into the base packages, more than 22,000 contributed packages [as of May 2025] are available on <a href="https://cran.r-project.org/">CRAN</a>, with some packages forming the basis of entire books.</p>
+<p>The goal of this first module is to build your skills in data analysis and basic graphics using <code class="language-plaintext highlighter-rouge">R</code>. The scope of analysis and visualization possible in <code class="language-plaintext highlighter-rouge">R</code> is vast. In addition to the extensive functionality built into the base packages, more than 22,000 contributed packages [as of May 2025] are available on <a href="https://cran.r-project.org/">CRAN</a>, with some packages forming the basis of entire books.</p>
 
 <p>This course is split into eight connected parts, starting here. It blends foundational skills—useful even for complete beginners—with specific techniques tailored for digital soil mapping and similar tasks.</p>
 
 <p>This introduction draws inspiration from many freely available online resources. If you get stuck, a quick web search will often turn up helpful advice—chances are, someone else has encountered the same issue.</p>
 
-<p>Given its flexibility, <code class="highlighter-rouge">R</code> is not something to “master” like a stand-alone tool, but rather a language in which fluency builds over time. In that sense, learning <code class="highlighter-rouge">R</code> is a continuous journey.</p>
+<p>Given its flexibility, <code class="language-plaintext highlighter-rouge">R</code> is not something to “master” like a stand-alone tool, but rather a language in which fluency builds over time. In that sense, learning <code class="language-plaintext highlighter-rouge">R</code> is a continuous journey.</p>
 
-<h2 id="introduction-to-r">Introduction to <code class="highlighter-rouge">R</code></h2>
+<h2 id="introduction-to-r">Introduction to <code class="language-plaintext highlighter-rouge">R</code></h2>
 
-<h3 id="r-overview-and-history"><code class="highlighter-rouge">R</code> overview and history</h3>
+<h3 id="r-overview-and-history"><code class="language-plaintext highlighter-rouge">R</code> overview and history</h3>
 
-<p><code class="highlighter-rouge">R</code> is a software system for computations and graphics. According to the
-<code class="highlighter-rouge">R</code> <a href="http://cran.r-project.org/doc/FAQ/R-FAQ.html#R-Basics">FAQ</a>:</p>
+<p><code class="language-plaintext highlighter-rouge">R</code> is a software system for computations and graphics. According to the
+<code class="language-plaintext highlighter-rouge">R</code> <a href="http://cran.r-project.org/doc/FAQ/R-FAQ.html#R-Basics">FAQ</a>:</p>
 
 <p><em>It consists of a language plus a run-time environment with graphics, a
 debugger, access to certain system functions, and the ability to run
 programs stored in script files.</em></p>
 
-<p><code class="highlighter-rouge">R</code> was originally developed in 1992 by Ross Ihaka and Robert Gentleman
-at the University of Auckland (New Zealand). The <code class="highlighter-rouge">R</code> language is a
-dialect of the <code class="highlighter-rouge">S</code> language which was developed by John Chambers at Bell
-Laboratories. This software is currently maintained by the <code class="highlighter-rouge">R</code>
+<p><code class="language-plaintext highlighter-rouge">R</code> was originally developed in 1992 by Ross Ihaka and Robert Gentleman
+at the University of Auckland (New Zealand). The <code class="language-plaintext highlighter-rouge">R</code> language is a
+dialect of the <code class="language-plaintext highlighter-rouge">S</code> language which was developed by John Chambers at Bell
+Laboratories. This software is currently maintained by the <code class="language-plaintext highlighter-rouge">R</code>
 Development Core Team, which consists of more than a dozen people, and
 includes Ihaka, Gentleman, and Chambers. Additionally, many other people
-have contributed code to <code class="highlighter-rouge">R</code> since it was first released. The source
-code for <code class="highlighter-rouge">R</code> is available under the GNU General Public Licence, meaning
+have contributed code to <code class="language-plaintext highlighter-rouge">R</code> since it was first released. The source
+code for <code class="language-plaintext highlighter-rouge">R</code> is available under the GNU General Public Licence, meaning
 that users can modify, copy, and redistribute the software or
-derivatives, as long as the modified source code is made available. <code class="highlighter-rouge">R</code>
+derivatives, as long as the modified source code is made available. <code class="language-plaintext highlighter-rouge">R</code>
 is regularly updated, however, changes are usually not major.</p>
 
-<h3 id="finding-and-installing-r">Finding and installing <code class="highlighter-rouge">R</code></h3>
+<h3 id="finding-and-installing-r">Finding and installing <code class="language-plaintext highlighter-rouge">R</code></h3>
 
-<p><code class="highlighter-rouge">R</code> is available for Windows, Mac, and Linux operating systems.
+<p><code class="language-plaintext highlighter-rouge">R</code> is available for Windows, Mac, and Linux operating systems.
 Installation files and instructions can be downloaded from the
-Comprehensive <code class="highlighter-rouge">R</code> Archive Network (<a href="http://cran.r-project.org/">CRAN</a>). Although the graphical user interface
-(GUI) differs slightly across systems, the <code class="highlighter-rouge">R</code> commands do not.</p>
+Comprehensive <code class="language-plaintext highlighter-rouge">R</code> Archive Network (<a href="http://cran.r-project.org/">CRAN</a>). Although the graphical user interface
+(GUI) differs slightly across systems, the <code class="language-plaintext highlighter-rouge">R</code> commands do not.</p>
 
-<h3 id="running-r-gui-and-scripts">Running <code class="highlighter-rouge">R</code>: GUI and scripts</h3>
+<h3 id="running-r-gui-and-scripts">Running <code class="language-plaintext highlighter-rouge">R</code>: GUI and scripts</h3>
 
-<p>There are two basic ways to use <code class="highlighter-rouge">R</code> on your machine: through the GUI,
-where <code class="highlighter-rouge">R</code> evaluates your code and returns results as you work, or by
-writing, saving, and then running <code class="highlighter-rouge">R</code> script files. <code class="highlighter-rouge">R</code> script files (or
-scripts) are just text files that contain the same types of <code class="highlighter-rouge">R</code> commands
-that you can submit to the GUI. Scripts can be submitted to <code class="highlighter-rouge">R</code> using
-the Windows command prompt, other shells, batch files, or the <code class="highlighter-rouge">R</code> GUI.
+<p>There are two basic ways to use <code class="language-plaintext highlighter-rouge">R</code> on your machine: through the GUI,
+where <code class="language-plaintext highlighter-rouge">R</code> evaluates your code and returns results as you work, or by
+writing, saving, and then running <code class="language-plaintext highlighter-rouge">R</code> script files. <code class="language-plaintext highlighter-rouge">R</code> script files (or
+scripts) are just text files that contain the same types of <code class="language-plaintext highlighter-rouge">R</code> commands
+that you can submit to the GUI. Scripts can be submitted to <code class="language-plaintext highlighter-rouge">R</code> using
+the Windows command prompt, other shells, batch files, or the <code class="language-plaintext highlighter-rouge">R</code> GUI.
 All the code covered in this workshop is or is able to be saved in a
-script file, which then can be submitted to <code class="highlighter-rouge">R</code>. Working directly in the
-<code class="highlighter-rouge">R</code> GUI is great for the early stages of code development, where much
+script file, which then can be submitted to <code class="language-plaintext highlighter-rouge">R</code>. Working directly in the
+<code class="language-plaintext highlighter-rouge">R</code> GUI is great for the early stages of code development, where much
 experimentation and trial-and-error occurs. For any code that you want
-to save, rerun, and modify, you should consider working with <code class="highlighter-rouge">R</code>
+to save, rerun, and modify, you should consider working with <code class="language-plaintext highlighter-rouge">R</code>
 scripts.</p>
 
 <p>So, how do you work with scripts? Any simple text editor works—you just
 need to save text in the ASCII format i.e. ‘unformatted’ text. You can
 save your scripts and either call them up using the command
-<code class="highlighter-rouge">source ('file_name.R')</code> in the <code class="highlighter-rouge">R</code> GUI, or, if you are using a shell
-(e.g. Windows command prompt) then type <code class="highlighter-rouge">R CMD BATCH file_name.R</code>. The
-Windows and Mac versions of the <code class="highlighter-rouge">R</code> GUI comes with a basic script
+<code class="language-plaintext highlighter-rouge">source ('file_name.R')</code> in the <code class="language-plaintext highlighter-rouge">R</code> GUI, or, if you are using a shell
+(e.g. Windows command prompt) then type <code class="language-plaintext highlighter-rouge">R CMD BATCH file_name.R</code>. The
+Windows and Mac versions of the <code class="language-plaintext highlighter-rouge">R</code> GUI comes with a basic script
 editor, shown below.</p>
 
 <figure>
@@ -244,16 +244,16 @@ version does not have syntax highlighting.</p>
 <p>There are some useful (in most cases, free) text editors available that
 can be set up with R syntax highlighting and other features. TINN-R is a
 <a href="https://tinn-r.soft112.com/download.html">free text editor</a> that is designed
-specifically for working with <code class="highlighter-rouge">R</code> script files. Notepad++ is a general
+specifically for working with <code class="language-plaintext highlighter-rouge">R</code> script files. Notepad++ is a general
 purpose text editor, but includes syntax highlighting and the ability to
-send code directly to <code class="highlighter-rouge">R</code> with the NppToR plugin. A list of text editors
-that work well with <code class="highlighter-rouge">R</code> can be found at
+send code directly to <code class="language-plaintext highlighter-rouge">R</code> with the NppToR plugin. A list of text editors
+that work well with <code class="language-plaintext highlighter-rouge">R</code> can be found at
 <a href="http://wiki.cbr.washington.edu/qerm/index.php/R/Editors">http://wiki.cbr.washington.edu/qerm/index.php/R/Editors</a>.</p>
 
 <h4 id="rstudio">RStudio</h4>
 
 <p><a href="https://posit.co/downloads/">RStudio</a> is an integrated development environment
-(IDE) for <code class="highlighter-rouge">R</code> that runs on Linux, Windows and Mac OS X. We will be using
+(IDE) for <code class="language-plaintext highlighter-rouge">R</code> that runs on Linux, Windows and Mac OS X. We will be using
 this IDE throughout all the exercises here, generally because it is very
 well designed, intuitively organized, and quite stable.</p>
 
@@ -266,27 +266,27 @@ will look similar to that in the figure below.</p>
 </figure>
 
 <p>The frame on the upper right contains the <em>workspace</em> (where you will be
-able see all your <code class="highlighter-rouge">R</code> objects), as well of a history of the commands
+able see all your <code class="language-plaintext highlighter-rouge">R</code> objects), as well of a history of the commands
 that you have previously entered. Any plots that you generate will show
 up in the region in the lower right corner. Also in this region is
 various help documentation, plus information and documentation regarding
 what packages and function are currently available to use .</p>
 
-<p>The frame on the left is where the action happens. This is the <code class="highlighter-rouge">R</code>
+<p>The frame on the left is where the action happens. This is the <code class="language-plaintext highlighter-rouge">R</code>
 console. Every time you launch RStudio, it will have the same text at
 the top of the console telling you the version that is being used. Below
 that information is the prompt. As the name suggests, this is where you
-enter commands into <code class="highlighter-rouge">R</code>. So lets enter some commands.</p>
+enter commands into <code class="language-plaintext highlighter-rouge">R</code>. So lets enter some commands.</p>
 
 <h3 id="r-basics-commands-expressions-assignments-operators-objects">R basics: commands, expressions, assignments, operators, objects</h3>
 
 <p>Before we start anything, it is good to get into the habit of making
 scripts of our work. With RStudio launched go t0 the <em>File</em> menu, then
 <em>new</em>, and <em>R Script</em>. A new blank window will open on the top left
-panel. Here you can enter your <code class="highlighter-rouge">R</code> prompts. For example, type the
-following: <code class="highlighter-rouge">1+1</code>. Now roll your pointer over the top of the panel to the
+panel. Here you can enter your <code class="language-plaintext highlighter-rouge">R</code> prompts. For example, type the
+following: <code class="language-plaintext highlighter-rouge">1+1</code>. Now roll your pointer over the top of the panel to the
 right pointing green arrow (first one), which is a button for running
-the line of code down to the <code class="highlighter-rouge">R</code> console. Click this button and <code class="highlighter-rouge">R</code> will
+the line of code down to the <code class="language-plaintext highlighter-rouge">R</code> console. Click this button and <code class="language-plaintext highlighter-rouge">R</code> will
 evaluate it. In the console you should see something like the following:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">1+1</span><span class="w">
@@ -296,17 +296,17 @@ evaluate it. In the console you should see something like the following:</p>
 
 <p>You could have just entered the command directly into the prompt and
 gotten the same result. Try it now for yourself. You will notice a
-couple of things about this code. The <code class="highlighter-rouge">&gt;</code> character is the prompt that
+couple of things about this code. The <code class="language-plaintext highlighter-rouge">&gt;</code> character is the prompt that
 will always be present in the GUI. The line following the command starts
-with a <code class="highlighter-rouge">[1]</code>, which is simply the position of the adjacent element in
+with a <code class="language-plaintext highlighter-rouge">[1]</code>, which is simply the position of the adjacent element in
 the output—this will make some sense later.</p>
 
 <p>For the above command, the result is printed to the screen and
 lost—there is no assignment involved. In order to do anything other than
 the simplest analyses, you must be able to store and recall data. In
-<code class="highlighter-rouge">R</code>, you can assign the results of commands to symbolic variables (as in
-other computer languages) using the assignment operator <code class="highlighter-rouge">&lt;-</code>. Note that
-other computer scripting languages often use the equals sign (<code class="highlighter-rouge">=</code>) as
+<code class="language-plaintext highlighter-rouge">R</code>, you can assign the results of commands to symbolic variables (as in
+other computer languages) using the assignment operator <code class="language-plaintext highlighter-rouge">&lt;-</code>. Note that
+other computer scripting languages often use the equals sign (<code class="language-plaintext highlighter-rouge">=</code>) as
 the assignment operator. When a command is used for assignment, the
 result is no longer printed to the GUI console.</p>
 
@@ -324,9 +324,9 @@ result is no longer printed to the GUI console.</p>
 </span></code></pre></div></div>
 
 <p>In this case, putting a space between the two characters that make up
-the assignment operator causes <code class="highlighter-rouge">R</code> to interpret the command as an
-expression that ask if <code class="highlighter-rouge">x</code> is less than zero. However spaces usually do
-not matter in <code class="highlighter-rouge">R</code>, as long as they do not separate a single operator or
+the assignment operator causes <code class="language-plaintext highlighter-rouge">R</code> to interpret the command as an
+expression that ask if <code class="language-plaintext highlighter-rouge">x</code> is less than zero. However spaces usually do
+not matter in <code class="language-plaintext highlighter-rouge">R</code>, as long as they do not separate a single operator or
 a variable name. This, for example, is fine:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="o">&lt;-</span><span class="w">   </span><span class="m">1</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="m">1</span><span class="w">
@@ -335,27 +335,27 @@ a variable name. This, for example, is fine:</p>
 </span><span class="c1">## [1] 2</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Note that you can recall a previous command in the <code class="highlighter-rouge">R</code> GUI by hitting
+<p>Note that you can recall a previous command in the <code class="language-plaintext highlighter-rouge">R</code> GUI by hitting
 the up arrow on your keyboard. This becomes handy when you are debugging
 code.</p>
 
-<p>When you give <code class="highlighter-rouge">R</code> an assignment, such as the one above, the object
-referred to as <code class="highlighter-rouge">x</code> is stored into the <code class="highlighter-rouge">R</code> workspace. You can see what is
+<p>When you give <code class="language-plaintext highlighter-rouge">R</code> an assignment, such as the one above, the object
+referred to as <code class="language-plaintext highlighter-rouge">x</code> is stored into the <code class="language-plaintext highlighter-rouge">R</code> workspace. You can see what is
 stored in the workspace by looking to the workspace panel in RStudio
-(top right panel). Alternatively, you can use the <code class="highlighter-rouge">ls()</code> function.</p>
+(top right panel). Alternatively, you can use the <code class="language-plaintext highlighter-rouge">ls()</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ls</span><span class="p">()</span><span class="w">
 
 </span><span class="c1">## [1] "x"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>To remove objects from your workspace, use <code class="highlighter-rouge">rm</code>.</p>
+<p>To remove objects from your workspace, use <code class="language-plaintext highlighter-rouge">rm</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
 </span><span class="n">x</span><span class="w">
 </span></code></pre></div></div>
 
-<p>As you can see, You will get an error if you try to evaluate what <code class="highlighter-rouge">x</code>
+<p>As you can see, You will get an error if you try to evaluate what <code class="language-plaintext highlighter-rouge">x</code>
 is.</p>
 
 <p>If you want to assign the same value to several symbolic variables, you
@@ -367,80 +367,80 @@ can use the following syntax.</p>
 </span><span class="c1">## [1] "x" "y" "z"</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">R</code> is a case-sensitive language. This is true for symbolic variable
-names, function names, and everything else in <code class="highlighter-rouge">R</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">R</code> is a case-sensitive language. This is true for symbolic variable
+names, function names, and everything else in <code class="language-plaintext highlighter-rouge">R</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1+1</span><span class="w">
 </span><span class="n">x</span><span class="w">
 </span><span class="n">X</span><span class="w">
 </span></code></pre></div></div>
 
-<p>In <code class="highlighter-rouge">R</code>, commands can be separated by moving onto a new line
+<p>In <code class="language-plaintext highlighter-rouge">R</code>, commands can be separated by moving onto a new line
 (i.e. hitting enter) or by typing a semicolon (;), which can be handy in
 scripts for condensing code. If a command is not completed in one line
-(by design or error), the typical <code class="highlighter-rouge">R</code> prompt <code class="highlighter-rouge">&gt;</code> is replaced with a <code class="highlighter-rouge">+</code>.</p>
+(by design or error), the typical <code class="language-plaintext highlighter-rouge">R</code> prompt <code class="language-plaintext highlighter-rouge">&gt;</code> is replaced with a <code class="language-plaintext highlighter-rouge">+</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="o">&lt;-</span><span class="w"> 
 </span><span class="o">+</span><span class="w">  </span><span class="m">1+1</span><span class="w">
 </span></code></pre></div></div>
 
-<p>There are several operators that are used in the <code class="highlighter-rouge">R</code> language. Some of
+<p>There are several operators that are used in the <code class="language-plaintext highlighter-rouge">R</code> language. Some of
 the more common are listed below. Until one starts using these
 frequently and within context these operators will seem quite foreign.</p>
 
 <h4 id="arithmetic">Arithmetic</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">+</code>, <code class="highlighter-rouge">-</code>,<code class="highlighter-rouge">*</code>, <code class="highlighter-rouge">/</code>, <code class="highlighter-rouge">^</code> equate to plus, minus, multiply, divide, and
+  <li><code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>,<code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">/</code>, <code class="language-plaintext highlighter-rouge">^</code> equate to plus, minus, multiply, divide, and
 power operations respectively.</li>
 </ul>
 
 <h4 id="relational-or-logical-operator">Relational or logical operator</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">a == b</code> means is <code class="highlighter-rouge">a</code> equal to <code class="highlighter-rouge">b</code> (do not confuse with =).</li>
-  <li><code class="highlighter-rouge">a != b</code> means is <code class="highlighter-rouge">a</code> not equal to <code class="highlighter-rouge">b</code>.</li>
-  <li><code class="highlighter-rouge">a &lt; b</code> means is <code class="highlighter-rouge">a</code> less than <code class="highlighter-rouge">b</code>.</li>
-  <li><code class="highlighter-rouge">a &gt; b</code> means is <code class="highlighter-rouge">a</code> greater than <code class="highlighter-rouge">b</code>.</li>
-  <li><code class="highlighter-rouge">a &lt;= b</code> means is <code class="highlighter-rouge">a</code> less than or equal to <code class="highlighter-rouge">b</code></li>
-  <li><code class="highlighter-rouge">a &gt;= b</code> means is <code class="highlighter-rouge">a</code> greater than or equal to <code class="highlighter-rouge">b</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a == b</code> means is <code class="language-plaintext highlighter-rouge">a</code> equal to <code class="language-plaintext highlighter-rouge">b</code> (do not confuse with =).</li>
+  <li><code class="language-plaintext highlighter-rouge">a != b</code> means is <code class="language-plaintext highlighter-rouge">a</code> not equal to <code class="language-plaintext highlighter-rouge">b</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">a &lt; b</code> means is <code class="language-plaintext highlighter-rouge">a</code> less than <code class="language-plaintext highlighter-rouge">b</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">a &gt; b</code> means is <code class="language-plaintext highlighter-rouge">a</code> greater than <code class="language-plaintext highlighter-rouge">b</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">a &lt;= b</code> means is <code class="language-plaintext highlighter-rouge">a</code> less than or equal to <code class="language-plaintext highlighter-rouge">b</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a &gt;= b</code> means is <code class="language-plaintext highlighter-rouge">a</code> greater than or equal to <code class="language-plaintext highlighter-rouge">b</code></li>
 </ul>
 
 <h4 id="logicalgrouping">Logical/grouping</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">!</code> not</li>
-  <li><code class="highlighter-rouge">&amp;</code> and</li>
-  <li><code class="highlighter-rouge">|</code> or</li>
+  <li><code class="language-plaintext highlighter-rouge">!</code> not</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;</code> and</li>
+  <li><code class="language-plaintext highlighter-rouge">|</code> or</li>
 </ul>
 
 <h4 id="indexing">Indexing</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">$</code> index a column of a data frame</li>
-  <li><code class="highlighter-rouge">[]</code> part of a data frame, array, list</li>
-  <li><code class="highlighter-rouge">[[]]</code> part of a list</li>
+  <li><code class="language-plaintext highlighter-rouge">$</code> index a column of a data frame</li>
+  <li><code class="language-plaintext highlighter-rouge">[]</code> part of a data frame, array, list</li>
+  <li><code class="language-plaintext highlighter-rouge">[[]]</code> part of a list</li>
 </ul>
 
 <h4 id="grouping-commands">Grouping commands}</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">{}</code> specifying a function, for loop, if statement etc.</li>
+  <li><code class="language-plaintext highlighter-rouge">{}</code> specifying a function, for loop, if statement etc.</li>
 </ul>
 
 <h4 id="making-sequences">Making sequences</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">a:b</code> returns the sequence <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">a+1</code>, <code class="highlighter-rouge">a+2</code>, <code class="highlighter-rouge">...</code> <code class="highlighter-rouge">b</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a:b</code> returns the sequence <code class="language-plaintext highlighter-rouge">a</code>, <code class="language-plaintext highlighter-rouge">a+1</code>, <code class="language-plaintext highlighter-rouge">a+2</code>, <code class="language-plaintext highlighter-rouge">...</code> <code class="language-plaintext highlighter-rouge">b</code></li>
 </ul>
 
 <h4 id="others">Others</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">#</code> commenting (very very useful!</li>
-  <li><code class="highlighter-rouge">;</code> alternative for separating commands</li>
-  <li><code class="highlighter-rouge">~</code> model formula specification</li>
-  <li><code class="highlighter-rouge">()</code> order of operations, function arguments.</li>
+  <li><code class="language-plaintext highlighter-rouge">#</code> commenting (very very useful!</li>
+  <li><code class="language-plaintext highlighter-rouge">;</code> alternative for separating commands</li>
+  <li><code class="language-plaintext highlighter-rouge">~</code> model formula specification</li>
+  <li><code class="language-plaintext highlighter-rouge">()</code> order of operations, function arguments.</li>
 </ul>
 
 <p>Commands in R operate on objects, which can be thought of as anything
@@ -449,7 +449,7 @@ matrices, factors, lists, data frames, and functions. Excluding
 functions, these objects are also referred to as data structures or data
 objects.</p>
 
-<p>When you want to finish up on an <code class="highlighter-rouge">R</code> session, RSudio will ask you if you
+<p>When you want to finish up on an <code class="language-plaintext highlighter-rouge">R</code> session, RSudio will ask you if you
 want to ``save workspace image’’. This refers to the workspace that
 you have created , i.e. all the objects you have created or even loaded.
 It is generally good practice to save your workspace after each session.
@@ -458,11 +458,11 @@ have created on your script file. Saving a script file in Rstudio is
 just like saving a Word document. Give both a go—save the script file
 and then save the workspace. You can then close RStudio.</p>
 
-<h3 id="r-data-types"><code class="highlighter-rouge">R</code> data types</h3>
+<h3 id="r-data-types"><code class="language-plaintext highlighter-rouge">R</code> data types</h3>
 
 <p>The term ‘data type’ refers to the type of data that is present in a
 data structure, and does not describe the data structure itself. There
-are four common types of data in <code class="highlighter-rouge">R</code>: numerical, character, logical, and
+are four common types of data in <code class="language-plaintext highlighter-rouge">R</code>: numerical, character, logical, and
 complex numbers. These are referred to as <em>modes</em> and are shown below:</p>
 
 <h4 id="numerical-data">Numerical data</h4>
@@ -481,20 +481,20 @@ complex numbers. These are referred to as <em>modes</em> and are shown below:</p
 </span><span class="c1">## [1] "James Carnation"</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Any time character data are entered in the <code class="highlighter-rouge">R</code> GUI, you must surround
-individual elements with quotes. Otherwise, <code class="highlighter-rouge">R</code> will look for an object.</p>
+<p>Any time character data are entered in the <code class="language-plaintext highlighter-rouge">R</code> GUI, you must surround
+individual elements with quotes. Otherwise, <code class="language-plaintext highlighter-rouge">R</code> will look for an object.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">John</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Either single or double quotes can be used in <code class="highlighter-rouge">R</code>. When character data
-are read into <code class="highlighter-rouge">R</code> from a file, the quotes are not necessary.</p>
+<p>Either single or double quotes can be used in <code class="language-plaintext highlighter-rouge">R</code>. When character data
+are read into <code class="language-plaintext highlighter-rouge">R</code> from a file, the quotes are not necessary.</p>
 
 <h4 id="logical-data">Logical data</h4>
 
-<p>Logical data contain only three values: <code class="highlighter-rouge">TRUE</code>, <code class="highlighter-rouge">FALSE</code>, or <code class="highlighter-rouge">NA</code>, (<code class="highlighter-rouge">NA</code>
-indicates a missing value - more on this later). <code class="highlighter-rouge">R</code> will also recognize
-<code class="highlighter-rouge">T</code> and <code class="highlighter-rouge">F</code>, (for true and false respectively), but these are not
+<p>Logical data contain only three values: <code class="language-plaintext highlighter-rouge">TRUE</code>, <code class="language-plaintext highlighter-rouge">FALSE</code>, or <code class="language-plaintext highlighter-rouge">NA</code>, (<code class="language-plaintext highlighter-rouge">NA</code>
+indicates a missing value - more on this later). <code class="language-plaintext highlighter-rouge">R</code> will also recognize
+<code class="language-plaintext highlighter-rouge">T</code> and <code class="language-plaintext highlighter-rouge">F</code>, (for true and false respectively), but these are not
 reserved, and can therefore be overwritten by the user, and it is
 therefore good to avoid using these shortened terms.</p>
 
@@ -505,7 +505,7 @@ therefore good to avoid using these shortened terms.</p>
 </span></code></pre></div></div>
 
 <p>Note that there are no quotes around the logical values (this would make
-them character data). <code class="highlighter-rouge">R</code> will return logical data for any relational
+them character data). <code class="language-plaintext highlighter-rouge">R</code> will return logical data for any relational
 expression submitted to it.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">4</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">2</span><span class="w">
@@ -522,7 +522,7 @@ expression submitted to it.</p>
 </span></code></pre></div></div>
 
 <p>And finally, complex numbers, which will not be covered in this
-workshop, are the final data type in <code class="highlighter-rouge">R</code></p>
+workshop, are the final data type in <code class="language-plaintext highlighter-rouge">R</code></p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cnum1</span><span class="o">&lt;-</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3i</span><span class="w">
 </span><span class="n">cnum1</span><span class="w">
@@ -530,7 +530,7 @@ workshop, are the final data type in <code class="highlighter-rouge">R</code></p
 </span><span class="c1">## [1] 10+3i</span><span class="w">
 </span></code></pre></div></div>
 
-<p>You can use the <code class="highlighter-rouge">mode</code> or <code class="highlighter-rouge">class</code> function to see what type of data is
+<p>You can use the <code class="language-plaintext highlighter-rouge">mode</code> or <code class="language-plaintext highlighter-rouge">class</code> function to see what type of data is
 stored in any symbolic variable.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">class</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w">
@@ -550,16 +550,16 @@ stored in any symbolic variable.</p>
 </span><span class="c1">## [1] "numeric"</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="r-data-structures"><code class="highlighter-rouge">R</code> data structures</h3>
+<h3 id="r-data-structures"><code class="language-plaintext highlighter-rouge">R</code> data structures</h3>
 
-<p>Data in <code class="highlighter-rouge">R</code> are stored in data structures (also known as data objects).
+<p>Data in <code class="language-plaintext highlighter-rouge">R</code> are stored in data structures (also known as data objects).
 These are and will be the things that you perform calculations on, plot
-data from, etc. Data structures in <code class="highlighter-rouge">R</code> include vectors, matrices,
+data from, etc. Data structures in <code class="language-plaintext highlighter-rouge">R</code> include vectors, matrices,
 arrays, data frames, lists, and factors. In a following section we will
 learn how to make use of these different data structures. The examples
 below simply give you an idea of their structure.</p>
 
-<p>Vectors are perhaps the most important type of data structure in <code class="highlighter-rouge">R</code>. A
+<p>Vectors are perhaps the most important type of data structure in <code class="language-plaintext highlighter-rouge">R</code>. A
 vector is simply an ordered collection of elements (e.g. individual
 numbers).</p>
 
@@ -679,9 +679,9 @@ up an object for holding some data later on.</p>
 
 <h3 id="missing-indefinite-and-infinite-values">Missing, indefinite, and infinite values</h3>
 
-<p>Real data sets often contain missing values. <code class="highlighter-rouge">R</code> uses the marker <code class="highlighter-rouge">NA</code>
+<p>Real data sets often contain missing values. <code class="language-plaintext highlighter-rouge">R</code> uses the marker <code class="language-plaintext highlighter-rouge">NA</code>
 (for <em>not available</em>) to indicate a missing value. Any operation carried
-out on an <code class="highlighter-rouge">NA</code> will return <code class="highlighter-rouge">NA</code>.</p>
+out on an <code class="language-plaintext highlighter-rouge">NA</code> will return <code class="language-plaintext highlighter-rouge">NA</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span><span class="w">
 </span><span class="n">x</span><span class="m">-2</span><span class="w">
@@ -689,9 +689,9 @@ out on an <code class="highlighter-rouge">NA</code> will return <code class="hig
 </span><span class="c1">## [1] NA</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Note that the <code class="highlighter-rouge">NA</code> used in <code class="highlighter-rouge">R</code> does not have the quotes around it as
+<p>Note that the <code class="language-plaintext highlighter-rouge">NA</code> used in <code class="language-plaintext highlighter-rouge">R</code> does not have the quotes around it as
 this would make it character data. To determine if a value is missing,
-use the <code class="highlighter-rouge">is.na</code> function.</p>
+use the <code class="language-plaintext highlighter-rouge">is.na</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">is.na</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
 
@@ -702,16 +702,16 @@ use the <code class="highlighter-rouge">is.na</code> function.</p>
 </span><span class="c1">## [1] FALSE</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Indefinite values are indicated with the marker <code class="highlighter-rouge">NaN</code>, for <em>not a
-number</em>. Infinite values are indicated with the markers <code class="highlighter-rouge">Inf</code> or <code class="highlighter-rouge">-Inf</code>.
-You can find these values with the functions <code class="highlighter-rouge">is.infinite</code>, <code class="highlighter-rouge">is.finite</code>,
-and <code class="highlighter-rouge">is.nan</code>.</p>
+<p>Indefinite values are indicated with the marker <code class="language-plaintext highlighter-rouge">NaN</code>, for <em>not a
+number</em>. Infinite values are indicated with the markers <code class="language-plaintext highlighter-rouge">Inf</code> or <code class="language-plaintext highlighter-rouge">-Inf</code>.
+You can find these values with the functions <code class="language-plaintext highlighter-rouge">is.infinite</code>, <code class="language-plaintext highlighter-rouge">is.finite</code>,
+and <code class="language-plaintext highlighter-rouge">is.nan</code>.</p>
 
 <h3 id="functions-arguments-and-packages">Functions, arguments, and packages</h3>
 
-<p>In <code class="highlighter-rouge">R</code>, you can carry out complicated and tedious procedures using
+<p>In <code class="language-plaintext highlighter-rouge">R</code>, you can carry out complicated and tedious procedures using
 functions. Functions require arguments, which include the object(s) that
-the function should act upon. For example, the function <code class="highlighter-rouge">sum</code> will
+the function should act upon. For example, the function <code class="language-plaintext highlighter-rouge">sum</code> will
 calculate the sum of all of its arguments.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">sum</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">12.5</span><span class="p">,</span><span class="m">3.33</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">88</span><span class="p">)</span><span class="w">
@@ -719,11 +719,11 @@ calculate the sum of all of its arguments.</p>
 </span><span class="c1">## [1] 109.83</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The arguments in (most) <code class="highlighter-rouge">R</code> functions can be named, i.e. by typing the
+<p>The arguments in (most) <code class="language-plaintext highlighter-rouge">R</code> functions can be named, i.e. by typing the
 name of the argument, an equal sign, and the argument value (arguments
 specified in this way are also called tagged). For example, for the
-function <code class="highlighter-rouge">plot</code>, the help file lists the following arguments:
-<code class="highlighter-rouge">plot (x, y,...)</code>.</p>
+function <code class="language-plaintext highlighter-rouge">plot</code>, the help file lists the following arguments:
+<code class="language-plaintext highlighter-rouge">plot (x, y,...)</code>.</p>
 
 <p>Therefore, we can call up this function with the following code.</p>
 
@@ -737,18 +737,18 @@ function <code class="highlighter-rouge">plot</code>, the help file lists the fo
     <figcaption>Simple R plot.</figcaption>
 </figure>
 
-<p>With named arguments, <code class="highlighter-rouge">R</code> recognizes the argument keyword (e.g. <code class="highlighter-rouge">x</code> or
-<code class="highlighter-rouge">y</code>) and assigns the given object (e.g. <code class="highlighter-rouge">a</code> or <code class="highlighter-rouge">b</code> above) to the correct
+<p>With named arguments, <code class="language-plaintext highlighter-rouge">R</code> recognizes the argument keyword (e.g. <code class="language-plaintext highlighter-rouge">x</code> or
+<code class="language-plaintext highlighter-rouge">y</code>) and assigns the given object (e.g. <code class="language-plaintext highlighter-rouge">a</code> or <code class="language-plaintext highlighter-rouge">b</code> above) to the correct
 argument. When using named arguments, the order of the arguments does
 not matter. We can also use what are called positional arguments, where
-<code class="highlighter-rouge">R</code> determines the meaning of the arguments based on their position.</p>
+<code class="language-plaintext highlighter-rouge">R</code> determines the meaning of the arguments based on their position.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>This code does the same as the previous code. The expected position of
 arguments can be found in the help file for the function you are working
-with or by asking <code class="highlighter-rouge">R</code> to list the arguments using the function.</p>
+with or by asking <code class="language-plaintext highlighter-rouge">R</code> to list the arguments using the function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">args</span><span class="p">(</span><span class="n">plot</span><span class="p">)</span><span class="w">
 
@@ -760,9 +760,9 @@ with or by asking <code class="highlighter-rouge">R</code> to list the arguments
 first few arguments in a function. After that, named arguments are
 easier to keep track of. Many functions also have default argument
 values that will be used if values are not specified in the function
-call. These default argument values can be seen by using the <code class="highlighter-rouge">args</code>
+call. These default argument values can be seen by using the <code class="language-plaintext highlighter-rouge">args</code>
 function and can also be found in the help files. For example, for the
-function <code class="highlighter-rouge">rnorm</code>, the arguments <code class="highlighter-rouge">mean</code> and <code class="highlighter-rouge">sd</code> have default values.</p>
+function <code class="language-plaintext highlighter-rouge">rnorm</code>, the arguments <code class="language-plaintext highlighter-rouge">mean</code> and <code class="language-plaintext highlighter-rouge">sd</code> have default values.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">args</span><span class="p">(</span><span class="n">rnorm</span><span class="p">)</span><span class="w">
 
@@ -772,14 +772,14 @@ function <code class="highlighter-rouge">rnorm</code>, the arguments <code class
 
 <p>Any time you want to call up a function, you must include parentheses
 after it, even if you are not specifying any arguments. If you do not
-include parentheses, <code class="highlighter-rouge">R</code> will return the function code (which at times
+include parentheses, <code class="language-plaintext highlighter-rouge">R</code> will return the function code (which at times
 might actually be useful).</p>
 
 <p>Note that it is not necessary to use explicit numerical values as
 function arguments—symbolic variable names which represent appropriate
 data structure can be used. it is also possible to use functions as
-arguments within functions. <code class="highlighter-rouge">R</code> will evaluate such expressions from the
-inside outward. While this may seem trivial, this quality makes <code class="highlighter-rouge">R</code> very
+arguments within functions. <code class="language-plaintext highlighter-rouge">R</code> will evaluate such expressions from the
+inside outward. While this may seem trivial, this quality makes <code class="language-plaintext highlighter-rouge">R</code> very
 flexible. There is no explicit limit to the degree of nesting that can
 be used. You could use:</p>
 
@@ -793,17 +793,17 @@ be used. You could use:</p>
 <p>The above code includes 5 levels of nesting (the sum of 8.4,1.2 and 7 is
 combined with the other values to form a vector, for which the mean is
 calculated, then the square root of this value is taken and used as the
-standard deviation in a call to <code class="highlighter-rouge">rnorm</code>, and the output of this call is
+standard deviation in a call to <code class="language-plaintext highlighter-rouge">rnorm</code>, and the output of this call is
 plotted). Of course, it is often easier to assign intermediate steps to
-symbolic variables. <code class="highlighter-rouge">R</code> evaluates nested expressions based on the values
+symbolic variables. <code class="language-plaintext highlighter-rouge">R</code> evaluates nested expressions based on the values
 that functions return or the data represented by symbolic variables. For
 example, if a function expects character data for a particular argument,
-then you can use a call to the function <code class="highlighter-rouge">paste</code> in place of explicit
+then you can use a call to the function <code class="language-plaintext highlighter-rouge">paste</code> in place of explicit
 character data.</p>
 
-<p>Many functions (including <code class="highlighter-rouge">sum</code>, <code class="highlighter-rouge">plot</code>, and <code class="highlighter-rouge">rnorm</code>) come with the <code class="highlighter-rouge">R</code>
+<p>Many functions (including <code class="language-plaintext highlighter-rouge">sum</code>, <code class="language-plaintext highlighter-rouge">plot</code>, and <code class="language-plaintext highlighter-rouge">rnorm</code>) come with the <code class="language-plaintext highlighter-rouge">R</code>
 base packages, i.e. they are loaded and ready to go as soon as you open
-<code class="highlighter-rouge">R</code>. These packages contain the most common functions. While the base
+<code class="language-plaintext highlighter-rouge">R</code>. These packages contain the most common functions. While the base
 packages include many useful functions, for specialized procedures, you
 should check out the content that is available in the add-on packages.
 The CRAN website currently lists more than 15000 (April 2020)
@@ -812,7 +812,7 @@ contributed. You can find a list of the available packages at the <a href="http:
 website</a>. During the course of these
 exercises and described in more detail later on, we will be looking at
 and using a number of specialized packages for application of DSM.
-Another repository of <code class="highlighter-rouge">R</code> packages is the <a href="https://r-forge.r-project.org/">R-Forge
+Another repository of <code class="language-plaintext highlighter-rouge">R</code> packages is the <a href="https://r-forge.r-project.org/">R-Forge
 website</a>. R-Forge offers a central
 platform for the development of R packages, R-related software and
 further projects. Packages in R-Forge are not necessarily always on the
@@ -823,7 +823,7 @@ revised functions to CRAN is not instantaneous. Code repository
 platforms such as <a href="https://github.com/">Github</a>,
 <a href="https://about.gitlab.com/">Gitlab</a> and
 <a href="https://bitbucket.org/product">Bitbucket</a> are also important platforms
-for developing, maintaining and sharing <code class="highlighter-rouge">R</code> packages amongst other
+for developing, maintaining and sharing <code class="language-plaintext highlighter-rouge">R</code> packages amongst other
 features.</p>
 
 <p>To utilize the functions in contributed R packages, you first need to
@@ -858,12 +858,12 @@ come to in later sections</p>
 
 <p>Installation is a one-time process, but packages must be loaded each
 time you want to use them. This is very simple, e.g., to load the
-package <code class="highlighter-rouge">Cubist</code>, use the following command.</p>
+package <code class="language-plaintext highlighter-rouge">Cubist</code>, use the following command.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">Cubist</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Similarly, if you want to install an <code class="highlighter-rouge">R</code> package from R-Forge (another
+<p>Similarly, if you want to install an <code class="language-plaintext highlighter-rouge">R</code> package from R-Forge (another
 popular hosting repository for R packages) you would use the following
 command:</p>
 
@@ -875,10 +875,10 @@ command:</p>
 These repositories as well as <a href="https://r-forge.r-project.org/">R-Forge</a> are version control systems that
 provide a central place for people to collaborate on everything from
 small to very large projects with speed and efficiency. The companion
-<code class="highlighter-rouge">R</code> package to these exercises, <code class="highlighter-rouge">ithir</code> is hosted on Github for
-example. <code class="highlighter-rouge">ithir</code> contains most of the data, and some important functions
+<code class="language-plaintext highlighter-rouge">R</code> package to these exercises, <code class="language-plaintext highlighter-rouge">ithir</code> is hosted on Github for
+example. <code class="language-plaintext highlighter-rouge">ithir</code> contains most of the data, and some important functions
 that are covered in this book so that users can replicate all of the
-analyses contained within. <code class="highlighter-rouge">ithir</code> can be downloaded and installed on
+analyses contained within. <code class="language-plaintext highlighter-rouge">ithir</code> can be downloaded and installed on
 your computer using the following commands:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">devtools</span><span class="p">)</span><span class="w">
@@ -888,8 +888,8 @@ your computer using the following commands:</p>
 
 <p>The above commands assumes your have already installed the devtools
 package. Any package that you want to use that is not included as one of
-the “base” packages, needs to be loaded every time you start <code class="highlighter-rouge">R</code>.
-Alternatively, you can add code to the file <code class="highlighter-rouge">Rprofile.site</code> that will be
+the “base” packages, needs to be loaded every time you start <code class="language-plaintext highlighter-rouge">R</code>.
+Alternatively, you can add code to the file <code class="language-plaintext highlighter-rouge">Rprofile.site</code> that will be
 executed every time you start R.</p>
 
 <p>You can find information on specific packages through CRAN, by browsing
@@ -897,74 +897,74 @@ to <a href="http://cran.r-project.org/">http://cran.r-project.org/</a> and selec
 package has a separate web page, which will include links to source
 code, and a pdf manual. In RStudio, you can select the <em>packages</em> tab on
 the lower right panel. You will then see all the package that are
-currently installed in your <code class="highlighter-rouge">R</code> environment. By clicking onto any
+currently installed in your <code class="language-plaintext highlighter-rouge">R</code> environment. By clicking onto any
 package, information on the various functions contained in the package,
 plus documentation and manuals for their usage. It becomes quite clear
 that within this RStudio environment, there is at your fingertips, a
 wealth of information for which to consult whenever you get stuck. When
 working with a new package, it is a good idea to read the manual.</p>
 
-<p>To ‘unload’ functions, use the <code class="highlighter-rouge">detach</code> function:</p>
+<p>To ‘unload’ functions, use the <code class="language-plaintext highlighter-rouge">detach</code> function:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">detach</span><span class="p">(</span><span class="s2">"package:Cubist"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>For tasks that you repeat, but which have no associated function in <code class="highlighter-rouge">R</code>,
+<p>For tasks that you repeat, but which have no associated function in <code class="language-plaintext highlighter-rouge">R</code>,
 or if you do not like the functions that are available, you can write
 your own functions. This will be covered a little a bit later on.
 Perhaps one day you may be able to compile all your functions that you
-have created into a <code class="highlighter-rouge">R</code> package for everyone else to use.</p>
+have created into a <code class="language-plaintext highlighter-rouge">R</code> package for everyone else to use.</p>
 
 <h3 id="getting-help">Getting help</h3>
 
 <p>It is usually easy to find the answer about specific functions or about
-<code class="highlighter-rouge">R</code> in general. There are several good introductory books on <code class="highlighter-rouge">R</code>. For
+<code class="language-plaintext highlighter-rouge">R</code> in general. There are several good introductory books on <code class="language-plaintext highlighter-rouge">R</code>. For
 example, <a href="http://www.amazon.com/R-Dummies-Joris-Meys/dp/1119962846">R for
 Dummies</a>,
 which has had many positive reviews. You can also find free detailed
-manuals on the CRAN website. Also, it helps to keep a copy of the <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf"><code class="highlighter-rouge">R</code>
+manuals on the CRAN website. Also, it helps to keep a copy of the <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf"><code class="language-plaintext highlighter-rouge">R</code>
 Reference
 Card</a>, which
 demonstrates the use of many common functions and operators in 4 pages.
 Often a <a href="https://www.google.com.au/">Google search</a> of your problem can
-be a very helpful and fruitful exercise. To limit the results to <code class="highlighter-rouge">R</code>
-related pages, adding <em>cran</em> to yoursearch generally works well. <code class="highlighter-rouge">R</code>
+be a very helpful and fruitful exercise. To limit the results to <code class="language-plaintext highlighter-rouge">R</code>
+related pages, adding <em>cran</em> to yoursearch generally works well. <code class="language-plaintext highlighter-rouge">R</code>
 even has an internet search engine of sorts called
 <a href="http://rseek.org/">rseek</a> which is really just like the Google search
-engine, but just for <code class="highlighter-rouge">R</code> stuff!</p>
+engine, but just for <code class="language-plaintext highlighter-rouge">R</code> stuff!</p>
 
-<p>Each function in <code class="highlighter-rouge">R</code> has a help file associated with it that explains
+<p>Each function in <code class="language-plaintext highlighter-rouge">R</code> has a help file associated with it that explains
 the syntax and usually includes an example. Help files are concisely
-written. You can bring up a help file by typing <code class="highlighter-rouge">?</code> and then the
+written. You can bring up a help file by typing <code class="language-plaintext highlighter-rouge">?</code> and then the
 function name.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">?</span><span class="n">cubist</span><span class="w">
 </span></code></pre></div></div>
 
-<p>This will bring up the help file for the <code class="highlighter-rouge">Cubist</code> function in the help
+<p>This will bring up the help file for the <code class="language-plaintext highlighter-rouge">Cubist</code> function in the help
 panel of RStudio. But, what if you are not sure what function you need
 for a particular task? How can you know what help file to open? In
 addition to the sources given below, you should try
-<code class="highlighter-rouge">help.search('keyword')</code> or <code class="highlighter-rouge">??keyword</code>, both of which search the <code class="highlighter-rouge">R</code>
+<code class="language-plaintext highlighter-rouge">help.search('keyword')</code> or <code class="language-plaintext highlighter-rouge">??keyword</code>, both of which search the <code class="language-plaintext highlighter-rouge">R</code>
 help files for whatever keyword you put in.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">??</span><span class="n">polygon</span><span class="w">
 </span></code></pre></div></div>
 
 <p>This will bring up a search results page in the help panel of RStudio of
-all the various help files that have something to do with <code class="highlighter-rouge">polygon</code>. In
+all the various help files that have something to do with <code class="language-plaintext highlighter-rouge">polygon</code>. In
 this case, i am only interested in a function that assesses whether a
 point is situated with a polygon. So looking down the list, one can see
-(provided the <code class="highlighter-rouge">SDMTools</code> package is installed) a function called
-<code class="highlighter-rouge">pnt.in.poly</code>. Clicking on this function, or submitting <code class="highlighter-rouge">?pnt.in.poly</code>
-to <code class="highlighter-rouge">R</code> will bring up the necessary help file.</p>
+(provided the <code class="language-plaintext highlighter-rouge">SDMTools</code> package is installed) a function called
+<code class="language-plaintext highlighter-rouge">pnt.in.poly</code>. Clicking on this function, or submitting <code class="language-plaintext highlighter-rouge">?pnt.in.poly</code>
+to <code class="language-plaintext highlighter-rouge">R</code> will bring up the necessary help file.</p>
 
-<p>There is an <code class="highlighter-rouge">R</code> help mailing list <a href="http://www.r-project.org/mail.html">http://www.r-project.org/mail.html</a>,
+<p>There is an <code class="language-plaintext highlighter-rouge">R</code> help mailing list <a href="http://www.r-project.org/mail.html">http://www.r-project.org/mail.html</a>,
 which can be very helpful. Before posting a question, be sure to search
 the mailing list archives, and check the posting guide
 <a href="http://www.r-project.org/posting-guide.html">http://www.r-project.org/posting-guide.html</a>.</p>
 
-<p>One of the best sources of help on <code class="highlighter-rouge">R</code> functions is the mailing list
+<p>One of the best sources of help on <code class="language-plaintext highlighter-rouge">R</code> functions is the mailing list
 archives <a href="http://cran.r-project.org/">http://cran.r-project.org/</a>, then select <em>search</em>, then
 <em>searchable mail archives</em>). Here you can find suggestions for functions
 for particular problems, help on using specific functions, and all kinds
@@ -975,7 +975,7 @@ by entering:</p>
 </span></code></pre></div></div>
 
 <p>For one more trick, to search for objects (including functions) that
-include a particular string, you can use the <code class="highlighter-rouge">apropos</code> function:</p>
+include a particular string, you can use the <code class="language-plaintext highlighter-rouge">apropos</code> function:</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">apropos</span><span class="p">(</span><span class="s2">"mean"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
@@ -989,17 +989,17 @@ add 12 to the result. Divide by 2, and then subtract your original
 number. Did you end up with 6.0?</p>
   </li>
   <li>
-    <p>If you want to work with a set of 10 numbers in <code class="highlighter-rouge">R</code>, something like
-this: <code class="highlighter-rouge">11, 8.3, 9.8, 9.6, 11.0, 12.0, 8.5, 9.9, 10.0,11.0</code></p>
+    <p>If you want to work with a set of 10 numbers in <code class="language-plaintext highlighter-rouge">R</code>, something like
+this: <code class="language-plaintext highlighter-rouge">11, 8.3, 9.8, 9.6, 11.0, 12.0, 8.5, 9.9, 10.0,11.0</code></p>
   </li>
 </ol>
 
 <ul>
-  <li>What type of data structure should you use to store these in <code class="highlighter-rouge">R</code>?</li>
+  <li>What type of data structure should you use to store these in <code class="language-plaintext highlighter-rouge">R</code>?</li>
   <li>What if you want to work with a data set that contains site names,
 site locations, soil categorical information, soil property
 information, and some terrain variables—what type of data structure
-should you use to store these in <code class="highlighter-rouge">R</code>?</li>
+should you use to store these in <code class="language-plaintext highlighter-rouge">R</code>?</li>
 </ul>
 
 <ol>
@@ -1011,14 +1011,14 @@ the arguments required for calling up the function. Detach the
 package when you are done.</p>
   </li>
   <li>
-    <p>Assign your full name to a variable called <code class="highlighter-rouge">my.name</code>. Print the
-value of <code class="highlighter-rouge">my.name</code>. Try to subtract 10 from <code class="highlighter-rouge">my.name</code>. Finally
-determine the type of data stored in <code class="highlighter-rouge">my.name</code> and 10 using the
-<code class="highlighter-rouge">class</code> function. If you are unsure of what <code class="highlighter-rouge">class</code> does, check out
+    <p>Assign your full name to a variable called <code class="language-plaintext highlighter-rouge">my.name</code>. Print the
+value of <code class="language-plaintext highlighter-rouge">my.name</code>. Try to subtract 10 from <code class="language-plaintext highlighter-rouge">my.name</code>. Finally
+determine the type of data stored in <code class="language-plaintext highlighter-rouge">my.name</code> and 10 using the
+<code class="language-plaintext highlighter-rouge">class</code> function. If you are unsure of what <code class="language-plaintext highlighter-rouge">class</code> does, check out
 the help file.</p>
   </li>
   <li>
-    <p>You are interested in seeing what functions <code class="highlighter-rouge">R</code> has for fitting
+    <p>You are interested in seeing what functions <code class="language-plaintext highlighter-rouge">R</code> has for fitting
 variograms (or some other topic of your choosing). Can you figure
 out how to search for relevant functions? Are you able to identify a
 function or two that may do what you want.</p>

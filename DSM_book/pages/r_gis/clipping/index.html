@@ -170,7 +170,7 @@
 
 <h3 id="clipping-rasters">Clipping rasters</h3>
 
-<p>In addition to <a href="/DSM_book/pages/r_gis/reprojs/">resampling and reprojecting rasters</a>, the other common GIS task needed to harmonise different data source is to clip them to a common spatial extent. Usually the clipping is done with the extent, or bounds of another layer usually a polygon, but can be another raster too. This short piece, shows a workflow for doing this procedure in <code class="highlighter-rouge">R</code> where we have a couple of different rasters, and a polygon.</p>
+<p>In addition to <a href="/DSM_book/pages/r_gis/reprojs/">resampling and reprojecting rasters</a>, the other common GIS task needed to harmonise different data source is to clip them to a common spatial extent. Usually the clipping is done with the extent, or bounds of another layer usually a polygon, but can be another raster too. This short piece, shows a workflow for doing this procedure in <code class="language-plaintext highlighter-rouge">R</code> where we have a couple of different rasters, and a polygon.</p>
 
 <p>The specific raster data with which to do the exercises is found
 <a href="/DSM_book/data/reproj.zip">here</a></p>
@@ -222,7 +222,7 @@ two:</p>
 </span><span class="c1">## max value   :  590.6609</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Next we load the polygon data which is called <code class="highlighter-rouge">clipper_polygon.shp</code>. The <code class="highlighter-rouge">vect</code> function comes from the <code class="highlighter-rouge">terra</code> library. The <code class="highlighter-rouge">sf</code> package may also be used to read in the polygon, but the integration of polygon tools into <code class="highlighter-rouge">terra</code> together with the usual raster tools makes for a simpler workflow.</p>
+<p>Next we load the polygon data which is called <code class="language-plaintext highlighter-rouge">clipper_polygon.shp</code>. The <code class="language-plaintext highlighter-rouge">vect</code> function comes from the <code class="language-plaintext highlighter-rouge">terra</code> library. The <code class="language-plaintext highlighter-rouge">sf</code> package may also be used to read in the polygon, but the integration of polygon tools into <code class="language-plaintext highlighter-rouge">terra</code> together with the usual raster tools makes for a simpler workflow.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly.clip</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">vect</span><span class="p">(</span><span class="s2">"~/clipper_polygon.shp"</span><span class="p">)</span><span class="w">
 </span><span class="n">poly.clip</span><span class="w">
@@ -236,7 +236,7 @@ two:</p>
 </span></code></pre></div></div>
 
 <p>Checking the CRS of each the the data sources, two have the same
-parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="highlighter-rouge">poly.clip</code>.</p>
+parameters; <code class="language-plaintext highlighter-rouge">rs.raster</code> and <code class="language-plaintext highlighter-rouge">poly.clip</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># CRS of data</span><span class="w">
 </span><span class="n">crs</span><span class="p">(</span><span class="n">rs.raster</span><span class="p">,</span><span class="n">describe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">proj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
@@ -261,16 +261,16 @@ parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="hi
 
 <ol>
   <li>
-    <p>Clip <code class="highlighter-rouge">rs.raster</code> with <code class="highlighter-rouge">poly.clip</code></p>
+    <p>Clip <code class="language-plaintext highlighter-rouge">rs.raster</code> with <code class="language-plaintext highlighter-rouge">poly.clip</code></p>
   </li>
   <li>
-    <p>Reproject the result from 1 to the same resolution and extent of <code class="highlighter-rouge">elev.raster</code>, and also reproject <code class="highlighter-rouge">poly.clip</code> to this same CRS. Then clip both rasters simultaneously with the reprojected polygon.</p>
+    <p>Reproject the result from 1 to the same resolution and extent of <code class="language-plaintext highlighter-rouge">elev.raster</code>, and also reproject <code class="language-plaintext highlighter-rouge">poly.clip</code> to this same CRS. Then clip both rasters simultaneously with the reprojected polygon.</p>
   </li>
 </ol>
 
-<h3 id="clip-rsraster-with-polyclip">Clip <code class="highlighter-rouge">rs.raster</code> with <code class="highlighter-rouge">poly.clip</code></h3>
+<h3 id="clip-rsraster-with-polyclip">Clip <code class="language-plaintext highlighter-rouge">rs.raster</code> with <code class="language-plaintext highlighter-rouge">poly.clip</code></h3>
 
-<p>The basic workflow is to use <code class="highlighter-rouge">crop</code>, <code class="highlighter-rouge">rasterize</code>, and <code class="highlighter-rouge">mask</code> from the <code class="highlighter-rouge">terra</code> package in sequential steps to:</p>
+<p>The basic workflow is to use <code class="language-plaintext highlighter-rouge">crop</code>, <code class="language-plaintext highlighter-rouge">rasterize</code>, and <code class="language-plaintext highlighter-rouge">mask</code> from the <code class="language-plaintext highlighter-rouge">terra</code> package in sequential steps to:</p>
 
 <ol>
   <li>Crop the raster data to extent of polygon,</li>
@@ -296,7 +296,7 @@ parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="hi
 
 <h3 id="clipping-multiple-rasters-simultaneously">Clipping multiple rasters simultaneously</h3>
 
-<p>First we use <code class="highlighter-rouge">terra::project</code> to make <code class="highlighter-rouge">rs.raster.clipped</code> from above to have the same CRS, resolution and extent as <code class="highlighter-rouge">elev.raster</code>.</p>
+<p>First we use <code class="language-plaintext highlighter-rouge">terra::project</code> to make <code class="language-plaintext highlighter-rouge">rs.raster.clipped</code> from above to have the same CRS, resolution and extent as <code class="language-plaintext highlighter-rouge">elev.raster</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## reproject clipped rs.raster to same as elev.raster</span><span class="w">
 </span><span class="n">rs.raster.reprojected</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">project</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs.raster.clipped</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elev.raster</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bilinear"</span><span class="p">)</span><span class="w">
@@ -319,7 +319,7 @@ parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="hi
 </span><span class="n">stack.rasters</span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">rs.raster.reprojected</span><span class="p">,</span><span class="n">elev.raster</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now reproject <code class="highlighter-rouge">poly.clip</code> to the same CRS as the <code class="highlighter-rouge">stack.raster</code> object created above. Here we are using <code class="highlighter-rouge">project</code> from the <code class="highlighter-rouge">terra</code> package.</p>
+<p>Now reproject <code class="language-plaintext highlighter-rouge">poly.clip</code> to the same CRS as the <code class="language-plaintext highlighter-rouge">stack.raster</code> object created above. Here we are using <code class="language-plaintext highlighter-rouge">project</code> from the <code class="language-plaintext highlighter-rouge">terra</code> package.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">poly.clip.reprojected</span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">project</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poly.clip</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">crs</span><span class="p">(</span><span class="n">stack.rasters</span><span class="p">))</span><span class="w">
 </span><span class="n">poly.clip.reprojected</span><span class="w">
@@ -333,7 +333,7 @@ parameters; <code class="highlighter-rouge">rs.raster</code> and <code class="hi
 </span><span class="c1">##  type        : &lt;int&gt;</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now clipping proceeds as we did above but this time the target are the two rasters in <code class="highlighter-rouge">stack.rasters</code>.</p>
+<p>Now clipping proceeds as we did above but this time the target are the two rasters in <code class="language-plaintext highlighter-rouge">stack.rasters</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># crop the stacked rasters to extent of polygon</span><span class="w">
 </span><span class="n">cr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">crop</span><span class="p">(</span><span class="n">stack.rasters</span><span class="p">,</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">ext</span><span class="p">(</span><span class="n">poly.clip.reprojected</span><span class="p">),</span><span class="w"> </span><span class="n">snap</span><span class="o">=</span><span class="s2">"out"</span><span class="p">)</span><span class="w">     

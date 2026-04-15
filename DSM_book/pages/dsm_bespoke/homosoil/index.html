@@ -174,7 +174,7 @@
   <li><a href="#s-1">Homosoil: a procedure for identifying areas with similar soil forming factors</a></li>
   <li><a href="#s-2">Global climate, lithology and topography data</a></li>
   <li><a href="#s-3">Estimation of similarity</a></li>
-  <li><a href="#s-4">The<code class="highlighter-rouge">homosoil</code> function</a></li>
+  <li><a href="#s-4">The<code class="language-plaintext highlighter-rouge">homosoil</code> function</a></li>
   <li><a href="#s-5">Example of finding soil homologues</a></li>
 </ul>
 
@@ -188,7 +188,7 @@
 
 <p>Homosoil, is a concept proposed by Mallavan et al. (2010) which assumes the homology of predictive soil-forming factors between a reference area and the region of interest. These include: climate, parent materials, and physiography of the area.</p>
 
-<p>The <code class="highlighter-rouge">R</code> function, <code class="highlighter-rouge">homosoil</code> was developed to illustrate the concept.</p>
+<p>The <code class="language-plaintext highlighter-rouge">R</code> function, <code class="language-plaintext highlighter-rouge">homosoil</code> was developed to illustrate the concept.</p>
 
 <p>It is relatively simple whereby, given any location (latitude, longitude) in the world, the function will determine other areas in the world that share similar climate, lithology and topography. Shortly we will unpack the function into its elemental components. First we will describe the data and how to measure similarity between sites.</p>
 
@@ -208,7 +208,7 @@
 
 <p>The <a href="https://www.clisap.de/fileadmin/B-Research/IA/IA5/LIT OMAP/">lithology is from a global digital</a> map which represent the different broad groups of parent materials. The lithology classes are: non- or semi-consolidated sediments, mixed consolidated sediments, silic-clastic sediments, acid volcanic rocks, basic volcanic rocks, complex of metamorphic and igneous rocks, and complex lithology.</p>
 
-<p>This global data is available as a data.frame from the <code class="highlighter-rouge">ithir</code> package.</p>
+<p>This global data is available as a data.frame from the <code class="language-plaintext highlighter-rouge">ithir</code> package.</p>
 
 <p><a href="#top">Back to top</a></p>
 
@@ -222,7 +222,7 @@
 
 <p>Considering the scale and the resolution of this study and the available global data (0.5<sup>∘</sup> × 0.5<sup>∘</sup>), the climatic factor is probably the most important and reliable soil forming factor. This is inspired by the study of Bui et al. (2006) who showed at continental extent, the state factors of soil formation form a hierarchy of interacting variables, with climate being the most important factor, and different climatic variables dominate in different regions. This is not to say that climate to be the most important factor at all scales. Their results also show that lithology is almost equally important in defining broad scale spatial patterns of soil properties, and shorter-range variability in soil properties appears to be driven more by terrain variables.</p>
 
-<p>In the <code class="highlighter-rouge">homosoil</code> function, the execution sequence is:</p>
+<p>In the <code class="language-plaintext highlighter-rouge">homosoil</code> function, the execution sequence is:</p>
 
 <ol>
   <li>Identify homoclimes around the world, and</li>
@@ -235,19 +235,19 @@
 
 <p><a href="#top">Back to top</a></p>
 
-<h3 id="thehomosoil-function-">The<code class="highlighter-rouge">homosoil</code> function <a id="s-4"></a></h3>
+<h3 id="thehomosoil-function-">The<code class="language-plaintext highlighter-rouge">homosoil</code> function <a id="s-4"></a></h3>
 
-<p>Essentially from below we are creating the <code class="highlighter-rouge">homosoil</code> function. This function takes three inputs:</p>
+<p>Essentially from below we are creating the <code class="language-plaintext highlighter-rouge">homosoil</code> function. This function takes three inputs:</p>
 
 <ol>
-  <li><code class="highlighter-rouge">grid.data</code>, which is the global environmental dataset,</li>
-  <li>And <code class="highlighter-rouge">recipient.lon</code> and <code class="highlighter-rouge">recipient.lat</code>, which correspond the coordinates of the sites to which we want to find soil homologues.</li>
+  <li><code class="language-plaintext highlighter-rouge">grid.data</code>, which is the global environmental dataset,</li>
+  <li>And <code class="language-plaintext highlighter-rouge">recipient.lon</code> and <code class="language-plaintext highlighter-rouge">recipient.lat</code>, which correspond the coordinates of the sites to which we want to find soil homologues.</li>
 </ol>
 
-<p>For brevity we will call this the recipient site. Inside the <code class="highlighter-rouge">homosoil</code> function, we first encounter another function which is an encoding of the Gower’s similarity measure as defined previously. This is followed by a number of indexation steps (to make the following steps clearer to implement), where we explicitly make groupings of the data, for example the object <code class="highlighter-rouge">grid.climate</code> is composed of all the global climate information from the <code class="highlighter-rouge">grid.data</code> object. Finally make the object <code class="highlighter-rouge">world.grid</code> which is a <code class="highlighter-rouge">data.frame</code> for putting outputs of the function into. Ultimately this object will get returned at the end of the function execution.</p>
+<p>For brevity we will call this the recipient site. Inside the <code class="language-plaintext highlighter-rouge">homosoil</code> function, we first encounter another function which is an encoding of the Gower’s similarity measure as defined previously. This is followed by a number of indexation steps (to make the following steps clearer to implement), where we explicitly make groupings of the data, for example the object <code class="language-plaintext highlighter-rouge">grid.climate</code> is composed of all the global climate information from the <code class="language-plaintext highlighter-rouge">grid.data</code> object. Finally make the object <code class="language-plaintext highlighter-rouge">world.grid</code> which is a <code class="language-plaintext highlighter-rouge">data.frame</code> for putting outputs of the function into. Ultimately this object will get returned at the end of the function execution.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Gower's similarity function</span><span class="w">
-</span><span class="n">gower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">c</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">c</span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="m">2</span><span class="p">)</span><span class="o">/</span><span class="n">r</span><span class="p">)</span><span class="w">
+</span><span class="n">gower</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">c1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c2</span><span class="p">)</span><span class="o">/</span><span class="n">r</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># indexation of data groups</span><span class="w">
 </span><span class="n">grid.lon</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">grid_data</span><span class="p">[,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span><span class="w">
@@ -274,20 +274,20 @@
 </span><span class="n">recipient.topo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">grid.topo</span><span class="p">[</span><span class="n">imin</span><span class="p">,]</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Starting with climate, we want to estimate Gower’s similarity measure. Firstly we estimate the range of values for each variable. Note the use of the <code class="highlighter-rouge">apply</code> function, which facilitates an efficient way to estimate ranges for each variable. Then using our <code class="highlighter-rouge">gower</code> function, we perform the similarity calculation. This is done for each variable. The <code class="highlighter-rouge">mapply</code> function allows us to do this without the need to use a <code class="highlighter-rouge">for</code> loop. We then take the mean of these values, to which corresponds to the Gower’s similarity measure and which is saved to the object <code class="highlighter-rouge">Sr</code>.</p>
+<p>Starting with climate, we want to estimate Gower’s similarity measure. Firstly we estimate the range of values for each variable. Note the use of the <code class="language-plaintext highlighter-rouge">apply</code> function, which facilitates an efficient way to estimate ranges for each variable. Then using our <code class="language-plaintext highlighter-rouge">gower</code> function, we perform the similarity calculation. This is done for each variable. The <code class="language-plaintext highlighter-rouge">mapply</code> function allows us to do this without the need to use a <code class="language-plaintext highlighter-rouge">for</code> loop. We then take the mean of these values, to which corresponds to the Gower’s similarity measure and which is saved to the object <code class="language-plaintext highlighter-rouge">Sr</code>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># CALCULATE HOMOCLIME range of climate variables</span><span class="w">
 </span><span class="n">rv</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">grid.climate</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">range</span><span class="p">)</span><span class="w">
 </span><span class="n">rr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rv</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">rv</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
 
 </span><span class="c1"># calculate similarity to all variables in the grid</span><span class="w">
-</span><span class="n">S</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">mapply</span><span class="p">(</span><span class="n">gower</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grid.climate</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="m">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recipient.climate</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rr</span><span class="p">))</span><span class="w">
+</span><span class="n">S</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">mapply</span><span class="p">(</span><span class="n">gower</span><span class="p">,</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grid.climate</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recipient.climate</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rr</span><span class="p">))</span><span class="w">
 
 </span><span class="c1"># take the average</span><span class="w">
 </span><span class="n">Sr</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We can then determine which grid points are most similar to the recipient site. Here we use an arbitrarily selected cutoff of 0.85 which corresponds to the top <em>15</em>% of grid data similar to the recipient site. Lastly, we save the results of the homocline analysis to the <code class="highlighter-rouge">world.grid</code> object.</p>
+<p>We can then determine which grid points are most similar to the recipient site. Here we use an arbitrarily selected cutoff of 0.85 which corresponds to the top <em>15</em>% of grid data similar to the recipient site. Lastly, we save the results of the homocline analysis to the <code class="language-plaintext highlighter-rouge">world.grid</code> object.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># row index for homoclime with top 15% similarity.</span><span class="w">
 </span><span class="n">iclim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">Sr</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">quantile</span><span class="p">(</span><span class="n">Sr</span><span class="p">,</span><span class="w"> </span><span class="m">0.85</span><span class="p">),</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
@@ -303,7 +303,7 @@
 
 <p>Now we want to find within the areas we have defined as homocline, areas that are homolith. We simply want to find the lithology match between the recipient site and global lithology.</p>
 
-<p>We can do this for the entire globe, and then index those sites that also correspond to homoclines. Again, we save the results of the homolith analysis to the <code class="highlighter-rouge">world.grid</code> object.</p>
+<p>We can do this for the entire globe, and then index those sites that also correspond to homoclines. Again, we save the results of the homolith analysis to the <code class="language-plaintext highlighter-rouge">world.grid</code> object.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># CALCULATE HOMOLITH find within homoclime, areas with homolith</span><span class="w">
 </span><span class="n">ilith</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">grid.lith</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">recipient.lith</span><span class="p">,</span><span class="w"> </span><span class="n">arr.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
@@ -322,7 +322,7 @@
 </span><span class="n">rt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rv</span><span class="p">[</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">rv</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">
 
 </span><span class="c1"># calculate similarity of topographic variables</span><span class="w">
-</span><span class="n">Sa</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">mapply</span><span class="p">(</span><span class="n">gower</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grid.topo</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="m">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recipient.topo</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rt</span><span class="p">))</span><span class="w">
+</span><span class="n">Sa</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">mapply</span><span class="p">(</span><span class="n">gower</span><span class="p">,</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grid.topo</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recipient.topo</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rt</span><span class="p">))</span><span class="w">
 </span><span class="n">St</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">Sa</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">)</span><span class="w">  </span><span class="c1"># take the average</span><span class="w">
 
 </span><span class="c1"># row index for homotop</span><span class="w">
@@ -343,17 +343,17 @@
 <p>That more-or-less completes the homosoil analysis. The last few tasks are to create a raster object of the soil homologues.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># homologue raster object</span><span class="w">
-</span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">world.grid</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)],</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"xyz"</span><span class="p">)</span><span class="w">
-</span><span class="n">r</span><span class="m">1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">)</span><span class="w">
-</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+</span><span class="n">r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">terra</span><span class="o">::</span><span class="n">rast</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">world.grid</span><span class="p">[,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)],</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"xyz"</span><span class="p">)</span><span class="w">
+</span><span class="n">r1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="w">
+</span><span class="n">rat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">levels</span><span class="p">(</span><span class="n">r1</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
 </span><span class="n">rat</span><span class="p">[[</span><span class="s2">"homologue"</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="s2">"homocline"</span><span class="p">,</span><span class="w"> </span><span class="s2">"homolith"</span><span class="p">,</span><span class="w"> </span><span class="s2">"homotop"</span><span class="p">)</span><span class="w">
-</span><span class="n">levels</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
+</span><span class="n">levels</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rat</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Followed by directing the <code class="highlighter-rouge">homosoil</code> function to save the relevant outputs which here are the <code class="highlighter-rouge">world.grid</code> object and the raster object of the soil homologues. Then finally we close the function.</p>
+<p>Followed by directing the <code class="language-plaintext highlighter-rouge">homosoil</code> function to save the relevant outputs which here are the <code class="language-plaintext highlighter-rouge">world.grid</code> object and the raster object of the soil homologues. Then finally we close the function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># return outputs</span><span class="w">
-</span><span class="n">retval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">r</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">world.grid</span><span class="p">)</span><span class="w">
+</span><span class="n">retval</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">world.grid</span><span class="p">)</span><span class="w">
 </span><span class="nf">return</span><span class="p">(</span><span class="n">retval</span><span class="p">)}</span><span class="w">
 </span></code></pre></div></div>
 
@@ -361,20 +361,20 @@
 
 <h3 id="example-of-finding-soil-homologues-">Example of finding soil homologues <a id="s-5"></a></h3>
 
-<p>With the <code class="highlighter-rouge">homosoil</code> function now established, let’s put it to use. The coordinates below correspond to a location which here is Canberra, Australia <a id="s-6"></a>.</p>
+<p>With the <code class="language-plaintext highlighter-rouge">homosoil</code> function now established, let’s put it to use. The coordinates below correspond to a location which here is Canberra, Australia <a id="s-6"></a>.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## SITE LOCATION (Canberra, Australia)</span><span class="w">
 </span><span class="n">recipient.lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-35.2809</span><span class="w">
 </span><span class="n">recipient.lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">149.13</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Now we run the <code class="highlighter-rouge">homosoil</code> function.</p>
+<p>Now we run the <code class="language-plaintext highlighter-rouge">homosoil</code> function.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## RUN FUNCTION</span><span class="w">
 </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">homosoil</span><span class="p">(</span><span class="n">grid_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">homosoil_globeDat</span><span class="p">,</span><span class="w"> </span><span class="n">recipient.lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recipient.lon</span><span class="p">,</span><span class="w"> </span><span class="n">recipient.lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recipient.lat</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Then we plot the result. Here we want to use the map object that was created inside the <code class="highlighter-rouge">homosoil</code> function. We also specify colors to correspond the non-homologue areas, homoclines, homoliths, and homotops. Because of the hierarchical nature of the homosoil analysis, essentially the homotops are the soil homologues to the recipient site.</p>
+<p>Then we plot the result. Here we want to use the map object that was created inside the <code class="language-plaintext highlighter-rouge">homosoil</code> function. We also specify colors to correspond the non-homologue areas, homoclines, homoliths, and homotops. Because of the hierarchical nature of the homosoil analysis, essentially the homotops are the soil homologues to the recipient site.</p>
 
 <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get the map</span><span class="w">
 </span><span class="n">map.out</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">result</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
@@ -397,7 +397,7 @@
     <figcaption> Soil homologues of soils at Canberra, Australia (black dot on map).</figcaption>
 </figure>
 
-<p>Using the other object that is returned from the <code class="highlighter-rouge">homosoil</code> function (which was the <code class="highlighter-rouge">world.grid</code> data frame used to put the analysis outputs into) we can also map out the homologues individually, for example, we may just want to map the homoclines. It is always fun just to play around with the function to try out different locations and see what corresponding homologues are found. The results might be surprising. However, the resolution of the data is limiting, so please take this into consideration.</p>
+<p>Using the other object that is returned from the <code class="language-plaintext highlighter-rouge">homosoil</code> function (which was the <code class="language-plaintext highlighter-rouge">world.grid</code> data frame used to put the analysis outputs into) we can also map out the homologues individually, for example, we may just want to map the homoclines. It is always fun just to play around with the function to try out different locations and see what corresponding homologues are found. The results might be surprising. However, the resolution of the data is limiting, so please take this into consideration.</p>
 
 <p><a href="#top">Back to top</a></p>
 
