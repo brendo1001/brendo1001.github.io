@@ -4,13 +4,57 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-08-06T21:18:41+10:00</updated>
+<updated>2026-08-14T10:59:36+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/08/journalDigest" />
+  <id>/2026/08/journalDigest</id>
+  <updated>2026-08-14T00:00:00-00:00</updated>
+  <published>2026-08-14T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-19&quot;&gt;Journal Paper Digests 2026 #19&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Microbial construction of soil structure: Modeling soil aggregation dynamics under periodic disturbances&lt;/li&gt;
+  &lt;li&gt;Predicting Soil Nitrogen Mineralization Rate in Agricultural Soils Using Near Infrared Reflectance Spectroscopy (NIRS): A Laboratory Incubation Study&lt;/li&gt;
+  &lt;li&gt;Soil spatial scaling: Local measurements to global policy&lt;/li&gt;
+  &lt;li&gt;Spatiotemporal modelling of soil organic carbon: integrating process-based and machine learning approaches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;spatiotemporal-modelling-of-soil-organic-carbon-integrating-process-based-and-machine-learning-approaches&quot;&gt;Spatiotemporal modelling of soil organic carbon: integrating process-based and machine learning approaches&lt;/h3&gt;
+
+&lt;p&gt;Soil organic carbon (SOC) underpins the global carbon cycle and represents a central lever for climate change mitigation and food security. Yet its accurate spatiotemporal quantification remains a challenge, owing to the complex interactions among biological, chemical and physical processes operating across scales. This review critically evaluates the current state of SOC spatiotemporal modelling frameworks and their limitations, and future directions. Process-based models provide mechanistic insight into carbon dynamics but are constrained by parameterisation, structural assumptions and computational demands. In contrast, machine-learning (ML) approaches excel at capturing spatial patterns from large datasets but often struggle to represent temporal kinetics, enforce physical consistency or generalise across scales and environmental contexts. We argue that the next generation of SOC modelling will emerge from the convergence of process-based understanding and data-driven inference through knowledge-guided ML and hybrid modelling strategies. We synthesise four principal integration pathways: (1) meta-modelling to accelerate computationally intensive simulations; (2) sequential hybridisation to embed mechanistic trends as dynamic covariates; (3) ensemble frameworks to reduce structural uncertainty; and (4) data assimilation to constrain model trajectories with observations. We further highlight emerging frontiers, including residual and parameter learning, physics-informed neural networks, foundation models for earth observations, and omics-informed frameworks that link microbial functional potential to carbon turnover processes. We conclude that progress toward causally interpretable, uncertainty-aware monitoring frameworks will require tighter integration of mechanistic theory, interpretable artificial intelligence and cross-scale data synthesis.&lt;/p&gt;
+
+&lt;h3 id=&quot;soil-spatial-scaling-local-measurements-to-global-policy&quot;&gt;Soil spatial scaling: Local measurements to global policy&lt;/h3&gt;
+
+&lt;p&gt;Soil spatial variability extends from nanometres to continental scales, yet a unifying theoretical framework to explain how variability emerges and propagates across these scales remains absent. This limitation constrains the ability of soil science to predict behaviour under global change, upscale local observations for policy, and safeguard soil-derived ecosystem services. This review synthesises the development of soil spatial scaling research, critically evaluating established statistical and geostatistical approaches that have provided insights into heterogeneity and scale-dependent variance. However, while these methods effectively describe spatial patterns, they often fail to explain the mechanisms driving variability or connect processes across scales. To address this challenge, we draw from statistical physics, percolation theory, network science, and ecological scaling to propose the Soil Scaling Tensor (SST) framework. The SST integrates four components—structural, functional, interaction, and property scaling—into a mathematical formulation that explicitly incorporates the physical, chemical, and biological processes generating observed scaling behaviours. Unlike conventional approaches, the SST can account for anisotropy, scale dependence, and cross-scale interactions, while providing transformation rules for both upscaling and downscaling. Implementation of the SST requires multiscale sampling strategies, systematic criteria for selecting theoretical approaches, and robust validation procedures. SST requires more work to make it operational. Overall, advancing soil spatial scaling is essential for soil security, providing the predictive capacity required to support sustainable land management, food security, climate change mitigation, and biodiversity protection in an era of global environmental change.&lt;/p&gt;
+
+&lt;h3 id=&quot;predicting-soil-nitrogen-mineralization-rate-in-agricultural-soils-using-near-infrared-reflectance-spectroscopy-nirs-a-laboratory-incubation-study&quot;&gt;Predicting Soil Nitrogen Mineralization Rate in Agricultural Soils Using Near Infrared Reflectance Spectroscopy (NIRS): A Laboratory Incubation Study&lt;/h3&gt;
+
+&lt;p&gt;For spring-sown crops such as maize (Zea mays L.), the extended growing season enables a substantial contribution of organically derived nitrogen (N), particularly from soil organic matter (SOM) mineralization. Consequently, the soil N mineralization rate (SMR) is a key determinant of maize N uptake and yield formation. Year-to-year and spatial variability in climate, soil properties, and management practices introduce considerable fluctuations in SMR, making it a major source of uncertainty in site-specific N management. Near-infrared reflectance spectroscopy (NIRS) offers a rapid, cost-efficient and scalable tool with strong potential for improving SMR estimation and, consequently, site-specific N management in maize production. In this study, 268 soil samples were collected across Germany with varying SOM content and incubated for 105 days to simulate the maize growing period, allowing laboratory quantification of SMR. Simultaneously, NIRS spectra (1100–2498 nm) were collected, preprocessed, and SMR was modelled using Partial Least Squares Regression (PLSR) and different machine learning (ML) algorithms. SMR was modelled more accurately by ML approaches, with non-linear models such as the stacked ensemble model (R2 = 0.72, RMSE = 0.21 kg N ha−1 day−1) or random forest (R2 = 0.70, RMSE = 0.20 kg N ha−1 day−1) outperforming PLSR (R2 = 0.55, RMSE = 0.33 kg N ha−1 day−1). Incorporating ancillary soil and management data did not improve performance. NIRS-ML modelling improved SMR prediction by up to 36%, with slight underestimation of laboratory-measured SMR values due to indirect spectral relationship with NIRS. Nevertheless, the approach shows great potential as a rapid and scalable tool for SMR estimation, warranting further model refinement and validation across diverse environments.&lt;/p&gt;
+
+&lt;h3 id=&quot;microbial-construction-of-soil-structure-modeling-soil-aggregation-dynamics-under-periodic-disturbances&quot;&gt;Microbial construction of soil structure: Modeling soil aggregation dynamics under periodic disturbances&lt;/h3&gt;
+
+&lt;p&gt;Soil structure and microbial activity are interdependent components of terrestrial ecosystems, especially in agricultural contexts, where soil health is crucial. This study presents a mathematical model that explicitly represents habitat-mediated positive feedback between microbial biomass and soil aggregation, in which aggregate development increases the capacity of the soil to support microbial growth. Disturbance simulations representing pesticide application and tillage revealed marked asymmetry in the system response. Microbial biomass recovered rapidly after repeated biomass reductions, whereas repeated aggregate disruptions caused persistent degradation of both soil structure and microbial biomass. Sensitivity analyses showed that this asymmetry was robust across a broad range of parameters and was strongly constrained by the rate of macroaggregate formation. These findings align with long-term field observations, suggesting that preserving the physical structure of the soil is more critical for ecosystem resilience than preserving microbial abundance. This study provides a theoretical foundation for sustainable soil management by emphasizing the fundamental role of microbe–aggregate interactions.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/08/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on August 14, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1100,45 +1144,6 @@ Accurate runoff forecasting helps mitigate flooding and drought risks and ensure
 
 
     &lt;p&gt;&lt;a href=&quot;/2026/01/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on January 21, 2026.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2024/03/journalDigest" />
-  <id>/2024/03/journalDigest</id>
-  <updated>2024-03-07T00:00:00-00:00</updated>
-  <published>2024-03-07T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2024-5&quot;&gt;Journal Paper Digests 2024 #5&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Global cropland nitrous oxide emissions in fallow period are comparable to growing-season emissions&lt;/li&gt;
-  &lt;li&gt;Soil properties shape the heterogeneity of denitrification and N2O emissions across large-scale flooded paddy soils&lt;/li&gt;
-  &lt;li&gt;Why make inverse modeling and which methods to use in agriculture? A review&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h3 id=&quot;why-make-inverse-modeling-and-which-methods-to-use-in-agriculture-a-review&quot;&gt;Why make inverse modeling and which methods to use in agriculture? A review&lt;/h3&gt;
-
-&lt;p&gt;Inverse modeling (IM) is a valuable tool in agriculture for estimating model parameters that aid in decision-making. It is particularly useful when parameters cannot be directly measured or easily estimated due to logistical constraints in agricultural settings. Unlike other estimation methods, IM combines a mechanistic model with observations of its outputs to derive the parameters of interest, allowing for the integration of various sources of knowledge. The availability of numerous data sources, such as remote sensing and crowdsourcing, with high spatial and temporal resolution, has expanded the potential of IM in agriculture. Practitioners can now incorporate the spatial and temporal footprint of observational data into parameter estimation. However, common IM techniques currently applied in agriculture often struggle to account for effectively spatial and temporal variability. Relevant IM methods that address these challenges are usually isolated within specific developer and user communities and are not well known within the agricultural community. There is a lack of comprehensive reviews focusing on IM methods suitable for handling spatial and temporal data in agriculture. In parallel, the process of conducting IM in agriculture remains under-formalized. Typically, specific IM methods are chosen for specific combinations of models and types of observational data, but the rationale behind their selection is rarely explained in publications. The relationship between IM methods, models, and observational data is unclear, making it overwhelming for new practitioners to choose an appropriate method. This complex problem, along with the diversity of IM methods, has yet to be adequately addressed while taking into account the specificities of agricultural applications. To address these challenges, this review aims to provide a structured classification of IM methods based on the practical needs of new practitioners in agriculture. It examines a wide range of inversion methods applied in agriculture-related domains and covers four key topics: i) the essential elements and general process of IM, ii) the main families of IM methods in agriculture and their characteristics, iii) the circumstances in which practitioners prefer using IM over other approaches, and their motivations, and iv) practical guidance on choosing a method family based on operational criteria. The review aims to help readers develop a clear understanding of the practice of inverse modeling, gain insights into the diversity of IM methods, and make informed choices when selecting a method family for their agricultural applications.&lt;/p&gt;
-
-&lt;h3 id=&quot;soil-properties-shape-the-heterogeneity-of-denitrification-and-n2o-emissions-across-large-scale-flooded-paddy-soils&quot;&gt;Soil properties shape the heterogeneity of denitrification and N2O emissions across large-scale flooded paddy soils&lt;/h3&gt;
-
-&lt;p&gt;With widespread nitrogen fertilizer use and complex N2O sources in flooded paddy soils, understanding N2O emission dynamics is crucial but largely understudied. We investigate fungal, bacterial, and chemical denitrification pathways in N2O production after rewetting and nitrogen fertilizer application across southeastern China. Findings suggest significant fungal dominance, challenging previous undervaluations, with bacterial and chemical processes as secondary contributors. The spatial heterogeneity is linked to soil properties, particularly organic carbon and total nitrogen, laying the foundation for predictive models of future global N2O emissions from paddy soils.&lt;/p&gt;
-
-&lt;h3 id=&quot;global-cropland-nitrous-oxide-emissions-in-fallow-period-are-comparable-to-growing-season-emissions&quot;&gt;Global cropland nitrous oxide emissions in fallow period are comparable to growing-season emissions&lt;/h3&gt;
-
-&lt;p&gt;Fallow-period N2O emissions have been neglected in the estimation of whole-year greenhouse gas inventories for decades. It is estimated that the mean contribution of fallow period to whole-year N2O emissions (Rfallow) was 44% globally, with hotspots mainly in the northern high latitudes. The dominant driver of global variation in Rfallow was soil pH. To accurately estimate N2O emissions for national greenhouse gas inventories, it is crucial to update current EFs with full consideration of the fallow-period N2O emissions in the Intergovernmental Panel on Climate Change (IPCC) Tier 1 method.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2024/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 07, 2024.&lt;/p&gt;
   </content>
 </entry>
 
