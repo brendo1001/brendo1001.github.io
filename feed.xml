@@ -4,13 +4,57 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-09-11T16:38:23+10:00</updated>
+<updated>2026-09-18T22:12:00+10:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
   <uri>/</uri>
   <email>malone.brendan1001@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/09/journalDigest" />
+  <id>/2026/09/journalDigest</id>
+  <updated>2026-09-18T00:00:00-00:00</updated>
+  <published>2026-09-18T00:00:00+10:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-22&quot;&gt;Journal Paper Digests 2026 #22&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Limited energy for microorganisms constrains carbon accrual in soil&lt;/li&gt;
+  &lt;li&gt;Field-scale irrigation estimation using Sentinel-1 and Sentinel-2 data within a soil water balance model coupled to the Water Cloud Model&lt;/li&gt;
+  &lt;li&gt;The BioSat indices designed for biodiversity science and conservation&lt;/li&gt;
+  &lt;li&gt;Mapping spatiotemporal soil temperature using physics-informed neural networks with the heat transfer equation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;mapping-spatiotemporal-soil-temperature-using-physics-informed-neural-networks-with-the-heat-transfer-equation&quot;&gt;Mapping spatiotemporal soil temperature using physics-informed neural networks with the heat transfer equation&lt;/h3&gt;
+
+&lt;p&gt;Soil temperature (ST) plays a critical role in regulating biogeochemical processes in soils, yet its spatiotemporal mapping remains a challenge. Existing ST maps are largely derived from land-surface models and are typically available only at coarse spatial resolutions, limiting their usefulness for agricultural applications. This study aims to predict daily ST at 10-cm depth intervals from the surface to 120 cm and to generate maps at 80 m spatial resolution. We developed a differentiable model (DM) that integrates neural networks (NN) estimated surface soil temperature (SST) with a physics-based heat-transfer model. The model was trained and validated using three years of spatiotemporal ST observations from 33 monitoring sites across Tasmania, Australia (25,191 records). Our results show that the DM improved prediction accuracy relative to the purely physics-based model (PBM) and enhanced the stability and generalisability of the fully data-driven NN. Compared with fully data-driven NN models, the DM reduced prediction error by up to 25%, exhibited low variability, and performed well in soils with high soil organic carbon. By explicitly estimating SST, the DM provided a mathematically optimised upper boundary condition, resulting in smoother, more physically consistent ST profiles across depth and more reliable seasonal spatial patterns than the NN models. The SST estimates also showed coherent temporal behaviour, with lower day-to-day variability and warmer summer conditions than air temperature. Furthermore, our findings demonstrate that coupling machine learning with process-based heat transfer can improve the accuracy, physical realism, and scalability of soil temperature prediction.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-biosat-indices-designed-for-biodiversity-science-and-conservation&quot;&gt;The BioSat indices designed for biodiversity science and conservation&lt;/h3&gt;
+
+&lt;p&gt;Biodiversity patterns, the distributions of species, guilds, and communities, matter for both ecology and conservation. Ecologists aim to explain biodiversity patterns, while conservationists need to know where to protect threatened species and communities. For both tasks, accurate predictions of species distributions and biodiversity patterns derived from models combining in situ biodiversity observations with wall-to-wall environmental predictors are essential. Our goal was to develop the BioSat indices (Biodiversity predictors from Satellite data) a suite of indices based on robust ecological theories and derived from medium-resolution satellite data that are designed for biodiversity and conservation applications. We built our work upon prior research that developed and tested each index individually for multiple taxa and countries. Here we (a) combined individual indices into a coherent suite, (b) operationalized and standardized workflows to compute the full suite at scale, (c) created quality layers for each index, (d) quantified correlations among indices to document complementarity and support their joint use in multivariate biodiversity models, and (e) calculated the BioSat indices for the conterminous US. We produced the BioSat indices using Google Earth Engine and freely share code and datasets. The BioSat indices depict different aspects of species’ habitat requirements and of the environmental conditions fostering diverse biological communities, characterizing (1) available energy, (2) vegetation heterogeneity, (3) winter conditions, (4) microclimate, and (5) topography. Because the BioSat indices are based on ecological theories, they represent the mechanisms shaping biodiversity patterns, providing a strong theoretical foundation of management and conservation relevance. They provide information complementary to other environmental data sets, such as climate. The BioSat indices are the first suite of satellite-derived indices specifically designed for biodiversity applications in support of ecological science and conservation efforts.&lt;/p&gt;
+
+&lt;h3 id=&quot;field-scale-irrigation-estimation-using-sentinel-1-and-sentinel-2-data-within-a-soil-water-balance-model-coupled-to-the-water-cloud-model&quot;&gt;Field-scale irrigation estimation using Sentinel-1 and Sentinel-2 data within a soil water balance model coupled to the Water Cloud Model&lt;/h3&gt;
+
+&lt;p&gt;Irrigation is a significant component of the water cycle in agricultural regions, but information about how much and where irrigation is applied is scarce and uncertain. Remote sensing-based products have been developed to retrieve irrigation across scales, but they are limited by spatial uncertainties and confounding factors, particularly in highly fragmented agricultural landscapes. This paper presents a novel method to estimate irrigation at the field scale by integrating Sentinel-1 C-band Synthetic Aperture Radar (SAR) backscatter data and Sentinel-2 NDVI data within a modeling framework. The proposed approach involves jointly calibrating the Water Cloud Model (WCM) and a two-layer Soil Water Balance (SWB) model to simultaneously simulate backscatter, irrigation, surface and root-zone soil moisture, and other water balance components. The model is driven by reanalysis meteorological data, and selected parameters in the WCM and SWB are calibrated exclusively using Sentinel-1 backscatter data, thus making the framework independent of in situ ground measurements. The model is tested on 38 fields within an irrigation district in the Po Valley, Italy, during 2018, for which irrigation data are available as reference. It is shown that the capability to estimate irrigation events depends on the treatment of backscatter and the choice of the calibration period. Average time series correlations of 0.43 to 0.95 are obtained for daily to bi-weekly irrigation estimates, respectively, with an associated bias amounting to 0.15 mm/day and 2.25 mm/15 days, and around 25 mm for annual estimates.&lt;/p&gt;
+
+&lt;h3 id=&quot;limited-energy-for-microorganisms-constrains-carbon-accrual-in-soil&quot;&gt;Limited energy for microorganisms constrains carbon accrual in soil&lt;/h3&gt;
+
+&lt;p&gt;Although most soil microorganisms exist in a dormant state, the extent, causes and implications of this dormancy for global soil carbon cycling and accrual remain uncertain. An emerging paradigm suggests that energy limitation is the dominant factor causing microbial dormancy in soils, constraining microbial growth and turnover, necromass formation and carbon accrual. Here we applied scaling laws linking microbial energy utilization to biomass growth and maintenance, providing a framework to quantify coupled carbon–energy fluxes. By integrating a microbial-process explicit model, global-scale datasets and deep learning, we estimated that microorganisms can obtain 37 ± 22 MJ m−2 yr−1 of energy by oxidizing available organic carbon in topsoil (0–30 cm). This energy amount can support at most 8 ± 6% of the total microorganisms under a growth state or 61 ± 57% under a maintenance state, leaving at least two-fifths of the microorganisms in dormancy. Despite variations in land use and climate, the global mean microbial energy use efficiency (0.22 ± 0.02) is 17% lower than carbon use efficiency (0.27 ± 0.04). These findings reveal a ubiquitous rule of energy limitation for microbial activity and consequently for necromass production—the main source of soil organic carbon accrual.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/09/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on September 18, 2026.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
@@ -1098,57 +1142,6 @@ Wood vinegar is introduced as sustainable strategy for releasing potassium from 
 &lt;p&gt;Literature serves as a cultural repository for enduring knowledge, offering unique insights into the historical evolution of scientific and philosophical thought. This study investigates the semantic understanding of soil, from the perspective of pedology, across 1200 years of Persian poetry. The word khāk (soil) was analyzed in the works of major Persian poets from the third to the fourteenth century SH. Poems demonstrating a strong thematic relevance with soil science principles were selected and systematically categorized according to the discipline’s specialized subfields. The results yielded ten distinct thematic categories, encompassing soil’s agricultural functions (e.g., soil-water-plant relationships), ecological challenges (e.g., salinity, erosion), physical and biological properties, and its role in human health. The analysis of poetic themes reveals a significant focus on soil erosion, and the soil-water-plant relationship was the next most significant theme. Conversely, topics such as soil quality and land capability and modern humanity and soil were minimally represented. The findings reveal that soil holds a dual status in Persian poetry: it is simultaneously a tangible, natural element and a profound symbolic concept. On one hand, it is recognized as the substrate for life, reflecting practical agricultural knowledge and principles of sustainable resource management. On the other, its physical and chemical properties inspire rich metaphors for life, death, humility, and other core ontological themes. This long-standing integration of scientific observation and artistic expression demonstrates a deep-rooted connection between humanity and the environment. It also provides a valuable historical framework for contemporary interdisciplinary fields such as ecopoetry and offers a model for bridging the humanities and the natural sciences.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2026/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 10, 2026.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2026/02/journalDigest" />
-  <id>/2026/02/journalDigest</id>
-  <updated>2026-02-02T00:00:00-00:00</updated>
-  <published>2026-02-02T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2026-3&quot;&gt;Journal Paper Digests 2026 #3&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Federated earth-observation models for collaborative farm-scale soil mapping&lt;/li&gt;
-  &lt;li&gt;Ensuring accuracy and reliability in spectroscopic diagnostics: the role of quality control systems&lt;/li&gt;
-  &lt;li&gt;Prediction of potentially toxic trace elements (PTEs) in soil and sediments using vis-NIR spectroscopy: a review&lt;/li&gt;
-  &lt;li&gt;Air-drying of soil preserves microbial and faunal eDNA abundance and diversity regardless of land-use type or management intensity&lt;/li&gt;
-  &lt;li&gt;Analysis of soil thermal property measurements in double-layered soils with the heat pulse sensor vertically crossing a soil horizon interface&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h3 id=&quot;analysis-of-soil-thermal-property-measurements-in-double-layered-soils-with-the-heat-pulse-sensor-vertically-crossing-a-soil-horizon-interface&quot;&gt;Analysis of soil thermal property measurements in double-layered soils with the heat pulse sensor vertically crossing a soil horizon interface&lt;/h3&gt;
-
-&lt;p&gt;The growing demand for studying coupled hydrothermal transport processes in layered soils comes with a need for accurate estimations of thermal properties using the heat pulse (HP) sensor. In the case where a HP sensor is installed vertically in a double-layered soil with the sensor crossing a soil horizon interface, its measurements are affected by different upper and lower layered properties. This study combined laboratory and numerical experiments to quantify the effect of the soil horizon interface on HP measurements, and to develop a parameterized cylindrical perfect conductor (PCPC) model that accounts for the interface position and layered properties. Results indicated that the effect of the layered soil properties on HP measurements depended on the soil horizon interface position, specifically when the soil horizon interface was within 15 mm vertically above or below the thermocouples in the HP sensor. A sigmoid function was used to quantify the effects of soil layer properties and soil horizon interface position on HP measurements. The developed PCPC model, based on the sigmoid function, exhibited strong agreement with the numerical simulations, yielding soil thermal property estimates all within a maximum relative error of −3.1%. The PCPC model effectively captured the combined effects of soil horizon interface and thermal properties of soil layers on the HP measurements in a double-layered soil system. This model provides a theoretical basis for the inversion of soil thermal property in such a double-layered soil environments with a HP sensor vertically crossing a soil horizon interface.&lt;/p&gt;
-
-&lt;h3 id=&quot;air-drying-of-soil-preserves-microbial-and-faunal-edna-abundance-and-diversity-regardless-of-land-use-type-or-management-intensity&quot;&gt;Air-drying of soil preserves microbial and faunal eDNA abundance and diversity regardless of land-use type or management intensity&lt;/h3&gt;
-
-&lt;p&gt;Soil biodiversity monitoring requires standardized and practical sample storage methods, particularly for large-scale surveys. Yet, the influence of the soil storage conditions on eDNA-based assessments of microbial and faunal communities remains a key concern. Here, we assessed whether air-drying of soils at room temperature alters microbial (prokaryotes, fungi, micro-eukaryotes) and faunal (nematodes, annelids, micro-arthropods) abundance and diversity compared to freezing at −20 °C across different land-use types and management intensities through quantitative polymerase chain reaction (qPCR) and multi-marker DNA metabarcoding. We sampled topsoil (0–10 cm) from 42 sites of the Swiss Central Plateau spanning forests, grasslands, arable lands, orchards, wetlands, and urban areas. Forests, grasslands and arable lands were sampled in sites varying in management intensities. Across land-use types and management intensities, air-drying of soil followed by four to eight weeks of storage at room temperature or at −20 °C and freezing soil directly yielded comparable gene abundances, alpha-diversity, and community structure for all microbial and faunal groups. Moreover, microbial and faunal community structure were consistently shaped by land-use types and soil physicochemical variables regardless of the soil storage method used. These findings demonstrate that air-drying is a cost-effective and reliable method for short-term storing soil samples in large-scale biodiversity monitoring without compromising data quality.&lt;/p&gt;
-
-&lt;h3 id=&quot;prediction-of-potentially-toxic-trace-elements-ptes-in-soil-and-sediments-using-vis-nir-spectroscopy-a-review&quot;&gt;Prediction of potentially toxic trace elements (PTEs) in soil and sediments using vis-NIR spectroscopy: a review&lt;/h3&gt;
-
-&lt;p&gt;The potentially toxic trace elements (PTEs) in soil/sediments are a severe environmental problem. It is necessary to better understand and evaluate the distribution of PTEs in soil/sediments. Visible-near infrared (Vis-NIR) spectroscopy has great advantages of being green, rapid, and highly operational for large-scale monitoring, to be an efficient alternative of traditional methods in the inversion of PTEs in soil/sediments. This article reviews the progress on the application of VIS-NIR technology in predicting PTEs content in soil/sediments, including the prediction mechanism, the main factors affecting prediction accuracy, spectral data processing and modeling methods and the present shortcomings or challenges. Also, this article points out the future research directions to improve the application of Vis-NIR in predicting PTEs content, including modeling of PTEs in different forms, spectral feature selection, prediction model optimization, interdisciplinary cooperation and communication, and the spectral data accessibility and standardization. The purpose is to provide an overview and outlook on the application of Vis-NIR technology in predicting PTEs content in soil/sediments, promoting the scientific research and practical applications.&lt;/p&gt;
-
-&lt;h3 id=&quot;ensuring-accuracy-and-reliability-in-spectroscopic-diagnostics-the-role-of-quality-control-systems&quot;&gt;Ensuring accuracy and reliability in spectroscopic diagnostics: the role of quality control systems&lt;/h3&gt;
-
-&lt;p&gt;Spectroscopic diagnostics have great potential in clinical applications, enabling the assessment of biological tissues and fluids through their spectral signatures. The accuracy and reliability of these techniques are paramount for their integration into routine clinical workflows. Several challenges—such as instrumental drift, environmental fluctuations, and operator-related variability—can compromise spectral consistency. Quality control (QC) systems serve as essential safeguards against these challenges, ensuring that instruments operate within predefined performance parameters through calibration, validation, standardized protocols, and contamination detection. This paper explores the fundamental role of QC frameworks in spectroscopic diagnostics, where maintaining measurement integrity is critical for patient safety and regulatory compliance. The practical implementation of QC principles is demonstrated through a case study on a noninvasive NIR system designed for glycation assessment in nail keratin as a screening tool for diabetes risk. The study highlights the importance of automated error detection, real-time calibration verification, and robust statistical quality assurance in ensuring diagnostic reliability. Aligning spectroscopic QC measures with the unmet needs of healthcare professionals and tested individuals is crucial for fostering trust in these technologies. By addressing real-world clinical challenges and advancing regulatory oversight, spectroscopy-based diagnostics can improve accessibility to timely and cost-effective medical assessments, particularly in resource-limited settings.&lt;/p&gt;
-
-&lt;h3 id=&quot;federated-earth-observation-models-for-collaborative-farm-scale-soil-mapping&quot;&gt;Federated earth-observation models for collaborative farm-scale soil mapping&lt;/h3&gt;
-
-&lt;p&gt;Accurate, privacy-respecting soil information is essential for site-specific nutrient management and carbon accounting, yet the cost of laboratory analyses limits many farms to relatively sparse sampling grids. We propose a collaborative framework that couples a national Sentinel-2 bare-soil composite with FL to produce high-resolution clay and soil organic carbon (SOC) maps while keeping all local data on-premise. A one-dimensional convolutional neural network was first pre-trained on a 53,570-sample Brazilian archive and then fine-tuned across 50 farms through synchronous Federated Averaging. We benchmarked this hybrid configuration against (i) a purely centralized model trained on the same archive and (ii) a fully decentralized FL model initialized at random.
-Across farm-level validation sets, pre-trained FL lowered median RMSE by 42% for clay and 31% for SOC relative to the centralized baseline, while increasing median RPIQ by 33% and 25%, respectively. On farms with 
- samples, the gains remained substantial, confirming that the approach remains effective when local datasets are modest compared with national archives. Error distributions differed significantly between scenarios (Friedman and Wilcoxon tests), and the pre-trained FL maps removed most spatial artefacts observed in the centralized outputs while preserving fine-scale gradients. Because only encrypted weight updates are exchanged, sensitive information never leaves the farm, satisfying GDPR/LGPD-style constraints and allowing late-joining clients to inherit an increasingly mature global model. Taken together, these results indicate that continental pre-training followed by federated fine-tuning reconciles global generality with local specificity and offers a scalable blueprint for privacy-preserving, high-resolution soil mapping in settings where sample densities are often substantially lower than in experimental setups, without compromising data sovereignty.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2026/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 02, 2026.&lt;/p&gt;
   </content>
 </entry>
 
