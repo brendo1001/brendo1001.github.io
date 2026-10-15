@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2026-10-01T13:18:24+10:00</updated>
+<updated>2026-10-15T21:55:13+11:00</updated>
 <id>/</id>
 <author>
   <name>Smart Digital Agriculture</name>
@@ -17,7 +17,67 @@
   <title type="html"><![CDATA[Journal Paper Digests]]></title>
  <link rel="alternate" type="text/html" href="/2026/10/journalDigest" />
   <id>/2026/10/journalDigest</id>
-  <updated>2026-09-25T00:00:00-00:00</updated>
+  <updated>2026-10-15T00:00:00-00:00</updated>
+  <published>2026-10-15T00:00:00+11:00</published>
+  
+  <author>
+    <name>Smart Digital Agriculture</name>
+    <uri></uri>
+    <email>malone.brendan1001@gmail.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;journal-paper-digests-2026-25&quot;&gt;Journal Paper Digests 2026 #25&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Legacy P and ecological restoration&lt;/li&gt;
+  &lt;li&gt;Soils sentinels: A step towards harmonisation of microbial parameters in European initiatives&lt;/li&gt;
+  &lt;li&gt;Contextual Microplastic Impacts on Croplands From Field Trials and Global Synthesis&lt;/li&gt;
+  &lt;li&gt;In the Age of AI—Are National Models and Data Sets Still&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h3 id=&quot;in-the-age-of-aiare-national-models-and-data-sets-still&quot;&gt;In the Age of AI—Are National Models and Data Sets Still&lt;/h3&gt;
+
+&lt;p&gt;Accurate streamflow prediction is critical for effective water resource management, and recent
+advances in deep learning and multi‐basin data sets have significantly improved model skill. Global deep‐
+learning models, trained on thousands of catchments have demonstrated strong generalization across diverse
+climates and continents. However, these models rely solely on globally available meteorological inputs,
+potentially overlooking the value of nationally developed data sets with enhanced regional accuracy. In this
+study, we assess the benefit of using Canada’s high‐resolution national reanalysis data set (CaSR) in long short‐
+term memory (LSTM) models for streamflow prediction. We compare model performance using different
+meteorological forcings, global (ERA5‐Land), continental (Daymet), national (CaSR), and a combined
+“Complete” model, across over 1,000 Canadian stream gauges. Model performance is evaluated using the
+Nash–Sutcliffe Efficiency (NSE), Kling‐Gupta Efficiency (KGE) and related metrics. We also benchmark our
+best‐performing model against Google’s global LSTM streamflow model at 412 Canadian gauges. Results show
+that national‐scale deep‐learning models using CaSR outperforms deep‐learning models using only global or
+continental inputs. The Complete model achieved the highest performance, with a median KGE
+0.886− exceeding the 0.839 achieved by Google’s global model within Canada. These findings suggest that
+nationally trained models using a wide array of inputs, including national meteorological data sets, can
+outperform state‐of‐the‐art global deep‐learning models that do not use such data when applied within their
+region of origin. For countries with dense observational networks and distinct hydrological regimes, investing in
+national data sets and models can enhance deep‐learning model prediction accuracy, leading to improved
+resilience to climate extremes and local water management decisions.&lt;/p&gt;
+
+&lt;h3 id=&quot;contextual-microplastic-impacts-on-croplands-from-field-trials-and-global-synthesis&quot;&gt;Contextual Microplastic Impacts on Croplands From Field Trials and Global Synthesis&lt;/h3&gt;
+
+&lt;p&gt;Microplastic accumulation is an increasingly widespread anthropogenic disturbance in agricultural soils, yet ecological risk assessments remain dominated by simplified laboratory assays that may not capture context-dependent responses under field conditions. Here, we combined a five-year experiment across four semi-arid cropland sites with a global synthesis restricted exclusively to outdoor field observations to quantify microplastic effects on crop yield, soil quality, and ecosystem multifunctionality. Under a high microplastic loading (0.2% w/w), we detected no consistent negative functional responses across crops, sites, and growing years. The field-only synthesis revealed weak average effects but substantial cross-study heterogeneity. Plant presence was associated with weaker effects, with vegetated systems showing milder changes in soil quality and ecosystem multifunctionality than plant-free soils. Biodegradable polymers did not show a consistent ecological advantage over conventional polymers across field settings. Our findings indicate that effects inferred primarily from laboratory studies cannot be directly extrapolated to the field scale. Importantly, weak functional responses do not address crop internal microplastic uptake, dietary exposure, or toxicological risk, which require separate assessment. These results provide a more realistic basis for assessing the consequences of microplastic pollution for agricultural ecosystem functioning and resilience under global change.&lt;/p&gt;
+
+&lt;h3 id=&quot;legacy-p-and-ecological-restoration&quot;&gt;Legacy P and ecological restoration&lt;/h3&gt;
+
+&lt;h3 id=&quot;soils-sentinels-a-step-towards-harmonisation-of-microbial-parameters-in-european-initiatives&quot;&gt;Soils sentinels: A step towards harmonisation of microbial parameters in European initiatives&lt;/h3&gt;
+
+&lt;p&gt;Soil health is a critical component of agroecosystems, supporting plant growth, nutrient cycling, and ecosystem services. However, soil is a non-renewable resource on human timescales, and its degradation poses significant challenges for sustainable agriculture. Despite numerous European initiatives (e.g., LUCAS, EcoFINDERS, EXCALIBUR, SHARInG-MeD, among others), there remains a lack of consensus on standardized soil health indicators, particularly regarding microbiological parameters. This review examines current limitations of microbial indicators used in European soil monitoring and research initiatives across three complementary dimensions: (i) community structure and taxonomy; (ii) microbial abundance or biomass; and (iii) microbial functionality. For community structure and taxonomy, methodological variability in metabarcoding approaches is addressed, including sample design, primer selection, sequencing platforms, read length, bioinformatic pipelines, and taxonomic reference databases. Microbial abundance or biomass is assessed through a range of approaches, including phospholipid fatty acid (PLFA) analysis, substrate-induced respiration (SIR), ester-linked fatty acid methyl ester (EL-FAME) analysis, quantitative PCR (qPCR) and culture-based methods, highlighting differences in their application and limitations for cross-study comparison, as well as methodological inconsistencies, particularly in PLFA-based approaches. Functional indicators of microbial activity are also considered, highlighting challenges in enzyme activity assays, the standardisation of functional gene analyses and shotgun metagenomics, which can provide both taxonomic and functional information. Finally, it discusses the integration of these variables through emerging context-dependent predictive modelling approaches. Overall, the synthesis underscores that methodological heterogeneity remains a major barrier to cross-study comparability and calls for improving standardisation to enhance the robustness of microbial ecology research and its application in ecosystem function assessment. Harmonising these methods could enhance cross-project data integration, supporting policy development for sustainable soil management in Europe.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/2026/10/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on October 15, 2026.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Journal Paper Digests]]></title>
+ <link rel="alternate" type="text/html" href="/2026/10/journalDigest" />
+  <id>/2026/10/journalDigest</id>
+  <updated>2026-10-01T00:00:00-00:00</updated>
   <published>2026-10-01T00:00:00+10:00</published>
   
   <author>
@@ -26,7 +86,7 @@
     <email>malone.brendan1001@gmail.com</email>
   </author>
   <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2026-23&quot;&gt;Journal Paper Digests 2026 #23&lt;/h2&gt;
+    &lt;h2 id=&quot;journal-paper-digests-2026-24&quot;&gt;Journal Paper Digests 2026 #24&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Lipids don’t lie, but methods might: A framework for reproducible soil PLFA analysis&lt;/li&gt;
@@ -1048,74 +1108,6 @@ Pasture cultivation in iron/aluminium mineral-rich soils may favour SOC build-up
 &lt;p&gt;Mineral association is widely recognized as a fundamental mechanism of soil organic carbon (SOC) stabilization; however, its relative importance versus climatic and vegetation drivers, and the key controlling geochemical factors remain poorly quantified in arid and semi-arid grasslands (mean annual precipitation, MAP &amp;lt; 400 mm). Combining a regional survey across the Mongolian Plateau (n = 260) with a global data synthesis (n = 2,097), we quantified the overwhelming dominance of mineral-associated organic carbon (MAOC), which constituted 79.8 ± 0.6% of SOC and established a benchmark for Eurasian drylands. More critically, we establish a hierarchical framework for MAOC accumulation: macro-scale environmental parameters (C:P ratio, pH) set the stabilization capacity, whereas localized geochemical actors (Fe, Ca) actuate this capacity via direct physiochemical interactions. In contrast, POC (particulate organic carbon) and CPOC (coarse particulate organic carbon) fractions were predominantly regulated by the C:P ratio, mean annual precipitation minus potential evapotranspiration (MAP-PET), and aboveground plus belowground biomass (AGB + BGB), suggesting a stronger dependence on recent carbon inputs and decomposition. Effective moisture (MAP-PET) served as the principal indirect control modulating both carbon inputs and mineral weathering. We thus propose a “mineral protection paradigm” for these ecosystems, wherein Fe and Ca directly enhance SOC sequestration through adsorption and cation bridging, forming a geochemically driven core process that is indirectly amplified by climate (MAP-PET) through its influence on vegetation drivers (AGB + BGB). This study establishes a synergistic Climate-Geochemistry-Vegetation framework that provides a scientific basis for SOC management in arid grassland ecosystems.&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/2026/03/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on March 03, 2026.&lt;/p&gt;
-  </content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Journal Paper Digests]]></title>
- <link rel="alternate" type="text/html" href="/2026/02/journalDigest" />
-  <id>/2026/02/journalDigest</id>
-  <updated>2026-02-23T00:00:00-00:00</updated>
-  <published>2026-02-23T00:00:00+11:00</published>
-  
-  <author>
-    <name>Smart Digital Agriculture</name>
-    <uri></uri>
-    <email>malone.brendan1001@gmail.com</email>
-  </author>
-  <content type="html">
-    &lt;h2 id=&quot;journal-paper-digests-2026-6&quot;&gt;Journal Paper Digests 2026 #6&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The influence of rewetting intensity on soil priming after drought&lt;/li&gt;
-  &lt;li&gt;Interactions between soil environmental factors and microbial communities consistently predict plant health&lt;/li&gt;
-  &lt;li&gt;Commentary: Structural equation models and causal claims in soil science and biogeochemistry – An equation-free “how to”&lt;/li&gt;
-  &lt;li&gt;Knowledge-Guided Machine Learning for Global Change Ecology Research&lt;/li&gt;
-  &lt;li&gt;Spatiotemporal Trade-Offs and Synergies Among Environmental Footprints of Grain Crop Production in China&lt;/li&gt;
-  &lt;li&gt;Combining physical models and machine learning for enhanced soil moisture estimation&lt;/li&gt;
-  &lt;li&gt;Potential for improving micronutrient supply and environmental sustainability by using underutilized crops in China&lt;/li&gt;
-  &lt;li&gt;Generating geochemical and mineralogy distributions of soil in the conterminous United States using Bayesian hierarchical spatial models&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h3 id=&quot;generating-geochemical-and-mineralogy-distributions-of-soil-in-the-conterminous-united-states-using-bayesian-hierarchical-spatial-models&quot;&gt;Generating geochemical and mineralogy distributions of soil in the conterminous United States using Bayesian hierarchical spatial models&lt;/h3&gt;
-
-&lt;p&gt;Characterizing geochemical and mineralogical soil distributions across large spatial extents is essential for understanding mineral resources, ecosystem processes, and environmental risks. Rasters of soil geochemical distributions for the conterminous United States, however, are limited. We present a Bayesian modeling workflow and tool for generating predictive geochemical and mineralogy distribution maps for the conterminous United States using integrated nested Laplace approximation (INLA) with the stochastic partial differential equation approach. By modeling soil geostatistical data with environmental covariates (soil properties, topography, climate, and land cover), we generate predictive distributions of soil geochemistry that can be mapped or extracted for further analyses. As an example, we model the spatial distribution of trace elements in soil relevant to vertebrate health (cobalt, copper, iron, manganese, selenium, and zinc) and provide a workflow that can be used to generate and visualize predictive distributions of 39 other major and trace elements and 21 minerals of the soil survey, supporting a variety of ecological, environmental, and agricultural applications.
-Bayesian Modeling: Uses R-INLA to predict soil geochemistry across large spatial extents.
-Covariate Integration: Incorporates environmental variables to increase predictive accuracy.
-Raster Generation: Produces continuous geospatial layers of mineral and element distributions of the conterminous United States for a variety of applications.&lt;/p&gt;
-
-&lt;h3 id=&quot;potential-for-improving-micronutrient-supply-and-environmental-sustainability-by-using-underutilized-crops-in-china&quot;&gt;Potential for improving micronutrient supply and environmental sustainability by using underutilized crops in China&lt;/h3&gt;
-
-&lt;p&gt;Rice and wheat provide the bulk of calories in diets globally. However, foods made from these cereals are commonly in refined forms and are low in micronutrients and dietary fiber. Increasing the consumption of more nutrient-dense, underutilized cereals and beans (UCBs), such as millet, sorghum, mung bean, along with unrefined rice and wheat, could improve diet quality. Compared with rice and wheat, UCBs are generally cultivated using less intensive methods, resulting in a lower environmental impact, though their productivity is generally lower. This study explores how reallocating rice and wheat areas to UCBs, either alone or combined with greater use of unrefined rice and wheat, could potentially enhance micronutrient supply (iron, thiamin, riboflavin, calcium, zinc), while reducing water use and greenhouse gas emissions in China. A strategy combining area reallocation and greater use of unrefined rice and wheat increased micronutrient supply and dietary fiber by 12–82%, reduced environmental impact by 11–12%, and slightly increased energy supply (3%). These outcomes were achieved by reallocating 7.9 million hectares (Mha) of rice area (26% of the current total) and 1.7 Mha of wheat area to sorghum (+5.5 Mha), millet (+2.5 Mha), beans (+1.4 Mha), and oats (+0.2 Mha). As a result, the supply of UCBs and unrefined rice and wheat products increased, supporting healthier diets. Reallocating only 5% of the rice area would still yield improvements, especially for dietary fiber and iron (
-27%). These findings offer insights for rethinking the value of UCBs and supporting their integration into future food system strategies.&lt;/p&gt;
-
-&lt;h3 id=&quot;combining-physical-models-and-machine-learning-for-enhanced-soil-moisture-estimation&quot;&gt;Combining physical models and machine learning for enhanced soil moisture estimation&lt;/h3&gt;
-
-&lt;p&gt;Estimating soil moisture is crucial for agricultural management, water resource planning, and environmental monitoring. Traditional methods, whether based on physical models or machine learning, face limitations, with physical models suffering from reduced accuracy due to parameter sensitivity and environmental variability, and machine learning models struggling with interpretability and generalization. To address these challenges, this study introduces a novel hybrid approach that leverages the strengths of both physical modeling and machine learning to enhance soil moisture estimation. The hybrid model, ML-Phy-meteo, integrates the physical model (Hydrus-1D) results and meteorological data into a LightGBM framework, achieving optimal estimation accuracy across various soil depths. Quantitatively, ML-Phy-meteo exhibits superior performance across all depths, achieving an average root mean square error (RMSE) between 0.020 and 0.026 cm3/cm3, an average Nash–Sutcliffe Efficiency (NSE) ranging from 0.195 to 0.811, and an average Kling–Gupta Efficiency (KGE) from 0.623 to 0.860, thereby outperforming both standalone physical models and purely machine learning-based approaches. Notably, ML-Phy-meteo achieves high-precision predictions even in the absence of detailed soil texture and stratification data, with the machine learning component effectively compensating for the simplifications of the physical model. Among the machine learning methods used in the hybrid model, tree-based models (LightGBM and Random Forest) outperform deep learning models (LSTM) in terms of accuracy and robustness in handling noise and missing data, despite the latter’s smoother prediction profiles. These findings highlight the potential of hybrid models to overcome the inherent limitations of standalone physical or machine learning approaches, providing new ideas for future research and applications in soil moisture estimation.&lt;/p&gt;
-
-&lt;h3 id=&quot;spatiotemporal-trade-offs-and-synergies-among-environmental-footprints-of-grain-crop-production-in-china&quot;&gt;Spatiotemporal Trade-Offs and Synergies Among Environmental Footprints of Grain Crop Production in China&lt;/h3&gt;
-
-&lt;p&gt;Human agricultural activities have exacerbated multiple types of natural resource depletion and environmental impacts through complex interactions with land, water, carbon, and nutrient cycles, which can be measured as corresponding environmental footprints (EFs). However, the spatiotemporal trade-offs and synergies among multiple EFs in agricultural systems remain under-quantified, hindering effective mitigation strategies. Here, we propose an assessment framework of spatiotemporal trade-offs and synergies among multiple EFs of crop production, with a case study on blue water, green water, land, carbon, nitrogen, and phosphorus footprints for wheat, maize, rice, and soybean production across 31 Chinese provinces over 2000–2018. In total, 3630 pairwise EFs were analyzed. Results show that, although the EFs of unit mass crop production generally declined across provinces, national total EFs increased, with land, carbon, and phosphorus footprints rising by 16%, 17%, and 23%, respectively, during the study period. Synergistic interactions among EFs prevailed, comprising 50% positive and 32% negative synergies. The spatial distribution of trade-offs and synergies varies by crop and region. Land use intensity is the main factor limiting the positive EF synergies.&lt;/p&gt;
-
-&lt;h3 id=&quot;knowledge-guided-machine-learning-for-global-change-ecology-research&quot;&gt;Knowledge-Guided Machine Learning for Global Change Ecology Research&lt;/h3&gt;
-
-&lt;p&gt;Global change ecology demands predictive models that reconcile data-driven learning with mechanistic theory to address complex, interconnected ecosystem challenges. Traditional process-based approaches struggle with spatiotemporal parameterization, while purely data-driven machine learning approaches suffer from extrapolation, interpretability, and physical consistency. Knowledge-guided machine learning (KGML) bridges this divide by systematically integrating ecological principles (e.g., physical first principles, stoichiometry, process understanding, disturbance regimes) into how models are designed, trained, and adjusted to generalize across different ecosystems. The emerging KGML paradigm offers tremendous opportunities to advance the research of global change ecology. This review synthesizes KGML’s transformative potential, showcasing its capacity to enhance the prediction of carbon-water-nutrient cycles and other ecological processes and lay groundwork for ecological foundation models. Emerging applications in decision support and symbolic regression further illustrate its role in deriving actionable insights and novel theoretical hypotheses. Future directions emphasize adaptive integration of data and knowledge, uncertainty quantification, causal embedding in foundation models, and interdisciplinary collaboration to align KGML innovations with sustainability goals. By uniting ecological theory with AI advances, KGML offers a robust pathway to encompass ecosystem responses to global change, fostering scientific discovery and actionable solutions.&lt;/p&gt;
-
-&lt;h3 id=&quot;commentary-structural-equation-models-and-causal-claims-in-soil-science-and-biogeochemistry--an-equation-free-how-to&quot;&gt;Commentary: Structural equation models and causal claims in soil science and biogeochemistry – An equation-free “how to”&lt;/h3&gt;
-
-&lt;p&gt;Structural equation modeling (SEM) is a set of approaches that have seen exponential usage in the soil sciences as well as the related fields of agriculture and biogeochemistry. When correctly used and interpreted, SEM can be a powerful and flexible tool to test complex hypotheses on causality. However, the recent explosion of SEM usage in the soil sciences facilitated by user-friendly statistical programs has not been fully met by statistical expertise of users, reviewers and editors, ultimately leading to widespread contamination of the literature with inappropriate modeling and inflated or unfounded causal claims. The rise of such “SEM slop” poses a serious risk of an unreliable knowledge base and also undermines efforts and standards on what constitutes causality in the soil sciences. To address this, we diagnose major pitfalls in SEM, with an eye towards considerations specific to soil sciences, categorizable as three types: (1) Causal claims, including not satisfying causal criteria, lack of justified a priori models, not considering counterfactuals, and unqualified causal language; (2) Experimental design, including use in randomized complete block designs without complete pooling or multi-level models, inappropriate data type (e.g., ontological misalignment), and insufficient sample size; and, (3) Assessing the model, including incomplete or inappropriate model evaluation, non-qualified use of modification indices, and lack of robustness tests. There is a dual imperative for users as well as reviewers and editors to better implement and evaluate SEMs and claims of causality made with SEMs. To support this, we offer best practices and practical considerations on these three major pitfalls. These best practices will help SEM be appropriately employed as a powerful, nuanced statistical tool that benefits the soil science community.&lt;/p&gt;
-
-&lt;h3 id=&quot;interactions-between-soil-environmental-factors-and-microbial-communities-consistently-predict-plant-health&quot;&gt;Interactions between soil environmental factors and microbial communities consistently predict plant health&lt;/h3&gt;
-
-&lt;p&gt;Intensive agricultural practices cause dysbiosis in soil nutrient levels and microbial communities, significantly affecting plant health and productivity. However, the mechanisms underlying the interactions between soil environmental factors and microbial communities, and their role in determining and predicting plant health, remain poorly understood. In this study, we collected soils planted with tomato in different health conditions, including healthy and bacterial wilt, Fusarium wilt, and nematode diseases, to identify key abiotic and biotic factors influencing plant health. Additionally, We fitted machine learning models using multidimensional data to classify plant health status. Our results revealed that diseased soils (bacterial wilt, Fusarium wilt, and nematode disease) exhibited significantly higher AP levels compared to healthy soils. Moreover, increased Amplicon Sequence Variants (ASVs) in diseased soils had lower network connectivity and were positively correlated with soil nutrient contents, pathogen abundance, and pathogen-supportive soil microbial functions, while being negatively correlated with plant defense-associated soil microbial functions. Both soil nutrient levels and the increased ASVs in diseased soil were stronger correlates of disease occurrence than other soil indicators. Optimal classification performance was observed when both soil environmental factors and microbial communities were considered, with AP emerging as the most influential indicator. In conclusion, excessive accumulation of AP was associated with disrupted microbial community structures, destabilized microbial networks, enhanced pathogen abundance, and impaired microbial functions, which collectively correlated with higher disease occurrence. These findings highlight the potential importance of optimizing soil nutrient management for supporting plant health.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-influence-of-rewetting-intensity-on-soil-priming-after-drought&quot;&gt;The influence of rewetting intensity on soil priming after drought&lt;/h3&gt;
-
-&lt;p&gt;Soil moisture is a key driver of soil organic matter (SOM) decomposition and the global carbon (C) cycle, and climate warming-induced extremes of rainfall and drought are intensifying the dynamics of soil C stocks. Although addition of labile C pools can trigger strong priming effects (PE) by stimulating decomposition of recalcitrant SOM, how varying rewetting intensity interacts with these exogenous inputs of C pools to affect PE remains unclear. In this study, we used an isotopic approach to examine the effects of rewetting intensity (40%, 60%, and 80% water holding capacity (WHC)) on PE during a 21-day incubation following intensive drought (20% WHC). Our results show that glucose addition induced a strong positive PE, with higher moisture (60% and 80% WHC) resulting in greater PEs. High moisture regulated microbial community composition and boosted microbial activity and turnover. These changes heightened microbial nitrogen demand, accelerated nitrogen mining, and intensified decomposition of stable C, leading to net soil-C loss. The correlation analysis shows that enhanced biosynthetic and degradative activity under higher moisture conditions facilitates the turnover of labile C, whereas reduced microbial diversity and metabolic intensity promote the stabilization of more persistent C forms. This study underscores the significant role of moisture in shaping PEs and soil C dynamics in the subtropical forest soils, offering insights into soil C sequestration in response to climate change.&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/2026/02/journalDigest&quot;&gt;Journal Paper Digests&lt;/a&gt; was originally published by Smart Digital Agriculture at &lt;a href=&quot;&quot;&gt;Smart Digital Agriculture&lt;/a&gt; on February 23, 2026.&lt;/p&gt;
   </content>
 </entry>
 
